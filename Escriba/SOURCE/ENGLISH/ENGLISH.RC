@@ -1,0 +1,1435 @@
+/***************************************************************** ENGLISH.RC
+ *                                                                          *
+ *                   Escriba Word Processor for OS/2-PM                     *
+ *                                                                          *
+ *                       English Resource Script                            *
+ *                                                                          *
+ ****************************************************************************/
+
+#include "Controls.h"
+#include "Escriba.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "Escriba",            //   Application Name.
+  "English",            //   Specific language name.
+  850, 437, 852, 860, 863, 865, 932, 934, 936, 938, 942, 944, 946, 948, 950, 0
+}
+
+/****************************************************************************
+ * Months: January, February, March, April, May, June,                      *
+ *   July, August, September, October, November, December.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_ABOUT
+{
+  DIALOG "", IDD_ABOUT, 0, 0, 200, 148, FS_DLGBORDER
+  {
+    CTEXT "Escriba"                                  0, 10,120, 180, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.96d"                            0, 10,112, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "22 January 1998"                          0, 10,104, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CONTROL "#1",                                    0, 10,110,   0,  0, WC_STATIC, SS_BITMAP | WS_VISIBLE
+
+    CTEXT "Word Processor for OS/2-PM"               0, 10, 88, 180,  8
+    CTEXT "¸ Copyright Richard Papo, 1992-1997"      0, 10, 80, 180,  8
+    CTEXT "Internet: rpapo@msen.com"                 0, 10, 72, 180,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"          0, 10, 64, 180,  8
+    CTEXT "English Version"                          0, 10, 56, 180,  8
+
+    CTEXT "Unregistered Copy",                       1, 10, 40, 180,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+    CTEXT "",                                        2, 10, 32, 180,  8
+
+    DEFPUSHBUTTON "~OK"                         DID_OK, 80,  8,  40, 16, WS_GROUP
+  }
+}
+
+POINTER ID_MAIN escriba.ico
+
+BITMAP ID_MAIN escriba.bmp
+
+ACCELTABLE ID_MAIN
+{
+  VK_F3,        IDM_EXIT,          VIRTUALKEY
+  VK_TAB,       IDM_NEXTDOC,       VIRTUALKEY, CONTROL
+  "O",          IDM_OPEN,          CONTROL
+  "o",          IDM_OPEN,          CONTROL
+}
+
+POINTER ID_DATAWINDOW escriba.ico
+
+ACCELTABLE ID_DATAWINDOW
+{
+  VK_F4,        SC_CLOSE,          VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F5,        SC_RESTORE,        VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F7,        SC_MOVE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F8,        SC_SIZE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F9,        SC_MINIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F10,       SC_MAXIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+
+  VK_F2,        IDM_SAVE,          VIRTUALKEY
+  VK_F4,        IDM_SAVE_CLOSE,    VIRTUALKEY
+  VK_F5,        IDM_SPELL,         VIRTUALKEY
+
+  VK_BACKSPACE, IDM_UNDO,          VIRTUALKEY, ALT
+  VK_BACKSPACE, IDM_REDO,          VIRTUALKEY, ALT, SHIFT
+
+  VK_ENTER,     IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+  VK_NEWLINE,   IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+
+  "D",          IDM_DUMP,          CONTROL
+  "d",          IDM_DUMP,          CONTROL
+
+  "P",          IDM_PRINT_ALL,     CONTROL
+  "p",          IDM_PRINT_ALL,     CONTROL
+
+  "P",          IDM_PRINT_PAGE,    ALT
+  "p",          IDM_PRINT_PAGE,    ALT
+
+  "S",          IDM_SEARCH,        CONTROL
+  "s",          IDM_SEARCH,        CONTROL
+
+  "F",          IDM_FINDNEXT,      CONTROL
+  "f",          IDM_FINDNEXT,      CONTROL
+
+  "G",          IDM_GOTOPAGE,      CONTROL
+  "g",          IDM_GOTOPAGE,      CONTROL
+
+  "Z",          IDM_ZOOM_ALL,      CONTROL
+  "z",          IDM_ZOOM_ALL,      CONTROL
+
+  "N",          IDM_NORMAL,        CONTROL
+  "n",          IDM_NORMAL,        CONTROL
+  "B",          IDM_BOLD,          CONTROL
+  "b",          IDM_BOLD,          CONTROL
+  "I",          IDM_ITALIC,        CONTROL
+  "i",          IDM_ITALIC,        CONTROL
+  "U",          IDM_UNDERSCORE,    CONTROL
+  "u",          IDM_UNDERSCORE,    CONTROL
+
+  "L",          IDM_JUST_LEFT,     CONTROL
+  "l",          IDM_JUST_LEFT,     CONTROL
+  "C",          IDM_JUST_CENTER,   CONTROL
+  "c",          IDM_JUST_CENTER,   CONTROL
+  "R",          IDM_JUST_RIGHT,    CONTROL
+  "r",          IDM_JUST_RIGHT,    CONTROL
+  "J",          IDM_JUST_FULL,     CONTROL
+  "j",          IDM_JUST_FULL,     CONTROL
+
+  "A",          IDM_SELECT_ALL,    CONTROL
+  "a",          IDM_SELECT_ALL,    CONTROL
+}
+
+MENU IDM_MAIN
+{
+  SUBMENU "~File",                              IDM_FILE_MENU
+  {
+    MENUITEM "~New",                            IDM_NEW
+    MENUITEM "~Open...\tCtrl+O",                IDM_OPEN
+    SUBMENU "~Recall",                          IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Merge...",                       IDM_MERGE
+    MENUITEM SEPARATOR
+    MENUITEM "~Save\tF2",                       IDM_SAVE
+    MENUITEM "Save ~As...",                     IDM_SAVEAS
+    MENUITEM "Save & Close\tF4",                IDM_SAVE_CLOSE
+    MENUITEM "~Close",                          IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "~Print",                          IDM_PRINT
+    {
+      SUBMENU "Print ~All\tCtrl+P",             IDM_PRINT_ALL
+      {
+        MENUITEM "~Normal",                     IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "~Reverse",                    IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Print ~Page\tAlt+P",            IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~General Preferences...",         IDM_PREFERENCES
+    MENUITEM "~Document Defaults...",           IDM_DEFAULTS
+    MENUITEM "Configure ~Extensions...",        IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Language",                         IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "E~xit\tF3",                       IDM_EXIT
+  }
+  SUBMENU "~Edit",                              IDM_EDIT_MENU
+  {
+    MENUITEM "Undo\tAlt+Bksp",                  IDM_UNDO
+    MENUITEM "Redo\tAlt+Shift+Bksp",            IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "Cu~t\tShift+Del",                 IDM_CUT
+    MENUITEM "~Copy\tCtrl+Ins",                 IDM_COPY
+    MENUITEM "~Paste\tShift+Ins",               IDM_PASTE
+    MENUITEM "Cl~ear\tDel",                     IDM_CLEAR
+    MENUITEM "Clea~r Clipboard",                IDM_CLEARCLIPBOARD
+    MENUITEM SEPARATOR
+    MENUITEM "Select ~All\tCtrl+A",             IDM_SELECT_ALL
+    MENUITEM SEPARATOR
+    SUBMENU  "Paste From",                      IDM_PASTE_FROM
+    {
+      SUBMENU "~Clipboard",                     IDM_PASTE_FROM_CLIP
+      {
+        MENUITEM "~Bitmap",                     IDM_PASTE_FROM_CLIP_BITMAP
+        MENUITEM "~Metafile",                   IDM_PASTE_FROM_CLIP_METAFILE
+      }
+      SUBMENU "~Screen",                        IDM_PASTE_FROM_SCRN
+      {
+        MENUITEM "~Entire screen",              IDM_PASTE_FROM_SCRN_ENTIRE
+        MENUITEM "~Frame",                      IDM_PASTE_FROM_SCRN_FRAME
+        MENUITEM "~Window",                     IDM_PASTE_FROM_SCRN_WINDOW
+        MENUITEM "~Rectangle",                  IDM_PASTE_FROM_SCRN_RECT
+        MENUITEM "~Hide",                       IDM_PASTE_FROM_SCRN_HIDE,,MIA_CHECKED | MIA_NODISMISS
+      }
+      MENUITEM "~Graphic File...",              IDM_PASTE_FROM_FILE
+    }
+    SUBMENU "Insert Function",                  IDM_INSERT_FUNCTION
+    {
+      SUBMENU "~Date",                          IDM_DATE
+      {
+        MENUITEM "~Today's Date",               IDM_DATETODAY
+        MENUITEM "~Current Date",               IDM_DATECURRENT
+        MENUITEM "~Document Date",              IDM_DATECHANGED
+//      MENUITEM "~Fixed Date",                 IDM_DATEFIXED
+        MENUITEM "Date Format...",              IDM_DATEFMT
+      }
+      MENUITEM "Current ~Page Number",          IDM_CURRENTPAGE
+      MENUITEM "~Total Page Count",             IDM_PAGECOUNT
+      MENUITEM "~Separator",                    IDM_SEPARATOR
+      MENUITEM "~Barcode...",                   IDM_BARCODE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Search...\tCtrl+S",              IDM_SEARCH
+    MENUITEM "~Find Next\tCtrl+F",              IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Goto Page...\tCtrl+G",           IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Spell Check\tF5",                 IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Zoom",                            IDM_ZOOM
+    {
+      MENUITEM "Zoom 100%",                     IDM_ZOOM_100
+      MENUITEM "Zoom Full ~Width",              IDM_ZOOM_FULLWIDTH
+      MENUITEM "Zoom Full ~Height",             IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Zoom ~Margins",                 IDM_ZOOM_MARGINS
+      MENUITEM "Zoom ~All\tCtrl+Z",             IDM_ZOOM_ALL
+      MENUITEM "Zoom Wi~ndow",                  IDM_ZOOM_WINDOW
+      MENUITEM "Zoom ~Set...",                  IDM_ZOOM_SET
+    }
+  }
+  SUBMENU "~Layout",                            IDM_LAYOUT_MENU
+  {
+    MENUITEM "~Margins...",                     IDM_MARGINS
+    MENUITEM "~Tabs...",                        IDM_TABS
+    MENUITEM "~Indent...",                      IDM_INDENT
+    SUBMENU  "~Line Spacing",                   IDM_LINESPACING_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Justification",                  IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Page Center",                    IDM_PAGECENTER
+    MENUITEM "Page ~Break\tCtrl+Enter",         IDM_PAGEBREAK
+    MENUITEM SEPARATOR
+    MENUITEM "~Header...",                      IDM_HEADER
+    MENUITEM "~Footer...",                      IDM_FOOTER
+  }
+  SUBMENU "F~ont",                              IDM_FONT_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Size",                              IDM_SIZE_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Attributes",                        IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Color",                       IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Width",                       IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fill Color",                       IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fill Type",                        IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line End",                         IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Join",                        IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+  SUBMENU "~Windows",                           IDM_WINDOW_MENU
+  {
+    MENUITEM "~Tile",                           IDM_TILE
+    MENUITEM "~Cascade",                        IDM_CASCADE
+    MENUITEM "~Arrange Icons",                  IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Help",                              IDM_HELP_MENU
+  {
+    MENUITEM "Help ~index",                     IDM_HELP_INDEX
+    MENUITEM "~General help",                   IDM_EXTENDED_HELP
+    MENUITEM "~Using help",                     IDM_HELP_FOR_HELP
+    MENUITEM "~Keys help",                      IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Product Information",             IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_MAIN_CONTEXT
+{
+  MENUITEM "~Refresh",                          IDM_REFRESH
+  SUBMENU "~File",                              IDM_FILE_MENU
+  {
+    MENUITEM "~New",                            IDM_NEW
+    MENUITEM "~Open...\tCtrl+O",                IDM_OPEN
+    SUBMENU "~Recall",                          IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~General Preferences...",         IDM_PREFERENCES
+    MENUITEM "~Document Defaults...",           IDM_DEFAULTS_CONTEXT
+    MENUITEM "Configure ~Extensions...",        IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Language",                         IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "E~xit\tF3",                       IDM_EXIT
+  }
+  SUBMENU "~Windows",                           IDM_WINDOW_MENU
+  {
+    MENUITEM "~Tile",                           IDM_TILE
+    MENUITEM "~Cascade",                        IDM_CASCADE
+    MENUITEM "~Arrange Icons",                  IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Help",                              IDM_HELP_MENU
+  {
+    MENUITEM "Help ~index",                     IDM_HELP_INDEX
+    MENUITEM "~General help",                   IDM_EXTENDED_HELP
+    MENUITEM "~Using help",                     IDM_HELP_FOR_HELP
+    MENUITEM "~Keys help",                      IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Product Information",             IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_TEXTMENU
+{
+  SUBMENU "~Edit",                              IDM_EDIT_MENU
+  {
+    MENUITEM "Cu~t\tShift+Del",                 IDM_CUT
+    MENUITEM "~Copy\tCtrl+Ins",                 IDM_COPY
+    MENUITEM "~Paste\tShift+Ins",               IDM_PASTE
+    MENUITEM "Cl~ear\tDel",                     IDM_CLEAR
+  }
+  SUBMENU "~Layout",                            IDM_LAYOUT_MENU
+  {
+    MENUITEM "~Margins...",                     IDM_MARGINS
+    MENUITEM "~Tabs...",                        IDM_TABS
+    MENUITEM "~Indent...",                      IDM_INDENT
+    SUBMENU  "~Line Spacing",                   IDM_LINESPACING_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Justification",                  IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Page Center",                    IDM_PAGECENTER
+    MENUITEM "Date Format...",                  IDM_DATEFMT
+  }
+  SUBMENU "F~ont",                              IDM_FONT_MENU
+  {
+    MENUITEM "",                                IDM_FONTS
+  }
+  SUBMENU "~Size",                              IDM_SIZE_MENU
+  {
+    MENUITEM "",                                IDM_SIZES
+  }
+  SUBMENU "~Attributes",                        IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Color",                       IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Width",                       IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fill Color",                       IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fill Type",                        IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line End",                         IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Line Join",                        IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+}
+
+MENU IDM_BITMAPMENU
+{
+  MENUITEM "~Background",                       IDM_BITMAP_BACKGROUND
+  MENUITEM "~No Text Alongside",                IDM_BITMAP_NOTEXTASIDE
+  MENUITEM "~Halftone",                         IDM_BITMAP_HALFTONE
+  MENUITEM "~Reverse",                          IDM_BITMAP_REVERSE
+  MENUITEM "~Optimize",                         IDM_BITMAP_OPTIMIZE
+  SUBMENU  "~Position",                         IDM_BITMAP_POSITION
+  {
+    MENUITEM "Next Character",                  IDM_BITMAP_POSITION_NEXT_CHAR
+    MENUITEM "Next Line",                       IDM_BITMAP_POSITION_NEXT_LINE
+    MENUITEM SEPARATOR
+    MENUITEM "Left Edge",                       IDM_BITMAP_POSITION_EDGE_LEFT
+    MENUITEM "Left Margin",                     IDM_BITMAP_POSITION_MARGIN_LEFT
+    MENUITEM "Centered (X)",                    IDM_BITMAP_POSITION_CENTERED_X
+    MENUITEM "Right Margin",                    IDM_BITMAP_POSITION_MARGIN_RIGHT
+    MENUITEM "Right Edge",                      IDM_BITMAP_POSITION_EDGE_RIGHT
+    MENUITEM SEPARATOR
+    MENUITEM "Top Edge",                        IDM_BITMAP_POSITION_EDGE_TOP
+    MENUITEM "Top Margin",                      IDM_BITMAP_POSITION_MARGIN_TOP
+    MENUITEM "Centered (Y)",                    IDM_BITMAP_POSITION_CENTERED_Y
+    MENUITEM "Bottom Margin",                   IDM_BITMAP_POSITION_MARGIN_BOTTOM
+    MENUITEM "Bottom Edge",                     IDM_BITMAP_POSITION_EDGE_BOTTOM
+  }
+  SUBMENU  "~Size",                             IDM_BITMAP_SIZE
+  {
+    MENUITEM "Edge-to-Edge (X)",                IDM_BITMAP_SIZE_EDGETOEDGE_X
+    MENUITEM "Margin-to-Margin (X)",            IDM_BITMAP_SIZE_MARGINTOMARGIN_X
+    MENUITEM SEPARATOR
+    MENUITEM "Edge-to-Edge (Y)",                IDM_BITMAP_SIZE_EDGETOEDGE_Y
+    MENUITEM "Margin-to-Margin (Y)",            IDM_BITMAP_SIZE_MARGINTOMARGIN_Y
+  }
+  SUBMENU  "~Aspect",                           IDM_BITMAP_ASPECT
+  {
+    MENUITEM "~Unfixed",                        IDM_BITMAP_ASPECT_FLOAT
+    MENUITEM "Fixed ~X",                        IDM_BITMAP_ASPECT_FIX_X
+    MENUITEM "Fixed ~Y",                        IDM_BITMAP_ASPECT_FIX_Y
+  }
+}
+
+MENU IDM_BORDERMENU
+{
+  MENUITEM "Border Size...",                    IDM_BORDER_SIZE
+  MENUITEM "Border Color...",                   IDM_BORDER_COLOR
+  MENUITEM "Caption...",                        IDM_BORDER_CAPTION
+}
+
+MENU IDM_DEFAULTMENU
+{
+  MENUITEM "~Refresh",                          IDM_REFRESH
+  SUBMENU "~File",                              IDM_FILE_MENU
+  {
+    MENUITEM "~Save\tF2",                       IDM_SAVE
+    MENUITEM "Save ~As...",                     IDM_SAVEAS
+    MENUITEM "Save & Close\tF4",                IDM_SAVE_CLOSE
+    MENUITEM "~Close",                          IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "~Print",                          IDM_PRINT
+    {
+      SUBMENU "Print ~All\tCtrl+P",             IDM_PRINT_ALL
+      {
+        MENUITEM "~Normal",                     IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "~Reverse",                    IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Print ~Page\tAlt+P",            IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Document Defaults...",           IDM_DEFAULTS
+  }
+  SUBMENU "~Edit",                              IDM_EDIT_MENU
+  {
+    MENUITEM "Undo\tAlt+Bksp",                  IDM_UNDO
+    MENUITEM "Redo\tAlt+Shift+Bksp",            IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "~Search...\tCtrl+S",              IDM_SEARCH
+    MENUITEM "~Find Next\tCtrl+F",              IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "~Goto Page...\tCtrl+G",           IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Spell Check\tF5",                 IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Zoom",                            IDM_ZOOM
+    {
+      MENUITEM "Zoom 100%",                     IDM_ZOOM_100
+      MENUITEM "Zoom Full ~Width",              IDM_ZOOM_FULLWIDTH
+      MENUITEM "Zoom Full ~Height",             IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Zoom ~Margins",                 IDM_ZOOM_MARGINS
+      MENUITEM "Zoom ~All\tCtrl+Z",             IDM_ZOOM_ALL
+      MENUITEM "Zoom Wi~ndow",                  IDM_ZOOM_WINDOW
+      MENUITEM "Zoom ~Set...",                  IDM_ZOOM_SET
+    }
+  }
+}
+
+DLGTEMPLATE IDD_PROFILE_PATH
+{
+  DIALOG "Set Profile Path", IDD_PROFILE_PATH, 0, 0, 300, 60, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Enter the full path (including drive) of the directory",0,  8, 48, 284, 8
+    LTEXT "where the profile (INI) file will be kept.",            0,  8, 40, 284, 8
+    CONTROL "",               IDD_PROF_ENTRY,       8, 28, 280,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_PROF_ERR,         8,  2, 280,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FILETYPE
+{
+  DIALOG "Select File Type", IDD_FILETYPE, 0, 0, 200, 116, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "File Name:",       0,                    8,100,  70,  8
+    LTEXT "",                 IDD_FILETYPE_NAME,   80,100, 104,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+    LTEXT "This file seems to be of valid format for all    ", 0,  8, 84, 184, 8
+    LTEXT "of the following file types.  Please select the  ", 0,  8, 76, 184, 8
+    LTEXT "correct one to be used for loading the file.     ", 0,  8, 68, 184, 8
+    LISTBOX                   IDD_FILETYPE_LIST,    8, 20, 184, 44
+    DEFPUSHBUTTON "~OK"       DID_OK,               8,  4,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52,  4,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  113,  4,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+  }
+}
+
+DLGTEMPLATE IDD_PREFERENCES
+{
+  DIALOG "General Preferences", IDD_PREFERENCES, 0, 0, 300, 110, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    AUTOCHECKBOX "Animate",                  IDD_PREFERENCES_ANIMATE,           8, 98, 190, 10
+    AUTOCHECKBOX "Show Rulers",              IDD_PREFERENCES_RULERS,            8, 88, 190, 10
+    AUTOCHECKBOX "Show Scroll Bars",         IDD_PREFERENCES_SCBARS,            8, 78, 190, 10
+    AUTOCHECKBOX "Show Status Line",         IDD_PREFERENCES_STATUSLINE,        8, 68, 190, 10
+    AUTOCHECKBOX "Show Complete Filenames",  IDD_PREFERENCES_FULLNAMES,         8, 58, 190, 10
+    AUTOCHECKBOX "Spool Pages Separately",   IDD_PREFERENCES_SPOOLPAGES,        8, 48, 190, 10
+    AUTOCHECKBOX "Print Pages in Reverse",   IDD_PREFERENCES_PRINTREVERSE,      8, 38, 190, 10
+    AUTOCHECKBOX "Reload Document at Start", IDD_PREFERENCES_LOADMOSTRECENT,    8, 28, 190, 10
+
+    GROUPBOX "Initial Zoom",                 0,                               200, 46,  88, 60
+    AUTORADIOBUTTON "100%",                  IDD_PREFERENCES_ZOOM_100,        204, 48,  80, 10, WS_GROUP
+    AUTORADIOBUTTON "Full Width",            IDD_PREFERENCES_ZOOM_FULLWIDTH,  204, 58,  80, 10
+    AUTORADIOBUTTON "Full Height",           IDD_PREFERENCES_ZOOM_FULLHEIGHT, 204, 68,  80, 10
+    AUTORADIOBUTTON "Margins",               IDD_PREFERENCES_ZOOM_MARGINS,    204, 78,  80, 10
+    AUTORADIOBUTTON "All",                   IDD_PREFERENCES_ZOOM_ALL,        204, 88,  80, 10
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"         DID_CANCEL,              52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"            0,                      113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_PREFERENCES_ERR,      8,  2, 290,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS
+{
+  DIALOG "Document Defaults", IDD_DEFAULTS, 0, 0, 300, 200, FS_DLGBORDER, FCF_SYSMENU | FCF_SIZEBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_DEFAULTS_NOTEBOOK,    8, 48, 284,150, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    AUTOCHECKBOX "Global Save",  IDD_DEFAULTS_GLOBAL,      8, 38, 284,  8, WS_GROUP
+    LTEXT "",                    IDD_DEFAULTS_UNITS,       8, 28, 284,  8
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",            IDD_DEFAULTS_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"         DID_CANCEL,              96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"            0,                      157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_DEFAULTS_ERR,         8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_AUTHOR
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_AUTHOR, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Author's Name",       0,                        0, 90,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_AUTHOR,     90, 90, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Title",               IDD_DEFAULTS_TITLE_TAG,   0, 80,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_TITLE,      90, 80, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Creation Date",       IDD_DEFAULTS_CREATEDATE_TAG,0,70, 90,  8, DT_VCENTER
+    LTEXT "",                    IDD_DEFAULTS_CREATEDATE, 90, 70, 110,  8, DT_VCENTER
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_PRINTER
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_PRINTER, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Printer",             0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_PRINTER,    90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    PUSHBUTTON "Printer Settings",IDD_DEFAULTS_SETTINGS,  12, 70, 186, 12
+    LTEXT "",                    IDD_DEFAULTS_FORMNAME,   12, 61, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_FORMSIZE,   12, 55, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_FONT
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_FONT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Font",                0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_FONT,       90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Size",                0,                        0, 80,  80,  8
+    CONTROL "",                  IDD_DEFAULTS_SIZE,       90,  0, 110, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Text/Line Color",     0,                        0, 70,  70,  8
+    VALUESET                     IDD_DEFAULTS_COLOR,      90, 58, 110, 20, VS_RGB | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 2, 8
+
+    GROUPBOX "Attributes",       0,                        0, 10, 200, 42
+    AUTOCHECKBOX "Bold",         IDD_DEFAULTS_BOLD,        4, 34,  90, 10, WS_GROUP
+    AUTOCHECKBOX "Italic",       IDD_DEFAULTS_ITALIC,      4, 24,  90, 10
+    AUTOCHECKBOX "Underscore",   IDD_DEFAULTS_UNDERSCORE,  4, 14,  90, 10
+    AUTOCHECKBOX "Strikeout",    IDD_DEFAULTS_STRIKEOUT, 100, 34,  90, 10
+    AUTOCHECKBOX "Outline",      IDD_DEFAULTS_OUTLINE,   100, 24,  90, 10
+    AUTOCHECKBOX "Caps",         IDD_DEFAULTS_CAPS,      100, 14,  90, 10
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT1
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT1, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER 
+  {
+    LTEXT "Justification",       0,                        0, 86,  90,  8
+    VALUESET                     IDD_DEFAULTS_JUSTIFY,    90, 80, 110, 20, VS_BITMAP | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 1, 4
+
+    AUTOCHECKBOX "Center Page",  IDD_DEFAULTS_CENTERPAGE,  0, 70, 200, 10
+
+    GROUPBOX "Margins",          0,                        0,  8, 200, 52
+    LTEXT "Left",                0,                        4, 42,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_LEFT,       80, 42, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Right",               0,                        4, 32,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_RIGHT,      80, 32, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Top",                 0,                        4, 22,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_TOP,        80, 22, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Bottom",              0,                        4, 12,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_BOTTOM,     80, 12, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT2
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT2, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER 
+  {
+    GROUPBOX "Distances",        0,                        0, 60, 200, 32
+    LTEXT "Tabs",                0,                        4, 74,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_TAB,        96, 74,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Indent",              0,                        4, 64,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_INDENT,     96, 64,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    GROUPBOX "Line Spacing",     0,                        0, 16, 200, 42
+    AUTORADIOBUTTON "Single",    IDD_DEFAULTS_LINE_100,    4, 40, 192,  8
+    AUTORADIOBUTTON "1 1/2",     IDD_DEFAULTS_LINE_150,    4, 30, 192,  8
+    AUTORADIOBUTTON "Double",    IDD_DEFAULTS_LINE_200,    4, 20, 192,  8
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_NATIONAL
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_NATIONAL, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Code page",           0,                        0, 90,  70,  8
+    CONTROL "",                  IDD_DEFAULTS_CODEPAGE,   70,  0, 130, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    GROUPBOX "Date Format",      0,                        0, 10, 200, 78
+    CONTROL "",                  IDD_DEFAULTS_DATEFMT,     4, 72, 192,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Sample:",             0,                        4, 62,  30,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_DATESMP,    34, 62, 162,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "All text entered in the format is copied to the result,", 0,  4, 54, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "except that which is preceded by the '%' character.    ", 0,  4, 48, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "The first character after the '%' can be one of the    ", 0,  4, 42, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "following:                                             ", 0,  4, 36, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    m - Numeric month                                  ", 0,  4, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    M - Full month                                     ", 0, 98, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    n - Abbrev. month                                  ", 0,  4, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    d - Numeric day                                    ", 0, 98, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    y - 4-digit year                                   ", 0,  4, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    z - 2-digit year                                   ", 0, 98, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    w - Weekday                                        ", 0,  4, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    x - Abbrev. weekday                                ", 0, 98, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    AUTOCHECKBOX "Metric Units", IDD_DEFAULTS_METRIC,      0,  0, 200, 10
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXTENSIONS
+{
+  DIALOG "Configure Extensions", IDD_CONFIGURE_EXTENSIONS, 0, 0, 300, 200, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_CONFIGURE_NOTEBOOK,   8, 28, 284,170, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"         DID_CANCEL,              52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"            0,                      113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_CONFIGURE_ERR,        8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_SEARCH
+{
+   DIALOG "Search...", IDD_SEARCH, 0, 0, 220, 90, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Text to find:",       0,                    8, 76,  90,  8
+      CONTROL "",                  IDD_SEARCH_STRING,  106, 76,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      LTEXT "Replacement:",        0,                    8, 64,  90,  8
+      CONTROL "",                  IDD_SEARCH_REPLACE, 106, 64,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      AUTOCHECKBOX "Case ~Sensitive",IDD_SEARCH_CASESENSITIVE,8,52,205,10
+      AUTOCHECKBOX "~Regular Expression",IDD_SEARCH_REGULAR,8,40,205,10
+
+      DEFPUSHBUTTON "~Find"        IDD_SEARCH_FIND,      8, 24,  55, 12, WS_GROUP
+      CONTROL "~Change"            IDD_SEARCH_CHANGE,   67, 24,  55, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Chang~e & Find"     IDD_SEARCH_CHANGEFIND,126,24, 86, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Change ~All"        IDD_SEARCH_CHANGEALL, 8, 10,  69, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancel"         DID_CANCEL,          81, 10,  70, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Help"            0,                  155, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                    IDD_SEARCH_ERR,       8,  2, 204,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_GOTOPAGE
+{
+   DIALOG "Go To Page", IDD_GOTOPAGE, 0, 0, 200, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Page Number:",     0,                    8, 28,  90,  8
+      CONTROL "",               IDD_GOTOPAGE_ENTRY, 100, 28,  92,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+      DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+      CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Help"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                 IDD_GOTOPAGE_ERR,     8,  2, 192,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_SPELL
+{
+   DIALOG "Spell Checker", IDD_SPELL, 0, 0, 240, 100, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Word found:",                        0,    4,  86,  86,  8
+      LTEXT "Original Text",       IDD_SPELL_OLDWORD,  94,  86, 142,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+      CTEXT "-- Possible Replacements --",        0,    4,  76, 232,  8
+      CONTROL "",                  IDD_SPELL_NEWWORD,   1,  26, 238, 48, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_SIMPLE
+      CONTROL "~Skip",                IDD_SPELL_SKIP,   1,  13,  49, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_DEFAULT
+      CONTROL "~Accept",            IDD_SPELL_ACCEPT,  50,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "~Insert",            IDD_SPELL_INSERT, 110,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "~Replace",          IDD_SPELL_REPLACE, 170,  13,  69, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Insert ~Lowercase",  IDD_SPELL_UNCAPS,   1,   1, 103, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancel",               DID_CANCEL, 104,   1,  71, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Help",                          0,  175,   1,  64, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+   }
+}
+
+DLGTEMPLATE IDD_ZOOM_SET
+{
+  DIALOG "Zoom Set...", IDD_ZOOM_SET, 0, 0, 230, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Zoom Value (%)",   0,                    8, 26, 100,  8
+    CONTROL "",               IDD_ZOOM_SET,       120, 26,  94,  8,
+      WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_ZOOM_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_ZOOM_ERR,         8,  2, 216,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_MARGINS
+{
+  DIALOG "Margins", IDD_MARGINS, 0, 0, 400, 72, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Left",             0,                   58, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_LEFT,   131, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Right",            0,                  229, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_RIGHT,  302, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Top",              0,                   58, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_TOP,    131, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Bottom",           0,                  229, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_BOTTOM, 302, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_MARGINS_UNITS,    8, 34, 390,  8
+    CTEXT "",                 IDD_MARGINS_SIZE,     8, 26, 390,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_MARGINS_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_MARGINS_ERR,      8,  2, 390,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_TABS
+{
+  DIALOG "Tabs", IDD_TABS, 0, 0, 350, 70, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Position",         0,                   70, 48,  50,  8
+    CONTROL "",               IDD_TABS_POSITION,  155, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    PUSHBUTTON "~Set",        IDD_TABS_SET,       230, 54,  50, 12
+    PUSHBUTTON "~Clear",      IDD_TABS_CLEAR,     230, 42,  50, 12
+
+    CTEXT "",                 IDD_TABS_UNITS,       8, 34, 338,  8
+    CTEXT "",                 IDD_TABS_SIZE,        8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_TABS_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_TABS_ERR,         8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_INDENT
+{
+  DIALOG "Paragraph Indent", IDD_INDENT, 0, 0, 350, 62, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Distance",         0,                   97, 48,  50,  8
+    CONTROL "",               IDD_INDENT_DISTANCE,212, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_INDENT_UNITS,     8, 34, 338,  8
+    CTEXT "",                 IDD_INDENT_SIZE,      8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_INDENT_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_INDENT_ERR,       8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_DATEFMT
+{
+  DIALOG "Date Format", IDD_DATEFMT, 0, 0, 260, 154, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Format",           0,                    8,136,  50,  8
+    CONTROL "",               IDD_DATEFMT_ENTRY,   60,136, 192,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Sample:",          0,                    8,126,  50,  8
+    LTEXT "",                 IDD_DATEFMT_SAMPLE,  60,126, 192,  8
+
+    LTEXT "All text entered in the format is copied to the result,", 0,  8,114, 248,  8
+    LTEXT "except that which is preceded by the '%' character.    ", 0,  8,106, 248,  8
+    LTEXT "The first character after the '%' can be one of the    ", 0,  8, 98, 248,  8
+    LTEXT "following:                                             ", 0,  8, 90, 248,  8
+    LTEXT "    m - Becomes the numeric month of the year.         ", 0,  8, 82, 248,  8
+    LTEXT "    M - Becomes the name of the month of the year.     ", 0,  8, 74, 248,  8
+    LTEXT "    n - Becomes the abbreviated name of the month.     ", 0,  8, 66, 248,  8
+    LTEXT "    d - Becomes the numeric day of the month.          ", 0,  8, 58, 248,  8
+    LTEXT "    y - Becomes the 4-digit numeric year.              ", 0,  8, 50, 248,  8
+    LTEXT "    z - Becomes the 2-digit numeric year.              ", 0,  8, 42, 248,  8
+    LTEXT "    w - Becomes the name of the day of the week.       ", 0,  8, 34, 248,  8
+    LTEXT "    x - Becomes the abbreviated name of the weekday.   ", 0,  8, 26, 248,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_DATEFMT_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_DATEFMT_ERR,      8,  2, 248,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_BARCODE
+{
+  DIALOG "Insert Barcode", IDD_BARCODE, 0, 0, 250, 64, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Type",             0,                    8, 50,  85,  8
+    CONTROL "",               IDD_BARCODE_TYPE,   100, 10, 143, 50, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Text",             0,                    8, 38,  85,  8
+    CONTROL "",               IDD_BARCODE_ENTRY,  101, 38, 141,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Valid characters:",0,                    8, 26,  85,  8
+    LTEXT "0123456789",       IDD_BARCODE_CHARS,  101, 26, 141,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_BARCODE_ERR,      8,  2, 238,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_HEADER
+{
+  DIALOG "Header", IDD_HEADER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_HEADER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_HEADER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_HEADER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FOOTER
+{
+  DIALOG "Footer", IDD_FOOTER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_FOOTER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Apply",         IDD_FOOTER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_FOOTER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+
+STRINGTABLE
+{
+  IDS_HELPTITLE                         "'Escriba' Help Facility"
+  IDS_TITLE                             "Escriba Word Processor for OS/2-PM"
+  IDS_TITLE1                            REVISION
+  IDS_NEW_DOCUMENT                      "New Document"
+  IDS_TYPE                              "Type"
+  IDS_PAGE                              "Page"
+  IDS_OF                                "of"
+  IDS_MODIFIED                          "Modified"
+  IDS_JOB_NAME                          "Escriba: "
+  IDS_UNTITLED                          "<Untitled>"
+  IDS_DEFAULTFONT                       "8.Helv"
+  IDS_STATUSFONT                        "10.Helv"
+
+  IDS_PARMS_RESET                       "RESET"
+  IDS_PARMS_PRINT                       "PRINT"
+  IDS_PARMS_TRAP                        "TRAP"
+
+  IDS_PROMPT_SAVE                       "Document '%s' has changed.  Do you wish to save it?"
+  IDS_PROMPT_SAVECONFIRM1               "Document '%s' already exists.  Do you wish to overwrite it?"
+  IDS_PROMPT_SAVECONFIRM2               "Document currently has type '%s'.  Do you wish to change its type to '%s'?"
+
+  IDS_MESSAGE_SPELLDONE                 "Spell check complete."
+
+  IDS_ERROR_EXCEPTION                   "Escriba has had a serious error.  "
+                                        "Please send the file %s to the author at Internet rpapo@msen.com.  "
+                                        "Please describe what you were trying to do with Escriba at the time."
+  IDS_ERROR_PRFOPENPROFILE              "ERROR: Unable to open profile file."
+  IDS_ERROR_CREATEHELP                  "ERROR: Unable to create help instance.  Code %08lX."
+  IDS_ERROR_CREATEFRAME                 "ERROR: Unable to create frame window.  Code %08lX."
+  IDS_ERROR_WINREGISTERCLASS            "ERROR: Unable to register window class '%s'.  Code %08lX."
+  IDS_ERROR_CREATECLIENT                "ERROR: Unable to create client window.  Code %08lX."
+  IDS_ERROR_TOOMANYDOCUMENTS            "ERROR: Cannot open more than %i documents simultaneously."
+  IDS_ERROR_TOOMANYLOADED               "ERROR: Too many documents already open.  '%s' discarded from memory."
+  IDS_ERROR_DOCUMENT_CREATE             "ERROR: Unable to create document object."
+  IDS_ERROR_DOCUMENT_LOAD               "ERROR: Unable to load document."
+  IDS_ERROR_DOCUMENT_SAVE               "ERROR: Unable to open document '%s' for saving."
+  IDS_ERROR_DOCUMENT_NONAME             "ERROR: File has no name.  Use 'Save As...'."
+  IDS_ERROR_CREATEPRINTSTATUS           "ERROR: Unable to create print status window."
+  IDS_ERROR_CREATELOADSTATUS            "ERROR: Unable to create load status window."
+  IDS_ERROR_BLOCKMEMORY                 "ERROR: Block too large for copy operation."
+  IDS_ERROR_BADGRAPHICFILE              "ERROR: Unrecognized graphic file type or format."
+  IDS_ERROR_FILEMEMORY                  "ERROR: Unable to allocate memory to load file '%s'."
+  IDS_ERROR_NOFILETYPE                  "ERROR: Unable to determine type of file '%s'."
+  IDS_ERROR_INVALIDPATH                 "ERROR: '%s%s' is not a valid path."
+  IDS_ERROR_NOPATH                      "ERROR: Path '%s%s' does not exist."
+  IDS_ERROR_LOADLANGUAGE                "ERROR: Unable to load new language library '%s'." 
+ 
+  IDS_WARNING_BADCODEPAGE               "WARNING: Unable to set code page %i.  Some text may be displayed incorrectly."
+  IDS_WARNING_DOSQUERYCP                "WARNING: Unable to validate codepage %i.  Keyboard support will be left in the default state.  DosQueryCp error %i."
+  IDS_WARNING_CODEPAGENOTACTIVE         "WARNING: Codepage %i (%s) was not prepared for use.  Keyboard support will be left in the default state (codepage %i (%s))."
+
+  IDS_PRINTING                          "Printing"
+  IDS_LOADING                           "Loading"
+
+  IDS_BOLD                              " Bold"          // DO NOT TRANSLATE!
+  IDS_ITALIC                            " Italic"        // DO NOT TRANSLATE!
+
+  IDS_ATTR_NORMAL                       "Normal"
+  IDS_ATTR_BOLD                         "Bold"
+  IDS_ATTR_ITALIC                       "Italic"
+  IDS_ATTR_UNDERSCORE                   "Underscore"
+  IDS_ATTR_STRIKEOUT                    "Strikeout"
+  IDS_ATTR_OUTLINE                      "Outline"
+  IDS_ATTR_CAPS                         "Caps"
+
+  IDS_UNITS_ENGLISH                     "All measurements are in inches."
+  IDS_UNITS_METRIC                      "All measurements are in centimeters."
+
+  IDS_VERIFY_ERROR1                     "ERROR: Unable to open file '%s' for verification."
+  IDS_VERIFY_ERROR2                     "ERROR: Unable to get memory to hold file '%s' for verification."
+  IDS_VERIFY_ERROR3                     "ERROR: Invalid file '%s' (invalid escape codes)."
+  IDS_VERIFY_ERROR4                     "ERROR: File '%s' contains invalid functions."
+  IDS_VERIFY_ERROR5                     "ERROR: File '%s' contains null characters."
+  IDS_VERIFY_ERROR6                     "ERROR: Invalid file '%s' (unmatched function header/trailer codes)."
+  IDS_VERIFY_ERROR7                     "ERROR: Invalid file '%s' (no preface object)."
+  IDS_VERIFY_ERROR8                     "ERROR: File '%s' does not match any defined file type."
+
+  IDS_IMPORT_ERROR1                     "ERROR: Unable to open file '%s' for loading."
+  IDS_IMPORT_ERROR2                     "ERROR: Unable to get memory to hold file '%s'."
+
+  IDS_EXPORT_ERROR1                     "ERROR: Unable to open file '%s' for saving."
+  IDS_EXPORT_ERROR2                     "ERROR: Unable to save entire file '%s'."
+
+  IDS_ERROR_SPELL_REPLACE               "ERROR: Replacement text must be specified."
+
+  IDS_MARGINS_PAGESIZE                  "Selected form size: "
+  IDS_MARGINS_ERROR0                    "ERROR: Invalid margin value."
+  IDS_MARGINS_ERROR1                    "ERROR: The left margin cannot be less than %s."
+  IDS_MARGINS_ERROR2                    "ERROR: The right margin cannot be less than %s."
+  IDS_MARGINS_ERROR3                    "ERROR: The left and right margins overlap."
+  IDS_MARGINS_ERROR4                    "ERROR: The bottom margin cannot be less than %s."
+  IDS_MARGINS_ERROR5                    "ERROR: The top margin cannot be less than %s."
+  IDS_MARGINS_ERROR6                    "ERROR: The top and bottom margins overlap."
+
+  IDS_TABS_MARGINS                      "The current margins are %s and %s."
+  IDS_TABS_ERROR1                       "ERROR: Invalid tab value."
+  IDS_TABS_ERROR2                       "ERROR: Tabs cannot be set before the left margin."
+  IDS_TABS_ERROR3                       "ERROR: Tabs cannot be set after the right margin."
+  IDS_TABS_ERROR4                       "ERROR: This tab has already been set."
+  IDS_TABS_ERROR5                       "ERROR: A tab cannot be cleared if it hasn't been set."
+  IDS_TABS_ERROR6                       "ERROR: The tab list is full."
+
+  IDS_INDENT_MARGINS                    "The current margins are %s and %s."
+  IDS_INDENT_ERROR1                     "ERROR: Invalid indention distance."
+  IDS_INDENT_ERROR2                     "ERROR: Indent cannot be set past the right margin."
+
+  IDS_BARCODE_ERROR1                    "ERROR: Barcode text cannot be blank."
+  IDS_BARCODE_ERROR2                    "ERROR: Barcode text contains invalid characters."
+
+  IDS_PRINTER_ERROR0                    "ERROR: Unable to query for spooler default printer name."
+  IDS_PRINTER_ERROR1                    "ERROR: Unable to query for printer driver details."
+  IDS_PRINTER_ERROR2                    "ERROR: Unable to query printer job properties size."
+  IDS_PRINTER_ERROR3                    "ERROR: Unable to query job properties.  Status %ld."
+  IDS_PRINTER_ERROR4                    "ERROR: The printer has not been configured.  Please do so via the Control Panel."
+  IDS_PRINTER_ERROR5                    "ERROR: Invalid device name: '%s'"
+  IDS_PRINTER_ERROR6                    "ERROR: Invalid driver data."
+  IDS_PRINTER_ERROR7                    "ERROR: Invalid driver name: '%s'"
+  IDS_PRINTER_ERROR8                    "ERROR: Invalid logical address: '%s'"
+  IDS_PRINTER_ERROR9                    "ERROR: DevPostDeviceModes error %XH"
+
+  IDS_DEFAULTS_PAGE_AUTHOR              "Author"
+  IDS_DEFAULTS_PAGE_PRINTER             "Printer"
+  IDS_DEFAULTS_PAGE_FONT                "Font"
+  IDS_DEFAULTS_PAGE_LAYOUT              "Layout"
+  IDS_DEFAULTS_PAGE_NATIONAL            "National"
+
+  IDS_DEFAULTS_METRIC1                  "%sx%scm"
+  IDS_DEFAULTS_ENGLISH1                 "%sx%sin"
+  IDS_DEFAULTS_METRIC2                  " (clipped to %s%s%s-%s%s%s)"
+  IDS_DEFAULTS_ENGLISH2                 " (clipped to %s%s%s-%s%s%s)"
+
+  IDS_DEFAULTS_ERROR1                   "ERROR: Invalid tab spacing."
+  IDS_DEFAULTS_ERROR2                   "ERROR: No printer has been selected."
+
+  IDS_ZOOM_ERROR1                       "ERROR: Zoom cannot be less than 10%."
+  IDS_ZOOM_ERROR2                       "ERROR: Zoom cannot be more than 3000%."
+
+  IDS_SEARCH_ERROR1                     "ERROR: Search text cannot be blank."
+  IDS_SEARCH_ERROR2                     "The replacement text is blank.  Are you sure?"
+  IDS_SEARCH_ERROR3                     "ERROR: Text not found."
+  IDS_SEARCH_ERROR4                     "ERROR: Regular expression error '%s'."
+
+  IDS_HEADER_TOO_LARGE                  "ERROR: Definition too large (%i, max %i)."
+  IDS_HEADER_BAD_FUNCTION               "ERROR: Invalid function '%0.*s'."
+
+  IDS_ZOOM0                             "Point to one corner of the zoom window and press the left mouse button."
+  IDS_ZOOM1                             "Point to the opposite corner of the zoom window and release the mouse button."
+
+  IDS_PASTEGRAPHIC0                     "Point to one corner of the graphic box and press the left mouse button."
+  IDS_PASTEGRAPHIC1                     "Point to the opposite corner of the graphic box and release the mouse button."
+
+  IDS_MOVEGRAPHIC                       "Move the graphic outline to its new location and release the mouse button."
+  IDS_SIZEGRAPHIC                       "Move the graphic edge to its new position and release the mouse button."
+  IDS_MOVETEXT                          "Move the text cursor to the text block's new location and release the mouse button."
+
+  IDS_DATEFMT_ERROR1                    "ERROR: Invalid date format."
+  IDS_DATEFMT_HEADER                    "%"
+  IDS_DATEFMT_YEAR2                     "z"
+  IDS_DATEFMT_YEAR4                     "y"
+  IDS_DATEFMT_MON                       "n"
+  IDS_DATEFMT_MONTH                     "m"
+  IDS_DATEFMT_MONTHS                    "M"
+  IDS_DATEFMT_DAY                       "d"
+  IDS_DATEFMT_WEEKDAY                   "w"
+  IDS_DATEFMT_WKDAY                     "x"
+  IDS_DATEFMT_WEEKDAYS                  "SunMonTueWedThuFriSat"
+  IDS_DATEFMT_DAY0                      "Sunday"
+  IDS_DATEFMT_DAY1                      "Monday"
+  IDS_DATEFMT_DAY2                      "Tuesday"
+  IDS_DATEFMT_DAY3                      "Wednesday"
+  IDS_DATEFMT_DAY4                      "Thursday"
+  IDS_DATEFMT_DAY5                      "Friday"
+  IDS_DATEFMT_DAY6                      "Saturday"
+  IDS_DATEFMT_MONS                      "JanFebMarAprMayJunJulAugSepOctNovDec"
+  IDS_DATEFMT_MONTH1                    "January"
+  IDS_DATEFMT_MONTH2                    "February"
+  IDS_DATEFMT_MONTH3                    "March"
+  IDS_DATEFMT_MONTH4                    "April"
+  IDS_DATEFMT_MONTH5                    "May"
+  IDS_DATEFMT_MONTH6                    "June"
+  IDS_DATEFMT_MONTH7                    "July"
+  IDS_DATEFMT_MONTH8                    "August"
+  IDS_DATEFMT_MONTH9                    "September"
+  IDS_DATEFMT_MONTH10                   "October"
+  IDS_DATEFMT_MONTH11                   "November"
+  IDS_DATEFMT_MONTH12                   "December"
+
+  IDS_SAVING                            "Saving"
+  IDS_MERGING                           "Merging"
+
+  IDS_OPEN_DOCUMENT                     "Open Document"
+  IDS_MERGE_DOCUMENT                    "Merge Document"
+  IDS_SAVE_DOCUMENT                     "Save Document"
+  IDS_OPEN_GRAPHIC                      "Open Graphic File"
+
+  IDS_SELECTED_FORM                     "Selected form: %s"
+  IDS_POINT                             "pt"
+
+  IDS_REGISTERED_TO                     "Registered to "
+  IDS_SERIAL_NUMBER                     "S/N "
+
+  IDS_MORE_PGUP                         "More "
+  IDS_MORE_PGDN                         "More "
+  IDS_MANAGER                           "~Manager..."
+
+  IDS_EXPAND                            "Expand %i%%"
+
+  IDS_CHANGEDATE                        "ChangeDate"
+  IDS_CURRENTDATE                       "CurrentDate"
+  IDS_GRAPHIC                           "Graphic"
+  IDS_FUNCTION                          "Function"
+  IDS_ENDDOCUMENT                       "EndDocument"
+  IDS_ENDPAGE                           "EndPage"
+  IDS_ENDLINE                           "EndLine"
+  IDS_TAB                               "Tab"
+  IDS_SPACE                             "Space"
+  IDS_HYPHEN                            "Hyphen"
+  IDS_CHAR                              "Character"
+  IDS_CURSOR                            "Cursor:"
+  IDS_DORMANT                           "Dormant"
+
+  IDS_ON                                "ON"
+  IDS_OFF                               "OFF"
+
+  IDS_INLINE                            "Inline"
+  IDS_LEFTEDGE                          "LeftEdge"
+  IDS_RIGHTEDGE                         "RightEdge"
+  IDS_BOTTOMEDGE                        "BottomEdge"
+  IDS_TOPEDGE                           "TopEdge"
+  IDS_LEFTMARGIN                        "LeftMargin"
+  IDS_RIGHTMARGIN                       "RightMargin"
+  IDS_BOTTOMMARGIN                      "BottomMargin"
+  IDS_TOPMARGIN                         "TopMargin"
+  IDS_CENTERED                          "Centered"
+  IDS_EDGETOEDGE                        "EdgeToEdge"
+  IDS_MARGINTOMARGIN                    "MarginToMargin"
+
+  IDS_BITMAP                            "Bitmap"
+  IDS_METAFILE                          "Metafile"
+  IDS_UPCA                              "UPC-A BarCode"
+  IDS_UPCE                              "UPC-E BarCode"
+  IDS_CODE39                            "Code-39 BarCode"
+  IDS_POSTNET                           "POSTNET BarCode"
+  IDS_EAN8                              "EAN-8 BarCode"
+  IDS_EAN13                             "EAN-8 BarCode"
+
+  IDS_FN_VERSION                        "Version: %s"
+  IDS_FN_PREFACE                        "Preface"
+  IDS_FN_PRINTER                        "Printer: %s"
+  IDS_FN_FORM                           "Form: %s"
+  IDS_FN_CODEPAGE                       "CodePage: %i"
+  IDS_FN_FONT                           "Font: %s"
+  IDS_FN_SIZE                           "Size: %s"
+  IDS_FN_COLOR                          "Color: %06X"
+  IDS_FN_FILLCOLOR                      "FillColor: %06X"
+  IDS_FN_BOLD                           "Bold: %s"
+  IDS_FN_ITALIC                         "Italic: %s"
+  IDS_FN_UNDERSCORE                     "Underscore: %s"
+  IDS_FN_STRIKEOUT                      "Strikeout: %s"
+  IDS_FN_OUTLINE                        "Outline: %s"
+  IDS_FN_CAPS                           "Caps: %s"
+  IDS_FN_EXPAND                         "Expand: %i%%"
+  IDS_FN_TOPMARGIN                      "TopMargin: %s"
+  IDS_FN_BOTTOMMARGIN                   "BottomMargin: %s"
+  IDS_FN_LEFTMARGIN                     "LeftMargin: %s"
+  IDS_FN_RIGHTMARGIN                    "RightMargin: %s"
+  IDS_FN_LEFTJUSTIFY                    "Justify Left"
+  IDS_FN_CENTERJUSTIFY                  "Justify Center"
+  IDS_FN_RIGHTJUSTIFY                   "Justify Right"
+  IDS_FN_FULLJUSTIFY                    "Justify Full"
+  IDS_FN_CENTERPAGE                     "CenterPage: %s"
+  IDS_FN_TABSET                         "TabSet: %s"
+  IDS_FN_TABCLEAR                       "TabClear: %s"
+  IDS_FN_TABSPACING                     "TabSpacing: %s"
+  IDS_FN_INDENT                         "Indent: %s"
+  IDS_FN_METRIC                         "Metric"
+  IDS_FN_GRAPHIC                        "Graphic: %s%s%s (%sx%s) %s"
+  IDS_FN_DATEFIXED                      "FixedDate: %s"
+  IDS_FN_DATECURRENT                    "CurrentDate"
+  IDS_FN_DATECHANGED                    "ChangedDate: %s"
+  IDS_FN_DATEFORMAT                     "DateFormat: %s"
+  IDS_FN_LINESPACING                    "LineSpacing: %i%%"
+  IDS_FN_JOBSETTINGS                    "JobSettings"
+  IDS_FN_PAGENUMBER                     "PageNumber"
+  IDS_FN_PAGECOUNT                      "PageCount"
+  IDS_FN_LINEWIDTH                      "LineWidth: %s"
+  IDS_FN_LINEEND                        "LineEnd: %i"
+  IDS_FN_LINEJOIN                       "LineJoin: %i"
+  IDS_FN_FILLTYPE                       "FillType: %i"
+  IDS_FN_GLYPH                          "Glyph: 0x%02X '%c'"
+  IDS_FN_AUTHOR                         "Author: %s"
+  IDS_FN_CREATEDATE                     "CreateDate: %s"
+  IDS_FN_COMMENT                        "Comment: %0.40s%s"
+  IDS_FN_SEPARATOR                      "Separator"
+  IDS_FN_TITLE                          "Title: %0.40s%s"
+  IDS_FN_HEADER                         "Header: %0.40s%s"
+  IDS_FN_FOOTER                         "Footer: %0.40s%s"
+
+  IDS_ALL_DOCUMENTS                     "<All Document Files>"
+  IDS_ALL_GRAPHICS                      "<All Graphic Files>"
+
+  IDS_WINDOW_BY_ME_NODATE               "%s"
+  IDS_WINDOW_BY_ME                      "%s, created %s"
+  IDS_WINDOW_BY_OTHER                   "%s by %s, created %s"
+
+  IDS_GOTOPAGE_ERROR1                   "Page must 1 to %i."
+
+  IDS_METAFILE_VERIFY1                  "ERROR: Unable to open metafile '%s' for verification."
+  IDS_METAFILE_VERIFY2                  "ERROR: Metafile '%s' is too short."
+  IDS_METAFILE_VERIFY3                  "ERROR: Unable to load metafile '%s' header for verification."
+  IDS_METAFILE_VERIFY4                  "ERROR: Metafile '%s' has invalid header."
+}
+
+STRINGTABLE
+{
+  IDS_OK                                " ~OK "
+  IDS_CANCEL                            " Esc=Cancel "
+  IDS_ABORT                             " Abort "
+  IDS_RETRY                             " Retry "
+  IDS_IGNORE                            " Ignore "
+  IDS_YES                               " ~Yes "
+  IDS_NO                                " ~No "
+  IDS_HELP                              " F1=Help "
+  IDS_ENTER                             " Enter "
+}
+
+STRINGTABLE
+{
+  IDS_FDLG_FILENAME_TXT1                "Open filename:"
+  IDS_FDLG_FILENAME_TXT2                "Save filename:"
+  IDS_FDLG_DRIVE_TXT                    "Drive:"
+  IDS_FDLG_FILTER_TXT                   "Type of file:"
+  IDS_FDLG_DIRECTORY_TXT                "Directory:"
+  IDS_FDLG_FILES_TXT                    "File:"
+  IDS_FDLG_HELP_PB                      "F1=Help"
+  IDS_FDLG_APPLY_PB                     "~Apply"
+  IDS_FDLG_OK_PB1                       "~Open"
+  IDS_FDLG_OK_PB2                       "~Save"
+  IDS_FDLG_CANCEL_PB                    "Esc=Cancel"
+}
+
+STRINGTABLE
+{
+  IDS_CODEPAGES+37                      "Brazil / Portuguese / U.S. English (EBCDIC)"
+  IDS_CODEPAGES+273                     "Austrian / German (EBCDIC)"
+  IDS_CODEPAGES+274                     "Belgian (old EBCDIC)"
+  IDS_CODEPAGES+277                     "Danish / Norwegian (EBCDIC)"
+  IDS_CODEPAGES+278                     "Finnish / Swedish (EBCDIC)"
+  IDS_CODEPAGES+280                     "Italian (EBCDIC)"
+  IDS_CODEPAGES+282                     "Portuguese (old EBCDIC)"
+  IDS_CODEPAGES+284                     "Spanish (EBCDIC)"
+  IDS_CODEPAGES+285                     "U.K. English (EBCDIC)"
+  IDS_CODEPAGES+290                     "<Unknown>"
+  IDS_CODEPAGES+297                     "French (EBCDIC)"
+  IDS_CODEPAGES+300                     "<Unknown>"
+  IDS_CODEPAGES+301                     "<Unknown>"
+  IDS_CODEPAGES+420                     "<Unknown>"
+  IDS_CODEPAGES+424                     "<Unknown>"
+  IDS_CODEPAGES+437                     "United States (IBM PC)"
+  IDS_CODEPAGES+500                     "Belgian / International (EBCDIC)"
+  IDS_CODEPAGES+803                     "<Unknown>"
+  IDS_CODEPAGES+813                     "Greek"
+  IDS_CODEPAGES+819                     "Multilingual (ISO-8859/1)"
+  IDS_CODEPAGES+835                     "<Unknown>"
+  IDS_CODEPAGES+850                     "Multilingual (Latin1)"
+  IDS_CODEPAGES+852                     "Slavic (Latin2)"
+  IDS_CODEPAGES+855                     "Serbia / Montenegro / Macedonia / Bulgaria"
+  IDS_CODEPAGES+857                     "Turkey"
+  IDS_CODEPAGES+860                     "Portuguese"
+  IDS_CODEPAGES+861                     "Iceland"
+  IDS_CODEPAGES+862                     "Hebrew"
+  IDS_CODEPAGES+863                     "French-Canadian"
+  IDS_CODEPAGES+864                     "Arabic"
+  IDS_CODEPAGES+865                     "Danish / Norwegian"
+  IDS_CODEPAGES+866                     "Russia"
+  IDS_CODEPAGES+869                     "Greek"
+  IDS_CODEPAGES+870                     "Czechoslovakia / Hungary / Poland / Yugoslavia (EBCDIC)"
+  IDS_CODEPAGES+871                     "Iceland (EBCDIC)"
+  IDS_CODEPAGES+874                     "Thailand"
+  IDS_CODEPAGES+897                     "<Unknown>"
+  IDS_CODEPAGES+915                     "Bulgaria / Macedonia"
+  IDS_CODEPAGES+932                     "Japan (Shift JIS X-0208)"
+  IDS_CODEPAGES+934                     "Korea"
+  IDS_CODEPAGES+936                     "Simplified Chinese"
+  IDS_CODEPAGES+938                     "Traditional Chinese"
+  IDS_CODEPAGES+942                     "Japan (SAA)"
+  IDS_CODEPAGES+944                     "Korea (SAA)"
+  IDS_CODEPAGES+946                     "Simplified Chinese (SAA)"
+  IDS_CODEPAGES+948                     "Traditional Chinese (SAA)"
+  IDS_CODEPAGES+949                     "Korea (Shift KSC 5601)"
+  IDS_CODEPAGES+950                     "Traditional Chinese (Big5)"
+  IDS_CODEPAGES+1004                    "Desktop Publishing"
+  IDS_CODEPAGES+1026                    "Turkey (EBCDIC)"
+  IDS_CODEPAGES+1027                    "<Unknown>"
+  IDS_CODEPAGES+1041                    "<Unknown>"
+  IDS_CODEPAGES+1112                    "<Unknown>"
+  IDS_CODEPAGES+1122                    "<Unknown>"
+  IDS_CODEPAGES+1200                    "Unicode"
+  IDS_CODEPAGES+1250                    "Windows, Latin-2 (Eastern European)"
+  IDS_CODEPAGES+1251                    "Windows, Cyrillic"
+  IDS_CODEPAGES+1252                    "Windows, Multilingual (ANSI)"
+  IDS_CODEPAGES+1253                    "Windows, Greek"
+  IDS_CODEPAGES+1254                    "Windows, Turkish"
+  IDS_CODEPAGES+1255                    "Windows, Hebrew"
+  IDS_CODEPAGES+1256                    "Windows, Arabic"
+  IDS_CODEPAGES+1275                    "<Unknown>"
+  IDS_CODEPAGES+1302                    "<Unknown>"
+}
+
+STRINGTABLE
+{
+  IDS_HMERR                            "Help Manager Error"
+  IDS_HMERR_EXTHELPUNDEFINED           "Extended help undefined."
+  IDS_HMERR_NO_FRAME_WND_IN_CHAIN      "No frame window in chain."
+  IDS_HMERR_INVALID_ASSOC_APP_WND      "Invalid window handle associated."
+  IDS_HMERR_INVALID_ASSOC_HELP_IN      "Invalid help instance associated."
+  IDS_HMERR_INVALID_DESTROY_HELP_      "Invalid window handle to deassociate."
+  IDS_HMERR_NO_HELP_INST_IN_CHAIN      "No help instance in window chain."
+  IDS_HMERR_INVALID_HELP_INSTANCE      "Invalid help instance handle."
+  IDS_HMERR_INVALID_QUERY_APP_WND      "Invalid application window handle in query."
+  IDS_HMERR_HELP_INST_CALLED_INVA      "Help instance called invalid."
+  IDS_HMERR_HELPTABLE_UNDEFINE         "Help table undefined."
+  IDS_HMERR_HELP_INSTANCE_UNDEFIN      "Help instance undefined."
+  IDS_HMERR_HELPITEM_NOT_FOUND         "Help item not found."
+  IDS_HMERR_INVALID_HELPSUBITEM_S      "Invalid help subitem size."
+  IDS_HMERR_HELPSUBITEM_NOT_FOUND      "Help subitem not found."
+  IDS_HMERR_INDEX_NOT_FOUND            "No index in library file."
+  IDS_HMERR_CONTENT_NOT_FOUND          "Table of contents not found."
+  IDS_HMERR_OPEN_LIB_FILE              "Unable to open help library."
+  IDS_HMERR_READ_LIB_FILE              "Unable to read help library."
+  IDS_HMERR_CLOSE_LIB_FILE             "Unable to close help library."
+  IDS_HMERR_INVALID_LIB_FILE           "Help library has invalid format."
+  IDS_HMERR_NO_MEMORY                  "Out of memory."
+  IDS_HMERR_ALLOCATE_SEGMENT           "Unable to allocate segment."
+  IDS_HMERR_FREE_MEMORY                "Unable to release memory."
+  IDS_HMERR_PANEL_NOT_FOUND            "Help panel not found."
+  IDS_HMERR_DATABASE_NOT_OPEN          "Help database not open."
+  IDS_HMERR_UNKNOWN                    "--- Unknown Error ---"
+  IDS_HELPMODE_FRAME                   "Frame"
+  IDS_HELPMODE_MENU                    "Menu"
+  IDS_HELPMODE_WINDOW                  "Window"
+  IDS_HELPMODE_UNKNOWN                 "Unknown"
+  IDS_HELPSUBITEMNOTFOUND              "Help subitem not found: Mode='%s' Topic=%u Subtopic=%u"
+}
+

@@ -1,0 +1,57 @@
+jpeg.obj: \
+	jpeg.cpp \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	jpeg.h
+
+jpeg.res: \
+	jpeg.rc \
+	jpeg.h
+
+jpeg_deu.res: \
+	jpeg_deu.rc \
+	jpeg.h
+
+jpeg_enu.res: \
+	jpeg_enu.rc \
+	jpeg.h
+
+jpeg_esp.res: \
+	jpeg_esp.rc \
+	jpeg.h
+
+jpeg_fra.res: \
+	jpeg_fra.rc \
+	jpeg.h
+
+jpeg_nld.res: \
+	jpeg_nld.rc \
+	jpeg.h
+
+jpeg_deu.hlp: \
+	jpeg_deu.ipf \
+	jpeg.h
+
+jpeg_enu.hlp: \
+	jpeg_enu.ipf \
+	jpeg.h
+
+jpeg_esp.hlp: \
+	jpeg_esp.ipf \
+	jpeg.h
+
+jpeg_fra.hlp: \
+	jpeg_fra.ipf \
+	jpeg.h
+
+jpeg_nld.hlp: \
+	jpeg_nld.ipf \
+	jpeg.h
+

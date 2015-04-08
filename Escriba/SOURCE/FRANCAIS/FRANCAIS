@@ -1,0 +1,27 @@
+# Build French language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+Francais: $*.dll $*.hlp $*.inf
+
+Francais.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+Francais.hlp: Francais\Francais.ipf Escriba.H Escriba.BMP \
+  Francais\About.bmp    Francais\BarCode.bmp  Francais\ConfigEx.bmp Francais\DateFmt.bmp  \
+  Francais\Default0.bmp Francais\Default1.bmp Francais\Default2.bmp Francais\Default3.bmp \
+  Francais\Default4.bmp Francais\Default5.bmp Francais\FileDlg.bmp  Francais\Indent.bmp   \
+  Francais\Margins.bmp  Francais\Prefer.bmp   Francais\Profile.bmp  Francais\Search.bmp   \
+  Francais\Spell.bmp    Francais\Tabs.bmp     Francais\ZoomSet.bmp
+  ipfcomp /D:33 /C:850 /L:FRA Francais\Francais.ipf
+
+Francais.dll: Francais\Francais.def Francais\Francais.res dll.obj
+  link386 /nologo dll, Francais.dll /align:16, nul,, Francais\Francais ;
+  rc -n Francais\Francais.res $*.dll
+  eautil /s Francais.dll
+  erase eas\*.dll
+  rd eas
+
+Francais\Francais.res: Francais\Francais.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 33 -cp 850 -d __OS2__ -i . -i ..\runtime -r Francais\Francais
+

@@ -1,0 +1,109 @@
+#define INCL_PM
+#include <os2.h>
+
+#define LOCAL_DEFINES
+#include "ISpeller.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "ISpeller",           //   Application Name.
+  "Fran‡ais",           //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: janvier, f‚vrier, mars, avril, mai, juin,                        *
+ *   juillet, ao–t, septembre, octobre, novembre, d‚cembre.                 *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 188, FS_DLGBORDER
+  {
+    CTEXT "ISpeller"                                            0,  10,158, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0,96d"                                       0,  10,148, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "22 janvier 1998"                                         0,  10,138, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Correcteur orthographique pour OS/2"                 0,  10,118, 220,  8
+
+    CTEXT "Ce programme est d‚riv‚ de ISpell 3.1.18,"           0,  10,102, 220,  8
+    CTEXT "distribu‚ librement, avec les Copyrights suivants :" 0,  10, 94, 220,  8
+
+    CTEXT "Copyright (c), 1983, par Pace Willisson."            0,  10, 78, 220,  8
+    CTEXT "Copyright 1992, 1993, Geoff Kuenning,"               0,  10, 70, 220,  8
+    CTEXT "Granada Hills, CA."                                  0,  10, 62, 220,  8
+    CTEXT "Tous droits r‚serv‚s."                               0,  10, 54, 220,  8
+
+    CTEXT "Adapt‚ … OS/2 par Rick Papo."                        0,  10, 38, 220,  8
+    CTEXT "Version fran‡aise par Rapha‰l Vanney"                0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~Ok"                         DID_OK, 100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE
+{
+  DIALOG "", IDD_CONFIGURE, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    CTEXT "Dictionnaires",       0,                        0, 90, 120,  8
+    COMBOBOX "",                 IDD_CONFIGURE_DICT,       0,  0, 120, 88, CBS_SIMPLE
+    CONTROL "~Cr‚er...",         IDD_CONFIGURE_BUILD,    124, 76,  72, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+    CONTROL "~Effacer",          IDD_CONFIGURE_REMOVE,   124, 60,  72, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+  }
+}
+
+DLGTEMPLATE IDD_BUILD
+{
+  DIALOG "Cr‚ation de dictionnaire", IDD_BUILD, 0, 0, 300, 64, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Fichier de mots"           0,                        8, 50, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_WORDS,        130, 50,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+    CONTROL "Recherche..."            IDD_BUILD_WORDSF,       230, 48,  64, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+
+    LTEXT "Fichier affixe"            0,                        8, 38, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_AFFIX,        130, 38,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+    CONTROL "Recherche..."            IDD_BUILD_AFFIXF,       230, 36,  64, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+
+    LTEXT "Nom du dictionnaire"       0,                        8, 26, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_DICT,         130, 26,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+
+    DEFPUSHBUTTON "~Ok"               DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Annuler"                 DID_CANCEL,              52, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Aide"                    0,                       99, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                         IDD_BUILD_ERR,            8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "Correcteur orthographique ISpeller"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "Aide 'ISpeller'"
+  IDS_ERROR_CREATEHELP                  "Erreur : Impossible d'initialiser l'aide.  Code %08lX."
+  IDS_MAJORTAB                          "ISpeller"
+
+  IDS_DICTIONARY                        "Francais"
+  IDS_BUILD_WORDS                       "Francais.dic"
+  IDS_BUILD_AFFIX                       "Francais"
+  IDS_BUILD_DICT                        "Francais"
+
+  IDS_ERROR_CONFIGURE_NODICT            "Erreur : Impossible de trouver le dictionnaire."
+  IDS_ERROR_CONFIGURE_BADDICT           "Erreur : Impossible d'ouvrir le dictionnaire."
+  IDS_ERROR_CONFIGURE_MUSTSELECT        "Erreur : Vous devez choisir un dictionnaire."
+
+  IDS_ERROR_BUILD_NOTAVAIL              "Erreur : Fonction non disponible."
+  IDS_ERROR_BUILD_NOWORDLIST            "Erreur : Impossible d'acc‚der … la liste des mots."
+  IDS_ERROR_BUILD_NOAFFIX               "Erreur : Impossible d'acc‚der au fichier affixes."
+  IDS_ERROR_BUILD_NODICT                "Erreur : Impossible d'acc‚der au fichier dictionnaire."
+  IDS_ERROR_BUILD_NOBUILDER             "Erreur : Impossible de trouver le programme de cr‚ation de dictionnaires."
+  IDS_ERROR_BUILD_BUILDERR              "Erreur : Impossible de cr‚er le dictionnaire."
+}
+

@@ -1,0 +1,8 @@
+;
+;       ISP__NLD: ISpeller Language Texts (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'ISP__NLD: ISpeller Language Texts (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

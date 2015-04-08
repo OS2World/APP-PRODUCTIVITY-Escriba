@@ -1,0 +1,12 @@
+;
+;       ESPANOL.DLL module definition file
+;
+
+LIBRARY 
+
+DESCRIPTION 'Spanish-language resources for ESCRIBA.'
+
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+
+

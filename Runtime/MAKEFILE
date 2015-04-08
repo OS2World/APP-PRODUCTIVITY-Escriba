@@ -1,0 +1,96 @@
+# Build Runtime Library for Escriba
+
+.SUFFIXES:
+.SUFFIXES: .cpp
+
+{.}.cpp.obj:
+   icc /Q /C /Ge- /Gm+ /Sp1 /O .\$*.cpp
+
+All : ..\ISpeller\RunTime.lib ..\ISpeller\RunTime.dll ..\Escriba\RunTime.lib ..\Escriba\RunTime.dll
+
+..\ISpeller\RunTime.lib : RunTime.lib
+   copy RunTime.lib ..\ISpeller
+
+..\ISpeller\RunTime.dll : RunTime.dll
+   copy RunTime.dll ..\ISpeller
+
+..\Escriba\RunTime.lib : RunTime.lib
+   copy RunTime.lib ..\Escriba
+
+..\Escriba\RunTime.dll : RunTime.dll
+   copy RunTime.dll ..\Escriba
+
+RunTime.lib : RunTime.dll RunTime.def
+   implib /nologo /noi RunTime.lib RunTime.def
+
+OBJS = \
+   CANVAS.obj \
+   CIRQUEUE.obj \
+   CONTROLS.obj \
+   CRC.obj \
+   DEBUG.obj \
+   DIALOG.obj \
+   EATTR.obj \
+   EVENT.obj \
+   HELPWIN.obj \
+   LMODULE.obj \
+   MODULE.obj \
+   MUTEX.obj \
+   MUX.obj \
+   POOL.obj \
+   PROCESS.obj \
+   PROFILE.obj \
+   RESTRING.obj \
+   SHAREMEM.obj \
+   STRING_.obj \
+   SUPPORT.obj \
+   SYSTEM.obj \
+   WINDOW.obj
+
+RunTime.dll : $(OBJS) RunTime.def
+   icc /Q /Ge- /Gm+ /B"/nologo /m:full" /Fe"RunTime.dll" $(OBJS) RunTime.def
+
+Canvas.obj : Canvas.cpp Canvas.h System.h Debug.h Mutex.h
+
+CirQueue.obj : CirQueue.cpp CirQueue.h System.h Event.h Mutex.h Debug.h
+
+Controls.obj : Controls.cpp Controls.h System.h Debug.h
+
+Crc.obj : Crc.cpp Crc.h System.h
+
+Debug.obj : Debug.cpp Debug.h System.h HRTimer.h Mutex.h RunTime.h ReString.h
+
+Dialog.obj : Dialog.cpp Dialog.h System.h Debug.h
+
+EAttr.obj : EAttr.cpp EAttr.h System.h
+
+Event.obj : Event.cpp Event.h System.h Debug.h Mux.h 
+
+HelpWin.obj : HelpWin.cpp HelpWin.h System.h Debug.h
+
+LModule.obj : LModule.cpp LModule.h System.h ReString.h
+
+Module.obj : Module.cpp Module.h System.h
+
+Mutex.obj : Mutex.cpp Mutex.h System.h Debug.h Mux.h
+
+Mux.obj : Mux.cpp Mux.h System.h Debug.h
+
+Pool.obj : Pool.cpp Pool.h System.h Debug.h
+
+Process.obj : Process.cpp Process.h Debug.h System.h
+
+Profile.obj : Profile.cpp Profile.h System.h HelpWin.h Debug.h Dialog.h Module.h ReString.h Support.h
+
+ReString.obj : ReString.cpp ReString.h System.h Debug.h
+
+ShareMem.obj : ShareMem.cpp ShareMem.h System.h Debug.h
+
+String_.obj : String_.cpp String_.h System.h Debug.h
+
+Support.obj : Support.cpp Support.h System.h Debug.h ReString.h
+
+System.obj : System.cpp System.h Debug.h
+
+Window.obj : Window.cpp Window.h System.h Debug.h Mutex.h Process.h
+

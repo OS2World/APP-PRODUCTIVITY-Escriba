@@ -1,0 +1,213 @@
+ICC      = /Q
+CC       = icc
+#COPTS    = /c /Gm+ /Gn /Sp4 /Ti /Tm+
+COPTS    = /c /Gm+ /Gn /Sp4 /O
+#CPPOPTS  = /c /Gm+ /Gn /Sp4 /Ti /Tm+
+CPPOPTS  = /c /Gm+ /Gn /Sp4 /O
+LINK     = link386
+LOPTS    = /NOLOGO /ST:60000 /PM:VIO /MAP:FULL /NOD /NOE /NOI
+YACC     = yacc
+LANGUAGE = English
+
+LIBOBJ = Common.obj Correct.obj Defmt.obj Good.obj Hash.obj ISpeller.obj \
+         LookUp.obj MakeDent.obj Os2.obj Parse.obj Term.obj TGood.obj \
+         Tree.obj XGets.obj
+
+.obj.exe:
+   $(LINK) $(LOPTS) $*, $*.exe, , ISpeller DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+
+.c.obj:
+   $(CC) $(COPTS) $*.c > $*.err
+
+.rc.res:
+   RC -r .\$*.RC
+
+.cpp.obj:
+   ICC.EXE /Sp1 /Q /O /Gm /Gn /Ge- /C   .\$*.cpp
+
+.res.dll:
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+.hlp.inf:
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+
+All : ISpeller.lib BuildHash.exe ICombine.exe IJoin.exe ISpell.exe Sq.exe UnSq.exe \
+  Deutsch English Espanol Francais Nederlands
+
+ISpeller.lib : $*.dll
+   IMPLIB /NOIGNORECASE $*.lib $*.dll
+
+ISpeller.dll : $*.def $*.res $(LIBOBJ)
+   $(LINK) $(LOPTS) $(LIBOBJ), $*.dll, , DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB, $*.def ;
+   RC $*.res $*.dll
+   IMPLIB /NOIGNORECASE $*.lib $*.dll
+
+ISpeller.res : $*.rc
+   RC -cp 850 -d __OS2__ -r $*.rc
+
+BuildHash.exe : $*.obj ISpeller.lib
+
+ICombine.exe : $*.obj ISpeller.lib
+
+IJoin.exe : $*.obj Fields.obj
+   $(LINK) $(LOPTS) $* + Fields, $*.exe, , DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+
+ISpell.exe : $*.obj Dump.obj ISpeller.lib
+   $(LINK) $(LOPTS) $* + Dump, $*.exe, , ISpeller DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+
+Sq.exe : $*.obj
+
+UnSq.exe : $*.obj
+
+BuildHash.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h Version.h
+Dump.obj      : $*.c Debug.h Config.h ISpell.h Proto.h
+Fields.obj    : $*.c Debug.h Config.h Fields.h
+ICombine.obj  : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+IJoin.obj     : $*.c Debug.h Config.h Fields.h ISpell.h Proto.h
+ISpell.obj    : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h Version.h
+Sq.obj        : $*.c Debug.h
+TGood.obj     : $*.c Debug.h Config.h ISpell.h Proto.h
+UnSq.obj      : $*.c Debug.h Msgs.h
+
+Common.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h Version.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Correct.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h Version.h
+   $(CC) $(CPPOPTS) /Ge- $*.c > $*.err
+
+Defmt.obj     : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Good.obj      : $*.c Debug.h Config.h ISpell.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Hash.obj : $*.c Debug.h Config.h ISpell.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+ISpeller.obj  : $*.cpp Debug.h Config.h ISpell.h ISpeller.h Msgs.h Proto.h Version.h \
+   ..\RunTime\ReString.h
+   $(CC) $(CPPOPTS) /I..\runtime /Ge- $*.cpp > $*.err
+
+LookUp.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+MakeDent.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Os2.obj : $*.c Debug.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Parse.obj : $*.y Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(YACC) $*.y
+   $(CC) $(COPTS) /Ge- y.tab.c > nul
+   copy y.tab.obj $*.obj
+   erase y.tab.*
+
+Term.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Tree.obj : $*.c Debug.h Config.h ISpell.h Msgs.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+XGets.obj : $*.c Debug.h Config.h ISpell.h Proto.h
+   $(CC) $(COPTS) /Ge- $*.c > $*.err
+
+Config.h : $*.x Local.h Build_Config.cmd
+   Build_Config
+
+Msgs.h : Languages\$(LANGUAGE)\Msgs.h
+   Copy Languages\$(LANGUAGE)\Msgs.h
+
+Dll.obj: $*.asm
+  masm $* ;
+
+
+
+# German (Deutsch)
+
+Deutsch: ISP__DEU.dll ISP__DEU.hlp ISP__DEU.inf
+
+ISP__DEU.dll : $*.res dll.obj
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+ISP__DEU.res : $*.rc ISpeller.h
+  rc -cc 49 -cp 850 -r $*
+
+ISP__DEU.inf: $*.hlp
+
+ISP__DEU.hlp: $*.ipf ISpeller.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: ISP__ENU.dll ISP__ENU.hlp ISP__ENU.inf
+
+ISP__ENU.dll : $*.res dll.obj
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+ISP__ENU.res : $*.rc ISpeller.h
+  rc -cc 1 -cp 850 -r $*
+
+ISP__ENU.inf: $*.hlp
+
+ISP__ENU.hlp: $*.ipf ISpeller.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: ISP__ESP.dll ISP__ESP.hlp ISP__ESP.inf
+
+ISP__ESP.dll : $*.res dll.obj
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+ISP__ESP.res : $*.rc ISpeller.h
+  rc -cc 34 -cp 850 -r $*
+
+ISP__ESP.inf: $*.hlp
+
+ISP__ESP.hlp: $*.ipf ISpeller.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: ISP__FRA.dll ISP__FRA.hlp ISP__FRA.inf
+
+ISP__FRA.dll : $*.res dll.obj
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+ISP__FRA.res : $*.rc ISpeller.h
+  rc -cc 33 -cp 850 -r $*
+
+ISP__FRA.inf: $*.hlp
+
+ISP__FRA.hlp: $*.ipf ISpeller.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: ISP__NLD.dll ISP__NLD.hlp ISP__NLD.inf
+
+ISP__NLD.dll : $*.res dll.obj
+  link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+ISP__NLD.res : $*.rc ISpeller.h
+  rc -cc 31 -cp 850 -r $*
+
+ISP__NLD.inf: $*.hlp
+
+ISP__NLD.hlp: $*.ipf ISpeller.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+#include "Makefile.dep"

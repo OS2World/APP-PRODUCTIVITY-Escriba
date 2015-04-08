@@ -1,0 +1,109 @@
+#define INCL_PM
+#include <os2.h>
+
+#define LOCAL_DEFINES
+#include "ISpeller.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "ISpeller",           //   Application Name.
+  "English",            //   Specific language name.
+  850, 437, 852, 860, 863, 865, 932, 934, 936, 938, 942, 944, 946, 948, 950, 0
+}
+
+/****************************************************************************
+ * Months: January, February, March, April, May, June,                      *
+ *   July, August, September, October, November, December.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 188, FS_DLGBORDER
+  {
+    CTEXT "ISpeller"                                            0,  10,158, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.96d"                                       0,  10,148, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "22 January 1998"                                         0,  10,138, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Spell-Checker for OS/2"                              0,  10,118, 220,  8
+
+    CTEXT "This program was built from ISpell 3.1.18,"          0,  10,102, 220,  8
+    CTEXT "which is freeware, with the following copyrights:"   0,  10, 94, 220,  8
+
+    CTEXT "Copyright (c), 1983, by Pace Willisson."             0,  10, 78, 220,  8
+    CTEXT "Copyright 1992, 1993, Geoff Kuenning,"               0,  10, 70, 220,  8
+    CTEXT "Granada Hills, CA."                                  0,  10, 62, 220,  8
+    CTEXT "All rights reserved."                                0,  10, 54, 220,  8
+
+    CTEXT "Adapted to OS/2 by Rick Papo."                       0,  10, 38, 220,  8
+    CTEXT "English Version"                                     0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                         DID_OK, 100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE
+{
+  DIALOG "", IDD_CONFIGURE, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    CTEXT "Dictionaries",        0,                        0, 90, 120,  8
+    COMBOBOX "",                 IDD_CONFIGURE_DICT,       0,  0, 120, 88, CBS_SIMPLE
+    CONTROL "~Build...",         IDD_CONFIGURE_BUILD,    124, 76,  72, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+    CONTROL "~Remove",           IDD_CONFIGURE_REMOVE,   124, 60,  72, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+  }
+}
+
+DLGTEMPLATE IDD_BUILD
+{
+  DIALOG "Dictionary Build", IDD_BUILD, 0, 0, 300, 64, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Word List File Name"       0,                        8, 50, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_WORDS,        130, 50,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+    CONTROL "Find..."                 IDD_BUILD_WORDSF,       230, 48,  64, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+
+    LTEXT "Language Affix File Name"  0,                        8, 38, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_AFFIX,        130, 38,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+    CONTROL "Find..."                 IDD_BUILD_AFFIXF,       230, 36,  64, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON
+
+    LTEXT "Dictionary Name"           0,                        8, 26, 118,  8
+    ENTRYFIELD ""                     IDD_BUILD_DICT,         130, 26,  96,  8, ES_AUTOSCROLL | ES_MARGIN
+
+    DEFPUSHBUTTON "~OK"               DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"              DID_CANCEL,              52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"                 0,                      113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                         IDD_BUILD_ERR,            8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "ISpeller Spell Checker"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'ISpeller' Help Facility"
+  IDS_ERROR_CREATEHELP                  "ERROR: Unable to create help instance.  Code %08lX."
+  IDS_MAJORTAB                          "ISpeller"
+
+  IDS_DICTIONARY                        "English"
+  IDS_BUILD_WORDS                       "English.dic"
+  IDS_BUILD_AFFIX                       "English"
+  IDS_BUILD_DICT                        "English"
+
+  IDS_ERROR_CONFIGURE_NODICT            "ERROR: Unable to find dictionary."
+  IDS_ERROR_CONFIGURE_BADDICT           "ERROR: Unable to open dictionary."
+  IDS_ERROR_CONFIGURE_MUSTSELECT        "ERROR: You must select a dictionary."
+
+  IDS_ERROR_BUILD_NOTAVAIL              "ERROR: Function not available."
+  IDS_ERROR_BUILD_NOWORDLIST            "ERROR: Unable to access word list."
+  IDS_ERROR_BUILD_NOAFFIX               "ERROR: Unable to access affix file."
+  IDS_ERROR_BUILD_NODICT                "ERROR: Unable to access dictionary file."
+  IDS_ERROR_BUILD_NOBUILDER             "ERROR: Unable to find dictionary builder."
+  IDS_ERROR_BUILD_BUILDERR              "ERROR: Unable to build dictionary."
+}
+

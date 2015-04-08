@@ -1,0 +1,739 @@
+#----Le laboratoire de robotique de l'Institut de recherche d'Hydro-Quebec-----
+# 
+# Nom     : 
+# Fonction: Fichier d'affixes pour dictionnaire francais
+# Fichiers: francais.aff, voir aussi german.aff et english.aff
+# Notes   : 
+# 
+# Cr‚‚    : 15 fevrier 92 ------- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+# Modifie : 30 juin 93 --------4- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+#           Copyright (c) 1992 Hydro-Quebec
+# 
+# Historique: 
+# 
+# 30 juin 93 --------4- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+# 	S‚paration du drapeau 'L' en 'L' et 'Q'.
+# 
+# 29 mars 92 --------3- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+# 	TroisiŠme version: nouveaux noms propres, nouvelles apostrophes et
+# 	rŠgles complŠtes des verbes du premier groupe.
+# 
+# 23 f‚vrier 92 -----2- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+# 	DeuxiŠme version, ajout‚ apostrophes et corrig‚ verbes.
+# 
+# 19 f‚vrier 92 -----1- Martin Boyer <mboyer@ireq-robot.hydro.qc.ca>
+# 	PremiŠre version.
+#------------------------------------------------------------------------------
+
+# This affix file uses upper-case affix flags,
+# so you must #define MASKBITS 32 (at least) in your local.h file.
+
+# Voici les drapeaux utilis‚s, au cas o— vous voudriez en ajouter:
+#
+#	      ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789
+# Utilise:    *****      * * *****   *
+#             ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+# Disponible:      ------ - -     --- --
+
+
+# En attendant que ce dico soit parfait...
+allaffixes on
+
+# D‚finition des jeux de caractŠres.
+# La base est cod‚e suivant la norme ISO 8859-1.
+# Les ‚quivalences sont donn‚es pour TeX (LaTeX est identique, sauf
+# dans l'environnement "tabular").
+
+# Ordre de tri des caractŠres.
+# L'ordre alphab‚tique normal est utilis‚, les voyelles accentu‚es
+# apparaissent imm‚diatement aprŠs leur version normale.  L'ordre des
+# accents est celui de la norme ISO 8859-1.
+
+defstringtype "list" "nroff" ".list"
+
+boundarychars	[---]
+boundarychars	'
+wordchars	a	A
+stringchar	…	·
+stringchar	ƒ	¶
+wordchars	[b-c]	[B-C]
+stringchar	‡	€
+wordchars	[d-e]	[D-E]
+stringchar	Š	Ô
+stringchar	‚	
+stringchar	ˆ	Ò
+stringchar	‰	Ó	# No‰l, aigu‰
+wordchars	[f-i]	[F-I]
+stringchar	Œ	×	# maŒtre
+stringchar	‹	Ø	# Za‹re, a‹eux
+wordchars	[j-o]	[J-O]
+stringchar	“	â
+wordchars	[p-u]	[P-U]
+stringchar	—	ë	# o—
+stringchar	–	ê	# d–
+stringchar		š	# capharnam, crapater (??)
+wordchars	[v-z]	[V-Z]
+boundarychars	[.]		# adresses ‚lectroniques ("." est un regexp!)
+
+#
+# TeX
+#
+altstringtype "tex" "TeX" ".tex" ".bib"
+
+altstringchar	"\\`a"	…
+altstringchar	"\\`A"	·
+altstringchar	"\\^a"	"ƒ"
+altstringchar	\\^A	¶
+altstringchar	"\\c c"	‡
+altstringchar	"\\c C"	€
+altstringchar	\\`e	Š
+altstringchar	\\`E	Ô
+altstringchar	\\'e	‚
+altstringchar	\\'E	
+altstringchar	\\^e	ˆ
+altstringchar	\\^E	Ò
+altstringchar	\\"e	‰
+altstringchar	\\"E	Ó
+altstringchar	"\\^\\i "	Œ
+altstringchar	"\\^\\I "	×
+altstringchar	"\\\"\\i "	‹
+altstringchar	"\\\"\\I "	Ø
+altstringchar	\\^o	“
+altstringchar	\\^O	â
+altstringchar	\\`u	—
+altstringchar	\\`U	ë
+altstringchar	\\^u	–
+altstringchar	\\^U	ê
+altstringchar	\\"u	
+altstringchar	\\"U	š
+
+prefixes
+
+flag *R:
+    [^a…ƒeŠ‚ˆiŒo“uh]>	RE	# re: refaire, remanier, relecture
+    [a…ƒeŠ‚ˆiŒo“uh] >	r‚	# r‚: r‚‚valuer, r‚inviter
+
+flag *D:			# d‚: d‚faire, d‚grossir
+    .		    >	d‚
+
+flag *N:			# ‚lision d'une n‚gation
+    [a…ƒeŠ‚ˆiŒo“uh] >	n'	# je n'aime pas, il n'y a pas
+
+flag *T:			# ‚lision d'un pronom compl‚ment d'objet direct
+				# verbes transitifs seulement
+    [a…ƒeŠ‚ˆiŒo“uh] >	l'	# je l'aime
+    [a…ƒeŠ‚ˆiŒo“uh] >	m'	# je m'adore
+    [a…ƒeŠ‚ˆiŒo“uh] >	t'	# je t'idolatre
+
+flag *P:			# verbes essentiellement pronominaux
+				# ou emploi pronominal
+    [a…ƒeŠ‚ˆiŒo“uh] >	m'	# je m'absente
+    [a…ƒeŠ‚ˆiŒo“uh] >	t'	# tu t'‚vanouis
+    [a…ƒeŠ‚ˆiŒo“uh] >	s'	# elle s'hypertrophie
+
+flag *L:			# ‚lision d'articles
+    [a…ƒeŠ‚ˆiŒo“uh] >	d'	# d'id‚e
+    [a…ƒeŠ‚ˆiŒo“uh] >	l'	# l'amour
+
+flag *Q:			# ‚lision de pr‚positions,
+				# adjectifs ind‚finis, conjonctions, etc.
+    [a…ƒeŠ‚ˆiŒo“uh] >	qu'	# qu'une
+    [a…ƒeŠ‚ˆiŒo“uh] >	quoiqu'	# quoiqu'il, quoiqu'elle (autres applications?)
+    [a…ƒeŠ‚ˆiŒo“uh] >	quelqu'	# quelqu' (valide?)
+    [a…ƒeŠ‚ˆiŒo“uh] >	puisqu'	# puisqu' (valide?)
+
+
+suffixes
+
+# Les conjugaisons suivantes du Bescherelle ne sont pas utilis‚es
+# (elles ne repr‚sentent qu'un seul verbe):
+# 1 2 3 4 5 20 21 30 34 40 41 43 46 48 51
+
+# Verbes du premier groupe (6 7 8 9 10 11 12 13 14 15 16 17 18)
+#			   (. . . .  .  .  C  .  .  .  .  .  x)
+# Certaines terminaisons n'existent pas:
+#   -[e‚]ber
+#   -e[bcgt]rer
+#   -eder
+#   -‚ver
+flag *A:			# rŠgle g‚n‚rale
+    [^CG] E R		>   -ER,A
+    [^CG] E R		>   -ER,AI
+    [^CG] E R		>   -ER,AIENT
+    [^CG] E R		>   -ER,AIS
+    [^CG] E R		>   -ER,AIT
+    [^CG] E R		>   -ER,ANT
+    [^CG] E R		>   -ER,AS
+    [^CG] E R		>   -ER,ASSE
+    [^CG] E R		>   -ER,ASSENT
+    [^CG] E R		>   -ER,ASSES
+    [^CG] E R		>   -ER,ASSIEZ
+    [^CG] E R		>   -ER,ASSIONS
+    [^CDGHLMNPRSTUVY] E R   >	-ER,E
+    [^CDGHLMNPRSTUVY] E R   >   -ER,ENT
+    [^CDLMNPRSTVY] E R	    >	-ER,ERA
+    [^CDLMNPRSTVY] E R	    >	-ER,ERAI
+    [^CDLMNPRSTVY] E R	    >	-ER,ERAIENT
+    [^CDLMNPRSTVY] E R	    >	-ER,ERAIS
+    [^CDLMNPRSTVY] E R	    >	-ER,ERAIT
+    [^CDLMNPRSTVY] E R	    >	-ER,ERAS
+    [^CDLMNPRSTVY] E R	    >	-ER,EREZ
+    [^CDLMNPRSTVY] E R	    >	-ER,ERIEZ
+    [^CDLMNPRSTVY] E R	    >	-ER,ERIONS
+    [^CDLMNPRSTVY] E R	    >	-ER,ERONS
+    [^CDLMNPRSTVY] E R	    >	-ER,ERONT
+    [^CDGHLMNPRSTUVY] E R   >	-ER,ES
+    E R			>   -ER,EZ
+    E R			>   -ER,IEZ
+    E R			>   -ER,IONS
+    [^CG] E R		>   -ER,ONS
+    [^CG] E R		>   -ER,ƒmes
+    [^CG] E R		>   -ER,ƒt
+    [^CG] E R		>   -ER,ƒtes
+    E R			>   -ER,Šrent
+    E R			>   -ER,‚
+    E R			>   -ER,‚e
+    E R			>   -ER,‚es
+    E R			>   -ER,‚s
+				# -CER, c‚dille devant 'ao' (7)
+    C E R	>	-CER,‡a
+    C E R	>	-CER,‡ai
+    C E R	>	-CER,‡aient
+    C E R	>	-CER,‡ais
+    C E R	>	-CER,‡ait
+    C E R	>	-CER,‡ant
+    C E R	>	-CER,‡as
+    C E R	>	-CER,‡asse
+    C E R	>	-CER,‡assent
+    C E R	>	-CER,‡asses
+    C E R	>	-CER,‡assiez
+    C E R	>	-CER,‡assions
+    C E R	>	-CER,‡ons
+    C E R	>	-CER,‡ƒmes
+    C E R	>	-CER,‡ƒt
+    C E R	>	-CER,‡ƒtes
+				# -GER, 'e' devant 'ao' (8)
+    G E R	>	-GER,gea
+    G E R	>	-GER,geai
+    G E R	>	-GER,geaient
+    G E R	>	-GER,geais
+    G E R	>	-GER,geait
+    G E R	>	-GER,geant
+    G E R	>	-GER,geas
+    G E R	>	-GER,geasse
+    G E R	>	-GER,geassent
+    G E R	>	-GER,geasses
+    G E R	>	-GER,geassiez
+    G E R	>	-GER,geassions
+    G E R	>	-GER,geons
+    G E R	>	-GER,geƒmes
+    G E R	>	-GER,geƒt
+    G E R	>	-GER,geƒtes
+				# -‚GER: assi‚ger (14)
+    [^‚] G E R	>	-GER,ge
+    [^‚] G E R	>	-GER,gent
+    [^‚] G E R	>	-GER,ges
+    ‚ G E R	>	-‚GER,Šge
+    ‚ G E R	>	-‚GER,Šgent
+    ‚ G E R	>	-‚GER,Šges
+				# -AYER (16)
+    A Y E R	>	-ER,e
+    A Y E R	>	-ER,ent
+    A Y E R	>	-ER,era
+    A Y E R	>	-ER,erai
+    A Y E R	>	-ER,eraient
+    A Y E R	>	-ER,erais
+    A Y E R	>	-ER,erait
+    A Y E R	>	-ER,eras
+    A Y E R	>	-ER,erez
+    A Y E R	>	-ER,eriez
+    A Y E R	>	-ER,erions
+    A Y E R	>	-ER,erons
+    A Y E R	>	-ER,eront
+    A Y E R	>	-ER,es
+			    # Forme alternative de (16) et -OYER, -UYER (17)
+    [AOU] Y E R	>	-YER,ie
+    [AOU] Y E R	>	-YER,ient
+    [AOU] Y E R	>	-YER,iera
+    [AOU] Y E R	>	-YER,ierai
+    [AOU] Y E R	>	-YER,ieraient
+    [AOU] Y E R	>	-YER,ierais
+    [AOU] Y E R	>	-YER,ierait
+    [AOU] Y E R	>	-YER,ieras
+    [AOU] Y E R	>	-YER,ierez
+    [AOU] Y E R	>	-YER,ieriez
+    [AOU] Y E R	>	-YER,ierions
+    [AOU] Y E R	>	-YER,ierons
+    [AOU] Y E R	>	-YER,ieront
+    [AOU] Y E R	>	-YER,ies
+				# -EYER: rŠgle g‚n‚rale
+    E Y E R	>	-ER,E
+    E Y E R	>	-ER,ENT
+    E Y E R	>	-ER,ERA
+    E Y E R	>	-ER,ERAI
+    E Y E R	>	-ER,ERAIENT
+    E Y E R	>	-ER,ERAIS
+    E Y E R	>	-ER,ERAIT
+    E Y E R	>	-ER,ERAS
+    E Y E R	>	-ER,EREZ
+    E Y E R	>	-ER,ERIEZ
+    E Y E R	>	-ER,ERIONS
+    E Y E R	>	-ER,ERONS
+    E Y E R	>	-ER,ERONT
+    E Y E R	>	-ER,ES
+				# -<consonne>ER sans 'e' avant: rŠgle g‚n‚rale
+    [^e‚] [CDMPSTV] E R	    >	-ER,E
+    [^e‚] [CDMPSTV] E R	    >	-ER,ENT
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERA
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERAI
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERAIENT
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERAIS
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERAIT
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERAS
+    [^e‚] [CDMPSTV] E R	    >	-ER,EREZ
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERIEZ
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERIONS
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERONS
+    [^e‚] [CDMPSTV] E R	    >	-ER,ERONT
+    [^e‚] [CDMPSTV] E R	    >	-ER,ES
+    [^e‚G] [LN] E R	>	-ER,E
+    [^e‚G] [LN] E R	>	-ER,ENT
+    [^e‚G] [LN] E R	>	-ER,ERA
+    [^e‚G] [LN] E R	>	-ER,ERAI
+    [^e‚G] [LN] E R	>	-ER,ERAIENT
+    [^e‚G] [LN] E R	>	-ER,ERAIS
+    [^e‚G] [LN] E R	>	-ER,ERAIT
+    [^e‚G] [LN] E R	>	-ER,ERAS
+    [^e‚G] [LN] E R	>	-ER,EREZ
+    [^e‚G] [LN] E R	>	-ER,ERIEZ
+    [^e‚G] [LN] E R	>	-ER,ERIONS
+    [^e‚G] [LN] E R	>	-ER,ERONS
+    [^e‚G] [LN] E R	>	-ER,ERONT
+    [^e‚G] [LN] E R	>	-ER,ES
+    [^‚] G [LN] E R >		-ER,E
+    [^‚] G [LN] E R >		-ER,ENT
+    G [LN] E R	    >		-ER,ERA
+    G [LN] E R	    >		-ER,ERAI
+    G [LN] E R	    >		-ER,ERAIENT
+    G [LN] E R	    >		-ER,ERAIS
+    G [LN] E R	    >		-ER,ERAIT
+    G [LN] E R	    >		-ER,ERAS
+    G [LN] E R	    >		-ER,EREZ
+    G [LN] E R	    >		-ER,ERIEZ
+    G [LN] E R	    >		-ER,ERIONS
+    G [LN] E R	    >		-ER,ERONS
+    G [LN] E R	    >		-ER,ERONT
+    [^‚] G [LN] E R >		-ER,ES
+    [^e‚BCGTV] R E R	>	-ER,E
+    [^e‚BCGTV] R E R	>	-ER,ENT
+    [^e‚BCGTV] R E R	>	-ER,ERA
+    [^e‚BCGTV] R E R	>	-ER,ERAI
+    [^e‚BCGTV] R E R	>	-ER,ERAIENT
+    [^e‚BCGTV] R E R	>	-ER,ERAIS
+    [^e‚BCGTV] R E R	>	-ER,ERAIT
+    [^e‚BCGTV] R E R	>	-ER,ERAS
+    [^e‚BCGTV] R E R	>	-ER,EREZ
+    [^e‚BCGTV] R E R	>	-ER,ERIEZ
+    [^e‚BCGTV] R E R	>	-ER,ERIONS
+    [^e‚BCGTV] R E R	>	-ER,ERONS
+    [^e‚BCGTV] R E R	>	-ER,ERONT
+    [^e‚BCGTV] R E R	>	-ER,ES
+    [^e‚] [BCGTV] R E R	    >	-ER,E
+    [^e‚] [BCGTV] R E R	    >	-ER,ENT
+    [^e] [BCGTV] R E R	    >	-ER,ERA
+    [^e] [BCGTV] R E R	    >	-ER,ERAI
+    [^e] [BCGTV] R E R	    >	-ER,ERAIENT
+    [^e] [BCGTV] R E R	    >	-ER,ERAIS
+    [^e] [BCGTV] R E R	    >	-ER,ERAIT
+    [^e] [BCGTV] R E R	    >	-ER,ERAS
+    [^e] [BCGTV] R E R	    >	-ER,EREZ
+    [^e] [BCGTV] R E R	    >	-ER,ERIEZ
+    [^e] [BCGTV] R E R	    >	-ER,ERIONS
+    [^e] [BCGTV] R E R	    >	-ER,ERONS
+    [^e] [BCGTV] R E R	    >	-ER,ERONT
+    [^e‚] [BCGTV] R E R	    >	-ER,ES
+    [^C] H E R	    >		-ER,E
+    [^C] H E R	    >		-ER,ENT
+    [^C] H E R	    >		-ER,ES
+    [^‚] C H E R    >		-ER,E
+    [^‚] C H E R    >		-ER,ENT
+    [^‚] C H E R    >		-ER,ES
+    [^GQ] U E R	    >		-ER,E
+    [^GQ] U E R	    >		-ER,ENT
+    [^GQ] U E R	    >		-ER,ES
+    [^‚] [GQ] U E R	>	-ER,E
+    [^‚] [GQ] U E R	>	-ER,ENT
+    [^‚] [GQ] U E R	>	-ER,ES
+				# -ELER, -ETER qui doublent la consonne (11)
+    E L E R	>	-ER,LE
+    E L E R	>	-ER,LENT
+    E L E R	>	-ER,LERA
+    E L E R	>	-ER,LERAI
+    E L E R	>	-ER,LERAIENT
+    E L E R	>	-ER,LERAIS
+    E L E R	>	-ER,LERAIT
+    E L E R	>	-ER,LERAS
+    E L E R	>	-ER,LEREZ
+    E L E R	>	-ER,LERIEZ
+    E L E R	>	-ER,LERIONS
+    E L E R	>	-ER,LERONS
+    E L E R	>	-ER,LERONT
+    E L E R	>	-ER,LES
+    E T E R	>	-ER,TE
+    E T E R	>	-ER,TENT
+    E T E R	>	-ER,TERA
+    E T E R	>	-ER,TERAI
+    E T E R	>	-ER,TERAIENT
+    E T E R	>	-ER,TERAIS
+    E T E R	>	-ER,TERAIT
+    E T E R	>	-ER,TERAS
+    E T E R	>	-ER,TEREZ
+    E T E R	>	-ER,TERIEZ
+    E T E R	>	-ER,TERIONS
+    E T E R	>	-ER,TERONS
+    E T E R	>	-ER,TERONT
+    E T E R	>	-ER,TES
+				# -E.ER (9): e.e* -> Š.e*
+    E C E R	>	-ECER,Šce
+    E C E R	>	-ECER,Šcent
+    E C E R	>	-ECER,Šcera
+    E C E R	>	-ECER,Šcerai
+    E C E R	>	-ECER,Šceraient
+    E C E R	>	-ECER,Šcerais
+    E C E R	>	-ECER,Šcerait
+    E C E R	>	-ECER,Šceras
+    E C E R	>	-ECER,Šcerez
+    E C E R	>	-ECER,Šceriez
+    E C E R	>	-ECER,Šcerions
+    E C E R	>	-ECER,Šcerons
+    E C E R	>	-ECER,Šceront
+    E C E R	>	-ECER,Šces
+    E M E R	>	-EMER,ŠME
+    E M E R	>	-EMER,ŠMENT
+    E M E R	>	-EMER,ŠMERA
+    E M E R	>	-EMER,ŠMERAI
+    E M E R	>	-EMER,ŠMERAIENT
+    E M E R	>	-EMER,ŠMERAIS
+    E M E R	>	-EMER,ŠMERAIT
+    E M E R	>	-EMER,ŠMERAS
+    E M E R	>	-EMER,ŠMEREZ
+    E M E R	>	-EMER,ŠMERIEZ
+    E M E R	>	-EMER,ŠMERIONS
+    E M E R	>	-EMER,ŠMERONS
+    E M E R	>	-EMER,ŠMERONT
+    E M E R	>	-EMER,ŠMES
+    E N E R	>	-ENER,ŠNE
+    E N E R	>	-ENER,ŠNENT
+    E N E R	>	-ENER,ŠNERA
+    E N E R	>	-ENER,ŠNERAI
+    E N E R	>	-ENER,ŠNERAIENT
+    E N E R	>	-ENER,ŠNERAIS
+    E N E R	>	-ENER,ŠNERAIT
+    E N E R	>	-ENER,ŠNERAS
+    E N E R	>	-ENER,ŠNEREZ
+    E N E R	>	-ENER,ŠNERIEZ
+    E N E R	>	-ENER,ŠNERIONS
+    E N E R	>	-ENER,ŠNERONS
+    E N E R	>	-ENER,ŠNERONT
+    E N E R	>	-ENER,ŠNES
+    E P E R	>	-EPER,ŠPE
+    E P E R	>	-EPER,ŠPENT
+    E P E R	>	-EPER,ŠPERA
+    E P E R	>	-EPER,ŠPERAI
+    E P E R	>	-EPER,ŠPERAIENT
+    E P E R	>	-EPER,ŠPERAIS
+    E P E R	>	-EPER,ŠPERAIT
+    E P E R	>	-EPER,ŠPERAS
+    E P E R	>	-EPER,ŠPEREZ
+    E P E R	>	-EPER,ŠPERIEZ
+    E P E R	>	-EPER,ŠPERIONS
+    E P E R	>	-EPER,ŠPERONS
+    E P E R	>	-EPER,ŠPERONT
+    E P E R	>	-EPER,ŠPES
+    E R E R	>	-ERER,ŠRE
+    E R E R	>	-ERER,ŠRENT
+    E R E R	>	-ERER,ŠRERA
+    E R E R	>	-ERER,ŠRERAI
+    E R E R	>	-ERER,ŠRERAIENT
+    E R E R	>	-ERER,ŠRERAIS
+    E R E R	>	-ERER,ŠRERAIT
+    E R E R	>	-ERER,ŠRERAS
+    E R E R	>	-ERER,ŠREREZ
+    E R E R	>	-ERER,ŠRERIEZ
+    E R E R	>	-ERER,ŠRERIONS
+    E R E R	>	-ERER,ŠRERONS
+    E R E R	>	-ERER,ŠRERONT
+    E R E R	>	-ERER,ŠRES
+    E S E R	>	-ESER,ŠSE
+    E S E R	>	-ESER,ŠSENT
+    E S E R	>	-ESER,ŠSERA
+    E S E R	>	-ESER,ŠSERAI
+    E S E R	>	-ESER,ŠSERAIENT
+    E S E R	>	-ESER,ŠSERAIS
+    E S E R	>	-ESER,ŠSERAIT
+    E S E R	>	-ESER,ŠSERAS
+    E S E R	>	-ESER,ŠSEREZ
+    E S E R	>	-ESER,ŠSERIEZ
+    E S E R	>	-ESER,ŠSERIONS
+    E S E R	>	-ESER,ŠSERONS
+    E S E R	>	-ESER,ŠSERONT
+    E S E R	>	-ESER,ŠSES
+    E V E R	>	-EVER,ŠVE
+    E V E R	>	-EVER,ŠVENT
+    E V E R	>	-EVER,ŠVERA
+    E V E R	>	-EVER,ŠVERAI
+    E V E R	>	-EVER,ŠVERAIENT
+    E V E R	>	-EVER,ŠVERAIS
+    E V E R	>	-EVER,ŠVERAIT
+    E V E R	>	-EVER,ŠVERAS
+    E V E R	>	-EVER,ŠVEREZ
+    E V E R	>	-EVER,ŠVERIEZ
+    E V E R	>	-EVER,ŠVERIONS
+    E V E R	>	-EVER,ŠVERONS
+    E V E R	>	-EVER,ŠVERONT
+    E V E R	>	-EVER,ŠVES
+    E V R E R	>	-EVRER,ŠVRE
+    E V R E R	>	-EVRER,ŠVRENT
+    E V R E R	>	-EVRER,ŠVRERA
+    E V R E R	>	-EVRER,ŠVRERAI
+    E V R E R	>	-EVRER,ŠVRERAIENT
+    E V R E R	>	-EVRER,ŠVRERAIS
+    E V R E R	>	-EVRER,ŠVRERAIT
+    E V R E R	>	-EVRER,ŠVRERAS
+    E V R E R	>	-EVRER,ŠVREREZ
+    E V R E R	>	-EVRER,ŠVRERIEZ
+    E V R E R	>	-EVRER,ŠVRERIONS
+    E V R E R	>	-EVRER,ŠVRERONS
+    E V R E R	>	-EVRER,ŠVRERONT
+    E V R E R	>	-EVRER,ŠVRES
+				# -‚.ER (10): ‚.e* -> Š.e*
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERA
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERAI
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERAIENT
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERAIS
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERAIT
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERAS
+    ‚ [CDLMNPRSTY] E R	>   -ER,EREZ
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERIEZ
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERIONS
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERONS
+    ‚ [CDLMNPRSTY] E R	>   -ER,ERONT
+    ‚ B R E R		>   -‚BRER,ŠBRE
+    ‚ B R E R		>   -‚BRER,ŠBRENT
+    ‚ B R E R		>   -‚BRER,ŠBRES
+    ‚ C E R		>   -‚CER,ŠCE
+    ‚ C E R		>   -‚CER,ŠCENT
+    ‚ C E R		>   -‚CER,ŠCES
+    ‚ C H E R		>   -‚CHER,ŠCHE
+    ‚ C H E R		>   -‚CHER,ŠCHENT
+    ‚ C H E R		>   -‚CHER,ŠCHES
+    ‚ C R E R		>   -‚CRER,ŠCRE
+    ‚ C R E R		>   -‚CRER,ŠCRENT
+    ‚ C R E R		>   -‚CRER,ŠCRES
+    ‚ D E R		>   -‚DER,ŠDE
+    ‚ D E R		>   -‚DER,ŠDENT
+    ‚ D E R		>   -‚DER,ŠDES
+    ‚ G L E R		>   -‚GLER,ŠGLE
+    ‚ G L E R		>   -‚GLER,ŠGLENT
+    ‚ G L E R		>   -‚GLER,ŠGLES
+    ‚ G N E R		>   -‚GNER,ŠGNE
+    ‚ G N E R		>   -‚GNER,ŠGNENT
+    ‚ G N E R		>   -‚GNER,ŠGNES
+    ‚ G R E R		>   -‚GRER,ŠGRE
+    ‚ G R E R		>   -‚GRER,ŠGRENT
+    ‚ G R E R		>   -‚GRER,ŠGRES
+    ‚ G U E R		>   -‚GUER,ŠGUE
+    ‚ G U E R		>   -‚GUER,ŠGUENT
+    ‚ G U E R		>   -‚GUER,ŠGUES
+    ‚ L E R		>   -‚LER,ŠLE
+    ‚ L E R		>   -‚LER,ŠLENT
+    ‚ L E R		>   -‚LER,ŠLES
+    ‚ M E R		>   -‚MER,ŠME
+    ‚ M E R		>   -‚MER,ŠMENT
+    ‚ M E R		>   -‚MER,ŠMES
+    ‚ N E R		>   -‚NER,ŠNE
+    ‚ N E R		>   -‚NER,ŠNENT
+    ‚ N E R		>   -‚NER,ŠNES
+    ‚ P E R		>   -‚PER,ŠPE
+    ‚ P E R		>   -‚PER,ŠPENT
+    ‚ P E R		>   -‚PER,ŠPES
+    ‚ Q U E R		>   -‚QUER,ŠQUE
+    ‚ Q U E R		>   -‚QUER,ŠQUENT
+    ‚ Q U E R		>   -‚QUER,ŠQUES
+    ‚ R E R		>   -‚RER,ŠRE
+    ‚ R E R		>   -‚RER,ŠRENT
+    ‚ R E R		>   -‚RER,ŠRES
+    ‚ S E R		>   -‚SER,ŠSE
+    ‚ S E R		>   -‚SER,ŠSENT
+    ‚ S E R		>   -‚SER,ŠSES
+    ‚ T E R		>   -‚TER,ŠTE
+    ‚ T E R		>   -‚TER,ŠTENT
+    ‚ T E R		>   -‚TER,ŠTES
+    ‚ T R E R		>   -‚TRER,ŠTRE
+    ‚ T R E R		>   -‚TRER,ŠTRENT
+    ‚ T R E R		>   -‚TRER,ŠTRES
+    ‚ V R E R		>   -‚VRER,ŠVRE
+    ‚ V R E R		>   -‚VRER,ŠVRENT
+    ‚ V R E R		>   -‚VRER,ŠVRES
+    ‚ Y E R		>   -‚YER,ŠYE
+    ‚ Y E R		>   -‚YER,ŠYENT
+    ‚ Y E R		>   -‚YER,ŠYES
+
+
+flag *C:			# -ELER, -ETER qui changent le 'e' en 'Š'
+    E [LT] E R	>	-ER,A
+    E [LT] E R	>	-ER,AI
+    E [LT] E R	>	-ER,AIENT
+    E [LT] E R	>	-ER,AIS
+    E [LT] E R	>	-ER,AIT
+    E [LT] E R	>	-ER,ANT
+    E [LT] E R	>	-ER,AS
+    E [LT] E R	>	-ER,ASSE
+    E [LT] E R	>	-ER,ASSENT
+    E [LT] E R	>	-ER,ASSES
+    E [LT] E R	>	-ER,ASSIEZ
+    E [LT] E R	>	-ER,ASSIONS
+    E [LT] E R	>	-ER,EZ
+    E [LT] E R	>	-ER,IEZ
+    E [LT] E R	>	-ER,IONS
+    E [LT] E R	>	-ER,ONS
+    E [LT] E R	>	-ER,ƒmes
+    E [LT] E R	>	-ER,ƒt
+    E [LT] E R	>	-ER,ƒtes
+    E [LT] E R	>	-ER,Šrent
+    E [LT] E R	>	-ER,‚
+    E [LT] E R	>	-ER,‚e
+    E [LT] E R	>	-ER,‚es
+    E [LT] E R	>	-ER,‚s
+    E L E R	>	-ELER,Šle
+    E L E R	>	-ELER,Šlent
+    E L E R	>	-ELER,Šlera
+    E L E R	>	-ELER,Šlerai
+    E L E R	>	-ELER,Šleraient
+    E L E R	>	-ELER,Šlerais
+    E L E R	>	-ELER,Šlerait
+    E L E R	>	-ELER,Šleras
+    E L E R	>	-ELER,Šlerez
+    E L E R	>	-ELER,Šleriez
+    E L E R	>	-ELER,Šlerions
+    E L E R	>	-ELER,Šlerons
+    E L E R	>	-ELER,Šleront
+    E L E R	>	-ELER,Šles
+    E T E R	>	-ETER,Šte
+    E T E R	>	-ETER,Štent
+    E T E R	>	-ETER,Štera
+    E T E R	>	-ETER,Šterai
+    E T E R	>	-ETER,Šteraient
+    E T E R	>	-ETER,Šterais
+    E T E R	>	-ETER,Šterait
+    E T E R	>	-ETER,Šteras
+    E T E R	>	-ETER,Šterez
+    E T E R	>	-ETER,Šteriez
+    E T E R	>	-ETER,Šterions
+    E T E R	>	-ETER,Šterons
+    E T E R	>	-ETER,Šteront
+    E T E R	>	-ETER,Štes
+
+flag *B:			# Verbes du deuxieme groupe
+    I R		>	-IR,is
+    I R		>	-IR,it
+    I R		>	-IR,issons
+    I R		>	-IR,issez
+    I R		>	-IR,issent
+    I R		>	-IR,issais
+    I R		>	-IR,issait
+    I R		>	-IR,issions
+    I R		>	-IR,issiez
+    I R		>	-IR,issaient
+    I R		>	-IR,Œmes
+    I R		>	-IR,Œtes
+    I R		>	-IR,irent
+    I R		>	-IR,irai
+    I R		>	-IR,iras
+    I R		>	-IR,ira
+    I R		>	-IR,irons
+    I R		>	-IR,irez
+    I R		>	-IR,iront
+    I R		>	-IR,isse
+    I R		>	-IR,isses
+    I R		>	-IR,Œt
+    I R		>	-IR,irais
+    I R		>	-IR,irait
+    I R		>	-IR,irions
+    I R		>	-IR,iriez
+    I R		>	-IR,iraient
+    I R		>	-IR,issant
+    I R		>	-IR,i
+    I R		>	-IR,ie
+    I R		>	-IR,ies
+
+#flag *S:			# Pluriel
+#    [^LSUXZ]	>	S	# rŠgle g‚n‚rale du pluriel
+#    [^A] [^I] L	>	S	# par opp. … -AIL
+#    [^AI] L	>	S	# par opp. … -AL et -AIL
+#    A I L	>	-AIL,aux # sauf attirail chandail d‚tail ‚pouvantail...
+#    A L		>	-AL,aux	 # sauf bal carnaval chacal festival r‚gal...
+#    [^AE] U	>	S	# par opp. … -eu, -au, sauf bijou caillou...
+#    [AE] U	>	X	# -eu, -(e)au, sauf bleu, pneu, landau, sarrau
+#
+#flag *E:			# Feminin
+#    [^EFLNRTX]	>	E	# rŠgle g‚n‚rale du f‚minin
+#    F		>	-F,VE	# abusif > abusive, neuf > neuve
+#    [AO] L	>	E	# par opposition … -EL, -UL, -EIL
+#    [EU] L	>	LE	# accidentel > accidentelle, nul > nulle
+#    [^E] I L	>	E	# par opposition … -EIL
+#    E I L	>	LE	# pareil > pareille
+#    [AIU] N	>	E	# par opp. … -ON, -IEN (sauf paysan>paysanne)
+#    O N		>	NE	# bon > bonne
+#    I E N	>	NE	# ancien > ancienne
+#    [AIOU] [RT]	>	E	# par opposition … -ER, -ET
+#    E R		>	-ER,Šre	# premier > premiŠre
+#    E T		>	TE	# complet > complete (exceptions)
+#    X		>	-X,se	# nerveux > nerveuse (exceptions)
+
+flag *S:			# Pluriel sans f‚minin (favorise la rŠgle X)
+    [^ESXZ]	    >	S	# rŠgle g‚n‚rale du pluriel
+
+flag *X:			# Feminin + pluriel (adjectifs)
+    [^EFLNRSTUXZ]   >	E	# rŠgle g‚n‚rale du f‚minin
+    [^EFLNRSTUXZ]   >	ES	# rŠgle g‚n‚rale du f‚minin pluriel
+    [^EFLNRSTUXZ]   >	S	# rŠgle g‚n‚rale du pluriel
+    [EF]	    >	S	# aimable > aimables, abusif > abusifs
+    F		    >	-F,VE	# abusif > abusive, neuf > neuve
+    F		    >	-F,VES	# abusif > abusives
+    A L		    >	E	# spatial > spatiale
+    A L		    >	ES	# spatial > spatiales
+    A L		    >	-L,ux	# spatial > spatiaux
+    [EU] L	    >	LE	# accidentel > accidentelle, nul > nulle
+    [EU] L	    >	LES	# accidentel > accidentelles, nul > nulles
+    [EIOU] L	    >	S	# accidentel > accidentels, civil > civils,
+				# pareil > pareils, espagnol > espagnols,
+				# nul > nuls
+    [^E] I L	    >	E	# civil > civile
+    [^E] I L	    >	ES	# civil > civiles
+    E I L	    >	LE	# pareil > pareille
+    E I L	    >	LE	# pareil > pareilles
+    O L		    >	E	# espagnol > espagnole
+    O L		    >	ES	# espagnol > espagnoles
+    [AIU] N	    >	E	# alezan > alezane, vain > vaine, un > une
+				# Note: paysan > paysanne(s)
+    [AIU] N	    >	ES	# alezan > alezanes, vain > vaines, un > unes
+    [AIU] N	    >	S	# alezan > alezans, vain > vains, un > uns
+    [EO] N	    >	NE	# ancien, citoyen, bon > bonne
+    [EO] N	    >	NES	# anciennes, citoyennes, bonnes
+    [EO] N	    >	S	# anciens, citoyens, bons
+    [^E] [RT]	    >	E	# clair > claire, ‚l‚gant > ‚l‚gante
+    [^E] [RT]	    >	ES	# clair > claires, ‚l‚gant > ‚l‚gantes
+    [^E] [RT]	    >	S	# clair > clairs, ‚l‚gant > ‚l‚gants
+    E R		    >	-ER,Šre		# premier > premiŠre
+    E R		    >	-ER,Šres	# premier > premiŠres
+    E [RT]	    >	S	# premier > premiers, muet > muets
+    E T		    >	TE	# muet > muette (exceptions)
+    E T		    >	TES	# muet > muettes (exceptions)
+    E A U	    >	-EAU, ELLE	# beau > belle, puceau > pucelle
+    E A U	    >	-EAU, ELLES	# beau > belles, puceau > pucelles
+				# Il n'y a pas de f‚minin pour -[^e]au
+    [AE] U	    >	X	# feu > feux (sauf bleu, pneu, landau, sarrau)
+    [^AE] U	    >	S	# par opp. … -eu, -au, sauf bijou caillou...
+    X		    >	-X,SE	# nerveux > nerveuse (exceptions)
+    X		    >	-X,SES	# nerveux > nerveuses (exceptions)

@@ -1,0 +1,58 @@
+Installation Instructions for ISPELLER - - -
+
+
+(1) With ESCRIBA:
+
+   To have the Escriba installation script install the
+ISPELLER package at the same time, unzip ISPELLER.ZIP into
+the same directory into which you have unzipped ESCRIBA.ZIP,
+and then run the installation script for Escriba,  be it
+ENGLISH.CMD, FRANCAIS.CMD, DEUTSCH.CMD, NDRLANDS.CMD or
+ESPANOL.CMD.
+
+
+(2) Stand-Alone
+
+   For a stand-alone installation, unzip ISPELLER.ZIP into
+it's intended directory and add the following statement to
+CONFIG.SYS:
+
+        SET ISPELL=directory_path
+
+'directory_path' must be the full path with drive of the
+directory to which ISPELLER has been installed.  To put this
+change into effect, you must shut down the system and reboot.
+
+  Once you have done the above, it is time to build the hash
+files from any dictionary files you may have also downloaded
+with this package (ENGLISH.ZIP, FRANCAIS.ZIP, etc).  Unzip the
+dictionary package into the ISpeller directory and then issue
+the following command:
+
+        BUILDHAS english.dic english.aff english.hsh
+
+  You can substitute whatever language files you wish.  The
+language packages I have posted with ISpeller are adapted from
+the UNIX ISO character set to the normal character set used
+by IBM PCs.
+
+  You can select the dictionary to be used with ISpeller one
+of two ways: by setting the environment variable DICTIONARY
+in CONFIG.SYS to the full file path of the dictionary you have
+just created, or by specifying the '-d' command-line parameter
+followed by the full file path of the dictionary at the time
+you run the spell-checker.
+
+
+(3) With GNU ISpell
+
+   To use ISPELLER with the regular GNU ISpell, unzip only
+ISPELLER.DLL into the directory to which ISpell is already
+installed.  Be sure the ISPELL environment variable is set
+in CONFIG.SYS, as in the stand-alone installation.
+
+
+        Rick Papo, 22 January 1998
+        rpapo@msen.com
+        http://www.msen.com/~rpapo
+

@@ -1,0 +1,59 @@
+tiff.obj: \
+	tiff.cpp \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	tiff.h \
+	tiff_dll.h \
+	tiffio.h
+
+tiff.res: \
+	tiff.rc \
+	tiff_dll.h
+
+tiff_deu.res: \
+	tiff_deu.rc \
+	tiff_dll.h
+
+tiff_enu.res: \
+	tiff_enu.rc \
+	tiff_dll.h
+
+tiff_esp.res: \
+	tiff_esp.rc \
+	tiff_dll.h
+
+tiff_fra.res: \
+	tiff_fra.rc \
+	tiff_dll.h
+
+tiff_nld.res: \
+	tiff_nld.rc \
+	tiff_dll.h
+
+tiff_deu.hlp: \
+	tiff_deu.ipf \
+	tiff_dll.h
+
+tiff_enu.hlp: \
+	tiff_enu.ipf \
+	tiff_dll.h
+
+tiff_esp.hlp: \
+	tiff_esp.ipf \
+	tiff_dll.h
+
+tiff_fra.hlp: \
+	tiff_fra.ipf \
+	tiff_dll.h
+
+tiff_nld.hlp: \
+	tiff_nld.ipf \
+	tiff_dll.h
+

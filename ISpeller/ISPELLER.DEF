@@ -1,0 +1,195 @@
+;
+;       ISPELLER: ISPELL Library Functions & Data (as DLL)
+;
+LIBRARY INITINSTANCE TERMINSTANCE
+DESCRIPTION 'ISPELLER: Common functions for ISPELL programs.'
+PROTMODE
+CODE EXECUTEONLY NOIOPL NONCONFORMING
+DATA MULTIPLE READWRITE NONSHARED LOADONCALL
+EXPORTS
+
+; Standard entries for Escriba Extensions
+
+  Identify                              @00001
+  SetLanguage                           @00002
+  ProductName                           @00003
+  ProductVersion                        @00004
+  ProductInformation                    @00005
+  ProductConfigure                      @00006
+
+; Entries for Escriba
+
+  Speller_SetHome                       @10001
+  Speller_DefaultDictionary             @10002
+  Speller_OpenDictionary                @10003
+  Speller_CloseDictionary               @10004
+  Speller_Ready                         @10005
+  Speller_BuildWord                     @10006
+  Speller_FindWord                      @10007
+  Speller_FindReplacements              @10008
+  Speller_Accept                        @10009
+  Speller_Insert                        @10010
+  Speller_UnCaps                        @10011
+
+; Entries for ISpeller components (like BuildHash)
+
+  addvheader
+  aflag
+  askfilename
+  askmode
+  backup
+  BC
+  cap_ok
+  casecmp
+  cd
+  cflag
+  changes
+  chartypes
+  checkfile
+  checkline
+  chk_aff
+  chupcase
+  cl
+  cm
+  co
+  combinecaps
+  compoundflag
+  compoundgood
+  contextbufs
+  contextoffset
+  contextsize
+  copyout
+  correct
+  ctoken
+  currentchar
+  currentfile
+  defdupchar
+  deftflag
+  done
+  dumpflag
+  easypossibilities
+  eflag
+  erase
+  expand_pre
+  expand_suf
+  fflag
+  findfiletype
+  flagpr
+  givehelp
+  good
+  hash
+  hashheader
+  hashname
+  hashsize
+  hashstrings
+  hashtbl
+  hits
+  ho
+  icharcmp
+  icharcpy
+  icharlen
+  icharncmp
+  ichartosstr
+  ichartostr
+  incfileflag
+  index
+  infile
+  ins_root_cap
+  inverse
+  itoken
+  laststringch
+  LaTeX_Mode
+  lflag
+  li
+  linit
+  link
+  lookup
+  lowcase
+  makedent
+  makepossibilities
+  math_mode
+  maxposslen
+  minimenusize
+  minword
+  mktemp
+  move
+  myfree
+  mymalloc
+  myrealloc
+  nd
+  nodictflag
+  normal
+  numhits
+  numpflags
+  numsflags
+  outfile
+  pcount
+  pflagindex
+  pflaglist
+  possibilities
+  prefstringchar
+  printichar
+  quit
+  se
+  sflag
+  sflagindex
+  sflaglist
+  sg
+  shellescape
+  skipoverword
+  sleep
+  so
+  sortit
+  stop
+  stringcharlen
+  strtoichar
+  strtosichar
+  te
+  tempfile
+  termcap
+  terminit
+  termptr
+  termstr
+  terse
+  tflag
+  ti
+  toutent
+  tputs
+  treeinit
+  treeinsert
+  treelookup
+  treeoutput
+  Try
+  tryhardflag
+  Trynum
+  uerasechar
+  ukillchar
+  upcase
+  vflag
+  whatcap
+  xflag
+  xgets
+  yychar
+  yycheck
+  yydebug
+  yydefred
+  yydgoto
+  yyerrflag
+  yygindex
+  yyinit
+  yylen
+  yylhs
+  yylval
+  yynerrs
+  yyopen
+  yyparse
+  yyrindex
+  yysindex
+  yyss
+  yyssp
+  yytable
+  yyval
+  yyvs
+  yyvsp
+  _readonly
+

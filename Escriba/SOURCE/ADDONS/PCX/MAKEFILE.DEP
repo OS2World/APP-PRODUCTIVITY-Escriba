@@ -1,0 +1,57 @@
+pcx.obj: \
+	pcx.cpp \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	pcx.h
+
+pcx.res: \
+	pcx.rc \
+	pcx.h
+
+pcx__deu.res: \
+	pcx__deu.rc \
+	pcx.h
+
+pcx__enu.res: \
+	pcx__enu.rc \
+	pcx.h
+
+pcx__esp.res: \
+	pcx__esp.rc \
+	pcx.h
+
+pcx__fra.res: \
+	pcx__fra.rc \
+	pcx.h
+
+pcx__nld.res: \
+	pcx__nld.rc \
+	pcx.h
+
+pcx__deu.hlp: \
+	pcx__deu.ipf \
+	pcx.h
+
+pcx__enu.hlp: \
+	pcx__enu.ipf \
+	pcx.h
+
+pcx__esp.hlp: \
+	pcx__esp.ipf \
+	pcx.h
+
+pcx__fra.hlp: \
+	pcx__fra.ipf \
+	pcx.h
+
+pcx__nld.hlp: \
+	pcx__nld.ipf \
+	pcx.h
+

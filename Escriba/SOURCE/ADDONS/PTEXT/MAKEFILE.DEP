@@ -1,0 +1,73 @@
+ptext.obj: \
+	ptext.cpp \
+	..\..\..\runtime\canvas.h \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\eattr.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\mutex.h \
+	..\..\..\runtime\profile.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	ptext.h
+
+ptext.res: \
+	ptext.rc \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_deu.res: \
+	ptxt_deu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_enu.res: \
+	ptxt_enu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_esp.res: \
+	ptxt_esp.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_fra.res: \
+	ptxt_fra.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_nld.res: \
+	ptxt_nld.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	ptext.h
+
+ptxt_deu.hlp: \
+	ptxt_deu.ipf \
+	ptext.h
+
+ptxt_enu.hlp: \
+	ptxt_enu.ipf \
+	ptext.h
+
+ptxt_esp.hlp: \
+	ptxt_esp.ipf \
+	ptext.h
+
+ptxt_fra.hlp: \
+	ptxt_fra.ipf \
+	ptext.h
+
+ptxt_nld.hlp: \
+	ptxt_nld.ipf \
+	ptext.h
+

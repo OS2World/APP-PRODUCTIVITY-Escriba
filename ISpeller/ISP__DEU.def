@@ -1,0 +1,8 @@
+;
+;       ISP__DEU: ISpeller Language Texts (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'ISP__DEU: ISpeller Language Texts (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

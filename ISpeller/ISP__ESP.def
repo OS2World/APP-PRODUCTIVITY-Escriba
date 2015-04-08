@@ -1,0 +1,8 @@
+;
+;       ISP__ESP: ISpeller Language Texts (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'ISP__ESP: ISpeller Language Texts (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

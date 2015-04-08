@@ -1,0 +1,17 @@
+- - - Documentation for the Escriba Registration module - - -
+
+Though all who have paid for their Escriba registrations
+will receive two complete copies of the program on
+diskette, and the printed manual once I have made it,
+I do not want you to have to choose between using an
+older, registered copy of the program and a newer,
+unregistered copy.  For this reason I have created
+a special DLL file for you.  This DLL contains your
+name, your registration serial number and some
+verification information.  Place the file in the
+same directory where Escriba is installed, or in any
+directory in your LIBPATH, and Escriba will recognize
+you are registered when you go to display the
+Product Information (About) dialog.
+
+

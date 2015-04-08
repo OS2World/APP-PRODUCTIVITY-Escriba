@@ -1,0 +1,32 @@
+#define INCL_PM
+#include <os2.h>
+
+#define LOCAL_DEFINES
+#include "ISpeller.h"
+
+CODEPAGE 850
+
+HELPSUBTABLE ID_HELPTABLE
+{
+//
+//            Item ID                           Help Panel ID
+//
+HELPSUBITEM   IDD_BUILD_WORDS,                  IDD_BUILD
+HELPSUBITEM   IDD_BUILD_AFFIX,                  IDD_BUILD
+HELPSUBITEM   IDD_BUILD_DICT,                   IDD_BUILD
+HELPSUBITEM   IDD_BUILD_WORDSF,                 IDD_BUILD
+HELPSUBITEM   IDD_BUILD_AFFIXF,                 IDD_BUILD
+HELPSUBITEM   IDD_BUILD_ERR,                    IDD_BUILD
+}
+
+HELPTABLE ID_HELPTABLE
+{
+//
+//         Window ID                    Help Sub-Table ID               Extended Help Panel ID
+//
+  HELPITEM IDD_PRODUCTINFO,             ID_HELPTABLE,                   IDD_PRODUCTINFO
+  HELPITEM IDD_CONFIGURE,               ID_HELPTABLE,                   IDD_CONFIGURE
+  HELPITEM IDD_BUILD,                   ID_HELPTABLE,                   IDD_BUILD
+}
+
+

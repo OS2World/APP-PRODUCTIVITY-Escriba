@@ -1,0 +1,269 @@
+        Escriba tekstverwerker voor de OS/2 Presentation Manager
+       ==========================================================
+
+   Dit programma is een zogenaamde WYSIWYG ('What You See Is What You Get' 
+m.a.w. het gedrukte eindresultaat zal identiek zijn met wat je op het 
+scherm ziet) tekstverwerker voor de OS/2 Presentation Manager.  Hierbij is 
+het niet de bedoeling te concurreren met de grote, professionele 
+programma's voor OS/2-PM ofWindows, maar wordt de gebruiker een meer 
+bescheiden aantal functies ter beschikking gesteld. Het programma beschikt 
+echter wel over alle gebruikelijke mogelijkheden voor tekstopmaak en laat 
+het toe om grafische afbeeldingen in documenten op te nemen. Daarenboven 
+kunnen alle ge‹nstalleerde lettertypes, in alle gangbare formaten en in een
+ruime selectie van groottes, gebruikt worden. 
+Het drukken van teksten gebeurt uitsluitend onder controle van de OS/2 PM 
+en ondersteund daarmee alle drukkers (en instellingen) die ook door het 
+besturingssysteem ondersteund worden. Dit omvat ook FAX apparaten en 
+plotters.
+
+
+        Software Registratie
+        --------------------
+
+   Dit programma is shareware en kan als dusdanig (in ongewijzigde vorm !) 
+vrij aan alle ge‹nteresseerden doorgegeven worden. Vind je het nuttig en 
+besluit je het verder te gebruiken, dan moet je een contributie betalen.  
+De prijs bedraagt $30.00 (US) en er zijn verschillende manieren om deze te 
+betalen :
+
+   Cheque of overschrijving : wil je met een persoonlijke cheque of 
+overschrijving betalen dan moet je deze samen met je naam, je postadres en 
+het uitgiftenummer en datum van je huidige Escriba-kopie zenden aan :
+
+                Escriba Registrations
+                c/o Rick Papo
+                38290 Avondale
+                Westland, MI 48186-3830
+                USA
+
+   VISA/MasterCard/Discover : verkies je met een van deze kredietkaarten te
+betalen dan wordt dit door de firma BMT Micro behandeld. Deze kan op het 
+nummer (800) 414-4268 (enkel USA) of op (910) 791-7052, FAX op (910) 
+350-2937, of, tenslotte, op zijn BBS op (910) 350-8061 bereikt worden.  De 
+gewone telefoonnummers zijn bereikbaar tussen 8h en 20h (EST,-5 UTC).  De 
+andere nummers staan 24 uur per dag, zeven dagen per week ter beschikking. 
+Het adres van de firma is :
+
+                BMT Micro
+                452 Horn Rd
+                Wilmington, NC 28412-2411
+                USA
+
+   Opmerking: Woon je in een van de vroegere Sovjetrepublieken of 
+Warschaupaktstaten dan kan je je registreren voor $5 (geen kredietkaarten 
+a.u.b.).
+
+   Na registratie wordt je een ontvangstbewijs en de nieuwste uitgave van 
+de tekstverwerker op diskette opgestuurd. Later ontvang je dan nog een 
+extra exemplaar bij het uitkomen van de eerstvolgende grote versie.  
+Gedrukte documentatie is nog niet beschikbaar maar zodra dit wel het geval 
+is zullen allegeregistreerde gebruikers een gratis exemplaar ontvangen.  
+Wil je later nog verdere versies op diskette dan kost dit $5.
+
+
+        Vragen en Foutrapportering
+        ---------------------------
+
+  Mocht je problemen hebben met dit programma dan kan de auteur Rick Papo 
+op een van de volgende wijzen bereikt worden:
+
+    Internet        rpapo@msen.com
+    Mail            Rick Papo, 38290 Avondale, Westland, MI 48186-3830, USA
+    Telephone       USA (734) 326-8547
+
+  De hoogste voorrang wordt gegeven aan vragen en problemen van 
+geregistreerde gebruikers maar er wordt geprobeerd om alle vragen die 
+binnekomen af te handelen.  E-Mail wordt elke dag gelezen.
+
+  Vermeld in alle correspondentie a.u.b. het versie-nummer van Escriba dat 
+u gebruikt. en waarnaar je refereert.
+
+
+        Installatie
+        -----------
+
+   Om Escriba te installeren moet je het opdrachtbestand 'NDRLANDS' 
+(tenminste als je voor deze Nederlandse versie gekozen hebt) starten.  Dit 
+vraagt je om de directory waarin het programma ge‹nstalleerd moet worden. 
+Geef hier alstublieft het volledige pad (met drive) aan. Een onbestaande 
+directory wordt automatisch gemaakt. De voor Escriba noodzakelijke EXE, 
+DLL, HLP en DOC bestanden worden allemaal op deze directory gecopieerd. 
+Tegelijkertijd wordt er op je werkblad een folder aangelegd met daarin 
+objecten voor het programma en de documentatie. 
+Zodra de installatie be‰indigd is kan je deze objecten naar hartelust 
+verplaatsen.
+
+   Wis je op de een of andere manier een van deze objecten dan moet je 
+enkel maar de installatie te herhalen. De instellingen zijn niet verloren.
+
+
+        Vertalingen
+        -----------
+
+   Escriba is gebouwd om op een eenvoudige manier in andere talen omgezet 
+te kunnen worden. Vertalingen naar het Spaans, Frans, Duits en Nederlands 
+bestaan reeds. Wil jij ook het programma naar je eigen moedertaal omzetten,
+dan kan je een berichtje sturen naar mijn Internet- (rpapo@msen.com) of 
+naar mijn adres.  Ik zend je dan de bestanden die moeten vertaald worden 
+(de hulpteksten, deze documentatie, het installatieprogramma en de 
+resourcedefinities voor het programma).  Zodra de vertalingen terug bij de 
+auteur zijn, wordt de nieuwe taal bij de volgende uitgave van de 
+tekstverwerker gevoegd. Hou er wel rekening mee dat, naarmate er 
+veranderingen in Escriba komen, je ook telkens om aanpassingen zal gevraagd
+worden. Daar staat dan wel tegenover dat je registratie gratis is.
+
+  De vertalers verantwoordelijk voor de huidige versies zijn:
+
+    Spanish   Rick Papo and Xavier Caballe  Internet: xcaballe@servicom.es
+    German    Frank Mersmann                Internet: fme@zfn.uni-bremen.de
+    French    Rapha‰l Vanney                Internet: rvanney@ibm.net
+    Dutch     Jaap van Veen                 CompuServe: 103262,1047
+
+
+        Bijdragen
+        ---------
+
+   Een woord van dank aan de volgende personen voor hun hulp bij het testen
+en voor de suggesties en steun tijdens het schrijven van het programma, is 
+zeker niet misplaatst :
+
+   Wayne Blankenbeckler       (Sam's Books, Indiana, USA)
+   Harry Bush                 (Riga, Letland)
+   Xavier Caballe             (Barcelona, Spanje)
+   Bjorn Fahller              (Zweden)
+   Per Gjerlov                (Denemarken)
+   Dr. Herbert Klaeren        (Tuebingen, Duitsland)
+   Frank Mersmann             (Bremen, Duitsland)
+   Joe Negron                 (Brooklyn, New York, USA)
+   Marvin Nipper              (Golden, Colorado, USA)
+   Walt Rutka                 (Southfield, Michigan USA)
+   Leland Sheppard            (California,USA)
+   Erwin Vackier              (Belgie)
+   Jaap van Veen              (Uithoorn,The Netherlands)
+   Raphael Vanney             (Courbevoie,Frankrijk)
+   Bryan Walker               (Tennessee,USA)
+
+
+        Geschiedenis
+        ------------
+
+13 juni 1995 - Uitgave 0.90 - Beta
+  Uitgegeven onder een nieuwe naam. Voorheen was het bekend als Pluma, maar
+    Pluma Software protesteerde.
+  Aangepast om met grote bestanden om te kunnen gaan.
+  Teniet-doen en Opnieuw-doen toegevoegd.
+  Het zetten van UPC, zetten van paginanummer, zetten van paginatelling,
+    toegevoegd.
+  Toegevoegd het plakken vanuit BMP, PCX, GIF en MET bestanden.
+  Toegevoegd het zoeken en vervangen van tekst.
+  Toegevoegd de dikte van holle-letters, vullen van kleur en vul-typen 
+    menu's.
+  Toegevoegd Bitmap achtergrond, geen tekst terzijde en half-toon 
+    opdrachten.
+
+10 juli 1995 - Uitgave 0.91 - Beta
+  Toegevoegd de verbinding met de ISPELLER spelcontrole.
+
+13 september 1995 - Uitgave 0.92 - Beta
+  Het instelmenu aangepast om bitmaps te gebruiken i.p.v. tekst.
+  Fout verholpen bij het laden van gecomprimeerde BMP-bestanden (Vanney).
+  Fout verholpen bij het opbouwen van de kantlijnen (Vanney).
+  Het verwerken van datumformaatreeks om zeker te zijn dat het formaat voor
+    alle landen geldt (Vanney).
+  Ctrl+Z werkt nu als een aan/uit schakelaar van Alles Uitvergroten 
+    (Winter).
+  Het document werkt nu samen met de lettertype instelling.
+  Ondersteuning van de nationale taal toegevoegd voor het instellen en
+    aanpassen van decimale getallen.
+  Franse vertaling aangepast met Escriba verbeteringen (Vanney).
+  Nederlandse vertaling aangepast met Escriba verbeteringen (van Veen).
+  Duitse vertaling aangepast met Escriba verbeteringen (Mersmann).
+  Spaanse vertaling aangepast met Escriba verbeteringen.
+  'Versie' functie toegevoegd aan het document om formaat aanpassingen
+    mogelijk te maken.
+  'Lijn Einde' en 'Lijn Samenvoegen' menu's toegevoegd.
+  Verscheidene fouten in de spellingcontrole verholpen.
+  Franse, Duitse en Nederlandse woordenboeken en hun bestanden toegevoegd.
+
+26 september 1995 - Uitgave 0.93 - Beta
+  Optie toegevoegd aan Algemene Instellingen: Druk Omgekeerd af.
+  Optie toegevoegd aan Document Instellingen: Codepage.
+  Fout verholpen met Ctrl+Z met 100% vergroting.
+  Verander en Vind en Verander Alles aan het zoek-dialoog toegevoegd.
+
+24 november 1995 - Uitgave 0.94 - Beta
+  Resultaat verbetering.
+  De mogelijkheid om Bar-codes-39 in het document toe te passen.
+  Ondersteuning voor dubbel-positie tekens (Chinees en Japannees).
+  De Open Bestand dialoog geeft nu Pluma-bestanden weer als waren zij
+    Escriba bestanden.
+
+27 december 1995 - Uitgave 0.95 - Beta
+  Loste fout op tijdens het afschakelen in 0.94.
+  Bewerkte het Document Standard dialoog als een schrijfblok.
+  Datum-functies toegevoegd voor een 2-cijferig jaar, korte maand en korte
+    weekdag notatie.
+  Het product informatie-menu omgewerkt tot een optioneel menu
+    daarbij inbegrepen toegevoegde uitbreidingen produkten.
+  De mogelijkheid toegevoegd om niet-eigen document en grafische 
+    bestandtypen te onderscheiden en het laden en opslaan door toegevoegde
+    uitbreidings modules.
+  De ISPELLER aangepast om aan de nieuwe toegevoegde uitbreidings
+    interface te voldoen.
+  Maakte de toegevoegde bestand Import-,export- uitbreiding DLL 'PTEXT'.
+  Maakte de toegevoegde grafische import-uitbreiding DLLs 'BMP', 'GIF' en
+    'PCX'.
+
+12 augustus 1996 - Uitgave 0.96b - Beta
+  De mogelijkheid geschapen dat grafische bestanden geladen worden alsof
+    ze documenten zijn.
+  De plaatsing, afmeting, verhouding en optimaliseer bitmap-menu's 
+    toegevoegd.
+  De uitgebreide configuratie-optie toegevoegd, daarbij de oude
+    spellingcontrole verwijderd.
+  Verandering aangebracht zodat wanneer een tweede kopie van
+  Escriba wordt begonnen de documenten daar evenzo in de eerste kopie
+    worden geladen.
+  Aparte message queues worden aangehouden voor elk document-venster.
+  Bestand/Taal- submenu toegevoegd om huidig menu/dialoog-taal te kunnen
+    kiezen.
+  POSTNET-barcodes kunnen in het document worden geplaatst.
+  De auteurnaam en document-aanmaak-datum aan het documentvoorwoord 
+    toegevoegd.
+  Ondersteuning voor grafische metafile teruggebracht en verbeterd.
+  De add-on voor grafische import uitbreiding DLL 'TIFF' aangemaakt.
+  De formatter aangepast zodat het niet meer in een rondje gaat wanneer een
+    grafisch beeld de pagina vult.
+  De logica van de keuzemarkering aangepast zodat er geen troep 
+    achterblijft.
+  Bitmap/Halftone afdrukoptie verbeterd.
+  Bitmap/Terug menu-optie toegevoegd.
+  Opmaak/KiesAlles menu-optie toegevoegd.
+  Ondersteuning toegevoegd voor het afbreken van woorden.
+
+28 januari 1997 - Uitgave 0.96c - Beta
+  Fout verholpen in de markering van bij elkaar horende regels die niet 
+    door een regel-opschuif (LF) zijn gescheiden.
+  Ondersteuning toegevoegd voor UPC-E, EAN-8 en EAN-13 barcodes.
+  Geheugenlek verholpen.
+  Verandering aangebracht om het laatste document-/beeldtype te herinneren
+    voor openen/samenvoegen.
+  Commentaar- en Scheidingfuncties toegevoegd.
+  Mogelijkheid om beelden op een lijn met de tekst te plaatsen.
+  Bouwde de toegevoegde grafische import aanvulling DLL 'JPEG'.
+
+22 januari 1998 - Uitgave 0.96d - Beta
+  De sleep/plaats-ondersteuning voor het openen van documenten toegevoegd.
+  Ga naar Pagina functie toegevoegd.
+  Ondersteuning voor document-naam toegevoegd.
+  Installatie-scripts aangepast om de spellingcontrole-woordenboeken te
+    bouwen.
+  Een nieuwe voorkeur-optie: Laadt het laatst bewerkte document bij het
+    opstarten.
+  Fout opgelost die ontstond bij het gebruik van de Home/End-toetsen aan 
+    het begin/einde van een pagina.
+  Een onderstreep/streepdoor-ondersteuning voor spaties en tabs in volledig
+    uitgelijnde tekst toegevoegd.
+  Fout verholpen bij het typen van tekst aan het einde van de pagina
+    in de vollepagina-zoom-mode.
+  Pagina kop- en voetondersteuning toegevoegd.

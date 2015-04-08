@@ -1,0 +1,28 @@
+# Build Spanish language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+Espanol: $*.dll $*.hlp $*.inf
+
+Espanol.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+Espanol.hlp: Espanol\Espanol.ipf Escriba.H Escriba.BMP \
+  Espanol\About.bmp    Espanol\BarCode.bmp  Espanol\ConfigEx.bmp Espanol\DateFmt.bmp  \
+  Espanol\Default0.bmp Espanol\Default1.bmp Espanol\Default2.bmp Espanol\Default3.bmp \
+  Espanol\Default4.bmp Espanol\Default5.bmp Espanol\FileDlg.bmp  Espanol\Indent.bmp   \
+  Espanol\Margins.bmp  Espanol\Prefer.bmp   Espanol\Profile.bmp  Espanol\Search.bmp   \
+  Espanol\Spell.bmp    Espanol\Tabs.bmp     Espanol\ZoomSet.bmp
+  ipfcomp /D:34 /C:850 /L:ESP Espanol\Espanol.ipf
+
+Espanol.dll: Espanol\Espanol.def Espanol\Espanol.res dll.obj
+  link386 /nologo dll, Espanol.dll /align:16, nul,, Espanol\Espanol ;
+  rc -n Espanol\Espanol.res $*.dll
+  eautil /s Espanol.dll
+  erase eas\*.dll
+  rd eas
+
+Espanol\Espanol.res: Espanol\Espanol.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 34 -cp 850 -d __OS2__ -i . -i ..\runtime -r Espanol\Espanol
+
+

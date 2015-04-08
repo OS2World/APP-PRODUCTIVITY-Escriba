@@ -1,0 +1,274 @@
+
+     Procesador de Textos Escriba para el OS/2 Presentation Manager
+    ================================================================
+
+  Escriba es un procesador de textos "WYSIWYG" (lo que se ve en pantalla es
+lo que se obtiene por impresora) para el sistema operativo OS/2. El 
+objetivo de este programa no es competir en prestaciones con los grandes 
+procesadores de textos profesionales existentes para el OS/2 PM o Windows, 
+ya que ofrece un conjunto de funciones m s modesto. Dispone de las 
+funciones normales de formateode texto m s la habilidad de insertar 
+gr ficos. Soporta todas las fuentes ATM instaladas, en todos sus formatos 
+nativos y en un amplio rango de tama¤o. El soporte de impresora es a trav‚s
+del interface de OS/2 PM, de forma que es posible la impresi¢n en cualquier
+impresora soportada por este interface.
+
+
+        Registro
+       ----------
+
+  Este programa es shareware. El usuario es libre de distribuir copias no 
+modificadas de este programa, de forma gratuita, a todos los interesados. 
+Si encuentras el programa £til y decides utilizarlo, entonces debes pagar 
+por ‚l.  El precio es EEUU$30.00, y hay varias maneras para pagarlo:
+
+        Cheque o Giro Bancario: Si Ud. desea pagar con un cheque personal o
+girobancario (o postal), porfavor env¡e su pago, junto con su nombre, su 
+direcci¢n de correo, el n£mero de revisi¢n y la fecha de su copia actual 
+del Escriba a:
+                Registraci¢n "Escriba"
+                c/o Rick Papo
+                38290 Avondale
+                Westland, MI 48186-3830
+                USA / EEUU
+
+        VISA/MasterCard/Discover: Si Ud. desea usar una tarjeta de cr‚dito 
+para pagar por su registraci¢n, la compa¤¡a "BMT Micro" est  proveyendo 
+este serviciopara el Escriba.  Se puede contactarles por tel‚fono al (800) 
+414-4268 (dentro de los EEUU), o al (910) 791-7052, por FAX al (910) 
+350-2937, o por medio de su computadora al (910) 350-8061.  Las l¡neas de 
+voz trabajan desde las8am hasta las 8pm, hora este de los EEUU (-5 GMT).  
+Los otros n£meros funcionan 24 horas por d¡a, siete d¡as a la semana.  
+Adem s, su direcci¢n de correo es:
+
+                BMT Micro
+                452 Horn Rd
+                Wilmington, NC 28412-2411
+                USA
+
+  Al recibir su registraci¢n, yo enviar‚ un recibo y la revisi¢n m s £ltima
+del Escriba en diskette.  Se le enviar  una copia m s en diskette m s 
+tarde, cuando se haga la pr¢xima revisi¢n mayor.  Documentaci¢n impresa 
+todav¡a no hay, pero una vez que se haga, todos los usuarios registrados 
+del Escriba recibir n una copia.  Si Ud. quiere m s revisiones en diskette,
+costar n EEUU$5.
+
+        Preguntas y Reportar Problemas
+        ------------------------------
+
+  Si Ud. tenga problemas con este programa, el autor (Rick Papo) se puede 
+contactar por una de las siguientes maneras:
+
+    Internet  rpapo@msen.com
+    Correo    Rick Papo, 38290 Avondale, Westland, MI 48186-3830, USA/EEUU
+    Tel‚fono  USA / EEUU (734) 326-8547
+
+  Primera prioridad se da a preguntas y problemas de usuarios registrados, 
+pero un esfuerzo se hace para tratar todos los mensajes que lleguen.  
+Correo electr¢nico se chequea diariamente.
+
+  En toda correspondencia, por favor provea el n£mero de revisi¢n de 
+Escriba queUd. esta usando y al cual esta refiri‚ndose.
+
+
+        Instalaci¢n
+        -----------
+
+  Para instalar Escriba, debes ejecutar el programa "ESPANOL" en la l¡nea 
+de ¢rdenes. Te preguntar  el nombre del directorio d¢nde deseas instalar el
+programa. Introduce la unidad y el directorio al completo. En el caso de 
+que no exista el directorio, este ser  creado. Una vez introducido el 
+nombre del directorio, se completar  la instalaci¢n del programa. Los 
+ficheros EXE, DLL, HLP y DOC del programa se copiar n en el directorio 
+destino.  Se hace un cuaderno en la pantalla y el objeto del programa se 
+pone all .  Una vez terminada la instalaci¢n, si‚ntese libre de mover los 
+objetos donde quiera.
+
+  Si por una casualidad se perdiera cualquier de los objectos del programa,
+pararecuperarlo simplemente repite el proceso de instalaci¢n. La 
+configuraci¢n del programa no se perder .
+
+
+        Traducciones
+        ------------
+
+  Escriba ha sido dise¤ado para ser traducido f cilmente a otros idiomas. 
+Traducciones a espa¤ol, a francais, a alem n y a holand‚s ya se han hecho. 
+Si deseas ver traducido el programa a tu lengua propia, env¡ame una nota a 
+mi direcci¢n de Internet (rpapo@msen.com), o bien a mi direcci¢n postal. Yo
+te enviar‚ los textos que deben ser traducidos (el fichero de ayuda, la 
+documentaci¢n, el script de instalaci¢n y las definiciones de recursos). 
+Tan pronto como reciba el material traducido, a¤adir‚ el nuevo idiomaa la 
+pr¢xima revisi¢n del procesador de textos. Has de tener presente que 
+deber‚preguntarte por nuevas traducciones conforme el programa sea revisado
+y mejorado. Como agradecimiento por tu colaboraci¢n, tu registro al 
+programa ser  gratuito y recibir s revisiones nuevas por cuanto tiempo que 
+sigues traduci‚ndolas.
+
+  Los traductores responsables por las versiones actuales son:
+
+    Espa¤ol   Rick Papo y Xavier Caballe  Internet: xcaballe@servicom.es
+    Alem n    Frank Mersmann              Internet: fme@zfn.uni-bremen.de
+    Francais  Rapha‰l Vanney              Internet: rvanney@ibm.net
+    Holand‚s  Jaap van Veen               CompuServe: 103262,1047
+
+
+        Agradecimientos
+        ---------------
+
+  Gracias a las siguientes personas por su ayuda durante la comprobaci¢n, 
+por sus sugerencias durante el desarrollo y por su soporte:
+
+        Wayne Blankenbeckler    (Sam's Books,Indiana,EEUU)
+        Harry Bush              (Riga,Latvia)
+        Xavier Caball‚          (Barcelona,Espa¤a)
+        Bjorn Fahller           (Suecia)
+        Per Gjerlov             (Dinamarca)
+        Dr. Herbert Klaeren     (Tuebingen,Alemania)
+        Frank Mersmann          (Bremen,Alemania)
+        Joe Negron              (Brooklyn,Nueva York,EEUU)
+        Marvin Nipper           (Golden,Colorado,EEUU)
+        Walt Rutka              (Southfield,Michigan,EEUU)
+        Leland Sheppard         (California,EEUU)
+        Erwin Vackier           (Belgium)
+        Jaap van Veen           (Uithoorn,The Netherlands)
+        Rapha‰l Vanney          (Courbevoie,Francia)
+        Bryan Walker            (Tennessee,EEUU)
+        Ernst Winter            (Munich, Alemania)
+
+
+        Historia
+        --------
+
+13 junio 1995 - Revisi¢n 0.90 - Beta
+  Cambiado el nombre.  Anteriormente conocido como 'Pluma', pero la empresa
+    'Pluma Software' quej¢.
+  Cambiado para aceptar ficheros grandes.
+  A¤adidas las funciones de Deshacer y Rehacer.
+  A¤adidas las funciones de Insertar UPC, Insertar Cuenta de P ginas y
+    Insertar N£mero de P ginas.
+  A¤adidas las funciones de Pegar de ficheros BMP, PCX, GIF y MET.
+  A¤adidas las funciones de buscar y reemplazar textos.
+  A¤adidas los men£es de grosor de l¡neas, color de  reas, tipo de  reas.
+  A¤adidas las funciones para gr ficos De Fondo, Sin Texto Al Lado y Medio
+    Tono.
+
+10 julio 1995 - Revisi¢n 0.91 - Beta
+  A¤adida la conecci¢n al chequeador de ortograf¡a.
+
+13 setiembre 1995 - Revisi¢n 0.92 - Beta
+  Convertido el men£ de justificaci¢n para usar imagenes en vez de texto.
+  Se corregi¢ un error en cargar fichero BMP del tipo RLE (Vanney).
+  Se corregi¢ un error en pintar las reglas (Vanney).
+  Se ha cambiado el procesar del formato de fechas para asegurar un formato
+    uniforme en todos los idiomas (Vanney).
+  Las tecla aceleradora Ctrl+Z ahora funciona para activar (y deactivar) la
+    funci¢n de Zoom Completo (Winter).
+  La ventana de documento ahora funciona con el palette de fuentes del
+    sistema.
+  Se a¤adio apoyo para idiomas internacionales, afectando el formateo y
+    revisi¢n de n£meros decimales (Vanney).
+  Revisi¢n de la traducci¢n francesa (Vanney).
+  Revisi¢n de la traducci¢n holandesa (van Veen).
+  Revisi¢n de la traducci¢n alemana (Mersmann).
+  Revisi¢n de la traducci¢n espa¤ola.
+  Se a¤adi¢ el c¢digo de funci¢n 'Version' al pr¢logo del documento para
+    permitir variaci¢n de formato entre revisiones.
+  Se a¤adi¢ los men£es de atributos 'Fin de l¡nea' y 'Juntada de l¡nea'.
+  Se corregieron varios errores en el chequeador de ortograf¡a.
+  Se a¤adi¢ los diccionaries y ficheros 'affix' para francais, alem n y
+    holand‚s.
+
+26 september 1995 - Revisi¢n 0.93 - Beta
+  Se a¤adi¢ una opci¢n a "Configuraci¢n general": Imprimir a rev‚s.
+  Se a¤adi¢ una opci¢n a "Valores por defecto": P gina de c¢digos.
+  Se corregi¢ un problema con el uso de Ctrl+Z junto con una preferencia
+    para zoom de 100%.
+  Se a¤adieron los botones para 'Cambiar & Buscar' y 'Cambiar Todos' al
+    di logo de buscar.
+
+24 noviembre 1995 - Revisi¢n 0.94 - Beta
+  Revisi¢n para velocidad.
+  Se a¤adi¢ la habilidad de incluir c¢digos de barras "C¢digo 39" a un
+    documento.
+  Se a¤adi¢ apoyo para sistemas 'DBCS', tales como chinos y japoneses.
+  El di logo de abrir documentos ahora muestra documentos 'Pluma' como si
+    fueran documentos 'Escriba'.
+
+27 diciembre 1995 - Revisi¢n 0.95 - Beta (para preguntas del OS/2 e-zine! y
+    para la p gina WWW)
+  Se corregi¢ un problema en terminarlo al programa (revisi¢n 0.94).
+  Rehice el di logo de valores por defecto como un cuaderno.
+  Se a¤adieron functions para fecha: a¤o de dos d¡gitos, mes abreviado, d¡a
+    de semana abreviado.
+  Se converti¢ la opci¢n de men£ para informaci¢n del producto para hacerlo
+    un men£ condicional incluyendo informaci¢n sobre productos de extensi¢n
+    (como ISpeller).
+  Se a¤adi¢ la habilidad to reconocer ficheros de documentos de formatos
+    que no son nativos a Escriba, y de reconocer ficheros de gr ficos por
+    medio de m¢dulos de extensi¢n.
+  Se ha revisado 'ISPELLER' para quedarse dentro del nuevo interface para
+    extensiones.
+  Se ha hecho la extensi¢n para documentos 'Plain Text', PTEXT.DLL.
+  Se han hecho las extensiones para ficheros gr ficos 'BMP', 'GIF' y 'PCX'.
+
+12 agosto 1996 - Revisi¢n 0.96b - Beta
+  Se a¤adi¢ la habilidad de cargar ficheros gr ficos como si fueran
+    documentos.
+  Se a¤adieron las opciones del men£ de im genes para posici¢n, tama¤o,
+    aspecto y optimizaci¢n.
+  Se a¤adi¢ la opci¢n de configurar extensiones, removiendo la opci¢n
+    antiguo de configurar el chequeador de ortograf¡a.
+  Se cambi¢ de tal modo que si una segunda copia de Escriba se inicia,
+    entonces los documentos pedidos para cargarse en la segunda copia se
+    cargen a la copia original.
+  Se cambi¢ para tener queues separados para mensajes para cada ventana de 
+    documento.
+  Se a¤adi¢ el submen£ de idiomas para elegir el idioma actual para men£es
+    y di logos.
+  Se a¤adi¢ la habilidad de incluir c¢digos de barras "POSTNET" a un
+    documento.
+  Se a¤adi¢ el nombre del autor y la fecha de creaci¢n del documento a la 
+    informaci¢n del prefacio del documento.
+  Se restaur¢ y se corregi¢ el apoyo para gr ficos 'metafile'.
+  Se ha hecho la extensi¢n para ficheros gr ficos 'TIFF'.
+  Se ha arreglado el formateador para que ya no se corre en c¡rculos cuando
+     un gr fico se llene la p gina.
+  Se ha corregido el l¢gico para marcar texto seleccionado para que ya no
+     deje l¡neas detr s.
+  Se ha corregido la impresi¢n de im genes en medio tono.
+  Se ha a¤adido una opci¢n para imprimir im genes en tonos invertidos.
+  Se ha a¤adido una opci¢n para seleccionar todo el texto del documento a
+    la vez.
+  Se ha a¤adido apoyo para dividir palabras con rayitas (-).
+
+28 enero 1997 - Revisi¢n 0.96c - Beta
+  Se ha corregido un error nuevo en marcar texto seleccionado, cuando la
+    selecci¢n abarca l¡neas no separadas por el c¢digo de 'fin de l¡nea'.
+  Se ha a¤adido apoyo para los c¢digos de barras UPC-E, EAN-8 y EAN-13.
+  Hab¡a un problema con perder memoria.  Se ha corregido eso.
+  Cambiado para recordar el tipo de documento o gr fico elegido para
+    abrirse o incluirse la £ltima vez.
+  Se a¤adieron los c¢digos de funci¢nes 'Commment' y 'Separator'.
+  Se a¤adi¢ la habilidad de colocar gr ficos en la misma l¡nea con el
+    texto.
+  Se ha hecho la extensi¢n para ficheros gr ficos 'JPEG'.
+
+22 enero 1998 - Revisi¢n 0.96d - Beta
+  Ahora se puede arrastrar ficheros documentos a la ventana del programa
+    para hacerlos cargar al programa.
+  Se a¤adi¢ la funci¢n para saltar a p ginas especificadas.
+  Se a¤adi¢ apoyo para t¡tulos de documentos.
+  Se cambi¢ la instalaci¢n para crear diccionarios en todo los idioma
+    disponibles.
+  Se a¤adi¢ una opci¢n de preferencia nueva: recargar el documento guardado
+    m s £ltimamente al arrancarse el programa.
+  Se ha corregido un error en el uso de las teclas Inicio y Fin al comienzo
+    y al fin de p ginas.
+  Se ha implementado apoyo para subrayar y tachar espacios y tabulaciones
+    en texto justificado horizontalmente.
+  Se ha corregido un error en aceptar texto al fin de la p gina al
+    la vez que est  mostrando la p gina entera.
+  Se a¤adi¢ apoyo para textos especiales para la cabecera y para el pie 
+    de p ginas.
+

@@ -1,0 +1,733 @@
+;/*****************************************************************************/
+;/*                                                                           */
+;/*  RUNTIME.DLL definitions file                                             */
+;/*                                                                           */
+;/*****************************************************************************/
+
+LIBRARY INITINSTANCE TERMINSTANCE
+PROTMODE
+DATA MULTIPLE NONSHARED READWRITE LOADONCALL
+CODE LOADONCALL
+
+IMPORTS
+;
+;  This import is necessary because the Warp 4.0 Toolkit's version
+;  of OS2386.LIB does not export it for some reason, though the 3.0
+;  version does.
+;
+   WinMessageBox2=PMWIN.1015
+
+EXPORTS
+;
+;       C Runtime Library
+;
+   __cppstore
+   _PGLOBAL_PTR
+   _cputsused                ; 16 bit function
+   _critlib_except           ; ****
+   _ctype
+   _daylight
+   _DosSelToFlat             ; **** ; 16 bit function
+   _DosFlatToSel             ; **** ; 16 bit function
+   _environ                  ; ****
+   _errno
+   _fullDump
+   __fac                     ; 16 bit function
+   _getcheused               ; 16 bit function
+   _ilog2
+   _osmajor
+   _osminor
+   _osmode
+   _timezone
+   _threadstore
+   _tzname
+   _ungetchused              ; 16 bit function
+   stderr
+   stdin
+   stdout
+   _CRT_init                 ; ****
+   _CheckIfMem
+   _EXE_Exception            ; ****
+   _Exception                ; ****
+   _Flush
+   _Fmprs
+   _Fnprs
+   _GetErrMsg
+   _InitBuf
+   _Lib_excpt
+   _PrintErrMsg              ; ****
+   _ReleaseSem
+   _RequestSem
+   __EDC3216                 ;  16 bit function
+   __EDCThunkProlog          ;  16 bit function
+   __dofmto
+   __doserrno
+   __goscan
+   __threadid
+   _assert
+   _atofieee
+   _atold
+   _beginthread
+   _clear87
+   _control87
+   __cputs                   ;  16 bit function
+   _ddused
+   _debug_calloc
+   _debug_free
+   _debug_heapmin
+   _debug_malloc
+   _debug_realloc
+   _dposqnan
+   _dump_allocated
+   _ecvt
+   _endthread
+   _erf
+   _erfc
+   _exception_dllinit        ; ****
+   _exception_procinit       ; ****
+   _fcloseall
+   _fcvt
+   _floatfmt
+   _fltused
+   _fopenused
+   _fpninit
+   _fposqnan
+   _fposinfi
+   _fpreset
+   _fprintf_ansi
+   _fprintfieee
+   _FreeFCB
+   _freemod
+   _fscanf_ansi
+   _fscanfieee
+   _fullpath
+   _gamma
+   _gcvt
+   __getche                  ;  16 bit function
+   _heap_check
+   _heapmin
+   _hypot
+   _infinity
+   _InitFCB
+   _internal_err
+   _itoa
+   _j0
+   _j1
+   _jn
+   _ldposqnan
+   _ldposinfi
+   _loadmod
+   _ltoa
+   _matherr                  ; ****
+   _msize
+   _MemoryFileUsed
+   _mig_eib_store
+   _printf_ansi
+   _printfieee
+   _ProfileHook16            ;  16 bit function
+   _ProfileHook32
+   _ProfileThrow16           ;  16 bit function
+   _ProfileThrow32
+   _ProfileUnwind16          ;  16 bit function
+   _ProfileUnwind32
+   _ProfileHookVAOptlink32
+   _putenv
+   _rmtmp
+   _scanf_ansi
+   _scanfieee
+   _setupenv
+   _sprintf_ansi
+   _sprintfieee
+   _sscanf_ansi
+   _sscanfieee
+   _status87
+   _strtodieee
+   _terminate                ; ****
+   _test_handle
+;  _tmemory_sem
+   _tzset
+   _ultoa
+   __ungetch                 ;  16 bit function
+   _vfprintfieee
+   _vprintfieee
+   _vsprintfieee
+   _y0
+   _y1
+   _yn
+   abort
+   abs
+   acos
+   asctime
+   asin
+   atan
+   atan2
+   atexit
+   atof
+   atoi
+   atol
+   bsearch
+   calloc
+   ceil
+   clearerr
+   clock
+   cos
+   cosh
+   ctime
+   difftime
+   div
+   exit                      ; ****
+   exp
+   fabs
+   fclose
+   feof
+   ferror
+   fflush
+   fgetc
+   fgetpos
+   fgets
+   floor
+   fmod
+   fopen
+   fprintf
+   fputc
+   fputs
+   fread
+   free                      ; ****
+   freopen
+   frexp
+   fscanf
+   fseek
+   fsetpos
+   ftell
+   fwrite
+   getc
+   getchar
+   getenv
+   gets
+   gmtime
+   isalnum
+   isalpha
+   iscntrl
+   isdigit
+   isgraph
+   islower
+   isprint
+   ispunct
+   isspace
+   isupper
+   isxdigit
+   labs
+   ldexp
+   ldiv
+   localeconv
+   localtime
+   log
+   log10
+   longjmp
+   malloc                    ; ****
+   mblen
+   mbstowcs
+   mbtowc
+   memccpy
+   memchr
+   memcmp
+   memcpy
+   memicmp
+   memmove
+   memset
+   mktime
+   modf
+   perror
+   pow
+   printf
+   putc
+   putchar
+   puts
+   qsort
+   raise
+   rand
+   realloc
+   remove
+   rename
+   rewind
+   scanf
+   setbuf
+   setjmp
+   setlocale
+   setvbuf
+   signal
+   sin
+   sinh
+   sprintf
+   sqrt
+   srand
+   sscanf
+   strcat
+   strchr
+   strcmp
+   strcoll
+   strcpy
+   strcspn
+   strdup                    ; ****
+   strerror
+   strftime
+   stricmp
+   strlen
+   strlwr
+   strncat
+   strncmp
+   strncpy
+   strnicmp
+   strpbrk                   ; ****
+   strrchr
+   strspn
+   strstr
+   strtod
+   strtok
+   strtol
+   strtold
+   strtoul
+   strupr
+   strxfrm
+   system
+   tan
+   tanh
+   time
+   tmpfile
+   tmpnam
+   tolower
+   toupper
+   ungetc
+   vfprintf
+   vprintf
+   vsprintf
+   wcscat
+   wcschr
+   wcscmp
+   wcscpy
+   wcscspn
+   wcslen
+   wcsncat
+   wcsncmp
+   wcsncpy
+   wcspbrk
+   wcsrchr
+   wcsspn
+   wcstombs
+   wcswcs
+   wctomb
+   _chdrive
+   _execl_ansi
+   _execle_ansi
+   _execlp_ansi
+   _execlpe_ansi
+   _exit
+   _getdcwd
+   _getdrive
+   _lrotl
+   _lrotr
+   _makepath
+   _rotl
+   _rotr
+   _searchenv
+   _spawnl_ansi
+   _spawnle_ansi
+   _spawnlp_ansi
+   _spawnlpe_ansi
+   _splitpath
+   _strdate
+   _strerror
+   _strtime
+   _tcalloc
+   _tfree
+   _tmalloc
+   _trealloc
+   _access
+   _cabs
+   _cgets                    ;  16 bit function
+   _chdir
+   _chmod
+   _chsize
+   _close
+   _cprintf                  ;  16 bit function
+   _cputs                    ;  16 bit function
+   _creat
+   _cscanf                   ;  16 bit function
+   _cwait
+   _dup
+   _dup2
+   __eof
+   _execl
+   _execle
+   _execlp
+   _execlpe
+   _execv
+   _execve
+   _execvp
+   _execvpe
+   _fdopen
+   _fgetchar
+   _filelength
+   _fileno
+   _flushall
+   _fputchar
+   _fstat
+   _ftime
+   _getch                    ;  16 bit function
+   _getche                   ;  16 bit function
+   _getcwd
+   _getpid
+   _isatty
+   _kbhit                    ;  16 bit function
+   _lfind
+   _lsearch
+   _lseek
+   _mkdir
+   _onexit
+   _open
+   _putch                    ;  16 bit function
+   _read
+   _rmdir
+   _setmode
+   _set_crt_msg_handle
+   _sopen
+   _spawnl
+   _spawnle
+   _spawnlp
+   _spawnlpe
+   _spawnv
+   _spawnve
+   _spawnvp
+   _spawnvpe
+   _stat
+   strcmpi
+   strnset
+   strrev
+   strset
+   _swab
+   _tell
+   _tempnam
+   _umask
+   _ungetch                  ;  16 bit function
+   _unlink
+   _utime
+   _wait
+   _write
+; C++ exports
+   __Throw
+   __ReThrow
+   __dl__FPv
+   __dl__FPvPCcUi
+   __nw__FUi
+   __nw__FUiPCcT1
+   set_new_handler__FPFv_v
+   _set_mt_new_handler__FPFv_v
+   __nw__FUiPv
+   __nw__FUiPCcT1Pv
+   __PureVirtualCalled
+   __vec__copy
+   __vec__delete
+   __vec__debug__delete
+   __vec__new
+   __vec__assign
+   __vec__new__place
+   terminate__Fv
+   set_terminate__FPFv_v
+   _set_mt_terminate__FPFv_v
+   __CleanupCatch
+   __CatchMatch
+   __CurrentException
+   set_unexpected__FPFv_v
+   _set_mt_unexpected__FPFv_v
+;  __unexpected__Fv
+   __RestoreRegsAndJump
+   __Invoke__Destructor
+   __Invoke__Delete
+;
+;       My Functions
+;
+   __ct__13CircularQueueFPciT2                  @1000   ; CIRQUEUE
+   __dt__13CircularQueueFv                      @1001
+   Dump__13CircularQueueFi                      @1002
+   Enqueue__13CircularQueueFPvi                 @1003
+   Wait__13CircularQueueFi                      @1004
+   Peek__13CircularQueueFPv                     @1005
+   Dequeue__13CircularQueueFPvi                 @1006
+   Empty__13CircularQueueFv                     @1007
+
+   RegisterControls__FUl                        @1100   ; CONTROLS
+   Button_Processor                             @1101
+   ComboBox_Processor                           @1102
+   EntryField_Processor                         @1103
+
+   UpdateCRC16__FUsPvi                          @1200   ; CRC
+   UpdateCRC16__FUsUc                           @1201
+
+   OpenTimer__Fv                                @1300   ; DEBUG
+   CloseTimer__Fv                               @1301
+   GetTime__FP10_TIMESTAMP                      @1302
+   ComputeElapsedTime__FP10_TIMESTAMPT1PUl      @1303
+   InterpretWinError__FUlPc                     @1304
+
+   BuildMVMTValue__FPvUlP10MVMT_VALUE           @1400   ; EATTR
+   BuildExtendedAttributes__FUlP6EADATA         @1401
+
+   __ct__5EventFPcT1i                           @1500   ; EVENT
+   __dt__5EventFv                               @1501
+   Post__5EventFv                               @1502
+   Reset__5EventFv                              @1503
+   Wait__5EventFi                               @1504
+
+   __ct__10HelpWindowFUlT1UsPcT4                @1600   ; HELPWIN
+   __dt__10HelpWindowFv                         @1601
+   Associate__10HelpWindowFUl                   @1602
+
+   __ct__5MutexFPcT1i                           @1700   ; MUTEX
+   __dt__5MutexFv                               @1701
+   Request__5MutexFi                            @1702
+   RequestWin__5MutexFi                         @1703
+   Release__5MutexFv                            @1704
+
+   Sys_MsgWaitForMultipleObjects__FiPUlT1       @1800   ; MUX
+
+   __ct__11PoolSectionFiT1                      @1900   ; POOL
+   __dt__11PoolSectionFv                        @1901
+   Clear__11PoolSectionFP11PoolSection          @1902
+   __ct__4PoolFPciT2                            @1903
+   __ct__4PoolFR4Pool                           @1904
+   __dt__4PoolFv                                @1905
+   __as__4PoolFRC4Pool                          @1906
+   Find__4PoolCFi                               @1907
+   Find__4PoolCFP9PoolEntry                     @1908
+   Prev__4PoolCFi                               @1909
+   Prev__4PoolCFP9PoolEntry                     @1910
+   Next__4PoolCFi                               @1911
+   Next__4PoolCFP9PoolEntry                     @1912
+   Insert__4PoolFP9PoolEntryPv                  @1913
+   Delete__4PoolFP9PoolEntry                    @1914
+   Clear__4PoolFv                               @1915
+   Dump__4PoolFi                                @1916
+
+;  __ct__14ResourceStringFUlT1                  @2000   ; RESTRING
+   __ct__14ResourceStringFUlT1PCcUi             @2002
+   __dt__14ResourceStringFv                     @2001
+
+   __ct__12PublicMemoryFPcUli                   @2100   ; SHAREMEM
+   __dt__12PublicMemoryFv                       @2101
+
+   __ct__6StringFPUc                            @2200   ; STRING_
+   __ct__6StringFPc                             @2201
+   __ct__6StringFv                              @2202
+   __dt__6StringFv                              @2203
+   __ct__6StringFRC6String                      @2204
+   __as__6StringFRC6String                      @2205
+   __as__6StringFPCUc                           @2206
+   __as__6StringFPCc                            @2207
+
+   Enable__7ListBoxFi                                   @2300   ; WINDOW
+   QueryItemText__7ListBoxFiPcT1                        @2301
+   QueryTopIndex__7ListBoxFv                            @2302
+   SetTopIndex__7ListBoxFi                              @2303
+   QuerySelection__7ListBoxFi                           @2304
+   SelectItem__7ListBoxFi                               @2305
+   Delete__7ListBoxFi                                   @2306
+   Insert__7ListBoxFPci                                 @2307
+   Clear__7ListBoxFv                                    @2308
+   MessageProcessor__7ListBoxFUlT1PvT3                  @2309
+   __dt__7ListBoxFv                                     @2310
+   __ct__7ListBoxFUl                                    @2311
+   Read__6SliderFv                                      @2312
+   Set__6SliderFUlT1                                    @2313
+   __dt__6SliderFv                                      @2314
+   Enable__6SliderFi                                    @2315
+   __ct__6SliderFUlT1                                   @2316
+   __ct__6SliderFUlN41iPc                               @2317
+   Query__10SpinButtonFv                                @2318
+   Set__10SpinButtonFi                                  @2319
+   SetLimits__10SpinButtonFiT1                          @2320
+   __ct__10SpinButtonFUl                                @2321
+   __dt__10StaticTextFv                                 @2322
+   __ct__10StaticTextFUl                                @2323
+   Insert__10EntryfieldFPc                              @2324
+   QuerySelection__10EntryfieldFRiT1                    @2325
+   SetLimit__10EntryfieldFi                             @2326
+   __dt__10EntryfieldFv                                 @2327
+   __ct__10EntryfieldFUl                                @2328
+   Query__8CheckboxFv                                   @2329
+   Set__8CheckboxFi                                     @2330
+   __dt__8CheckboxFv                                    @2331
+   __ct__8CheckboxFUl                                   @2332
+   MessageProcessor__16SubclassedWindowFUlT1PvT3        @2333
+   __dt__16SubclassedWindowFv                           @2334
+   __ct__16SubclassedWindowFUl                          @2335
+   MessageProcessor__6WindowFUlT1PvT3                   @2336
+   PostMessage__6WindowFUlPvT2                          @2337
+   RemovePresParam__6WindowFi                           @2338
+   Drag__6WindowFv                                      @2339
+   Resize__6WindowFiT1                                  @2340
+   SendMessage__6WindowFUlPvT2                          @2341
+   PopupMenu__6WindowFUliT2                             @2342
+   MessageBox__6WindowFPciT2                            @2343
+   MessageBox__6WindowFPcT1iT3                          @2344
+   AddSysMenuItem__6WindowFPcUssN22UlT6                 @2345
+   AddSysMenuSeparator__6WindowFv                       @2346
+   Add2TaskList__6WindowFv                              @2347
+   GetWindowText__6WindowFPci                           @2348
+   SetWindowText__6WindowFPc                            @2349
+   Rectangle__6WindowFv                                 @2350
+   StopTimer__6WindowFi                                 @2351
+   StartTimer__6WindowFiT1                              @2352
+   GetData__6WindowFv                                   @2353
+   SetData__6WindowFPv                                  @2354
+   GetText__6WindowFPci                                 @2355
+   SetText__6WindowFPc                                  @2356
+   Disable__6WindowFv                                   @2357
+   Enable__6WindowFi                                    @2358
+   SetFocus__6WindowFv                                  @2359
+   Sink__6WindowFv                                      @2360
+   Surface__6WindowFv                                   @2361
+   Deactivate__6WindowFv                                @2362
+   Activate__6WindowFv                                  @2363
+   Restore__6WindowFv                                   @2364
+   Maximize__6WindowFv                                  @2365
+   Minimize__6WindowFv                                  @2366
+   Size__6WindowFiT1                                    @2367
+   Move__6WindowFiT1                                    @2368
+   Hide__6WindowFv                                      @2369
+   Show__6WindowFv                                      @2370
+   Reposition__6WindowFiN3113PositionClass              @2371
+   Update__6WindowFv                                    @2372
+   Invalidate__6WindowFv                                @2373
+   Invalidate__6WindowFR6_RECTL                         @2374
+   Set_FontNameSize__6WindowFPc                         @2375
+   Set_TextColor__6WindowFUl                            @2376
+   SetPresParam__6WindowFiT1Pv                          @2377
+   Set_BackColor__6WindowFUl                            @2378
+   QueryAnchor__6WindowFv                               @2379
+   __dt__6WindowFv                                      @2380
+   __ct__6WindowFUl                                     @2381
+   __ct__6WindowFUlPcT2T1iN35N31PvT12_                  @2382
+   __ct__11WindowClassFPc                               @2383
+   HideControls__6WindowFUl                             @2384
+   __ct__6WindowFR11WindowClassUlPciN44N22T4Pv          @2385
+   __ct__11WindowClassFR7Processi                       @2386
+
+   QueryAddress__6ModuleFi                      @2400   ; MODULE
+   QueryAddress__6ModuleFPc                     @2401
+   __dt__6ModuleFv                              @2402
+   __ct__6ModuleFRC6Module                      @2403
+   __ct__6ModuleFPc                             @2404
+
+   __dt__14LanguageModuleFv                     @2500   ; LMODULE
+   __ct__14LanguageModuleFPcT1                  @2501
+   Language_Create__FPcT1iN21                   @2502
+   _SetLanguage__FPcT1iN31RP14LanguageModule    @2503
+
+   DialogMessageProcessor                       @2600   ; DIALOG
+   MessageProcessor__6DialogFUlT1PvT3           @2601
+   Command__6DialogFPvT1                        @2602
+   InitDialog__6DialogFUl                       @2603
+   Dismiss__6DialogFi                           @2604
+   Process__6DialogFv                           @2605
+   Load__6DialogFv                              @2606
+   __dt__6DialogFv                              @2607
+   __ct__6DialogFUlN21i                         @2608
+
+   PutString__7ProfileFPcT1                     @2700   ; PROFILE
+   GetString__7ProfileFPcRPc                    @2701
+   GetString__7ProfileFPcT1i                    @2702
+   PutItem__7ProfileFPcPvi                      @2703
+   GetItem__7ProfileFPcPvi                      @2704
+   __dt__7ProfileFv                             @2705
+;  __ct__7ProfileFPcUl                          @2706
+   __ct__7ProfileFPcUlT2iP10HelpWindowT2        @2707
+   __ct__7ProfileFPcUlT1                        @2708
+
+   GetTitlebarRect__FUlT1R6_RECTL               @2800   ; SUPPORT
+   DecodeDecimal__FPcRd                         @2801
+   FormatDecimal__FPcliT3                       @2802
+   GetCountryInfo__FiT1                         @2803
+   CheckDrive__FiRiPcT3                         @2804
+   CheckDrive__FiRi                             @2805
+   HelpIndex                                    @2806
+   KeysHelp                                     @2807
+   ExtendedHelp                                 @2808
+   HelpForHelp                                  @2809
+   Exit                                         @2810
+   BuildPresParams__FUsPUlT2PPUc                @2811
+   UpdateTaskListEntry__FUlPc                   @2812
+   Add2TaskList__FUlPc                          @2813
+   CheckMenuItem__FUlUsT1                       @2814
+   CheckMenuItem__FUlUsT2T1                     @2815
+   EnableMenuItem__FUlUsT1                      @2816
+   EnableMenuItem__FUlUsT2T1                    @2817
+   RemoveSubMenuItem__FUlUsN22                  @2818
+   AddSubMenuItem__FUlUsT2P9_MENUITEMPc         @2819
+   AddMenuItem__FUlUsP9_MENUITEMPc              @2820
+   AddSysSubMenuItem__FUlUsP9_MENUITEMPc        @2821
+   AddSysMenuItem__FUlP9_MENUITEMPc             @2822
+   DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv @2823
+   MessageBox__FUlT1PcT3iT5T1T5                 @2824
+   CountryInfo                                  @2825
+
+   __ct__6CanvasFPcUl                           @2900   ; CANVAS
+   __dt__6CanvasFv                              @2901
+   QueryFonts__6CanvasFiP12_FONTMETRICS         @2902
+   QueryFontCount__6CanvasFv                    @2903
+
+   OWNER__FUl                                   @9900   ; SYSTEM
+   PARENT__FUl                                  @9901
+   CHILD__FUli                                  @9950
+   Sys_Beep__FiT1                               @9902
+   Sys_BeepWarning__Fv                          @9903
+   Sys_BeepNote__Fv                             @9904
+   Sys_BeepError__Fv                            @9905
+   Sys_BringWindowToTop__FUl                    @9906
+   Sys_CloseFile__FUl                           @9907
+   Sys_DefDialogProc                            @9952
+   Sys_DefWindowProc                            @9908
+   Sys_DeleteCriticalSection__FPi               @9909
+   Sys_EnableWindow__FUlT1                      @9910
+   Sys_EndDialog__FUlT1                         @9911
+   Sys_EnterCriticalSection__FPi                @9912
+   Sys_ExitThread__Fi                           @9913
+   Sys_GetFocus__Fv                             @9951
+   Sys_GetForegroundWindow__Fv                  @9914
+   Sys_GetLastError__FUl                        @9915
+   Sys_GetModuleHandle__FPc                     @9916
+   Sys_GetWindowData__FUl                       @9917
+   Sys_GetWindowText__FUlPci                    @9918
+   Sys_InitializeCriticalSection__FPi           @9919
+   Sys_InvalidateWindow__FUl                    @9920
+   Sys_IsMousePresent__Fv                       @9921
+   Sys_LeaveCriticalSection__FPi                @9922
+   Sys_LoadCursor__FUll                         @9923
+   Sys_PostMessage__FUlT1PvT3                   @9924
+   Sys_PostQuitMessage__FUli                    @9925
+   Sys_ReadFile__FUlPviPUl                      @9926
+   Sys_ReleaseCapture__Fv                       @9927
+   Sys_SendMessage                              @9928
+   Sys_SetActiveWindow__FUl                     @9929
+   Sys_SetCapture__FUl                          @9930
+   Sys_SetCursor__FUl                           @9931
+   Sys_SetCursorPos__FiT1                       @9932
+   Sys_SetFocus__FUl                            @9953
+   Sys_SetWindowData__FUlPv                     @9933
+   Sys_SetWindowText__FUlPc                     @9934
+   Sys_ShowCursor__FUl                          @9935
+   Sys_ShowWindow__FUlT1                        @9936
+   Sys_Sleep__Fi                                @9937
+   Sys_StartTimer__FUliT2                       @9938
+   Sys_StopTimer__FUli                          @9939
+   Sys_UpdateWindow__FUl                        @9940
+   Sys_WriteFile__FUlPviPUl                     @9941
+   Sys_QueryTickInterval__Fv                    @9942
+   Sys_WindowFromPoint__FiT1                    @9943
+   Sys_RegisterClass__FUlPcPFUlT1PvT3_PviN24N22 @9944
+   Sys_MessageBox__FUlT1PcT3iT5                 @9945
+   Sys_ProcessMessages__Fl                      @9946
+   Sys_RegisterThread__Fv                       @9947
+   Sys_DeregisterThread__Fv                     @9948
+   Sys_ThreadNumber__Fi                         @9949
+
+

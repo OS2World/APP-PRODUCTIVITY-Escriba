@@ -1,0 +1,51 @@
+ispeller.obj: \
+	ispeller.cpp \
+	..\runtime\restring.h \
+	..\runtime\system.h \
+	debug.h \
+	ispeller.h
+
+ispeller.res: \
+	ispeller.rc \
+	ispeller.h
+
+isp__deu.res: \
+	isp__deu.rc \
+	ispeller.h
+
+isp__enu.res: \
+	isp__enu.rc \
+	ispeller.h
+
+isp__esp.res: \
+	isp__esp.rc \
+	ispeller.h
+
+isp__fra.res: \
+	isp__fra.rc \
+	ispeller.h
+
+isp__nld.res: \
+	isp__nld.rc \
+	ispeller.h
+
+isp__deu.hlp: \
+	isp__deu.ipf \
+	ispeller.h
+
+isp__enu.hlp: \
+	isp__enu.ipf \
+	ispeller.h
+
+isp__esp.hlp: \
+	isp__esp.ipf \
+	ispeller.h
+
+isp__fra.hlp: \
+	isp__fra.ipf \
+	ispeller.h
+
+isp__nld.hlp: \
+	isp__nld.ipf \
+	ispeller.h
+

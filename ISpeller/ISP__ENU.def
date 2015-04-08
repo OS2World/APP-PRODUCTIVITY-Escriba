@@ -1,0 +1,8 @@
+;
+;       ISP__ENU: ISpeller Language Texts (English)
+;
+LIBRARY
+DESCRIPTION 'ISP__ENU: ISpeller Language Texts (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+
