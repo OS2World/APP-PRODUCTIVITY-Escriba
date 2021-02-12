@@ -1,0 +1,8 @@
+;
+;       PTXT_DEU: Plain Text Import/Export Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'PTXT_DEU: Plain Text Import/Export Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

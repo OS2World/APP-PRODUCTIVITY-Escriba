@@ -1,0 +1,148 @@
+{\rtf1\pca
+{\fonttbl{\f1 Tms Rmn;}}
+{\colortbl;\red128\green128\blue128;}
+\f1 \fs24 \cf0 \b0 \i0 \ul0 \strike0 \outl0 \caps0 \ql \fi0\li0 \sl24\smult0 {\header }
+{\footer }
+{\header \qc \fs28 \b \ul Things To Do\par
+\par
+\fs16 \b0 \ul0 \brdrb\brdrs\brdrw20\brsp80\brdrcf0\par\pard\par }
+{\footer \brdrb\brdrs\brdrw20\brsp80\brdrcf0\par\pard\par \qc \fs20 Page  of }
+\fi-720\li720 \ul Open Calls (Public Bugs/Problems/Concerns)\ul0 \par
+\cf1 \b 509204-1/98530\b0  MidlandBank(Jackson): Failing Source/Call stating that line number cannot be found in PMWIN.DLL for which SYM information has been found.  \i Fixpack 2.1.2(d).\i0 \cf0 \par
+\cf1 \b 500318-1\b0  MidlandBank(Schwer): No stack trace on secondary thread.  \i This appears to be the old failure to properly index a secondary thread's stack memory.  They have been asked to retry this problem with the new agent, as the dump was plainly from the older version.\i0 \cf0 \par
+\cf1 \b 500011-2/97324\b0  MidlandBank(Schwer): Bad timestamps on entries in the Module table.  \i Fixed and sent via e-mail.\i0 \cf0 \par
+\cf1 \b 487193-1/95728+95731\b0  MidlandBank(Schwer): Incomplete source support.  \i Done, release 2.1.3.  They are waiting interestedly on the new release.\i0 \cf0 \par
+\cf1 \b 481498-2/94702\b0  MarineMidland(Sauvageau): Screen shot black sometimes.  \i This is presumably the failure to capture a screenshot while in text mode.  Done, release 2.1.3.\i0 \cf0 \par
+\b 481498-3/94703\b0  MarineMidland(Sauvageau): Various FE reports don't exist.  \i This is a known problem, discovered in testing 2.1.1 back in July 1997.  The reports are: File Status Details, Named Pipe Status Details, Segment, Local Variables, Global Variables, Function Source and Register Summary.\i0 \par
+\par
+\ul \ul Current Bugs & Things to Work On\ul0 \par
+\'04  Rebuild all HLP files.\par
+\'04  TESTPLAN: Loop snap test.\par
+\'04  FXAGENT: Resource leak from too many start/stop cycles?\par
+\'04  FMDCE: Minimal capture does not get the GDT/LDT.\par
+\'04  FMDCE: Minimal capture results in a rather strange capture of the code segments.  Every third page is caught.\par
+\'04  FMDCE: If the managed fault directory and the SYSTEM directory are on the same drive, do not use the fallback directory for fault capture.\par
+\'04  FA: Snap of MAHJONGG (16-bit) gave no meaningful stack analysis.\par
+\'04  FA: $luerrmod$ not always being expanded in the Diagnostic Summary.\par
+\'04  FA/FE: TRAP_PM/int03 shows link to source from source stack, but the source window is empty.\par
+\'04  FA/FE: TRAP_PM/int03 stack summary fails to identify a module or symbol for the topmost entry, though the Source Stack and Failing Source both show the correct results.\par
+\'04  FA/FE: TRAP_PM/int03 source stack does not show a link to the failing call.\par
+\'04  FA/FE: TRAP_PM/int03 failing call does not show source.\par
+\'04  FA/FE: Enhanced stack for TRAP_PM.EXE refuses to show FXTRAPS.ASM.  This appears due to the fact that TRAP_PM.EXE contains no 0x103 (Types) or 0x104 (Symbols) records.\par
+\'04  FE: OpenClass error trying to load CICS fault.\par
+\'04  FE::HYP: If the text to display contained any carets beyond those inserted to indicate hypertext start/end, then the hypertext link generation will fail.\par
+\'04  FE: When a report of a disassembly view is requested, it generates the right report.  When the memory browser is invoked for the same segment, and a report requested for it, the disassembly report is generated instead of a memory dump report.  Both report requests were for the same thing: 0x00010000.\par
+\'04  FE: Failing Source/Call windows are not always being prepositioned correctly.\par
+\'04  FE: Tab character does not select next field in PIB & TIB windows.\par
+\'04  FM: Dying upon encountering a bad capture file.\par
+\'04  FM: Fault Manager does not clear status & name fields after DM deletes files.\par
+\'04  FM: Occasionally faults upon shutdown.\par
+\'04  FM: Occasionally fails to get path/name info from file, then refuses to look at the file again later to correct itself.\par
+\'04  FM: Shouldn't we confirm the deletion of locked files?\par
+\'04  DUMPMGT: Profile create/update date/time appears to be the date/time when the profile entry was created/updated, not of the information from the dumps themselves.\par
+\'04  FXHOOKIT: Complains loudly if unable to unset hooks at termination.\par
+\'04  FXBLDIDX: Fails if corrupted index of original file is present.\par
+\'04  INSTALLR: Parameter dialogs do not appear when trying to install additional components.\par
+\'04  INSTALLR: Creation of STARTUP.CMD is fine, but updates are handled wrongly.\par
+\'04  INSTALLR: Uninstall failed to remove the HTML directory.\par
+\'04  FXUTILS: INF file has no title.\par
+\'04  MicroFocus COBOL hook does not work with revision 4.0.\par
+\'04  Add any new MicroFocus COBOL error codes (and their texts) for revision 4.0.\par
+\'04  C-Tree: Refuses to load a fault whose full path name includes embedded spaces.  This affects any program using \i zopen\i0 .\par
+\par
+\ul Open Enhancement Requests\ul0 \par
+\b 63297\b0 \tab FE: The ability to decode OS/2 trace files.\par
+\b 63302\b0 \tab SNAP: A means to kill processes \i definitively\i0 .  \i This is a Holy Grail of OS/2 gurus.\i0 \par
+\b 63407\b0 \tab FE/FMDCE: Enhanced file information: (1) translate file mode to 'rw', 'ro', etc, (2) show max file size for system, (3) current file pointer/offset, (4) data from the file near the current file pointer, (5) hyper-links to data from the file summary screen.\par
+\b 63411\b0 \tab FE/FA: Compare and highlight differences between the environment settings in CONFIG.SYS and the environment settings at the time of the fault.\par
+\b 63824\b0 \tab Tracing ability.\par
+\b 63826\b0 \tab Specify dump directory in capture rules.\par
+\b 64897\b0 \tab Add 'On-Shutdown' procedure to shut down agent and messenger automatically.\par
+\b 64905\b0 \tab Capture the contents of OS2.INI and OS2SYS.INI.  If the archive-at-boot option is enabled, perhaps we want to capture the contents of the most recent archive as well for comparison.\par
+\b 65101\b0 \tab FE: Allow a new fault to be opened.\par
+\b 65105\b0 \tab Enhance the FM fault object so as it make it self-maintaining.\par
+\b 65557\b0 \tab Allow EBCDIC browsing of memory.\par
+\b 65795\b0 \tab Record parameters passed to secondary threads upon their startup.\par
+\b 66062\b0 \tab FE: Add the ability to group duplicate faults, possibly in a tree structure.\par
+\b 66912\b0 \tab If FX gets installed on a version of OS/2 not supported, send a message somewhere.\par
+\b 67241\b0 \tab DB/2 support.\par
+\b 67242\b0 \tab SQL support.\par
+\b 67243\b0 \tab CM/2 support.\par
+\b 67244\b0 \tab Use FFST notification in relation to DB/2 & CM/2 faults.\par
+\b 67248\b0 \tab Support for self-describing data?\par
+\b 67249\b0 \tab Add an API for marking memory for mandatory capture in case of fault.\par
+\b 67250\b0 \tab User exit on capture, add results to data capture file.\par
+\b 67558\b0 \tab FACFG: An option or set of options to cause confirmation dialogs (i.e: delete, close) to be displayed, or not displayed, akin to the one in OS/2's System Settings object.\par
+\b 67832\b0 \tab Demangle C++ function names.  \i Partially done, fix 211F.  Still needs to demangle global and local variable and member names.\i0 \par
+\b 68828\b0 \tab Rules-based messaging.\par
+\b 70236\b0 \tab Notification via Lotus Notes or Internet E-Mail.\par
+\b 70239\b0 \tab Include source code in disassembly where possible.\par
+\b 70438\b0 \tab Identify writable vs. non-writable files.  Allow sort based on it.\par
+\b 70480\b0 \tab Recognize and configure snap-dump faults. \par
+\b 70481\b0 \tab FE: Need to recognize and show diagnostic summary for Snap-Dump faults.\par
+\b 72081\b0 \tab Link between memory browser, code disassembly and the jump-to column.\par
+\b 72313\b0 \tab Memory browser: Shadow the hex-dump cursor in the text area.\par
+\b 72932\b0 \tab Add ability to append a note to a fault capture at the time of capture.\par
+\b 73593\b0 \tab Notify if pager fails.\par
+\b 81839\b0 \tab Source support for Borland C/C++ for OS/2.\par
+\b 83233\b0 \tab Alter product licensing name from 'fxworkbench' to 'fxos2view' to avoid U/X conflict.\par
+\b 89050\b0 \tab New meta-symbols for templates: $Env:xxx$ (MarineMidland).\par
+\b 89281\b0 \tab Better way to find the hook point in OS2KRNL (Bell-Sygma).\par
+\b 89475\b0 \tab FMDCE: Build a table of all shared named semaphores during capture (Alcatel).\par
+\b 93572\b0 \tab Clear diagnosis of stack corruption where possible.\par
+\b 95174\b0 \tab Need to enlarge the customer support contact list for international clients.\par
+\b 95283\b0 \tab Need a way to abort capture from the first user exit (a REXX interface?).\par
+\b 96012\b0 \tab FM: Provide a 'view screen' or 'view notes' option to the file context menu (MarineMidland).\par
+\b 97325\b0 \tab FXHOOKIT/FMDCE/FE: Capture and display recent module load/unload activity.\par
+\par
+\ul Other Enhancements\ul0 \par
+\'04  Source support for Watcom C/C++ for OS/2.\par
+\'04  Source support for GNU C/C++ for OS/2.\par
+\'04  IBM SmallTalk support (both older and VisualAge versions).\par
+\'04  IBM Visual Age for COBOL support.\par
+\'04  Easel support (this appears to be a variant of SmallTalk).\par
+\'04  REXX support (capturing exceptions).\par
+\'04  INSTALLR: Fix the installation size estimates.\par
+\'04  INSTALLR: Option to not delete faults.\par
+\'04  INSTALLR: Option to completely remove system INI information.\par
+\'04  INSTALLR: Configure Messenger.\par
+\'04  INSTALLR: Option to load agent via RUN=.\par
+\'04  QWHERE: Examine DLL export tables for symbols.\par
+\'04  QWHERE: Convert MAP files to SYM files if necessary.\par
+\'04  QWHERE: Accept MAP files with /LINENUMBER option as line number table source.\par
+\'04  QWHERE: Needs to properly deal with executables with \i only\i0  line number info, no debug.\par
+\'04  DUMPMGT: Add NodeName, OS, Desc, Status, Lock to profile.\par
+\'04  Dump Management stats/analysis/reports.\par
+\'04  Reorganize the Fault Explorer interface.\par
+\'04  Capture recent keyboard & mouse events.  \i Capture is done, presentation remains.\i0 \par
+\'04  Loop Agent.\par
+\'04  Lockup Agent.\par
+\'04  Ring Zero trap detection and analysis.\par
+\'04  Capture OS/2 error codes (as opposed to faults).\par
+\'04  REXX interface similar to that being implemented for FX for CICS 4.1.\par
+\'04  Keep all '.his' files in the SYSTEM directory.\par
+\'04  FE: Include the system SYM path in the initial symbol path list.\par
+\'04  FE: Enhance hypertext viewer to handle colors, fonts, etc.\par
+\'04  FE: Recursive symbol paths.\par
+\'04  FE: Interpret \i tib2_ulpri, pib_flstatus, pib_ultype\i0 .\par
+\'04  FE: Replace ProgramInfo/Registers... with Register Summary (Chris Jokinen).\par
+\'04  FE: Add standard toolbar to screen bitmap viewer.\par
+\'04  FE: Don't show modules that are not in the process context.\par
+\'04  FE: Show 16-bit code/data segment selectors in their respective tables.\par
+\'04  FM: Path/Symbol dialog should remember its history.\par
+\'04  FM: Filter file list.\par
+\'04  FMDCE: Capture system window heirarchy.\par
+\'04  FACFG/FMDCE: Use default capture rules if no rules can be found.\par
+\'04  FACFG: Edit exclude/include list on a per-rule basis.\par
+\'04  FXLN: Configurable fonts/sizes/colors.\par
+\'04  FXDIRMNT: Build the target directory if none is specified, or create it if it doesn't exist.\par
+\'04  FXMODX: Interpret all debug information in all formats.\par
+\'04  FXRMVIEW: Rework the parser to use YACC.\par
+\'04  FXHOOK: Capture keyboard/mouse activity in text-mode sessions.\par
+\'04  DEPEND: Process the \i dlginclude\i0  & \i rcinclude\i0  commands of RC files.\par
+\'04  DEPEND: Process the BITMAP, ICON and POINTER statements of RC files.\par
+\'04  DEPEND: Process the &artwork. operator of IPF files.\par
+\'04  DEPEND: Use YACC/LEX parser?\par
+\'04  DEPEND: Allow for build of object in the current directory from source in another.\par
+
+}

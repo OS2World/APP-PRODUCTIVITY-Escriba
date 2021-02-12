@@ -1,0 +1,8 @@
+;
+;       HTML_NLD: HTML Import/Export Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'HTML_NLD: HTML Import/Export Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

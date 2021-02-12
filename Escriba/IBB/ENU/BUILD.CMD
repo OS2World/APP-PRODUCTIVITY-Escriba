@@ -1,0 +1,172 @@
+/* Build Escriba Package */
+Call rxfuncadd sysloadfuncs, rexxutil, sysloadfuncs
+Call sysloadfuncs
+
+'@Echo Off'
+
+Say "Do you wish to build the diskette images? (Y/N)"
+Parse Upper Pull YesNo
+
+If YesNo = "Y" Then Do
+   Do DisketteNumber = 1 to 3
+      Say "Insert diskette" DisketteNumber "and press <ENTER>."
+      Parse Pull Dummy
+      'Format A: /ONCE /V:ESCRIBA'DisketteNumber' /Q'
+      ok = ( rc = 0 )
+      If ( ok = 0 ) Then Do
+         'Format A: /ONCE /V:ESCRIBA'DisketteNumber
+         ok = ( rc = 0 )
+         End
+      If ( ok = 0 ) Then Do
+         Say "ERROR: Unable to format diskette."
+         Exit
+         End
+      End
+   Say "Insert diskette 1 and press <ENTER>."
+   Parse Pull Dummy
+   End
+
+'SET SOURCEPATH1=\PROJECTS\ESCRIBA'
+'SET SOURCEPATH2=\PROJECTS\ISPELLER'
+'SET SOURCEPATH3=\PROJECTS\DICTIONARIES'
+
+'Call BldRC'
+'Call BldInst'
+
+'Copy %SOURCEPATH1%\ESCRIBA.EXE'
+'Copy %SOURCEPATH1%\ESCRIBA.ICO'
+'Copy %SOURCEPATH1%\RUNTIME.DLL'
+'Copy %SOURCEPATH1%\ESC_CRT.DLL'
+'Copy %SOURCEPATH1%\DEUTSCH.DOC'
+'Copy %SOURCEPATH1%\DEUTSCH.DLL'
+'Copy %SOURCEPATH1%\DEUTSCH.HLP'
+'Copy %SOURCEPATH1%\ENGLISH.DOC'
+'Copy %SOURCEPATH1%\ENGLISH.DLL'
+'Copy %SOURCEPATH1%\ENGLISH.HLP'
+'Copy %SOURCEPATH1%\ESPANOL.DOC'
+'Copy %SOURCEPATH1%\ESPANOL.DLL'
+'Copy %SOURCEPATH1%\ESPANOL.HLP'
+'Copy %SOURCEPATH1%\FRANCAIS.DOC'
+'Copy %SOURCEPATH1%\FRANCAIS.DLL'
+'Copy %SOURCEPATH1%\FRANCAIS.HLP'
+'Copy %SOURCEPATH1%\NDRLANDS.DOC'
+'Copy %SOURCEPATH1%\NDRLANDS.DLL'
+'Copy %SOURCEPATH1%\NDRLANDS.HLP'
+'Copy %SOURCEPATH1%\CHINESE.DLL'
+'Copy %SOURCEPATH1%\CHINESE.HLP'
+'Copy %SOURCEPATH1%\JAPANESE.DLL'
+'Copy %SOURCEPATH1%\JAPANESE.HLP'
+'Copy %SOURCEPATH1%\BMP.DLL'
+'Copy %SOURCEPATH1%\GIF.DLL'
+'Copy %SOURCEPATH1%\HTML.DLL'
+'Copy %SOURCEPATH1%\JPEG.DLL'
+'Copy %SOURCEPATH1%\PCX.DLL'
+'Copy %SOURCEPATH1%\PTEXT.DLL'
+'Copy %SOURCEPATH1%\RTF.DLL'
+'Copy %SOURCEPATH1%\TIFF.DLL'
+'Copy %SOURCEPATH1%\*_DEU.DLL'
+'Copy %SOURCEPATH1%\*_DEU.HLP'
+'Copy %SOURCEPATH1%\*_ENU.DLL'
+'Copy %SOURCEPATH1%\*_ENU.HLP'
+'Copy %SOURCEPATH1%\*_ESP.DLL'
+'Copy %SOURCEPATH1%\*_ESP.HLP'
+'Copy %SOURCEPATH1%\*_FRA.DLL'
+'Copy %SOURCEPATH1%\*_FRA.HLP'
+'Copy %SOURCEPATH1%\*_NLD.DLL'
+'Copy %SOURCEPATH1%\*_NLD.HLP'
+'Copy %SOURCEPATH1%\*_CHT.DLL'
+'Copy %SOURCEPATH1%\*_CHT.HLP'
+'Copy %SOURCEPATH1%\*_JPN.DLL'
+'Copy %SOURCEPATH1%\*_JPN.HLP'
+'Copy %SOURCEPATH1%\HLP2INF.EXE'
+'Copy %SOURCEPATH2%\ISPELLER.DLL'
+'Copy %SOURCEPATH2%\BUILDHASH.EXE BUILDHAS.EXE'
+'Copy %SOURCEPATH2%\*_DEU.DLL'
+'Copy %SOURCEPATH2%\*_DEU.HLP'
+'Copy %SOURCEPATH2%\*_ENU.DLL'
+'Copy %SOURCEPATH2%\*_ENU.HLP'
+'Copy %SOURCEPATH2%\*_ESP.DLL'
+'Copy %SOURCEPATH2%\*_ESP.HLP'
+'Copy %SOURCEPATH2%\*_FRA.DLL'
+'Copy %SOURCEPATH2%\*_FRA.HLP'
+'Copy %SOURCEPATH2%\*_NLD.DLL'
+'Copy %SOURCEPATH2%\*_NLD.HLP'
+'Copy %SOURCEPATH2%\*_CHT.DLL'
+'Copy %SOURCEPATH2%\*_CHT.HLP'
+'Copy %SOURCEPATH2%\*_JPN.DLL'
+'Copy %SOURCEPATH2%\*_JPN.HLP'
+'Copy %SOURCEPATH3%\*.AFF'
+'Copy %SOURCEPATH3%\*.DIC'
+'Copy %SOURCEPATH1%\FILE_ID.DIZ PKG'
+
+'Copy Escriba.ICF PKG'
+'Copy Escriba.DSC PKG'
+'Copy Escriba.PKG PKG'
+'Copy Escriba.RSP PKG'
+'Copy INSTALL.EXE PKG'
+'Copy INSTALL.IN_ PKG'
+'Copy EPFISINC.PKG PKG'
+'Copy EPFIHELP.INF PKG'
+'Copy MAKDISKS.CMD PKG'
+
+If YesNo = "Y" Then Do
+   'Copy Escriba.ICF A: /v'
+   'Copy Escriba.DSC A: /v'
+   'Copy Escriba.PKG A: /v'
+   'Copy Escriba.RSP A: /v'
+   'Copy INSTALL.EXE A: /v'
+   'Copy INSTALL.IN_ A: /v'
+   'Copy EPFISINC.PKG A: /v'
+   'Copy EPFIHELP.INF A: /v'
+   End
+
+'MakePkg ESCRIBA.PKG ESCRI_CD.PKG'
+'MakePkg EPFISINC.PKG EPFI_CD.PKG'
+
+'Rename EPFISINC.PKG EPFISINC.BAK'
+'Rename EPFI_CD.PKG EPFISINC.PKG'
+'DiskGen /U DRIVE ESCRI_CD.PKG %SOURCEPATH1%\IBB\ENU\PKG %SOURCEPATH1%\IBB\ENU'
+'Copy ESCRI_CD.GEN PKG\ESCRIBA.PKG'
+'Copy EPFISINC.GEN PKG\EPFISINC.PKG'
+'Rename EPFISINC.PKG EPFI_CD.PKG'
+'Rename EPFISINC.BAK EPFISINC.PKG'
+
+If YesNo = "Y" Then Do
+
+   'DISKGEN /U DRIVE ESCRIBA.PKG A: %SOURCEPATH1%\IBB\ENU'
+   Say "Insert diskette 1 and press <ENTER>."
+   Parse Pull Dummy
+   'Copy Escriba.GEN A:\ESCRIBA.PKG'
+   'Copy EPFISINC.GEN A:\EPFISINC.PKG'
+
+   Do DisketteNumber = 1 to 3
+      Say "Insert diskette" DisketteNumber "and press <ENTER>."
+      Parse Pull Dummy
+      'MAKEDSKF A: PKG\DISKET'DisketteNumber'.DSK'
+      End
+
+   End
+
+Cleanup:
+'Erase ESCRI_CD.PKG EPFI_CD.PKG'
+'Erase *.GEN'
+'Erase ESCRIBA.EXE ESCRIBA.ICO RUNTIME.DLL ESC_CRT.DLL HLP2INF.EXE'
+'Erase DEUTSCH.DOC DEUTSCH.DLL DEUTSCH.HLP'
+'Erase ENGLISH.DOC ENGLISH.DLL ENGLISH.HLP'
+'Erase ESPANOL.DOC ESPANOL.DLL ESPANOL.HLP'
+'Erase FRANCAIS.DOC FRANCAIS.DLL FRANCAIS.HLP'
+'Erase NDRLANDS.DOC NDRLANDS.DLL NDRLANDS.HLP'
+'Erase BMP.DLL GIF.DLL HTML.DLL JPEG.DLL PCX.DLL PTEXT.DLL RTF.DLL TIFF.DLL'
+'Erase ISPELLER.DLL BUILDHAS.EXE'
+'Erase *_DEU.DLL *_DEU.HLP'
+'Erase *_ENU.DLL *_ENU.HLP'
+'Erase *_ESP.DLL *_ESP.HLP'
+'Erase *_FRA.DLL *_FRA.HLP'
+'Erase *_NLD.DLL *_NLD.HLP'
+'Erase *_CHT.DLL *_CHT.HLP'
+'Erase *_JPN.DLL *_JPN.HLP'
+'Erase *.AFF *.DIC'
+'Erase INSTALL.IN_'
+'Erase IIRC.RES'
+
+Exit

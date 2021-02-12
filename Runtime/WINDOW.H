@@ -89,6 +89,8 @@ class Window {
       void Invalidate ( ) ;
       void Update ( ) ;
 
+      void Destroy ( ) ;
+
       void Reposition ( int x, int y, int cx, int cy, PositionClass State ) ;
       void Show ( ) ;
       void Hide ( ) ;
@@ -163,6 +165,8 @@ class SubclassedWindow {
       virtual ~SubclassedWindow ( ) ;
 
       void Set_DebugMessages ( BOOL Flag ) { DebugMessages = Flag ; MessageIndent = 0 ; }
+      void Enable ( int Flag = TRUE ) { WinEnableWindow ( Handle, Flag ) ; }
+      void Disable ( ) { WinEnableWindow ( Handle, FALSE ) ; }
 
       virtual MRESULT MessageProcessor ( HWND hwnd, MESG msg, MPARAM1 mp1, MPARAM2 mp2 ) ;
 } ;
@@ -209,6 +213,8 @@ class Slider : public Window {
    public:
       Slider ( HWND control, HWND entryfield, ULONG Level, ULONG minlevel, ULONG maxlevel, int divisor, char *suffix ) ;
       Slider ( HWND control, HWND entryfield ) ;
+      Slider ( HWND control, ULONG Level, ULONG minlevel, ULONG maxlevel, int divisor, char *suffix ) ;
+      Slider ( HWND control ) ;
       virtual ~Slider ( ) ;
       void Set ( ULONG Level, BOOL SetText=TRUE ) ;
       ULONG Read ( ) ;
@@ -225,11 +231,11 @@ class ListBox : public SubclassedWindow {
       void Insert ( char *String, int Where=-1 ) ;
       void Delete ( int Where ) ;
       void SelectItem ( int Index ) ;
+      int QueryCount ( ) ;
       int QuerySelection ( int Previous = LIT_FIRST ) ;
       void SetTopIndex ( int Index ) ;
       int QueryTopIndex ( ) ;
       void QueryItemText ( int Index, char *Text, int TextSize ) ;
-      void Enable ( int Flag ) ;
 } ;
 
 #endif 

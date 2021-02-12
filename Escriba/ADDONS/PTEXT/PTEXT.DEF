@@ -1,0 +1,25 @@
+;
+;       PTEXT: Plain Text Import/Export Module for Escriba
+;
+LIBRARY INITINSTANCE TERMINSTANCE
+DESCRIPTION 'PTEXT: Plain Text Import/Export Module for Escriba'
+PROTMODE
+CODE EXECUTEONLY NOIOPL NONCONFORMING
+DATA MULTIPLE READWRITE NONSHARED LOADONCALL
+EXPORTS
+
+  Identify                              @00001
+  SetLanguage                           @00002
+  ProductName                           @00003
+  ProductVersion                        @00004
+  ProductInformation                    @00005
+  ProductConfigure                      @00006
+
+  QueryFileType                         @10001
+  QueryWildcard                         @10002
+  Filter                                @10003
+  Verify                                @10004
+  Import                                @10005
+  Export                                @10006
+
+

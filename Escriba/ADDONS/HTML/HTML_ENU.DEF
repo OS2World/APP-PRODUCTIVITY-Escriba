@@ -1,0 +1,8 @@
+;
+;       HTML_ENU: HTML Import/Export Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'HTML_ENU: HTML Import/Export Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

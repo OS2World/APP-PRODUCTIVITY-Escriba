@@ -1,0 +1,8 @@
+;
+;       BMP__ENU: Bitmap Graphic Import Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'BMP__ENU: Bitmap Graphic Import Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

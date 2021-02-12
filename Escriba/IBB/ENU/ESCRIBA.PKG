@@ -1,0 +1,2002 @@
+*---------------------------------------------------------------------
+*  Environment.                         
+*---------------------------------------------------------------------
+
+* Service Levels so far:
+*
+*       000001 - Escriba 0.96d - Shipped to Kris Steenhaut
+*       000002 - Escriba 0.97  - Shipped to Mark Dodel
+*       000003 - Escriba 0.97
+*
+
+SERVICELEVEL
+   LEVEL = '000003'
+
+DISK
+   NAME = 'Escriba - Diskette 1',
+   VOLUME = 'ESCRIBA1'
+
+DISK
+   NAME = 'Escriba - Diskette 2',
+   VOLUME = 'ESCRIBA2'
+
+DISK
+   NAME = 'Escriba - Diskette 3',
+   VOLUME = 'ESCRIBA3'
+
+DISK
+   NAME = 'Escriba - Diskette 4',
+   VOLUME = 'ESCRIBA4'
+
+PATH
+   FILE = 'C:/ESCRIBA',
+   FILELABEL = 'Installation directory'
+
+FILE
+   EXITWHEN = 'ALWAYS',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'SETVAR FOLDERID=ESCRIBAF'
+
+*---------------------------------------------------------------------
+*  Hidden component: Initial Setup 
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'INSFIRST',
+   ID = 'INSFIRST',
+   DISPLAY = 'NO',
+   SIZE = '10000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'DRIVE:ESCRIBA.ICF',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESCRIBA.ICF',
+   DATE = '970917',
+   TIME = '0750',
+   SIZE = '2380'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'SETVAR CATALOG=ESCRIBA.ICF'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   SOURCE = 'DRIVE:ESCRIBA.DSC',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESCRIBA.DSC',
+   DATE = '970917',
+   TIME = '0750',
+   SIZE = '770'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESCRIBA.IC_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESCRIBA.ICO',
+   DATE = '940720',
+   TIME = '0805',
+   SIZE = '3968'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPFolder "Escriba" <WP_DESKTOP> R "OBJECTID=<%FOLDERID%>;ICONFILE=%EPFIFILEDIR%//ESCRIBA.ICO;ALWAYSSORT=YES;"'
+
+*---------------------------------------------------------------------
+*  Component: Base Product
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Base Product',
+   ID = 'BASE',
+   REQUIRES = 'INSFIRST DELLAST',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This package includes the word processor itself, its runtime library and the basic English language module.',
+   SIZE = '1320000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'ADDINI "ESCRIBA" "INIPATH" "%EPFIFILEDIR%"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEINI "ESCRIBA"'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'ADDPROFILE %EPFIFILEDIR%//ESCRIBA.INI "ESCRIBA" "Language" "English"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ESCRIBA.INI'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESCRIBA.EX_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESCRIBA.EXE',
+   DATE = '980110',
+   TIME = '2138',
+   SIZE = '686902'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RUNTIME.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RUNTIME.DLL',
+   DATE = '971125',
+   TIME = '1639',
+   SIZE = '256450'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESC_CRT.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESC_CRT.DLL',
+   DATE = '971125',
+   TIME = '1639',
+   SIZE = '256450'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ENGLISH.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ENGLISH.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '39595'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ENGLISH.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ENGLISH.HLP',
+   DATE = '980101',
+   TIME = '1811',
+   SIZE = '263314'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ENGLISH.DO_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ENGLISH.DOC',
+   DATE = '980110',
+   TIME = '2016',
+   SIZE = '11335'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTEXT.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTEXT.DLL',
+   DATE = '971125',
+   TIME = '1648',
+   SIZE = '25802'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_ENU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2563'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_ENU.HLP',
+   DATE = '971124',
+   TIME = '1848',
+   SIZE = '4740'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Escriba 0.97" <%FOLDERID%> R "MINWIN=DESKTOP;PROGTYPE=PM;EXENAME=%EPFIFILEDIR%//ESCRIBA.EXE;STARTUPDIR=%EPFIFILEDIR%;OBJECTID=<ESCRIBA>;NOPRINT=YES;ASSOCTYPE=Escriba,Pluma,Plain Text,Bitmap,GIF,HTML,JPG,Metafile,PCC,PCX,RTF,TIFF;ASSOCFILTER=*.TXT,*.DOC,*.ME,*.BAT,*.CMD,*.MOI,*.BMP,*.GIF,*.HTM,*.HTML,*.JPG,*.JPEG,*.JFI,*.JFIF,*.MET,*.PCC,*.PCX,*.RTF,*.TIF,*.TIFF;"'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Read Me" <%FOLDERID%> R "MINWIN=DESKTOP;PROGTYPE=PM;EXENAME=%EPFIFILEDIR%//ESCRIBA.EXE;STARTUPDIR=%EPFIFILEDIR%;OBJECTID=<ESCRIBAD>;PARAMETERS=ENGLISH.DOC"'
+
+FILE
+   WHEN = 'INSTALL || UPDATE || RESTORE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HLP2INF.EX_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HLP2INF.EXE',
+   DATE = '960113',
+   TIME = '1828',
+   SIZE = '22057'
+
+* The size of this entry should be the same as that of ENGLISH.HLP.
+FILE
+   SIZE = '263314',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c HLP2INF ENGLISH.HLP'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES HLP2INF.EXE'
+
+FILE
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'NO',
+   EXIT = 'CREATEWPSOBJECT WPProgram "Escriba Users Reference" <%FOLDERID%> R "MINWIN=DESKTOP;PROGTYPE=PM;EXENAME=VIEW.EXE;STARTUPDIR=%EPFIFILEDIR%;OBJECTID=<ESCRIBAI>;PARAMETERS=ENGLISH.INF Introduction"'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ESCRIBA.LOG %EPFIFILEDIR%//RUNTIME.LOG %EPFIFILEDIR%//PTEXT.LOG'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ESCRIBA.INI %EPFIFILEDIR%//PTEXT.INI %EPFIFILEDIR%//ENGLISH.INF'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <ESCRIBAI>'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <ESCRIBAD>'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <ESCRIBA>'
+
+*---------------------------------------------------------------------
+*  Component: ISpeller       
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Spell Checker',
+   ID = 'ISPELLER',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component includes the spell checker executables and English texts.',
+   SIZE = '140000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISPELLER.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISPELLER.DLL',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '116089'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__ENU.DLL',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '2767'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__ENU.HLP',
+   DATE = '971124',
+   TIME = '1851',
+   SIZE = '3291'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BUILDHAS.EX_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BUILDHAS.EXE',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '11776'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ISPELLER.LOG %EPFIFILEDIR%//ISPELLER.INI'
+
+*---------------------------------------------------------------------
+*  Component: BMP            
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Bitmap Import Module',
+   ID = 'BMP',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import OS/2 and Window BMP graphics.',
+   SIZE = '20000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP.DLL',
+   DATE = '971125',
+   TIME = '1645',
+   SIZE = '12000'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__ENU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2032'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__ENU.HLP',
+   DATE = '971124',
+   TIME = '1842',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//BMP.LOG %EPFIFILEDIR%//BMP.INI'
+
+*---------------------------------------------------------------------
+*  Component: GIF            
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'GIF Import Module',
+   ID = 'GIF',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import GIF graphics.',
+   SIZE = '20000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF.DLL',
+   DATE = '971125',
+   TIME = '1645',
+   SIZE = '16285'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__ENU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2392'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__ENU.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//GIF.LOG %EPFIFILEDIR%//GIF.INI'
+
+*---------------------------------------------------------------------
+*  Component: HTML           
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'HTML Import/Export Module',
+   ID = 'HTML',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import and export HTML documents.  It is not yet complete.',
+   SIZE = '30000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML.DLL',
+   DATE = '971125',
+   TIME = '1646',
+   SIZE = '26707'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_ENU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2253'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_ENU.HLP',
+   DATE = '971124',
+   TIME = '1844',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//HTML.LOG %EPFIFILEDIR%//HTML.INI'
+
+*---------------------------------------------------------------------
+*  Component: JPEG           
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'JPEG Import Module',
+   ID = 'JPEG',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import JPEG graphics.',
+   SIZE = '60000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG.DLL',
+   DATE = '971125',
+   TIME = '1647',
+   SIZE = '52959'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_ENU.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2254'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_ENU.HLP',
+   DATE = '971124',
+   TIME = '1845',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//JPEG.LOG %EPFIFILEDIR%//JPEG.INI'
+
+*---------------------------------------------------------------------
+*  Component: PCX            
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'PCX Import Module',
+   ID = 'PCX',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import PCX graphics.',
+   SIZE = '20000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX.DLL',
+   DATE = '971125',
+   TIME = '1647',
+   SIZE = '13217'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__ENU.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__ENU.HLP',
+   DATE = '971124',
+   TIME = '1846',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//PCX.LOG %EPFIFILEDIR%//PCX.INI'
+
+*---------------------------------------------------------------------
+*  Component: RTF            
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'RTF Import Module',
+   ID = 'RTF',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import and export Rich Text Format (RTF) documents.  It is not yet complete.',
+   SIZE = '20000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF.DLL',
+   DATE = '971125',
+   TIME = '1647',
+   SIZE = '13217'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__ENU.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__ENU.HLP',
+   DATE = '971124',
+   TIME = '1846',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//RTF.LOG %EPFIFILEDIR%//RTF.INI'
+
+*---------------------------------------------------------------------
+*  Component: TIFF           
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'TIFF Import Module',
+   ID = 'TIFF',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the ability to import TIFF graphics.',
+   SIZE = '150000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF.DLL',
+   DATE = '971125',
+   TIME = '1650',
+   SIZE = '143919'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_ENU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_ENU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2142'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_ENU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_ENU.HLP',
+   DATE = '971124',
+   TIME = '1850',
+   SIZE = '714'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//TIFF.LOG %EPFIFILEDIR%//TIFF.INI'
+
+*---------------------------------------------------------------------
+*  Component: English Dictionary (requires spell checker)
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'English Dictionary',
+   ID = 'ENGLISH',
+   REQUIRES = 'INSFIRST DELLAST ISPELLER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the English spelling rules and dictionary.',
+   SIZE = '390000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ENGLISH.AF_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ENGLISH.AFF',
+   DATE = '951208',
+   TIME = '0758',
+   SIZE = '6832'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ENGLISH.DI_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ENGLISH.DIC',
+   DATE = '950522',
+   TIME = '1254',
+   SIZE = '380752'
+
+* The size of this entry is the size of ENGLISH.HSH.
+FILE
+   SIZE = '826784',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c %EPFIFILEDIR%//BUILDHAS -s %EPFIFILEDIR%//ENGLISH.DIC %EPFIFILEDIR%//ENGLISH.AFF %EPFIFILEDIR%//ENGLISH.HSH'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ENGLISH.HSH %EPFIFILEDIR%//ENGLISH.DIC.cnt %EPFIFILEDIR%//ENGLISH.DIC.sta'
+
+*---------------------------------------------------------------------
+*  Component: German        
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'German Language Support',
+   ID = 'DEU',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides menus and help in German.',
+   SIZE = '360000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DEUTSCH.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'DEUTSCH.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '41050'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DEUTSCH.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'DEUTSCH.HLP',
+   DATE = '980101',
+   TIME = '1811',
+   SIZE = '280084'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__DEU.DLL',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '2815'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__DEU.HLP',
+   DATE = '971124',
+   TIME = '1851',
+   SIZE = '3774'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2032'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__DEU.HLP',
+   DATE = '971124',
+   TIME = '1842',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__DEU.DLL',
+   DATE = '980110',
+   TIME = '2018',
+   SIZE = '2408'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__DEU.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2253'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_DEU.HLP',
+   DATE = '971124',
+   TIME = '1844',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2238'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_DEU.HLP',
+   DATE = '971124',
+   TIME = '1845',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__DEU.HLP',
+   DATE = '971124',
+   TIME = '1846',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_DEU.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2563'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_DEU.HLP',
+   DATE = '971124',
+   TIME = '1848',
+   SIZE = '4740'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2120'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__DEU.HLP',
+   DATE = '971124',
+   TIME = '1846',
+   SIZE = '714'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_DEU.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_DEU.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2142'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_DEU.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_DEU.HLP',
+   DATE = '971124',
+   TIME = '1850',
+   SIZE = '714'
+
+*---------------------------------------------------------------------
+*  Component: German Dictionary (requires spell checker)
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'German Dictionary',
+   ID = 'DEUTSCH',
+   REQUIRES = 'INSFIRST DELLAST ISPELLER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the German spelling rules and dictionary.',
+   SIZE = '1200000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DEUTSCH.AF_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'DEUTSCH.AFF',
+   DATE = '950908',
+   TIME = '1445',
+   SIZE = '34211'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:DEUTSCH.DI_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'DEUTSCH.DIC',
+   DATE = '950908',
+   TIME = '1515',
+   SIZE = '1160191'
+
+* The size of this entry is the size of DEUTSCH.HSH.
+FILE
+   SIZE = '2311304',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c %EPFIFILEDIR%//BUILDHAS -s %EPFIFILEDIR%//DEUTSCH.DIC %EPFIFILEDIR%//DEUTSCH.AFF %EPFIFILEDIR%//DEUTSCH.HSH'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//DEUTSCH.HSH %EPFIFILEDIR%//DEUTSCH.DIC.cnt %EPFIFILEDIR%//DEUTSCH.DIC.sta'
+
+*---------------------------------------------------------------------
+*  Component: Spanish        
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Spanish Language Support',
+   ID = 'ESP',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides menus and help in Spanish.',
+   SIZE = '360000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESPANOL.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESPANOL.DLL',
+   DATE = '980110',
+   TIME = '2017',
+   SIZE = '41611'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESPANOL.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESPANOL.HLP',
+   DATE = '980101',
+   TIME = '1812',
+   SIZE = '278816'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__ESP.DLL',
+   DATE = '980110',
+   TIME = '2020',
+   SIZE = '2879'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__ESP.HLP',
+   DATE = '971124',
+   TIME = '1852',
+   SIZE = '3425'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__ESP.DLL',
+   DATE = '980110',
+   TIME = '2018',
+   SIZE = '2176'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__ESP.HLP',
+   DATE = '971124',
+   TIME = '1842',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2568'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__ESP.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2365'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_ESP.HLP',
+   DATE = '971124',
+   TIME = '1844',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2334'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_ESP.HLP',
+   DATE = '971124',
+   TIME = '1845',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2264'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__ESP.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2723'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_ESP.HLP',
+   DATE = '971124',
+   TIME = '1848',
+   SIZE = '5041'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__ESP.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2264'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__ESP.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '804'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_ESP.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_ESP.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2254'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_ESP.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_ESP.HLP',
+   DATE = '971124',
+   TIME = '1850',
+   SIZE = '804'
+
+*---------------------------------------------------------------------
+*  Component: Spanish Dictionary (requires spell checker)
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Spanish Dictionary',
+   ID = 'ESPANOL',
+   REQUIRES = 'INSFIRST DELLAST ISPELLER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the Spanish spelling rules and dictionary.',
+   SIZE = '190000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESPANOL.AF_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESPANOL.AFF',
+   DATE = '971030',
+   TIME = '1238',
+   SIZE = '89743'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ESPANOL.DI_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ESPANOL.DIC',
+   DATE = '971030',
+   TIME = '1237',
+   SIZE = '96149'
+
+* The size of this entry is the size of ESPANOL.HSH.
+FILE
+   SIZE = '1192704',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c %EPFIFILEDIR%//BUILDHAS -s %EPFIFILEDIR%//ESPANOL.DIC %EPFIFILEDIR%//ESPANOL.AFF %EPFIFILEDIR%//ESPANOL.HSH'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//ESPANOL.HSH %EPFIFILEDIR%//ESPANOL.DIC.cnt %EPFIFILEDIR%//ESPANOL.DIC.sta'
+
+*---------------------------------------------------------------------
+*  Component: French         
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'French Language Support',
+   ID = 'FRA',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides menus and help in French.',
+   SIZE = '360000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:FRANCAIS.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'FRANCAIS.DLL',
+   DATE = '980110',
+   TIME = '2017',
+   SIZE = '41594'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:FRANCAIS.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'FRANCAIS.HLP',
+   DATE = '980101',
+   TIME = '1812',
+   SIZE = '278822'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__FRA.DLL',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '2912'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__FRA.HLP',
+   DATE = '971124',
+   TIME = '1852',
+   SIZE = '3741'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2145'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__FRA.HLP',
+   DATE = '971124',
+   TIME = '1842',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__FRA.DLL',
+   DATE = '980110',
+   TIME = '2018',
+   SIZE = '2521'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__FRA.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2366'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_FRA.HLP',
+   DATE = '971124',
+   TIME = '1844',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2351'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_FRA.HLP',
+   DATE = '971124',
+   TIME = '1845',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2233'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__FRA.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2660'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_FRA.HLP',
+   DATE = '971124',
+   TIME = '1848',
+   SIZE = '4679'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2233'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__FRA.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '733'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_FRA.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_FRA.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2255'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_FRA.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_FRA.HLP',
+   DATE = '971124',
+   TIME = '1850',
+   SIZE = '733'
+
+*---------------------------------------------------------------------
+*  Component: Francais Dictionary (requires spell checker)
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'French Dictionary',
+   ID = 'FRANCAIS',
+   REQUIRES = 'INSFIRST DELLAST ISPELLER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the French spelling rules and dictionary.',
+   SIZE = '610000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:FRANCAIS.AF_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'FRANCAIS.AFF',
+   DATE = '950831',
+   TIME = '1130',
+   SIZE = '22989'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:FRANCAIS.DI_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'FRANCAIS.DIC',
+   DATE = '950831',
+   TIME = '1130',
+   SIZE = '582567'
+
+* The size of this entry is the size of FRANCAIS.HSH.
+FILE
+   SIZE = '1469640',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c %EPFIFILEDIR%//BUILDHAS -s %EPFIFILEDIR%//FRANCAIS.DIC %EPFIFILEDIR%//FRANCAIS.AFF %EPFIFILEDIR%//FRANCAIS.HSH'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//FRANCAIS.HSH %EPFIFILEDIR%//FRANCAIS.DIC.cnt %EPFIFILEDIR%//FRANCAIS.DIC.sta'
+
+*---------------------------------------------------------------------
+*  Component: Dutch          
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Dutch Language Support',
+   ID = 'NLD',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides menus and help in Dutch.',
+   SIZE = '350000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NDRLANDS.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'NDRLANDS.DLL',
+   DATE = '980110',
+   TIME = '2018',
+   SIZE = '40729'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NDRLANDS.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'NDRLANDS.HLP',
+   DATE = '980101',
+   TIME = '1812',
+   SIZE = '269906'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__NLD.DLL',
+   DATE = '980110',
+   TIME = '2022',
+   SIZE = '2786'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:ISP__NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'ISP__NLD.HLP',
+   DATE = '971124',
+   TIME = '1852',
+   SIZE = '3331'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__NLD.DLL',
+   DATE = '980110',
+   TIME = '2018',
+   SIZE = '2067'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:BMP__NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'BMP__NLD.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '730'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__NLD.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2411'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:GIF__NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'GIF__NLD.HLP',
+   DATE = '971124',
+   TIME = '1843',
+   SIZE = '741'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_NLD.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2304'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:HTML_NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'HTML_NLD.HLP',
+   DATE = '971124',
+   TIME = '1844',
+   SIZE = '731'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_NLD.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2241'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JPEG_NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JPEG_NLD.HLP',
+   DATE = '971124',
+   TIME = '1845',
+   SIZE = '730'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__NLD.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2139'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PCX__NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PCX__NLD.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '739'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_NLD.DLL',
+   DATE = '980110',
+   TIME = '2019',
+   SIZE = '2662'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:PTXT_NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'PTXT_NLD.HLP',
+   DATE = '971124',
+   TIME = '1848',
+   SIZE = '4881'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__NLD.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2139'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:RTF__NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'RTF__NLD.HLP',
+   DATE = '971124',
+   TIME = '1847',
+   SIZE = '739'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_NLD.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_NLD.DLL',
+   DATE = '980110',
+   TIME = '2021',
+   SIZE = '2161'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:TIFF_NLD.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'TIFF_NLD.HLP',
+   DATE = '971124',
+   TIME = '1850',
+   SIZE = '739'
+
+*---------------------------------------------------------------------
+*  Component: Dutch Dictionary (requires spell checker)
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Dutch Dictionary',
+   ID = 'NDRLANDS',
+   REQUIRES = 'INSFIRST DELLAST ISPELLER',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides the Dutch spelling rules and dictionary.',
+   SIZE = '2090000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NDRLANDS.AF_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'NDRLANDS.AFF',
+   DATE = '950908',
+   TIME = '1436',
+   SIZE = '3490'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:NDRLANDS.DI_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'NDRLANDS.DIC',
+   DATE = '950908',
+   TIME = '1039',
+   SIZE = '2085346'
+
+* The size of this entry is the size of NDRLANDS.HSH.
+FILE
+   SIZE = '4790376',
+   EXITWHEN = 'INSTALL || UPDATE || RESTORE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c %EPFIFILEDIR%//BUILDHAS -s %EPFIFILEDIR%//NDRLANDS.DIC %EPFIFILEDIR%//NDRLANDS.AFF %EPFIFILEDIR%//NDRLANDS.HSH'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEFILES %EPFIFILEDIR%//NDRLANDS.HSH %EPFIFILEDIR%//NDRLANDS.DIC.cnt %EPFIFILEDIR%//NDRLANDS.DIC.sta'
+
+*---------------------------------------------------------------------
+*  Component: Traditional Chinese
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Traditional Chinese Language Support',
+   ID = 'CHT',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides codepage support for Traditional Chinese.',
+   SIZE = '360000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CHINESE.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'CHINESE.DLL',
+   DATE = '980110',
+   TIME = '2017',
+   SIZE = '41594'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:CHINESE.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'CHINESE.HLP',
+   DATE = '980101',
+   TIME = '1812',
+   SIZE = '278822'
+
+*---------------------------------------------------------------------
+*  Component: Japanese
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Japanese Language Support',
+   ID = 'JPN',
+   REQUIRES = 'INSFIRST DELLAST BASE',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides codepage support for Japanese.',
+   SIZE = '360000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JAPANESE.DL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JAPANESE.DLL',
+   DATE = '980110',
+   TIME = '2017',
+   SIZE = '41594'
+
+FILE
+   WHEN = 'OUTOFDATE',
+   REPLACEINUSE = 'I U D R',
+   UNPACK = 'YES',
+   SOURCE = 'DRIVE:JAPANESE.HL_',
+   VOLUME = 'ESCRIBA1',
+   PWS = 'JAPANESE.HLP',
+   DATE = '980101',
+   TIME = '1812',
+   SIZE = '278822'
+
+*---------------------------------------------------------------------
+*  Component: Installation Utility
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'Installation Utility',
+   ID = 'INSTALLR',
+   REQUIRES = 'INSFIRST DELLAST',
+   DISPLAY = 'YES',
+   DESCRIPTION = 'This component provides for enhanced management of software revisions, including the ability to uninstall without having the original media and the ability to restore previous versions (if they were backed up originally).',
+   SIZE = '1140000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+INCLUDE
+   NAME = 'DRIVE:EPFISINC.PKG'
+
+*---------------------------------------------------------------------
+*  Hidden component: Final cleanup.
+*---------------------------------------------------------------------
+
+COMPONENT
+   NAME = 'DELLAST',
+   ID = 'DELLAST',
+   DISPLAY = 'NO',
+   SIZE = '10000',
+   SHARED = 'NO',
+   DELETE = 'YES'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'EXEC bg tw CMD.EXE /c RMDIR %EPFIFILEDIR%'
+
+FILE
+   EXITWHEN = 'DELETE',
+   EXITIGNOREERR = 'YES',
+   EXIT = 'DELETEWPSOBJECT <%FOLDERID%>'
+

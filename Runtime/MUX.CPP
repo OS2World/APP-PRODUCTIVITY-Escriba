@@ -26,7 +26,7 @@ class MultiplexEvent {
 
    public:
       MultiplexEvent ( char *tag, char *Name, int count, HEV Handles[] ) : Tag(tag), DebugFlag(FALSE), hmux(0), Count(count), CreatedSemaphores(FALSE) {
-         Semaphores = PSEMRECORD ( malloc ( Count * sizeof(SEMRECORD) ) ) ;
+         Semaphores = new SEMRECORD [ Count ] ;
          if ( Semaphores == NULL )
             return ;
          for ( int i=0; i<Count; i++ ) {
@@ -45,7 +45,7 @@ class MultiplexEvent {
       } /* endmethod */
 
       MultiplexEvent ( char *tag, char *Name, int count, char *Names[], int Attrs[] ) : Tag(tag), DebugFlag(FALSE), hmux(0), Count(count), CreatedSemaphores(TRUE) {
-         Semaphores = PSEMRECORD ( malloc ( Count * sizeof(SEMRECORD) ) ) ;
+         Semaphores = new SEMRECORD [ Count ] ;
          if ( Semaphores == NULL )
             return ;
          for ( int i=0; i<Count; i++ ) {
@@ -72,7 +72,7 @@ class MultiplexEvent {
       } /* endmethod */
 
       MultiplexEvent ( char *tag, char *Name, int count ) : Tag(tag), DebugFlag(FALSE), hmux(0), Count(count), CreatedSemaphores(TRUE) {
-         Semaphores = PSEMRECORD ( malloc ( Count * sizeof(SEMRECORD) ) ) ;
+         Semaphores = new SEMRECORD [ Count ] ;
          if ( Semaphores == NULL )
             return ;
          for ( int i=0; i<Count; i++ ) {
@@ -100,10 +100,12 @@ class MultiplexEvent {
       ~MultiplexEvent ( ) {
          if ( hmux ) {
             DosCloseMuxWaitSem ( hmux ) ;
-            if ( CreatedSemaphores ) 
-               for ( int i=0; i<Count; i++ ) 
-                  DosCloseEventSem ( HEV(Semaphores[i].hsemCur) ) ;
-            free ( Semaphores ) ;
+            if ( Semaphores ) {
+               if ( CreatedSemaphores ) 
+                  for ( int i=0; i<Count; i++ ) 
+                     DosCloseEventSem ( HEV(Semaphores[i].hsemCur) ) ;
+               delete [] Semaphores, Semaphores = 0 ;
+            } /* endif */
          } /* endif */
       } /* endmethod */
 

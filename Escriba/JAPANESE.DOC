@@ -1,0 +1,263 @@
+        Escriba Word Processor for OS/2 Presentation Manager
+       ======================================================
+
+  This program provides a What You See Is What You Get (WYSIWYG) word 
+processor for the OS/2 Presentation Manager interface.  It does not attempt
+to go head-to-head with the large professional word processors available 
+for OS/2 PM or Windows, but rather tries to provide a more modest set of 
+functions.  Normal text formatting is provided for, plus the program has 
+the ability to handle embedded graphics.  All installed ATM fonts are 
+supported, in all the native formats and in a wide range of sizes.  Printer
+support is strictly through the OS/2 PM interface, providing output on any 
+printer supported by that interface, including FAX and plotter devices.
+
+
+        Software Registration
+        ---------------------
+
+  This program is shareware.  Feel free to distribute unmodified copies of 
+the program to anyone interested.  If you find the program useful, and 
+decide to keep the program for use, then you must pay for it.  The price is
+US$30.00, and there are several ways to pay it:
+
+        Check or Money Order: If you wish to pay with a personal check or 
+money order, please send your payment, together with your name, your 
+mailing address, the revision number and date of your current copy of 
+Escriba, to:
+
+                Escriba Registrations
+                c/o Rick Papo
+                38290 Avondale
+                Westland, MI 48186-3830
+                USA
+
+        VISA/MasterCard/Discover: If you wish to use a credit-card to pay 
+for your registration, the company BMT Micro is providing this service for 
+Escriba. They may be reached by telephone at (800) 414-4268 (USA only) or 
+at (910) 791-7052, by FAX at (910) 350-2937, or through their BBS at (910) 
+350-8061.  The voice lines are open from 8am to 8pm (EST,-5 GMT).  The 
+other numbers function 24 hours per day, 7 days per week.  In addition, 
+their mailing address is:
+
+                BMT Micro
+                452 Horn Rd
+                Wilmington, NC 28412-2411
+                USA
+
+  NOTE: If you reside in any of the republics which were formerly of the 
+Soviet Union or of the Warsaw Pact, you may register for $5 (no credit 
+cards, please).
+
+  Upon receiving your registration, you will be sent a receipt and the 
+latest revision of the word processor on diskette.  You will be sent one 
+more copy on diskette later, when the next major revision is released. 
+Printed documentation is not yet available, but once it is, all registered 
+users of the word processor will receive a copy.  If you would like later 
+upgrades on diskette, they will cost $5 U.S. dollars.
+
+
+        Questions and Bug Reporting
+        ---------------------------
+
+  Should you have problems with this program, the author Rick Papo can be 
+reached by one of the following means:
+
+    Internet        rpapo@msen.com
+    Mail            Rick Papo, 38290 Avondale, Westland, MI 48186-3830, USA
+    Telephone       USA (734) 326-8547
+
+  First priority is given to queries and problems of registered users, but 
+an attempt is made to deal with all messages that arrive.  Electronic mail 
+is checked every day.
+
+  In all correspondence, please provide the revision number of Escriba that
+you are using and referring to.
+
+
+        Installation
+        ------------
+
+  To install Escriba, you must execute the command-file 'ENGLISH'.  You 
+will be asked in what directory you wish to install the program.  Please 
+enter the full path of that directory, including the drive specifier.  If 
+the directory does not exist, it will be created. Once you have entered the
+directory name, the installation will complete. The program's EXE, DLL, HLP
+and DOC files will be copied to the target directory.  A folder will be 
+created on your desktop and a program object will be placed therein.  In 
+addition, an object to represent the DOC file will be placed there.  Once 
+installation is complete, feel free to move the objects wherever you wish.
+
+  If by chance you delete any of the objects, simply repeat the 
+installation procedure.  The program settings will not be lost.
+
+
+        Translations
+        ------------
+
+  Escriba is built to be translatable into other languages easily.  The 
+Spanish, French, German and Dutch versions have already been translated.  
+If you wish to translate the program to your native language, send me a 
+note to my Internet ID (rpapo@msen.com) or to my mailing address. I will 
+send you the texts that need to be translated (the help file, the 
+documentation file, the installation script and the text resource 
+definitions). Once I have the translated material back, I will add the new 
+language to the next release of the word processor.  Keep in mind, however,
+that I will always be asking you for updates as the program gets revised 
+and enhanced.  In return for your help, your registration is free and you 
+will get free upgrades as long as you continue to translate them.
+
+  The translators responsible for the existing versions are:
+
+    Spanish   Rick Papo & Xavier Caballe   Internet: xcaballe@servicom.es
+    German    Frank Mersmann               Internet: fme@zfn.uni-bremen.de
+    French    Rapha‰l Vanney               Internet: rvanney@ibm.net
+    Dutch     Jaap van Veen                CompuServe: 103262,1047
+
+
+        Acknowledgements
+        ----------------
+
+  Thanks to the following individuals for their help in testing, for their 
+suggestions during development, and for their support:
+
+        Wayne Blankenbeckler    (Sam's Books,Indiana,USA)
+        Harry Bush              (Riga,Latvia)
+        Xavier Caballe          (Barcelona,Spain)
+        Bjorn Fahller           (Sweden)
+        Per Gjerlov             (Denmark)
+        Dr. Herbert Klaeren     (Tuebingen,Germany)
+        Frank Mersmann          (Bremen,Germany)
+        Joe Negron              (Brooklyn,New York,USA)
+        Marvin Nipper           (Golden,Colorado,USA)
+        Walt Rutka              (Southfield,Michigan,USA)
+        Leland Sheppard         (California,USA)
+        Erwin Vackier           (Belgium)
+        Jaap van Veen           (Uithoorn,The Netherlands)
+        Rapha‰l Vanney          (Courbevoie,France)
+        Bryan Walker            (Tennessee,USA)
+        Ernst Winter            (Munich,Germany)
+
+
+        Change History
+        --------------
+
+13 June 1995 - Revision 0.90 - Beta
+  Released under new name.  Formerly known as Pluma, but Pluma Software 
+    complained.
+  Revised to accept large files.
+  Added Undo and Redo.
+  Added Insert UPC, Insert Page Count, Insert Page Number.
+  Added Paste From BMP, PCX, GIF and MET files.
+  Added text search/replace commands.
+  Added outline font line width, fill color and fill type menus.
+  Added Bitmap Background, No Text Aside and Half-tone commands.
+
+10 July 1995 - Revision 0.91 - Beta
+  Added connection to ISPELLER spell checker.
+
+13 September 1995 - Revision 0.92 - Beta
+  Converted Justification menu to use bitmaps instead of text.
+  Fixed error in loading compressed BMP files (Vanney).
+  Fixed problem with ruler paint speed (Vanney).
+  Altered processing of Date Format string to insure a uniform format
+    across languages (Vanney).
+  Ctrl+Z now functions as a Zoom All toggle (Winter).
+  Document window now cooperates with Font Palette.
+  National Language Support added for decimal number formatting and editing
+    (Vanney).
+  French translation updated with Escriba enhancements (Vanney).
+  Dutch translation updated with Escriba enhancements (van Veen).
+  German translation updated with Escriba enhancements (Mersmann).
+  Spanish translation updated with Escriba enhancements.
+  Added 'Version' function to document preface to allow for format
+    variation.
+  Added 'Line End' and 'Line Join' attribute menus.
+  Fixed various bugs in the spell checker.
+  Added French, German and Dutch dictionaries & affix files to spell
+    checker.
+
+26 September 1995 - Revision 0.93 - Beta
+  Added option to General Preferences: Print Reverse.
+  Added option to Document Preferences: Codepage.
+  Fixed bug with Ctrl+Z used with 100% zoom preference.
+  Added Change & Find and Change All buttons to Search dialog.
+
+24 November 1995 - Revision 0.94 - Beta
+  Performance revision.
+  Added ability to include code-39 bar-codes in a document.
+  Added support for DBCS systems (Chinese & Japanese).
+  File Open dialog now shows Pluma files as if they were Escriba files.
+
+27 December 1995 - Revision 0.95 - Beta (for OS/2 e-zine! inquiries and
+    initial WWW release)
+  Fixed shutdown bug in 0.94.
+  Reworked Document Defaults dialog as a notebook.
+  Added date functions for 2-digit year, short month, short weekday.
+  Converted product information menu option into a conditional 
+    menu including add-on extension products.
+  Added ability to recognize non-native document and graphic file types
+    and load/save them through add-on extension modules.
+  Revised ISPELLER to fit the new add-on extension interface.
+  Built the add-on file import/export extension DLL 'PTEXT'.
+  Built the add-on graphic import extension DLLs 'BMP', 'GIF' and 'PCX'.
+
+12 August 1996 - Revision 0.96b - Beta
+  Added the ability to load graphic files as if they were documents.
+  Added the Position, Size, Aspect and Optimize bitmap menu options.
+  Added Configure Extensions option, removing the old Spell-Check Setup
+    option.
+  Changed so that if a second copy of Escriba is started, the documents
+    requested there are loaded into the original copy instead.
+  Changed to have separate message queues for each document window.
+  Added Files/Language submenu to select current menu/dialog language.
+  Added ability to include POSTNET bar-codes in a document.
+  Added author name and document creation date to document preface
+    information.
+  Restored and fixed support for metafile graphics.
+  Built the add-on graphic import extension DLL 'TIFF'.
+  Fixed formatter so that it no longer loops when a graphic fills a page.
+  Fixed selection highlight logic so that it no longer leaves scraps
+    behind.
+  Fixed Bitmap/Halftone option printing.
+  Added Bitmap/Reverse menu option.
+  Added Edit/SelectAll menu option.
+  Added support for hyphenation of words.
+
+28 January 1997 - Revision 0.96c - Beta
+  Fixed bug in selection highlight in spanning lines not separated by line
+    feeds.
+  Added support for UPC-E, EAN-8 and EAN-13 barcodes.
+  Fixed memory leak.
+  Altered to remember last document/graphic type selected for open/merge.
+  Added Comment and Separator function codes.
+  Added the ability to position graphics inline with the text.
+  Built the add-on graphic import extension DLL 'JPEG'.
+  
+19 January 1998 - Revision 0.96d - Beta
+  Added drag/drop support for opening document files.
+  Added Go To Page function.
+  Added support for document titles.
+  Altered installation scripts to build all language spell-check
+    dictionaries.
+  Added new general preference option: Reload most recently edited document
+    at startup.
+  Fixed bug in using the Home/End keys at the start/end of pages.
+  Implemented underscore/strikeout support for the spaces and tabs in fully
+    justified text.
+  Fixed bug in typing text at end of page in full page zoom mode.
+  Added page header/footer support.
+
+05 November 1998 - Version 0.97 - Beta
+  Altered graphics origin to upper-left of page.
+  Added the Menu Manager dialogs for the Line Color and Fill Color menus.
+  Implemented separator function in Plain Text export module.
+  Added support for Codabar (2 of 7) barcodes.
+  Added the Menu Manager dialog for the Line Spacing menu.
+  Strengthened the HTML extension with a new parser.  All &x; symbols are
+    now supported.  The <STRIKE>, <S> and <U> tokens now work.
+  Added the Menu manager dialog for the Expand menu.
+  Added bubble help for buttons.
+  Now preserves bitmap image palettes.
+  Added RTF import/export module.
+
+

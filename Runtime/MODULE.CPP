@@ -13,7 +13,7 @@
 
 Module::Module ( char *name ) : Handle(0) {
    if ( name && *name ) {
-      Name = (char*) malloc ( strlen(name) + 1 ) ;
+      Name = new char [ strlen(name) + 1 ] ;
       strcpy ( Name, name ) ;
       char Drive[_MAX_DRIVE+1], Dir[_MAX_DIR+1], Fname[_MAX_FNAME+1], Ext[_MAX_EXT+1] ;
       _splitpath ( Name, Drive, Dir, Fname, Ext ) ;
@@ -23,7 +23,6 @@ Module::Module ( char *name ) : Handle(0) {
       strcat ( ModuleName, Fname ) ;
       if ( *Drive || *Dir )
          strcat ( ModuleName, Ext ) ;
-      strupr ( ModuleName ) ;
       char MissingModule [CCHMAXPATH] ;
       DosLoadModule ( PSZ(MissingModule), sizeof(MissingModule), PSZ(ModuleName), &Handle ) ;
    } else {
@@ -32,7 +31,7 @@ Module::Module ( char *name ) : Handle(0) {
 } /* endmethod */
 
 Module::Module ( const Module &object ) : Name(0), Handle(0) {
-   Name = (char*) malloc ( strlen(object.Name) + 1 ) ;
+   Name = new char [ strlen(object.Name) + 1 ] ;
    strcpy ( Name, object.Name ) ;
    if ( object.Handle ) {
       char Drive[_MAX_DRIVE], Dir[_MAX_DIR], Fname[_MAX_FNAME], Ext[_MAX_EXT] ;
@@ -43,7 +42,6 @@ Module::Module ( const Module &object ) : Name(0), Handle(0) {
       strcat ( ModuleName, Fname ) ;
       if ( *Drive || *Dir )
          strcat ( ModuleName, Ext ) ;
-      strupr ( ModuleName ) ;
       char MissingModule [CCHMAXPATH] ;
       DosLoadModule ( PSZ(MissingModule), sizeof(MissingModule), PSZ(ModuleName), &Handle ) ;
    } /* endif */
@@ -53,7 +51,7 @@ Module::~Module ( ) {
    if ( Handle )
       DosFreeModule ( Handle ) ;
    if ( Name ) 
-      free ( Name ) ;
+      delete [] Name, Name = 0 ;
 } /* endmethod */
 
 PFN Module::QueryAddress ( char *Name ) {

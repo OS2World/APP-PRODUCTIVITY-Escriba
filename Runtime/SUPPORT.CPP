@@ -363,7 +363,7 @@ extern PPRESPARAMS BuildPresParams
   * Allocate memory for block.  Return if unable to do so.                  *
   ***************************************************************************/
 
-  PPRESPARAMS PresParams = (PPRESPARAMS) malloc ( (USHORT) Size ) ;
+  PPRESPARAMS PresParams = (PPRESPARAMS) new char [ Size ] ;
 
   if ( PresParams == NULL )
     return ( PresParams ) ;
@@ -885,7 +885,7 @@ extern ULONG MessageBox ( HWND Parent, HWND Owner, char *Text, char *Title, int 
       Count ++ ;
 
    int InfoSize = sizeof(MB2INFO) + sizeof(MB2D)*(Count-1) ;
-   MB2INFO *Info = (MB2INFO*) malloc ( InfoSize ) ;
+   MB2INFO *Info = (MB2INFO*) new char [ InfoSize ] ;
    memset ( Info, 0, InfoSize ) ;
    Info->cb = InfoSize ;
    Info->hIcon = 0 ;
@@ -950,7 +950,7 @@ extern ULONG MessageBox ( HWND Parent, HWND Owner, char *Text, char *Title, int 
 
    ULONG Result = WinMessageBox2 ( Parent, Owner, PSZ(Text), PSZ(Title), ID, Info ) ;
 
-   free ( Info ) ;
+   delete Info ;
 
 #endif 
 

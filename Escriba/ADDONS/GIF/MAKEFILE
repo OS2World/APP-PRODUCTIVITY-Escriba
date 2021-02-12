@@ -1,0 +1,110 @@
+# Build GIF Graphic Importer addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: GIF.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+GIF.DLL : GIF.OBJ GIF.H GIF.RES ..\..\EXTERNAL.H
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"GIF.DLL" /Fm"GIF.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB GIF.DEF
+GIF.OBJ
+<<
+  RC GIF.RES GIF.DLL
+  dllrname GIF.dll dde4mbs=Esc_CRT
+  If Exist GIF.DLX Erase GIF.DLX
+  FXSTRIP GIF.DLL
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF.obj : GIF.cpp GIF.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h \
+  ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h ..\..\..\runtime\module.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: GIF__DEU.dll GIF__DEU.hlp 
+
+GIF__DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF__DEU.res : $*.rc gif.h
+  rc -cc 49 -cp 850 -r $*
+
+GIF__DEU.hlp: $*.ipf gif.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: GIF__ENU.dll GIF__ENU.hlp 
+
+GIF__ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF__ENU.res : $*.rc gif.h
+  rc -cc 1 -cp 850 -r $*
+
+GIF__ENU.hlp: $*.ipf gif.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: GIF__ESP.dll GIF__ESP.hlp 
+
+GIF__ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF__ESP.res : $*.rc gif.h
+  rc -cc 34 -cp 850 -r $*
+
+GIF__ESP.hlp: $*.ipf gif.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: GIF__FRA.dll GIF__FRA.hlp 
+
+GIF__FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF__FRA.res : $*.rc gif.h
+  rc -cc 33 -cp 850 -r $*
+
+GIF__FRA.hlp: $*.ipf gif.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: GIF__NLD.dll GIF__NLD.hlp 
+
+GIF__NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+GIF__NLD.res : $*.rc gif.h
+  rc -cc 31 -cp 850 -r $*
+
+GIF__NLD.hlp: $*.ipf gif.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

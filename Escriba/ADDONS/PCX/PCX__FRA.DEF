@@ -1,0 +1,8 @@
+
+;       GIF__FRA: CompuServe GIF Graphic Import Module for Escriba (Fran‡ais)
+;
+LIBRARY 
+DESCRIPTION 'GIF__FRA: CompuServe GIF Graphic Import Module for Escriba (Fran‡ais)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

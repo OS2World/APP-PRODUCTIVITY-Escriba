@@ -1,0 +1,1524 @@
+/**************************************************************** NDRLANDS.RC
+ *                                                                          *
+ *                    Escriba tekstverwerker voor OS/2-PM                   *
+ *                                                                          *
+ *                       Nederlands Resource Script                         *
+ *                                                                          *
+ ****************************************************************************/
+
+#include "Controls.h"
+#include "Escriba.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "Escriba",            //   Application Name.
+  "Nederlands",         //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: januari, februari, maart, april, mei, juni,                      *
+ *   juli, augustus, september, october, november, december.                *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_ABOUT
+{
+  DIALOG "", IDD_ABOUT, 0, 0, 200, 148, FS_DLGBORDER
+  {
+    CTEXT "Escriba"                                  0, 10,120, 180, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versie 0.97"                             0, 10,112, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 december 1998"                          0, 10,104, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CONTROL "#1",                                    0, 10,110,   0,  0, WC_STATIC, SS_BITMAP | WS_VISIBLE
+
+    CTEXT "Tekstverwerker for OS/2-PM"               0, 10, 88, 180,  8
+    CTEXT "¸ Copyright Richard Papo, 1992-1998"      0, 10, 80, 180,  8
+    CTEXT "Internet: rpapo@msen.com"                 0, 10, 72, 180,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"          0, 10, 64, 180,  8
+    CTEXT "Nederlandse versie"                       0, 10, 56, 180,  8
+
+    CTEXT "Ongeregistreerde Copie",                  1, 10, 40, 180,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+    CTEXT "",                                        2, 10, 32, 180,  8
+
+    DEFPUSHBUTTON "~OK"                         DID_OK, 80,  8,  40, 16, WS_GROUP
+  }
+}
+
+POINTER ID_MAIN escriba.ico
+
+BITMAP ID_MAIN escriba.bmp
+
+ACCELTABLE ID_MAIN
+{
+  VK_F3,        IDM_EXIT,          VIRTUALKEY
+  VK_TAB,       IDM_NEXTDOC,       VIRTUALKEY, CONTROL
+  "O",          IDM_OPEN,          CONTROL
+  "o",          IDM_OPEN,          CONTROL
+}
+
+POINTER ID_DATAWINDOW escriba.ico
+
+ACCELTABLE ID_DATAWINDOW
+{
+  VK_F4,        SC_CLOSE,          VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F5,        SC_RESTORE,        VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F7,        SC_MOVE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F8,        SC_SIZE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F9,        SC_MINIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F10,       SC_MAXIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+
+  VK_F2,        IDM_SAVE,          VIRTUALKEY
+  VK_F4,        IDM_SAVE_CLOSE,    VIRTUALKEY
+  VK_F5,        IDM_SPELL,         VIRTUALKEY
+
+  VK_BACKSPACE, IDM_UNDO,          VIRTUALKEY, ALT
+  VK_BACKSPACE, IDM_REDO,          VIRTUALKEY, ALT, SHIFT
+
+  VK_ENTER,     IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+  VK_NEWLINE,   IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+
+  "D",          IDM_DUMP,          CONTROL
+  "d",          IDM_DUMP,          CONTROL
+
+  "P",          IDM_PRINT_ALL,     CONTROL
+  "p",          IDM_PRINT_ALL,     CONTROL
+
+  "P",          IDM_PRINT_PAGE,    ALT
+  "p",          IDM_PRINT_PAGE,    ALT
+
+  "S",          IDM_SEARCH,        CONTROL
+  "s",          IDM_SEARCH,        CONTROL
+
+  "F",          IDM_FINDNEXT,      CONTROL
+  "f",          IDM_FINDNEXT,      CONTROL
+
+  "Z",          IDM_ZOOM_ALL,      CONTROL
+  "z",          IDM_ZOOM_ALL,      CONTROL
+
+  "N",          IDM_NORMAL,        CONTROL
+  "n",          IDM_NORMAL,        CONTROL
+  "V",          IDM_BOLD,          CONTROL
+  "v",          IDM_BOLD,          CONTROL
+  "C",          IDM_ITALIC,        CONTROL
+  "c",          IDM_ITALIC,        CONTROL
+  "L",          IDM_UNDERSCORE,    CONTROL
+  "l",          IDM_UNDERSCORE,    CONTROL
+}
+
+MENU IDM_MAIN
+{
+  SUBMENU "~Bestand",                           IDM_FILE_MENU
+  {
+    MENUITEM "~Nieuw",                          IDM_NEW
+    MENUITEM "~Openen...\tCtrl+O",              IDM_OPEN
+    SUBMENU "~Terughalen",                      IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Samen~voegen...",                 IDM_MERGE
+    MENUITEM SEPARATOR
+    MENUITEM "Op~slaan\tF2",                    IDM_SAVE
+    MENUITEM "Opslaan ~als...",                 IDM_SAVEAS
+    MENUITEM "Opslaan & sluiten\tF4",           IDM_SAVE_CLOSE
+    MENUITEM "Sl~uiten",                        IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "Af~drukken",                      IDM_PRINT
+    {
+      SUBMENU "Druk alles\tCtrl+P",             IDM_PRINT_ALL
+      {
+        MENUITEM "~Normaal",                    IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "Omgekee~rd",                  IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Druk bladzijde\tAlt+P",         IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Al~gemene instellingen...",       IDM_PREFERENCES
+    MENUITEM "Document~instellingen...",        IDM_DEFAULTS
+    MENUITEM "Configuratie ~Aanvullingen...",   IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Taal",                             IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Be‰indigen\tF3",                 IDM_EXIT
+  }
+  SUBMENU "Be~werken",                          IDM_EDIT_MENU
+  {
+    MENUITEM "Teniet doen\tAlt+Bksp",           IDM_UNDO
+    MENUITEM "Opnieuw\tAlt+Shift+Bksp",         IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "~Snijden\tShift+Del",             IDM_CUT
+    MENUITEM "~Kopi‰ren\tCtrl+Ins",             IDM_COPY
+    MENUITEM "~Plakken\tShift+Ins",             IDM_PASTE
+    MENUITEM "~Wissen\tDel",                    IDM_CLEAR
+    MENUITEM "Klem~bord wissen",                IDM_CLEARCLIPBOARD
+    MENUITEM SEPARATOR
+    MENUITEM "Kies Alles",                      IDM_SELECT_ALL
+    MENUITEM SEPARATOR
+    SUBMENU  "Plak van...",                     IDM_PASTE_FROM
+    {
+      SUBMENU "Plak vanuit Klembord",           IDM_PASTE_FROM_CLIP
+      {
+        MENUITEM "Plak Bitmap vanuit Klembord", IDM_PASTE_FROM_CLIP_BITMAP
+        MENUITEM "Plak Metafile vanuit Klembord", IDM_PASTE_FROM_CLIP_METAFILE
+      }
+      SUBMENU "Plak vanuit Scherm",             IDM_PASTE_FROM_SCRN
+      {
+        MENUITEM "Plak Geheel scherm",          IDM_PASTE_FROM_SCRN_ENTIRE
+        MENUITEM "Plak Kader",                  IDM_PASTE_FROM_SCRN_FRAME
+        MENUITEM "Plak Venster",                IDM_PASTE_FROM_SCRN_WINDOW
+        MENUITEM "Plak Vierhoek",               IDM_PASTE_FROM_SCRN_RECT
+        MENUITEM "~Verstop",                    IDM_PASTE_FROM_SCRN_HIDE,,MIA_CHECKED | MIA_NODISMISS
+      }
+      MENUITEM "Plak vanuit Bestand...",        IDM_PASTE_FROM_FILE
+    }
+    SUBMENU "Invoegfunktie",                    IDM_INSERT_FUNCTION
+    {
+      SUBMENU "Datum",                          IDM_DATE
+      {
+        MENUITEM "Datum van vandaag",           IDM_DATETODAY
+        MENUITEM "Huidige datum",               IDM_DATECURRENT
+        MENUITEM "Documentdatum",               IDM_DATECHANGED
+//      MENUITEM "Vaste datum",                 IDM_DATEFIXED
+        MENUITEM "Datumformaat...",             IDM_DATEFMT
+      }
+      MENUITEM "Huidig paginanummer",           IDM_CURRENTPAGE
+      MENUITEM "Totale paginatelling",          IDM_PAGECOUNT
+      MENUITEM "Scheiding",                     IDM_SEPARATOR
+      MENUITEM "~Barcodes...",                  IDM_BARCODE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Zoeken...\tCtrl+S",              IDM_SEARCH
+    MENUITEM "Zoek ~volgende\tCtrl+F",          IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Ga naar Pagina...",               IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Spellingcontrole\tF5",            IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Afbeelden",                       IDM_ZOOM
+    {
+      MENUITEM "~Afbeelden 100%",               IDM_ZOOM_100
+      MENUITEM "Afbeelden volle ~breedte",      IDM_ZOOM_FULLWIDTH
+      MENUITEM "Afbeelden volle ~hoogte",       IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Afbeelden ~kantlijnen",         IDM_ZOOM_MARGINS
+      MENUITEM "Afbeelden ~alles\tCtrl+Z",      IDM_ZOOM_ALL
+      MENUITEM "Afbeelden ~venster",            IDM_ZOOM_WINDOW
+      MENUITEM "Afbeelden ~instellingen...",    IDM_ZOOM_SET
+    }
+  }
+  SUBMENU "~Opmaak",                            IDM_LAYOUT_MENU
+  {
+    MENUITEM "~Kantlijnen...",                  IDM_MARGINS
+    MENUITEM "~Tabinstellingen...",             IDM_TABS
+    MENUITEM "~Inspringen...",                  IDM_INDENT
+    SUBMENU  "Rege~lafstand",                   IDM_LINESPACING_MENU
+    {
+      MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Uitlijning",                     IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Bladmidden",                     IDM_PAGECENTER
+    MENUITEM "Blad~wissel\tCtrl+Enter",         IDM_PAGEBREAK
+    MENUITEM SEPARATOR
+    MENUITEM "Kop...",                          IDM_HEADER
+    MENUITEM "Voet...",                         IDM_FOOTER
+  }
+  SUBMENU "~Lettertype",                        IDM_FONT_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "Letter~grootte",                     IDM_SIZE_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Kenmerken",                         IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Lijnkleur",                        IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Lijndikte",                        IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Vulkleur",                         IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Vultype",                          IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Eindlijn",                         IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Voeglijn",                         IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+  SUBMENU "~Vensters",                          IDM_WINDOW_MENU
+  {
+    MENUITEM "~Tegelen",                        IDM_TILE
+    MENUITEM "~Stapelen",                       IDM_CASCADE
+    MENUITEM "~Ikonen schikken",                IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Hulp",                              IDM_HELP_MENU
+  {
+    MENUITEM "Hulp~index",                      IDM_HELP_INDEX
+    MENUITEM "~Algemene hulp",                  IDM_EXTENDED_HELP
+    MENUITEM "Hulp ~gebruiken",                 IDM_HELP_FOR_HELP
+    MENUITEM "Hulp voor ~toetsen",              IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Productinformatie",               IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_MAIN_CONTEXT
+{
+  MENUITEM "Verversen",                         IDM_REFRESH
+  SUBMENU "~Bestand",                           IDM_FILE_MENU
+  {
+    MENUITEM "~Nieuw",                          IDM_NEW
+    MENUITEM "~Openen...\tCtrl+O",              IDM_OPEN
+    SUBMENU "~Terughalen",                      IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Al~gemene instellingen...",       IDM_PREFERENCES
+    MENUITEM "Document~instellingen...",        IDM_DEFAULTS_CONTEXT
+    MENUITEM "Configuratie ~Aanvullingen...",   IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Taal",                             IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Be‰indigen\tF3",                 IDM_EXIT
+  }
+  SUBMENU "~Vensters",                          IDM_WINDOW_MENU
+  {
+    MENUITEM "~Tegelen",                        IDM_TILE
+    MENUITEM "~Stapelen",                       IDM_CASCADE
+    MENUITEM "~Ikonen schikken",                IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Hulp",                              IDM_HELP_MENU
+  {
+    MENUITEM "Hulp~index",                      IDM_HELP_INDEX
+    MENUITEM "~Algemene hulp",                  IDM_EXTENDED_HELP
+    MENUITEM "Hulp ~gebruiken",                 IDM_HELP_FOR_HELP
+    MENUITEM "Hulp voor ~toetsen",              IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Productinformatie",               IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_TEXTMENU
+{
+  SUBMENU "Be~werken",                          IDM_EDIT_MENU
+  {
+    MENUITEM "~Snijden\tShift+Del",             IDM_CUT
+    MENUITEM "~Kopi‰ren\tCtrl+Ins",             IDM_COPY
+    MENUITEM "~Plakken\tShift+Ins",             IDM_PASTE
+    MENUITEM "~Wissen\tDel",                    IDM_CLEAR
+  }
+  SUBMENU "~Opmaak",                            IDM_LAYOUT_MENU
+  {
+    MENUITEM "~Kantlijnen...",                  IDM_MARGINS
+    MENUITEM "~Tabinstellingen...",             IDM_TABS
+    MENUITEM "~Inspringen...",                  IDM_INDENT
+    SUBMENU  "Rege~lafstand",                   IDM_LINESPACING_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Uitlijning",                     IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Bladmidden",                     IDM_PAGECENTER
+    MENUITEM "Datumformaat...",                 IDM_DATEFMT
+  }
+  SUBMENU "~Lettertype",                        IDM_FONT_MENU
+  {
+    MENUITEM "",                                IDM_FONTS
+  }
+  SUBMENU "Letter~grootte",                     IDM_SIZE_MENU
+  {
+    MENUITEM "",                                IDM_SIZES
+  }
+  SUBMENU "~Kenmerken",                         IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Lijnkleur",                        IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Lijndikte",                        IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Vulkleur",                         IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Vultype",                          IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Eindlijn",                         IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Voeglijn",                         IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+}
+
+MENU IDM_BITMAPMENU
+{
+  MENUITEM "Achtergrond",                       IDM_BITMAP_BACKGROUND
+  MENUITEM "Geen nevenstaande tekst",           IDM_BITMAP_NOTEXTASIDE
+  MENUITEM "Halftoon",                          IDM_BITMAP_HALFTONE
+  MENUITEM "Omgekeerd",                         IDM_BITMAP_REVERSE
+  MENUITEM "~Optimaliseer",                     IDM_BITMAP_OPTIMIZE
+  SUBMENU  "~Plaats",                           IDM_BITMAP_POSITION
+  {
+    MENUITEM "Volgende Teken",                  IDM_BITMAP_POSITION_NEXT_CHAR
+    MENUITEM "Volgende Lijn",                   IDM_BITMAP_POSITION_NEXT_LINE
+    MENUITEM SEPARATOR
+    MENUITEM "Linkerkant",                      IDM_BITMAP_POSITION_EDGE_LEFT
+    MENUITEM "Linkermarge",                     IDM_BITMAP_POSITION_MARGIN_LEFT
+    MENUITEM "Gecentreerd (X)",                 IDM_BITMAP_POSITION_CENTERED_X
+    MENUITEM "Rechtermarge",                    IDM_BITMAP_POSITION_MARGIN_RIGHT
+    MENUITEM "Rechterkant",                     IDM_BITMAP_POSITION_EDGE_RIGHT
+    MENUITEM SEPARATOR
+    MENUITEM "Bovenkant",                       IDM_BITMAP_POSITION_EDGE_TOP
+    MENUITEM "Bovenmarge",                      IDM_BITMAP_POSITION_MARGIN_TOP
+    MENUITEM "Gecentreerd (Y)",                 IDM_BITMAP_POSITION_CENTERED_Y
+    MENUITEM "Ondermarge",                      IDM_BITMAP_POSITION_MARGIN_BOTTOM
+    MENUITEM "Onderkant",                       IDM_BITMAP_POSITION_EDGE_BOTTOM
+  }
+  SUBMENU  "~Size",                             IDM_BITMAP_SIZE
+  {
+    MENUITEM "Kant-tot-Kant (X)",               IDM_BITMAP_SIZE_EDGETOEDGE_X
+    MENUITEM "Marge-tot-Marge (X)",             IDM_BITMAP_SIZE_MARGINTOMARGIN_X
+    MENUITEM SEPARATOR
+    MENUITEM "Kant-tot-Kant (Y)",               IDM_BITMAP_SIZE_EDGETOEDGE_Y
+    MENUITEM "Marge-tot-Marge (Y)",             IDM_BITMAP_SIZE_MARGINTOMARGIN_Y
+  }
+  SUBMENU  "~Verhouding",                       IDM_BITMAP_ASPECT
+  {
+    MENUITEM "~Onbepaald",                      IDM_BITMAP_ASPECT_FLOAT
+    MENUITEM "Vaste ~X",                        IDM_BITMAP_ASPECT_FIX_X
+    MENUITEM "Vaste ~Y",                        IDM_BITMAP_ASPECT_FIX_Y
+  }
+}
+
+MENU IDM_BORDERMENU
+{
+  MENUITEM "Randbreedte...",                    IDM_BORDER_SIZE
+  MENUITEM "Randkleur...",                      IDM_BORDER_COLOR
+  MENUITEM "Titel...",                          IDM_BORDER_CAPTION
+}
+
+MENU IDM_DEFAULTMENU
+{
+  MENUITEM "Ververs",                           IDM_REFRESH
+  SUBMENU "~Bestand",                           IDM_FILE_MENU
+  {
+    MENUITEM "Op~slaan\tF2",                    IDM_SAVE
+    MENUITEM "Opslaan ~als...",                 IDM_SAVEAS
+    MENUITEM "Opslaan & sluiten\tF4",           IDM_SAVE_CLOSE
+    MENUITEM "Sl~uiten",                        IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "Af~drukken",                      IDM_PRINT
+    {
+      SUBMENU "Druk alles\tCtrl+P",             IDM_PRINT_ALL
+      {
+        MENUITEM "~Normaal",                    IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "Omgekee~rd",                  IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Druk bladzijde\tAlt+P",         IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Document~instellingen...",        IDM_DEFAULTS
+  }
+  SUBMENU "Be~werken",                          IDM_EDIT_MENU
+  {
+    MENUITEM "Teniet doen\tAlt+Bksp",           IDM_UNDO
+    MENUITEM "Opnieuw\tAlt+Shift+Bksp",         IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "~Zoeken...\tCtrl+S",              IDM_SEARCH
+    MENUITEM "Zoek ~volgende\tCtrl+F",          IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Ga naar Pagina...",               IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Spellingcontrole\tF5",            IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Afbeelden",                       IDM_ZOOM
+    {
+      MENUITEM "~Afbeelden 100%",               IDM_ZOOM_100
+      MENUITEM "Afbeelden volle ~breedte",      IDM_ZOOM_FULLWIDTH
+      MENUITEM "Afbeelden volle ~hoogte",       IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Afbeelden ~kantlijnen",         IDM_ZOOM_MARGINS
+      MENUITEM "Afbeelden ~alles\tCtrl+Z",      IDM_ZOOM_ALL
+      MENUITEM "Afbeelden ~venster",            IDM_ZOOM_WINDOW
+      MENUITEM "Afbeelden ~instellingen...",    IDM_ZOOM_SET
+    }
+  }
+}
+
+DLGTEMPLATE IDD_PROFILE_PATH
+{
+  DIALOG "Zet pad voor profiel...", IDD_PROFILE_PATH, 0, 0, 300, 60, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Geef het volledige pad (incl. drive) van de directory",0,  8, 48, 284, 8
+    LTEXT "waar het profiel-(INI)-bestand zal worden opgeslagen.",0,  8, 40, 284, 8
+    CONTROL "",               IDD_PROF_ENTRY,       8, 28, 280,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_PROF_ERR,         8,  2, 280,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_FILETYPE
+{
+  DIALOG "Kies Bestandtype", IDD_FILETYPE, 0, 0, 200, 116, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Bestandnaam:",     0,                    8,100,  70,  8
+    LTEXT "",                 IDD_FILETYPE_NAME,   80,100, 104,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+    LTEXT "Dit bestand blijkt een geldig formaat te hebben  ", 0,  8, 84, 184, 8
+    LTEXT "voor de volgende bestandstypes. Maak een keus    ", 0,  8, 76, 184, 8
+    LTEXT "om het bestand te kunnen laden.                  ", 0,  8, 68, 184, 8
+    LISTBOX                   IDD_FILETYPE_LIST,    8, 20, 184, 44
+    DEFPUSHBUTTON "~OK"       DID_OK,               8,  4,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52,  4,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  113,  4,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+  }
+}
+
+DLGTEMPLATE IDD_PREFERENCES
+{
+  DIALOG "Algemene instellingen", IDD_PREFERENCES, 0, 0, 300, 110, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    AUTOCHECKBOX "Animeer",                  IDD_PREFERENCES_ANIMATE,           8, 98, 190, 10
+    AUTOCHECKBOX "Toon meetlatten",          IDD_PREFERENCES_RULERS,            8, 88, 190, 10
+    AUTOCHECKBOX "Toon schuivers",           IDD_PREFERENCES_SCBARS,            8, 78, 190, 10
+    AUTOCHECKBOX "Toon statusregel",         IDD_PREFERENCES_STATUSLINE,        8, 68, 190, 10
+    AUTOCHECKBOX "Toon volledige namen",     IDD_PREFERENCES_FULLNAMES,         8, 58, 190, 10
+    AUTOCHECKBOX "Spool pagina's",           IDD_PREFERENCES_SPOOLPAGES,        8, 48, 190, 10
+    AUTOCHECKBOX "Druk omgekeerd af",        IDD_PREFERENCES_PRINTREVERSE,      8, 38, 190, 10
+    AUTOCHECKBOX "Laad document vanaf begin",IDD_PREFERENCES_LOADMOSTRECENT,    8, 28, 190, 10
+
+    GROUPBOX "Beginafbeeldsfactor",          0,                               200, 46,  88, 60
+    AUTORADIOBUTTON "100%",                  IDD_PREFERENCES_ZOOM_100,        204, 48,  80, 10, WS_GROUP
+    AUTORADIOBUTTON "Volle breedte",         IDD_PREFERENCES_ZOOM_FULLWIDTH,  204, 58,  80, 10
+    AUTORADIOBUTTON "Volle hoogte",          IDD_PREFERENCES_ZOOM_FULLHEIGHT, 204, 68,  80, 10
+    AUTORADIOBUTTON "Marges",                IDD_PREFERENCES_ZOOM_MARGINS,    204, 78,  80, 10
+    AUTORADIOBUTTON "Alles",                 IDD_PREFERENCES_ZOOM_ALL,        204, 88,  80, 10
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"         DID_CANCEL,              52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"            0,                      113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_PREFERENCES_ERR,      8,  2, 290,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS
+{
+  DIALOG "Documentinstellingen", IDD_DEFAULTS, 0, 0, 300, 200, FS_DLGBORDER, FCF_SYSMENU | FCF_SIZEBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_DEFAULTS_NOTEBOOK,    8, 48, 284,150, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    AUTOCHECKBOX "Alles opslaan",IDD_DEFAULTS_GLOBAL,      8, 38, 284,  8, WS_GROUP
+    LTEXT "",                    IDD_DEFAULTS_UNITS,       8, 28, 284,  8
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",             IDD_ZOOM_APPLY,          52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"         DID_CANCEL,              96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"            0,                      157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_DEFAULTS_ERR,         8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_AUTHOR
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_AUTHOR, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Auteurnaam",          0,                        0, 90,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_AUTHOR,     90, 90, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Titel",               IDD_DEFAULTS_TITLE_TAG,   0, 80,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_TITLE,      90, 80, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Aanmaakdatum",        IDD_DEFAULTS_CREATEDATE_TAG,0,70, 90,  8, DT_VCENTER
+    LTEXT "",                    IDD_DEFAULTS_CREATEDATE, 90, 70, 110,  8, DT_VCENTER
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_PRINTER
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_PRINTER, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Drukker",             0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_PRINTER,    90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    PUSHBUTTON "Drukkerinstellingen",IDD_DEFAULTS_SETTINGS,12,70, 186, 12
+    LTEXT "",                    IDD_DEFAULTS_FORMNAME,   12, 61, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_FORMSIZE,   12, 55, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_FONT
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_FONT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Lettertype",          0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_FONT,       90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Lettergrootte",       0,                        0, 80,  80,  8
+    CONTROL "",                  IDD_DEFAULTS_SIZE,       90,  0, 110, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Kleur",               0,                        0, 70,  70,  8
+    VALUESET                     IDD_DEFAULTS_COLOR,      90, 58, 110, 20, VS_RGB | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 2, 8
+
+    GROUPBOX "Kenmerken",        0,                        0, 10, 200, 42
+    AUTOCHECKBOX "Vet",          IDD_DEFAULTS_BOLD,        4, 34,  90, 10, WS_GROUP
+    AUTOCHECKBOX "Schuin",       IDD_DEFAULTS_ITALIC,      4, 24,  90, 10
+    AUTOCHECKBOX "Onderlijnd",   IDD_DEFAULTS_UNDERSCORE,  4, 14,  90, 10
+    AUTOCHECKBOX "Doorstreept",  IDD_DEFAULTS_STRIKEOUT, 100, 34,  90, 10
+    AUTOCHECKBOX "Hol",          IDD_DEFAULTS_OUTLINE,   100, 24,  90, 10
+    AUTOCHECKBOX "Hoofdletters", IDD_DEFAULTS_CAPS,      100, 14,  90, 10
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT1
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT1, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Uitlijning",          0,                        0, 86,  90,  8
+    VALUESET                     IDD_DEFAULTS_JUSTIFY,    90, 80, 110, 20, VS_BITMAP | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 1, 4
+
+    AUTOCHECKBOX "Bladmidden",   IDD_DEFAULTS_CENTERPAGE,  0, 70, 200, 10
+
+    GROUPBOX "Marges",           0,                        0,  8, 200, 52
+    LTEXT "Links",               0,                        4, 42,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_LEFT,       80, 42, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Rechts",              0,                        4, 32,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_RIGHT,      80, 32, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Boven",               0,                        4, 22,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_TOP,        80, 22, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Onder",               0,                        4, 12,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_BOTTOM,     80, 12, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT2
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT2, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Afstanden",        0,                        0, 60, 200, 32
+    LTEXT "Tabs",                0,                        4, 74,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_TAB,        96, 74,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Inspringen",          0,                        4, 64,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_INDENT,     96, 64,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    GROUPBOX "Regelafstand",      0,                        0, 16, 200, 42
+    AUTORADIOBUTTON "Enkel",     IDD_DEFAULTS_LINE_100,    4, 40, 192,  8
+    AUTORADIOBUTTON "1 1/2",     IDD_DEFAULTS_LINE_150,    4, 30, 192,  8
+    AUTORADIOBUTTON "Dubbel",    IDD_DEFAULTS_LINE_200,    4, 20, 192,  8
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_NATIONAL
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_NATIONAL, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Code page",           0,                        0, 90,  70,  8
+    CONTROL "",                  IDD_DEFAULTS_CODEPAGE,   70,  0, 130, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    GROUPBOX "Datumformaat",     0,                        0, 10, 200, 78
+    CONTROL "",                  IDD_DEFAULTS_DATEFMT,     4, 72, 192,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Voorbeeld:",          0,                        4, 62,  40,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_DATESMP,    44, 62, 152,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "Alle tekst in het formaat wordt overgenomen in het,    ", 0,  4, 54, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "resultaat behalve de tekens die voorafgegaan worden    ", 0,  4, 48, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "door '%'. Het eerste teken na de '%' kan een van de    ", 0,  4, 42, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "volgende zijn :                                        ", 0,  4, 36, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    m - Maand numeriek                                 ", 0,  4, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    M - Maand volledig                                 ", 0, 98, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    n - Maand afgekort                                 ", 0,  4, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    d - Dag numeriek                                   ", 0, 98, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    y - Jaar in 4 cijfers                              ", 0,  4, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    z - Jaar in 2 cijfers                              ", 0, 98, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    w - Dag volledig                                   ", 0,  4, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    x - Dag afgekort                                   ", 0, 98, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    AUTOCHECKBOX "Metrisch",     IDD_DEFAULTS_METRIC,      0,  0, 200, 10
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXTENSIONS
+{
+  DIALOG "Configuratie Aanvullingen", IDD_CONFIGURE_EXTENSIONS, 0, 0, 300, 200, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_CONFIGURE_NOTEBOOK,   8, 28, 284,170, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"         DID_CANCEL,              52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"            0,                      113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_CONFIGURE_ERR,        8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_SEARCH
+{
+   DIALOG "Zoek...", IDD_SEARCH, 0, 0, 220, 90, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Te vinden tekst:",    0,                    8, 76,  90,  8
+      CONTROL "",                  IDD_SEARCH_STRING,  106, 76,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      LTEXT "Vervang:",            0,                    8, 64,  90,  8
+      CONTROL "",                  IDD_SEARCH_REPLACE, 106, 64,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      AUTOCHECKBOX "Letter ~Gevoelig",IDD_SEARCH_CASESENSITIVE,8,52,205,10
+      AUTOCHECKBOX "Booleaanse Regels",IDD_SEARCH_REGULAR,8,40,205, 10
+
+      DEFPUSHBUTTON "~Vind"        IDD_SEARCH_FIND,      8, 24,  52, 12, WS_GROUP
+      CONTROL "Ve~rander"          IDD_SEARCH_CHANGE,   64, 24,  61, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON  
+      CONTROL "Verand~er & Vind"   IDD_SEARCH_CHANGEFIND,129,24, 83, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Verander ~Alles"    IDD_SEARCH_CHANGEALL, 8, 10,  69, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancel"         DID_CANCEL,          81, 10,  70, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Hulp"            0,                  155, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                    IDD_SEARCH_ERR,       8,  2, 208,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_GOTOPAGE
+{
+   DIALOG "Ga naar Pagina", IDD_GOTOPAGE, 0, 0, 200, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Paginanummer:",    0,                    8, 28,  90,  8
+      CONTROL "",               IDD_GOTOPAGE_ENTRY, 100, 28,  92,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+      DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+      CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Hulp"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                 IDD_GOTOPAGE_ERR,     8,  2, 192,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_SPELL
+{
+   DIALOG "Spellingcontrole", IDD_SPELL, 0, 0, 240, 100, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Woord gevonden:",                    0,    4,  86,  86,  8
+      LTEXT "Originele Tekst",     IDD_SPELL_OLDWORD,  94,  86, 142,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+      CTEXT "-- Mogelijke vervanging --",         0,    4,  76, 232,  8
+      CONTROL "",                  IDD_SPELL_NEWWORD,   1,  26, 234, 48, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_SIMPLE
+      CONTROL "~Sla over",            IDD_SPELL_SKIP,   1,  13,  49, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_DEFAULT
+      CONTROL "~Accepteer",         IDD_SPELL_ACCEPT,  50,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Voeg~in",            IDD_SPELL_INSERT, 110,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Ve~rvang",          IDD_SPELL_REPLACE, 170,  13,  69, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Voegin K~leine letter",IDD_SPELL_UNCAPS, 1,   1, 103, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancel",               DID_CANCEL, 104,   1,  71, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Hulp",                          0,  175,   1,  64, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+   }
+}
+
+DLGTEMPLATE IDD_ZOOM_SET
+{
+  DIALOG "Afbeeldinstellingen...", IDD_ZOOM_SET, 0, 0, 230, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Afbeeldfactor (%)", 0,                   8, 28, 100,  8
+    CONTROL "",               IDD_ZOOM_SET,       120, 28,  94,  8,
+      WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_ZOOM_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_ZOOM_ERR,         8,  2, 216,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_MARGINS
+{
+  DIALOG "Marges", IDD_MARGINS, 0, 0, 400, 72, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Links",            0,                   58, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_LEFT,   131, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Rechts",           0,                  229, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_RIGHT,  302, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Boven",            0,                   58, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_TOP,    131, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Onder",            0,                  229, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_BOTTOM, 302, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_MARGINS_UNITS,    8, 34, 390,  8
+    CTEXT "",                 IDD_MARGINS_SIZE,     8, 26, 390,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_MARGINS_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_MARGINS_ERR,      8,  2, 390,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_TABS
+{
+  DIALOG "Tabs", IDD_TABS, 0, 0, 350, 70, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Positie",          0,                   70, 48,  50,  8
+    CONTROL "",               IDD_TABS_POSITION,  155, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    PUSHBUTTON "~Zetten",     IDD_TABS_SET,       230, 54,  50, 12
+    PUSHBUTTON "~Wissen",     IDD_TABS_CLEAR,     230, 42,  50, 12
+
+    CTEXT "",                 IDD_TABS_UNITS,       8, 34, 338,  8
+    CTEXT "",                 IDD_TABS_SIZE,        8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_TABS_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_TABS_ERR,         8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_INDENT
+{
+  DIALOG "Paragraafinspringen", IDD_INDENT, 0, 0, 350, 62, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Afstand",          0,                   97, 48,  50,  8
+    CONTROL "",               IDD_INDENT_DISTANCE,212, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_INDENT_UNITS,     8, 34, 338,  8
+    CTEXT "",                 IDD_INDENT_SIZE,      8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_INDENT_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_INDENT_ERR,       8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_DATEFMT
+{
+  DIALOG "Datumformaat", IDD_DATEFMT, 0, 0, 260, 154, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Formaat",          0,                    8,136,  60,  8
+    CONTROL "",               IDD_DATEFMT_ENTRY,   70,136, 182,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Voorbeeld:",       0,                    8,126,  60,  8
+    LTEXT "",                 IDD_DATEFMT_SAMPLE,  70,126, 182,  8
+
+    LTEXT "Alle tekst in het formaat wordt overgenomen in het,    ", 0,  8,114, 248,  8
+    LTEXT "resultaat behalve de tekens die voorafgegaan worden    ", 0,  8,106, 248,  8
+    LTEXT "door '%'. Het eerste teken na de '%' kan een van de    ", 0,  8, 98, 248,  8
+    LTEXT "volgende zijn :                                        ", 0,  8, 90, 248,  8
+    LTEXT "    n - Wordt de numerieke maand van het jaar.         ", 0,  8, 82, 248,  8
+    LTEXT "    M - Wordt de naam van de maand van het jaar.       ", 0,  8, 74, 248,  8
+    LTEXT "    m - Wordt de afgekorte naam van de maand.          ", 0,  8, 66, 248,  8
+    LTEXT "    g - Wordt de numerieke dag van het maand.          ", 0,  8, 58, 248,  8
+    LTEXT "    J - Wordt een 4-tallig numeriek jaar.              ", 0,  8, 50, 248,  8
+    LTEXT "    j - Wordt een 2-tallig numeriek jaar.              ", 0,  8, 42, 248,  8
+    LTEXT "    D - Wordt de naam van de dag van de week.          ", 0,  8, 34, 248,  8
+    LTEXT "    d - Wordt de afgekorte naam van de dag.            ", 0,  8, 26, 248,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_DATEFMT_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_DATEFMT_ERR,      8,  2, 248,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_BARCODE
+{
+  DIALOG "Voeg Barcode in", IDD_BARCODE, 0, 0, 250, 64, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Type",             0,                    8, 50,  85,  8
+    CONTROL "",               IDD_BARCODE_TYPE,   100, 10, 143, 50, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Tekst",            0,                    8, 38,  85,  8
+    CONTROL "",               IDD_BARCODE_ENTRY,  101, 38, 141,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Geldige tekens:",  0,                    8, 26,  85,  8
+    LTEXT "0123456789",       IDD_BARCODE_CHARS,  101, 26, 141,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancel"      DID_CANCEL,          52, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  113, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_BARCODE_ERR,      8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_HEADER
+{
+  DIALOG "Kop", IDD_HEADER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_HEADER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_HEADER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_HEADER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FOOTER
+{
+  DIALOG "Voet", IDD_FOOTER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_FOOTER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Doen",          IDD_FOOTER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancel"      DID_CANCEL,          96, 10,  57, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                  157, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_FOOTER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_LINESPACINGMGR
+{
+  DIALOG "Line Spacing Menu Manager", IDD_LINESPACINGMGR, 0, 0, 230, 150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    SLIDER                    IDD_LINESPACINGMGR_SET,   8, 25,  46,120, SLS_VERTICAL | SLS_LEFT | SLS_SNAPTOINCREMENT | SLS_BUTTONSBOTTOM | WS_GROUP
+       CTLDATA 12, 0, 101, 0, 0, 0
+    LTEXT "",                 IDD_LINESPACINGMGR_SMP,  60, 25,  80,120 
+    PRESPARAMS PP_BACKGROUNDCOLOR, 0xFFFFFF
+    PRESPARAMS PP_FONTNAMESIZE, "16.Tms Rmn"
+    PUSHBUTTON ">>",          IDD_LINESPACINGMGR_ADD, 148, 90,  20, 10
+    PUSHBUTTON "<<",          IDD_LINESPACINGMGR_DEL, 148, 70,  20, 10
+    LISTBOX                   IDD_LINESPACINGMGR_LIST,170, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    DEFPUSHBUTTON "~OK"       DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "~Standaard"      IDD_LINESPACINGMGR_DFLT, 52, 10,  53, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Opheffen"    DID_CANCEL,             109, 10,  67, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                      180, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_LINESPACINGMGR_ERR,   8,  2, 204,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_EXPANDMGR
+{
+  DIALOG "Expand Menu Manager", IDD_EXPANDMGR, 0, 0, 230, 110, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    SLIDER                    IDD_EXPANDMGR_SET,   8, 30, 130, 30, SLS_HORIZONTAL | SLS_BOTTOM | SLS_SNAPTOINCREMENT | SLS_BUTTONSLEFT | SLS_BUTTONSBOTTOM | WS_GROUP
+       CTLDATA 12, 0, 101, 0, 0, 0
+    LTEXT "",                 IDD_EXPANDMGR_SMP,   8, 60, 130, 40 
+    PRESPARAMS PP_BACKGROUNDCOLOR, 0xFFFFFF
+    PRESPARAMS PP_FONTNAMESIZE, "16.Tms Rmn"
+    PUSHBUTTON ">>",          IDD_EXPANDMGR_ADD, 148, 85,  20, 10
+    PUSHBUTTON "<<",          IDD_EXPANDMGR_DEL, 148, 65,  20, 10
+    LISTBOX                   IDD_EXPANDMGR_LIST,170, 25,  42, 80, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    DEFPUSHBUTTON "~OK"       DID_OK,              8, 10,  40, 12, WS_GROUP
+    CONTROL "~Standaard"      IDD_EXPANDMGR_DFLT, 52, 10,  53, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Opheffen"    DID_CANCEL,        109, 10,  67, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Hulp"         0,                 180, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_EXPANDMGR_ERR,   8,  2, 204,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_LINECOLORMGR
+{
+  DIALOG "Lijnkleur Menumanager", IDD_LINECOLORMGR, 0, 0, 260,150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    CONTROL "",               IDD_LINECOLORMGR_WHEEL, 0, 35, 188,110, "ColorSelectClass", WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON ">>",          IDD_LINECOLORMGR_ADD, 188, 95,  20, 10
+    PUSHBUTTON "<<",          IDD_LINECOLORMGR_DEL, 188, 75,  20, 10
+    LISTBOX                   IDD_LINECOLORMGR_LIST,210, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE | LS_OWNERDRAW
+    RTEXT "Rood:",            0,                      8, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xCC0000
+    SPINBUTTON                IDD_LINECOLORMGR_RED,  38, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Groen:",           0,                     74, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00CC00
+    SPINBUTTON                IDD_LINECOLORMGR_GRN, 104, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Blauw:",           0,                    140, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x0000CC
+    SPINBUTTON                IDD_LINECOLORMGR_BLU, 170, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    DEFPUSHBUTTON "~OK"       DID_OK,                 8, 10,  40, 12, WS_GROUP
+    CONTROL "~Standaard"      IDD_LINECOLORMGR_DFLT, 52, 10,  53, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Opheffen"    DID_CANCEL,           109, 10,  67, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                    180, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_LINECOLORMGR_ERR,   8,  2, 244,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FILLCOLORMGR
+{
+  DIALOG "Vulkleur Menumanager", IDD_FILLCOLORMGR, 0, 0, 260,150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    CONTROL "",               IDD_FILLCOLORMGR_WHEEL, 0, 35, 188,110, "ColorSelectClass", WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON ">>",          IDD_FILLCOLORMGR_ADD, 188, 95,  20, 10
+    PUSHBUTTON "<<",          IDD_FILLCOLORMGR_DEL, 188, 75,  20, 10
+    LISTBOX                   IDD_FILLCOLORMGR_LIST,210, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE | LS_OWNERDRAW
+    RTEXT "Rood:",            0,                      8, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xCC0000
+    SPINBUTTON                IDD_FILLCOLORMGR_RED,  38, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Groen:",           0,                     74, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00CC00
+    SPINBUTTON                IDD_FILLCOLORMGR_GRN, 104, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Blauw:",           0,                    140, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x0000CC
+    SPINBUTTON                IDD_FILLCOLORMGR_BLU, 170, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    DEFPUSHBUTTON "~OK"       DID_OK,                 8, 10,  40, 12, WS_GROUP
+    CONTROL "~Standaard"      IDD_FILLCOLORMGR_DFLT, 52, 10,  53, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Opheffen"    DID_CANCEL,           109, 10,  67, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Help"         0,                    180, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_FILLCOLORMGR_ERR,   8,  2, 244,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+
+STRINGTABLE
+{
+  IDS_HELPTITLE                         "'Escriba' Hulpsysteem"
+  IDS_TITLE                             "Escriba tekstverwerker voor OS/2-PM"
+  IDS_TITLE1                            REVISION
+  IDS_NEW_DOCUMENT                      "Nieuw document"
+  IDS_TYPE                              "Type"
+  IDS_PAGE                              "Bladzijde"
+  IDS_OF                                "van"
+  IDS_MODIFIED                          "veranderd"
+  IDS_JOB_NAME                          "Escriba: "
+  IDS_UNTITLED                          "<Naamloos>"
+  IDS_DEFAULTFONT                       "8.Helv"
+  IDS_STATUSFONT                        "10.Helv"
+
+  IDS_PARMS_RESET                       "RESET"
+  IDS_PARMS_PRINT                       "PRINT"
+  IDS_PARMS_TRAP                        "TRAP"
+
+  IDS_PROMPT_SAVE                       "Document '%s' is veranderd.  Wil je het opslaan ?"
+  IDS_PROMPT_SAVECONFIRM1               "Document '%s' bestaat reeds.  Wil je het overschrijven ?"
+  IDS_PROMPT_SAVECONFIRM2               "Document heeft type '%s'.  Wil je het type veranderen in '%s'?"
+
+  IDS_MESSAGE_SPELLDONE                 "Spellingcontrole gereed."
+
+  IDS_ERROR_EXCEPTION                   "Escriba heeft een ernstige fout ontdekt.  "
+                                        "Zendt a.u.b. het %s bestand naar de auteur op Internet rpapo@msen.com.  "
+                                        "Probeer a.u.b. te beschrijven wat je met Escriba probeerde te doen op het bewuste moment."
+  IDS_ERROR_PRFOPENPROFILE              "FOUT: Profielbestand kan niet geopend worden."
+  IDS_ERROR_CREATEHELP                  "FOUT: Hulpsysteem kan niet gemaakt worden.  Code %08lX."
+  IDS_ERROR_CREATEFRAME                 "FOUT: Kadervenster kan niet gemaakt worden.  Code %08lX."
+  IDS_ERROR_WINREGISTERCLASS            "FOUT: Vensterklasse '%s' kan niet geregistreerd worden.  Code %08lX."
+  IDS_ERROR_CREATECLIENT                "FOUT: Klantvenster kan niet gemaakt worden.  Code %08lX."
+  IDS_ERROR_TOOMANYDOCUMENTS            "FOUT: Er kunnen niet meer dan %i documenten gelijktijdig geopend zijn."
+  IDS_ERROR_TOOMANYLOADED               "FOUT: Reeds teveel documenten geopend.  '%s' uit geheugen verwijderd."
+  IDS_ERROR_DOCUMENT_CREATE             "FOUT: Documentobject kan niet gemaakt worden."
+  IDS_ERROR_DOCUMENT_LOAD               "FOUT: Document kan niet geladen worden."
+  IDS_ERROR_DOCUMENT_SAVE               "FOUT: Niet mogelijk om document '%s' op te bergen saving."
+  IDS_ERROR_DOCUMENT_NONAME             "FOUT: Bestand heeft geen naam.  Gebruik 'Opslaan als...'."
+  IDS_ERROR_CREATEPRINTSTATUS           "FOUT: Statusvenster van drukker kan niet gemaakt worden."
+  IDS_ERROR_CREATELOADSTATUS            "FOUT: Laadstatusvenster kan niet gemaakt worden."
+  IDS_ERROR_BLOCKMEMORY                 "FOUT: Blok te groot om te kopi‰ren."
+  IDS_ERROR_BADGRAPHICFILE              "FOUT: Grafisch bestandtype of formaat niet herkend."
+  IDS_ERROR_FILEMEMORY                  "FOUT: Geen geheugen beschikbaar om bestand '%s' te laden."
+  IDS_ERROR_NOFILETYPE                  "FOUT: Kan het type van het bestand '%s' niet vaststellen."
+  IDS_ERROR_INVALIDPATH                 "FOUT: '%s%s' is geen geldig pad."
+  IDS_ERROR_NOPATH                      "FOUT: Pad '%s%s' bestaat niet."
+  IDS_ERROR_LOADLANGUAGE                "FOUT: Kan geen nieuw woordenboek laden '%s'."
+
+  IDS_WARNING_BADCODEPAGE               "Waarschuwing: Kan codepage %i niet instellen. Tekst kan niet juist afgebeeld worden."
+  IDS_WARNING_DOSQUERYCP                "Waarschuwing: Kan codepage %i niet zeker stellen. Toetsenbord zal de standaard waarde Hebben. DosQueryCp fout %i."
+  IDS_WARNING_CODEPAGENOTACTIVE         "Waarschuwing: Codepage %i (%s) was niet gereed voor het gebruik. Ondersteuning van het toetsenbord zal standaard zijn (codepage %i (%s))."
+
+  IDS_PRINTING                          "Drukt af"
+  IDS_LOADING                           "Laadt"
+
+  IDS_BOLD                              " Bold"          // DO NOT TRANSLATE!
+  IDS_ITALIC                            " Italic"        // DO NOT TRANSLATE!
+
+  IDS_ATTR_NORMAL                       "Normaal"
+  IDS_ATTR_BOLD                         "Vet"
+  IDS_ATTR_ITALIC                       "Schuin"
+  IDS_ATTR_UNDERSCORE                   "Onderlijnd"
+  IDS_ATTR_STRIKEOUT                    "Doorstreept"
+  IDS_ATTR_OUTLINE                      "Hol"
+  IDS_ATTR_CAPS                         "Hoofdletter"
+
+  IDS_UNITS_ENGLISH                     "Alle afmetingen zijn in inches."
+  IDS_UNITS_METRIC                      "Alle afmetingen zijn in centimeters."
+
+  IDS_VERIFY_ERROR1                     "FOUT: Kan bestand '%s' niet openen voor controle."
+  IDS_VERIFY_ERROR2                     "FOUT: Kan geen geheugen krijgen om bestand '%s' te controleren."
+  IDS_VERIFY_ERROR3                     "FOUT: Onjuist bestand '%s' (onjuiste escape codes)."
+  IDS_VERIFY_ERROR4                     "FOUT: Bestand '&s' bevat onjuiste functies."
+  IDS_VERIFY_ERROR5                     "FOUT: Bestand '%s' bevat geen tekens."
+  IDS_VERIFY_ERROR6                     "FOUT: Onjuist bestand '%s' (niet gelijke functie kop/staart codes)."
+  IDS_VERIFY_ERROR7                     "FOUT: Onjuist bestand '%s' (geen preface object)."
+  IDS_VERIFY_ERROR8                     "FOUT: Bestand '%s' komt met geen bestandtype overeen."
+
+  IDS_IMPORT_ERROR1                     "FOUT: Kan bestand '%s' niet openen om te laden."
+  IDS_IMPORT_ERROR2                     "FOUT: Geen geheugen om bestand '%s' te laden."
+
+  IDS_EXPORT_ERROR1                     "FOUT: Kan bestand '%s' niet openen voor opslag."
+  IDS_EXPORT_ERROR2                     "FOUT: Kan niet het hele bestand '%s opslaan."
+
+  IDS_ERROR_SPELL_REPLACE               "FOUT: Vervangende tekst moet aangegeven worden."
+
+  IDS_MARGINS_PAGESIZE                  "Gekozen bladgrootte: "
+  IDS_MARGINS_ERROR0                    "FOUT: Ongeldige margepositie."
+  IDS_MARGINS_ERROR1                    "FOUT: De linkermarge kan niet minder dan %s zijn."
+  IDS_MARGINS_ERROR2                    "FOUT: De rechtermarge kan niet minder zijn dan %s."
+  IDS_MARGINS_ERROR3                    "FOUT: De linker- en rechtermarge overlappen."
+  IDS_MARGINS_ERROR4                    "FOUT: De ondermarge kan niet minder zijn dan %s."
+  IDS_MARGINS_ERROR5                    "FOUT: De bovenmarge kan niet minder zijn dan %s."
+  IDS_MARGINS_ERROR6                    "FOUT: De bovenste en onderste marges overlappen."
+
+  IDS_TABS_MARGINS                      "De huidige marges zijn %s en %s."
+  IDS_TABS_ERROR1                       "FOUT: Ongeldige tab."
+  IDS_TABS_ERROR2                       "FOUT: Tab kan niet voor de linker kantlijn staan."
+  IDS_TABS_ERROR3                       "FOUT: Tab kan niet achter de rechter kantlijn staan."
+  IDS_TABS_ERROR4                       "FOUT: Deze tab bestaat reeds."
+  IDS_TABS_ERROR5                       "FOUT: Een onbestaande tab kan niet gewist worden."
+  IDS_TABS_ERROR6                       "FOUT: De tabulatorlijst is vol."
+
+  IDS_INDENT_MARGINS                    "De huidige marges zijn %s en %s."
+  IDS_INDENT_ERROR1                     "FOUT: Ongeldige inspringafstand."
+  IDS_INDENT_ERROR2                     "FOUT: Inspringen kan niet buiten de rechter kantlijn vallen."
+
+  IDS_BARCODE_ERROR1                    "FOUT: Barcode tekst kan niet leeg zijn."
+  IDS_BARCODE_ERROR2                    "FOUT: Barcode tekst heeft onjuiste tekens."
+  IDS_BARCODE_ERROR3                    "FOUT: CODABAR text must have matching start & end codes."
+  IDS_BARCODE_ERROR4                    "FOUT: CODABAR start/end codes must be A, B, C or D."
+
+  IDS_PRINTER_ERROR0                    "FOUT: Standaard drukkernaam kan niet opgevraagd worden."
+  IDS_PRINTER_ERROR1                    "FOUT: Drukkerkenmerken kunnen niet opgevraagd worden."
+  IDS_PRINTER_ERROR2                    "FOUT: Grootte van drukopdrachtkenmerken kan niet opgevraagd worden."
+  IDS_PRINTER_ERROR3                    "FOUT: Drukopdrachtkenmerken kunnen niet opgevraagd worden.  Status %ld."
+  IDS_PRINTER_ERROR4                    "FOUT: De drukker is niet ingesteld.  Doe dit a.u.b. d.m.v. de instel-pagina."
+  IDS_PRINTER_ERROR5                    "FOUT: Ongeldige naam van het apparaat: '%s'"
+  IDS_PRINTER_ERROR6                    "FOUT: Ongeldige stuurgegevens."
+  IDS_PRINTER_ERROR7                    "FOUT: Ongeldige stuurprogrammanaam: '%s'"
+  IDS_PRINTER_ERROR8                    "FOUT: Ongeldig logisch adres: '%s'"
+  IDS_PRINTER_ERROR9                    "FOUT: DevPostDeviceModes fout %XH"
+
+  IDS_DEFAULTS_PAGE_AUTHOR              "Auteur"
+  IDS_DEFAULTS_PAGE_PRINTER             "Drukker"
+  IDS_DEFAULTS_PAGE_FONT                "Font"
+  IDS_DEFAULTS_PAGE_LAYOUT              "Opmaak"
+  IDS_DEFAULTS_PAGE_NATIONAL            "Taal"
+
+  IDS_DEFAULTS_METRIC1                  "%sx%scm"
+  IDS_DEFAULTS_ENGLISH1                 "%sx%sin"
+  IDS_DEFAULTS_METRIC2                  " (afgeknipt tot %s%s%s-%s%s%s)"
+  IDS_DEFAULTS_ENGLISH2                 " (afgeknipt tot %s%s%s-%s%s%s)"
+
+  IDS_DEFAULTS_ERROR1                   "FOUT: Ongeldige tabafstand."
+  IDS_DEFAULTS_ERROR2                   "FOUT: Er is geen printer ingesteld."
+
+  IDS_ZOOM_ERROR1                       "FOUT: Afbeeldfactor kan niet kleiner zijn dan 10%."
+  IDS_ZOOM_ERROR2                       "FOUT: Afbeeldfactor kan niet groter zijn dan 3000%."
+
+  IDS_SEARCH_ERROR1                     "FOUT: Zoektekst kan niet blank zijn."
+  IDS_SEARCH_ERROR2                     "De vervangende tekst is blank. Bent u er zeker van?"
+  IDS_SEARCH_ERROR3                     "FOUT: Tekst niet gevonden."
+  IDS_SEARCH_ERROR4                     "FOUT: Fout in Booleaanse Regel."
+
+  IDS_HEADER_TOO_LARGE                  "FOUT: Definition too large (%i, max %i)."
+  IDS_HEADER_BAD_FUNCTION               "FOUT: Invalid function '%0.*s'."
+
+  IDS_ZOOM0                             "Wijs naar een hoek van het Beeldvenster en druk de linker muisknop in."
+  IDS_ZOOM1                             "Wijs naar de tegenovergestelde hoek van het Beeldvenster en laat de muisknop los."
+
+  IDS_PASTEGRAPHIC0                     "Wijs naar een hoek van het grafische kader en druk de linker muisknop in."
+  IDS_PASTEGRAPHIC1                     "Wijs naar de tegenovergestelde hoek van het grafische kader en laat de muisknop los"
+
+  IDS_MOVEGRAPHIC                       "Verplaats het grafische kader naar zijn nieuwe positie en laat de muisknop los."
+  IDS_SIZEGRAPHIC                       "Verplaats de rand van het grafische kader naar zijn nieuwe positie en laat de muisknop los."
+  IDS_MOVETEXT                          "Verplaats de tekstaanwijzer naar de nieuwe positie van het tekstblok en laat de muisknop los."
+
+  IDS_DATEFMT_ERROR1                    "FOUT: Ongeldig datumformaat."
+  IDS_DATEFMT_HEADER                    "%"
+  IDS_DATEFMT_YEAR2                     "j"
+  IDS_DATEFMT_YEAR4                     "J"
+  IDS_DATEFMT_MON                       "m"
+  IDS_DATEFMT_MONTH                     "n"
+  IDS_DATEFMT_MONTHS                    "M"
+  IDS_DATEFMT_DAY                       "g"
+  IDS_DATEFMT_WEEKDAY                   "D"
+  IDS_DATEFMT_WKDAY                     "d"
+  IDS_DATEFMT_WEEKDAYS                  "zonmaadinwoedonvrizat"
+  IDS_DATEFMT_DAY0                      "zondag"
+  IDS_DATEFMT_DAY1                      "maandag"
+  IDS_DATEFMT_DAY2                      "dinsdag"
+  IDS_DATEFMT_DAY3                      "woensdag"
+  IDS_DATEFMT_DAY4                      "donderdag"
+  IDS_DATEFMT_DAY5                      "vrijdag"
+  IDS_DATEFMT_DAY6                      "zaterdag"
+  IDS_DATEFMT_MONS                      "janfebmrtaprmeijunjulaugsepoktnovdec"
+  IDS_DATEFMT_MONTH1                    "januari"
+  IDS_DATEFMT_MONTH2                    "februari"
+  IDS_DATEFMT_MONTH3                    "maart"
+  IDS_DATEFMT_MONTH4                    "april"
+  IDS_DATEFMT_MONTH5                    "mei"
+  IDS_DATEFMT_MONTH6                    "juni"
+  IDS_DATEFMT_MONTH7                    "juli"
+  IDS_DATEFMT_MONTH8                    "augustus"
+  IDS_DATEFMT_MONTH9                    "september"
+  IDS_DATEFMT_MONTH10                   "october"
+  IDS_DATEFMT_MONTH11                   "november"
+  IDS_DATEFMT_MONTH12                   "december"
+
+  IDS_SAVING                            "Sla op"
+  IDS_MERGING                           "Voegt samen"
+
+  IDS_OPEN_DOCUMENT                     "Document openen"
+  IDS_MERGE_DOCUMENT                    "Document samenvoegen"
+  IDS_SAVE_DOCUMENT                     "Document opslaan"
+  IDS_OPEN_GRAPHIC                      "Open Grafisch Bestand"
+
+  IDS_SELECTED_FORM                     "Geselecteerde bladgrootte: %s"
+  IDS_POINT                             "pt"
+
+  IDS_REGISTERED_TO                     "Geregistreerd onder "
+  IDS_SERIAL_NUMBER                     "S/N "
+
+  IDS_MORE_PGUP                         "Meer "
+  IDS_MORE_PGDN                         "Meer "
+  IDS_MANAGER                           "~Manager..."
+
+  IDS_EXPAND                            "Verwijd %i%%"
+
+  IDS_CHANGEDATE                        "VeranderDatum"
+  IDS_CURRENTDATE                       "HuidigeDatum"
+  IDS_GRAPHIC                           "Beeld"
+  IDS_FUNCTION                          "functie"
+  IDS_ENDDOCUMENT                       "EindeDocument"
+  IDS_ENDPAGE                           "EindeBladzijde"
+  IDS_ENDLINE                           "EindLijn"
+  IDS_TAB                               "Tab"
+  IDS_SPACE                             "Spatie"
+  IDS_HYPHEN                            "Hyphen"
+  IDS_CHAR                              "Teken"
+  IDS_CURSOR                            "Aanwijzer:"
+  IDS_DORMANT                           "Slapende"
+
+  IDS_ON                                "AAN"
+  IDS_OFF                               "UIT"
+
+  IDS_INLINE                            "InLijn"
+  IDS_LEFTEDGE                          "LinkerKant"
+  IDS_RIGHTEDGE                         "RechterKant"
+  IDS_BOTTOMEDGE                        "OnderKant"
+  IDS_TOPEDGE                           "BovenKant"
+  IDS_LEFTMARGIN                        "LinkerMarge"
+  IDS_RIGHTMARGIN                       "RechterMarge"
+  IDS_BOTTOMMARGIN                      "OnderMarge"
+  IDS_TOPMARGIN                         "BovenMarge"
+  IDS_CENTERED                          "Gecentreerd"
+  IDS_EDGETOEDGE                        "KantTotKant"
+  IDS_MARGINTOMARGIN                    "MargeTotMarge"
+
+  IDS_BITMAP                            "Bitmap"
+  IDS_METAFILE                          "Metafile"
+  IDS_UPCA                              "UPC-A BarCode"
+  IDS_UPCE                              "UPC-E BarCode"
+  IDS_CODE39                            "Code-39 BarCode"
+  IDS_POSTNET                           "POSTNET BarCode"
+  IDS_EAN8                              "EAN-8 BarCode"
+  IDS_EAN13                             "EAN-13 BarCode"
+  IDS_CODABAR                           "Codabar Barcode"
+  IDS_CODE2OF5                          "Code 2 of 5 Barcode"
+  IDS_CODE128                           "Code-128 Barcode"
+
+  IDS_FN_VERSION                        "Uitgave: %s"
+  IDS_FN_PREFACE                        "Voorwoord"
+  IDS_FN_PRINTER                        "Drukker: %s"
+  IDS_FN_FORM                           "Vorm: %s"
+  IDS_FN_CODEPAGE                       "CodePage: %i"
+  IDS_FN_FONT                           "Lettertype: %s"
+  IDS_FN_SIZE                           "Grootte: %s"
+  IDS_FN_COLOR                          "Kleur: %06X"
+  IDS_FN_FILLCOLOR                      "Vulkleur: %06X"
+  IDS_FN_BOLD                           "Vet: %s"
+  IDS_FN_ITALIC                         "Schuin: %s"
+  IDS_FN_UNDERSCORE                     "Onderlijnd: %s"
+  IDS_FN_STRIKEOUT                      "Doorstreept: %s"
+  IDS_FN_OUTLINE                        "Hol: %s"
+  IDS_FN_CAPS                           "Hoofdletters: %s"
+  IDS_FN_EXPAND                         "Verwijd: %i%%"
+  IDS_FN_TOPMARGIN                      "BovenMarge: %s"
+  IDS_FN_BOTTOMMARGIN                   "OnderMarge: %s"
+  IDS_FN_LEFTMARGIN                     "LinkerMarge: %s"
+  IDS_FN_RIGHTMARGIN                    "RechterMarge: %s"
+  IDS_FN_LEFTJUSTIFY                    "LinksLijn"
+  IDS_FN_CENTERJUSTIFY                  "Centreer"
+  IDS_FN_RIGHTJUSTIFY                   "RechtsLijn"
+  IDS_FN_FULLJUSTIFY                    "VolledigUitlijnen"
+  IDS_FN_CENTERPAGE                     "CentreerPagina: %s"
+  IDS_FN_TABSET                         "TabGezet: %s"
+  IDS_FN_TABCLEAR                       "TabSchoon: %s"
+  IDS_FN_TABSPACING                     "TabAfstand: %s"
+  IDS_FN_INDENT                         "Sprong: %s"
+  IDS_FN_METRIC                         "Metrisch"
+  IDS_FN_GRAPHIC                        "Grafisch: %s%s%s (%sx%s) %s"
+  IDS_FN_DATEFIXED                      "VasteDatum: %s"
+  IDS_FN_DATECURRENT                    "HuidigeDatum"
+  IDS_FN_DATECHANGED                    "VeranderDatum: %s"
+  IDS_FN_DATEFORMAT                     "DatumFormaat: %s"
+  IDS_FN_LINESPACING                    "LijnSpatie: %i%%"
+  IDS_FN_JOBSETTINGS                    "TaakInstellingen"
+  IDS_FN_PAGENUMBER                     "PaginaNummer"
+  IDS_FN_PAGECOUNT                      "PaginaTelling"
+  IDS_FN_LINEWIDTH                      "Lijndikte: %s"
+  IDS_FN_LINEEND                        "EindLijn: %i"
+  IDS_FN_LINEJOIN                       "VoegLijn: %i"
+  IDS_FN_FILLTYPE                       "Vultype: %i"
+  IDS_FN_GLYPH                          "Samenstelling: 0x%02X '%c'"
+  IDS_FN_AUTHOR                         "Auteur: %s"
+  IDS_FN_CREATEDATE                     "Aanmaakdatum: %s"
+  IDS_FN_COMMENT                        "Commentaar: %0.40s%s"
+  IDS_FN_SEPARATOR                      "Scheiding"
+  IDS_FN_TITLE                          "Titel: %0.40s%s"
+  IDS_FN_HEADER                         "Kop: %0.40s%s"
+  IDS_FN_FOOTER                         "Voet: %0.40s%s"
+
+  IDS_ALL_DOCUMENTS                     "<Alle Documenten Bestanden>"
+  IDS_ALL_GRAPHICS                      "<Alle Grafische Bestanden>"
+
+  IDS_WINDOW_BY_ME_NODATE               "%s"
+  IDS_WINDOW_BY_ME                      "%s, aangemaakt %s"
+  IDS_WINDOW_BY_OTHER                   "%s door %s, aangemaakt %s"
+
+  IDS_GOTOPAGE_ERROR1                   "Pagina moet 1 tot %i zijn."
+
+  IDS_METAFILE_VERIFY1                  "FOUT: Metabestand '%s' kan niet geopend worden voor geldigheid."
+  IDS_METAFILE_VERIFY2                  "FOUT: Metabestand '%s' is te kort."
+  IDS_METAFILE_VERIFY3                  "FOUT: Metabestand '%s' kop kan niet nagegaan worden."
+  IDS_METAFILE_VERIFY4                  "FOUT: Metabestand '%s' heeft ongeldige kop."
+
+  IDS_BUBBLE_FONT                       "8.Helv"
+  IDS_BUBBLE_TOP                        "Move to start of document"
+  IDS_BUBBLE_PAGEUP                     "Page up"
+  IDS_BUBBLE_PAGEDOWN                   "Page down"
+  IDS_BUBBLE_BOTTOM                     "Move to end of document"
+}
+
+STRINGTABLE
+{
+  IDS_OK                                " ~OK "
+  IDS_CANCEL                            " Esc=Cancel "
+  IDS_ABORT                             " Verlaat "
+  IDS_RETRY                             " Probeer "
+  IDS_IGNORE                            " Vergeet "
+  IDS_YES                               " ~Ja "
+  IDS_NO                                " ~Nee "
+  IDS_HELP                              " F1=Hulp "
+  IDS_ENTER                             " Enter "
+}
+
+STRINGTABLE
+{
+  IDS_FDLG_FILENAME_TXT1                "Open bestandnaam:"
+  IDS_FDLG_FILENAME_TXT2                "Berg bestandnaam op:"
+  IDS_FDLG_DRIVE_TXT                    "Station:"
+  IDS_FDLG_FILTER_TXT                   "Bestandtype:"
+  IDS_FDLG_DIRECTORY_TXT                "Directory:"
+  IDS_FDLG_FILES_TXT                    "Bestand:"
+  IDS_FDLG_HELP_PB                      "F1=Hulp"
+  IDS_FDLG_APPLY_PB                     "~Pas toe"
+  IDS_FDLG_OK_PB1                       "~Open"
+  IDS_FDLG_OK_PB2                       "~Berg op"
+  IDS_FDLG_CANCEL_PB                    "Esc=Cancel"
+}
+
+STRINGTABLE
+{
+  IDS_CODEPAGES+37                      "Brazilaans/Portugees / U.S. Engels (EBCDIC)"
+  IDS_CODEPAGES+273                     "Oostenrijks/Duits (EBCDIC)"
+  IDS_CODEPAGES+274                     "Belgisch (old EBCDIC)"
+  IDS_CODEPAGES+277                     "Deens / Noors (EBCDIC)"
+  IDS_CODEPAGES+278                     "Fins / Zweeds (EBCDIC)"
+  IDS_CODEPAGES+280                     "Italiaans (EBCDIC)"
+  IDS_CODEPAGES+282                     "Portugees (old EBCDIC)"
+  IDS_CODEPAGES+284                     "Spaans (EBCDIC)"
+  IDS_CODEPAGES+285                     "U.K. Engels (EBCDIC)"
+  IDS_CODEPAGES+290                     "<Onbekend>"
+  IDS_CODEPAGES+297                     "Frans (EBCDIC)"
+  IDS_CODEPAGES+300                     "<Onbekend>"
+  IDS_CODEPAGES+301                     "<Onbekend>"
+  IDS_CODEPAGES+420                     "<Onbekend>"
+  IDS_CODEPAGES+424                     "<Onbekend>"
+  IDS_CODEPAGES+437                     "United States (IBM PC)"
+  IDS_CODEPAGES+500                     "Belgisch / Internationaal (EBCDIC)"
+  IDS_CODEPAGES+803                     "<Onbekend>"
+  IDS_CODEPAGES+813                     "Grieks"
+  IDS_CODEPAGES+819                     "Veeltalig (ISO-8859/1)"
+  IDS_CODEPAGES+835                     "<Onbekend>"
+  IDS_CODEPAGES+850                     "Veeltalig (Latin1)"
+  IDS_CODEPAGES+852                     "Slavisch (Latin2)"
+  IDS_CODEPAGES+855                     "Servisch / Montengrijns / Macedonies / Bulgaria"
+  IDS_CODEPAGES+857                     "Turks"
+  IDS_CODEPAGES+860                     "Portugerues"
+  IDS_CODEPAGES+861                     "IJslands"
+  IDS_CODEPAGES+862                     "Hebreeuws"
+  IDS_CODEPAGES+863                     "Frans-Canadees"
+  IDS_CODEPAGES+864                     "Arabisch"
+  IDS_CODEPAGES+865                     "Deens / Noors"
+  IDS_CODEPAGES+866                     "Russisch"
+  IDS_CODEPAGES+869                     "Grieks"
+  IDS_CODEPAGES+870                     "Tsecho-Slowaaks/ Hongaars/ Pools/ Joegoslavisch (EBCDIC)"
+  IDS_CODEPAGES+871                     "IJslands (EBCDIC)"
+  IDS_CODEPAGES+874                     "Thailands"
+  IDS_CODEPAGES+897                     "<Onbekend>"
+  IDS_CODEPAGES+915                     "Bulgaars / Macedonies"
+  IDS_CODEPAGES+932                     "Japans (Shift JIS X-0208)"
+  IDS_CODEPAGES+934                     "Koreaans"
+  IDS_CODEPAGES+936                     "Eenvoudig Chinees"
+  IDS_CODEPAGES+938                     "Traditioneel Chinees"
+  IDS_CODEPAGES+942                     "Japans (SAA)"
+  IDS_CODEPAGES+944                     "Koreaans (SAA)"
+  IDS_CODEPAGES+946                     "Eenvoudig Chinees (SAA)"
+  IDS_CODEPAGES+948                     "Traditioneel Chinees (SAA)"
+  IDS_CODEPAGES+949                     "Koreaans (Shift KSC 5601)"
+  IDS_CODEPAGES+950                     "Traditioneel Chinees (Big5)"
+  IDS_CODEPAGES+1004                    "Desktop Publishing"
+  IDS_CODEPAGES+1026                    "Turks (EBCDIC)"
+  IDS_CODEPAGES+1027                    "<Onbekend>"
+  IDS_CODEPAGES+1041                    "<Onbekend>"
+  IDS_CODEPAGES+1112                    "<Onbekend>"
+  IDS_CODEPAGES+1122                    "<Onbekend>"
+  IDS_CODEPAGES+1200                    "Unicode"
+  IDS_CODEPAGES+1250                    "Windows, Latin-2 (Eastern European)"
+  IDS_CODEPAGES+1251                    "Windows, Cyrillisch"
+  IDS_CODEPAGES+1252                    "Windows, Veeltalig (ANSI)"
+  IDS_CODEPAGES+1253                    "Windows, Grieks"
+  IDS_CODEPAGES+1254                    "Windows, Turks"
+  IDS_CODEPAGES+1255                    "Windows, Hebreeuws"
+  IDS_CODEPAGES+1256                    "Windows, Arabisch"
+  IDS_CODEPAGES+1275                    "<Onbekend>"
+  IDS_CODEPAGES+1302                    "<Onbekend>"
+}
+
+STRINGTABLE
+{
+  IDS_HMERR                            "Fout in hulpbeheerder"
+  IDS_HMERR_EXTHELPUNDEFINED           "Uitgebreide hulp bestaat niet."
+  IDS_HMERR_NO_FRAME_WND_IN_CHAIN      "Geen kadervenster in rij."
+  IDS_HMERR_INVALID_ASSOC_APP_WND      "Ongeldige vensteridentificatie toegekend."
+  IDS_HMERR_INVALID_ASSOC_HELP_IN      "Ongeldige hulpidentificatie toegekend."
+  IDS_HMERR_INVALID_DESTROY_HELP_      "Ongeldige vensteridentificatie om te verwijderen."
+  IDS_HMERR_NO_HELP_INST_IN_CHAIN      "Geen hulpidentificatie in vensterrij."
+  IDS_HMERR_INVALID_HELP_INSTANCE      "Ongeldige hulpidentificatie."
+  IDS_HMERR_INVALID_QUERY_APP_WND      "Ongeldige toepassingsvensteridentificatie bij navraag."
+  IDS_HMERR_HELP_INST_CALLED_INVA      "Gebruikte hulpidentificatie ongeldig."
+  IDS_HMERR_HELPTABLE_UNDEFINE         "Hulptabel bestaat niet."
+  IDS_HMERR_HELP_INSTANCE_UNDEFIN      "Hulpidentificatie bestaat niet."
+  IDS_HMERR_HELPITEM_NOT_FOUND         "Hulpthema niet gevonden."
+  IDS_HMERR_INVALID_HELPSUBITEM_S      "Ongeldige grootte van hulponderthema."
+  IDS_HMERR_HELPSUBITEM_NOT_FOUND      "Hulponderthema niet gevonden."
+  IDS_HMERR_INDEX_NOT_FOUND            "Geen index in bibliotheekbestand."
+  IDS_HMERR_CONTENT_NOT_FOUND          "Inhoudstabel niet gevonden."
+  IDS_HMERR_OPEN_LIB_FILE              "Hulpbibliotheek kan niet geopend worden."
+  IDS_HMERR_READ_LIB_FILE              "Hulpbibliotheek kan niet gelezen worden."
+  IDS_HMERR_CLOSE_LIB_FILE             "Hulpbibliotheek kan niet gesloten worden."
+  IDS_HMERR_INVALID_LIB_FILE           "Hulpbibliotheek heeft ongeldig formaat."
+  IDS_HMERR_NO_MEMORY                  "Geheugentekort."
+  IDS_HMERR_ALLOCATE_SEGMENT           "Geheugensegment kan niet gereserveerd worden."
+  IDS_HMERR_FREE_MEMORY                "Geheugen kan niet vrijgegeven worden."
+  IDS_HMERR_PANEL_NOT_FOUND            "Hulppaneel niet gevonden."
+  IDS_HMERR_DATABASE_NOT_OPEN          "Hulpdatabase niet geopend."
+  IDS_HMERR_UNKNOWN                    "--- Onbekende fout ---"
+  IDS_HELPMODE_FRAME                   "Kader"
+  IDS_HELPMODE_MENU                    "Menu"
+  IDS_HELPMODE_WINDOW                  "Venster"
+  IDS_HELPMODE_UNKNOWN                 "Onbekend"
+  IDS_HELPSUBITEMNOTFOUND              "Hulponderthema niet gevonden: Werkwijze='%s' Thema=%u Onderthema=%u"
+}

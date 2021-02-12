@@ -1,0 +1,31 @@
+# Build Japanese language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+Japanese: $*.dll $*.hlp $*.inf
+
+Japanese.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+Japanese.hlp: Japanese\Japanese.ipf Escriba.H Escriba.BMP \
+  Japanese\About.bmp    Japanese\BarCode.bmp  Japanese\ConfigEx.bmp Japanese\DateFmt.bmp  \
+  Japanese\Default0.bmp Japanese\Default1.bmp Japanese\Default2.bmp Japanese\Default3.bmp \
+  Japanese\Default4.bmp Japanese\Default5.bmp Japanese\FileDlg.bmp  Japanese\Indent.bmp   \
+  Japanese\Margins.bmp  Japanese\Prefer.bmp   Japanese\Profile.bmp  Japanese\Search.bmp   \
+  Japanese\Spell.bmp    Japanese\Tabs.bmp     Japanese\ZoomSet.bmp
+  Copy $(IPFC)\APSYMBOL.APS $(IPFC)\DEFAULT.APS
+  Copy $(IPFC)\APSY0932.APS $(IPFC)\APSYMBOL.APS
+  ipfcomp /D:81 /C:932 /L:JPN Japanese\Japanese.ipf
+  Copy $(IPFC)\DEFAULT.APS $(IPFC)\APSYMBOL.APS
+  Erase $(IPFC)\DEFAULT.APS
+
+Japanese.dll: Japanese\Japanese.def Japanese\Japanese.res dll.obj
+  link386 /nologo dll, Japanese.dll /align:16, nul,, Japanese\Japanese ;
+  rc -n Japanese\Japanese.res $*.dll
+  eautil /s Japanese.dll
+  erase eas\*.dll
+  rd eas
+
+Japanese\Japanese.res: Japanese\Japanese.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 81 -cp 932 -d __OS2__ -i . -i ..\runtime -r Japanese\Japanese
+

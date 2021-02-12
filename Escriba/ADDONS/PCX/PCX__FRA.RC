@@ -1,0 +1,63 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Pcx.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PCX",                //   Application Name.
+  "Franáais",           //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: janvier, fÇvrier, mars, avril, mai, juin,                        *
+ *   juillet, aoñt, septembre, octobre, novembre, dÇcembre.                 *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "PCX"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0,97"                                       0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 dÇcembre 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Module d'importation de graphiques PCX pour Escriba",0,  10, 62, 220,  8
+    CTEXT "Copyright ∏ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet : rpapo@msen.com"                           0,  10, 46, 220,  8
+    CTEXT "WWW : http://www.msen.com/~rpapo"                    0,  10, 38, 220,  8
+    CTEXT "Version franáaise"                                   0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~Ok"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "Module d'importation de graphique PCX"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "Aide 'Graphique PCX' "
+  IDS_ERROR_CREATEHELP                  "Erreur : Impossible d'initialiser l'aide.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "Erreur (PCX) : Impossible d'ouvrir le fichier %s pour le vÇrifier."
+  IDS_ERROR_FILE_TOO_SMALL              "Erreur (PCX) : Fichier incorrect. Trop petit."
+  IDS_ERROR_INVALID_FILE_ID             "Erreur (PCX) : Signature incorrecte."
+  IDS_ERROR_PLANAR                      "Erreur (PCX) : Fichiers de plusieurs plans non reconnus."
+  IDS_ERROR_INVALID_PALETTE             "Erreur (PCX) : Fichier incorrect, la palette n'est pas au bon endroit."
+  IDS_ERROR_INVALID_PALETTE_SIZE        "Erreur (PCX) : Taille de palette non gÇrÇe (%i entrÇes)."
+  IDS_ERROR_MEMORY1                     "Erreur (PCX) : Impossible d'allouer un tampon pour l'image."
+  IDS_ERROR_MEMORY2                     "Erreur (PCX) : Impossible d'allouer la mÇmoire pour l'en-tàte."
+  IDS_ERROR_DC_OPEN                     "Erreur (PCX) : Impossible d'ouvrir un contexte de pÇriphÇrique mÇmoire. êtat %i."
+  IDS_ERROR_PS_CREATE                   "Erreur (PCX) : Impossible de crÇer l'espace de prÇsentation mÇmoire. êtat %i."
+  IDS_ERROR_CREATE_BITMAP               "Erreur (PCX) : Impossible de crÇer le bitmap. êtat %i."
+  IDS_ERROR_OPEN_FOR_LOAD               "Erreur (PCX) : Impossible d'ouvrir le fichier '%s' pour le charger."
+  IDS_ERROR_MEMORY3                     "Erreur (PCX) : Impossible d'allouer la mÇmoire oó charger un bloc. %i octets requis."
+}

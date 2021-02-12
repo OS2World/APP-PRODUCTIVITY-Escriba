@@ -1,0 +1,111 @@
+# Build RTF addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: RTF.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+RTF.DLL : RTF.OBJ RTF.H RTF.RES 
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"RTF.DLL" /Fm"RTF.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB RTF.DEF
+RTF.OBJ
+<<
+  RC -n RTF.RES RTF.DLL
+  dllrname RTF.dll dde4mbs=Esc_CRT
+  If Exist RTF.DLX Erase RTF.DLX
+  FXSTRIP RTF.DLL
+
+{.}.rc.res:
+   RC -n -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF.obj : RTF.cpp RTF.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\canvas.h ..\..\..\runtime\controls.h \
+  ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h ..\..\..\runtime\eattr.h ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h \
+  ..\..\..\runtime\module.h ..\..\..\runtime\profile.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: RTF__DEU.dll RTF__DEU.hlp 
+
+RTF__DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF__DEU.res : $*.rc RTF.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -n -cc 49 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+RTF__DEU.hlp: $*.ipf RTF.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: RTF__ENU.dll RTF__ENU.hlp 
+
+RTF__ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF__ENU.res : $*.rc RTF.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -n -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+RTF__ENU.hlp: $*.ipf RTF.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: RTF__ESP.dll RTF__ESP.hlp 
+
+RTF__ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF__ESP.res : $*.rc RTF.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -n -cc 34 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+RTF__ESP.hlp: $*.ipf RTF.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: RTF__FRA.dll RTF__FRA.hlp 
+
+RTF__FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF__FRA.res : $*.rc RTF.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -n -cc 33 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+RTF__FRA.hlp: $*.ipf RTF.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: RTF__NLD.dll RTF__NLD.hlp 
+
+RTF__NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc -n $*.res $*.dll
+
+RTF__NLD.res : $*.rc RTF.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -n -cc 31 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+RTF__NLD.hlp: $*.ipf RTF.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

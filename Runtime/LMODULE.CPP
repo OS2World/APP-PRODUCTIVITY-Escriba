@@ -41,7 +41,7 @@ LanguageModule::LanguageModule ( char *appname, char *Name ) : Module(Name), Lan
 
    // Save the language name.
    PCHAR language = AppName + strlen(AppName) + 1 ;
-   Language = (char*) malloc ( strlen(language) + 1 ) ;
+   Language = new char [ strlen(language) + 1 ] ;
    strcpy ( Language, language ) ;
 
    // Save the list of valid codepages.
@@ -50,13 +50,15 @@ LanguageModule::LanguageModule ( char *appname, char *Name ) : Module(Name), Lan
    while ( *pus ) {
       pus ++ ;
    } /* endwhile */
-   Codepages = PUSHORT ( malloc ( (pus-pCodePage+1)*sizeof(USHORT) ) ) ;
+   Codepages = new USHORT [ pus - pCodePage + 1 ] ;
    memcpy ( Codepages, pCodePage, (pus-pCodePage+1)*sizeof(USHORT) ) ;
 }
 
 LanguageModule::~LanguageModule ( ) {
-   if ( Language ) free ( Language ) ;
-   if ( Codepages ) free ( Codepages ) ;
+   if ( Language ) 
+      delete [] Language, Language = 0 ;
+   if ( Codepages ) 
+      delete [] Codepages, Codepages = 0 ;
 }
 
 /****************************************************************************
@@ -94,14 +96,14 @@ extern LanguageModule *Language_Create ( char *Application, char *Revision, int 
          // Is it a valid language DLL?  Continue if not.
          LanguageModule *Library = new LanguageModule ( Application, Found.achName ) ;
          if ( Library->QueryHandle() == 0 ) {
-            delete Library ;
+            delete Library, Library = 0 ;
             continue ;
          } /* endif */
 
          // If the revision right?  Continue if not.
          ResourceString revision ( Library->QueryHandle(), RevisionID, __FILE__, __LINE__ ) ;
          if ( strcmp ( PCHAR(revision), Revision ) ) {
-            delete Library ;
+            delete Library, Library = 0 ;
             continue ;
          } /* endif */
 
@@ -113,7 +115,7 @@ extern LanguageModule *Language_Create ( char *Application, char *Revision, int 
          strcpy ( Languages[LanguageCount], Library->QueryLanguage() ) ;
          strcpy ( Libraries[LanguageCount], Found.achName ) ;
          LanguageCount ++ ;
-         delete Library ;
+         delete Library, Library = 0 ;
          if ( LanguageCount >= sizeof(Languages)/sizeof(Languages[0]) )
             break ;
 
@@ -183,7 +185,7 @@ extern BOOL _SetLanguage ( char *Application, char *Revision, int RevisionID, ch
    LanguageModule *NewLibrary = Language_Create ( Application, Revision, RevisionID, Language, Wildcard ) ;
    if ( NewLibrary ) {
       if ( Library ) 
-         delete Library ;
+         delete Library, Library = 0 ;
       Library = NewLibrary ;
    } /* endif */
 

@@ -1,0 +1,8 @@
+;
+;       GIF__ENU: CompuServe GIF Graphic Import Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'GIF__ENU: CompuServe GIF Graphic Import Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

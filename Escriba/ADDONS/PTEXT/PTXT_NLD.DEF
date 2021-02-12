@@ -1,0 +1,8 @@
+;
+;       PTXT_NLD: Plain Text Import/Export Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'PTXT_NLD: Plain Text Import/Export Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

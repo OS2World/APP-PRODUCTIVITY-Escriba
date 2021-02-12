@@ -1,0 +1,908 @@
+addons.obj: \
+	addons.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\restring.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	external.h \
+	hrtimer.h \
+	imp_exp.h \
+	module.h \
+	thread.h
+
+barcodes.obj: \
+	barcodes.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	barcodes.h \
+	dialog2.h \
+	escriba.h \
+	module.h
+
+datefmt.obj: \
+	datefmt.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	datefmt.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	hrtimer.h \
+	module.h
+
+debug.obj: \
+	debug.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\restring.h \
+	..\runtime\system.h \
+	debug.h \
+	escriba.h \
+	hrtimer.h \
+	module.h
+
+defaults.obj: \
+	defaults.cpp \
+	..\ispeller\ispeller.h \
+	..\runtime\cirqueue.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\pool.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	datefmt.h \
+	debug.h \
+	defaults.h \
+	device.h \
+	dialog2.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	font.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	indent.h \
+	margins.h \
+	module.h \
+	painter.h \
+	printer.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	txtblock.h \
+	workpage.h \
+	wrkspace.h
+
+device.obj: \
+	device.cpp \
+	..\runtime\mutex.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	hrtimer.h \
+	printer.h
+
+dialog2.obj: \
+	dialog2.cpp \
+	..\runtime\eattr.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	workpage.h \
+	wrkspace.h
+
+docframe.obj: \
+	docframe.cpp \
+	..\ispeller\ispeller.h \
+	..\runtime\controls.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	debug.h \
+	docframe.h \
+	docparms.h \
+	document.h \
+	docwin.h \
+	escriba.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	hruler.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	static.h \
+	text.h \
+	vruler.h \
+	workpage.h \
+	wrkspace.h
+
+docparms.obj: \
+	docparms.cpp \
+	..\runtime\crc.h \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	datefmt.h \
+	debug.h \
+	docparms.h \
+	escriba.h \
+	external.h \
+	hrtimer.h \
+	module.h \
+	printer.h \
+	register.h \
+	state.h
+
+docsup.obj: \
+	docsup.cpp \
+	..\runtime\event.h \
+	..\runtime\mutex.h \
+	..\runtime\pool.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	datefmt.h \
+	device.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	external.h \
+	font.h \
+	format.h \
+	imp_exp.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	txtblock.h \
+	workpage.h \
+	wrkspace.h
+
+document.obj: \
+	document.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	datefmt.h \
+	debug.h \
+	dialog2.h \
+	docframe.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	escriba.h \
+	except.h \
+	external.h \
+	format.h \
+	gclass.h \
+	hourglas.h \
+	hrtimer.h \
+	hruler.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	printer.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	thread.h \
+	txtblock.h \
+	vruler.h \
+	workpage.h \
+	wrkspace.h
+
+docwin.obj: \
+	docwin.cpp \
+	..\ispeller\ispeller.h \
+	..\runtime\dialog.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	barcodes.h \
+	datefmt.h \
+	debug.h \
+	device.h \
+	dialog2.h \
+	docframe.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	docwin.h \
+	escriba.h \
+	external.h \
+	font.h \
+	format.h \
+	hrtimer.h \
+	hruler.h \
+	imp_exp.h \
+	indent.h \
+	margins.h \
+	menubmp.h \
+	module.h \
+	painter.h \
+	printer.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	search.h \
+	setzoom.h \
+	speller.h \
+	state.h \
+	tabs.h \
+	text.h \
+	thread.h \
+	vruler.h \
+	workpage.h \
+	wrkspace.h
+
+escriba.obj: \
+	escriba.cpp \
+	..\ispeller\ispeller.h \
+	..\runtime\controls.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\sharemem.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	except.h \
+	external.h \
+	hrtimer.h \
+	main.h \
+	module.h \
+	process.h \
+	profile2.h \
+	speller.h
+
+except.obj: \
+	except.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	escriba.h \
+	except.h \
+	hrtimer.h \
+	module.h
+
+font.obj: \
+	font.cpp \
+	..\runtime\system.h \
+	debug.h \
+	font.h \
+	hrtimer.h
+
+format.obj: \
+	format.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\pool.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	datefmt.h \
+	debug.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	escriba.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	segment.h \
+	speller.h \
+	state.h \
+	text.h \
+	thread.h \
+	workpage.h \
+	wrkspace.h
+
+frame.obj: \
+	frame.cpp \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	frame.h
+
+gclass.obj: \
+	gclass.cpp \
+	gclass.h \
+	text.h
+
+hruler.obj: \
+	hruler.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	escriba.h \
+	font.h \
+	hrtimer.h \
+	hruler.h \
+	module.h \
+	profile2.h \
+	state.h \
+	wrkspace.h
+
+imp_exp.obj: \
+	imp_exp.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	format.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	workpage.h \
+	wrkspace.h
+
+indent.obj: \
+	indent.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	hrtimer.h \
+	hruler.h \
+	indent.h \
+	module.h \
+	profile2.h \
+	state.h
+
+main.obj: \
+	main.cpp \
+	..\runtime\crc.h \
+	..\runtime\dialog.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	..\runtime\window.h \
+	addons.h \
+	datefmt.h \
+	debug.h \
+	defaults.h \
+	device.h \
+	dialog2.h \
+	docframe.h \
+	docparms.h \
+	document.h \
+	docwin.h \
+	escriba.h \
+	external.h \
+	font.h \
+	format.h \
+	frame.h \
+	hourglas.h \
+	hrtimer.h \
+	imp_exp.h \
+	main.h \
+	menubmp.h \
+	module.h \
+	painter.h \
+	prefer.h \
+	printer.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	register.h \
+	speller.h \
+	state.h \
+	text.h \
+	thread.h \
+	workpage.h \
+	wrkspace.h
+
+margins.obj: \
+	margins.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	defaults.h \
+	dialog2.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	hruler.h \
+	imp_exp.h \
+	margins.h \
+	module.h \
+	painter.h \
+	printer.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	vruler.h \
+	workpage.h \
+	wrkspace.h
+
+menubmp.obj: \
+	menubmp.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\restring.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	font.h \
+	format.h \
+	hourglas.h \
+	hrtimer.h \
+	imp_exp.h \
+	menubmp.h \
+	module.h \
+	painter.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	thread.h \
+	workpage.h \
+	wrkspace.h
+
+module.obj: \
+	module.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\system.h \
+	debug.h \
+	hrtimer.h \
+	module.h \
+	process.h
+
+painter.obj: \
+	painter.cpp \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	device.h \
+	docparms.h \
+	document.h \
+	escriba.h \
+	external.h \
+	font.h \
+	format.h \
+	imp_exp.h \
+	module.h \
+	painter.h \
+	process.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	thread.h \
+	workpage.h \
+	wrkspace.h
+
+prefer.obj: \
+	prefer.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	hrtimer.h \
+	module.h \
+	prefer.h
+
+printer.obj: \
+	printer.cpp \
+	..\runtime\mutex.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	hrtimer.h \
+	printer.h
+
+process.obj: \
+	process.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	escriba.h \
+	hrtimer.h \
+	module.h \
+	process.h
+
+profile2.obj: \
+	profile2.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\profile.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	docparms.h \
+	escriba.h \
+	hrtimer.h \
+	module.h \
+	printer.h \
+	profile2.h
+
+readers.obj: \
+	readers.cpp \
+	..\runtime\system.h \
+	readers.h
+
+search.obj: \
+	search.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	dialog2.h \
+	escriba.h \
+	gclass.h \
+	module.h \
+	profile2.h \
+	search.h \
+	text.h
+
+segment.obj: \
+	segment.cpp \
+	..\runtime\event.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	external.h \
+	format.h \
+	imp_exp.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	segment.h \
+	speller.h \
+	state.h \
+	text.h \
+	workpage.h \
+	wrkspace.h
+
+seticons.obj: \
+	seticons.cpp \
+	..\runtime\eattr.h \
+	..\runtime\helpwin.h \
+	..\runtime\system.h \
+	escriba.h \
+	external.h \
+	module.h
+
+setzoom.obj: \
+	setzoom.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	hrtimer.h \
+	module.h \
+	setzoom.h
+
+speller.obj: \
+	speller.cpp \
+	..\ispeller\ispeller.h \
+	..\runtime\event.h \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	document.h \
+	escriba.h \
+	hrtimer.h \
+	module.h \
+	speller.h \
+	thread.h
+
+state.obj: \
+	state.cpp \
+	..\runtime\crc.h \
+	..\runtime\event.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	datefmt.h \
+	debug.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	painter.h \
+	printer.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	workpage.h \
+	wrkspace.h
+
+static.obj: \
+	static.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	escriba.h \
+	font.h \
+	hrtimer.h \
+	module.h \
+	profile2.h \
+	state.h \
+	static.h \
+	wrkspace.h
+
+tabs.obj: \
+	tabs.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\restring.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	addons.h \
+	debug.h \
+	dialog2.h \
+	escriba.h \
+	hrtimer.h \
+	hruler.h \
+	module.h \
+	profile2.h \
+	state.h \
+	tabs.h
+
+text.obj: \
+	text.cpp \
+	..\runtime\event.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	txtblock.h \
+	workpage.h \
+	wrkspace.h
+
+thread.obj: \
+	thread.cpp \
+	..\runtime\system.h \
+	debug.h \
+	except.h \
+	hrtimer.h \
+	thread.h
+
+txtblock.obj: \
+	txtblock.cpp \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	hrtimer.h \
+	txtblock.h
+
+up_date.obj: \
+	up_date.cpp
+
+vruler.obj: \
+	vruler.cpp \
+	..\runtime\helpwin.h \
+	..\runtime\mutex.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	debug.h \
+	device.h \
+	escriba.h \
+	font.h \
+	hrtimer.h \
+	module.h \
+	profile2.h \
+	state.h \
+	vruler.h \
+	wrkspace.h
+
+workpage.obj: \
+	workpage.cpp \
+	..\runtime\crc.h \
+	..\runtime\event.h \
+	..\runtime\string_.h \
+	..\runtime\support.h \
+	..\runtime\system.h \
+	datefmt.h \
+	debug.h \
+	docparms.h \
+	docsup.h \
+	document.h \
+	external.h \
+	format.h \
+	hrtimer.h \
+	imp_exp.h \
+	painter.h \
+	profile2.h \
+	readers.h \
+	speller.h \
+	state.h \
+	text.h \
+	workpage.h \
+	wrkspace.h
+
+wrkspace.obj: \
+	wrkspace.cpp \
+	..\runtime\mutex.h \
+	..\runtime\system.h \
+	device.h \
+	font.h \
+	state.h \
+	wrkspace.h
+
+escriba.res: \
+	escriba.rc \
+	..\runtime\helpwin.h \
+	..\runtime\system.h \
+	escriba.h \
+	module.h
+

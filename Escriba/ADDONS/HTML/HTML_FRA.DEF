@@ -1,0 +1,8 @@
+;
+;       HTML_FRA: HTML Import/Export Module for Escriba (Fran‡ais)
+;
+LIBRARY 
+DESCRIPTION 'HTML_FRA: HTML Import/Export Module for Escriba (Fran‡ais)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

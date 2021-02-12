@@ -1,0 +1,236 @@
+
+ html
+
+ Start         Length     Name                   Class
+ 0001:00000000 000007874H CODE32                 CODE 32-bit
+               at offset 00000000 07528H bytes from HTML.OBJ (E:\Projects\Escriba\ADDONS\HTML\HTML.CPP)
+               at offset 00007528 0034CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\CPPLIB\SOURCE\EXCEPT.CPP)
+
+ 0002:00000000 000000AB0H DATA32                 DATA 32-bit
+               at offset 00000000 00AA0H bytes from HTML.OBJ (E:\Projects\Escriba\ADDONS\HTML\HTML.CPP)
+               at offset 00000aa0 00004H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\DLLSTUB.ASM)
+
+ 0002:00000AB0 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00000AB0 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:00000AB0 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00000AB0 000000A90H CONST32                CONST 32-bit
+               at offset 00000000 00A90H bytes from HTML.OBJ (E:\Projects\Escriba\ADDONS\HTML\HTML.CPP)
+
+ 0002:00001540 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00001540 000000000H EDC2                   EDC_CLASS 32-bit
+ 0002:00001540 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:00001540 000000000H BSS32                  BSS 32-bit
+ 0002:00001540 000000034H c_common               BSS 32-bit
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+ Address       Export                  Alias
+
+ 0001:00000E50 Export                  Export
+ 0001:000000A0 Filter                  Filter
+ 0001:00000240 Identify                Identify
+ 0001:00004F44 Import                  Import
+ 0001:00003EA4 ProductConfigure        ProductConfigure
+ 0001:00000DC8 ProductInformation      ProductInformation
+ 0001:00004C74 ProductName             ProductName
+ 0001:00000208 ProductVersion          ProductVersion
+ 0001:0000015C QueryFileType           QueryFileType
+ 0001:00000154 QueryWildcard           QueryWildcard
+ 0001:00000210 SetLanguage             SetLanguage
+ 0001:00002B74 Verify                  Verify
+
+  Address         Publics by Name
+
+ 0002:00001540       @BSSE:\Projects\Escriba\ADDONS\HTML\HTML.CPP
+ 0000:00000000  Imp  Associate__10HelpWindowFUl (RUNTIME.1602)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  BuildExtendedAttributes__FUlP6EADATA (RUNTIME.1401)
+ 0000:00000000  Imp  BuildMVMTValue__FPvUlP10MVMT_VALUE (RUNTIME.1400)
+ 0000:00000000  Imp  CHILD__FUli          (RUNTIME.9950)
+ 0000:00000000  Imp  Command__6DialogFPvT1 (RUNTIME.2602)
+ 0000:00000000  Imp  DosEditName          (DOSCALLS.261)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  DosQueryModuleName   (DOSCALLS.320)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0001:00000E50       Export
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0001:000000A0       Filter
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  fread                (DDE4MBS.fread)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0002:00000000       FunctionNames
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0000:00000000  Imp  GetItem__7ProfileFPcPvi (RUNTIME.2704)
+ 0000:00000000  Imp  GetString__7ProfileFPcT1i (RUNTIME.2702)
+ 0002:000000CC       HomePath
+ 0001:00000240       Identify
+ 0001:00004F44       Import
+ 0000:00000000  Imp  InitDialog__6DialogFUl (RUNTIME.2603)
+ 0000:00000000  Imp  Load__6DialogFv      (RUNTIME.2606)
+ 0001:00004E78       Log__FPce
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  MessageProcessor__6DialogFUlT1PvT3 (RUNTIME.2601)
+ 0000:00000000  Imp  PARENT__FUl          (RUNTIME.9901)
+ 0000:00000000  Imp  Process__6DialogFv   (RUNTIME.2605)
+ 0001:00003EA4       ProductConfigure
+ 0001:00000DC8       ProductInformation
+ 0001:00004C74       ProductName
+ 0001:00000208       ProductVersion
+ 0000:00000000  Imp  PutItem__7ProfileFPcPvi (RUNTIME.2703)
+ 0000:00000000  Imp  PutString__7ProfileFPcT1 (RUNTIME.2700)
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0001:0000015C       QueryFileType
+ 0000:00000000  Imp  QueryFontCount__6CanvasFv (RUNTIME.2903)
+ 0000:00000000  Imp  QueryFonts__6CanvasFiP12_FONTMETRICS (RUNTIME.2902)
+ 0001:00000154       QueryWildcard
+ 0001:00000210       SetLanguage
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0000:00000000  Imp  strstr               (DDE4MBS.strstr)
+ 0000:00000000  Imp  Sys_DefDialogProc    (RUNTIME.9952)
+ 0000:00000000  Imp  Sys_GetWindowData__FUl (RUNTIME.9917)
+ 0000:00000000  Imp  Sys_GetWindowText__FUlPci (RUNTIME.9918)
+ 0000:00000000  Imp  Sys_MessageBox__FUlT1PcT3iT5 (RUNTIME.9945)
+ 0000:00000000  Imp  Sys_SendMessage      (RUNTIME.9928)
+ 0000:00000000  Imp  Sys_SetFocus__FUl    (RUNTIME.9953)
+ 0000:00000000  Imp  Sys_SetWindowData__FUlPv (RUNTIME.9933)
+ 0000:00000000  Imp  Sys_SetWindowText__FUlPc (RUNTIME.9934)
+ 0001:00002B74       Verify
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0002:00000AA0       _dllentry
+ 0001:00004D58       _DLL_InitTerm
+ 0002:00001540       _edata
+ 0002:00001574       _end
+ 0001:00007528       _Exception_CPP
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  _SetLanguage__FPcT1iN31RP14LanguageModule (RUNTIME.2503)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _sscanfieee          (DDE4MBS._sscanfieee)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  __ct__10HelpWindowFUlT1UsPcT4 (RUNTIME.1600)
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0000:00000000  Imp  __ct__6CanvasFPcUl   (RUNTIME.2900)
+ 0000:00000000  Imp  __ct__6DialogFUlN21i (RUNTIME.2608)
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT1 (RUNTIME.2708)
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0000:00000000  Imp  __dt__10HelpWindowFv (RUNTIME.1601)
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0000:00000000  Imp  __dt__6CanvasFv      (RUNTIME.2901)
+ 0000:00000000  Imp  __dt__6DialogFv      (RUNTIME.2607)
+ 0000:00000000  Imp  __dt__7ProfileFv     (RUNTIME.2705)
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  InitDialog__6DialogFUl (RUNTIME.2603)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  MessageProcessor__6DialogFUlT1PvT3 (RUNTIME.2601)
+ 0000:00000000  Imp  _sscanfieee          (DDE4MBS._sscanfieee)
+ 0000:00000000  Imp  DosEditName          (DOSCALLS.261)
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  CHILD__FUli          (RUNTIME.9950)
+ 0000:00000000  Imp  Sys_GetWindowData__FUl (RUNTIME.9917)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  Sys_MessageBox__FUlT1PcT3iT5 (RUNTIME.9945)
+ 0000:00000000  Imp  PARENT__FUl          (RUNTIME.9901)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  BuildMVMTValue__FPvUlP10MVMT_VALUE (RUNTIME.1400)
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0000:00000000  Imp  Command__6DialogFPvT1 (RUNTIME.2602)
+ 0000:00000000  Imp  GetItem__7ProfileFPcPvi (RUNTIME.2704)
+ 0000:00000000  Imp  PutItem__7ProfileFPcPvi (RUNTIME.2703)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT1 (RUNTIME.2708)
+ 0000:00000000  Imp  fread                (DDE4MBS.fread)
+ 0000:00000000  Imp  QueryFonts__6CanvasFiP12_FONTMETRICS (RUNTIME.2902)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0000:00000000  Imp  PutString__7ProfileFPcT1 (RUNTIME.2700)
+ 0000:00000000  Imp  QueryFontCount__6CanvasFv (RUNTIME.2903)
+ 0000:00000000  Imp  Sys_SetWindowData__FUlPv (RUNTIME.9933)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  Load__6DialogFv      (RUNTIME.2606)
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0000:00000000  Imp  GetString__7ProfileFPcT1i (RUNTIME.2702)
+ 0000:00000000  Imp  Sys_SetWindowText__FUlPc (RUNTIME.9934)
+ 0000:00000000  Imp  __dt__6DialogFv      (RUNTIME.2607)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  __dt__7ProfileFv     (RUNTIME.2705)
+ 0000:00000000  Imp  BuildExtendedAttributes__FUlP6EADATA (RUNTIME.1401)
+ 0000:00000000  Imp  __dt__6CanvasFv      (RUNTIME.2901)
+ 0000:00000000  Imp  Sys_GetWindowText__FUlPci (RUNTIME.9918)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  _SetLanguage__FPcT1iN31RP14LanguageModule (RUNTIME.2503)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  Associate__10HelpWindowFUl (RUNTIME.1602)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0000:00000000  Imp  __dt__10HelpWindowFv (RUNTIME.1601)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  Sys_SendMessage      (RUNTIME.9928)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  strstr               (DDE4MBS.strstr)
+ 0000:00000000  Imp  __ct__10HelpWindowFUlT1UsPcT4 (RUNTIME.1600)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  Sys_DefDialogProc    (RUNTIME.9952)
+ 0000:00000000  Imp  __ct__6CanvasFPcUl   (RUNTIME.2900)
+ 0000:00000000  Imp  Sys_SetFocus__FUl    (RUNTIME.9953)
+ 0000:00000000  Imp  Process__6DialogFv   (RUNTIME.2605)
+ 0000:00000000  Imp  __ct__6DialogFUlN21i (RUNTIME.2608)
+ 0000:00000000  Imp  DosQueryModuleName   (DOSCALLS.320)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0001:000000A0       Filter
+ 0001:00000154       QueryWildcard
+ 0001:0000015C       QueryFileType
+ 0001:00000208       ProductVersion
+ 0001:00000210       SetLanguage
+ 0001:00000240       Identify
+ 0001:00000DC8       ProductInformation
+ 0001:00000E50       Export
+ 0001:00002B74       Verify
+ 0001:00003EA4       ProductConfigure
+ 0001:00004C74       ProductName
+ 0001:00004D58       _DLL_InitTerm
+ 0001:00004E78       Log__FPce
+ 0001:00004F44       Import
+ 0001:00007528       _Exception_CPP
+ 0002:00000000       FunctionNames
+ 0002:000000CC       HomePath
+ 0002:00000AA0       _dllentry
+ 0002:00001540       @BSSE:\Projects\Escriba\ADDONS\HTML\HTML.CPP
+ 0002:00001540       _edata
+ 0002:00001574       _end
+
+Program entry point at 0001:00004D58

@@ -1,0 +1,28 @@
+# Build Dutch (Netherlands) language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+NdrLands: $*.dll $*.hlp $*.inf
+
+NdrLands.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+NdrLands.hlp: NdrLands\NdrLands.ipf Escriba.H Escriba.BMP \
+  NdrLands\About.bmp    NdrLands\BarCode.bmp  NdrLands\ConfigEx.bmp NdrLands\DateFmt.bmp  \
+  NdrLands\Default0.bmp NdrLands\Default1.bmp NdrLands\Default2.bmp NdrLands\Default3.bmp \
+  NdrLands\Default4.bmp NdrLands\Default5.bmp NdrLands\FileDlg.bmp  NdrLands\Indent.bmp   \
+  NdrLands\Margins.bmp  NdrLands\Prefer.bmp   NdrLands\Profile.bmp  NdrLands\Search.bmp   \
+  NdrLands\Spell.bmp    NdrLands\Tabs.bmp     NdrLands\ZoomSet.bmp
+  ipfcomp /D:31 /C:850 /L:NLD NdrLands\NdrLands.ipf
+
+NdrLands.dll: NdrLands\NdrLands.def NdrLands\NdrLands.res dll.obj
+  link386 /nologo dll, NdrLands.dll /align:16, nul,, NdrLands\NdrLands ;
+  rc -n NdrLands\NdrLands.res $*.dll
+  eautil /s Ndrlands.dll
+  erase eas\*.dll
+  rd eas
+
+NdrLands\NdrLands.res: NdrLands\NdrLands.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 31 -cp 850 -d __OS2__ -i . -i ..\runtime -r NdrLands\NdrLands
+
+

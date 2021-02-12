@@ -1,0 +1,111 @@
+# Build Plain Text addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: PTEXT.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+PTEXT.DLL : PTEXT.OBJ PTEXT.H PTEXT.RES 
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"PTEXT.DLL" /Fm"PTEXT.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB PTEXT.DEF
+PText.OBJ
+<<
+  RC PTEXT.RES PTEXT.DLL
+  dllrname PTEXT.dll dde4mbs=Esc_CRT
+  If Exist PTEXT.DLX Erase PTEXT.DLX
+  FXSTRIP PTEXT.DLL
+
+{.}.rc.res:
+   RC -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTEXT.obj : PTEXT.cpp PTEXT.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\canvas.h ..\..\..\runtime\controls.h \
+  ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h ..\..\..\runtime\eattr.h ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h \
+  ..\..\..\runtime\module.h ..\..\..\runtime\profile.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: PTXT_DEU.dll PTXT_DEU.hlp 
+
+PTXT_DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTXT_DEU.res : $*.rc ptext.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 49 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+PTXT_DEU.hlp: $*.ipf ptext.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: PTXT_ENU.dll PTXT_ENU.hlp 
+
+PTXT_ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTXT_ENU.res : $*.rc ptext.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+PTXT_ENU.hlp: $*.ipf ptext.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: PTXT_ESP.dll PTXT_ESP.hlp 
+
+PTXT_ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTXT_ESP.res : $*.rc ptext.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 34 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+PTXT_ESP.hlp: $*.ipf ptext.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: PTXT_FRA.dll PTXT_FRA.hlp 
+
+PTXT_FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTXT_FRA.res : $*.rc ptext.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 33 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+PTXT_FRA.hlp: $*.ipf ptext.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: PTXT_NLD.dll PTXT_NLD.hlp 
+
+PTXT_NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PTXT_NLD.res : $*.rc ptext.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 31 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+PTXT_NLD.hlp: $*.ipf ptext.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

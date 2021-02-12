@@ -1,0 +1,8 @@
+;
+;       HTML_ESP: HTML Import/Export Module for Escriba (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'HTML_ESP: HTML Import/Export Module for Escriba (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

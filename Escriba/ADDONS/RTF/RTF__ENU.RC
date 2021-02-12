@@ -1,0 +1,74 @@
+#include "System.h"
+
+#include "Controls.h"
+#include "RTF.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "RTF",                //   Application Name.
+  "English",            //   Specific language name.
+  850, 437, 852, 860, 863, 865, 932, 934, 936, 938, 942, 944, 946, 948, 950, 0
+}
+
+/****************************************************************************
+ * Months: January, February, March, April, May, June,                      *
+ *   July, August, September, October, November, December.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "RTF"                                                 0, 10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                        0, 10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 December 1998"                                      0, 10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "RTF Import/Export Module for Escriba",                0, 10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                  0, 10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                             0, 10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                      0, 10, 38, 220,  8
+    CTEXT "English Version"                                      0, 10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_IMPORT
+{
+  DIALOG "", IDD_CONFIGURE_IMPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Import Options",         0,                        0,  0, 200,100
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXPORT
+{
+  DIALOG "", IDD_CONFIGURE_EXPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Export Options",                0,                        0,  0, 200,100
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                     "RTF Import/Export Module"
+  IDS_TITLE1                    REVISION
+  IDS_HELPTITLE                 "'RTF' Help Facility"
+  IDS_ERROR_CREATEHELP          "ERROR: Unable to create help instance.  Code %08lX."
+
+  IDS_MAJORTAB                  "RTF"
+
+  IDS_ERROR_OPEN_VERIFY         "ERROR: Unable to open file for verification."
+  IDS_ERROR_MEMORY_VERIFY       "ERROR: Unable to get memory to hold file for verification."
+  IDS_ERROR_INVALID             "ERROR: Invalid RTF file."
+  IDS_ERROR_OPEN_LOAD           "ERROR: Unable to open file for loading."
+  IDS_ERROR_MEMORY_OPEN         "ERROR: Unable to get memory to hold file."
+  IDS_ERROR_WRITE               "ERROR: Unable to write entire file to disk."
+}

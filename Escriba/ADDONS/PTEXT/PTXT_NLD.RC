@@ -1,0 +1,100 @@
+#include "System.h"
+
+#include "Controls.h"
+#include "PText.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PText",              //   Application Name.
+  "Nederlands",         //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: januari, februari, maart, april, mei, juni,                      *
+ *   juli, augustus, september, october, november, december.                *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "PText"                                                0, 10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versie 0.97"                                         0, 10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 december 1998"                                      0, 10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Platte Tekst Import/Export Module voor Escriba",      0, 10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                  0, 10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                             0, 10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                      0, 10, 38, 220,  8
+    CTEXT "Nederlandse versie"                                   0, 10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_IMPORT
+{
+  DIALOG "", IDD_CONFIGURE_IMPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Import Opties",          0,                        0,  0, 200,100
+
+    LTEXT "Lettertype",                0,                        4, 80,  86,  8
+    CONTROL "",                        IDD_CONFIGURE_FONT,      90,  0, 106, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Afmeting",                  0,                        4, 68,  86,  8
+    CONTROL "",                        IDD_CONFIGURE_SIZE,      90,  0, 106, 76, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    AUTOCHECKBOX "Gebruik metrische waarden", IDD_CONFIGURE_METRIC,4,56,192,  8
+    AUTOCHECKBOX "Let niet op lijnafbrekingen", IDD_CONFIGURE_SOFTBREAKS, 4, 46, 192,  8
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXPORT
+{
+  DIALOG "", IDD_CONFIGURE_EXPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Export Opties",                 0,                        0,  0, 200,100
+
+    AUTOCHECKBOX "Vorm van uitvoer",          IDD_CONFIGURE_FORMAT,     4, 80, 192,  8
+
+    LTEXT "Hoogte",                           0,                        4, 68,  40,  8
+    CONTROL "",                               IDD_CONFIGURE_HEIGHT,    54, 68,  40,  8, WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+
+    LTEXT "Breedte",                          0,                      106, 68,  40,  8
+    CONTROL "",                               IDD_CONFIGURE_WIDTH,    156, 68,  40,  8, WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+
+    AUTOCHECKBOX "Simuleer zware tekst",         IDD_CONFIGURE_BOLD,       4, 56, 192,  8
+    AUTOCHECKBOX "Simuleer understreepte tekst", IDD_CONFIGURE_UNDERSCORE, 4, 46, 192,  8
+    AUTOCHECKBOX "Simuleer doorstreepte tekst",  IDD_CONFIGURE_STRIKEOUT,  4, 36, 192,  8
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                     "Platte Tekst Import/Export Module"
+  IDS_TITLE1                    REVISION
+  IDS_HELPTITLE                 "'Platte Tekst' Hulpdienst"
+  IDS_ERROR_CREATEHELP          "FOUT: Hulpsysteem kan niet gemaakt worden.  Code %08lX."
+
+  IDS_MAJORTAB                  "Platte Tekst"
+  IDS_PTS                       "pt"
+
+  IDS_ERROR_INVALIDWIDTH        "FOUT: Onjuiste breedte aangegeven."
+  IDS_ERROR_OPEN_VERIFY         "FOUT: Bestand kan niet voor controle geopend worden."
+  IDS_ERROR_MEMORY_VERIFY       "FOUT: Kan geen geheugen vinden om bestand te laden voor controle."
+  IDS_ERROR_HAS_NULLS           "FOUT: Platte Tekst bevat geen informatie.  Load it anyway?"
+  IDS_ERROR_OPEN_LOAD           "FOUT: Kan bestand niet openen om te laden."
+  IDS_ERROR_MEMORY_OPEN         "FOUT: Geen geheugen beschikbaar om bestand te laden."
+  IDS_ERROR_WRITE               "FOUT: Bestand kan niet in zijn geheel naar schijf geschreven worden."
+}
+

@@ -1,0 +1,167 @@
+canvas.obj: \
+	canvas.cpp \
+	canvas.h \
+	debug.h \
+	hrtimer.h \
+	mutex.h \
+	system.h
+
+cirqueue.obj: \
+	cirqueue.cpp \
+	cirqueue.h \
+	debug.h \
+	event.h \
+	hrtimer.h \
+	mutex.h \
+	system.h
+
+controls.obj: \
+	controls.cpp \
+	controls.h \
+	debug.h \
+	hrtimer.h \
+	system.h
+
+crc.obj: \
+	crc.cpp \
+	crc.h \
+	system.h
+
+debug.obj: \
+	debug.cpp \
+	debug.h \
+	hrtimer.h \
+	mutex.h \
+	restring.h \
+	runtime.h \
+	system.h
+
+dialog.obj: \
+	dialog.cpp \
+	debug.h \
+	dialog.h \
+	hrtimer.h \
+	system.h
+
+eattr.obj: \
+	eattr.cpp \
+	eattr.h \
+	system.h
+
+event.obj: \
+	event.cpp \
+	debug.h \
+	event.h \
+	hrtimer.h \
+	mux.h \
+	system.h
+
+helpwin.obj: \
+	helpwin.cpp \
+	debug.h \
+	helpwin.h \
+	hrtimer.h \
+	system.h
+
+lmodule.obj: \
+	lmodule.cpp \
+	lmodule.h \
+	module.h \
+	restring.h \
+	system.h
+
+module.obj: \
+	module.cpp \
+	module.h \
+	system.h
+
+mutex.obj: \
+	mutex.cpp \
+	debug.h \
+	hrtimer.h \
+	mutex.h \
+	mux.h \
+	system.h
+
+mux.obj: \
+	mux.cpp \
+	debug.h \
+	hrtimer.h \
+	system.h
+
+pool.obj: \
+	pool.cpp \
+	debug.h \
+	hrtimer.h \
+	pool.h \
+	system.h
+
+process.obj: \
+	process.cpp \
+	debug.h \
+	hrtimer.h \
+	process.h \
+	system.h
+
+profile.obj: \
+	profile.cpp \
+	debug.h \
+	dialog.h \
+	helpwin.h \
+	hrtimer.h \
+	module.h \
+	profile.h \
+	restring.h \
+	support.h \
+	system.h
+
+restring.obj: \
+	restring.cpp \
+	debug.h \
+	hrtimer.h \
+	restring.h \
+	system.h
+
+runtime.obj: \
+	runtime.cpp \
+	debug.h \
+	hrtimer.h \
+	system.h
+
+sharemem.obj: \
+	sharemem.cpp \
+	debug.h \
+	hrtimer.h \
+	sharemem.h \
+	system.h
+
+string_.obj: \
+	string_.cpp \
+	debug.h \
+	hrtimer.h \
+	string_.h \
+	system.h
+
+support.obj: \
+	support.cpp \
+	debug.h \
+	hrtimer.h \
+	restring.h \
+	support.h \
+	system.h
+
+system.obj: \
+	system.cpp \
+	debug.h \
+	hrtimer.h \
+	system.h
+
+window.obj: \
+	window.cpp \
+	debug.h \
+	hrtimer.h \
+	mutex.h \
+	process.h \
+	system.h \
+	window.h
+

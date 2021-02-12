@@ -1,0 +1,63 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Pcx.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PCX",                //   Application Name.
+  "Deutsch",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: Januar, Februar, M„rz, April, Mai, Juni,                         *
+ *   Juli, August, September, Oktober, November, Dezember.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Pcx"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 Dezember 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "PCX Graphic Import Module for Escriba"   ,           0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Deutsche šbersetzung Frank Mersmann"                 0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "PCX Graphic Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'PCX Graphic' Help Facility"
+  IDS_ERROR_CREATEHELP                  "FEHLER: Kann Hilfe nicht erzeugen.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FEHLER(PCX): Unable to open file '%s' to verify it."
+  IDS_ERROR_FILE_TOO_SMALL              "FEHLER(PCX): Invalid file.  Too small."
+  IDS_ERROR_INVALID_FILE_ID             "FEHLER(PCX): Invalid signature."
+  IDS_ERROR_PLANAR                      "FEHLER(PCX): Plane-oriented file not accepted."
+  IDS_ERROR_INVALID_PALETTE             "FEHLER(PCX): Invalid file.  Palette not where expected."
+  IDS_ERROR_INVALID_PALETTE_SIZE        "FEHLER(PCX): Unsupported palette size.  Palette has %i entries."
+  IDS_ERROR_MEMORY1                     "FEHLER(PCX): Unable to allocate buffer for image."
+  IDS_ERROR_MEMORY2                     "FEHLER(PCX): Unable to allocate memory for bitmap header."
+  IDS_ERROR_DC_OPEN                     "FEHLER(PCX): Unable to open memory device context.  Status %i."
+  IDS_ERROR_PS_CREATE                   "FEHLER(PCX): Unable to create memory presentation space.  Status %i."
+  IDS_ERROR_CREATE_BITMAP               "FEHLER(PCX): Unable to create bitmap.  Status %i."
+  IDS_ERROR_OPEN_FOR_LOAD               "FEHLER(PCX): Unable to open file '%s' to load from."
+  IDS_ERROR_MEMORY3                     "FEHLER(PCX): Unable to allocate memory to load block into.  %i bytes were requested."
+}

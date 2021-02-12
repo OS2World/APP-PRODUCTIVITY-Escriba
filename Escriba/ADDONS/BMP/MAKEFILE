@@ -1,0 +1,110 @@
+# Build BMP Graphic Importer addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: BMP.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+BMP.DLL : BMP.OBJ BMP.H BMP.RES ..\..\EXTERNAL.H
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"BMP.DLL" /Fm"BMP.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB BMP.DEF
+BMP.OBJ
+<<
+  RC BMP.RES BMP.DLL   
+  dllrname BMP.dll dde4mbs=Esc_CRT
+  If Exist BMP.DLX Erase BMP.DLX
+  FXSTRIP BMP.DLL
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP.obj : BMP.cpp BMP.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h \
+  ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h ..\..\..\runtime\module.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: BMP__DEU.dll BMP__DEU.hlp 
+
+BMP__DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP__DEU.res : $*.rc bmp.h
+  rc -cc 49 -cp 850 -r $*
+
+BMP__DEU.hlp: $*.ipf bmp.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: BMP__ENU.dll BMP__ENU.hlp 
+
+BMP__ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP__ENU.res : $*.rc bmp.h
+  rc -cc 1 -cp 850 -r $*
+
+BMP__ENU.hlp: $*.ipf bmp.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: BMP__ESP.dll BMP__ESP.hlp 
+
+BMP__ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP__ESP.res : $*.rc bmp.h
+  rc -cc 34 -cp 850 -r $*
+
+BMP__ESP.hlp: $*.ipf bmp.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: BMP__FRA.dll BMP__FRA.hlp 
+
+BMP__FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP__FRA.res : $*.rc bmp.h
+  rc -cc 33 -cp 850 -r $*
+
+BMP__FRA.hlp: $*.ipf bmp.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: BMP__NLD.dll BMP__NLD.hlp 
+
+BMP__NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+BMP__NLD.res : $*.rc bmp.h
+  rc -cc 31 -cp 850 -r $*
+
+BMP__NLD.hlp: $*.ipf bmp.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

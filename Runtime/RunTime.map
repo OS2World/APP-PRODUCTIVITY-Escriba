@@ -1,0 +1,1341 @@
+
+ runtime
+
+ Start         Length     Name                   Class
+ 0001:00000000 00000C1E4H CODE32                 CODE 32-bit
+               at offset 00000000 00454H bytes from CANVAS.obj (E:\Projects\RunTime\CANVAS.CPP)
+               at offset 00000454 00718H bytes from CIRQUEUE.obj (E:\Projects\RunTime\CIRQUEUE.CPP)
+               at offset 00000b6c 00610H bytes from CONTROLS.obj (E:\Projects\RunTime\CONTROLS.CPP)
+               at offset 0000117c 00144H bytes from CRC.obj (E:\Projects\RunTime\CRC.CPP)
+               at offset 000012c0 0084CH bytes from DEBUG.obj (E:\Projects\RunTime\DEBUG.CPP)
+               at offset 00001b0c 00478H bytes from DIALOG.obj (E:\Projects\RunTime\DIALOG.CPP)
+               at offset 00001f84 00438H bytes from EATTR.obj (E:\Projects\RunTime\EATTR.CPP)
+               at offset 000023bc 0055CH bytes from EVENT.obj (E:\Projects\RunTime\EVENT.CPP)
+               at offset 00002918 00210H bytes from HELPWIN.obj (E:\Projects\RunTime\HELPWIN.CPP)
+               at offset 00002b28 00B98H bytes from LMODULE.obj (E:\Projects\RunTime\LMODULE.CPP)
+               at offset 000036c0 003C8H bytes from MODULE.obj (E:\Projects\RunTime\MODULE.CPP)
+               at offset 00003a88 00550H bytes from MUTEX.obj (E:\Projects\RunTime\MUTEX.CPP)
+               at offset 00003fd8 003FCH bytes from MUX.obj (E:\Projects\RunTime\MUX.CPP)
+               at offset 000043d4 00EC0H bytes from POOL.obj (E:\Projects\RunTime\POOL.CPP)
+               at offset 00005294 00230H bytes from PROCESS.obj (E:\Projects\RunTime\PROCESS.CPP)
+               at offset 000054c4 01018H bytes from PROFILE.obj (E:\Projects\RunTime\PROFILE.CPP)
+               at offset 000064dc 00170H bytes from RESTRING.obj (E:\Projects\RunTime\RESTRING.CPP)
+               at offset 0000664c 0024CH bytes from SHAREMEM.obj (E:\Projects\RunTime\SHAREMEM.CPP)
+               at offset 00006898 003FCH bytes from STRING_.obj (E:\Projects\RunTime\STRING_.CPP)
+               at offset 00006c94 01A90H bytes from SUPPORT.obj (E:\Projects\RunTime\SUPPORT.CPP)
+               at offset 00008724 00760H bytes from SYSTEM.obj (E:\Projects\RunTime\SYSTEM.CPP)
+               at offset 00008e84 02ECCH bytes from WINDOW.obj (E:\Projects\RunTime\WINDOW.CPP)
+               at offset 0000bd50 0011CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\CTORDTOR.C)
+               at offset 0000be6c 0034CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\CPPLIB\SOURCE\EXCEPT.CPP)
+               at offset 0000c1b8 0002CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\DLLINIT.C)
+
+ 0002:00000000 0000007D0H DATA32                 DATA 32-bit
+               at offset 00000000 00040H bytes from CANVAS.obj (E:\Projects\RunTime\CANVAS.CPP)
+               at offset 00000040 00090H bytes from CIRQUEUE.obj (E:\Projects\RunTime\CIRQUEUE.CPP)
+               at offset 000000d0 00140H bytes from DEBUG.obj (E:\Projects\RunTime\DEBUG.CPP)
+               at offset 00000210 00030H bytes from DIALOG.obj (E:\Projects\RunTime\DIALOG.CPP)
+               at offset 00000240 00090H bytes from LMODULE.obj (E:\Projects\RunTime\LMODULE.CPP)
+               at offset 000002d0 00010H bytes from MODULE.obj (E:\Projects\RunTime\MODULE.CPP)
+               at offset 000002e0 00020H bytes from MUX.obj (E:\Projects\RunTime\MUX.CPP)
+               at offset 00000300 00040H bytes from POOL.obj (E:\Projects\RunTime\POOL.CPP)
+               at offset 00000340 00080H bytes from PROFILE.obj (E:\Projects\RunTime\PROFILE.CPP)
+               at offset 000003c0 000F0H bytes from SUPPORT.obj (E:\Projects\RunTime\SUPPORT.CPP)
+               at offset 000004b0 00300H bytes from WINDOW.obj (E:\Projects\RunTime\WINDOW.CPP)
+               at offset 000007b0 00004H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\DLLSTUB.ASM)
+               at offset 000007c0 00010H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\CTORDTOR.C)
+
+ 0002:000007D0 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:000007D0 000000010H CTOR_DTOR2             DATA 32-bit
+               at offset 00000000 00010H bytes from DEBUG.obj (E:\Projects\RunTime\DEBUG.CPP)
+
+ 0002:000007E0 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:000007E0 000001320H CONST32                CONST 32-bit
+               at offset 00000000 00190H bytes from CANVAS.obj (E:\Projects\RunTime\CANVAS.CPP)
+               at offset 00000190 00100H bytes from CIRQUEUE.obj (E:\Projects\RunTime\CIRQUEUE.CPP)
+               at offset 00000290 00050H bytes from CONTROLS.obj (E:\Projects\RunTime\CONTROLS.CPP)
+               at offset 000002e0 00110H bytes from DEBUG.obj (E:\Projects\RunTime\DEBUG.CPP)
+               at offset 000003f0 00040H bytes from DIALOG.obj (E:\Projects\RunTime\DIALOG.CPP)
+               at offset 00000430 00020H bytes from EATTR.obj (E:\Projects\RunTime\EATTR.CPP)
+               at offset 00000450 00160H bytes from EVENT.obj (E:\Projects\RunTime\EVENT.CPP)
+               at offset 000005b0 00140H bytes from HELPWIN.obj (E:\Projects\RunTime\HELPWIN.CPP)
+               at offset 000006f0 00040H bytes from LMODULE.obj (E:\Projects\RunTime\LMODULE.CPP)
+               at offset 00000730 00030H bytes from MODULE.obj (E:\Projects\RunTime\MODULE.CPP)
+               at offset 00000760 00150H bytes from MUTEX.obj (E:\Projects\RunTime\MUTEX.CPP)
+               at offset 000008b0 00160H bytes from MUX.obj (E:\Projects\RunTime\MUX.CPP)
+               at offset 00000a10 001F0H bytes from POOL.obj (E:\Projects\RunTime\POOL.CPP)
+               at offset 00000c00 000F0H bytes from PROCESS.obj (E:\Projects\RunTime\PROCESS.CPP)
+               at offset 00000cf0 003B0H bytes from PROFILE.obj (E:\Projects\RunTime\PROFILE.CPP)
+               at offset 000010a0 000A0H bytes from RESTRING.obj (E:\Projects\RunTime\RESTRING.CPP)
+               at offset 00001140 00070H bytes from SHAREMEM.obj (E:\Projects\RunTime\SHAREMEM.CPP)
+               at offset 000011b0 00020H bytes from STRING_.obj (E:\Projects\RunTime\STRING_.CPP)
+               at offset 000011d0 000A0H bytes from SUPPORT.obj (E:\Projects\RunTime\SUPPORT.CPP)
+               at offset 00001270 00020H bytes from SYSTEM.obj (E:\Projects\RunTime\SYSTEM.CPP)
+               at offset 00001290 00090H bytes from WINDOW.obj (E:\Projects\RunTime\WINDOW.CPP)
+
+ 0002:00001B00 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00001B00 000000000H EDC2                   EDC_CLASS 32-bit
+ 0002:00001B00 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:00001B00 000000000H BSS32                  BSS 32-bit
+ 0002:00001B00 0000000C0H c_common               BSS 32-bit
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+ Address       Export                  Alias
+
+ 0001:00009714 Activate__6WindowFv     Activate__6WindowFv
+ 0001:000099AC Add2TaskList__6WindowFv  Add2TaskList__6WindowFv
+ 0001:000070A0 Add2TaskList__FUlPc     Add2TaskList__FUlPc
+ 0001:00006E58 AddMenuItem__FUlUsP9_MENUITEMPc  AddMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00006E98 AddSubMenuItem__FUlUsT2P9_MENUITEMPc  AddSubMenuItem__FUlUsT2P9_MENUITEMPc
+ 0001:00009A70 AddSysMenuItem__6WindowFPcUssN22UlT6  AddSysMenuItem__6WindowFPcUssN22UlT6
+ 0001:00006D4C AddSysMenuItem__FUlP9_MENUITEMPc  AddSysMenuItem__FUlP9_MENUITEMPc
+ 0001:00009A48 AddSysMenuSeparator__6WindowFv  AddSysMenuSeparator__6WindowFv
+ 0001:00006DC0 AddSysSubMenuItem__FUlUsP9_MENUITEMPc  AddSysSubMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00002A3C Associate__10HelpWindowFUl  Associate__10HelpWindowFUl
+ 0001:000020A0 BuildExtendedAttributes__FUlP6EADATA  BuildExtendedAttributes__FUlP6EADATA
+ 0001:00002270 BuildMVMTValue__FPvUlP10MVMT_VALUE  BuildMVMTValue__FPvUlP10MVMT_VALUE
+ 0001:00007168 BuildPresParams__FUsPUlT2PPUc  BuildPresParams__FUsPUlT2PPUc
+ 0001:00000C70 Button_Processor        Button_Processor
+ 0001:000073BC CheckDrive__FiRi        CheckDrive__FiRi
+ 0001:000073E0 CheckDrive__FiRiPcT3    CheckDrive__FiRiPcT3
+ 0001:00007048 CheckMenuItem__FUlUsT1  CheckMenuItem__FUlUsT1
+ 0001:00007004 CheckMenuItem__FUlUsT2T1  CheckMenuItem__FUlUsT2T1
+ 0001:0000875C CHILD__FUli             CHILD__FUli
+ 0001:000044F0 Clear__11PoolSectionFP11PoolSection  Clear__11PoolSectionFP11PoolSection
+ 0001:00004EB4 Clear__4PoolFv          Clear__4PoolFv
+ 0001:0000B994 Clear__7ListBoxFv       Clear__7ListBoxFv
+ 0001:000016C8 CloseTimer__Fv          CloseTimer__Fv
+ 0001:00000D94 ComboBox_Processor      ComboBox_Processor
+ 0001:00001D88 Command__6DialogFPvT1   Command__6DialogFPvT1
+ 0001:00001714 ComputeElapsedTime__FP10_TIMESTAMPT1PUl  ComputeElapsedTime__FP10_TIMESTAMPT1PUl
+ 0002:000003C0 CountryInfo             CountryInfo
+ 0001:0000973C Deactivate__6WindowFv   Deactivate__6WindowFv
+ 0001:00007854 DecodeDecimal__FPcRd    DecodeDecimal__FPcRd
+ 0001:00004DB4 Delete__4PoolFP9PoolEntry  Delete__4PoolFP9PoolEntry
+ 0001:0000B9E8 Delete__7ListBoxFi      Delete__7ListBoxFi
+ 0001:000009C4 Dequeue__13CircularQueueFPvi  Dequeue__13CircularQueueFPvi
+ 0001:00009588 Destroy__6WindowFv      Destroy__6WindowFv
+ 0001:00001EE8 DialogMessageProcessor  DialogMessageProcessor
+ 0001:000097E8 Disable__6WindowFv      Disable__6WindowFv
+ 0001:00001C3C Dismiss__6DialogFi      Dismiss__6DialogFi
+ 0001:00006C94 DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv  DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv
+ 0001:0000A178 Drag__6WindowFv         Drag__6WindowFv
+ 0001:00000714 Dump__13CircularQueueFi  Dump__13CircularQueueFi
+ 0001:00004F78 Dump__4PoolFi           Dump__4PoolFi
+ 0001:00000AC8 Empty__13CircularQueueFv  Empty__13CircularQueueFv
+ 0001:00006FAC EnableMenuItem__FUlUsT1  EnableMenuItem__FUlUsT1
+ 0001:00006F68 EnableMenuItem__FUlUsT2T1  EnableMenuItem__FUlUsT2T1
+ 0001:0000B7D8 Enable__6SliderFi       Enable__6SliderFi
+ 0001:000097C8 Enable__6WindowFi       Enable__6WindowFi
+ 0001:000007A8 Enqueue__13CircularQueueFPvi  Enqueue__13CircularQueueFPvi
+ 0001:000010E0 EntryField_Processor    EntryField_Processor
+ 0001:000072BC Exit                    Exit
+ 0001:00007314 ExtendedHelp            ExtendedHelp
+ 0001:0000491C Find__4PoolCFi          Find__4PoolCFi
+ 0001:00004984 Find__4PoolCFP9PoolEntry  Find__4PoolCFP9PoolEntry
+ 0001:000077F0 FormatDecimal__FPcliT3  FormatDecimal__FPcliT3
+ 0001:0000758C GetCountryInfo__FiT1    GetCountryInfo__FiT1
+ 0001:0000986C GetData__6WindowFv      GetData__6WindowFv
+ 0001:00006034 GetItem__7ProfileFPcPvi  GetItem__7ProfileFPcPvi
+ 0001:00006250 GetString__7ProfileFPcRPc  GetString__7ProfileFPcRPc
+ 0001:0000617C GetString__7ProfileFPcT1i  GetString__7ProfileFPcT1i
+ 0001:00009824 GetText__6WindowFPci    GetText__6WindowFPci
+ 0001:000016E0 GetTime__FP10_TIMESTAMP  GetTime__FP10_TIMESTAMP
+ 0001:00007A88 GetTitlebarRect__FUlT1R6_RECTL  GetTitlebarRect__FUlT1R6_RECTL
+ 0001:00009978 GetWindowText__6WindowFPci  GetWindowText__6WindowFPci
+ 0001:000072DC HelpForHelp             HelpForHelp
+ 0001:00007384 HelpIndex               HelpIndex
+ 0001:00009C14 HideControls__6WindowFUl  HideControls__6WindowFUl
+ 0001:00009628 Hide__6WindowFv         Hide__6WindowFv
+ 0001:00001C5C InitDialog__6DialogFUl  InitDialog__6DialogFUl
+ 0001:0000AA98 Insert__10EntryfieldFPc  Insert__10EntryfieldFPc
+ 0001:00004A88 Insert__4PoolFP9PoolEntryPv  Insert__4PoolFP9PoolEntryPv
+ 0001:0000B9B8 Insert__7ListBoxFPci    Insert__7ListBoxFPci
+ 0001:0000178C InterpretWinError__FUlPc  InterpretWinError__FUlPc
+ 0001:00009530 Invalidate__6WindowFR6_RECTL  Invalidate__6WindowFR6_RECTL
+ 0001:00009550 Invalidate__6WindowFv   Invalidate__6WindowFv
+ 0001:0000734C KeysHelp                KeysHelp
+ 0001:00002EE0 Language_Create__FPcT1iN21  Language_Create__FPcT1iN21
+ 0001:00001BC8 Load__6DialogFv         Load__6DialogFv
+ 0001:000096C4 Maximize__6WindowFv     Maximize__6WindowFv
+ 0001:00009B94 MessageBox__6WindowFPciT2  MessageBox__6WindowFPciT2
+ 0001:00009B60 MessageBox__6WindowFPcT1iT3  MessageBox__6WindowFPcT1iT3
+ 0001:00007B50 MessageBox__FUlT1PcT3iT5T1T5  MessageBox__FUlT1PcT3iT5T1T5
+ 0001:0000A690 MessageProcessor__16SubclassedWindowFUlT1PvT3  MessageProcessor__16SubclassedWindowFUlT1PvT3
+ 0001:00001DDC MessageProcessor__6DialogFUlT1PvT3  MessageProcessor__6DialogFUlT1PvT3
+ 0001:0000A314 MessageProcessor__6WindowFUlT1PvT3  MessageProcessor__6WindowFUlT1PvT3
+ 0001:0000B960 MessageProcessor__7ListBoxFUlT1PvT3  MessageProcessor__7ListBoxFUlT1PvT3
+ 0001:0000969C Minimize__6WindowFv     Minimize__6WindowFv
+ 0001:00009644 Move__6WindowFiT1       Move__6WindowFiT1
+ 0001:00004A30 Next__4PoolCFi          Next__4PoolCFi
+ 0001:00004A68 Next__4PoolCFP9PoolEntry  Next__4PoolCFP9PoolEntry
+ 0001:00001674 OpenTimer__Fv           OpenTimer__Fv
+ 0001:00008724 OWNER__FUl              OWNER__FUl
+ 0001:00008740 PARENT__FUl             PARENT__FUl
+ 0001:00000938 Peek__13CircularQueueFPv  Peek__13CircularQueueFPv
+ 0001:00009BE0 PopupMenu__6WindowFUliT2  PopupMenu__6WindowFUliT2
+ 0001:0000A2E8 PostMessage__6WindowFUlPvT2  PostMessage__6WindowFUlPvT2
+ 0001:00002664 Post__5EventFv          Post__5EventFv
+ 0001:000049D8 Prev__4PoolCFi          Prev__4PoolCFi
+ 0001:00004A10 Prev__4PoolCFP9PoolEntry  Prev__4PoolCFP9PoolEntry
+ 0001:00001C14 Process__6DialogFv      Process__6DialogFv
+ 0001:000060FC PutItem__7ProfileFPcPvi  PutItem__7ProfileFPcPvi
+ 0001:00006388 PutString__7ProfileFPcT1  PutString__7ProfileFPcT1
+ 0001:000039EC QueryAddress__6ModuleFi  QueryAddress__6ModuleFi
+ 0001:000039B8 QueryAddress__6ModuleFPc  QueryAddress__6ModuleFPc
+ 0001:00009438 QueryAnchor__6WindowFv  QueryAnchor__6WindowFv
+ 0001:0000BA40 QueryCount__7ListBoxFv  QueryCount__7ListBoxFv
+ 0001:00000350 QueryFontCount__6CanvasFv  QueryFontCount__6CanvasFv
+ 0001:000003C0 QueryFonts__6CanvasFiP12_FONTMETRICS  QueryFonts__6CanvasFiP12_FONTMETRICS
+ 0001:0000BAF0 QueryItemText__7ListBoxFiPcT1  QueryItemText__7ListBoxFiPcT1
+ 0001:0000AA4C QuerySelection__10EntryfieldFRiT1  QuerySelection__10EntryfieldFRiT1
+ 0001:0000BA68 QuerySelection__7ListBoxFi  QuerySelection__7ListBoxFi
+ 0001:0000BAC8 QueryTopIndex__7ListBoxFv  QueryTopIndex__7ListBoxFv
+ 0001:0000AD90 Query__10SpinButtonFv   Query__10SpinButtonFv
+ 0001:0000A8AC Query__8CheckboxFv      Query__8CheckboxFv
+ 0001:0000B6C0 Read__6SliderFv         Read__6SliderFv
+ 0001:000098D4 Rectangle__6WindowFv    Rectangle__6WindowFv
+ 0001:00000B6C RegisterControls__FUl   RegisterControls__FUl
+ 0001:00003EF0 Release__5MutexFv       Release__5MutexFv
+ 0001:0000A29C RemovePresParam__6WindowFi  RemovePresParam__6WindowFi
+ 0001:00006EFC RemoveSubMenuItem__FUlUsN22  RemoveSubMenuItem__FUlUsN22
+ 0001:000095A4 Reposition__6WindowFiN3113PositionClass  Reposition__6WindowFiN3113PositionClass
+ 0001:00003E10 RequestWin__5MutexFi    RequestWin__5MutexFi
+ 0001:00003D30 Request__5MutexFi       Request__5MutexFi
+ 0001:000026F4 Reset__5EventFv         Reset__5EventFv
+ 0001:00009F24 Resize__6WindowFiT1     Resize__6WindowFiT1
+ 0001:000096EC Restore__6WindowFv      Restore__6WindowFv
+ 0001:0000BA14 SelectItem__7ListBoxFi  SelectItem__7ListBoxFi
+ 0001:0000A2BC SendMessage__6WindowFUlPvT2  SendMessage__6WindowFUlPvT2
+ 0001:0000984C SetData__6WindowFPv     SetData__6WindowFPv
+ 0001:000097AC SetFocus__6WindowFv     SetFocus__6WindowFv
+ 0001:0000AD44 SetLimits__10SpinButtonFiT1  SetLimits__10SpinButtonFiT1
+ 0001:0000AA20 SetLimit__10EntryfieldFi  SetLimit__10EntryfieldFi
+ 0001:0000A270 SetPresParam__6WindowFiT1Pv  SetPresParam__6WindowFiT1Pv
+ 0001:00009804 SetText__6WindowFPc     SetText__6WindowFPc
+ 0001:0000BA9C SetTopIndex__7ListBoxFi  SetTopIndex__7ListBoxFi
+ 0001:0000990C SetWindowText__6WindowFPc  SetWindowText__6WindowFPc
+ 0001:00009454 Set_BackColor__6WindowFUl  Set_BackColor__6WindowFUl
+ 0001:000094D4 Set_FontNameSize__6WindowFPc  Set_FontNameSize__6WindowFPc
+ 0001:00009494 Set_TextColor__6WindowFUl  Set_TextColor__6WindowFUl
+ 0001:0000AD6C Set__10SpinButtonFi     Set__10SpinButtonFi
+ 0001:0000B5A8 Set__6SliderFUlT1       Set__6SliderFUlT1
+ 0001:0000A880 Set__8CheckboxFi        Set__8CheckboxFi
+ 0001:00009608 Show__6WindowFv         Show__6WindowFv
+ 0001:00009788 Sink__6WindowFv         Sink__6WindowFv
+ 0001:00009670 Size__6WindowFiT1       Size__6WindowFiT1
+ 0001:0000988C StartTimer__6WindowFiT1  StartTimer__6WindowFiT1
+ 0001:000098B4 StopTimer__6WindowFi    StopTimer__6WindowFi
+ 0001:00009764 Surface__6WindowFv      Surface__6WindowFv
+ 0001:000087DC Sys_BeepError__Fv       Sys_BeepError__Fv
+ 0001:000087C8 Sys_BeepNote__Fv        Sys_BeepNote__Fv
+ 0001:000087B4 Sys_BeepWarning__Fv     Sys_BeepWarning__Fv
+ 0001:0000877C Sys_Beep__FiT1          Sys_Beep__FiT1
+ 0001:000087F0 Sys_BringWindowToTop__FUl  Sys_BringWindowToTop__FUl
+ 0001:00008820 Sys_CloseFile__FUl      Sys_CloseFile__FUl
+ 0001:00008838 Sys_DefDialogProc       Sys_DefDialogProc
+ 0001:00008858 Sys_DefWindowProc       Sys_DefWindowProc
+ 0001:00008878 Sys_DeleteCriticalSection__FPi  Sys_DeleteCriticalSection__FPi
+ 0001:00008E6C Sys_DeregisterThread__Fv  Sys_DeregisterThread__Fv
+ 0001:0000888C Sys_DestroyWindow__FUl  Sys_DestroyWindow__FUl
+ 0001:000088A4 Sys_EnableWindow__FUlT1  Sys_EnableWindow__FUlT1
+ 0001:000088C0 Sys_EndDialog__FUlT1    Sys_EndDialog__FUlT1
+ 0001:000088E0 Sys_EnterCriticalSection__FPi  Sys_EnterCriticalSection__FPi
+ 0001:000088F8 Sys_ExitThread__Fi      Sys_ExitThread__Fi
+ 0001:00008910 Sys_GetFocus__Fv        Sys_GetFocus__Fv
+ 0001:00008924 Sys_GetForegroundWindow__Fv  Sys_GetForegroundWindow__Fv
+ 0001:00008938 Sys_GetLastError__FUl   Sys_GetLastError__FUl
+ 0001:00008950 Sys_GetModuleHandle__FPc  Sys_GetModuleHandle__FPc
+ 0001:00008974 Sys_GetWindowData__FUl  Sys_GetWindowData__FUl
+ 0001:00008990 Sys_GetWindowText__FUlPci  Sys_GetWindowText__FUlPci
+ 0001:000089B4 Sys_InitializeCriticalSection__FPi  Sys_InitializeCriticalSection__FPi
+ 0001:000089C8 Sys_InvalidateWindow__FUl  Sys_InvalidateWindow__FUl
+ 0001:000089E4 Sys_IsMousePresent__Fv  Sys_IsMousePresent__Fv
+ 0001:00008A04 Sys_LeaveCriticalSection__FPi  Sys_LeaveCriticalSection__FPi
+ 0001:00008A1C Sys_LoadCursor__FUll    Sys_LoadCursor__FUll
+ 0001:00008D44 Sys_MessageBox__FUlT1PcT3iT5  Sys_MessageBox__FUlT1PcT3iT5
+ 0001:00003FD8 Sys_MsgWaitForMultipleObjects__FiPUlT1  Sys_MsgWaitForMultipleObjects__FiPUlT1
+ 0001:00008A44 Sys_PostMessage__FUlT1PvT3  Sys_PostMessage__FUlT1PvT3
+ 0001:00008A6C Sys_PostQuitMessage__FUli  Sys_PostQuitMessage__FUli
+ 0001:00008D74 Sys_ProcessMessages__Fl  Sys_ProcessMessages__Fl
+ 0001:00008C94 Sys_QueryTickInterval__Fv  Sys_QueryTickInterval__Fv
+ 0001:00008A94 Sys_ReadFile__FUlPviPUl  Sys_ReadFile__FUlPviPUl
+ 0001:00008D04 Sys_RegisterClass__FUlPcPFUlT1PvT3_PviN24N22  Sys_RegisterClass__FUlPcPFUlT1PvT3_PviN24N22
+ 0001:00008E5C Sys_RegisterThread__Fv  Sys_RegisterThread__Fv
+ 0001:00008AC4 Sys_ReleaseCapture__Fv  Sys_ReleaseCapture__Fv
+ 0001:00008AD8 Sys_SendMessage         Sys_SendMessage
+ 0001:00008AF8 Sys_SetActiveWindow__FUl  Sys_SetActiveWindow__FUl
+ 0001:00008B10 Sys_SetCapture__FUl     Sys_SetCapture__FUl
+ 0001:00008B44 Sys_SetCursorPos__FiT1  Sys_SetCursorPos__FiT1
+ 0001:00008B2C Sys_SetCursor__FUl      Sys_SetCursor__FUl
+ 0001:00008B64 Sys_SetFocus__FUl       Sys_SetFocus__FUl
+ 0001:00008B80 Sys_SetWindowData__FUlPv  Sys_SetWindowData__FUlPv
+ 0001:00008BA0 Sys_SetWindowText__FUlPc  Sys_SetWindowText__FUlPc
+ 0001:00008BBC Sys_ShowCursor__FUl     Sys_ShowCursor__FUl
+ 0001:00008BD4 Sys_ShowWindow__FUlT1   Sys_ShowWindow__FUlT1
+ 0001:00008BF4 Sys_Sleep__Fi           Sys_Sleep__Fi
+ 0001:00008C0C Sys_StartTimer__FUliT2  Sys_StartTimer__FUliT2
+ 0001:00008C34 Sys_StopTimer__FUli     Sys_StopTimer__FUli
+ 0001:00008E74 Sys_ThreadNumber__Fi    Sys_ThreadNumber__Fi
+ 0001:00008C54 Sys_UpdateWindow__FUl   Sys_UpdateWindow__FUl
+ 0001:00008CD4 Sys_WindowFromPoint__FiT1  Sys_WindowFromPoint__FiT1
+ 0001:00008C6C Sys_WriteFile__FUlPviPUl  Sys_WriteFile__FUlPviPUl
+ 0001:0000117C UpdateCRC16__FUsPvi     UpdateCRC16__FUsPvi
+ 0001:000011D8 UpdateCRC16__FUsUc      UpdateCRC16__FUsUc
+ 0001:0000710C UpdateTaskListEntry__FUlPc  UpdateTaskListEntry__FUlPc
+ 0001:0000956C Update__6WindowFv       Update__6WindowFv
+ 0001:0000089C Wait__13CircularQueueFi  Wait__13CircularQueueFi
+ 0001:00002788 Wait__5EventFi          Wait__5EventFi
+ 0001:00003440 _SetLanguage__FPcT1iN31RP14LanguageModule  _SetLanguage__FPcT1iN31RP14LanguageModule
+ 0001:000047C8 __as__4PoolFRC4Pool     __as__4PoolFRC4Pool
+ 0001:00006BB8 __as__6StringFPCc       __as__6StringFPCc
+ 0001:00006B1C __as__6StringFPCUc      __as__6StringFPCUc
+ 0001:00006A78 __as__6StringFRC6String  __as__6StringFRC6String
+ 0001:0000A8D4 __ct__10EntryfieldFUl   __ct__10EntryfieldFUl
+ 0001:00002918 __ct__10HelpWindowFUlT1UsPcT4  __ct__10HelpWindowFUlT1UsPcT4
+ 0001:0000ACC0 __ct__10SpinButtonFUl   __ct__10SpinButtonFUl
+ 0001:0000AB74 __ct__10StaticTextFUl   __ct__10StaticTextFUl
+ 0001:000043D4 __ct__11PoolSectionFiT1  __ct__11PoolSectionFiT1
+ 0001:00008F64 __ct__11WindowClassFPc  __ct__11WindowClassFPc
+ 0001:00008F14 __ct__11WindowClassFR7Processi  __ct__11WindowClassFR7Processi
+ 0001:0000664C __ct__12PublicMemoryFPcUli  __ct__12PublicMemoryFPcUli
+ 0001:00000454 __ct__13CircularQueueFPciT2  __ct__13CircularQueueFPciT2
+ 0001:00002B28 __ct__14LanguageModuleFPcT1  __ct__14LanguageModuleFPcT1
+ 0001:000064DC __ct__14ResourceStringFUlT1PCcUi  __ct__14ResourceStringFUlT1PCcUi
+ 0001:0000A5CC __ct__16SubclassedWindowFUl  __ct__16SubclassedWindowFUl
+ 0001:000045B8 __ct__4PoolFPciT2       __ct__4PoolFPciT2
+ 0001:00004638 __ct__4PoolFR4Pool      __ct__4PoolFR4Pool
+ 0001:000023BC __ct__5EventFPcT1i      __ct__5EventFPcT1i
+ 0001:00003A88 __ct__5MutexFPcT1i      __ct__5MutexFPcT1i
+ 0001:00000000 __ct__6CanvasFPcUl      __ct__6CanvasFPcUl
+ 0001:00001B0C __ct__6DialogFUlN21i    __ct__6DialogFUlN21i
+ 0001:000036C0 __ct__6ModuleFPc        __ct__6ModuleFPc
+ 0001:000037FC __ct__6ModuleFRC6Module  __ct__6ModuleFRC6Module
+ 0001:0000B3F0 __ct__6SliderFUl        __ct__6SliderFUl
+ 0001:0000B198 __ct__6SliderFUlN31iPc  __ct__6SliderFUlN31iPc
+ 0001:0000ADC0 __ct__6SliderFUlN41iPc  __ct__6SliderFUlN41iPc
+ 0001:0000B0B0 __ct__6SliderFUlT1      __ct__6SliderFUlT1
+ 0001:0000690C __ct__6StringFPc        __ct__6StringFPc
+ 0001:00006898 __ct__6StringFPUc       __ct__6StringFPUc
+ 0001:000069FC __ct__6StringFRC6String  __ct__6StringFRC6String
+ 0001:00006980 __ct__6StringFv         __ct__6StringFv
+ 0001:000090C4 __ct__6WindowFR11WindowClassUlPciN44N22T4Pv  __ct__6WindowFR11WindowClassUlPciN44N22T4Pv
+ 0001:00009278 __ct__6WindowFUl        __ct__6WindowFUl
+ 0001:00008F88 __ct__6WindowFUlPcT2T1iN35N31PvT12_  __ct__6WindowFUlPcT2T1iN35N31PvT12_
+ 0001:0000B814 __ct__7ListBoxFUl       __ct__7ListBoxFUl
+ 0001:00005D58 __ct__7ProfileFPcUlT1   __ct__7ProfileFPcUlT1
+ 0001:00005928 __ct__7ProfileFPcUlT2iP10HelpWindowT2  __ct__7ProfileFPcUlT2iP10HelpWindowT2
+ 0001:0000A734 __ct__8CheckboxFUl      __ct__8CheckboxFUl
+ 0001:0000A958 __dt__10EntryfieldFv    __dt__10EntryfieldFv
+ 0001:000029EC __dt__10HelpWindowFv    __dt__10HelpWindowFv
+ 0001:0000ABF8 __dt__10StaticTextFv    __dt__10StaticTextFv
+ 0001:00004484 __dt__11PoolSectionFv   __dt__11PoolSectionFv
+ 0001:000067D8 __dt__12PublicMemoryFv  __dt__12PublicMemoryFv
+ 0001:000005A0 __dt__13CircularQueueFv  __dt__13CircularQueueFv
+ 0001:00002DBC __dt__14LanguageModuleFv  __dt__14LanguageModuleFv
+ 0001:000065FC __dt__14ResourceStringFv  __dt__14ResourceStringFv
+ 0001:0000A638 __dt__16SubclassedWindowFv  __dt__16SubclassedWindowFv
+ 0001:00004718 __dt__4PoolFv           __dt__4PoolFv
+ 0001:000025EC __dt__5EventFv          __dt__5EventFv
+ 0001:00003CB8 __dt__5MutexFv          __dt__5MutexFv
+ 0001:000000F4 __dt__6CanvasFv         __dt__6CanvasFv
+ 0001:00001B6C __dt__6DialogFv         __dt__6DialogFv
+ 0001:00003934 __dt__6ModuleFv         __dt__6ModuleFv
+ 0001:0000B490 __dt__6SliderFv         __dt__6SliderFv
+ 0001:000069A0 __dt__6StringFv         __dt__6StringFv
+ 0001:00009314 __dt__6WindowFv         __dt__6WindowFv
+ 0001:0000B898 __dt__7ListBoxFv        __dt__7ListBoxFv
+ 0001:00005F9C __dt__7ProfileFv        __dt__7ProfileFv
+ 0001:0000A7B8 __dt__8CheckboxFv       __dt__8CheckboxFv
+
+  Address         Publics by Name
+
+ 0002:00001B0C       @BSSE:\Projects\RunTime\CANVAS.CPP
+ 0002:00001BA4       @BSSE:\Projects\RunTime\CIRQUEUE.CPP
+ 0002:00001B84       @BSSE:\Projects\RunTime\CONTROLS.CPP
+ 0002:00001B00       @BSSE:\Projects\RunTime\DEBUG.CPP
+ 0002:00001B6C       @BSSE:\Projects\RunTime\LMODULE.CPP
+ 0002:00001B08       @BSSE:\Projects\RunTime\MUX.CPP
+ 0002:00001B04       @BSSE:\Projects\RunTime\POOL.CPP
+ 0002:00001B78       @BSSE:\Projects\RunTime\PROFILE.CPP
+ 0002:00001BAC       @BSSE:\Projects\RunTime\SUPPORT.CPP
+ 0002:00001B18       @BSSE:\Projects\RunTime\WINDOW.CPP
+ 0001:00009714       Activate__6WindowFv
+ 0001:000099AC       Add2TaskList__6WindowFv
+ 0001:000070A0       Add2TaskList__FUlPc
+ 0001:00006E58       AddMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00006E98       AddSubMenuItem__FUlUsT2P9_MENUITEMPc
+ 0001:00009A70       AddSysMenuItem__6WindowFPcUssN22UlT6
+ 0001:00006D4C       AddSysMenuItem__FUlP9_MENUITEMPc
+ 0001:00009A48       AddSysMenuSeparator__6WindowFv
+ 0001:00006DC0       AddSysSubMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00002A3C       Associate__10HelpWindowFUl
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0001:000020A0       BuildExtendedAttributes__FUlP6EADATA
+ 0001:00002270       BuildMVMTValue__FPvUlP10MVMT_VALUE
+ 0001:00007168       BuildPresParams__FUsPUlT2PPUc
+ 0001:00000C70       Button_Processor
+ 0001:000073BC       CheckDrive__FiRi
+ 0001:000073E0       CheckDrive__FiRiPcT3
+ 0001:00007048       CheckMenuItem__FUlUsT1
+ 0001:00007004       CheckMenuItem__FUlUsT2T1
+ 0001:0000875C       CHILD__FUli
+ 0001:000044F0       Clear__11PoolSectionFP11PoolSection
+ 0001:00004EB4       Clear__4PoolFv
+ 0001:0000B994       Clear__7ListBoxFv
+ 0001:000016C8       CloseTimer__Fv
+ 0001:00000D94       ComboBox_Processor
+ 0001:000056A4       Command__17ProfilePathDialogFPvT1
+ 0001:00001D88       Command__6DialogFPvT1
+ 0001:00001714       ComputeElapsedTime__FP10_TIMESTAMPT1PUl
+ 0002:000003C0       CountryInfo
+ 0001:0000973C       Deactivate__6WindowFv
+ 0001:000012C0       Debug__FUlPce
+ 0001:00007854       DecodeDecimal__FPcRd
+ 0001:00004DB4       Delete__4PoolFP9PoolEntry
+ 0001:0000B9E8       Delete__7ListBoxFi
+ 0001:000009C4       Dequeue__13CircularQueueFPvi
+ 0001:00009588       Destroy__6WindowFv
+ 0001:00001EE8       DialogMessageProcessor
+ 0001:000097E8       Disable__6WindowFv
+ 0001:00001C3C       Dismiss__6DialogFi
+ 0001:00006C94       DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  DosCloseEventSem     (DOSCALLS.326)
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  DosCloseMuxWaitSem   (DOSCALLS.339)
+ 0000:00000000  Imp  DosCreateEventSem    (DOSCALLS.324)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  DosCreateMuxWaitSem  (DOSCALLS.337)
+ 0000:00000000  Imp  DosDevIOCtl          (DOSCALLS.284)
+ 0000:00000000  Imp  DosEnterCritSec      (DOSCALLS.232)
+ 0000:00000000  Imp  DosError             (DOSCALLS.212)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DosExitCritSec       (DOSCALLS.233)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  DosFreeResource      (DOSCALLS.353)
+ 0000:00000000  Imp  DosGetNamedSharedMem (DOSCALLS.301)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  DosOpenEventSem      (DOSCALLS.325)
+ 0000:00000000  Imp  DosOpenMutexSem      (DOSCALLS.332)
+ 0000:00000000  Imp  DosPostEventSem      (DOSCALLS.328)
+ 0000:00000000  Imp  DosQueryCtryInfo     (NLS.5)
+ 0000:00000000  Imp  DosQueryFileInfo     (DOSCALLS.279)
+ 0000:00000000  Imp  DosQueryFSAttach     (DOSCALLS.277)
+ 0000:00000000  Imp  DosQueryFSInfo       (DOSCALLS.278)
+ 0000:00000000  Imp  DosQueryMem          (DOSCALLS.306)
+ 0000:00000000  Imp  DosQueryModuleHandle (DOSCALLS.319)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  DosReleaseMutexSem   (DOSCALLS.335)
+ 0000:00000000  Imp  DosResetEventSem     (DOSCALLS.327)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0001:0000A178       Drag__6WindowFv
+ 0001:00001444       DumpMemory__FPcPviT3
+ 0001:00000714       Dump__13CircularQueueFi
+ 0001:00004F78       Dump__4PoolFi
+ 0001:00000AC8       Empty__13CircularQueueFv
+ 0001:00006FAC       EnableMenuItem__FUlUsT1
+ 0001:00006F68       EnableMenuItem__FUlUsT2T1
+ 0001:0000B7D8       Enable__6SliderFi
+ 0001:000097C8       Enable__6WindowFi
+ 0001:000007A8       Enqueue__13CircularQueueFPvi
+ 0001:000010E0       EntryField_Processor
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0001:000072BC       Exit
+ 0001:00007314       ExtendedHelp
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0001:0000491C       Find__4PoolCFi
+ 0001:00004984       Find__4PoolCFP9PoolEntry
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0001:000077F0       FormatDecimal__FPcliT3
+ 0001:0000758C       GetCountryInfo__FiT1
+ 0001:0000986C       GetData__6WindowFv
+ 0001:00006034       GetItem__7ProfileFPcPvi
+ 0001:00006250       GetString__7ProfileFPcRPc
+ 0001:0000617C       GetString__7ProfileFPcT1i
+ 0001:00009824       GetText__6WindowFPci
+ 0001:000016E0       GetTime__FP10_TIMESTAMP
+ 0001:00007A88       GetTitlebarRect__FUlT1R6_RECTL
+ 0001:00009978       GetWindowText__6WindowFPci
+ 0000:00000000  Imp  GpiDestroyPS         (PMGPI.379)
+ 0000:00000000  Imp  GpiQueryFonts        (PMGPI.586)
+ 0001:000072DC       HelpForHelp
+ 0001:00007384       HelpIndex
+ 0001:00009C14       HideControls__6WindowFUl
+ 0001:00009628       Hide__6WindowFv
+ 0002:000000D0       HomePath
+ 0001:0000564C       InitDialog__17ProfilePathDialogFUl
+ 0001:00001C5C       InitDialog__6DialogFUl
+ 0001:0000AA98       Insert__10EntryfieldFPc
+ 0001:00004A88       Insert__4PoolFP9PoolEntryPv
+ 0001:0000B9B8       Insert__7ListBoxFPci
+ 0001:00001900       InterpretMsg__FUlPc
+ 0001:0000178C       InterpretWinError__FUlPc
+ 0001:00009530       Invalidate__6WindowFR6_RECTL
+ 0001:00009550       Invalidate__6WindowFv
+ 0001:0000734C       KeysHelp
+ 0001:00002EE0       Language_Create__FPcT1iN21
+ 0001:00001BC8       Load__6DialogFv
+ 0002:00001BBC       Logfile
+ 0001:000019B4       LogMsgDone__FiPcUlPv
+ 0001:00001970       LogMsgRcvd__FiPcUlPvT4
+ 0002:000001D5       LogSemaphore
+ 0001:00001314       Log__FPce
+ 0001:000096C4       Maximize__6WindowFv
+ 0000:00000000  Imp  memcpy               (DDE4MBS.memcpy)
+ 0000:00000000  Imp  memset               (DDE4MBS.memset)
+ 0001:00009B94       MessageBox__6WindowFPciT2
+ 0001:00009B60       MessageBox__6WindowFPcT1iT3
+ 0001:00007B50       MessageBox__FUlT1PcT3iT5T1T5
+ 0001:0000A690       MessageProcessor__16SubclassedWindowFUlT1PvT3
+ 0001:00005890       MessageProcessor__17ProfilePathDialogFUlT1PvT3
+ 0001:00001DDC       MessageProcessor__6DialogFUlT1PvT3
+ 0001:0000A314       MessageProcessor__6WindowFUlT1PvT3
+ 0001:0000B960       MessageProcessor__7ListBoxFUlT1PvT3
+ 0001:0000969C       Minimize__6WindowFv
+ 0001:00009644       Move__6WindowFiT1
+ 0001:00004A30       Next__4PoolCFi
+ 0001:00004A68       Next__4PoolCFP9PoolEntry
+ 0001:00001674       OpenTimer__Fv
+ 0001:00008724       OWNER__FUl
+ 0001:00008740       PARENT__FUl
+ 0001:00000938       Peek__13CircularQueueFPv
+ 0001:00009BE0       PopupMenu__6WindowFUliT2
+ 0001:0000A2E8       PostMessage__6WindowFUlPvT2
+ 0001:00002664       Post__5EventFv
+ 0001:000049D8       Prev__4PoolCFi
+ 0001:00004A10       Prev__4PoolCFP9PoolEntry
+ 0000:00000000  Imp  PrfCloseProfile      (PMSHAPI.103)
+ 0000:00000000  Imp  PrfOpenProfile       (PMSHAPI.102)
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  PrfQueryProfileSize  (PMSHAPI.101)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0001:00001C14       Process__6DialogFv
+ 0001:000060FC       PutItem__7ProfileFPcPvi
+ 0001:00006388       PutString__7ProfileFPcT1
+ 0001:000039EC       QueryAddress__6ModuleFi
+ 0001:000039B8       QueryAddress__6ModuleFPc
+ 0001:00009438       QueryAnchor__6WindowFv
+ 0001:0000BA40       QueryCount__7ListBoxFv
+ 0001:00000350       QueryFontCount__6CanvasFv
+ 0001:000003C0       QueryFonts__6CanvasFiP12_FONTMETRICS
+ 0001:0000BAF0       QueryItemText__7ListBoxFiPcT1
+ 0001:0000AA4C       QuerySelection__10EntryfieldFRiT1
+ 0001:0000BA68       QuerySelection__7ListBoxFi
+ 0001:0000BAC8       QueryTopIndex__7ListBoxFv
+ 0001:0000AD90       Query__10SpinButtonFv
+ 0001:0000A8AC       Query__8CheckboxFv
+ 0001:0000B6C0       Read__6SliderFv
+ 0001:000098D4       Rectangle__6WindowFv
+ 0001:00000B6C       RegisterControls__FUl
+ 0001:00003EF0       Release__5MutexFv
+ 0001:0000A29C       RemovePresParam__6WindowFi
+ 0001:00006EFC       RemoveSubMenuItem__FUlUsN22
+ 0001:000095A4       Reposition__6WindowFiN3113PositionClass
+ 0001:00003E10       RequestWin__5MutexFi
+ 0001:00003D30       Request__5MutexFi
+ 0001:000026F4       Reset__5EventFv
+ 0001:00009F24       Resize__6WindowFiT1
+ 0001:000096EC       Restore__6WindowFv
+ 0001:0000BA14       SelectItem__7ListBoxFi
+ 0001:0000A2BC       SendMessage__6WindowFUlPvT2
+ 0001:0000984C       SetData__6WindowFPv
+ 0001:000097AC       SetFocus__6WindowFv
+ 0001:0000AD44       SetLimits__10SpinButtonFiT1
+ 0001:0000AA20       SetLimit__10EntryfieldFi
+ 0001:0000A270       SetPresParam__6WindowFiT1Pv
+ 0001:00009804       SetText__6WindowFPc
+ 0001:0000BA9C       SetTopIndex__7ListBoxFi
+ 0001:0000990C       SetWindowText__6WindowFPc
+ 0001:00009454       Set_BackColor__6WindowFUl
+ 0001:000094D4       Set_FontNameSize__6WindowFPc
+ 0001:00009494       Set_TextColor__6WindowFUl
+ 0001:0000AD6C       Set__10SpinButtonFi
+ 0001:0000B5A8       Set__6SliderFUlT1
+ 0001:0000A880       Set__8CheckboxFi
+ 0001:00009608       Show__6WindowFv
+ 0001:00009788       Sink__6WindowFv
+ 0001:00009670       Size__6WindowFiT1
+ 0001:0000988C       StartTimer__6WindowFiT1
+ 0001:000098B4       StopTimer__6WindowFi
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0000:00000000  Imp  strncpy              (DDE4MBS.strncpy)
+ 0001:00009764       Surface__6WindowFv
+ 0001:000087DC       Sys_BeepError__Fv
+ 0001:000087C8       Sys_BeepNote__Fv
+ 0001:000087B4       Sys_BeepWarning__Fv
+ 0001:0000877C       Sys_Beep__FiT1
+ 0001:000087F0       Sys_BringWindowToTop__FUl
+ 0001:00008820       Sys_CloseFile__FUl
+ 0001:00008838       Sys_DefDialogProc
+ 0001:00008858       Sys_DefWindowProc
+ 0001:00008878       Sys_DeleteCriticalSection__FPi
+ 0001:00008E6C       Sys_DeregisterThread__Fv
+ 0001:0000888C       Sys_DestroyWindow__FUl
+ 0001:000088A4       Sys_EnableWindow__FUlT1
+ 0001:000088C0       Sys_EndDialog__FUlT1
+ 0001:000088E0       Sys_EnterCriticalSection__FPi
+ 0001:000088F8       Sys_ExitThread__Fi
+ 0001:00008DD4       Sys_GetFileTime__FiPUsT2
+ 0001:00008910       Sys_GetFocus__Fv
+ 0001:00008924       Sys_GetForegroundWindow__Fv
+ 0001:00008938       Sys_GetLastError__FUl
+ 0001:00008950       Sys_GetModuleHandle__FPc
+ 0001:00008974       Sys_GetWindowData__FUl
+ 0001:00008990       Sys_GetWindowText__FUlPci
+ 0001:000089B4       Sys_InitializeCriticalSection__FPi
+ 0001:000089C8       Sys_InvalidateWindow__FUl
+ 0001:000089E4       Sys_IsMousePresent__Fv
+ 0001:00008A04       Sys_LeaveCriticalSection__FPi
+ 0001:00008A1C       Sys_LoadCursor__FUll
+ 0001:00008D44       Sys_MessageBox__FUlT1PcT3iT5
+ 0001:00003FD8       Sys_MsgWaitForMultipleObjects__FiPUlT1
+ 0001:00008A44       Sys_PostMessage__FUlT1PvT3
+ 0001:00008A6C       Sys_PostQuitMessage__FUli
+ 0001:00008D74       Sys_ProcessMessages__Fl
+ 0001:00008C94       Sys_QueryTickInterval__Fv
+ 0001:00008A94       Sys_ReadFile__FUlPviPUl
+ 0001:00008D04       Sys_RegisterClass__FUlPcPFUlT1PvT3_PviN24N22
+ 0001:00008E5C       Sys_RegisterThread__Fv
+ 0001:00008AC4       Sys_ReleaseCapture__Fv
+ 0001:00008AD8       Sys_SendMessage
+ 0001:00008AF8       Sys_SetActiveWindow__FUl
+ 0001:00008B10       Sys_SetCapture__FUl
+ 0001:00008B44       Sys_SetCursorPos__FiT1
+ 0001:00008B2C       Sys_SetCursor__FUl
+ 0001:00008E10       Sys_SetFileTime__FiUsT2
+ 0001:00008B64       Sys_SetFocus__FUl
+ 0001:00008B80       Sys_SetWindowData__FUlPv
+ 0001:00008BA0       Sys_SetWindowText__FUlPc
+ 0001:00008BBC       Sys_ShowCursor__FUl
+ 0001:00008BD4       Sys_ShowWindow__FUlT1
+ 0001:00008BF4       Sys_Sleep__Fi
+ 0001:00008C0C       Sys_StartTimer__FUliT2
+ 0001:00008C34       Sys_StopTimer__FUli
+ 0001:00008E74       Sys_ThreadNumber__Fi
+ 0001:00008C54       Sys_UpdateWindow__FUl
+ 0001:00008CD4       Sys_WindowFromPoint__FiT1
+ 0001:00008C6C       Sys_WriteFile__FUlPviPUl
+ 0002:00001B68       Timer
+ 0002:00001B64       Trace
+ 0001:0000117C       UpdateCRC16__FUsPvi
+ 0001:000011D8       UpdateCRC16__FUsUc
+ 0001:0000710C       UpdateTaskListEntry__FUlPc
+ 0001:0000956C       Update__6WindowFv
+ 0001:0000089C       Wait__13CircularQueueFi
+ 0001:00002788       Wait__5EventFi
+ 0000:00000000  Imp  WinAddSwitchEntry    (PMSHAPI.120)
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  WinBeginEnumWindows  (PMWIN.702)
+ 0000:00000000  Imp  WinCalcFrameRect     (PMWIN.704)
+ 0000:00000000  Imp  WinChangeSwitchEntry (PMSHAPI.123)
+ 0000:00000000  Imp  WinCreateHelpInstance (HELPMGR.51)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinCreateWindow      (PMWIN.909)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinDefWindowProc     (PMWIN.911)
+ 0000:00000000  Imp  WinDestroyHelpInstance (HELPMGR.52)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  WinDispatchMsg       (PMWIN.912)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  WinEndEnumWindows    (PMWIN.737)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  WinGetMsg            (PMWIN.915)
+ 0000:00000000  Imp  WinGetNextWindow     (PMWIN.756)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinIsWindow          (PMWIN.772)
+ 0000:00000000  Imp  WinIsWindowVisible   (PMWIN.775)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinMessageBox2       (PMWIN.1015)
+ 0000:00000000  Imp  WinPopupMenu         (PMWIN.937)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinProcessDlg        (PMWIN.796)
+ 0000:00000000  Imp  WinQueryActiveWindow (PMWIN.799)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  WinQueryClassInfo    (PMWIN.925)
+ 0000:00000000  Imp  WinQueryDlgItemText  (PMWIN.815)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  WinQueryHelpInstance (HELPMGR.53)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  WinQuerySwitchEntry  (PMSHAPI.124)
+ 0000:00000000  Imp  WinQuerySwitchHandle (PMSHAPI.125)
+ 0000:00000000  Imp  WinQuerySysColor     (PMWIN.826)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  WinQueryWindowPtr    (PMWIN.839)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinQueryWindowText   (PMWIN.841)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  WinQueryWindowUShort (PMWIN.844)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  WinRemovePresParam   (PMWIN.940)
+ 0000:00000000  Imp  WinRequestMutexSem   (PMWIN.979)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetActiveWindow   (PMWIN.851)
+ 0000:00000000  Imp  WinSetCapture        (PMWIN.852)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  WinSetFocus          (PMWIN.860)
+ 0000:00000000  Imp  WinSetParent         (PMWIN.865)
+ 0000:00000000  Imp  WinSetPointer        (PMWIN.866)
+ 0000:00000000  Imp  WinSetPointerPos     (PMWIN.867)
+ 0000:00000000  Imp  WinSetPresParam      (PMWIN.938)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinSetWindowPtr      (PMWIN.876)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinShowPointer       (PMWIN.881)
+ 0000:00000000  Imp  WinShowWindow        (PMWIN.883)
+ 0000:00000000  Imp  WinStartTimer        (PMWIN.884)
+ 0000:00000000  Imp  WinStopTimer         (PMWIN.885)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  WinSubtractRect      (PMWIN.887)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinTrackRect         (PMWIN.890)
+ 0000:00000000  Imp  WinUpdateWindow      (PMWIN.892)
+ 0000:00000000  Imp  WinWaitEventSem      (PMWIN.978)
+ 0000:00000000  Imp  WinWaitMuxWaitSem    (PMWIN.980)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  WinWindowFromPoint   (PMWIN.900)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0002:000007B0       _dllentry
+ 0001:0000C1B8       _DLL_InitTerm
+ 0002:00001B00       _edata
+ 0002:00001BC0       _end
+ 0001:0000BE6C       _Exception_CPP
+ 0000:00000000  Imp  _exception_dllinit   (DDE4MBS._exception_dllinit)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  _heap_check          (DDE4MBS._heap_check)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0002:00001B14       _matherr_ptr
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0001:00003440       _SetLanguage__FPcT1iN31RP14LanguageModule
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0001:000047C8       __as__4PoolFRC4Pool
+ 0001:00006BB8       __as__6StringFPCc
+ 0001:00006B1C       __as__6StringFPCUc
+ 0001:00006A78       __as__6StringFRC6String
+ 0002:000007C0       __ctdtused
+ 0002:00001BB8       __ctordtorCurrent
+ 0002:000007E0       __ctordtorEnd
+ 0001:0000BD88       __ctordtorInit
+ 0002:000007D0       __ctordtorStart
+ 0001:0000BD50       __ctordtorTerm
+ 0001:0000A8D4       __ct__10EntryfieldFUl
+ 0001:00002918       __ct__10HelpWindowFUlT1UsPcT4
+ 0001:0000ACC0       __ct__10SpinButtonFUl
+ 0001:0000AB74       __ct__10StaticTextFUl
+ 0001:000043D4       __ct__11PoolSectionFiT1
+ 0001:00008F64       __ct__11WindowClassFPc
+ 0001:00008F14       __ct__11WindowClassFR7Processi
+ 0001:0000664C       __ct__12PublicMemoryFPcUli
+ 0001:00000454       __ct__13CircularQueueFPciT2
+ 0001:00002B28       __ct__14LanguageModuleFPcT1
+ 0001:000064DC       __ct__14ResourceStringFUlT1PCcUi
+ 0001:0000A5CC       __ct__16SubclassedWindowFUl
+ 0001:000054C4       __ct__17ProfilePathDialogFUlN21iP10HelpWindowPcT4
+ 0001:000045B8       __ct__4PoolFPciT2
+ 0001:00004638       __ct__4PoolFR4Pool
+ 0001:000023BC       __ct__5EventFPcT1i
+ 0001:00003A88       __ct__5MutexFPcT1i
+ 0001:00000000       __ct__6CanvasFPcUl
+ 0001:00001B0C       __ct__6DialogFUlN21i
+ 0001:000036C0       __ct__6ModuleFPc
+ 0001:000037FC       __ct__6ModuleFRC6Module
+ 0001:0000B3F0       __ct__6SliderFUl
+ 0001:0000B198       __ct__6SliderFUlN31iPc
+ 0001:0000ADC0       __ct__6SliderFUlN41iPc
+ 0001:0000B0B0       __ct__6SliderFUlT1
+ 0001:0000690C       __ct__6StringFPc
+ 0001:00006898       __ct__6StringFPUc
+ 0001:000069FC       __ct__6StringFRC6String
+ 0001:00006980       __ct__6StringFv
+ 0001:000090C4       __ct__6WindowFR11WindowClassUlPciN44N22T4Pv
+ 0001:00009278       __ct__6WindowFUl
+ 0001:00008F88       __ct__6WindowFUlPcT2T1iN35N31PvT12_
+ 0001:0000B814       __ct__7ListBoxFUl
+ 0001:00005294       __ct__7ProcessFPcl
+ 0001:00005D58       __ct__7ProfileFPcUlT1
+ 0001:00005928       __ct__7ProfileFPcUlT2iP10HelpWindowT2
+ 0001:0000A734       __ct__8CheckboxFUl
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  __dl__FPvPCcUi       (DDE4MBS.__dl__FPvPCcUi)
+ 0001:0000A958       __dt__10EntryfieldFv
+ 0001:000029EC       __dt__10HelpWindowFv
+ 0001:0000ABF8       __dt__10StaticTextFv
+ 0001:00004484       __dt__11PoolSectionFv
+ 0001:000067D8       __dt__12PublicMemoryFv
+ 0001:000005A0       __dt__13CircularQueueFv
+ 0001:00002DBC       __dt__14LanguageModuleFv
+ 0001:000065FC       __dt__14ResourceStringFv
+ 0001:0000A638       __dt__16SubclassedWindowFv
+ 0001:00005584       __dt__17ProfilePathDialogFv
+ 0001:00004718       __dt__4PoolFv
+ 0001:000025EC       __dt__5EventFv
+ 0001:00003CB8       __dt__5MutexFv
+ 0001:000000F4       __dt__6CanvasFv
+ 0001:00001B6C       __dt__6DialogFv
+ 0001:00003934       __dt__6ModuleFv
+ 0001:0000B490       __dt__6SliderFv
+ 0001:000069A0       __dt__6StringFv
+ 0001:00009314       __dt__6WindowFv
+ 0001:0000B898       __dt__7ListBoxFv
+ 0001:00005398       __dt__7ProcessFv
+ 0001:00005F9C       __dt__7ProfileFv
+ 0001:0000A7B8       __dt__8CheckboxFv
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  __nw__FUiPCcT1       (DDE4MBS.__nw__FUiPCcT1)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0002:000004F8       __vft10Entryfield6Window
+ 0002:00000510       __vft10StaticText6Window
+ 0002:00000300       __vft11PoolSection
+ 0002:00000240       __vft14LanguageModule6Module
+ 0002:000004C8       __vft16SubclassedWindow
+ 0002:00000340       __vft17ProfilePathDialog6Dialog
+ 0002:00000310       __vft4Pool
+ 0002:00000210       __vft6Dialog
+ 0002:000002D0       __vft6Module
+ 0002:00000528       __vft6Slider6Window
+ 0002:000004B0       __vft6Window
+ 0002:00000540       __vft7ListBox16SubclassedWindow
+ 0002:000004E0       __vft8Checkbox6Window
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  WinQuerySwitchEntry  (PMSHAPI.124)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  WinInvalidateRect    (PMWIN.765)
+ 0000:00000000  Imp  WinChangeSwitchEntry (PMSHAPI.123)
+ 0000:00000000  Imp  WinBeginEnumWindows  (PMWIN.702)
+ 0000:00000000  Imp  WinQueryActiveWindow (PMWIN.799)
+ 0000:00000000  Imp  WinEndEnumWindows    (PMWIN.737)
+ 0000:00000000  Imp  WinCreateHelpInstance (HELPMGR.51)
+ 0000:00000000  Imp  DosQueryFileInfo     (DOSCALLS.279)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  WinQueryWindowPtr    (PMWIN.839)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  WinQueryHelpInstance (HELPMGR.53)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  WinQueryWindowUShort (PMWIN.844)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  WinQueryDlgItemText  (PMWIN.815)
+ 0000:00000000  Imp  WinSubtractRect      (PMWIN.887)
+ 0000:00000000  Imp  WinQuerySwitchHandle (PMSHAPI.125)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  DosQueryModuleHandle (DOSCALLS.319)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  PrfQueryProfileSize  (PMSHAPI.101)
+ 0000:00000000  Imp  DosGetNamedSharedMem (DOSCALLS.301)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0000:00000000  Imp  DosPostEventSem      (DOSCALLS.328)
+ 0000:00000000  Imp  DosCreateMuxWaitSem  (DOSCALLS.337)
+ 0000:00000000  Imp  WinSetPresParam      (PMWIN.938)
+ 0000:00000000  Imp  DosCloseEventSem     (DOSCALLS.326)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  _heap_check          (DDE4MBS._heap_check)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  DosResetEventSem     (DOSCALLS.327)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  WinDestroyHelpInstance (HELPMGR.52)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  WinTrackRect         (PMWIN.890)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0000:00000000  Imp  WinWaitEventSem      (PMWIN.978)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  DosOpenEventSem      (DOSCALLS.325)
+ 0000:00000000  Imp  DosOpenMutexSem      (DOSCALLS.332)
+ 0000:00000000  Imp  WinGetMsg            (PMWIN.915)
+ 0000:00000000  Imp  DosQueryFSAttach     (DOSCALLS.277)
+ 0000:00000000  Imp  DosDevIOCtl          (DOSCALLS.284)
+ 0000:00000000  Imp  WinSetActiveWindow   (PMWIN.851)
+ 0000:00000000  Imp  WinShowPointer       (PMWIN.881)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinSetFocus          (PMWIN.860)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0000:00000000  Imp  DosQueryMem          (DOSCALLS.306)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  WinIsWindow          (PMWIN.772)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  WinStopTimer         (PMWIN.885)
+ 0000:00000000  Imp  PrfCloseProfile      (PMSHAPI.103)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  WinSetParent         (PMWIN.865)
+ 0000:00000000  Imp  _exception_dllinit   (DDE4MBS._exception_dllinit)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  WinUpdateWindow      (PMWIN.892)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0000:00000000  Imp  memcpy               (DDE4MBS.memcpy)
+ 0000:00000000  Imp  DosError             (DOSCALLS.212)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  strncpy              (DDE4MBS.strncpy)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  WinPopupMenu         (PMWIN.937)
+ 0000:00000000  Imp  DosCloseMuxWaitSem   (DOSCALLS.339)
+ 0000:00000000  Imp  WinQueryWindowText   (PMWIN.841)
+ 0000:00000000  Imp  WinCreateWindow      (PMWIN.909)
+ 0000:00000000  Imp  WinDefWindowProc     (PMWIN.911)
+ 0000:00000000  Imp  GpiDestroyPS         (PMGPI.379)
+ 0000:00000000  Imp  WinProcessDlg        (PMWIN.796)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  WinRequestMutexSem   (PMWIN.979)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  memset               (DDE4MBS.memset)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  DosCreateEventSem    (DOSCALLS.324)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinSetWindowPtr      (PMWIN.876)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  WinSetCapture        (PMWIN.852)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  DosQueryCtryInfo     (NLS.5)
+ 0000:00000000  Imp  GpiQueryFonts        (PMGPI.586)
+ 0000:00000000  Imp  WinStartTimer        (PMWIN.884)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinShowWindow        (PMWIN.883)
+ 0000:00000000  Imp  DosFreeResource      (DOSCALLS.353)
+ 0000:00000000  Imp  DosEnterCritSec      (DOSCALLS.232)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  WinSetPointer        (PMWIN.866)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  WinCalcFrameRect     (PMWIN.704)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  WinMessageBox2       (PMWIN.1015)
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  WinRemovePresParam   (PMWIN.940)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  WinAddSwitchEntry    (PMSHAPI.120)
+ 0000:00000000  Imp  WinGetNextWindow     (PMWIN.756)
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  DosReleaseMutexSem   (DOSCALLS.335)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  WinSetPointerPos     (PMWIN.867)
+ 0000:00000000  Imp  WinQueryClassInfo    (PMWIN.925)
+ 0000:00000000  Imp  WinQuerySysColor     (PMWIN.826)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  __nw__FUiPCcT1       (DDE4MBS.__nw__FUiPCcT1)
+ 0000:00000000  Imp  PrfOpenProfile       (PMSHAPI.102)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0000:00000000  Imp  WinDispatchMsg       (PMWIN.912)
+ 0000:00000000  Imp  WinIsWindowVisible   (PMWIN.775)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  __dl__FPvPCcUi       (DDE4MBS.__dl__FPvPCcUi)
+ 0000:00000000  Imp  DosQueryFSInfo       (DOSCALLS.278)
+ 0000:00000000  Imp  WinWindowFromPoint   (PMWIN.900)
+ 0000:00000000  Imp  WinWaitMuxWaitSem    (PMWIN.980)
+ 0000:00000000  Imp  DosExitCritSec       (DOSCALLS.233)
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0001:00000000       __ct__6CanvasFPcUl
+ 0001:000000F4       __dt__6CanvasFv
+ 0001:00000350       QueryFontCount__6CanvasFv
+ 0001:000003C0       QueryFonts__6CanvasFiP12_FONTMETRICS
+ 0001:00000454       __ct__13CircularQueueFPciT2
+ 0001:000005A0       __dt__13CircularQueueFv
+ 0001:00000714       Dump__13CircularQueueFi
+ 0001:000007A8       Enqueue__13CircularQueueFPvi
+ 0001:0000089C       Wait__13CircularQueueFi
+ 0001:00000938       Peek__13CircularQueueFPv
+ 0001:000009C4       Dequeue__13CircularQueueFPvi
+ 0001:00000AC8       Empty__13CircularQueueFv
+ 0001:00000B6C       RegisterControls__FUl
+ 0001:00000C70       Button_Processor
+ 0001:00000D94       ComboBox_Processor
+ 0001:000010E0       EntryField_Processor
+ 0001:0000117C       UpdateCRC16__FUsPvi
+ 0001:000011D8       UpdateCRC16__FUsUc
+ 0001:000012C0       Debug__FUlPce
+ 0001:00001314       Log__FPce
+ 0001:00001444       DumpMemory__FPcPviT3
+ 0001:00001674       OpenTimer__Fv
+ 0001:000016C8       CloseTimer__Fv
+ 0001:000016E0       GetTime__FP10_TIMESTAMP
+ 0001:00001714       ComputeElapsedTime__FP10_TIMESTAMPT1PUl
+ 0001:0000178C       InterpretWinError__FUlPc
+ 0001:00001900       InterpretMsg__FUlPc
+ 0001:00001970       LogMsgRcvd__FiPcUlPvT4
+ 0001:000019B4       LogMsgDone__FiPcUlPv
+ 0001:00001B0C       __ct__6DialogFUlN21i
+ 0001:00001B6C       __dt__6DialogFv
+ 0001:00001BC8       Load__6DialogFv
+ 0001:00001C14       Process__6DialogFv
+ 0001:00001C3C       Dismiss__6DialogFi
+ 0001:00001C5C       InitDialog__6DialogFUl
+ 0001:00001D88       Command__6DialogFPvT1
+ 0001:00001DDC       MessageProcessor__6DialogFUlT1PvT3
+ 0001:00001EE8       DialogMessageProcessor
+ 0001:000020A0       BuildExtendedAttributes__FUlP6EADATA
+ 0001:00002270       BuildMVMTValue__FPvUlP10MVMT_VALUE
+ 0001:000023BC       __ct__5EventFPcT1i
+ 0001:000025EC       __dt__5EventFv
+ 0001:00002664       Post__5EventFv
+ 0001:000026F4       Reset__5EventFv
+ 0001:00002788       Wait__5EventFi
+ 0001:00002918       __ct__10HelpWindowFUlT1UsPcT4
+ 0001:000029EC       __dt__10HelpWindowFv
+ 0001:00002A3C       Associate__10HelpWindowFUl
+ 0001:00002B28       __ct__14LanguageModuleFPcT1
+ 0001:00002DBC       __dt__14LanguageModuleFv
+ 0001:00002EE0       Language_Create__FPcT1iN21
+ 0001:00003440       _SetLanguage__FPcT1iN31RP14LanguageModule
+ 0001:000036C0       __ct__6ModuleFPc
+ 0001:000037FC       __ct__6ModuleFRC6Module
+ 0001:00003934       __dt__6ModuleFv
+ 0001:000039B8       QueryAddress__6ModuleFPc
+ 0001:000039EC       QueryAddress__6ModuleFi
+ 0001:00003A88       __ct__5MutexFPcT1i
+ 0001:00003CB8       __dt__5MutexFv
+ 0001:00003D30       Request__5MutexFi
+ 0001:00003E10       RequestWin__5MutexFi
+ 0001:00003EF0       Release__5MutexFv
+ 0001:00003FD8       Sys_MsgWaitForMultipleObjects__FiPUlT1
+ 0001:000043D4       __ct__11PoolSectionFiT1
+ 0001:00004484       __dt__11PoolSectionFv
+ 0001:000044F0       Clear__11PoolSectionFP11PoolSection
+ 0001:000045B8       __ct__4PoolFPciT2
+ 0001:00004638       __ct__4PoolFR4Pool
+ 0001:00004718       __dt__4PoolFv
+ 0001:000047C8       __as__4PoolFRC4Pool
+ 0001:0000491C       Find__4PoolCFi
+ 0001:00004984       Find__4PoolCFP9PoolEntry
+ 0001:000049D8       Prev__4PoolCFi
+ 0001:00004A10       Prev__4PoolCFP9PoolEntry
+ 0001:00004A30       Next__4PoolCFi
+ 0001:00004A68       Next__4PoolCFP9PoolEntry
+ 0001:00004A88       Insert__4PoolFP9PoolEntryPv
+ 0001:00004DB4       Delete__4PoolFP9PoolEntry
+ 0001:00004EB4       Clear__4PoolFv
+ 0001:00004F78       Dump__4PoolFi
+ 0001:00005294       __ct__7ProcessFPcl
+ 0001:00005398       __dt__7ProcessFv
+ 0001:000054C4       __ct__17ProfilePathDialogFUlN21iP10HelpWindowPcT4
+ 0001:00005584       __dt__17ProfilePathDialogFv
+ 0001:0000564C       InitDialog__17ProfilePathDialogFUl
+ 0001:000056A4       Command__17ProfilePathDialogFPvT1
+ 0001:00005890       MessageProcessor__17ProfilePathDialogFUlT1PvT3
+ 0001:00005928       __ct__7ProfileFPcUlT2iP10HelpWindowT2
+ 0001:00005D58       __ct__7ProfileFPcUlT1
+ 0001:00005F9C       __dt__7ProfileFv
+ 0001:00006034       GetItem__7ProfileFPcPvi
+ 0001:000060FC       PutItem__7ProfileFPcPvi
+ 0001:0000617C       GetString__7ProfileFPcT1i
+ 0001:00006250       GetString__7ProfileFPcRPc
+ 0001:00006388       PutString__7ProfileFPcT1
+ 0001:000064DC       __ct__14ResourceStringFUlT1PCcUi
+ 0001:000065FC       __dt__14ResourceStringFv
+ 0001:0000664C       __ct__12PublicMemoryFPcUli
+ 0001:000067D8       __dt__12PublicMemoryFv
+ 0001:00006898       __ct__6StringFPUc
+ 0001:0000690C       __ct__6StringFPc
+ 0001:00006980       __ct__6StringFv
+ 0001:000069A0       __dt__6StringFv
+ 0001:000069FC       __ct__6StringFRC6String
+ 0001:00006A78       __as__6StringFRC6String
+ 0001:00006B1C       __as__6StringFPCUc
+ 0001:00006BB8       __as__6StringFPCc
+ 0001:00006C94       DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv
+ 0001:00006D4C       AddSysMenuItem__FUlP9_MENUITEMPc
+ 0001:00006DC0       AddSysSubMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00006E58       AddMenuItem__FUlUsP9_MENUITEMPc
+ 0001:00006E98       AddSubMenuItem__FUlUsT2P9_MENUITEMPc
+ 0001:00006EFC       RemoveSubMenuItem__FUlUsN22
+ 0001:00006F68       EnableMenuItem__FUlUsT2T1
+ 0001:00006FAC       EnableMenuItem__FUlUsT1
+ 0001:00007004       CheckMenuItem__FUlUsT2T1
+ 0001:00007048       CheckMenuItem__FUlUsT1
+ 0001:000070A0       Add2TaskList__FUlPc
+ 0001:0000710C       UpdateTaskListEntry__FUlPc
+ 0001:00007168       BuildPresParams__FUsPUlT2PPUc
+ 0001:000072BC       Exit
+ 0001:000072DC       HelpForHelp
+ 0001:00007314       ExtendedHelp
+ 0001:0000734C       KeysHelp
+ 0001:00007384       HelpIndex
+ 0001:000073BC       CheckDrive__FiRi
+ 0001:000073E0       CheckDrive__FiRiPcT3
+ 0001:0000758C       GetCountryInfo__FiT1
+ 0001:000077F0       FormatDecimal__FPcliT3
+ 0001:00007854       DecodeDecimal__FPcRd
+ 0001:00007A88       GetTitlebarRect__FUlT1R6_RECTL
+ 0001:00007B50       MessageBox__FUlT1PcT3iT5T1T5
+ 0001:00008724       OWNER__FUl
+ 0001:00008740       PARENT__FUl
+ 0001:0000875C       CHILD__FUli
+ 0001:0000877C       Sys_Beep__FiT1
+ 0001:000087B4       Sys_BeepWarning__Fv
+ 0001:000087C8       Sys_BeepNote__Fv
+ 0001:000087DC       Sys_BeepError__Fv
+ 0001:000087F0       Sys_BringWindowToTop__FUl
+ 0001:00008820       Sys_CloseFile__FUl
+ 0001:00008838       Sys_DefDialogProc
+ 0001:00008858       Sys_DefWindowProc
+ 0001:00008878       Sys_DeleteCriticalSection__FPi
+ 0001:0000888C       Sys_DestroyWindow__FUl
+ 0001:000088A4       Sys_EnableWindow__FUlT1
+ 0001:000088C0       Sys_EndDialog__FUlT1
+ 0001:000088E0       Sys_EnterCriticalSection__FPi
+ 0001:000088F8       Sys_ExitThread__Fi
+ 0001:00008910       Sys_GetFocus__Fv
+ 0001:00008924       Sys_GetForegroundWindow__Fv
+ 0001:00008938       Sys_GetLastError__FUl
+ 0001:00008950       Sys_GetModuleHandle__FPc
+ 0001:00008974       Sys_GetWindowData__FUl
+ 0001:00008990       Sys_GetWindowText__FUlPci
+ 0001:000089B4       Sys_InitializeCriticalSection__FPi
+ 0001:000089C8       Sys_InvalidateWindow__FUl
+ 0001:000089E4       Sys_IsMousePresent__Fv
+ 0001:00008A04       Sys_LeaveCriticalSection__FPi
+ 0001:00008A1C       Sys_LoadCursor__FUll
+ 0001:00008A44       Sys_PostMessage__FUlT1PvT3
+ 0001:00008A6C       Sys_PostQuitMessage__FUli
+ 0001:00008A94       Sys_ReadFile__FUlPviPUl
+ 0001:00008AC4       Sys_ReleaseCapture__Fv
+ 0001:00008AD8       Sys_SendMessage
+ 0001:00008AF8       Sys_SetActiveWindow__FUl
+ 0001:00008B10       Sys_SetCapture__FUl
+ 0001:00008B2C       Sys_SetCursor__FUl
+ 0001:00008B44       Sys_SetCursorPos__FiT1
+ 0001:00008B64       Sys_SetFocus__FUl
+ 0001:00008B80       Sys_SetWindowData__FUlPv
+ 0001:00008BA0       Sys_SetWindowText__FUlPc
+ 0001:00008BBC       Sys_ShowCursor__FUl
+ 0001:00008BD4       Sys_ShowWindow__FUlT1
+ 0001:00008BF4       Sys_Sleep__Fi
+ 0001:00008C0C       Sys_StartTimer__FUliT2
+ 0001:00008C34       Sys_StopTimer__FUli
+ 0001:00008C54       Sys_UpdateWindow__FUl
+ 0001:00008C6C       Sys_WriteFile__FUlPviPUl
+ 0001:00008C94       Sys_QueryTickInterval__Fv
+ 0001:00008CD4       Sys_WindowFromPoint__FiT1
+ 0001:00008D04       Sys_RegisterClass__FUlPcPFUlT1PvT3_PviN24N22
+ 0001:00008D44       Sys_MessageBox__FUlT1PcT3iT5
+ 0001:00008D74       Sys_ProcessMessages__Fl
+ 0001:00008DD4       Sys_GetFileTime__FiPUsT2
+ 0001:00008E10       Sys_SetFileTime__FiUsT2
+ 0001:00008E5C       Sys_RegisterThread__Fv
+ 0001:00008E6C       Sys_DeregisterThread__Fv
+ 0001:00008E74       Sys_ThreadNumber__Fi
+ 0001:00008F14       __ct__11WindowClassFR7Processi
+ 0001:00008F64       __ct__11WindowClassFPc
+ 0001:00008F88       __ct__6WindowFUlPcT2T1iN35N31PvT12_
+ 0001:000090C4       __ct__6WindowFR11WindowClassUlPciN44N22T4Pv
+ 0001:00009278       __ct__6WindowFUl
+ 0001:00009314       __dt__6WindowFv
+ 0001:00009438       QueryAnchor__6WindowFv
+ 0001:00009454       Set_BackColor__6WindowFUl
+ 0001:00009494       Set_TextColor__6WindowFUl
+ 0001:000094D4       Set_FontNameSize__6WindowFPc
+ 0001:00009530       Invalidate__6WindowFR6_RECTL
+ 0001:00009550       Invalidate__6WindowFv
+ 0001:0000956C       Update__6WindowFv
+ 0001:00009588       Destroy__6WindowFv
+ 0001:000095A4       Reposition__6WindowFiN3113PositionClass
+ 0001:00009608       Show__6WindowFv
+ 0001:00009628       Hide__6WindowFv
+ 0001:00009644       Move__6WindowFiT1
+ 0001:00009670       Size__6WindowFiT1
+ 0001:0000969C       Minimize__6WindowFv
+ 0001:000096C4       Maximize__6WindowFv
+ 0001:000096EC       Restore__6WindowFv
+ 0001:00009714       Activate__6WindowFv
+ 0001:0000973C       Deactivate__6WindowFv
+ 0001:00009764       Surface__6WindowFv
+ 0001:00009788       Sink__6WindowFv
+ 0001:000097AC       SetFocus__6WindowFv
+ 0001:000097C8       Enable__6WindowFi
+ 0001:000097E8       Disable__6WindowFv
+ 0001:00009804       SetText__6WindowFPc
+ 0001:00009824       GetText__6WindowFPci
+ 0001:0000984C       SetData__6WindowFPv
+ 0001:0000986C       GetData__6WindowFv
+ 0001:0000988C       StartTimer__6WindowFiT1
+ 0001:000098B4       StopTimer__6WindowFi
+ 0001:000098D4       Rectangle__6WindowFv
+ 0001:0000990C       SetWindowText__6WindowFPc
+ 0001:00009978       GetWindowText__6WindowFPci
+ 0001:000099AC       Add2TaskList__6WindowFv
+ 0001:00009A48       AddSysMenuSeparator__6WindowFv
+ 0001:00009A70       AddSysMenuItem__6WindowFPcUssN22UlT6
+ 0001:00009B60       MessageBox__6WindowFPcT1iT3
+ 0001:00009B94       MessageBox__6WindowFPciT2
+ 0001:00009BE0       PopupMenu__6WindowFUliT2
+ 0001:00009C14       HideControls__6WindowFUl
+ 0001:00009F24       Resize__6WindowFiT1
+ 0001:0000A178       Drag__6WindowFv
+ 0001:0000A270       SetPresParam__6WindowFiT1Pv
+ 0001:0000A29C       RemovePresParam__6WindowFi
+ 0001:0000A2BC       SendMessage__6WindowFUlPvT2
+ 0001:0000A2E8       PostMessage__6WindowFUlPvT2
+ 0001:0000A314       MessageProcessor__6WindowFUlT1PvT3
+ 0001:0000A5CC       __ct__16SubclassedWindowFUl
+ 0001:0000A638       __dt__16SubclassedWindowFv
+ 0001:0000A690       MessageProcessor__16SubclassedWindowFUlT1PvT3
+ 0001:0000A734       __ct__8CheckboxFUl
+ 0001:0000A7B8       __dt__8CheckboxFv
+ 0001:0000A880       Set__8CheckboxFi
+ 0001:0000A8AC       Query__8CheckboxFv
+ 0001:0000A8D4       __ct__10EntryfieldFUl
+ 0001:0000A958       __dt__10EntryfieldFv
+ 0001:0000AA20       SetLimit__10EntryfieldFi
+ 0001:0000AA4C       QuerySelection__10EntryfieldFRiT1
+ 0001:0000AA98       Insert__10EntryfieldFPc
+ 0001:0000AB74       __ct__10StaticTextFUl
+ 0001:0000ABF8       __dt__10StaticTextFv
+ 0001:0000ACC0       __ct__10SpinButtonFUl
+ 0001:0000AD44       SetLimits__10SpinButtonFiT1
+ 0001:0000AD6C       Set__10SpinButtonFi
+ 0001:0000AD90       Query__10SpinButtonFv
+ 0001:0000ADC0       __ct__6SliderFUlN41iPc
+ 0001:0000B0B0       __ct__6SliderFUlT1
+ 0001:0000B198       __ct__6SliderFUlN31iPc
+ 0001:0000B3F0       __ct__6SliderFUl
+ 0001:0000B490       __dt__6SliderFv
+ 0001:0000B5A8       Set__6SliderFUlT1
+ 0001:0000B6C0       Read__6SliderFv
+ 0001:0000B7D8       Enable__6SliderFi
+ 0001:0000B814       __ct__7ListBoxFUl
+ 0001:0000B898       __dt__7ListBoxFv
+ 0001:0000B960       MessageProcessor__7ListBoxFUlT1PvT3
+ 0001:0000B994       Clear__7ListBoxFv
+ 0001:0000B9B8       Insert__7ListBoxFPci
+ 0001:0000B9E8       Delete__7ListBoxFi
+ 0001:0000BA14       SelectItem__7ListBoxFi
+ 0001:0000BA40       QueryCount__7ListBoxFv
+ 0001:0000BA68       QuerySelection__7ListBoxFi
+ 0001:0000BA9C       SetTopIndex__7ListBoxFi
+ 0001:0000BAC8       QueryTopIndex__7ListBoxFv
+ 0001:0000BAF0       QueryItemText__7ListBoxFiPcT1
+ 0001:0000BD50       __ctordtorTerm
+ 0001:0000BD88       __ctordtorInit
+ 0001:0000BE6C       _Exception_CPP
+ 0001:0000C1B8       _DLL_InitTerm
+ 0002:000000D0       HomePath
+ 0002:000001D5       LogSemaphore
+ 0002:00000210       __vft6Dialog
+ 0002:00000240       __vft14LanguageModule6Module
+ 0002:000002D0       __vft6Module
+ 0002:00000300       __vft11PoolSection
+ 0002:00000310       __vft4Pool
+ 0002:00000340       __vft17ProfilePathDialog6Dialog
+ 0002:000003C0       CountryInfo
+ 0002:000004B0       __vft6Window
+ 0002:000004C8       __vft16SubclassedWindow
+ 0002:000004E0       __vft8Checkbox6Window
+ 0002:000004F8       __vft10Entryfield6Window
+ 0002:00000510       __vft10StaticText6Window
+ 0002:00000528       __vft6Slider6Window
+ 0002:00000540       __vft7ListBox16SubclassedWindow
+ 0002:000007B0       _dllentry
+ 0002:000007C0       __ctdtused
+ 0002:000007D0       __ctordtorStart
+ 0002:000007E0       __ctordtorEnd
+ 0002:00001B00       _edata
+ 0002:00001B00       @BSSE:\Projects\RunTime\DEBUG.CPP
+ 0002:00001B04       @BSSE:\Projects\RunTime\POOL.CPP
+ 0002:00001B08       @BSSE:\Projects\RunTime\MUX.CPP
+ 0002:00001B0C       @BSSE:\Projects\RunTime\CANVAS.CPP
+ 0002:00001B14       _matherr_ptr
+ 0002:00001B18       @BSSE:\Projects\RunTime\WINDOW.CPP
+ 0002:00001B64       Trace
+ 0002:00001B68       Timer
+ 0002:00001B6C       @BSSE:\Projects\RunTime\LMODULE.CPP
+ 0002:00001B78       @BSSE:\Projects\RunTime\PROFILE.CPP
+ 0002:00001B84       @BSSE:\Projects\RunTime\CONTROLS.CPP
+ 0002:00001BA4       @BSSE:\Projects\RunTime\CIRQUEUE.CPP
+ 0002:00001BAC       @BSSE:\Projects\RunTime\SUPPORT.CPP
+ 0002:00001BB8       __ctordtorCurrent
+ 0002:00001BBC       Logfile
+ 0002:00001BC0       _end
+
+Program entry point at 0001:0000C1B8

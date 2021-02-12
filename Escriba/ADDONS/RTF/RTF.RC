@@ -1,0 +1,23 @@
+#include "System.h"
+
+#include "RTF.h"
+
+CODEPAGE 850
+
+HELPSUBTABLE ID_HELPTABLE
+{
+//
+//            Item ID                           Help Panel ID
+//
+}
+
+HELPTABLE ID_HELPTABLE
+{
+//
+//         Window ID                    Help Sub-Table ID               Extended Help Panel ID
+//
+  HELPITEM IDD_PRODUCTINFO,             ID_HELPTABLE,                   IDD_PRODUCTINFO
+  HELPITEM IDD_CONFIGURE_IMPORT,        ID_HELPTABLE,                   IDD_CONFIGURE_IMPORT
+  HELPITEM IDD_CONFIGURE_EXPORT,        ID_HELPTABLE,                   IDD_CONFIGURE_EXPORT
+}
+

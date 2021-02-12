@@ -154,6 +154,7 @@
    extern WINDOWPROC    Sys_DefWindowProc ;
    extern void          Sys_DeleteCriticalSection ( CRITICAL_SECTION *control ) ;
    extern void          Sys_DeregisterThread ( void ) ;
+   extern void          Sys_DestroyWindow ( HWND Window ) ;
    extern void          Sys_EnableWindow ( HWND Window, BOOL fEnable ) ;
    extern int           Sys_EndDialog ( HWND Dialog, BOOL Status ) ;
    extern void          Sys_EnterCriticalSection ( CRITICAL_SECTION *control ) ;

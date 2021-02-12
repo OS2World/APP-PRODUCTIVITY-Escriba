@@ -1,0 +1,8 @@
+;
+;       JPEG_ENU: JPEG Graphic Import Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'JPEG_ENU: JPEG Graphic Import Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

@@ -1,0 +1,190 @@
+# Build JPEG Graphic Importer addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .c .cpp .rc .ipf .hlp
+
+All: JPEG.DLL \
+  Deutsch English Espanol Francais Nederlands
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+JPEG.DLL : JPEG.OBJ JPEG.RES \
+  jpegread.obj  \
+  jbsmooth.obj  \
+  jdarith.obj   \
+  jdcolor.obj   \
+  jddeflts.obj  \
+  jdhuff.obj    \
+  jdmaster.obj  \
+  jdmcu.obj     \
+  jdpipe.obj    \
+  jdsample.obj  \
+  jerror.obj    \
+  jmemmgr.obj   \
+  jmemsys.obj   \
+  jquant1.obj   \
+  jquant2.obj   \
+  jrevdct.obj   \
+  jrdjfif.obj   \
+  jutils.obj    \
+  makefile
+  ICC.EXE @<<
+  /B" /nologo /noe /m:full /de"
+  /Fe"JPEG.DLL" /Fm"JPEG.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB JPEG.DEF
+  JPEG.OBJ
+  jpegread.obj 
+  jbsmooth.obj
+  jdarith.obj
+  jdcolor.obj
+  jddeflts.obj
+  jdhuff.obj
+  jdmaster.obj
+  jdmcu.obj
+  jdpipe.obj
+  jdsample.obj
+  jerror.obj
+  jmemmgr.obj
+  jmemsys.obj
+  jquant1.obj
+  jquant2.obj
+  jrevdct.obj
+  jrdjfif.obj
+  jutils.obj
+<<
+  RC JPEG.RES JPEG.DLL
+  dllrname JPEG.dll dde4mbs=Esc_CRT
+  If Exist JPEG.DLX Erase JPEG.DLX
+  FXSTRIP JPEG.DLL
+
+JPEG.obj : JPEG.cpp JPEG.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h \
+  ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h ..\..\..\runtime\module.h ..\..\..\runtime\restring.h \
+  jinclude.h jconfig.h jpegdata.h
+
+
+jpegread.obj : jpegread.c jinclude.h jconfig.h jpegdata.h 
+
+jbsmooth.obj : jbsmooth.c jinclude.h jconfig.h jpegdata.h 
+
+jdarith.obj : jdarith.c jinclude.h jconfig.h jpegdata.h
+
+jdcolor.obj : jdcolor.c jinclude.h jconfig.h jpegdata.h
+
+jddeflts.obj : jddeflts.c jinclude.h jconfig.h jpegdata.h
+
+jdhuff.obj : jdhuff.c jinclude.h jconfig.h jpegdata.h
+
+jdmain.obj : jdmain.c jinclude.h jconfig.h jpegdata.h jversion.h
+
+jdmaster.obj : jdmaster.c jinclude.h jconfig.h jpegdata.h
+
+jdmcu.obj : jdmcu.c jinclude.h jconfig.h jpegdata.h
+
+jdpipe.obj : jdpipe.c jinclude.h jconfig.h jpegdata.h
+
+jdsample.obj : jdsample.c jinclude.h jconfig.h jpegdata.h
+
+jerror.obj : jerror.c jinclude.h jconfig.h jpegdata.h
+
+jmemmgr.obj : jmemmgr.c jinclude.h jconfig.h jpegdata.h jmemsys.h
+
+jmemsys.obj : jmemsys.c jinclude.h jconfig.h jpegdata.h jmemsys.h
+
+jquant1.obj : jquant1.c jinclude.h jconfig.h jpegdata.h
+
+jquant2.obj : jquant2.c jinclude.h jconfig.h jpegdata.h
+
+jrdjfif.obj : jrdjfif.c jinclude.h jconfig.h jpegdata.h
+
+jrevdct.obj : jrevdct.c jinclude.h jconfig.h jpegdata.h
+
+jutils.obj : jutils.c jinclude.h jconfig.h jpegdata.h
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.c.obj:
+   ICC.EXE /Sa /Sm /Q /O /Gd /Gm /Ge- /Ti+ /C  .\$*.c
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+
+# German (Deutsch)
+
+Deutsch: JPEG_DEU.dll JPEG_DEU.hlp 
+
+JPEG_DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+JPEG_DEU.res : $*.rc jpeg.h
+  rc -cc 49 -cp 850 -r $*
+
+JPEG_DEU.hlp: $*.ipf jpeg.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: JPEG_ENU.dll JPEG_ENU.hlp 
+
+JPEG_ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+JPEG_ENU.res : $*.rc jpeg.h
+  rc -cc 1 -cp 850 -r $*
+
+JPEG_ENU.hlp: $*.ipf jpeg.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: JPEG_ESP.dll JPEG_ESP.hlp 
+
+JPEG_ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+JPEG_ESP.res : $*.rc jpeg.h
+  rc -cc 34 -cp 850 -r $*
+
+JPEG_ESP.hlp: $*.ipf jpeg.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: JPEG_FRA.dll JPEG_FRA.hlp 
+
+JPEG_FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+JPEG_FRA.res : $*.rc jpeg.h
+  rc -cc 33 -cp 850 -r $*
+
+JPEG_FRA.hlp: $*.ipf jpeg.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: JPEG_NLD.dll JPEG_NLD.hlp 
+
+JPEG_NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+JPEG_NLD.res : $*.rc jpeg.h
+  rc -cc 31 -cp 850 -r $*
+
+JPEG_NLD.hlp: $*.ipf jpeg.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

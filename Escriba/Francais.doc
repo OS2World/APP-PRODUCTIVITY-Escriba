@@ -1,0 +1,281 @@
+Escriba - Traitement de textes pour le Gestionnaire de Pr‚sentation d'OS/2
+==========================================================================
+
+  Ce programme est un traitement de textes ®tel ‚cran, tel r‚sultat¯ (What 
+You See Is What You Get, WYSIWYG) pour le Gestionnaire de Presentation 
+d'OS/2 (Presentation Manager). Il ne se pose pas en concurrent des 
+traitements de textes professionnels pour OS/2 ou Windows, mais a pour 
+objectif de fournir un ensemble plus limit‚ de fonctionnalit‚s. Il permet 
+les op‚rations classiques de mise en forme de texte, et offre la 
+possibilit‚ d'y ins‚rer des graphiques. Toutes les polices PostScript 
+install‚es sont g‚r‚es, dans tous les formats natifs et dans une large 
+palette de tailles. Les impressions sont r‚alis‚es via le Gestionnaire de 
+Pr‚sentation d'OS/2, ce qui permet d'utiliser toute imprimante g‚r‚e par 
+cette interface, y compris les t‚l‚copieurs et traceurs.
+
+
+        Enregistrement du logiciel
+        --------------------------
+
+  Ce programme est un partagiciel (shareware). Vous pouvez diffuser 
+librement des copies non modifi‚es … toute personne int‚ress‚e. Si ce 
+programme vous est utile, et si vous d‚cidez de le conserver et de 
+l'utiliser, vous devez le payer. Son prix est de 30$ am‚ricains, que vous 
+pouvez r‚gler de diff‚rentes fa‡ons :
+
+        ChŠque ou mandat : si vous d‚sirez payer par chŠque ou mandat, 
+veuillez envoyer votre rŠglement, accompagn‚ de vos nom, pr‚nom, adresse, 
+num‚ro de version et date de votre copie de Escriba … :
+
+                Escriba Registrations
+                c/o Rick Papo
+                38290 Avondale
+                Westland, MI 48186-3830
+                tats-Unis d'Am‚rique
+
+        Carte VISA/MasterCard/Discover : si vous d‚sirez payer votre 
+enregistrement au moyen d'une carte de cr‚dit, vous pouvez le faire grƒce …
+la soci‚t‚ BMT Micro. Cette soci‚t‚ peut ˆtre contact‚e par t‚l‚phone au 
+(800) 414-4268 (… partir des tats-Unis uniquement) ou au (910) 791-7052, 
+par t‚l‚copie au (910) 350-2937, ou sur leur BBS au (910) 350-8061. Les 
+appels vocaux sont accept‚s de 8h du matin … 20h (heure de la c“te est des 
+tats-Unis). Les autres num‚ros sont disponibles 24h/24, sept jours par 
+semaine. Leur adresse postale est :
+
+                BMT Micro
+                452 Horn Rd
+                Wilmington, NC 28412-2411
+                tats-Unis d'Am‚rique
+
+  Note : Si vous r‚sidez dans l'une des r‚publiques qui constituaient 
+l'Union Sovi‚tique ou appartenaient au pacte de Varsovie, vous pouvez vous 
+enregistrer pour 5$ am‚ricains (pas par carte de cr‚dit, s'il vous plaŒt).
+
+  Une fois votre enregistrement re‡u, il vous sera envoy‚ un re‡u et la 
+derniŠre version du traitement de texte sur disquette. Vous recevrez plus 
+tard une autre disquette, au prochain changement majeur de version. La 
+documentation imprim‚e n'est pas encore disponible, mais quand elle le 
+sera, tous les utilisateurs enregistr‚s du traitement de texte en recevront
+une copie. Si vous voulez obtenir les versions ult‚rieures sur disquette, 
+elles co–teront 5$ am‚ricains.
+
+
+        Questions et rapport d'anomalies
+        --------------------------------
+
+  Si vous rencontrez des problŠmes avec ce programme, l'auteur, Rick Papo, 
+peut ˆtre contact‚ par l'un des moyens suivants :
+
+    Internet        rpapo@msen.com
+    Courrier        Rick Papo, 38290 Avondale, Westland, MI 48186-3830, -U
+    T‚l‚phone       -U (734) 326-8547
+
+  La priorit‚ est donn‚e aux requˆtes et problŠmes des utilisateurs 
+enregistr‚s, mais tous les messages re‡us seront examin‚s. Le courrier 
+‚lectronique est relev‚ quotidiennement.
+
+  Dans toute correspondance, veuillez pr‚ciser le num‚ro de version 
+d'Escriba que vous utilisez.
+
+
+        Installation
+        ------------
+
+  Pour installer Escriba, vous devez ex‚cuter le programme 'FRANCAIS'. Le 
+programme vous demandera dans quel r‚pertoire vous d‚sirez installer 
+Escriba. Veuillez entrer le nom complet du r‚pertoire, y compris le nom du 
+disque. Si le r‚pertoire n'existe pas, il sera cr‚‚. Une fois saisi le nom 
+du r‚pertoire, l'installation s'effectuera. Les fichiers EXE, DLL, HLP et 
+DOC du programme seront copi‚s dans le r‚pertoire cible. Un dossier sera 
+cr‚‚ sur le bureau, dans lequel sera plac‚ l'ic“ne du programme. De plus, 
+une ic“ne permettant d'acc‚der … la documentation y sera aussi plac‚e. Une 
+fois l'installation effectu‚e, vous pouvez librement d‚placer les objets … 
+votre convenance.
+
+  Si par hasard vous supprimez un des objets, r‚p‚tez simplement la 
+proc‚dure d'installation. La configuration du programme ne sera pas perdue.
+
+
+        Traductions
+        -----------
+
+  Escriba est con‡u pour ˆtre facilement traduit dans d'autres langues. Les
+versions en espagnol, fran‡ais, allemand et hollandais sont d‚j… 
+disponibles. Si vous d‚sirez traduire le programme dans votre langue, 
+envoyez moi un mot via Internet (rpapo@msen.com) [NDT : un mot en anglais, 
+pas en fran‡ais...], ou par courrier postal. Je vous enverrai les textes 
+devant ˆtre traduits (le fichier d'aide, le fichier de documentation, le 
+programme d'installation et le texte de d‚finition des ressources). Une 
+fois que vous m'aurez renvoy‚ les fichiers traduits, j'ajouterai la 
+nouvelle langue … la version suivante du traitement de textes. Attention, 
+soyez conscients du fait que je vous demanderai en permanence des mises … 
+jour tout au long de l'‚volution du programme. Pour vous remercier de votre
+aide, votre enregistrement est gratuit et vous recevrez les mises … jour 
+gratuites aussi longtemps que vous  continuerez … les traduire.
+
+  Les traductions sont actuellement effectu‚es par :
+
+    Espagnol   Rick Papo & Xavier Caballe  Internet: xcaballe@servicom.es
+    Allemand   Frank Mersmann              Internet: fme@zfn.uni-bremen.de
+    Fran‡ais   Rapha‰l Vanney              Internet: rvanney@ibm.net
+    Hollandais Jaap van Veen               CompuServe: 103262,1047
+
+
+        Remerciements
+        -------------
+
+  Je tiens … remercier, pour leur aide lors des tests, pour leurs 
+suggestions 
+pendant la r‚alisation, et pour leurs encouragements :
+
+        Wayne Blankenbeckler    (Sam's Books, Indiana, tats-Unis)
+        Harry Bush              (Riga, Latvia)
+        Xavier Caballe          (Barcelone, Espagne)
+        Bjorn Fahller           (SuŠde)
+        Per Gjerlov             (Danemark)
+        Dr. Herbert Klaeren     (Tuebingen, Allemagne)
+        Frank Mersmann          (Bremen, Allemagne)
+        Joe Negron              (Brooklyn, New York, tats-Unis)
+        Marvin Nipper           (Golden, Colorado, tats-Unis)
+        Walt Rutka              (Southfield, Michigan, tats-Unis)
+        Leland Sheppard         (Californie, tats-Unis)
+        Erwin Vackier           (Belgique)
+        Jaap van Veen           (Uithoorn, Pays-bas)
+        Rapha‰l Vanney          (Courbevoie, France)
+        Bryan Walker            (Tennessee, tats-Unis)
+        Ernst Winter            (Munich, Allemagne)
+
+------------------------------------------------------------------------------
+NDT :   les commentaires concernant la traduction en fran‡ais de la
+        documentation, de l'aide en ligne, des menus et dialogues sont …
+        adresser … :
+
+        Rapha‰l Vanney          Fido    : 2:320/222.7
+                                e-mail  : rvanney@ibm.net
+------------------------------------------------------------------------------
+
+        Historique
+        ----------
+
+13 juin 1995 - version 0.90 - Beta
+  Changement de nom : anciennement connu sous le nom de Pluma, mais la
+    soci‚t‚ Pluma Software s'est plainte.
+  Modifi‚ pour accepter de gros fichiers.
+  Ajout‚ D‚faire et Refaire.
+  Ajout‚ Ins‚rer UPC, Ins‚rer nombre de pages, Ins‚rer num‚ro de page.
+  Ajout‚ Coller un fichier BMP, PCX, GIF ou MET.
+  Ajout‚ des commandes de recherche/remplacement.
+  Ajout‚ des menus Largeur du trait, Couleur de remplissage et Type de
+    remplissage pour les polices contour.
+  Ajout‚ les commandes ArriŠre-plan, Pas d'habillage et Demi-teinte.
+
+10 juillet 1995 - version 0.91 - Beta
+  Ajout‚ une connexion avec le correcteur orthographique ISPELLER.
+
+13 septembre 1995 - version 0.92 - Beta
+  Le menu Justification utilise maintenant des dessins au lieu du texte.
+  Corrig‚ une erreur au chargement des BMP compress‚s (RVa).
+  Am‚lior‚ la vitesse d'affichage des rŠgles (RVa).
+  Modifi‚ le traitement de la chaŒne de format de date pour que
+    l'interpr‚tation soit la mˆme quel que soit le langage utilis‚ (RVa).
+  Ctrl+Z active ou d‚sactive la fonction Zoom Tout (Winter).
+  Le document coopŠre maintenant avec la palette de polices.
+  Support national ajout‚ pour l'affichage et la saisie des nombres 
+    d‚cimaux (RVa).
+  Traductions mises … jour avec les am‚liorations d'Escriba (fran‡ais RVa, 
+    hollandais van Veen, Allemand Mersmann, espagnol).
+  Ajout‚ la fonction 'Version' … l'en-tˆte du document, en pr‚vision des 
+    changements de format.
+  Ajout‚ les menus 'Fin de ligne' et 'Jointure de ligne'.
+  Corrig‚ divers bugs du correcteur orthographique.
+  Ajout‚ les dictionnaires fran‡ais, allemand et hollandais au correcteur.
+
+26 septembre 1995 - version 0.93 - Beta
+  Ajout‚ l'option Imprimer … l'envers aux pr‚f‚rences.
+  Ajout‚ l'option page de codes aux pr‚f‚rences du document.
+  Corrig‚ un bug dans l'utilisation de Ctrl+Z et pr‚f‚rence Zoom 100%.
+
+24 novembre 1995 - version 0.94 - Beta
+  Am‚lioration de la performance.
+  Ajout‚ la possibilit‚ d'inclure des codes … barres code-39.
+  Ajout‚ le support des systŠmes DBCS (chinois et japonais).
+  La boŒte de dialogue d'ouverture de fichiers affiche maintenant les 
+    fichiers Pluma comme si c'‚taient des fichier Escriba.
+
+27 d‚cembre 1995 - version 0.95 - Beta (suite aux requˆtes d'OS/2 e-zine! 
+    et … la cr‚ation du serveur Web)
+  Corrig‚ un bug lors de l'arrˆt apparu avec la version 0.94.
+  Transform‚ le dialogue des paramŠtres du document en bloc-notes.
+  Ajout‚ des fonctions au format de la date : ann‚e sur 2 chiffres, mois et
+    jour abr‚g‚s.
+  Remplac‚ l'option de menu Infos produit en menu conditionnel incluant les
+    produits d'extension.
+  Ajout‚ la gestion de modules d'extension permettant de reconnaŒtre et de
+    lire/‚crire des documents et images.
+  ISpeller mis en conformit‚ avec l'interface d'extension.
+  Cr‚‚ le module d'import/export 'PText' (texte brut).
+  Cr‚‚ le module d'import/export 'BMP', 'GIF' et 'PCX'.
+
+12 ao–t 1996 - version 0,96 - Beta
+  Ajout‚ la possibilit‚ de charger des graphiques en tant que documents.
+  Ajout‚ les options de menu Position, Taille, Aspect et Optimisation.
+  Ajout‚ l'option Configurer Extensions, supprim‚ l'option Configuration du
+    correcteur orthographique.
+  Si une seconde copie d'Escriba est lanc‚e, les documents sont en fait
+    charg‚s dans la premiŠre instance.
+  File d'attente de messages s‚par‚e pour chaque fenˆtre.
+  Ajout‚ l'option Fichier/Langue pour s‚lectionner la langue.
+  Ajout‚ la possibilit‚ d'inclure des codes-barres POSTNET.
+  Ajout‚ le nom de l'auteur et la date de cr‚ation aux informations de
+    pr‚face du document.
+  Corrig‚ le support des m‚tafichiers graphiques.
+  Cr‚‚ l'extension d'importation de graphiques TIFF.
+  Corrig‚ le formatteur de sorte qu'il ne boucle plus quand un graphique
+    remplit une page.
+  Corrig‚ la gestion de la surbrillance des s‚lections de sorte qu'il ne
+    reste plus de r‚sidus.
+  Corrig‚ l'option d'impression des graphiques en demi-teinte.
+  Ajout‚ l'option de menu Bitmap/Inverse.
+  Ajout‚ l'option de menu dition/S‚lectionner tout.
+  Ajout‚ la gestion des c‚sures.
+
+28 janvier 1997 - version 0,96c - Beta
+  Corrig‚ une erreur lors de la s‚lection de plusieurs lignes non s‚par‚es
+    par des sauts de lignes.
+  Ajout‚ la gestion des codes barres UPC-E, EAN-8 et EAN-13.
+  Corrig‚ une fuite de m‚moire.
+  Modifi‚ pour r‚utiliser le dernier type de document/graphique utilis‚
+    pour ouvrir/fusion.
+  Ajout‚ les codes de fonction Comment et Separator.
+  Ajout‚ la possibilit‚ de positionner les graphiques … l'int‚rieur du
+    texte.
+  Cr‚‚ la librairie d'importation de graphiques JPEG.
+
+19 janvier 1998 - version 0,96d - Beta
+  Ajout‚ la possibilit‚ d'ouvrir un fichier par glisser-lƒcher.
+  Ajout‚ une fonction Aller vers page.
+  Ajout‚ la gestion du titre du document.
+  Modifi‚ script d'installation pour construire tous les dictionnaires
+    orthographiques.
+  Ajout‚ une option de pr‚f‚rences g‚n‚rales: Rouvrir le document le plus
+    r‚cemment enregistr‚ au lancement.
+  Corrig‚ un bug dans l'utilisation des touches D‚but/Fin en haut et en
+    bas d'une page.
+  Impl‚ment‚ la gestion des attributs soulign‚/barr‚ dans le texte justifi‚
+    … droite et … gauche.
+  Corrig‚ un bug lors de la saisie de texte en mode zoom pleine page.
+  Ajout‚ le support des en-tˆte et pied de page.
+
+03 d‚cembre 1998 - version 0,97 - Beta
+  Altered graphics origin to upper-left of page.
+  Added the Menu Manager dialogs for the Line Color and Fill Color menus.
+  Implemented separator function in Plain Text export module.
+  Added support for Codabar (2 of 7) barcodes.
+  Added the Menu Manager dialog for the Line Spacing menu.
+  Strengthened the HTML extension with a new parser.  All &x; symbols are
+    now supported.  The <STRIKE>, <S> and <U> tokens now work.
+  Added the Menu manager dialog for the Expand menu.
+  Added bubble help for buttons.
+  Now preserves bitmap image palettes.
+  Added RTF import/export module.
+

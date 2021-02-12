@@ -1,0 +1,73 @@
+html.obj: \
+	html.cpp \
+	..\..\..\runtime\canvas.h \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\eattr.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\mutex.h \
+	..\..\..\runtime\profile.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	html.h
+
+html.res: \
+	html.rc \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_deu.res: \
+	html_deu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_enu.res: \
+	html_enu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_esp.res: \
+	html_esp.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_fra.res: \
+	html_fra.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_nld.res: \
+	html_nld.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	html.h
+
+html_deu.hlp: \
+	html_deu.ipf \
+	html.h
+
+html_enu.hlp: \
+	html_enu.ipf \
+	html.h
+
+html_esp.hlp: \
+	html_esp.ipf \
+	html.h
+
+html_fra.hlp: \
+	html_fra.ipf \
+	html.h
+
+html_nld.hlp: \
+	html_nld.ipf \
+	html.h
+

@@ -1,0 +1,182 @@
+# IBM Developer's Workframe/2 Make File Creation run at 08:02:02 on 05/20/96
+
+# Make File Creation run in directory:
+#   F:\ESCRIBA\ADDONS\TIFF;
+
+.SUFFIXES:
+
+.SUFFIXES: .c .cpp .cxx .rc .ipf .hlp
+
+ALL: TIFF.DLL Tiff.RES \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+TIFF.DLL:  \
+  Tiff.OBJ \
+  Tiff.RES \
+  TIF_AUX.OBJ \
+  TIF_CCIT.OBJ \
+  TIF_CLOS.OBJ \
+  TIF_COMP.OBJ \
+  TIF_DIR.OBJ \
+  TIF_DIRI.OBJ \
+  TIF_DIRR.OBJ \
+  TIF_DIRW.OBJ \
+  TIF_DUMP.OBJ \
+  TIF_ERRO.OBJ \
+  TIF_FAX3.OBJ \
+  TIF_FAX4.OBJ \
+  TIF_FLUS.OBJ \
+  TIF_GETI.OBJ \
+  TIF_JPEG.OBJ \
+  TIF_LZW.OBJ \
+  TIF_MACH.OBJ \
+  TIF_MSDO.OBJ \
+  TIF_NEXT.OBJ \
+  TIF_OPEN.OBJ \
+  TIF_PACK.OBJ \
+  TIF_PRIN.OBJ \
+  TIF_READ.OBJ \
+  TIF_STRI.OBJ \
+  TIF_SWAB.OBJ \
+  TIF_THUN.OBJ \
+  TIF_TILE.OBJ \
+  TIF_VERS.OBJ \
+  TIF_WARN.OBJ \
+  TIF_WRIT.OBJ \
+  MAKEFILE
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"TIFF.DLL" /Fm"TIFF.MAP" ..\..\..\RunTime\RunTime.LIB os2386.LIB os2286.LIB TIFF.DEF 
+Tiff.OBJ 
+TIF_AUX.OBJ 
+TIF_CCIT.OBJ 
+TIF_CLOS.OBJ 
+TIF_COMP.OBJ 
+TIF_DIR.OBJ 
+TIF_DIRI.OBJ 
+TIF_DIRR.OBJ 
+TIF_DIRW.OBJ 
+TIF_DUMP.OBJ 
+TIF_ERRO.OBJ 
+TIF_FAX3.OBJ 
+TIF_FAX4.OBJ 
+TIF_FLUS.OBJ 
+TIF_GETI.OBJ 
+TIF_JPEG.OBJ 
+TIF_LZW.OBJ 
+TIF_MACH.OBJ 
+TIF_MSDO.OBJ 
+TIF_NEXT.OBJ 
+TIF_OPEN.OBJ 
+TIF_PACK.OBJ 
+TIF_PRIN.OBJ 
+TIF_READ.OBJ 
+TIF_STRI.OBJ 
+TIF_SWAB.OBJ 
+TIF_THUN.OBJ 
+TIF_TILE.OBJ 
+TIF_VERS.OBJ 
+TIF_WARN.OBJ 
+TIF_WRIT.OBJ
+<<
+  RC Tiff.RES TIFF.DLL
+  dllrname TIFF.dll dde4mbs=Esc_CRT
+  If Exist TIFF.DLX Erase TIFF.DLX
+  FXSTRIP TIFF.DLL
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.c.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C /DBSDTYPES /Dlint  .\$*.c
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C /DBSDTYPES /Dlint  .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF.obj : TIFF.cpp TIFF_DLL.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h \
+  ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h ..\..\..\runtime\module.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: TIFF_DEU.dll TIFF_DEU.hlp 
+
+TIFF_DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF_DEU.res : $*.rc tiff_dll.h
+  rc -cc 49 -cp 850 -r $*
+
+TIFF_DEU.hlp: $*.ipf tiff_dll.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf 
+
+
+# English
+
+English: TIFF_ENU.dll TIFF_ENU.hlp 
+
+TIFF_ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF_ENU.res : $*.rc tiff_dll.h
+  rc -cc 1 -cp 850 -r $*
+
+TIFF_ENU.hlp: $*.ipf tiff_dll.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf 
+
+
+# Spanish (Espa¤ol)
+
+Espanol: TIFF_ESP.dll TIFF_ESP.hlp 
+
+TIFF_ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF_ESP.res : $*.rc tiff_dll.h
+  rc -cc 34 -cp 850 -r $*
+
+TIFF_ESP.hlp: $*.ipf tiff_dll.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: TIFF_FRA.dll TIFF_FRA.hlp 
+
+TIFF_FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF_FRA.res : $*.rc tiff_dll.h
+  rc -cc 33 -cp 850 -r $*
+
+TIFF_FRA.hlp: $*.ipf tiff_dll.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: TIFF_NLD.dll TIFF_NLD.hlp 
+
+TIFF_NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+TIFF_NLD.res : $*.rc tiff_dll.h
+  rc -cc 31 -cp 850 -r $*
+
+TIFF_NLD.hlp: $*.ipf tiff_dll.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf 
+
+
+!include MAKEFILE.DEP
+

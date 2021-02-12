@@ -1,0 +1,67 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Jpeg.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "JPEG",               //   Application Name.
+  "English",            //   Specific language name.
+  850, 437, 852, 860, 863, 865, 932, 934, 936, 938, 942, 944, 946, 948, 950, 0
+}
+
+/****************************************************************************
+ * Months: January, February, March, April, May, June,                      *
+ *   July, August, September, October, November, December.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 260, 204, FS_DLGBORDER
+  {
+    CTEXT "Jpeg"                                                0,  10,174, 240, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10,162, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 December 1998"                                     0,  10,152, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "JPEG Graphic Import Module for Escriba",             0,  10,142, 240,  8
+
+    CTEXT "This program contains free software from the"        0,  10,126, 240,  8
+    CTEXT "Independent JPEG Group, with the following copyrights:" 0,10,118,240,  8
+
+    CTEXT "Copyright ¸ 1988 Richard M. Stallman"                0,  10,102, 240,  8
+    CTEXT "Copyright ¸ 1989, 1991 Aladdin Enterprises"          0,  10, 94, 240,  8
+    CTEXT "Copyright ¸ 1990, David Koblas"                      0,  10, 86, 240,  8
+    CTEXT "Copyright ¸ 1991, 1992, 1993, Thomas G. Lane"        0,  10, 78, 240,  8
+    CTEXT "All rights reserved."                                0,  10, 70, 240,  8
+
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "English Version"                                     0,  10, 30, 240,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,110,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "JPEG Graphic Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'JPEG Graphic' Help Facility"
+  IDS_ERROR_CREATEHELP                  "ERROR: Unable to create help instance.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "ERROR(JPEG): Unable to open file '%s' to load from."
+  IDS_ERROR_FILE_TOO_SMALL              "ERROR(JPEG): Invalid file.  Too small."
+  IDS_ERROR_INVALID_FILE_ID             "ERROR(JPEG): Invalid signature."
+  IDS_ERROR_MEMORY                      "ERROR(JPEG): Unable to allocate memory for bitmap header."
+  IDS_ERROR_DC_OPEN                     "ERROR(JPEG): Unable to open memory device context.  Status %i."
+  IDS_ERROR_PS_CREATE                   "ERROR(JPEG): Unable to create memory presentation space.  Status %i."
+  IDS_ERROR_CREATE_BITMAP               "ERROR(JPEG): Unable to create bitmap.  Status %i."
+}

@@ -1,0 +1,47 @@
+**********************************************************************
+*  See the Software Installer Reference for information on creating a
+*  response file.
+**********************************************************************
+
+*---------------------------------------------------------------------
+* Define the target directories.
+*---------------------------------------------------------------------
+FILE=C:\ESCRIBA
+
+*---------------------------------------------------------------------
+* Include a COMP keyword for every component in the package file.
+*---------------------------------------------------------------------
+COMP=Base Product
+COMP=Spell Checker
+COMP=Bitmap Import Module
+COMP=GIF Import Module
+COMP=HTML Import/Export Module
+COMP=JPEG Import Module
+COMP=PCX Import Module
+COMP=TIFF Import Module
+COMP=English Dictionary
+COMP=German Language Support
+COMP=German Dictionary
+COMP=Spanish Language Support
+COMP=Spanish Dictionary
+COMP=French Language Support
+COMP=French Dictionary
+COMP=Dutch Language Support
+COMP=Dutch Dictionary
+COMP=Installation Utility
+
+*---------------------------------------------------------------------
+* The following 4 keywords are required.  See the Software Installer
+* Reference for possible values.
+*---------------------------------------------------------------------
+CFGUPDATE=AUTO
+OVERWRITE=YES
+SAVEBACKUP=YES
+DELETEBACKUP=NO
+
+*---------------------------------------------------------------------
+* Add product-specific keywords after this comment.  The keywords are
+* needed to CID enable a user exit.
+*---------------------------------------------------------------------
+
+

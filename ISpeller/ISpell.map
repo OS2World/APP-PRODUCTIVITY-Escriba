@@ -1,0 +1,248 @@
+Stack Allocation = 60000 bytes
+
+ ispell
+
+ Start         Length     Name                   Class
+ 0001:00000000 000002498H CODE32                 CODE 32-bit
+               at offset 00000000 01DBCH bytes from ISpell.obj (ISPELL.C)
+               at offset 00001dbc 00418H bytes from Dump.obj (DUMP.C)
+               at offset 000021d4 000B2H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00002288 001F8H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+               at offset 00002480 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\SCTDT.C)
+               at offset 00002490 00008H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\WCTDT.C)
+
+ 0002:00000000 000001790H DATA32                 DATA 32-bit
+               at offset 00000000 016B0H bytes from ISpell.obj (ISPELL.C)
+               at offset 000016b0 000C0H bytes from Dump.obj (DUMP.C)
+               at offset 00001770 0000EH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00001780 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00001790 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00001790 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:00001790 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00001790 000000000H CONST32                CONST 32-bit
+ 0002:00001790 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00001790 000000018H EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 0000000c 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:000017A8 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:000017A8 000000000H BSS32                  BSS 32-bit
+ 0002:000017A8 000001014H c_common               BSS 32-bit
+ 0002:000027C0 00000EA60H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0002:000017A8       @BSSE:\Projects\ISpeller\ISPELL.C
+ 0000:00000000  Imp  aflag                (ISPELLER.54)
+ 0000:00000000  Imp  askfilename          (ISPELLER.8)
+ 0000:00000000  Imp  askmode              (ISPELLER.98)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  cflag                (ISPELLER.55)
+ 0000:00000000  Imp  changes              (ISPELLER.97)
+ 0000:00000000  Imp  checkfile            (ISPELLER.131)
+ 0000:00000000  Imp  compoundflag         (ISPELLER.25)
+ 0000:00000000  Imp  contextsize          (ISPELLER.30)
+ 0000:00000000  Imp  currentfile          (ISPELLER.26)
+ 0000:00000000  Imp  defdupchar           (ISPELLER.150)
+ 0000:00000000  Imp  deftflag             (ISPELLER.99)
+ 0000:00000000  Imp  done                 (ISPELLER.45)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  dumpflag             (ISPELLER.109)
+ 0001:00002104       dumpmode
+ 0000:00000000  Imp  eflag                (ISPELLER.56)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  expand_pre           (ISPELLER.164)
+ 0000:00000000  Imp  expand_suf           (ISPELLER.165)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  fflag                (ISPELLER.57)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  findfiletype         (ISPELLER.33)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0000:00000000  Imp  givehelp             (ISPELLER.125)
+ 0000:00000000  Imp  hashheader           (ISPELLER.152)
+ 0000:00000000  Imp  hashname             (ISPELLER.117)
+ 0000:00000000  Imp  ichartosstr          (ISPELLER.27)
+ 0000:00000000  Imp  incfileflag          (ISPELLER.7)
+ 0000:00000000  Imp  infile               (ISPELLER.76)
+ 0000:00000000  Imp  lflag                (ISPELLER.59)
+ 0000:00000000  Imp  linit                (ISPELLER.67)
+ 0001:000007D0       main
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  minimenusize         (ISPELLER.38)
+ 0000:00000000  Imp  minword              (ISPELLER.104)
+ 0000:00000000  Imp  mktemp               (ISPELLER.88)
+ 0000:00000000  Imp  nodictflag           (ISPELLER.151)
+ 0000:00000000  Imp  numpflags            (ISPELLER.140)
+ 0000:00000000  Imp  numsflags            (ISPELLER.142)
+ 0000:00000000  Imp  outfile              (ISPELLER.110)
+ 0000:00000000  Imp  pflaglist            (ISPELLER.141)
+ 0000:00000000  Imp  prefstringchar       (ISPELLER.42)
+ 0000:00000000  Imp  quit                 (ISPELLER.47)
+ 0000:00000000  Imp  rename               (DDE4MBS.rename)
+ 0000:00000000  Imp  setbuf               (DDE4MBS.setbuf)
+ 0000:00000000  Imp  sflag                (ISPELLER.62)
+ 0000:00000000  Imp  sflaglist            (ISPELLER.143)
+ 0000:00000000  Imp  sleep                (ISPELLER.61)
+ 0000:00000000  Imp  sortit               (ISPELLER.91)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0000:00000000  Imp  strtoichar           (ISPELLER.157)
+ 0000:00000000  Imp  tempfile             (ISPELLER.121)
+ 0000:00000000  Imp  terminit             (ISPELLER.127)
+ 0000:00000000  Imp  tflag                (ISPELLER.64)
+ 0000:00000000  Imp  treeinit             (ISPELLER.120)
+ 0000:00000000  Imp  treeoutput           (ISPELLER.162)
+ 0000:00000000  Imp  Try                  (ISPELLER.48)
+ 0000:00000000  Imp  tryhardflag          (ISPELLER.23)
+ 0000:00000000  Imp  Trynum               (ISPELLER.92)
+ 0000:00000000  Imp  vflag                (ISPELLER.65)
+ 0000:00000000  Imp  xflag                (ISPELLER.66)
+ 0000:00000000  Imp  xgets                (ISPELLER.63)
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0002:00001774       _argc
+ 0002:00001778       _argv
+ 0000:00000000  Imp  _chmod               (DDE4MBS._chmod)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0002:000017A8       _edata
+ 0002:000027C0       _end
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0002:00001770       _exeentry
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _fstat               (DDE4MBS._fstat)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0000:00000000  Imp  _readonly            (ISPELLER.146)
+ 0001:00002288       _setuparg
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  _unlink              (DDE4MBS._unlink)
+ 0001:000021D4       __RunExitList
+ 0001:00002480       __sctordtorInit
+ 0001:00002488       __sctordtorTerm
+ 0001:00002490       __wctordtorInit
+ 0001:00002494       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0000:00000000  Imp  incfileflag          (ISPELLER.7)
+ 0000:00000000  Imp  askfilename          (ISPELLER.8)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0000:00000000  Imp  tryhardflag          (ISPELLER.23)
+ 0000:00000000  Imp  compoundflag         (ISPELLER.25)
+ 0000:00000000  Imp  currentfile          (ISPELLER.26)
+ 0000:00000000  Imp  ichartosstr          (ISPELLER.27)
+ 0000:00000000  Imp  contextsize          (ISPELLER.30)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  findfiletype         (ISPELLER.33)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  minimenusize         (ISPELLER.38)
+ 0000:00000000  Imp  expand_pre           (ISPELLER.164)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  sflaglist            (ISPELLER.143)
+ 0000:00000000  Imp  prefstringchar       (ISPELLER.42)
+ 0000:00000000  Imp  pflaglist            (ISPELLER.141)
+ 0000:00000000  Imp  done                 (ISPELLER.45)
+ 0000:00000000  Imp  expand_suf           (ISPELLER.165)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  quit                 (ISPELLER.47)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  Try                  (ISPELLER.48)
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  aflag                (ISPELLER.54)
+ 0000:00000000  Imp  cflag                (ISPELLER.55)
+ 0000:00000000  Imp  eflag                (ISPELLER.56)
+ 0000:00000000  Imp  fflag                (ISPELLER.57)
+ 0000:00000000  Imp  lflag                (ISPELLER.59)
+ 0000:00000000  Imp  sleep                (ISPELLER.61)
+ 0000:00000000  Imp  sflag                (ISPELLER.62)
+ 0000:00000000  Imp  xgets                (ISPELLER.63)
+ 0000:00000000  Imp  tflag                (ISPELLER.64)
+ 0000:00000000  Imp  vflag                (ISPELLER.65)
+ 0000:00000000  Imp  xflag                (ISPELLER.66)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  linit                (ISPELLER.67)
+ 0000:00000000  Imp  treeoutput           (ISPELLER.162)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  strtoichar           (ISPELLER.157)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  infile               (ISPELLER.76)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  _chmod               (DDE4MBS._chmod)
+ 0000:00000000  Imp  rename               (DDE4MBS.rename)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  setbuf               (DDE4MBS.setbuf)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0000:00000000  Imp  mktemp               (ISPELLER.88)
+ 0000:00000000  Imp  _fstat               (DDE4MBS._fstat)
+ 0000:00000000  Imp  sortit               (ISPELLER.91)
+ 0000:00000000  Imp  Trynum               (ISPELLER.92)
+ 0000:00000000  Imp  hashheader           (ISPELLER.152)
+ 0000:00000000  Imp  nodictflag           (ISPELLER.151)
+ 0000:00000000  Imp  defdupchar           (ISPELLER.150)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  changes              (ISPELLER.97)
+ 0000:00000000  Imp  askmode              (ISPELLER.98)
+ 0000:00000000  Imp  deftflag             (ISPELLER.99)
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0000:00000000  Imp  minword              (ISPELLER.104)
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  dumpflag             (ISPELLER.109)
+ 0000:00000000  Imp  outfile              (ISPELLER.110)
+ 0000:00000000  Imp  hashname             (ISPELLER.117)
+ 0000:00000000  Imp  treeinit             (ISPELLER.120)
+ 0000:00000000  Imp  tempfile             (ISPELLER.121)
+ 0000:00000000  Imp  _unlink              (DDE4MBS._unlink)
+ 0000:00000000  Imp  numsflags            (ISPELLER.142)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  givehelp             (ISPELLER.125)
+ 0000:00000000  Imp  terminit             (ISPELLER.127)
+ 0000:00000000  Imp  checkfile            (ISPELLER.131)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _readonly            (ISPELLER.146)
+ 0000:00000000  Imp  numpflags            (ISPELLER.140)
+ 0001:000007D0       main
+ 0001:00002104       dumpmode
+ 0001:000021D4       __RunExitList
+ 0001:00002288       _setuparg
+ 0001:00002480       __sctordtorInit
+ 0001:00002488       __sctordtorTerm
+ 0001:00002490       __wctordtorInit
+ 0001:00002494       __wctordtorTerm
+ 0002:00001770       _exeentry
+ 0002:00001774       _argc
+ 0002:00001778       _argv
+ 0002:000017A8       _edata
+ 0002:000017A8       @BSSE:\Projects\ISpeller\ISPELL.C
+ 0002:000027C0       _end
+
+Program entry point at 0001:000021F0

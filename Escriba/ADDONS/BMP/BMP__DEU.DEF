@@ -1,0 +1,8 @@
+;
+;       BMP__DEU: Bitmap Graphic Import Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'BMP__DEU: Bitmap Graphic Import Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

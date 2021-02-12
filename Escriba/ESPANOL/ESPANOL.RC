@@ -1,0 +1,1507 @@
+/***************************************************************** ESPA¥OL.RC
+ *                                                                          *
+ *                   Procesador de textos Escriba para OS/2                 *
+ *                                                                          *
+ *                       Fichero de recursos en espa¤ol                     *
+ *                                                                          *
+ ****************************************************************************/
+
+#include "Controls.h"
+#include "Escriba.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "Escriba",            //   Application Name.
+  "Espa¤ol",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: enero, febrero, marzo, abril, mayo, junio,                       *
+ *   julio, agosto, setiembre, octubre, noviembre, diciembre.               *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_ABOUT
+{
+  DIALOG "", IDD_ABOUT, 0, 0, 200, 148, FS_DLGBORDER
+  {
+    CTEXT "Escriba"                                  0, 10,120, 180, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versi¢n 0.97"                            0, 10,112, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 diciembre 1998"                          0, 10,104, 180,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CONTROL "#1",                                    0, 10,110,   0,  0, WC_STATIC, SS_BITMAP | WS_VISIBLE
+
+    CTEXT "Procesador de textos para OS/2"           0, 10, 88, 180,  8
+    CTEXT "¸ Copyright Richard Papo, 1992-1998"      0, 10, 80, 180,  8
+    CTEXT "Internet: rpapo@msen.com"                 0, 10, 72, 180,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"          0, 10, 64, 180,  8
+    CTEXT "Versi¢n en espa¤ol por Xavier Caball‚"    0, 10, 56, 180,  8
+
+    CTEXT "Copia no registrada",                     1, 10, 40, 180,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+    CTEXT "",                                        2, 10, 32, 180,  8
+
+    DEFPUSHBUTTON "~OK"                         DID_OK, 80,  8,  40, 16, WS_GROUP
+  }
+}
+
+POINTER ID_MAIN escriba.ico
+
+BITMAP ID_MAIN escriba.bmp
+
+ACCELTABLE ID_MAIN
+{
+  VK_F3,        IDM_EXIT,          VIRTUALKEY
+  VK_TAB,       IDM_NEXTDOC,       VIRTUALKEY, CONTROL
+  "A",          IDM_OPEN,          CONTROL
+  "a",          IDM_OPEN,          CONTROL
+}
+
+POINTER ID_DATAWINDOW escriba.ico
+
+ACCELTABLE ID_DATAWINDOW
+{
+  VK_F4,        SC_CLOSE,          VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F5,        SC_RESTORE,        VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F7,        SC_MOVE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F8,        SC_SIZE,           VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F9,        SC_MINIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+  VK_F10,       SC_MAXIMIZE,       VIRTUALKEY, CONTROL, SYSCOMMAND
+
+  VK_F2,        IDM_SAVE,          VIRTUALKEY
+  VK_F4,        IDM_SAVE_CLOSE,    VIRTUALKEY
+  VK_F5,        IDM_SPELL,         VIRTUALKEY
+
+  VK_BACKSPACE, IDM_UNDO,          VIRTUALKEY, ALT
+  VK_BACKSPACE, IDM_REDO,          VIRTUALKEY, ALT, SHIFT
+
+  VK_ENTER,     IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+  VK_NEWLINE,   IDM_PAGEBREAK,     VIRTUALKEY, CONTROL
+
+  "I",          IDM_PRINT_ALL,     CONTROL
+  "i",          IDM_PRINT_ALL,     CONTROL
+
+  "I",          IDM_PRINT_PAGE,    ALT
+  "i",          IDM_PRINT_PAGE,    ALT
+
+  "Z",          IDM_ZOOM_ALL,      CONTROL
+  "z",          IDM_ZOOM_ALL,      CONTROL
+}
+
+MENU IDM_MAIN
+{
+  SUBMENU "~Archivo",                           IDM_FILE_MENU
+  {
+    MENUITEM "~Nuevo",                          IDM_NEW
+    MENUITEM "~Abrir...\tCtrl+A",               IDM_OPEN
+    SUBMENU "~Recuperar",                       IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Unir...",                        IDM_MERGE
+    MENUITEM SEPARATOR
+    MENUITEM "~Grabar\tF2",                     IDM_SAVE
+    MENUITEM "Grabar c~omo...",                 IDM_SAVEAS
+    MENUITEM "Grabar y cerrar\tF4",             IDM_SAVE_CLOSE
+    MENUITEM "~Cerrar",                         IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "~Imprimir",                       IDM_PRINT
+    {
+      SUBMENU "Imprimir todo\tCtrl+I",          IDM_PRINT_ALL
+      {
+        MENUITEM "~Normal",                     IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "A ~rev‚s",                    IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Imprimir p gina\tAlt+I",        IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Configuraci¢n ~general...",       IDM_PREFERENCES
+    MENUITEM "~Valores por defecto...",         IDM_DEFAULTS
+    MENUITEM "Configurar ~Extensiones...",      IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Idioma",                           IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Salir\tF3",                      IDM_EXIT
+  }
+  SUBMENU "~Edici¢n",                           IDM_EDIT_MENU
+  {
+    MENUITEM "Deshacer\tAlt+Bksp",              IDM_UNDO
+    MENUITEM "Rehacer\tAlt+Shift+Bksp",         IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "Cor~tar\tShift+Del",              IDM_CUT
+    MENUITEM "~Copiar\tCtrl+Ins",               IDM_COPY
+    MENUITEM "~Pegar\tShift+Ins",               IDM_PASTE
+    MENUITEM "B~orrar\tDel",                    IDM_CLEAR
+    MENUITEM "Bo~rrar clipboard",               IDM_CLEARCLIPBOARD
+    MENUITEM SEPARATOR
+    MENUITEM "~Seleccionar todo",               IDM_SELECT_ALL
+    MENUITEM SEPARATOR
+    SUBMENU  "Pegar de...",                     IDM_PASTE_FROM
+    {
+      SUBMENU "Clipboard",                      IDM_PASTE_FROM_CLIP
+      {
+        MENUITEM "Bitmap",                      IDM_PASTE_FROM_CLIP_BITMAP
+        MENUITEM "Metafile",                    IDM_PASTE_FROM_CLIP_METAFILE
+      }
+      SUBMENU "Pantalla",                       IDM_PASTE_FROM_SCRN
+      {
+        MENUITEM "~Pantalla entera",            IDM_PASTE_FROM_SCRN_ENTIRE
+        MENUITEM "~Marco",                      IDM_PASTE_FROM_SCRN_FRAME
+        MENUITEM "~Ventana",                    IDM_PASTE_FROM_SCRN_WINDOW
+        MENUITEM "~Rect ngulo",                 IDM_PASTE_FROM_SCRN_RECT
+        MENUITEM "~Esconder",                   IDM_PASTE_FROM_SCRN_HIDE,,MIA_CHECKED | MIA_NODISMISS
+      }
+      MENUITEM "Fichero gr fico...",            IDM_PASTE_FROM_FILE
+    }
+    SUBMENU "Insertar Funci¢n",                 IDM_INSERT_FUNCTION
+    {
+      SUBMENU "Fecha",                          IDM_DATE
+      {
+        MENUITEM "D¡a de hoy",                  IDM_DATETODAY
+        MENUITEM "Fecha",                       IDM_DATECURRENT
+        MENUITEM "Fecha documento",             IDM_DATECHANGED
+//      MENUITEM "Fecha fija",                  IDM_DATEFIXED
+        MENUITEM "Formato de la fecha...",      IDM_DATEFMT
+      }
+      MENUITEM "N£mero actual de p gina",       IDM_CURRENTPAGE
+      MENUITEM "Cuenta total de p ginas",       IDM_PAGECOUNT
+      MENUITEM "Separador",                     IDM_SEPARATOR
+      MENUITEM "C¢digo de barras...",           IDM_BARCODE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Buscar...",                      IDM_SEARCH
+    MENUITEM "R~epetir b£squeda",               IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Saltar a p gina...",              IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Chequeo de ortograf¡a\tF5",       IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Zoom",                            IDM_ZOOM
+    {
+      MENUITEM "Zoom 100%",                     IDM_ZOOM_100
+      MENUITEM "Zoom ~anchura",                 IDM_ZOOM_FULLWIDTH
+      MENUITEM "Zoom al~tura",                  IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Zoom ~m rgenes",                IDM_ZOOM_MARGINS
+      MENUITEM "Zoom ~completo\tCtrl+Z",        IDM_ZOOM_ALL
+      MENUITEM "Zoom ~parcial",                 IDM_ZOOM_WINDOW
+      MENUITEM "~Indicar Zoom...",              IDM_ZOOM_SET
+    }
+  }
+  SUBMENU "~Disposici¢n",                       IDM_LAYOUT_MENU
+  {
+    MENUITEM "~M rgenes...",                    IDM_MARGINS
+    MENUITEM "~Tabuladores...",                 IDM_TABS
+    MENUITEM "~Indentaci¢n...",                 IDM_INDENT
+    SUBMENU  "~Espaciado",                      IDM_LINESPACING_MENU
+    {
+      MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Justificaci¢n",                  IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Centrar p gina",                 IDM_PAGECENTER
+    MENUITEM "~Salto de p gina\tCtrl+Enter",    IDM_PAGEBREAK
+    MENUITEM SEPARATOR
+    MENUITEM "Cabecera de p gina...",           IDM_HEADER
+    MENUITEM "Pie de p gina...",                IDM_FOOTER
+  }
+  SUBMENU "F~uentes",                           IDM_FONT_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Tama¤o",                            IDM_SIZE_MENU
+  {
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Atributos",                         IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Color de texto",                   IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Grosor de lineas",                 IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Color de  reas",                   IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Tipo de  reas",                    IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fin de l¡nea",                     IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Uni¢n de l¡nea",                   IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+  SUBMENU "~Ventana",                           IDM_WINDOW_MENU
+  {
+    MENUITEM "~Mosaico",                        IDM_TILE
+    MENUITEM "~Cascada",                        IDM_CASCADE
+    MENUITEM "~Ordenar iconos",                 IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Ayuda",                             IDM_HELP_MENU
+  {
+    MENUITEM "~Indice",                         IDM_HELP_INDEX
+    MENUITEM "~Ayuda general",                  IDM_EXTENDED_HELP
+    MENUITEM "~Utilizando la ayuda",            IDM_HELP_FOR_HELP
+    MENUITEM "Ayuda ~teclado",                  IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Informaci¢n del producto",        IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_MAIN_CONTEXT
+{
+  MENUITEM "~Refrescar",                        IDM_REFRESH
+  SUBMENU "~Archivo",                           IDM_FILE_MENU
+  {
+    MENUITEM "~Nuevo",                          IDM_NEW
+    MENUITEM "~Abrir...\tCtrl+A",               IDM_OPEN
+    SUBMENU "~Recuperar",                       IDM_RECALL
+    {
+      MENUITEM "",                              IDM_RECALL0
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "Configuraci¢n ~general...",       IDM_PREFERENCES
+    MENUITEM "~Valores por defecto...",         IDM_DEFAULTS_CONTEXT
+    MENUITEM "Configurar ~Extensiones...",      IDM_CONFIGURE_EXTENSIONS
+    SUBMENU "Idioma",                           IDM_LANGUAGE_MENU
+    {
+      MENUITEM "",                              IDM_LANGUAGES
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Salir\tF3",                      IDM_EXIT
+  }
+  SUBMENU "~Ventana",                           IDM_WINDOW_MENU
+  {
+    MENUITEM "~Mosaico",                        IDM_TILE
+    MENUITEM "~Cascada",                        IDM_CASCADE
+    MENUITEM "~Ordenar iconos",                 IDM_ARRANGEICONS
+    MENUITEM SEPARATOR
+  }
+  SUBMENU "~Ayuda",                             IDM_HELP_MENU
+  {
+    MENUITEM "~Indice",                         IDM_HELP_INDEX
+    MENUITEM "~Ayuda general",                  IDM_EXTENDED_HELP
+    MENUITEM "~Utilizando la ayuda",            IDM_HELP_FOR_HELP
+    MENUITEM "Ayuda ~teclado",                  IDM_KEYS_HELP
+    MENUITEM SEPARATOR
+    SUBMENU "~Informaci¢n del producto",        IDM_ABOUT_MENU
+    {
+      MENUITEM REVISION,                        IDM_ABOUT,,MIA_CHECKED
+    }
+  }
+}
+
+MENU IDM_TEXTMENU
+{
+  SUBMENU "~Edici¢n",                           IDM_EDIT_MENU
+  {
+    MENUITEM "C~ortar\tShift+Del",              IDM_CUT
+    MENUITEM "~Copiar\tCtrl+Ins",               IDM_COPY
+    MENUITEM "~Pegar\tShift+Ins",               IDM_PASTE
+    MENUITEM "~Borrar\tDel",                    IDM_CLEAR
+  }
+  SUBMENU "~Disposici¢n",                       IDM_LAYOUT_MENU
+  {
+    MENUITEM "~M rgenes...",                    IDM_MARGINS
+    MENUITEM "~Tabuladores...",                 IDM_TABS
+    MENUITEM "~Indentaci¢n...",                 IDM_INDENT
+    SUBMENU  "~Espaciado",                      IDM_LINESPACING_MENU
+    {
+      MENUITEM SEPARATOR
+    }
+    SUBMENU  "~Justificaci¢n",                  IDM_JUSTIFICATION
+    {
+      MENUITEM "#100",                          IDM_JUST_LEFT, MIS_BITMAP
+      MENUITEM "#101",                          IDM_JUST_CENTER, MIS_BITMAP
+      MENUITEM "#102",                          IDM_JUST_RIGHT, MIS_BITMAP
+      MENUITEM "#103",                          IDM_JUST_FULL, MIS_BITMAP
+    }
+    MENUITEM "~Centrar p gina",                 IDM_PAGECENTER
+    MENUITEM "Formato fecha...",                IDM_DATEFMT
+  }
+  SUBMENU "F~uentes",                           IDM_FONT_MENU
+  {
+    MENUITEM "",                                IDM_FONTS
+  }
+  SUBMENU "~Tama¤o",                            IDM_SIZE_MENU
+  {
+    MENUITEM "",                                IDM_SIZES
+  }
+  SUBMENU "~Atributos",                         IDM_ATTR_MENU
+  {
+    MENUITEM "",                                IDM_NORMAL,      MIS_BITMAP
+    MENUITEM "",                                IDM_BOLD,        MIS_BITMAP
+    MENUITEM "",                                IDM_ITALIC,      MIS_BITMAP
+    MENUITEM "",                                IDM_UNDERSCORE,  MIS_BITMAP
+    MENUITEM "",                                IDM_STRIKEOUT,   MIS_BITMAP
+    MENUITEM "",                                IDM_OUTLINE,     MIS_BITMAP
+    MENUITEM "",                                IDM_CAPS,        MIS_BITMAP
+    SUBMENU "",                                 IDM_EXPAND_MENU, MIS_BITMAP
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Color de textos",                  IDM_LINECOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Grosor de lineas",                 IDM_LINEWIDTH_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Color de  reas",                   IDM_FILLCOLOR_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Tipo de  reas",                    IDM_FILLTYPE_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Fin de l¡nea",                     IDM_LINEEND_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+    SUBMENU "Uni¢n de l¡nea",                   IDM_LINEJOIN_MENU
+    {
+       MENUITEM SEPARATOR
+    }
+  }
+}
+
+MENU IDM_BITMAPMENU
+{
+  MENUITEM "De ~fondo",                         IDM_BITMAP_BACKGROUND
+  MENUITEM "Sin texto al lado",                 IDM_BITMAP_NOTEXTASIDE
+  MENUITEM "Medio tono",                        IDM_BITMAP_HALFTONE
+  MENUITEM "~Invertido",                        IDM_BITMAP_REVERSE
+  MENUITEM "~Optimizado",                       IDM_BITMAP_OPTIMIZE
+  SUBMENU  "~Posici¢n",                         IDM_BITMAP_POSITION
+  {
+    MENUITEM "Pr¢xima car cter",                IDM_BITMAP_POSITION_NEXT_CHAR
+    MENUITEM "Pr¢xima l¡nea",                   IDM_BITMAP_POSITION_NEXT_LINE
+    MENUITEM SEPARATOR
+    MENUITEM "Costado izqierdo",                IDM_BITMAP_POSITION_EDGE_LEFT
+    MENUITEM "M rgen izquierda",                IDM_BITMAP_POSITION_MARGIN_LEFT
+    MENUITEM "Centrado (X)",                    IDM_BITMAP_POSITION_CENTERED_X
+    MENUITEM "M rgen derecha",                  IDM_BITMAP_POSITION_MARGIN_RIGHT
+    MENUITEM "Costado derecho",                 IDM_BITMAP_POSITION_EDGE_RIGHT
+    MENUITEM SEPARATOR
+    MENUITEM "Costado superior",                IDM_BITMAP_POSITION_EDGE_TOP
+    MENUITEM "M rgen superior",                 IDM_BITMAP_POSITION_MARGIN_TOP
+    MENUITEM "Centrado (Y)",                    IDM_BITMAP_POSITION_CENTERED_Y
+    MENUITEM "M rgen inferior",                 IDM_BITMAP_POSITION_MARGIN_BOTTOM
+    MENUITEM "Costado inferior",                IDM_BITMAP_POSITION_EDGE_BOTTOM
+  }
+  SUBMENU  "~Tama¤o",                           IDM_BITMAP_SIZE
+  {
+    MENUITEM "Costado-a-costado (X)",           IDM_BITMAP_SIZE_EDGETOEDGE_X
+    MENUITEM "M rgen-a-m rgen (X)",             IDM_BITMAP_SIZE_MARGINTOMARGIN_X
+    MENUITEM SEPARATOR
+    MENUITEM "Costado-a-costado (Y)",           IDM_BITMAP_SIZE_EDGETOEDGE_Y
+    MENUITEM "M rgen-a-m rgen (Y)",             IDM_BITMAP_SIZE_MARGINTOMARGIN_Y
+  }
+  SUBMENU  "~Aspecto",                          IDM_BITMAP_ASPECT
+  {
+    MENUITEM "No fijo",                         IDM_BITMAP_ASPECT_FLOAT
+    MENUITEM "Fijo ~X",                         IDM_BITMAP_ASPECT_FIX_X
+    MENUITEM "Fijo ~Y",                         IDM_BITMAP_ASPECT_FIX_Y
+  }
+}
+
+MENU IDM_BORDERMENU
+{
+  MENUITEM "Tama¤o del borde...",               IDM_BORDER_SIZE
+  MENUITEM "Color del borde...",                IDM_BORDER_COLOR
+  MENUITEM "Tipo...",                           IDM_BORDER_CAPTION
+}
+
+MENU IDM_DEFAULTMENU
+{
+  MENUITEM "~Refrescar",                        IDM_REFRESH
+  SUBMENU "~Archivo",                           IDM_FILE_MENU
+  {
+    MENUITEM "~Grabar\tF2",                     IDM_SAVE
+    MENUITEM "Grabar c~omo...",                 IDM_SAVEAS
+    MENUITEM "Grabar y cerrar\tF4",             IDM_SAVE_CLOSE
+    MENUITEM "~Cerrar",                         IDM_CLOSE
+    MENUITEM SEPARATOR
+    SUBMENU  "~Imprimir",                       IDM_PRINT
+    {
+      SUBMENU "Imprimir todo\tCtrl+I",          IDM_PRINT_ALL
+      {
+        MENUITEM "~Normal",                     IDM_PRINT_ALL_NORMAL,,MIA_CHECKED
+        MENUITEM "A ~rev‚s",                    IDM_PRINT_ALL_REVERSE
+      }
+      MENUITEM "Imprimir p gina\tAlt+I",        IDM_PRINT_PAGE
+    }
+    MENUITEM SEPARATOR
+    MENUITEM "~Valores por defecto...",         IDM_DEFAULTS
+  }
+  SUBMENU "~Edici¢n",                           IDM_EDIT_MENU
+  {
+    MENUITEM "Deshacer\tAlt+Bksp",              IDM_UNDO
+    MENUITEM "Rehacer\tAlt+Shift+Bksp",         IDM_REDO
+    MENUITEM SEPARATOR
+    MENUITEM "~Buscar...",                      IDM_SEARCH
+    MENUITEM "R~epetir b£squeda",               IDM_FINDNEXT
+    MENUITEM SEPARATOR
+    MENUITEM "Saltar a p gina...",              IDM_GOTOPAGE
+    MENUITEM SEPARATOR
+    MENUITEM "Chequeo de ortograf¡a\tF5",       IDM_SPELL
+    MENUITEM SEPARATOR
+    SUBMENU "~Zoom",                            IDM_ZOOM
+    {
+      MENUITEM "Zoom 100%",                     IDM_ZOOM_100
+      MENUITEM "Zoom ~anchura",                 IDM_ZOOM_FULLWIDTH
+      MENUITEM "Zoom al~tura",                  IDM_ZOOM_FULLHEIGHT
+      MENUITEM "Zoom ~m rgenes",                IDM_ZOOM_MARGINS
+      MENUITEM "Zoom ~completo\tCtrl+Z",        IDM_ZOOM_ALL
+      MENUITEM "Zoom ~parcial",                 IDM_ZOOM_WINDOW
+      MENUITEM "~Indicar Zoom...",              IDM_ZOOM_SET
+    }
+  }
+}
+
+DLGTEMPLATE IDD_PROFILE_PATH
+{
+  DIALOG "Directorio del fichero .INI...", IDD_PROFILE_PATH, 0, 0, 300, 60, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Indicar el directorio completo (indicando unidad) d¢nde",0,  8, 48, 284, 8
+    LTEXT "se desea guardar el fichero .INI.",  0,  8, 40, 284,  8
+    CONTROL "",               IDD_PROF_ENTRY,       8, 28, 280,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          52, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  122, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_PROF_ERR,         8,  2, 280,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_FILETYPE
+{
+  DIALOG "Seleccionar tipo de fichero", IDD_FILETYPE, 0, 0, 200, 116, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Nombre del fichero:",0,                  8,100,  70,  8
+    LTEXT "",                 IDD_FILETYPE_NAME,   80,100, 104,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+    LTEXT "Este fichero parece ser de formato v lido para ", 0,  8, 84, 184, 8
+    LTEXT "todos los siguientes tipos de ficheros.  Por   ", 0,  8, 76, 184, 8
+    LTEXT "favor escoga el tipo correcto del fichero.     ", 0,  8, 68, 184, 8
+    LISTBOX                   IDD_FILETYPE_LIST,    8, 20, 184, 44
+    DEFPUSHBUTTON "~OK"       DID_OK,               8,  4,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          52,  4,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  122,  4,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+  }
+}
+
+DLGTEMPLATE IDD_PREFERENCES
+{
+  DIALOG "Configuraci¢n general", IDD_PREFERENCES, 0, 0, 300, 110, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    AUTOCHECKBOX "Animaci¢n",                IDD_PREFERENCES_ANIMATE,           8, 98, 190, 10
+    AUTOCHECKBOX "Mostrar reglas",           IDD_PREFERENCES_RULERS,            8, 88, 190, 10
+    AUTOCHECKBOX "Mostrar barras de desplazamiento", IDD_PREFERENCES_SCBARS,    8, 78, 190, 10
+    AUTOCHECKBOX "Mostrar l¡nea de estatus", IDD_PREFERENCES_STATUSLINE,        8, 68, 190, 10
+    AUTOCHECKBOX "Mostrar nombres completos",IDD_PREFERENCES_FULLNAMES,         8, 58, 190, 10
+    AUTOCHECKBOX "Imprimir p ginas separadamente",IDD_PREFERENCES_SPOOLPAGES,   8, 48, 190, 10
+    AUTOCHECKBOX "Imprimir p ginas a rev‚s", IDD_PREFERENCES_PRINTREVERSE,      8, 38, 190, 10
+    AUTOCHECKBOX "Recargar documento al arrancar",IDD_PREFERENCES_LOADMOSTRECENT,8,28, 190, 10
+
+    GROUPBOX "Initial Zoom",                 0,                               200, 46,  88, 60
+    AUTORADIOBUTTON "100%",                  IDD_PREFERENCES_ZOOM_100,        204, 48,  80, 10, WS_GROUP
+    AUTORADIOBUTTON "Anchura",               IDD_PREFERENCES_ZOOM_FULLWIDTH,  204, 58,  80, 10
+    AUTORADIOBUTTON "Altura",                IDD_PREFERENCES_ZOOM_FULLHEIGHT, 204, 68,  80, 10
+    AUTORADIOBUTTON "M rgenes",              IDD_PREFERENCES_ZOOM_MARGINS,    204, 78,  80, 10
+    AUTORADIOBUTTON "Completo",              IDD_PREFERENCES_ZOOM_ALL,        204, 88,  80, 10
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancelar"       DID_CANCEL,              52, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"           0,                      122, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_PREFERENCES_ERR,      8,  2, 290,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS
+{
+  DIALOG "Valores por defecto", IDD_DEFAULTS, 0, 0, 300, 200, FS_DLGBORDER, FCF_SYSMENU | FCF_SIZEBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_DEFAULTS_NOTEBOOK,    8, 48, 284,150, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    AUTOCHECKBOX "Grabaci¢n global",IDD_DEFAULTS_GLOBAL,   8, 38, 284,  8, WS_GROUP
+    LTEXT "",                    IDD_DEFAULTS_UNITS,       8, 28, 284,  8
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",          IDD_ZOOM_APPLY,          52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"       DID_CANCEL,              96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"           0,                      166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_DEFAULTS_ERR,         8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_AUTHOR
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_AUTHOR, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Nombre del autor",    0,                        0, 90,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_AUTHOR,     90, 90, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "T¡tulo",              IDD_DEFAULTS_TITLE_TAG,   0, 80,  90,  8, DT_VCENTER
+    CONTROL "",                  IDD_DEFAULTS_TITLE,      90, 80, 110,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Fecha de creaci¢n",   IDD_DEFAULTS_CREATEDATE_TAG,0,70, 90,  8, DT_VCENTER
+    LTEXT "",                    IDD_DEFAULTS_CREATEDATE, 90, 70, 110,  8, DT_VCENTER
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_PRINTER
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_PRINTER, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Impresora",           0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_PRINTER,    90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    PUSHBUTTON "Configuraci¢n impresora",IDD_DEFAULTS_SETTINGS,12,70,186,12
+    LTEXT "",                    IDD_DEFAULTS_FORMNAME,   12, 61, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_FORMSIZE,   12, 55, 186,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_FONT
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_FONT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Fuente",              0,                        0, 90,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_FONT,       90,  0, 110, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Tama¤o",              0,                        0, 80,  80,  8
+    CONTROL "",                  IDD_DEFAULTS_SIZE,       90,  0, 110, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Color",               0,                        0, 70,  70,  8
+    VALUESET                     IDD_DEFAULTS_COLOR,      90, 58, 110, 20, VS_RGB | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 2, 8
+
+    GROUPBOX "Attributos",       0,                        0, 10, 200, 42
+    AUTOCHECKBOX "Negrita",      IDD_DEFAULTS_BOLD,        4, 34,  90, 10, WS_GROUP
+    AUTOCHECKBOX "Cursiva",      IDD_DEFAULTS_ITALIC,      4, 24,  90, 10
+    AUTOCHECKBOX "Subrayado",    IDD_DEFAULTS_UNDERSCORE,  4, 14,  90, 10
+    AUTOCHECKBOX "Tachado",      IDD_DEFAULTS_STRIKEOUT, 100, 34,  90, 10
+    AUTOCHECKBOX "Vacio",        IDD_DEFAULTS_OUTLINE,   100, 24,  90, 10
+    AUTOCHECKBOX "May£sculas",   IDD_DEFAULTS_CAPS,      100, 14,  90, 10
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT1
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT1, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "Justificaci¢n",       0,                        0, 86,  90,  8
+    VALUESET                     IDD_DEFAULTS_JUSTIFY,    90, 80, 110, 20, VS_BITMAP | VS_BORDER | VS_ITEMBORDER | WS_GROUP
+      CTLDATA 8, 0, 1, 4
+
+    AUTOCHECKBOX  "Centrar p gina",IDD_DEFAULTS_CENTERPAGE,0, 70, 200, 10
+
+    GROUPBOX "M rgenes",         0,                        0,  8, 200, 52
+    LTEXT "Izquierdo",           0,                        4, 42,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_LEFT,       80, 42, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Derecho"              0,                        4, 32,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_RIGHT,      80, 32, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Superior",            0,                        4, 22,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_TOP,        80, 22, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Inferior",            0,                        4, 12,  76,  8
+    CONTROL "",                  IDD_DEFAULTS_BOTTOM,     80, 12, 116,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT2
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_LAYOUT2, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Distancias",       0,                        0, 60, 200, 32
+    LTEXT "Tabuladores",         0,                        4, 74,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_TAB,        96, 74,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Indentaci¢n",         0,                        4, 64,  90,  8
+    CONTROL "",                  IDD_DEFAULTS_INDENT,     96, 64,  90,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    GROUPBOX "Espaciado",        0,                        0, 16, 200, 42
+    AUTORADIOBUTTON "Normal",    IDD_DEFAULTS_LINE_100,    4, 40, 192,  8
+    AUTORADIOBUTTON "1 1/2",     IDD_DEFAULTS_LINE_150,    4, 30, 192,  8
+    AUTORADIOBUTTON "Doble",     IDD_DEFAULTS_LINE_200,    4, 20, 192,  8
+  }
+}
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_NATIONAL
+{
+  DIALOG "", IDD_DEFAULTS_PAGE_NATIONAL, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    LTEXT "P gina de C¢digos",   0,                        0, 90,  70,  8
+    CONTROL "",                  IDD_DEFAULTS_CODEPAGE,   70,  0, 130, 98, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    GROUPBOX "Formato de la fecha", 0,                     0, 10, 200, 78
+    CONTROL "",                  IDD_DEFAULTS_DATEFMT,     4, 72, 192,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+    LTEXT "Ejemplo:",            0,                        4, 62,  30,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "",                    IDD_DEFAULTS_DATESMP,    34, 62, 162,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "Cualquier caracter copiado en el formato aparecer  en  ", 0,  4, 54, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "el resultado, excepto lo que esten precididos por el   ", 0,  4, 48, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "caracter '%'. Despu‚s del '%' puede haber cualquiera   ", 0,  4, 42, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "de estos caracteres:                                   ", 0,  4, 36, 192,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    m - Mes num‚rico                                   ", 0,  4, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    M - Mes completo                                   ", 0, 98, 30,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    n - Mes abreviado                                  ", 0,  4, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    d - D¡a num‚rico                                   ", 0, 98, 24,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    y - A¤o (4 d¡gitos)                                ", 0,  4, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    z - A¤o (2 d¡gitos)                                ", 0, 98, 18,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    w - D¡a completo                                   ", 0,  4, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    LTEXT "    x - D¡a abreviado                                  ", 0, 98, 12,  94,  6
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    AUTOCHECKBOX "Unidades m‚tricas", IDD_DEFAULTS_METRIC, 0,  0, 200, 10
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXTENSIONS
+{
+  DIALOG "Configurar Extensiones", IDD_CONFIGURE_EXTENSIONS, 0, 0, 300, 200, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    CONTROL "",                  IDD_CONFIGURE_NOTEBOOK,   8, 28, 284,170, WC_NOTEBOOK, WS_VISIBLE | BKS_BACKPAGESTR | BKS_MAJORTABTOP | BKS_ROUNDEDTABS | BKS_SOLIDBIND | BKS_STATUSTEXTLEFT | BKS_TABTEXTCENTER | BKS_TABBEDDIALOG
+
+    DEFPUSHBUTTON "~OK"          DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancelar"       DID_CANCEL,              52, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"           0,                      122, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                    IDD_CONFIGURE_ERR,        8,  2, 284,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_SEARCH
+{
+   DIALOG "Buscar...", IDD_SEARCH, 0, 0, 220, 90, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Texto para encontrarse:",0,                 8, 76,  90,  8
+      CONTROL "",                  IDD_SEARCH_STRING,  106, 76,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      LTEXT "Reemplazo:",          0,                    8, 64,  90,  8
+      CONTROL "",                  IDD_SEARCH_REPLACE, 106, 64,  96,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+      AUTOCHECKBOX "Sensible a may£scula/men£scula",IDD_SEARCH_CASESENSITIVE,8,52,205,10
+      AUTOCHECKBOX "Expresi¢n Regular",IDD_SEARCH_REGULAR,8,40, 205, 10
+
+      DEFPUSHBUTTON "~Buscar"      IDD_SEARCH_FIND,      8, 24,  51, 12, WS_GROUP
+      CONTROL "~Cambiar"           IDD_SEARCH_CHANGE,   63, 24,  55, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Cambiar y Buscar"   IDD_SEARCH_CHANGEFIND,122,24, 90, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Cambiar ~Todos"     IDD_SEARCH_CHANGEALL, 8, 10,  74, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancelar"       DID_CANCEL,          86, 10,  68, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Ayuda"           0,                  158, 10,  54, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                    IDD_SEARCH_ERR,       8,  2, 208,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_GOTOPAGE
+{
+   DIALOG "Saltar a p gina", IDD_GOTOPAGE, 0, 0, 200, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "N£mero de p gina:",0,                    8, 28,  90,  8
+      CONTROL "",               IDD_GOTOPAGE_ENTRY, 100, 28,  92,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+      DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+      CONTROL "Esc=Cancelar"    DID_CANCEL,          52, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Ayuda"        0,                  122, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+      CTEXT "",                 IDD_GOTOPAGE_ERR,     8,  2, 192,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+   }
+}
+
+DLGTEMPLATE IDD_SPELL
+{
+   DIALOG "Chequeo de ortograf¡a", IDD_SPELL, 0, 0, 240, 100, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+   {
+      LTEXT "Palabra encontrada:",                0,    4,  86,  86,  8
+      LTEXT "",                    IDD_SPELL_OLDWORD,  94,  86, 142,  8
+      PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000
+      CTEXT "-- Reemplazos posibles --",          0,    4,  76, 232,  8
+      CONTROL "",                  IDD_SPELL_NEWWORD,   1,  26, 238, 48, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_SIMPLE
+      CONTROL "~Saltar",              IDD_SPELL_SKIP,   1,  13,  49, 12, WC_BUTTON, WS_VISIBLE | WS_GROUP | WS_TABSTOP | BS_PUSHBUTTON | BS_DEFAULT
+      CONTROL "~Aceptar",           IDD_SPELL_ACCEPT,  50,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "~Insertar",          IDD_SPELL_INSERT, 110,  13,  60, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "~Reemplazar",       IDD_SPELL_REPLACE, 170,  13,  69, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Insertar ~men£scula",IDD_SPELL_UNCAPS,   1,   1, 103, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "Esc=Cancelar",             DID_CANCEL, 104,   1,  71, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+      CONTROL "F1=Ayuda",                         0,  175,   1,  64, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+   }
+}
+
+DLGTEMPLATE IDD_ZOOM_SET
+{
+  DIALOG "Indicar Zoom...", IDD_ZOOM_SET, 0, 0, 230, 42, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR
+  {
+    LTEXT "Valor de zoom (%)",0,                    8, 28, 100,  8
+    CONTROL "",               IDD_ZOOM_SET,       120, 28,  94,  8,
+      WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_ZOOM_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_ZOOM_ERR,         8,  2, 216,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_MARGINS
+{
+  DIALOG "M rgenes", IDD_MARGINS, 0, 0, 400, 72, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Izquierdo",        0,                   58, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_LEFT,   131, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Derecho",          0,                  229, 58,  50,  8
+    CONTROL "",               IDD_MARGINS_RIGHT,  302, 58,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Superior",         0,                   58, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_TOP,    131, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    LTEXT "Inferior",         0,                  229, 46,  50,  8
+    CONTROL "",               IDD_MARGINS_BOTTOM, 302, 46,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_MARGINS_UNITS,    8, 34, 390,  8
+    CTEXT "",                 IDD_MARGINS_SIZE,     8, 26, 390,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_MARGINS_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_MARGINS_ERR,      8,  2, 390,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_TABS
+{
+  DIALOG "Tabuladores", IDD_TABS, 0, 0, 350, 70, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Posici¢n",         0,                   70, 48,  50,  8
+    CONTROL "",               IDD_TABS_POSITION,  155, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    PUSHBUTTON "~Fijar",      IDD_TABS_SET,       230, 54,  50, 12
+    PUSHBUTTON "~Borrar",     IDD_TABS_CLEAR,     230, 42,  50, 12
+
+    CTEXT "",                 IDD_TABS_UNITS,       8, 34, 338,  8
+    CTEXT "",                 IDD_TABS_SIZE,        8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_TABS_APPLY,      52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_TABS_ERR,         8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_INDENT
+{
+  DIALOG "Indentaci¢n", IDD_INDENT, 0, 0, 350, 62, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Distancia",        0,                   97, 48,  50,  8
+    CONTROL "",               IDD_INDENT_DISTANCE,212, 48,  40,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN | ES_RIGHT
+
+    CTEXT "",                 IDD_INDENT_UNITS,     8, 34, 338,  8
+    CTEXT "",                 IDD_INDENT_SIZE,      8, 26, 338,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_INDENT_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_INDENT_ERR,       8,  2, 338,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_DATEFMT
+{
+  DIALOG "Formato de la fecha", IDD_DATEFMT, 0, 0, 260, 154, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Formato",          0,                    8,136,  50,  8
+    CONTROL "",               IDD_DATEFMT_ENTRY,   60,136, 192,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Ejemplo:",         0,                    8,126,  50,  8
+    LTEXT "",                 IDD_DATEFMT_SAMPLE,  60,126, 192,  8
+
+    LTEXT "Cualquier caracter copiado en el formato aparecer  en  ", 0,  8,114, 248,  8
+    LTEXT "el resultado, excepto lo que esten precididos por el   ", 0,  8,106, 248,  8
+    LTEXT "caracter '%'. Despu‚s del '%' puede haber cualquiera   ", 0,  8, 98, 248,  8
+    LTEXT "de estos caracteres:                                   ", 0,  8, 90, 248,  8
+    LTEXT "    m - se sustituye por el n£mero del mes.            ", 0,  8, 82, 248,  8
+    LTEXT "    M - se sustituye por el nombre del mes.            ", 0,  8, 74, 248,  8
+    LTEXT "    n - se sustituye por el nombre abreviado del mes.  ", 0,  8, 66, 248,  8
+    LTEXT "    d - se sustituye por el n£mero del d¡a.            ", 0,  8, 58, 248,  8
+    LTEXT "    a - se sustituye por el n£mero del a¤o (4 d¡gitos).", 0,  8, 50, 248,  8
+    LTEXT "    b - se sustituye por el n£mero del a¤o (2 d¡gitos).", 0,  8, 42, 248,  8
+    LTEXT "    D - se sustituye por el d¡a de la semana.          ", 0,  8, 34, 248,  8
+    LTEXT "    e - se sustituye por el d¡a de la semana (corto).  ", 0,  8, 26, 248,  8
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_DATEFMT_APPLY,   52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_DATEFMT_ERR,      8,  2, 248,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000
+  }
+}
+
+DLGTEMPLATE IDD_BARCODE
+{
+  DIALOG "A¤adir c¢digo de barras", IDD_BARCODE, 0, 0, 250, 64, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    LTEXT "Tipo",             0,                    8, 50,  85,  8
+    CONTROL "",               IDD_BARCODE_TYPE,   100, 10, 143, 50, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Texto",            0,                    8, 38,  85,  8
+    CONTROL "",               IDD_BARCODE_ENTRY,  101, 38, 141,  8, ENTRYFIELD_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | ES_AUTOSCROLL | ES_MARGIN
+
+    LTEXT "Car cteres v lidas:",0,                  8, 26,  85,  8
+    LTEXT "0123456789",       IDD_BARCODE_CHARS,  101, 26, 141,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          52, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  122, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_BARCODE_ERR,      8,  2, 238,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_HEADER
+{
+  DIALOG "Cabecera de p gina", IDD_HEADER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_HEADER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar",       IDD_HEADER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_HEADER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FOOTER
+{
+  DIALOG "Pie de p gina", IDD_FOOTER, 0, 0, 250, 80, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    MLE "",                   IDD_FOOTER_ENTRY,     8, 26, 234, 50
+
+    DEFPUSHBUTTON "~OK"       DID_OK,               8, 10,  40, 12, WS_GROUP
+    CONTROL "~Aplicar"        IDD_FOOTER_APPLY,    52, 10,  40, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,          96, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                  166, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_FOOTER_ERR,       8,  2, 234,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_LINESPACINGMGR
+{
+  DIALOG "Gestor de espaciado para l¡neas", IDD_LINESPACINGMGR, 0, 0, 230, 150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    SLIDER                    IDD_LINESPACINGMGR_SET,   8, 25,  46,120, SLS_VERTICAL | SLS_LEFT | SLS_SNAPTOINCREMENT | SLS_BUTTONSBOTTOM | WS_GROUP
+       CTLDATA 12, 0, 101, 0, 0, 0
+    LTEXT "",                 IDD_LINESPACINGMGR_SMP,  60, 25,  80,120 
+    PRESPARAMS PP_BACKGROUNDCOLOR, 0xFFFFFF
+    PRESPARAMS PP_FONTNAMESIZE, "16.Tms Rmn"
+    PUSHBUTTON ">>",          IDD_LINESPACINGMGR_ADD, 148, 90,  20, 10
+    PUSHBUTTON "<<",          IDD_LINESPACINGMGR_DEL, 148, 70,  20, 10
+    LISTBOX                   IDD_LINESPACINGMGR_LIST,170, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    DEFPUSHBUTTON "~OK"       DID_OK,                   8, 10,  40, 12, WS_GROUP
+    CONTROL "~Defecto"        IDD_LINESPACINGMGR_DFLT, 52, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,              99, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                      169, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_LINESPACINGMGR_ERR,   8,  2, 204,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_EXPANDMGR
+{
+  DIALOG "Gestor de expansi¢n de textos", IDD_EXPANDMGR, 0, 0, 230, 110, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    SLIDER                    IDD_EXPANDMGR_SET,   8, 30, 130, 30, SLS_HORIZONTAL | SLS_BOTTOM | SLS_SNAPTOINCREMENT | SLS_BUTTONSLEFT | SLS_BUTTONSBOTTOM | WS_GROUP
+       CTLDATA 12, 0, 101, 0, 0, 0
+    LTEXT "",                 IDD_EXPANDMGR_SMP,   8, 60, 130, 40 
+    PRESPARAMS PP_BACKGROUNDCOLOR, 0xFFFFFF
+    PRESPARAMS PP_FONTNAMESIZE, "16.Tms Rmn"
+    PUSHBUTTON ">>",          IDD_EXPANDMGR_ADD, 148, 85,  20, 10
+    PUSHBUTTON "<<",          IDD_EXPANDMGR_DEL, 148, 65,  20, 10
+    LISTBOX                   IDD_EXPANDMGR_LIST,170, 25,  42, 80, WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    DEFPUSHBUTTON "~OK"       DID_OK,              8, 10,  40, 12, WS_GROUP
+    CONTROL "~Defecto"        IDD_EXPANDMGR_DFLT, 52, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,         99, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                 169, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_EXPANDMGR_ERR,   8,  2, 204,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_LINECOLORMGR
+{
+  DIALOG "Gestor de colores para l¡neas y textos", IDD_LINECOLORMGR, 0, 0, 260,150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    CONTROL "",               IDD_LINECOLORMGR_WHEEL, 0, 35, 188,110, "ColorSelectClass", WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON ">>",          IDD_LINECOLORMGR_ADD, 188, 95,  20, 10
+    PUSHBUTTON "<<",          IDD_LINECOLORMGR_DEL, 188, 75,  20, 10
+    LISTBOX                   IDD_LINECOLORMGR_LIST,210, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE | LS_OWNERDRAW
+    RTEXT "Rojo:",            0,                      8, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xCC0000
+    SPINBUTTON                IDD_LINECOLORMGR_RED,  38, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Verde:",           0,                     74, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00CC00
+    SPINBUTTON                IDD_LINECOLORMGR_GRN, 104, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Azul:",            0,                    140, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x0000CC
+    SPINBUTTON                IDD_LINECOLORMGR_BLU, 170, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    DEFPUSHBUTTON "~OK"       DID_OK,                 8, 10,  40, 12, WS_GROUP
+    CONTROL "~Defecto"        IDD_LINECOLORMGR_DFLT, 52, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,            99, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                    169, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_LINECOLORMGR_ERR,   8,  2, 244,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+DLGTEMPLATE IDD_FILLCOLORMGR
+{
+  DIALOG "Gestor de colores de  reas", IDD_FILLCOLORMGR, 0, 0, 260,150, FS_DLGBORDER, FCF_DLGBORDER | FCF_TITLEBAR | FCF_DBE_APPSTAT
+  {
+    CONTROL "",               IDD_FILLCOLORMGR_WHEEL, 0, 35, 188,110, "ColorSelectClass", WS_GROUP | WS_TABSTOP | WS_VISIBLE
+    PUSHBUTTON ">>",          IDD_FILLCOLORMGR_ADD, 188, 95,  20, 10
+    PUSHBUTTON "<<",          IDD_FILLCOLORMGR_DEL, 188, 75,  20, 10
+    LISTBOX                   IDD_FILLCOLORMGR_LIST,210, 25,  46,120, WS_GROUP | WS_TABSTOP | WS_VISIBLE | LS_OWNERDRAW
+    RTEXT "Rojo:",            0,                      8, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xCC0000
+    SPINBUTTON                IDD_FILLCOLORMGR_RED,  38, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Verde:",           0,                     74, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x00CC00
+    SPINBUTTON                IDD_FILLCOLORMGR_GRN, 104, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    RTEXT "Azul:",            0,                    140, 24,  28, 12, WS_VISIBLE | DT_VCENTER
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0x0000CC
+    SPINBUTTON                IDD_FILLCOLORMGR_BLU, 170, 25,  32, 12, SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN | WS_GROUP
+    DEFPUSHBUTTON "~OK"       DID_OK,                 8, 10,  40, 12, WS_GROUP
+    CONTROL "~Defecto"        IDD_FILLCOLORMGR_DFLT, 52, 10,  43, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "Esc=Cancelar"    DID_CANCEL,            99, 10,  66, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON
+    CONTROL "F1=Ayuda"        0,                    169, 10,  52, 12, WC_BUTTON, WS_VISIBLE | BS_PUSHBUTTON | BS_HELP
+    CTEXT "",                 IDD_FILLCOLORMGR_ERR,   8,  2, 244,  8
+    PRESPARAMS PP_FOREGROUNDCOLOR, 0xFF0000
+  }
+}
+
+
+STRINGTABLE
+{
+  IDS_HELPTITLE                         "Ayuda de 'Escriba'"
+  IDS_TITLE                             "Procesador de textos para OS/2-PM"
+  IDS_TITLE1                            REVISION
+  IDS_NEW_DOCUMENT                      "Documento nuevo"
+  IDS_TYPE                              "Tipo"
+  IDS_PAGE                              "P gina"
+  IDS_OF                                "de"
+  IDS_MODIFIED                          "Modificado"
+  IDS_JOB_NAME                          "Escriba: "
+  IDS_UNTITLED                          "<Sin t¡tulo>"
+  IDS_DEFAULTFONT                       "8.Helv"
+  IDS_STATUSFONT                        "10.Helv"
+
+  IDS_PARMS_RESET                       "RESET"
+  IDS_PARMS_PRINT                       "PRINT"
+  IDS_PARMS_TRAP                        "TRAP"
+
+  IDS_PROMPT_SAVE                       "El documento '%s' ha sido modificado. ¨Deseas grabarlo?"
+  IDS_PROMPT_SAVECONFIRM1               "El documento '%s' ya existe. ¨Deseas sobreescribirlo?"
+  IDS_PROMPT_SAVECONFIRM2               "El documento tiene tipo '%s' actualmente.  ¨Deseas cambiar su tipo a '%s'?"
+
+  IDS_MESSAGE_SPELLDONE                 "Chequeo de ortograf¡a completo."
+
+  IDS_ERROR_EXCEPTION                   "­Escriba ha tenido un error serio!  "
+                                        "Por favor envia el fichero %s al autor (Internet: rpapo@msen.com).  "
+                                        "Te agradeceria igualmente una descripci¢n de lo que estabas intentando hacer en ese momento."
+  IDS_ERROR_PRFOPENPROFILE              "ERROR: No es posible abrir el fichero .INI"
+  IDS_ERROR_CREATEHELP                  "ERROR: No se puede crear la instancia de ayuda. C¢digo %08lX."
+  IDS_ERROR_CREATEFRAME                 "ERROR: No se puede crear la ventana. C¢digo %08lX."
+  IDS_ERROR_WINREGISTERCLASS            "ERROR: No se puede registrar la clase '%s'. C¢digo %08lX."
+  IDS_ERROR_CREATECLIENT                "ERROR: No se puede crear la ventana cliente. C¢digo %08lX."
+  IDS_ERROR_TOOMANYDOCUMENTS            "ERROR: No se pueden abrir m s de %i documentos simult neamente."
+  IDS_ERROR_TOOMANYLOADED               "ERROR: Demasiados documentos abiertos. '%s' descargado de memoria."
+  IDS_ERROR_DOCUMENT_CREATE             "ERROR: Imposible crear el objeto del documento."
+  IDS_ERROR_DOCUMENT_LOAD               "ERROR: No es posible leer el documento."
+  IDS_ERROR_DOCUMENT_SAVE               "ERROR: No es posible abrir el documento '%s' para grabarlo."
+  IDS_ERROR_DOCUMENT_NONAME             "ERROR: El fichero no tiene nombre. Utiliza 'Grabar como...'."
+  IDS_ERROR_CREATEPRINTSTATUS           "ERROR: No se puede crear la ventana de status de impresi¢n."
+  IDS_ERROR_CREATELOADSTATUS            "ERROR: No se puede crear la ventana de status."
+  IDS_ERROR_BLOCKMEMORY                 "ERROR: Bloque demasiado grande para la operaci¢n de copia."
+  IDS_ERROR_BADGRAPHICFILE              "ERROR: Tipo o formato de fichero gr fico no reconocido."
+  IDS_ERROR_FILEMEMORY                  "ERROR: No se pudo conseguir memoria para cargar el documento '%s'."
+  IDS_ERROR_NOFILETYPE                  "ERROR: No se pudo determinar el tipo del documento '%s'."
+  IDS_ERROR_INVALIDPATH                 "ERROR: No es v lido el camino '%s%s'."
+  IDS_ERROR_NOPATH                      "ERROR: No existe el camino '%s%s'."
+  IDS_ERROR_LOADLANGUAGE                "ERROR: No se pudo cargar el m¢dulo nuevo de idiomas '%s'."
+ 
+  IDS_WARNING_BADCODEPAGE               "AVISO: No est  presente la p gina de c¢digos %i.  Algunos textos no se desplegar n corectamente."
+  IDS_WARNING_DOSQUERYCP                "AVISO: No se pudo verificar la p gina de c¢digos %i.  El teclado se dejar  en su configuraci¢n normal.  Error de 'DosQueryCp' %i."
+  IDS_WARNING_CODEPAGENOTACTIVE         "AVISO: P gina de c¢digos %i (%s) no estuvo preparado para uso..  El teclado se dejar  en su configuraci¢n normal (p gina de c¢digos %i (%s))."
+
+  IDS_PRINTING                          "Imprimiendo"
+  IDS_LOADING                           "Cargando"
+
+  IDS_BOLD                              " Bold"          // DO NOT TRANSLATE
+  IDS_ITALIC                            " Italic"        // DO NOT TRANSLATE
+
+  IDS_ATTR_NORMAL                       "Normal"
+  IDS_ATTR_BOLD                         "Negrita"
+  IDS_ATTR_ITALIC                       "Cursiva"
+  IDS_ATTR_UNDERSCORE                   "Subrayado"
+  IDS_ATTR_STRIKEOUT                    "Tachado"
+  IDS_ATTR_OUTLINE                      "Vacia"
+  IDS_ATTR_CAPS                         "May£sculas"
+
+  IDS_UNITS_ENGLISH                     "Todas las medidas est n en pulgadas."
+  IDS_UNITS_METRIC                      "Todas las medidas est n en cent¡metros."
+
+  IDS_VERIFY_ERROR1                     "ERROR: No se pudo abrir el fichero '%s' para verificarlo."
+  IDS_VERIFY_ERROR2                     "ERROR: No se pudo conseguir memoria suficiente para verificar el fichero '%s'."
+  IDS_VERIFY_ERROR3                     "ERROR: Fichero '%s' inv lido (c¢digos inv lidos de escape)."
+  IDS_VERIFY_ERROR4                     "ERROR: Fichero '%s' contiene funciones inv lidas."
+  IDS_VERIFY_ERROR5                     "ERROR: Fichero '%s' contiene car cteres nulos."
+  IDS_VERIFY_ERROR6                     "ERROR: Fichero '%s' inv lido (funciones incompletos)."
+  IDS_VERIFY_ERROR7                     "ERROR: Fichero '%s' inv lido (no hab¡a preface)."
+  IDS_VERIFY_ERROR8                     "ERROR: Fichero '%s' no se verifica contra ninguno de los tipos definidos de ficheros."
+
+  IDS_IMPORT_ERROR1                     "ERROR: No se pudo abrir el fichero '%s' para cargarlo."
+  IDS_IMPORT_ERROR2                     "ERROR: No se pudo conseguir memoria suficiente para cargar el fichero '%s'."
+
+  IDS_EXPORT_ERROR1                     "ERROR: No se pudo abrir el fichero '%s' para grabarlo."
+  IDS_EXPORT_ERROR2                     "ERROR: No se pudo grabar todo el fichero '%s'."
+
+  IDS_ERROR_SPELL_REPLACE               "ERROR: Hay que especificar el texto de reemplazo."
+
+  IDS_MARGINS_PAGESIZE                  "Tama¤o del formulario seleccionado: "
+  IDS_MARGINS_ERROR0                    "ERROR: Valor de margen no v lido."
+  IDS_MARGINS_ERROR1                    "ERROR: El margen izquierdo no puede ser menos que %s."
+  IDS_MARGINS_ERROR2                    "ERROR: El margen derecho no puede ser menos que %s."
+  IDS_MARGINS_ERROR3                    "ERROR: Los m rgenes derecho e izquierdo se sobreponen."
+  IDS_MARGINS_ERROR4                    "ERROR: El m rgen del fondo no puede ser menos que %s."
+  IDS_MARGINS_ERROR5                    "ERROR: El m rgen del techo no puede ser menos que %s."
+  IDS_MARGINS_ERROR6                    "ERROR: Los m rgenes superior e inferior se sobreponen."
+
+  IDS_TABS_MARGINS                      "Los m rgenes actuales son %s y %s."
+  IDS_TABS_ERROR1                       "ERROR: Valor de tabulador no v lido."
+  IDS_TABS_ERROR2                       "ERROR: Los tabuladores no pueden fijarse antes del margen izquierdo."
+  IDS_TABS_ERROR3                       "ERROR: Los tabuladores no pueden fijarse m s all  del margen derecho."
+  IDS_TABS_ERROR4                       "ERROR: Este tabulador ya est  fijado."
+  IDS_TABS_ERROR5                       "ERROR: No se puede eliminar un tabulador si este no ha sido fijado previamente."
+  IDS_TABS_ERROR6                       "ERROR: La tabla de tabuladores est  completa."
+
+  IDS_INDENT_MARGINS                    "Los m rgenes actuales son %s y %s."
+  IDS_INDENT_ERROR1                     "ERROR: Distancia de indentaci¢n inv lida."
+  IDS_INDENT_ERROR2                     "ERROR: La indentaci¢n no puede estar m s all  del margen derecho."
+
+  IDS_BARCODE_ERROR1                    "ERROR: El texto no puede ser nulo."
+  IDS_BARCODE_ERROR2                    "ERROR: El texto contiene car cteres inv lidas."
+  IDS_BARCODE_ERROR3                    "ERROR: Texto CODABAR tiene que comenzar y terminar igual."
+  IDS_BARCODE_ERROR4                    "ERROR: C¢digos CODABAR tienen que comenzar y terminar con A, B, C o D."
+
+  IDS_PRINTER_ERROR0                    "ERROR: No se puede obtener el nombre de la impresora por defecto."
+  IDS_PRINTER_ERROR1                    "ERROR: No se puede acceder a la configuraci¢n del driver de impresora."
+  IDS_PRINTER_ERROR2                    "ERROR: No se puede obtener el tama¤o de las propiedades de la impresora."
+  IDS_PRINTER_ERROR3                    "ERROR: No se puede preguntar el estado de la impresi¢n. Status %ld."
+  IDS_PRINTER_ERROR4                    "ERROR: La impresora no ha sido aun configurada. Hazlo a trav‚s del Panel de Control."
+  IDS_PRINTER_ERROR5                    "ERROR: Nombre de perif‚rico no v lido: '%s'"
+  IDS_PRINTER_ERROR6                    "ERROR: Datos del driver no v lidos."
+  IDS_PRINTER_ERROR7                    "ERROR: Nombre de driver no v lido: '%s'"
+  IDS_PRINTER_ERROR8                    "ERROR: Direcci¢n l¢gica no v lida: '%s'"
+  IDS_PRINTER_ERROR9                    "ERROR: Error en DevPostDeviceModes %XH"
+
+  IDS_DEFAULTS_PAGE_AUTHOR              "Autor"
+  IDS_DEFAULTS_PAGE_PRINTER             "Impresora"
+  IDS_DEFAULTS_PAGE_FONT                "Fuente"
+  IDS_DEFAULTS_PAGE_LAYOUT              "Disposici¢n"
+  IDS_DEFAULTS_PAGE_NATIONAL            "Nacional"
+
+  IDS_DEFAULTS_METRIC1                  "%sx%scm"
+  IDS_DEFAULTS_ENGLISH1                 "%sx%sin"
+  IDS_DEFAULTS_METRIC2                  " (unido a %s%s%s-%s%s%s)"
+  IDS_DEFAULTS_ENGLISH2                 " (unido a %s%s%s-%s%s%s)"
+
+  IDS_DEFAULTS_ERROR1                   "ERROR: Espaciado de tabulador no v lido."
+  IDS_DEFAULTS_ERROR2                   "ERROR: No se ha seleccionado una impresora."
+
+  IDS_ZOOM_ERROR1                       "ERROR: No es posible hacer menos de un 10% de zoom."
+  IDS_ZOOM_ERROR2                       "ERROR: No es posible hacer m s de un 3000% de zoom."
+
+  IDS_SEARCH_ERROR1                     "ERROR: El texto para buscar no puede ser vac¡o."
+  IDS_SEARCH_ERROR2                     "El texto nuevo es vac¡o.  ¨Est  seguro?"
+  IDS_SEARCH_ERROR3                     "ERROR: No se encontr¢ el texto."
+  IDS_SEARCH_ERROR4                     "ERROR: Error en expresi¢n regular."
+
+  IDS_HEADER_TOO_LARGE                  "ERROR: Definici¢n demasiado grande (%i, max %i)."
+  IDS_HEADER_BAD_FUNCTION               "ERROR: Funci¢n inv lida '%0.*s'."
+
+  IDS_ZOOM0                             "Ir a un extremo de la ventana de zoom y pulsar el bot¢n izquierdo del mouse."
+  IDS_ZOOM1                             "Ir al extremo opuesto de la ventana de zoom y soltar el bot¢n del mouse."
+
+  IDS_PASTEGRAPHIC0                     "Ir a un extremo del gr fico y pulsar el bot¢n izquierdo del mouse."
+  IDS_PASTEGRAPHIC1                     "Ir al extremo opuesto del gr fico y soltar el bot¢n del mouse."
+
+  IDS_MOVEGRAPHIC                       "Mover el gr fico a la nueva posici¢n y soltar el bot¢n del mouse."
+  IDS_SIZEGRAPHIC                       "Mover el borde del gr fico a la nueva posici¢n y soltar el bot¢n del mouse."
+  IDS_MOVETEXT                          "Mover el cursor de texto a la nueva posici¢n del bloque y soltar el bot¢n del mouse."
+
+  IDS_DATEFMT_ERROR1                    "ERROR: formato de fecha no v lido."
+  IDS_DATEFMT_HEADER                    "%"
+  IDS_DATEFMT_YEAR2                     "b"
+  IDS_DATEFMT_YEAR4                     "a"
+  IDS_DATEFMT_MON                       "n"
+  IDS_DATEFMT_MONTH                     "m"
+  IDS_DATEFMT_MONTHS                    "M"
+  IDS_DATEFMT_DAY                       "d"
+  IDS_DATEFMT_WEEKDAY                   "D"
+  IDS_DATEFMT_WKDAY                     "e"
+  IDS_DATEFMT_WEEKDAYS                  "DomLunMarMi‚JueVieS b"
+  IDS_DATEFMT_DAY0                      "Domingo"
+  IDS_DATEFMT_DAY1                      "Lunes"
+  IDS_DATEFMT_DAY2                      "Martes"
+  IDS_DATEFMT_DAY3                      "Mi‚rcoles"
+  IDS_DATEFMT_DAY4                      "Jueves"
+  IDS_DATEFMT_DAY5                      "Viernes"
+  IDS_DATEFMT_DAY6                      "S bado"
+  IDS_DATEFMT_MONS                      "EneFebMarAbrMayJunJulAgoSetOctNovDic"
+  IDS_DATEFMT_MONTH1                    "Enero"
+  IDS_DATEFMT_MONTH2                    "Febrero"
+  IDS_DATEFMT_MONTH3                    "Marzo"
+  IDS_DATEFMT_MONTH4                    "Abril"
+  IDS_DATEFMT_MONTH5                    "Mayo"
+  IDS_DATEFMT_MONTH6                    "Junio"
+  IDS_DATEFMT_MONTH7                    "Julio"
+  IDS_DATEFMT_MONTH8                    "Agosto"
+  IDS_DATEFMT_MONTH9                    "Setiembre"
+  IDS_DATEFMT_MONTH10                   "Octubre"
+  IDS_DATEFMT_MONTH11                   "Noviembre"
+  IDS_DATEFMT_MONTH12                   "Diciembre"
+
+  IDS_SAVING                            "Grabando"
+  IDS_MERGING                           "Uniendo"
+
+  IDS_OPEN_DOCUMENT                     "Abrir documento"
+  IDS_MERGE_DOCUMENT                    "Unir documento"
+  IDS_SAVE_DOCUMENT                     "Grabar documento"
+  IDS_OPEN_GRAPHIC                      "Abrir fichero gr fico"
+
+  IDS_SELECTED_FORM                     "Tipo de hoja: %s"
+  IDS_POINT                             "pt"
+
+  IDS_REGISTERED_TO                     "Registrado a "
+  IDS_SERIAL_NUMBER                     "N§ de serie "
+
+  IDS_MORE_PGUP                         "M s "
+  IDS_MORE_PGDN                         "M s "
+  IDS_MANAGER                           "~Gestor..."
+
+  IDS_EXPAND                            "Expansi¢n %i%%"
+
+  IDS_CHANGEDATE                        "FechaCabiado"
+  IDS_CURRENTDATE                       "FechaActual"
+  IDS_GRAPHIC                           "Gr fico"
+  IDS_FUNCTION                          "Funci¢n"
+  IDS_ENDDOCUMENT                       "FinDocumento"
+  IDS_ENDPAGE                           "FinP gina"
+  IDS_ENDLINE                           "FinL¡nea"
+  IDS_TAB                               "Tabulaci¢n"
+  IDS_SPACE                             "Espacio"
+  IDS_HYPHEN                            "Raya"
+  IDS_CHAR                              "Car cter"
+  IDS_CURSOR                            "Cursor:"
+  IDS_DORMANT                           "Durmiente"
+
+  IDS_ON                                "S¡"
+  IDS_OFF                               "No"
+
+  IDS_INLINE                            "EnL¡nea"
+  IDS_LEFTEDGE                          "CostadoIzquierdo"
+  IDS_RIGHTEDGE                         "CostadoDerecho"
+  IDS_BOTTOMEDGE                        "CostadoInferior"
+  IDS_TOPEDGE                           "CostadoSuperior"
+  IDS_LEFTMARGIN                        "M rgenIzquierda"
+  IDS_RIGHTMARGIN                       "M rgenDerecha"
+  IDS_BOTTOMMARGIN                      "M rgenInferior"
+  IDS_TOPMARGIN                         "M rgenSuperior"
+  IDS_CENTERED                          "Centrado"
+  IDS_EDGETOEDGE                        "Costado-a-costado"
+  IDS_MARGINTOMARGIN                    "M rgen-a-m rgen"
+
+  IDS_BITMAP                            "Bitmap"
+  IDS_METAFILE                          "Metafile"
+  IDS_UPCA                              "C¢digo de barras 'UPC-A'"
+  IDS_UPCE                              "C¢digo de barras 'UPC-E'"
+  IDS_CODE39                            "C¢digo de barras '39'"
+  IDS_POSTNET                           "C¢digo de barras 'POSTNET'"
+  IDS_EAN8                              "C¢digo de barras 'EAN-8'"
+  IDS_EAN13                             "C¢digo de barras 'EAN-13'"
+  IDS_CODABAR                           "C¢digo de barras 'Codabar'"
+  IDS_CODE2OF5                          "C¢digo de barras 'C¢digo 2 de 5'"
+  IDS_CODE128                           "C¢digo de barras 'C¢digo-128'"
+
+  IDS_FN_VERSION                        "Revisi¢n: %s"
+  IDS_FN_PREFACE                        "Preface"
+  IDS_FN_PRINTER                        "Impresora: %s"
+  IDS_FN_FORM                           "Formulario: %s"
+  IDS_FN_CODEPAGE                       "CodePage: %i"
+  IDS_FN_FONT                           "Fuente: %s"
+  IDS_FN_SIZE                           "Tama¤o: %s"
+  IDS_FN_COLOR                          "Color de textos: %06X"
+  IDS_FN_FILLCOLOR                      "Color de  reas: %06X"
+  IDS_FN_BOLD                           "Negrita: %s"
+  IDS_FN_ITALIC                         "Cursiva: %s"
+  IDS_FN_UNDERSCORE                     "Subrayado: %s"
+  IDS_FN_STRIKEOUT                      "Tachado: %s"
+  IDS_FN_OUTLINE                        "Vacia: %s"
+  IDS_FN_CAPS                           "May£sculas: %s"
+  IDS_FN_EXPAND                         "Expansi¢n: %i%%"
+  IDS_FN_TOPMARGIN                      "Margen de arriba: %s"
+  IDS_FN_BOTTOMMARGIN                   "Margen de abajo: %s"
+  IDS_FN_LEFTMARGIN                     "Margen de izquierda: %s"
+  IDS_FN_RIGHTMARGIN                    "Margen de derecha: %s"
+  IDS_FN_LEFTJUSTIFY                    "Alinear a la izquierda"
+  IDS_FN_CENTERJUSTIFY                  "Centrar horizontalmente"
+  IDS_FN_RIGHTJUSTIFY                   "Alinear a la derecha"
+  IDS_FN_FULLJUSTIFY                    "Alinear los dos lados"
+  IDS_FN_CENTERPAGE                     "Centrar verticalmente: %s"
+  IDS_FN_TABSET                         "Fijar tabulador: %s"
+  IDS_FN_TABCLEAR                       "Remover tabulador: %s"
+  IDS_FN_TABSPACING                     "Espaciado de tabuladores: %s"
+  IDS_FN_INDENT                         "Indentaci¢n de p rafos: %s"
+  IDS_FN_METRIC                         "Metrico"
+  IDS_FN_GRAPHIC                        "Gr fico: %s%s%s (%sx%s) %s"
+  IDS_FN_DATEFIXED                      "Fecha fija: %s"
+  IDS_FN_DATECURRENT                    "Fecha actual"
+  IDS_FN_DATECHANGED                    "Fecha del documento: %s"
+  IDS_FN_DATEFORMAT                     "Formato de fechas: %s"
+  IDS_FN_LINESPACING                    "Espaciado de l¡neas: %i%%"
+  IDS_FN_JOBSETTINGS                    "Opciones de imprimir"
+  IDS_FN_PAGENUMBER                     "N£mero de p gina"
+  IDS_FN_PAGECOUNT                      "N£mero de p ginas total"
+  IDS_FN_LINEWIDTH                      "Grosor de lineas: %s"
+  IDS_FN_LINEEND                        "Fin de lineas: %i"
+  IDS_FN_LINEJOIN                       "Juntado de lineas: %i"
+  IDS_FN_FILLTYPE                       "Tipo de  reas: %i"
+  IDS_FN_GLYPH                          "S¡mbolo: 0x%02X '%c'"
+  IDS_FN_AUTHOR                         "Author: %s"
+  IDS_FN_CREATEDATE                     "CreateDate: %s"
+  IDS_FN_COMMENT                        "Comentario: %s"
+  IDS_FN_SEPARATOR                      "Separador"
+  IDS_FN_TITLE                          "T¡tulo: %0.40s%s"
+  IDS_FN_HEADER                         "Cabecera: %0.40s%s"
+  IDS_FN_FOOTER                         "Pie: %0.40s%s"
+
+  IDS_ALL_DOCUMENTS                     "<Todo fichero documento>"
+  IDS_ALL_GRAPHICS                      "<Todo fichero gr fico>"
+
+  IDS_WINDOW_BY_ME_NODATE               "%s"
+  IDS_WINDOW_BY_ME                      "%s, creado %s"
+  IDS_WINDOW_BY_OTHER                   "%s por %s, creado %s"
+
+  IDS_GOTOPAGE_ERROR1                   "El n£mero debe ser entre 1 y %i."
+
+  IDS_METAFILE_VERIFY1                  "ERROR: No se pudo abrir el metafile '%s' para verificarlo."
+  IDS_METAFILE_VERIFY2                  "ERROR: El metafile '%s' es demasiado corto."
+  IDS_METAFILE_VERIFY3                  "ERROR: No se pudo cargar el metafile '%s' a la memoria para verificarlo."
+  IDS_METAFILE_VERIFY4                  "ERROR: El metafile '%s' tiene un comienzo inv lido."
+
+  IDS_BUBBLE_FONT                       "8.Helv"
+  IDS_BUBBLE_TOP                        "Mover al comienzo del documento"
+  IDS_BUBBLE_PAGEUP                     "Paginar arriba"
+  IDS_BUBBLE_PAGEDOWN                   "Paginar abajo"
+  IDS_BUBBLE_BOTTOM                     "Mover al fin del documento"
+}
+
+STRINGTABLE
+{
+  IDS_OK                                " ~OK "
+  IDS_CANCEL                            " Esc=Cancelar "
+  IDS_ABORT                             " Abort "
+  IDS_RETRY                             " Retry "
+  IDS_IGNORE                            " Ignore "
+  IDS_YES                               " ~S¡ "
+  IDS_NO                                " ~No "
+  IDS_HELP                              " F1=Ayuda "
+  IDS_ENTER                             " Entrar "
+}
+
+STRINGTABLE
+{
+  IDS_FDLG_FILENAME_TXT1                "Abrir fichero:"
+  IDS_FDLG_FILENAME_TXT2                "Grabar fichero:"
+  IDS_FDLG_DRIVE_TXT                    "Mando:"
+  IDS_FDLG_FILTER_TXT                   "Tipo de fichero:"
+  IDS_FDLG_DIRECTORY_TXT                "Directorio:"
+  IDS_FDLG_FILES_TXT                    "Fichero:"
+  IDS_FDLG_HELP_PB                      "F1=Ayuda"
+  IDS_FDLG_APPLY_PB                     "Aplicar"
+  IDS_FDLG_OK_PB1                       "~Abrir"
+  IDS_FDLG_OK_PB2                       "~Grabar"
+  IDS_FDLG_CANCEL_PB                    "Esc=Cancelar"
+}
+
+STRINGTABLE
+{
+  IDS_CODEPAGES+37                      "Brasil / Portugu‚s / Ingl‚s EE.UU. (EBCDIC)"
+  IDS_CODEPAGES+273                     "Austria / Alem n (EBCDIC)"
+  IDS_CODEPAGES+274                     "B‚lgico (old EBCDIC)"
+  IDS_CODEPAGES+277                     "Dan‚s / Noruego (EBCDIC)"
+  IDS_CODEPAGES+278                     "Finland‚s / Sueco (EBCDIC)"
+  IDS_CODEPAGES+280                     "Italiano (EBCDIC)"
+  IDS_CODEPAGES+282                     "Portugu‚s (old EBCDIC)"
+  IDS_CODEPAGES+284                     "Espa¤ol (EBCDIC)"
+  IDS_CODEPAGES+285                     "Ingl‚s brit nico (EBCDIC)"
+  IDS_CODEPAGES+290                     "<Desconocido>"
+  IDS_CODEPAGES+297                     "Francais (EBCDIC)"
+  IDS_CODEPAGES+300                     "<Desconocido>"
+  IDS_CODEPAGES+301                     "<Desconocido>"
+  IDS_CODEPAGES+420                     "<Desconocido>"
+  IDS_CODEPAGES+424                     "<Desconocido>"
+  IDS_CODEPAGES+437                     "Estados Unidos (IBM PC)"
+  IDS_CODEPAGES+500                     "B‚lgico / Internacional (EBCDIC)"
+  IDS_CODEPAGES+803                     "<Desconocido>"
+  IDS_CODEPAGES+813                     "Greek"
+  IDS_CODEPAGES+819                     "Multilinguo (ISO-8859/1)"
+  IDS_CODEPAGES+835                     "<Desconocido>"
+  IDS_CODEPAGES+850                     "Multilinguo (Latin1)"
+  IDS_CODEPAGES+852                     "Slavic (Latin2)"
+  IDS_CODEPAGES+855                     "Serbia / Montenegro / Macedonia / Bulgaria"
+  IDS_CODEPAGES+857                     "Turqu¡a"
+  IDS_CODEPAGES+860                     "Portugu‚s"
+  IDS_CODEPAGES+861                     "Icelandia"
+  IDS_CODEPAGES+862                     "Hebreo"
+  IDS_CODEPAGES+863                     "Francais canadiense"
+  IDS_CODEPAGES+864                     "Arabe"
+  IDS_CODEPAGES+865                     "Dan‚s / Noruego"
+  IDS_CODEPAGES+866                     "Russia"
+  IDS_CODEPAGES+869                     "Greek"
+  IDS_CODEPAGES+870                     "Czechoslovakia / Hungr¡a / Polonia / Yugoslavia (EBCDIC)"
+  IDS_CODEPAGES+871                     "Icelandia (EBCDIC)"
+  IDS_CODEPAGES+874                     "Tailandia"
+  IDS_CODEPAGES+897                     "<Desconocido>"
+  IDS_CODEPAGES+915                     "Bulgaria / Macedonia"
+  IDS_CODEPAGES+932                     "Jap¢n (Shift JIS X-0208)"
+  IDS_CODEPAGES+934                     "Korea"
+  IDS_CODEPAGES+936                     "Chino simplificado"
+  IDS_CODEPAGES+938                     "Chino tradicional"
+  IDS_CODEPAGES+942                     "Jap¢n (SAA)"
+  IDS_CODEPAGES+944                     "Korea (SAA)"
+  IDS_CODEPAGES+946                     "Chino simplificado (SAA)"
+  IDS_CODEPAGES+948                     "Chino tradicional (SAA)"
+  IDS_CODEPAGES+949                     "Korea (Shift KSC 5601)"
+  IDS_CODEPAGES+950                     "Chino tradicional (Big5)"
+  IDS_CODEPAGES+1004                    "Publicaciones de escritorio"
+  IDS_CODEPAGES+1026                    "Turqu¡a (EBCDIC)"
+  IDS_CODEPAGES+1027                    "<Desconocido>"
+  IDS_CODEPAGES+1041                    "<Desconocido>"
+  IDS_CODEPAGES+1112                    "<Desconocido>"
+  IDS_CODEPAGES+1122                    "<Desconocido>"
+  IDS_CODEPAGES+1200                    "Unicode"
+  IDS_CODEPAGES+1250                    "Windows, Latin-2 (Europa Oriental)"
+  IDS_CODEPAGES+1251                    "Windows, Cyrillic"
+  IDS_CODEPAGES+1252                    "Windows, Multilinguo (ANSI)"
+  IDS_CODEPAGES+1253                    "Windows, Griego"
+  IDS_CODEPAGES+1254                    "Windows, Turqueo"
+  IDS_CODEPAGES+1255                    "Windows, Hebreo"
+  IDS_CODEPAGES+1256                    "Windows, Arabe"
+  IDS_CODEPAGES+1275                    "<Desconocido>"
+  IDS_CODEPAGES+1302                    "<Desconocido>"
+}
+
+STRINGTABLE
+{
+  IDS_HMERR                            "Error del Gestor de ayudas"
+  IDS_HMERR_EXTHELPUNDEFINED           "Ayuda extendida no definida."
+  IDS_HMERR_NO_FRAME_WND_IN_CHAIN      "No hay Frame en la cadena."
+  IDS_HMERR_INVALID_ASSOC_APP_WND      "Handle de ventana asociado no v lido."
+  IDS_HMERR_INVALID_ASSOC_HELP_IN      "Instancia de ayuda asociada no v lida."
+  IDS_HMERR_INVALID_DESTROY_HELP_      "Handle de ventana a desasociar no v lido."
+  IDS_HMERR_NO_HELP_INST_IN_CHAIN      "No hay instancia de ayuda en la cadena."
+  IDS_HMERR_INVALID_HELP_INSTANCE      "Instancia de ayuda no v lida."
+  IDS_HMERR_INVALID_QUERY_APP_WND      "Se ha obteniuod un handle de la ventana del programa no v lido."
+  IDS_HMERR_HELP_INST_CALLED_INVA      "Instancia de ayuda llamada no v lida."
+  IDS_HMERR_HELPTABLE_UNDEFINE         "Tabla de ayuda no definida."
+  IDS_HMERR_HELP_INSTANCE_UNDEFIN      "Instancia de ayuda no definida."
+  IDS_HMERR_HELPITEM_NOT_FOUND         "Elemento de ayuda no encontrado."
+  IDS_HMERR_INVALID_HELPSUBITEM_S      "Tama¤o de subelemento de ayuda no v lido."
+  IDS_HMERR_HELPSUBITEM_NOT_FOUND      "Subelemento de ayuda no encontrado."
+  IDS_HMERR_INDEX_NOT_FOUND            "No hay ¡ndice en el fichero."
+  IDS_HMERR_CONTENT_NOT_FOUND          "No se encuentra la Tabla de contenidos."
+  IDS_HMERR_OPEN_LIB_FILE              "No se puede abrir el fichero de ayuda."
+  IDS_HMERR_READ_LIB_FILE              "No se puede leer el fichero de ayuda."
+  IDS_HMERR_CLOSE_LIB_FILE             "No se puede cerrar el fichero de ayuda."
+  IDS_HMERR_INVALID_LIB_FILE           "El fichero de ayuda no tiene el formato correcto."
+  IDS_HMERR_NO_MEMORY                  "No hay suficiente memoria."
+  IDS_HMERR_ALLOCATE_SEGMENT           "No es posible asignar el segmento."
+  IDS_HMERR_FREE_MEMORY                "No se puede liberar la memoria."
+  IDS_HMERR_PANEL_NOT_FOUND            "Panel de ayuda no encontrado."
+  IDS_HMERR_DATABASE_NOT_OPEN          "Base de datos de ayuda no encontrada."
+  IDS_HMERR_UNKNOWN                    "--- Error desconocido ---"
+  IDS_HELPMODE_FRAME                   "Esqueleto"
+  IDS_HELPMODE_MENU                    "Men£"
+  IDS_HELPMODE_WINDOW                  "Ventana"
+  IDS_HELPMODE_UNKNOWN                 "Desconocido"
+  IDS_HELPSUBITEMNOTFOUND              "Elemento de ayuda no encontrado: Modo='%s' T¢pico=%u Subt¢pico=%u"
+}
+

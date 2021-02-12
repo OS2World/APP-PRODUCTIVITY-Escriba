@@ -1,0 +1,8 @@
+;
+;       RTF__FRA: RTF Import/Export Module for Escriba (Fran‡ais)
+;
+LIBRARY 
+DESCRIPTION 'RTF__FRA: RTF Import/Export Module for Escriba (Fran‡ais)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

@@ -1,0 +1,8 @@
+;
+;       JPEG_DEU: JPEG Graphic Import Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'JPEG_DEU: JPEG Graphic Import Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

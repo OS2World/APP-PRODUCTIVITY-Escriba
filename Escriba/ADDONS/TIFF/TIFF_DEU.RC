@@ -1,0 +1,63 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Tiff_DLL.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "TIFF",               //   Application Name.
+  "Deutsch",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: Januar, Februar, M„rz, April, Mai, Juni,                         *
+ *   Juli, August, September, Oktober, November, Dezember.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 136, FS_DLGBORDER
+  {
+    CTEXT "Tiff"                                                0,  10,110, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10,100, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 Dezember 1998"                                     0,  10, 90, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "TIFF Graphic Import Module for Escriba",             0,  10, 78, 220,  8
+    CTEXT "Copyright ¸ 1988, 1989, 1990, 1991, 1992 Sam Leffler",0, 10, 70, 220,  8
+    CTEXT "Copyright ¸ 1991, 1992 Silicon Graphics, Inc."       0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Deutsche šbersetzung Frank Mersmann"                 0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "TIFF Graphic Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'TIFF Graphic' Help Facility"
+  IDS_ERROR_CREATEHELP                  "FEHLER: Kann Hilfe nicht erzeugen.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FEHLER(TIFF): Unable to open file '%s' to load from."
+  IDS_ERROR_FILE_TOO_SMALL              "FEHLER(TIFF): Invalid file.  Too small."
+  IDS_ERROR_INVALID_FILE_ID             "FEHLER(TIFF): Invalid signature."
+  IDS_ERROR_OPEN_FOR_LOAD               "FEHLER(TIFF): Unable to open file '%s' to load from."
+  IDS_ERROR_MEMORY1                     "FEHLER(TIFF): Unable to allocate buffer for image."
+  IDS_ERROR_MEMORY2                     "FEHLER(TIFF): Unable to allocate buffer for TIFF RGBA image."
+  IDS_ERROR_TIFFREAD                    "FEHLER(TIFF): Unable to read TIFF RGBA image."
+  IDS_ERROR_MEMORY3                     "FEHLER(TIFF): Unable to allocate memory for bitmap header."
+  IDS_ERROR_DC_OPEN                     "FEHLER(TIFF): Unable to open memory device context.  Status %08X."
+  IDS_ERROR_PS_CREATE                   "FEHLER(TIFF): Unable to create memory presentation space.  Status %08X."
+  IDS_ERROR_CREATE_BITMAP               "FEHLER(TIFF): Unable to create bitmap.  Status %08X."
+}

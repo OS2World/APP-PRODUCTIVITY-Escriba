@@ -1,0 +1,8 @@
+;
+;       RTF__ENU: RTF Import/Export Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'RTF__ENU: RTF Import/Export Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

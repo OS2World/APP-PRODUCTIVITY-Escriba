@@ -1,0 +1,8 @@
+;
+;       PTXT_FRA: Plain Text Import/Export Module for Escriba (Fran‡ais)
+;
+LIBRARY 
+DESCRIPTION 'PTXT_FRA: Plain Text Import/Export Module for Escriba (Fran‡ais)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

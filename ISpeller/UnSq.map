@@ -1,0 +1,101 @@
+Stack Allocation = 60000 bytes
+
+ unsq
+
+ Start         Length     Name                   Class
+ 0001:00000000 000000404H CODE32                 CODE 32-bit
+               at offset 00000000 00140H bytes from UnSq.obj (UNSQ.C)
+               at offset 00000140 000B2H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 000001f4 001F8H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+               at offset 000003ec 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\SCTDT.C)
+               at offset 000003fc 00008H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\WCTDT.C)
+
+ 0002:00000000 0000001D0H DATA32                 DATA 32-bit
+               at offset 00000000 001B0H bytes from UnSq.obj (UNSQ.C)
+               at offset 000001b0 0000EH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 000001c0 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:000001D0 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:000001D0 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:000001D0 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:000001D0 000000000H CONST32                CONST 32-bit
+ 0002:000001D0 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:000001D0 000000018H EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 0000000c 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:000001E8 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:000001E8 000000000H BSS32                  BSS 32-bit
+ 0002:000001F0 00000EA60H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  gets                 (DDE4MBS.gets)
+ 0001:000000F4       main
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  puts                 (DDE4MBS.puts)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0002:000001B4       _argc
+ 0002:000001B8       _argv
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0002:000001E8       _edata
+ 0002:000001F0       _end
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0002:000001B0       _exeentry
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0001:000001F4       _setuparg
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0001:00000140       __RunExitList
+ 0001:000003EC       __sctordtorInit
+ 0001:000003F4       __sctordtorTerm
+ 0001:000003FC       __wctordtorInit
+ 0001:00000400       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  gets                 (DDE4MBS.gets)
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  puts                 (DDE4MBS.puts)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0001:000000F4       main
+ 0001:00000140       __RunExitList
+ 0001:000001F4       _setuparg
+ 0001:000003EC       __sctordtorInit
+ 0001:000003F4       __sctordtorTerm
+ 0001:000003FC       __wctordtorInit
+ 0001:00000400       __wctordtorTerm
+ 0002:000001B0       _exeentry
+ 0002:000001B4       _argc
+ 0002:000001B8       _argv
+ 0002:000001E8       _edata
+ 0002:000001F0       _end
+
+Program entry point at 0001:0000015C

@@ -1,0 +1,99 @@
+#include "System.h"
+
+#include "Controls.h"
+#include "PText.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PText",              //   Application Name.
+  "Espa¤ol",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: enero, febrero, marzo, abril, mayo, junio,                       *
+ *   julio, agosto, setiembre, octubre, noviembre, diciembre.               *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "PText"                                                0, 10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versi¢n 0.97"                                        0, 10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 diciembre 1998"                                      0, 10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "M¢dulo para importar y exportar textos simples",      0, 10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                  0, 10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                             0, 10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                      0, 10, 38, 220,  8
+    CTEXT "Versi¢n en espa¤ol"                                   0, 10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_IMPORT
+{
+  DIALOG "", IDD_CONFIGURE_IMPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Opciones para importaci¢n", 0,                     0,  0, 200,100
+
+    LTEXT "Fuente",                    0,                        4, 80,  86,  8
+    CONTROL "",                        IDD_CONFIGURE_FONT,      90,  0, 106, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Tama¤o",                    0,                        4, 68,  86,  8
+    CONTROL "",                        IDD_CONFIGURE_SIZE,      90,  0, 106, 76, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    AUTOCHECKBOX "Usar cent¡metros",   IDD_CONFIGURE_METRIC,     4, 56, 192,  8
+    AUTOCHECKBOX "Ignorar de fines de l¡neas", IDD_CONFIGURE_SOFTBREAKS, 4, 46, 192,  8
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXPORT
+{
+  DIALOG "", IDD_CONFIGURE_EXPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Opciones para exportaci¢n",     0,                        0,  0, 200,100
+
+    AUTOCHECKBOX "Formatear resulto",         IDD_CONFIGURE_FORMAT,     4, 80, 192,  8
+
+    LTEXT "Alto",                             0,                        4, 68,  40,  8
+    CONTROL "",                               IDD_CONFIGURE_HEIGHT,    54, 68,  40,  8, WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+
+    LTEXT "Ancho",                            0,                      106, 68,  40,  8
+    CONTROL "",                               IDD_CONFIGURE_WIDTH,    156, 68,  40,  8, WC_SPINBUTTON,
+      WS_TABSTOP | WS_VISIBLE | SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_NUMERICONLY | SPBS_FASTSPIN
+
+    AUTOCHECKBOX "Simular texto negrito",     IDD_CONFIGURE_BOLD,       4, 56, 192,  8
+    AUTOCHECKBOX "Simular texto subrayado",   IDD_CONFIGURE_UNDERSCORE, 4, 46, 192,  8
+    AUTOCHECKBOX "Simular texto tachado",     IDD_CONFIGURE_STRIKEOUT,  4, 36, 192,  8
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                     "M¢dulo para importar y exportar textos simples"
+  IDS_TITLE1                    REVISION
+  IDS_HELPTITLE                 "Ayuda de 'Textos Simples'"
+  IDS_ERROR_CREATEHELP          "ERROR: No se puede crear la instancia de ayuda. C¢digo %08lX."
+
+  IDS_MAJORTAB                  "Textos Simples"
+  IDS_PTS                       "pto"
+
+  IDS_ERROR_INVALIDWIDTH        "ERROR: Se especific¢ una anchura inv lida."
+  IDS_ERROR_OPEN_VERIFY         "ERROR: No se pudo abrir el fichero para verificarlo."
+  IDS_ERROR_MEMORY_VERIFY       "ERROR: No se pudo conseguir memoria suficiente para verificarlo al fichero."
+  IDS_ERROR_HAS_NULLS           "ERROR: Textos Simples no pueden contener car cteres nulos.  ¨C rgalo de todos modos?"
+  IDS_ERROR_OPEN_LOAD           "ERROR: No se pudo abrir el fichero para cargarlo."
+  IDS_ERROR_MEMORY_OPEN         "ERROR: No se pudo conseguir memoria suficiente para cargarlo al fichero."
+  IDS_ERROR_WRITE               "ERROR: No se pudo grabar todo el fichero al disco."
+}

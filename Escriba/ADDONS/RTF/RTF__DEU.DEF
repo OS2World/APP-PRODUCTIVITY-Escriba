@@ -1,0 +1,8 @@
+;
+;       RTF__DEU: RTF Import/Export Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'RTF__DEU: RTF Import/Export Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

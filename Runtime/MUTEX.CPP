@@ -24,7 +24,7 @@
 Mutex::Mutex ( char *tag, char *Name, int OneInstanceOnly ) : Tag(0), DebugFlag(FALSE) {
 
    if ( tag ) {
-      Tag = (char*) malloc ( strlen(tag) + 1 ) ;
+      Tag = new char [ strlen(tag) + 1 ] ;
       strcpy ( Tag, tag ) ;
    } /* endif */
 
@@ -77,7 +77,8 @@ Mutex::~Mutex ( ) {
       #endif
    } /* endif */
 
-   if ( Tag ) free ( Tag ) ;
+   if ( Tag ) 
+      delete [] Tag, Tag = 0 ;
 
 } /* endmethod */
 

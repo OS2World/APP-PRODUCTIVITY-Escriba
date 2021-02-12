@@ -1,0 +1,8 @@
+;
+;       PTXT_ESP: Plain Text Import/Export Module for Escriba (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'PTXT_ESP: Plain Text Import/Export Module for Escriba (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

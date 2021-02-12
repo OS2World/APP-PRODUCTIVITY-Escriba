@@ -24,7 +24,7 @@ String::String ( unsigned char *Value ) {
 
    if ( Value && *Value ) {
       Len = strlen ( (char *)Value ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, (char *)Value ) ;
    } /* endif */
 
@@ -43,7 +43,7 @@ String::String ( char *Value ) {
 
    if ( Value && *Value ) {
       Len = strlen ( Value ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, Value ) ;
    } /* endif */
 
@@ -75,7 +75,8 @@ String::~String ( ) {
       Log ( "String(%p)::~String(): Deleting data string \"%s\".", this, Data ) ;
       #endif
 
-      free ( Data )  ;
+      delete [] Data ;
+      Data = 0 ;
    } /* endif */
 
    #ifdef DEBUG
@@ -93,7 +94,7 @@ String::String ( const String & Object ) {
 
    if ( Object.Data && *Object.Data ) {
       Len = strlen ( Object.Data ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, Object.Data ) ;
    } /* endif */
 
@@ -111,7 +112,8 @@ String & String::operator= ( const String & Object ) {
       #ifdef DEBUG
       Log ( "String(%p)::operator=(): Deleting data string \"%s\".", this, Data ) ;
       #endif
-      free ( Data )  ;
+      delete [] Data ;
+      Data = 0 ;
    } /* endif */
 
    Data = NULL ;
@@ -119,7 +121,7 @@ String & String::operator= ( const String & Object ) {
 
    if ( Object.Data && *Object.Data ) {
       Len = strlen ( Object.Data ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, Object.Data ) ;
    } /* endif */
 
@@ -140,7 +142,8 @@ String & String::operator= ( const unsigned char *Value ) {
       #ifdef DEBUG
       Log ( "String(%p)::operator=(): Deleting data string \"%s\".", this, Data ) ;
       #endif
-      free ( Data )  ;
+      delete [] Data ;
+      Data = 0 ;
    } /* endif */
 
    Data = NULL ;
@@ -148,7 +151,7 @@ String & String::operator= ( const unsigned char *Value ) {
 
    if ( Value && *Value ) {
       Len = strlen ( (const char *)Value ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, (const char *)Value ) ;
    } /* endif */
 
@@ -169,7 +172,8 @@ String & String::operator= ( const char *Value ) {
       #ifdef DEBUG
       Log ( "String(%p)::operator=(): Deleting data string \"%s\".", this, Data ) ;
       #endif
-      free ( Data )  ;
+      delete [] Data ;
+      Data = 0 ;
    } /* endif */
 
    Data = NULL ;
@@ -177,7 +181,7 @@ String & String::operator= ( const char *Value ) {
 
    if ( Value && *Value ) {
       Len = strlen ( Value ) ;
-      Data = (char*) malloc ( Len + 1 )  ;
+      Data = new char [ Len + 1 ] ;
       strcpy ( Data, Value ) ;
    } /* endif */
 

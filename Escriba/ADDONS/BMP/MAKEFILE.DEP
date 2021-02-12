@@ -1,0 +1,57 @@
+bmp.obj: \
+	bmp.cpp \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	bmp.h
+
+bmp.res: \
+	bmp.rc \
+	bmp.h
+
+bmp__deu.res: \
+	bmp__deu.rc \
+	bmp.h
+
+bmp__enu.res: \
+	bmp__enu.rc \
+	bmp.h
+
+bmp__esp.res: \
+	bmp__esp.rc \
+	bmp.h
+
+bmp__fra.res: \
+	bmp__fra.rc \
+	bmp.h
+
+bmp__nld.res: \
+	bmp__nld.rc \
+	bmp.h
+
+bmp__deu.hlp: \
+	bmp__deu.ipf \
+	bmp.h
+
+bmp__enu.hlp: \
+	bmp__enu.ipf \
+	bmp.h
+
+bmp__esp.hlp: \
+	bmp__esp.ipf \
+	bmp.h
+
+bmp__fra.hlp: \
+	bmp__fra.ipf \
+	bmp.h
+
+bmp__nld.hlp: \
+	bmp__nld.ipf \
+	bmp.h
+

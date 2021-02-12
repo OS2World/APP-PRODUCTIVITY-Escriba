@@ -1,0 +1,935 @@
+Stack Allocation = 60000 bytes
+
+ ispeller
+
+ Start         Length     Name                   Class
+ 0001:00000000 000011CCCH CODE32                 CODE 32-bit
+               at offset 00000000 00008H bytes from Common.obj (COMMON.C)
+               at offset 00000008 02F90H bytes from Correct.obj (CORRECT.C)
+               at offset 00002f98 019CCH bytes from Defmt.obj (DEFMT.C)
+               at offset 00004964 00948H bytes from Good.obj (GOOD.C)
+               at offset 000052ac 0008CH bytes from Hash.obj (HASH.C)
+               at offset 00005338 052ECH bytes from ISpeller.obj (ISPELLER.CPP)
+               at offset 0000a624 00AA8H bytes from LookUp.obj (LOOKUP.C)
+               at offset 0000b0cc 01264H bytes from MakeDent.obj (MAKEDENT.C)
+               at offset 0000c330 00138H bytes from Os2.obj (OS2.C)
+               at offset 0000c468 0301CH bytes from Parse.obj (y.tab.c)
+               at offset 0000f484 003A8H bytes from Term.obj (TERM.C)
+               at offset 0000f82c 01228H bytes from TGood.obj (TGOOD.C)
+               at offset 00010a54 00CA0H bytes from Tree.obj (TREE.C)
+               at offset 000116f4 00170H bytes from XGets.obj (XGETS.C)
+               at offset 00011864 0011CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\CTORDTOR.C)
+               at offset 00011980 0034CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\CPPLIB\SOURCE\EXCEPT.CPP)
+
+ 0002:00000000 000004520H DATA32                 DATA 32-bit
+               at offset 00000000 00B00H bytes from Common.obj (COMMON.C)
+               at offset 00000b00 01040H bytes from Correct.obj (CORRECT.C)
+               at offset 00001b40 002D0H bytes from Defmt.obj (DEFMT.C)
+               at offset 00001e10 00040H bytes from Good.obj (GOOD.C)
+               at offset 00001e50 00040H bytes from Hash.obj (HASH.C)
+               at offset 00001e90 00AC0H bytes from ISpeller.obj (ISPELLER.CPP)
+               at offset 00002950 00320H bytes from LookUp.obj (LOOKUP.C)
+               at offset 00002c70 00290H bytes from MakeDent.obj (MAKEDENT.C)
+               at offset 00002f00 00020H bytes from Os2.obj (OS2.C)
+               at offset 00002f20 01220H bytes from Parse.obj (y.tab.c)
+               at offset 00004140 00120H bytes from Term.obj (TERM.C)
+               at offset 00004260 00050H bytes from TGood.obj (TGOOD.C)
+               at offset 000042b0 001F0H bytes from Tree.obj (TREE.C)
+               at offset 000044a0 00060H bytes from XGets.obj (XGETS.C)
+               at offset 00004500 00004H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\DLLSTUB.ASM)
+               at offset 00004510 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\CTORDTOR.C)
+
+ 0002:00004520 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00004520 000000010H CTOR_DTOR2             DATA 32-bit
+               at offset 00000000 00010H bytes from ISpeller.obj (ISPELLER.CPP)
+
+ 0002:00004530 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00004530 000001000H CONST32                CONST 32-bit
+               at offset 00000000 01000H bytes from ISpeller.obj (ISPELLER.CPP)
+
+ 0002:00005530 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00005530 000000000H EDC2                   EDC_CLASS 32-bit
+ 0002:00005530 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:00005530 000000000H BSS32                  BSS 32-bit
+ 0002:00005530 000012A24H c_common               BSS 32-bit
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+ Address       Export                  Alias
+
+ 0001:0000BC54 addvheader              addvheader
+ 0002:00012F0C aflag                   aflag
+ 0002:00005674 askfilename             askfilename
+ 0001:00000060 askmode                 askmode
+ 0001:0000F714 backup                  backup
+ 0002:00005678 BC                      BC
+ 0001:00004DA0 cap_ok                  cap_ok
+ 0001:00001428 casecmp                 casecmp
+ 0002:0000567C cd                      cd
+ 0002:00012F10 cflag                   cflag
+ 0002:000140EC changes                 changes
+ 0002:00015214 chartypes               chartypes
+ 0001:00002870 checkfile               checkfile
+ 0001:0000362C checkline               checkline
+ 0001:000108D4 chk_aff                 chk_aff
+ 0001:0000BD64 chupcase                chupcase
+ 0002:00005684 cl                      cl
+ 0002:0000568C cm                      cm
+ 0002:0000569C co                      co
+ 0001:0000BB20 combinecaps             combinecaps
+ 0002:00000104 compoundflag            compoundflag
+ 0001:00001D38 compoundgood            compoundgood
+ 0002:000056C0 contextbufs             contextbufs
+ 0002:000125A4 contextoffset           contextoffset
+ 0002:000056B4 contextsize             contextsize
+ 0001:00000008 copyout                 copyout
+ 0001:00001EB8 correct                 correct
+ 0002:00013EEC ctoken                  ctoken
+ 0002:000056B0 currentchar             currentchar
+ 0002:000056AC currentfile             currentfile
+ 0002:00015224 defdupchar              defdupchar
+ 0002:00000004 deftflag                deftflag
+ 0001:0000F530 done                    done
+ 0002:000148F8 dumpflag                dumpflag
+ 0002:000140E8 easypossibilities       easypossibilities
+ 0002:00012F14 eflag                   eflag
+ 0001:0000F798 erase                   erase
+ 0001:0000FDF0 expand_pre              expand_pre
+ 0001:0000FA1C expand_suf              expand_suf
+ 0002:00012F18 fflag                   fflag
+ 0001:0000B0CC findfiletype            findfiletype
+ 0001:00004964 flagpr                  flagpr
+ 0001:00002A14 givehelp                givehelp
+ 0001:000050F0 good                    good
+ 0001:000052AC hash                    hash
+ 0002:0001522C hashheader              hashheader
+ 0002:00014900 hashname                hashname
+ 0002:000151FC hashsize                hashsize
+ 0002:000056BC hashstrings             hashstrings
+ 0002:000140F0 hashtbl                 hashtbl
+ 0002:00012874 hits                    hits
+ 0002:000056A4 ho                      ho
+ 0001:0000B310 icharcmp                icharcmp
+ 0001:0000B384 icharcpy                icharcpy
+ 0001:0000B35C icharlen                icharlen
+ 0001:0000B2AC icharncmp               icharncmp
+ 0001:0000B5CC ichartosstr             ichartosstr
+ 0001:0000BE5C ichartostr              ichartostr
+ 0001:00006AC8 Identify                Identify
+ 0002:00005670 incfileflag             incfileflag
+ 0001:0000C454 index                   index
+ 0002:00013EE4 infile                  infile
+ 0001:00000468 ins_root_cap            ins_root_cap
+ 0001:0000F764 inverse                 inverse
+ 0002:00013FE8 itoken                  itoken
+ 0002:000056B8 laststringch            laststringch
+ 0002:0000010C LaTeX_Mode              LaTeX_Mode
+ 0002:00013EBC lflag                   lflag
+ 0002:00005694 li                      li
+ 0001:0000A820 linit                   linit
+ 0001:0000C3E4 link                    link
+ 0001:0000A624 lookup                  lookup
+ 0001:0000B824 lowcase                 lowcase
+ 0001:0000C034 makedent                makedent
+ 0001:00002B8C makepossibilities       makepossibilities
+ 0002:00015220 math_mode               math_mode
+ 0002:00017F50 maxposslen              maxposslen
+ 0002:00000000 minimenusize            minimenusize
+ 0002:000000FC minword                 minword
+ 0001:0000C3DC mktemp                  mktemp
+ 0001:0000F780 move                    move
+ 0001:00010A54 myfree                  myfree
+ 0001:00010A74 mymalloc                mymalloc
+ 0001:00000000 myrealloc               myrealloc
+ 0002:00005680 nd                      nd
+ 0002:00015228 nodictflag              nodictflag
+ 0001:0000F748 normal                  normal
+ 0002:000149F4 numhits                 numhits
+ 0002:00015204 numpflags               numpflags
+ 0002:0001520C numsflags               numsflags
+ 0002:000148FC outfile                 outfile
+ 0002:00013FE4 pcount                  pcount
+ 0002:00016910 pflagindex              pflagindex
+ 0002:00015208 pflaglist               pflaglist
+ 0002:0000F6C4 possibilities           possibilities
+ 0002:00000008 prefstringchar          prefstringchar
+ 0001:0000B3B4 printichar              printichar
+ 0001:000099B8 ProductConfigure        ProductConfigure
+ 0001:00009B1C ProductInformation      ProductInformation
+ 0001:00009E00 ProductName             ProductName
+ 0001:00006A64 ProductVersion          ProductVersion
+ 0002:000125A8 quit                    quit
+ 0002:00005688 se                      se
+ 0001:00006A6C SetLanguage             SetLanguage
+ 0002:00013EC0 sflag                   sflag
+ 0002:00017430 sflagindex              sflagindex
+ 0002:00015210 sflaglist               sflaglist
+ 0002:00005698 sg                      sg
+ 0001:0000F484 shellescape             shellescape
+ 0001:00003E7C skipoverword            skipoverword
+ 0001:0000C3C0 sleep                   sleep
+ 0002:000056A8 so                      so
+ 0002:00000100 sortit                  sortit
+ 0001:000061C8 Speller_Accept          Speller_Accept
+ 0001:000062A4 Speller_BuildWord       Speller_BuildWord
+ 0001:000065F4 Speller_CloseDictionary  Speller_CloseDictionary
+ 0001:000097F4 Speller_DefaultDictionary  Speller_DefaultDictionary
+ 0001:00009EE4 Speller_FindReplacements  Speller_FindReplacements
+ 0001:00006200 Speller_FindWord        Speller_FindWord
+ 0001:00006190 Speller_Insert          Speller_Insert
+ 0001:0000960C Speller_OpenDictionary  Speller_OpenDictionary
+ 0001:000065EC Speller_Ready           Speller_Ready
+ 0001:00006A40 Speller_SetHome         Speller_SetHome
+ 0001:0000614C Speller_UnCaps          Speller_UnCaps
+ 0001:0000F4E0 stop                    stop
+ 0001:0000B408 stringcharlen           stringcharlen
+ 0001:0000BF4C strtoichar              strtoichar
+ 0001:0000B7DC strtosichar             strtosichar
+ 0002:00005690 te                      te
+ 0002:0000000C tempfile                tempfile
+ 0002:000140F8 termcap                 termcap
+ 0001:0000F574 terminit                terminit
+ 0002:000149F0 termptr                 termptr
+ 0002:000149F8 termstr                 termstr
+ 0002:00013ED0 terse                   terse
+ 0002:00013EC4 tflag                   tflag
+ 0002:000056A0 ti                      ti
+ 0001:0000B614 toutent                 toutent
+ 0001:0000F800 tputs                   tputs
+ 0001:0001130C treeinit                treeinit
+ 0001:00010F78 treeinsert              treeinsert
+ 0001:00010DB8 treelookup              treelookup
+ 0001:00010A7C treeoutput              treeoutput
+ 0002:000125AC Try                     Try
+ 0002:00000108 tryhardflag             tryhardflag
+ 0002:000140E0 Trynum                  Trynum
+ 0002:0001690C uerasechar              uerasechar
+ 0002:00015200 ukillchar               ukillchar
+ 0001:0000B848 upcase                  upcase
+ 0002:00013EC8 vflag                   vflag
+ 0001:0000BD9C whatcap                 whatcap
+ 0002:00013ECC xflag                   xflag
+ 0001:000116F4 xgets                   xgets
+ 0002:00013EE8 yychar                  yychar
+ 0002:00003530 yycheck                 yycheck
+ 0002:000140F4 yydebug                 yydebug
+ 0002:00003030 yydefred                yydefred
+ 0002:000030FC yydgoto                 yydgoto
+ 0002:00015218 yyerrflag               yyerrflag
+ 0002:000032CC yygindex                yygindex
+ 0001:0000E6B0 yyinit                  yyinit
+ 0002:00002FA8 yylen                   yylen
+ 0002:00002F20 yylhs                   yylhs
+ 0002:000140D8 yylval                  yylval
+ 0002:000151F8 yynerrs                 yynerrs
+ 0001:0000E7F0 yyopen                  yyopen
+ 0001:0000C468 yyparse                 yyparse
+ 0002:00003200 yyrindex                yyrindex
+ 0002:00003134 yysindex                yysindex
+ 0002:00012B24 yyss                    yyss
+ 0002:00013EDC yyssp                   yyssp
+ 0002:00003304 yytable                 yytable
+ 0002:00013ED4 yyval                   yyval
+ 0002:00012F1C yyvs                    yyvs
+ 0002:00013EE0 yyvsp                   yyvsp
+ 0002:0001521C _readonly               _readonly
+
+  Address         Publics by Name
+
+ 0002:00005530       @BSSE:\Projects\ISpeller\DEFMT.C
+ 0002:00005564       @BSSE:\Projects\ISpeller\GOOD.C
+ 0002:00013F64       @BSSE:\Projects\ISpeller\ISPELLER.CPP
+ 0002:0000F6C0       @BSSE:\Projects\ISpeller\LOOKUP.C
+ 0002:000128EC       @BSSE:\Projects\ISpeller\MAKEDENT.C
+ 0002:00005558       @BSSE:\Projects\ISpeller\TERM.C
+ 0002:00005568       @BSSE:\Projects\ISpeller\TREE.C
+ 0002:0000553C       @BSSE:\Projects\ISpeller\XGETS.C
+ 0002:000168CC       @BSSE:\Projects\ISpeller\y.tab.c
+ 0001:0000BC54       addvheader
+ 0002:00012F0C       aflag
+ 0002:00005674       askfilename
+ 0001:00000060       askmode
+ 0001:00006E88       Associate__10HelpWindowFUl
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0001:0000F714       backup
+ 0002:00005678       BC
+ 0000:00000000  Imp  calloc               (DDE4MBS.calloc)
+ 0001:00004DA0       cap_ok
+ 0001:00001428       casecmp
+ 0002:0000567C       cd
+ 0002:00012F10       cflag
+ 0002:000140EC       changes
+ 0002:00015214       chartypes
+ 0001:00002870       checkfile
+ 0001:0000362C       checkline
+ 0001:000108D4       chk_aff
+ 0001:0000BD64       chupcase
+ 0002:00005684       cl
+ 0002:0000568C       cm
+ 0002:0000569C       co
+ 0001:0000BB20       combinecaps
+ 0002:00000104       compoundflag
+ 0001:00001D38       compoundgood
+ 0002:000056C0       contextbufs
+ 0002:000125A4       contextoffset
+ 0002:000056B4       contextsize
+ 0001:00000008       copyout
+ 0001:00001EB8       correct
+ 0002:00013EEC       ctoken
+ 0002:000056B0       currentchar
+ 0002:000056AC       currentfile
+ 0002:00015224       defdupchar
+ 0002:00000004       deftflag
+ 0001:0000F530       done
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  DosOpenMutexSem      (DOSCALLS.332)
+ 0000:00000000  Imp  DosQueryModuleName   (DOSCALLS.320)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  DosReleaseMutexSem   (DOSCALLS.335)
+ 0000:00000000  Imp  DosRequestMutexSem   (DOSCALLS.334)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0002:000148F8       dumpflag
+ 0002:000140E8       easypossibilities
+ 0002:00012F14       eflag
+ 0001:0000F798       erase
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0001:0000FDF0       expand_pre
+ 0001:0000FA1C       expand_suf
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0002:00012F18       fflag
+ 0000:00000000  Imp  fflush               (DDE4MBS.fflush)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0001:0000B0CC       findfiletype
+ 0001:00004964       flagpr
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  freopen              (DDE4MBS.freopen)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0001:000078BC       GetItem__7ProfileFPcPvi
+ 0001:0000764C       GetString__7ProfileFPcRPc
+ 0001:00007760       GetString__7ProfileFPcT1i
+ 0001:00002A14       givehelp
+ 0001:000050F0       good
+ 0001:000052AC       hash
+ 0002:0001522C       hashheader
+ 0002:00014900       hashname
+ 0002:000151FC       hashsize
+ 0002:000056BC       hashstrings
+ 0002:000140F0       hashtbl
+ 0002:00012874       hits
+ 0002:000056A4       ho
+ 0001:0000B310       icharcmp
+ 0001:0000B384       icharcpy
+ 0001:0000B35C       icharlen
+ 0001:0000B2AC       icharncmp
+ 0001:0000B5CC       ichartosstr
+ 0001:0000BE5C       ichartostr
+ 0001:00006AC8       Identify
+ 0002:00005670       incfileflag
+ 0001:0000C454       index
+ 0002:00013EE4       infile
+ 0001:00000468       ins_root_cap
+ 0001:0000F764       inverse
+ 0002:00013FE8       itoken
+ 0001:0000A014       Language_Create__FPcT1iT1
+ 0002:000056B8       laststringch
+ 0002:0000010C       LaTeX_Mode
+ 0001:0000A71C       lclose
+ 0002:00013EBC       lflag
+ 0002:00005694       li
+ 0001:0000A820       linit
+ 0001:0000C3E4       link
+ 0001:0000C330       Log
+ 0001:0000A624       lookup
+ 0001:0000B824       lowcase
+ 0001:0000C034       makedent
+ 0001:00002B8C       makepossibilities
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0002:00015220       math_mode
+ 0002:00017F50       maxposslen
+ 0002:00000000       minimenusize
+ 0002:000000FC       minword
+ 0001:0000C3DC       mktemp
+ 0001:0000F780       move
+ 0001:00010A54       myfree
+ 0001:00010A74       mymalloc
+ 0001:00000000       myrealloc
+ 0002:00005680       nd
+ 0002:00015228       nodictflag
+ 0001:0000F748       normal
+ 0002:000149F4       numhits
+ 0002:00015204       numpflags
+ 0002:0001520C       numsflags
+ 0002:000148FC       outfile
+ 0002:00013FE4       pcount
+ 0000:00000000  Imp  perror               (DDE4MBS.perror)
+ 0002:00016910       pflagindex
+ 0002:00015208       pflaglist
+ 0002:0000F6C4       possibilities
+ 0002:00000008       prefstringchar
+ 0000:00000000  Imp  PrfCloseProfile      (PMSHAPI.103)
+ 0000:00000000  Imp  PrfOpenProfile       (PMSHAPI.102)
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  PrfQueryProfileSize  (PMSHAPI.101)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0001:0000B3B4       printichar
+ 0001:000099B8       ProductConfigure
+ 0001:00009B1C       ProductInformation
+ 0001:00009E00       ProductName
+ 0001:00006A64       ProductVersion
+ 0001:00007818       PutItem__7ProfileFPcPvi
+ 0001:000075A0       PutString__7ProfileFPcT1
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0001:0000736C       QueryAddress__6ModuleFi
+ 0001:00007398       QueryAddress__6ModuleFPc
+ 0002:000125A8       quit
+ 0000:00000000  Imp  realloc              (DDE4MBS.realloc)
+ 0001:00006C94       Release__5MutexFv
+ 0000:00000000  Imp  remove               (DDE4MBS.remove)
+ 0001:00006CE8       Request__5MutexFi
+ 0000:00000000  Imp  rewind               (DDE4MBS.rewind)
+ 0002:00005688       se
+ 0001:00006A6C       SetLanguage
+ 0002:00013EC0       sflag
+ 0002:00017430       sflagindex
+ 0002:00015210       sflaglist
+ 0002:00005698       sg
+ 0001:0000F484       shellescape
+ 0001:00003E7C       skipoverword
+ 0001:0000C3C0       sleep
+ 0002:000056A8       so
+ 0002:00000100       sortit
+ 0001:000061C8       Speller_Accept
+ 0001:000062A4       Speller_BuildWord
+ 0001:000065F4       Speller_CloseDictionary
+ 0001:000097F4       Speller_DefaultDictionary
+ 0001:00009EE4       Speller_FindReplacements
+ 0001:00006200       Speller_FindWord
+ 0001:00006190       Speller_Insert
+ 0001:0000960C       Speller_OpenDictionary
+ 0001:000065EC       Speller_Ready
+ 0001:00006A40       Speller_SetHome
+ 0001:0000614C       Speller_UnCaps
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0001:0000F4E0       stop
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0001:0000B408       stringcharlen
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0001:0000BF4C       strtoichar
+ 0001:0000B7DC       strtosichar
+ 0000:00000000  Imp  strupr               (DDE4MBS.strupr)
+ 0000:00000000  Imp  system               (DDE4MBS.system)
+ 0002:00005690       te
+ 0002:0000000C       tempfile
+ 0002:000140F8       termcap
+ 0001:0000F574       terminit
+ 0002:000149F0       termptr
+ 0002:000149F8       termstr
+ 0002:00013ED0       terse
+ 0002:00013EC4       tflag
+ 0002:000056A0       ti
+ 0000:00000000  Imp  tmpnam               (DDE4MBS.tmpnam)
+ 0001:0000B614       toutent
+ 0001:0000F800       tputs
+ 0001:0001130C       treeinit
+ 0001:00010F78       treeinsert
+ 0001:00010DB8       treelookup
+ 0001:00010A7C       treeoutput
+ 0002:000125AC       Try
+ 0002:00000108       tryhardflag
+ 0002:000140E0       Trynum
+ 0002:0001690C       uerasechar
+ 0002:00015200       ukillchar
+ 0001:0000B848       upcase
+ 0002:00013EC8       vflag
+ 0001:0000BD9C       whatcap
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  WinCreateHelpInstance (HELPMGR.51)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  WinDestroyHelpInstance (HELPMGR.52)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinIsWindow          (PMWIN.772)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  WinQueryDlgItemText  (PMWIN.815)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  WinQueryWindowPtr    (PMWIN.839)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinSendDlgItemMsg    (PMWIN.903)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  WinSetFocus          (PMWIN.860)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinSetWindowPtr      (PMWIN.876)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  WinShowPointer       (PMWIN.881)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0002:00013ECC       xflag
+ 0001:000116F4       xgets
+ 0002:00013EE8       yychar
+ 0002:00003530       yycheck
+ 0002:000140F4       yydebug
+ 0002:00003030       yydefred
+ 0002:000030FC       yydgoto
+ 0002:00015218       yyerrflag
+ 0002:000032CC       yygindex
+ 0001:0000E6B0       yyinit
+ 0002:00002FA8       yylen
+ 0002:00002F20       yylhs
+ 0002:000140D8       yylval
+ 0002:000151F8       yynerrs
+ 0001:0000E7F0       yyopen
+ 0001:0000C468       yyparse
+ 0002:00003200       yyrindex
+ 0002:00003134       yysindex
+ 0002:00012B24       yyss
+ 0002:00013EDC       yyssp
+ 0002:00003304       yytable
+ 0002:00013ED4       yyval
+ 0002:00012F1C       yyvs
+ 0002:00013EE0       yyvsp
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0000:00000000  Imp  _beginthread         (DDE4MBS._beginthread)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  _close               (DDE4MBS._close)
+ 0000:00000000  Imp  _creat               (DDE4MBS._creat)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0002:00004500       _dllentry
+ 0001:00006B74       _DLL_InitTerm
+ 0002:00005530       _edata
+ 0002:00017F54       _end
+ 0000:00000000  Imp  _errno               (DDE4MBS._errno)
+ 0001:00011980       _Exception_CPP
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _fullpath            (DDE4MBS._fullpath)
+ 0000:00000000  Imp  _getch               (DDE4MBS._getch)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  _lseek               (DDE4MBS._lseek)
+ 0000:00000000  Imp  _open                (DDE4MBS._open)
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  _putenv              (DDE4MBS._putenv)
+ 0000:00000000  Imp  _read                (DDE4MBS._read)
+ 0002:0001521C       _readonly
+ 0000:00000000  Imp  _searchenv           (DDE4MBS._searchenv)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  _unlink              (DDE4MBS._unlink)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0002:00004510       __ctdtused
+ 0002:000140E4       __ctordtorCurrent
+ 0002:00004530       __ctordtorEnd
+ 0001:0001189C       __ctordtorInit
+ 0002:00004520       __ctordtorStart
+ 0001:00011864       __ctordtorTerm
+ 0001:00006FA8       __ct__10HelpWindowFUlT1UsPcT4
+ 0001:00007150       __ct__14LanguageModuleFPcT1
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0001:00006E0C       __ct__5MutexFPcT1
+ 0001:00007410       __ct__6ModuleFPc
+ 0001:00007A08       __ct__7ProfileFPcUl
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0001:00006F74       __dt__10HelpWindowFv
+ 0001:0000709C       __dt__14LanguageModuleFv
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0001:00006DDC       __dt__5MutexFv
+ 0001:000073C4       __dt__6ModuleFv
+ 0001:00007984       __dt__7ProfileFv
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0002:00001EA0       __vft14LanguageModule6Module
+ 0002:00001E90       __vft6Module
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  DosReleaseMutexSem   (DOSCALLS.335)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  WinSetDlgItemText    (PMWIN.859)
+ 0000:00000000  Imp  freopen              (DDE4MBS.freopen)
+ 0000:00000000  Imp  WinCreateHelpInstance (HELPMGR.51)
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  WinQueryDlgItemText  (PMWIN.815)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0000:00000000  Imp  WinSetWindowText     (PMWIN.877)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  WinPostMsg           (PMWIN.919)
+ 0000:00000000  Imp  WinDestroyHelpInstance (HELPMGR.52)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  DosQueryModuleName   (DOSCALLS.320)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  PrfQueryProfileSize  (PMSHAPI.101)
+ 0000:00000000  Imp  DosCloseMutexSem     (DOSCALLS.333)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0000:00000000  Imp  WinAlarm             (PMWIN.701)
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0000:00000000  Imp  _searchenv           (DDE4MBS._searchenv)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  _beginthread         (DDE4MBS._beginthread)
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  WinSendDlgItemMsg    (PMWIN.903)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetFocus          (PMWIN.860)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  WinSetWindowPtr      (PMWIN.876)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  tmpnam               (DDE4MBS.tmpnam)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  WinIsWindow          (PMWIN.772)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  calloc               (DDE4MBS.calloc)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  _read                (DDE4MBS._read)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  perror               (DDE4MBS.perror)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  WinDefDlgProc        (PMWIN.910)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  WinEnableWindow      (PMWIN.735)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  WinDismissDlg        (PMWIN.729)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0000:00000000  Imp  _close               (DDE4MBS._close)
+ 0000:00000000  Imp  remove               (DDE4MBS.remove)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  fflush               (DDE4MBS.fflush)
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  PrfOpenProfile       (PMSHAPI.102)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _creat               (DDE4MBS._creat)
+ 0000:00000000  Imp  realloc              (DDE4MBS.realloc)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  strupr               (DDE4MBS.strupr)
+ 0000:00000000  Imp  _getch               (DDE4MBS._getch)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0000:00000000  Imp  WinQueryWindowPtr    (PMWIN.839)
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  WinQueryWindow       (PMWIN.834)
+ 0000:00000000  Imp  WinShowPointer       (PMWIN.881)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  rewind               (DDE4MBS.rewind)
+ 0000:00000000  Imp  _unlink              (DDE4MBS._unlink)
+ 0000:00000000  Imp  system               (DDE4MBS.system)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  _lseek               (DDE4MBS._lseek)
+ 0000:00000000  Imp  _fullpath            (DDE4MBS._fullpath)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  fgetc                (DDE4MBS.fgetc)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  DosCreateMutexSem    (DOSCALLS.331)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _putenv              (DDE4MBS._putenv)
+ 0000:00000000  Imp  _errno               (DDE4MBS._errno)
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0000:00000000  Imp  DosRequestMutexSem   (DOSCALLS.334)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  DosOpenMutexSem      (DOSCALLS.332)
+ 0000:00000000  Imp  PrfCloseProfile      (PMSHAPI.103)
+ 0000:00000000  Imp  _open                (DDE4MBS._open)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0001:00000000       myrealloc
+ 0001:00000008       copyout
+ 0001:00000060       askmode
+ 0001:00000468       ins_root_cap
+ 0001:00001428       casecmp
+ 0001:00001D38       compoundgood
+ 0001:00001EB8       correct
+ 0001:00002870       checkfile
+ 0001:00002A14       givehelp
+ 0001:00002B8C       makepossibilities
+ 0001:0000362C       checkline
+ 0001:00003E7C       skipoverword
+ 0001:00004964       flagpr
+ 0001:00004DA0       cap_ok
+ 0001:000050F0       good
+ 0001:000052AC       hash
+ 0001:0000614C       Speller_UnCaps
+ 0001:00006190       Speller_Insert
+ 0001:000061C8       Speller_Accept
+ 0001:00006200       Speller_FindWord
+ 0001:000062A4       Speller_BuildWord
+ 0001:000065EC       Speller_Ready
+ 0001:000065F4       Speller_CloseDictionary
+ 0001:00006A40       Speller_SetHome
+ 0001:00006A64       ProductVersion
+ 0001:00006A6C       SetLanguage
+ 0001:00006AC8       Identify
+ 0001:00006B74       _DLL_InitTerm
+ 0001:00006C94       Release__5MutexFv
+ 0001:00006CE8       Request__5MutexFi
+ 0001:00006DDC       __dt__5MutexFv
+ 0001:00006E0C       __ct__5MutexFPcT1
+ 0001:00006E88       Associate__10HelpWindowFUl
+ 0001:00006F74       __dt__10HelpWindowFv
+ 0001:00006FA8       __ct__10HelpWindowFUlT1UsPcT4
+ 0001:0000709C       __dt__14LanguageModuleFv
+ 0001:00007150       __ct__14LanguageModuleFPcT1
+ 0001:0000736C       QueryAddress__6ModuleFi
+ 0001:00007398       QueryAddress__6ModuleFPc
+ 0001:000073C4       __dt__6ModuleFv
+ 0001:00007410       __ct__6ModuleFPc
+ 0001:000075A0       PutString__7ProfileFPcT1
+ 0001:0000764C       GetString__7ProfileFPcRPc
+ 0001:00007760       GetString__7ProfileFPcT1i
+ 0001:00007818       PutItem__7ProfileFPcPvi
+ 0001:000078BC       GetItem__7ProfileFPcPvi
+ 0001:00007984       __dt__7ProfileFv
+ 0001:00007A08       __ct__7ProfileFPcUl
+ 0001:0000960C       Speller_OpenDictionary
+ 0001:000097F4       Speller_DefaultDictionary
+ 0001:000099B8       ProductConfigure
+ 0001:00009B1C       ProductInformation
+ 0001:00009E00       ProductName
+ 0001:00009EE4       Speller_FindReplacements
+ 0001:0000A014       Language_Create__FPcT1iT1
+ 0001:0000A624       lookup
+ 0001:0000A71C       lclose
+ 0001:0000A820       linit
+ 0001:0000B0CC       findfiletype
+ 0001:0000B2AC       icharncmp
+ 0001:0000B310       icharcmp
+ 0001:0000B35C       icharlen
+ 0001:0000B384       icharcpy
+ 0001:0000B3B4       printichar
+ 0001:0000B408       stringcharlen
+ 0001:0000B5CC       ichartosstr
+ 0001:0000B614       toutent
+ 0001:0000B7DC       strtosichar
+ 0001:0000B824       lowcase
+ 0001:0000B848       upcase
+ 0001:0000BB20       combinecaps
+ 0001:0000BC54       addvheader
+ 0001:0000BD64       chupcase
+ 0001:0000BD9C       whatcap
+ 0001:0000BE5C       ichartostr
+ 0001:0000BF4C       strtoichar
+ 0001:0000C034       makedent
+ 0001:0000C330       Log
+ 0001:0000C3C0       sleep
+ 0001:0000C3DC       mktemp
+ 0001:0000C3E4       link
+ 0001:0000C454       index
+ 0001:0000C468       yyparse
+ 0001:0000E6B0       yyinit
+ 0001:0000E7F0       yyopen
+ 0001:0000F484       shellescape
+ 0001:0000F4E0       stop
+ 0001:0000F530       done
+ 0001:0000F574       terminit
+ 0001:0000F714       backup
+ 0001:0000F748       normal
+ 0001:0000F764       inverse
+ 0001:0000F780       move
+ 0001:0000F798       erase
+ 0001:0000F800       tputs
+ 0001:0000FA1C       expand_suf
+ 0001:0000FDF0       expand_pre
+ 0001:000108D4       chk_aff
+ 0001:00010A54       myfree
+ 0001:00010A74       mymalloc
+ 0001:00010A7C       treeoutput
+ 0001:00010DB8       treelookup
+ 0001:00010F78       treeinsert
+ 0001:0001130C       treeinit
+ 0001:000116F4       xgets
+ 0001:00011864       __ctordtorTerm
+ 0001:0001189C       __ctordtorInit
+ 0001:00011980       _Exception_CPP
+ 0002:00000000       minimenusize
+ 0002:00000004       deftflag
+ 0002:00000008       prefstringchar
+ 0002:0000000C       tempfile
+ 0002:000000FC       minword
+ 0002:00000100       sortit
+ 0002:00000104       compoundflag
+ 0002:00000108       tryhardflag
+ 0002:0000010C       LaTeX_Mode
+ 0002:00001E90       __vft6Module
+ 0002:00001EA0       __vft14LanguageModule6Module
+ 0002:00002F20       yylhs
+ 0002:00002FA8       yylen
+ 0002:00003030       yydefred
+ 0002:000030FC       yydgoto
+ 0002:00003134       yysindex
+ 0002:00003200       yyrindex
+ 0002:000032CC       yygindex
+ 0002:00003304       yytable
+ 0002:00003530       yycheck
+ 0002:00004500       _dllentry
+ 0002:00004510       __ctdtused
+ 0002:00004520       __ctordtorStart
+ 0002:00004530       __ctordtorEnd
+ 0002:00005530       _edata
+ 0002:00005530       @BSSE:\Projects\ISpeller\DEFMT.C
+ 0002:0000553C       @BSSE:\Projects\ISpeller\XGETS.C
+ 0002:00005558       @BSSE:\Projects\ISpeller\TERM.C
+ 0002:00005564       @BSSE:\Projects\ISpeller\GOOD.C
+ 0002:00005568       @BSSE:\Projects\ISpeller\TREE.C
+ 0002:00005670       incfileflag
+ 0002:00005674       askfilename
+ 0002:00005678       BC
+ 0002:0000567C       cd
+ 0002:00005680       nd
+ 0002:00005684       cl
+ 0002:00005688       se
+ 0002:0000568C       cm
+ 0002:00005690       te
+ 0002:00005694       li
+ 0002:00005698       sg
+ 0002:0000569C       co
+ 0002:000056A0       ti
+ 0002:000056A4       ho
+ 0002:000056A8       so
+ 0002:000056AC       currentfile
+ 0002:000056B0       currentchar
+ 0002:000056B4       contextsize
+ 0002:000056B8       laststringch
+ 0002:000056BC       hashstrings
+ 0002:000056C0       contextbufs
+ 0002:0000F6C0       @BSSE:\Projects\ISpeller\LOOKUP.C
+ 0002:0000F6C4       possibilities
+ 0002:000125A4       contextoffset
+ 0002:000125A8       quit
+ 0002:000125AC       Try
+ 0002:00012874       hits
+ 0002:000128EC       @BSSE:\Projects\ISpeller\MAKEDENT.C
+ 0002:00012B24       yyss
+ 0002:00012F0C       aflag
+ 0002:00012F10       cflag
+ 0002:00012F14       eflag
+ 0002:00012F18       fflag
+ 0002:00012F1C       yyvs
+ 0002:00013EBC       lflag
+ 0002:00013EC0       sflag
+ 0002:00013EC4       tflag
+ 0002:00013EC8       vflag
+ 0002:00013ECC       xflag
+ 0002:00013ED0       terse
+ 0002:00013ED4       yyval
+ 0002:00013EDC       yyssp
+ 0002:00013EE0       yyvsp
+ 0002:00013EE4       infile
+ 0002:00013EE8       yychar
+ 0002:00013EEC       ctoken
+ 0002:00013F64       @BSSE:\Projects\ISpeller\ISPELLER.CPP
+ 0002:00013FE4       pcount
+ 0002:00013FE8       itoken
+ 0002:000140D8       yylval
+ 0002:000140E0       Trynum
+ 0002:000140E4       __ctordtorCurrent
+ 0002:000140E8       easypossibilities
+ 0002:000140EC       changes
+ 0002:000140F0       hashtbl
+ 0002:000140F4       yydebug
+ 0002:000140F8       termcap
+ 0002:000148F8       dumpflag
+ 0002:000148FC       outfile
+ 0002:00014900       hashname
+ 0002:000149F0       termptr
+ 0002:000149F4       numhits
+ 0002:000149F8       termstr
+ 0002:000151F8       yynerrs
+ 0002:000151FC       hashsize
+ 0002:00015200       ukillchar
+ 0002:00015204       numpflags
+ 0002:00015208       pflaglist
+ 0002:0001520C       numsflags
+ 0002:00015210       sflaglist
+ 0002:00015214       chartypes
+ 0002:00015218       yyerrflag
+ 0002:0001521C       _readonly
+ 0002:00015220       math_mode
+ 0002:00015224       defdupchar
+ 0002:00015228       nodictflag
+ 0002:0001522C       hashheader
+ 0002:000168CC       @BSSE:\Projects\ISpeller\y.tab.c
+ 0002:0001690C       uerasechar
+ 0002:00016910       pflagindex
+ 0002:00017430       sflagindex
+ 0002:00017F50       maxposslen
+ 0002:00017F54       _end
+
+Program entry point at 0001:00006B74

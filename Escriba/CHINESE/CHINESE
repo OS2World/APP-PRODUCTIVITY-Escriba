@@ -1,0 +1,31 @@
+# Build Chinese language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+Chinese: $*.dll $*.hlp $*.inf
+
+Chinese.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+Chinese.hlp: Chinese\Chinese.ipf Escriba.H Escriba.BMP \
+  Chinese\About.bmp    Chinese\BarCode.bmp  Chinese\ConfigEx.bmp Chinese\DateFmt.bmp  \
+  Chinese\Default0.bmp Chinese\Default1.bmp Chinese\Default2.bmp Chinese\Default3.bmp \
+  Chinese\Default4.bmp Chinese\Default5.bmp Chinese\FileDlg.bmp  Chinese\Indent.bmp   \
+  Chinese\Margins.bmp  Chinese\Prefer.bmp   Chinese\Profile.bmp  Chinese\Search.bmp   \
+  Chinese\Spell.bmp    Chinese\Tabs.bmp     Chinese\ZoomSet.bmp
+  Copy $(IPFC)\APSYMBOL.APS $(IPFC)\DEFAULT.APS
+  Copy $(IPFC)\APSY0938.APS $(IPFC)\APSYMBOL.APS
+  ipfcomp /D:88 /C:938 /L:CHT Chinese\Chinese.ipf
+  Copy $(IPFC)\DEFAULT.APS $(IPFC)\APSYMBOL.APS
+  Erase $(IPFC)\DEFAULT.APS
+
+Chinese.dll: Chinese\Chinese.def Chinese\Chinese.res dll.obj
+  link386 /nologo dll, Chinese.dll /align:16, nul,, Chinese\Chinese ;
+  rc -n Chinese\Chinese.res $*.dll
+  eautil /s Chinese.dll
+  erase eas\*.dll
+  rd eas
+
+Chinese\Chinese.res: Chinese\Chinese.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 88 -cp 938 -d __OS2__ -i . -i ..\runtime -r Chinese\Chinese
+

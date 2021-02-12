@@ -1,0 +1,8 @@
+;
+;       RTF__ESP: RTF Import/Export Module for Escriba (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'RTF__ESP: RTF Import/Export Module for Escriba (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

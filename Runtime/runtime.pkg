@@ -1,7 +1,5 @@
 makefile
 *.cpp
-*.dll
 *.def
 *.h
-*.lib
 *.pkg

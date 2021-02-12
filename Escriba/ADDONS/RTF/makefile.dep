@@ -1,0 +1,73 @@
+rtf.obj: \
+	rtf.cpp \
+	..\..\..\runtime\canvas.h \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\eattr.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\mutex.h \
+	..\..\..\runtime\profile.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	rtf.h
+
+rtf.res: \
+	rtf.rc \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__deu.res: \
+	rtf__deu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__enu.res: \
+	rtf__enu.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__esp.res: \
+	rtf__esp.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__fra.res: \
+	rtf__fra.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__nld.res: \
+	rtf__nld.rc \
+	..\..\..\runtime\controls.h \
+	..\..\..\runtime\system.h \
+	rtf.h
+
+rtf__deu.hlp: \
+	rtf__deu.ipf \
+	rtf.h
+
+rtf__enu.hlp: \
+	rtf__enu.ipf \
+	rtf.h
+
+rtf__esp.hlp: \
+	rtf__esp.ipf \
+	rtf.h
+
+rtf__fra.hlp: \
+	rtf__fra.ipf \
+	rtf.h
+
+rtf__nld.hlp: \
+	rtf__nld.ipf \
+	rtf.h
+

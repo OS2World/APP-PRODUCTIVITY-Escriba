@@ -1,0 +1,8 @@
+;
+;       JPEG_NLD: JPEG Graphic Import Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'JPEG_NLD: JPEG Graphic Import Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

@@ -1,0 +1,8 @@
+;
+;       PTXT_ENU: Plain Text Import/Export Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'PTXT_ENU: Plain Text Import/Export Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

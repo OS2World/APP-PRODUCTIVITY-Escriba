@@ -25,10 +25,10 @@ DLGTEMPLATE IDD_PRODUCTINFO
     CTEXT "ISpeller"                                            0,  10,158, 220, 18
     PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
 
-    CTEXT "Versie 0.96d"                                        0,  10,148, 220,  8
+    CTEXT "Versie 0.97"                                        0,  10,148, 220,  8
     PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
 
-    CTEXT "22 januari 1998"                                         0,  10,138, 220,  8
+    CTEXT "03 december 1998"                                         0,  10,138, 220,  8
     PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
 
     CTEXT "Spellingcontrole voor OS/2"                          0,  10,118, 220,  8

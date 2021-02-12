@@ -22,7 +22,7 @@ PoolSection::PoolSection ( int objectsize, int sectioncount ) : Prev(0), Next(0)
    // Allocate the section.
    EntrySize = sizeof(PoolEntry) + objectsize ;
    TotalSize = EntrySize * sectioncount ;
-   Memory = (char*) malloc ( TotalSize ) ;
+   Memory = new char [ TotalSize ] ;
    if ( Memory == 0 ) {
       Log ( "PoolSection: Unable to allocate memory for pool section (entrysize %i x count %i -> %i bytes.", EntrySize, sectioncount, TotalSize ) ;
       exit ( 1 ) ;
@@ -39,7 +39,8 @@ PoolSection::PoolSection ( int objectsize, int sectioncount ) : Prev(0), Next(0)
 
 PoolSection::~PoolSection ( ) {
 
-   if ( Memory ) free ( Memory ) ;
+   if ( Memory ) 
+      delete [] Memory, Memory = 0 ;
 
 } /* endmethod */
 

@@ -1,0 +1,8 @@
+;
+;       GIF__DEU: CompuServe GIF Graphic Import Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'GIF__DEU: CompuServe GIF Graphic Import Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

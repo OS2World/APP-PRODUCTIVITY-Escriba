@@ -165,10 +165,8 @@ Profile::Profile ( char *name, HAB Anchor, HMODULE Library, int DialogID, HelpWi
 
       // Does the file exist?  If not, discard the name.
       FILESTATUS3 Status ;
-      if ( DosQueryPathInfo ( Path, FIL_STANDARD, &Status, sizeof(Status) ) ) {
-         delete [] ProfilePath ;
-         ProfilePath = 0 ;
-      } /* endif */
+      if ( DosQueryPathInfo ( Path, FIL_STANDARD, &Status, sizeof(Status) ) ) 
+         delete [] ProfilePath, ProfilePath = 0 ;
 
    } /* endif */
 
@@ -222,7 +220,7 @@ Profile::Profile ( char *name, HAB Anchor, HMODULE Library, int DialogID, HelpWi
       ***********************************************************************/
 
       if ( ProfilePath ) 
-         delete [] ProfilePath ;
+         delete [] ProfilePath, ProfilePath = 0 ;
 
      /***********************************************************************
       * Open/Create the profile file and return the resultant handle.       *
@@ -289,10 +287,8 @@ Profile::Profile ( char *name, HAB Anchor, char *HomePath ) {
 
       // Does the file exist?  If not, discard the name.
       FILESTATUS3 Status ;
-      if ( DosQueryPathInfo ( Path, FIL_STANDARD, &Status, sizeof(Status) ) ) {
-         delete [] ProfilePath ;
-         ProfilePath = 0 ;
-      } /* endif */
+      if ( DosQueryPathInfo ( Path, FIL_STANDARD, &Status, sizeof(Status) ) ) 
+         delete [] ProfilePath, ProfilePath = 0 ;
 
    } /* endif */
 
@@ -328,7 +324,7 @@ Profile::Profile ( char *name, HAB Anchor, char *HomePath ) {
       ***********************************************************************/
 
       if ( ProfilePath ) 
-         delete [] ProfilePath ;
+         delete [] ProfilePath, ProfilePath = 0 ;
 
      /***********************************************************************
       * Open/Create the profile file and return the resultant handle.       *
@@ -355,7 +351,7 @@ Profile::~Profile ( ) {
    * Release allocated memory.                                              *
    **************************************************************************/
 
-   delete [] Name ;
+   delete [] Name, Name = 0 ;
 
   /**************************************************************************
    * Close the profile.                                                     *
@@ -460,7 +456,7 @@ BOOL Profile::GetString ( char *ItemName, char* &Item ) {
       return ( FALSE ) ;
    } /* endif */
 
-   Item = (char*) malloc ( size_t(TrueSize+1) ) ;
+   Item = new char [ TrueSize + 1 ] ;
    if ( Item == 0 ) {
       Log ( "Profile::GetString: Unable to allocate memory to hold string.  App %s, Item %s, TrueSize %i.", Name, ItemName, TrueSize ) ;
       return ( FALSE ) ;
@@ -469,7 +465,7 @@ BOOL Profile::GetString ( char *ItemName, char* &Item ) {
    if ( !PrfQueryProfileData ( Handle, PSZ(Name), PSZ(ItemName), Item, &TrueSize ) ) {
       char Message [512] ;
       Log ( "Profile::GetString: Could not get INI item.  App %s, Item %s, TrueSize %i.  %s", Name, ItemName, TrueSize, InterpretWinError(0,Message) ) ;
-      free ( Item ) ;
+      delete [] Item ;
       Item = 0 ;
       return ( FALSE ) ;
    } /* endif */

@@ -1,0 +1,8 @@
+;
+;       TIFF_ENU: TIFF Graphic Import Module for Escriba (English)
+;
+LIBRARY
+DESCRIPTION 'TIFF_ENU: TIFF Graphic Import Module for Escriba (English)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

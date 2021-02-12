@@ -1,0 +1,8 @@
+;
+;       GIF__ESP: CompuServe GIF Graphic Import Module for Escriba (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'GIF__ESP: CompuServe GIF Graphic Import Module for Escriba (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

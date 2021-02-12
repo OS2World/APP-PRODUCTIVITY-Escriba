@@ -1,0 +1,665 @@
+#ifndef OS2_INCLUDED
+   #include <os2.h>
+#endif
+DLGINCLUDE 1 "E:\Projects\escriba\test.h"
+
+DLGTEMPLATE IDD_ABOUT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_ABOUT, 0, 0, 200, 148, 
+    BEGIN
+        CTEXT           "Escriba", IDS_HELPTITLE, 10, 120, 180, 18
+                        PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+        CTEXT           "Version 0.97", IDS_HELPTITLE, 10, 112, 180, 8
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        CTEXT           "15 April 1998", IDS_HELPTITLE, 10, 104, 180, 8
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        CONTROL         "#1", IDS_HELPTITLE, 10, 110, 0, 0, WC_STATIC, 
+                        SS_BITMAP | WS_VISIBLE
+        CTEXT           "Word Processor for OS/2-PM", IDS_HELPTITLE, 10, 88, 
+                        180, 8
+        CTEXT           "¸ Copyright Richard Papo, 1992-1998", IDS_HELPTITLE, 
+                        10, 80, 180, 8
+        CTEXT           "Internet: rpapo@msen.com", IDS_HELPTITLE, 10, 72, 
+                        180, 8
+        CTEXT           "WWW: http://www.msen.com/~rpapo", IDS_HELPTITLE, 10, 
+                        64, 180, 8
+        CTEXT           "English Version", IDS_HELPTITLE, 10, 56, 180, 8
+        CTEXT           "Unregistered Copy", ID_MAIN, 10, 40, 180, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+        CTEXT           "", ID_DATAWINDOW, 10, 32, 180, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 80, 8, 40, 16, WS_GROUP
+    END
+END
+
+DLGTEMPLATE IDD_PROFILE_PATH LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Set Profile Path", IDD_PROFILE_PATH, 0, 0, 300, 60, , 
+            FCF_TITLEBAR | FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Enter the full path (including drive) of the direct"
+                        "ory", IDS_HELPTITLE, 8, 48, 284, 8
+        LTEXT           "where the profile (INI) file will be kept.", 
+                        IDS_HELPTITLE, 8, 40, 284, 8
+        CONTROL         "", IDD_PROFILE_PATH, 8, 28, 280, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_PROF_ERR, 8, 2, 280, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_FILETYPE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Select File Type", IDD_FILETYPE, 0, 0, 200, 116, , FCF_TITLEBAR
+    BEGIN
+        LTEXT           "File Name:", IDS_HELPTITLE, 8, 100, 70, 8
+        LTEXT           "", IDD_FILETYPE_NAME, 80, 100, 104, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00000000L
+        LTEXT           "This file seems to be of valid format for all    ", 
+                        IDS_HELPTITLE, 8, 84, 184, 8
+        LTEXT           "of the following file types.  Please select the  ", 
+                        IDS_HELPTITLE, 8, 76, 184, 8
+        LTEXT           "correct one to be used for loading the file.     ", 
+                        IDS_HELPTITLE, 8, 68, 184, 8
+        LISTBOX         IDD_FILETYPE_LIST, 8, 20, 184, 44
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 4, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 4, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 4, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+    END
+END
+
+DLGTEMPLATE IDD_PREFERENCES LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "General Preferences", IDD_PREFERENCES, 0, 0, 300, 110, , 
+            FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "Animate", IDD_PREFERENCES, 8, 98, 190, 10
+        AUTOCHECKBOX    "Show Rulers", IDD_PREFERENCES_RULERS, 8, 88, 190, 
+                        10
+        AUTOCHECKBOX    "Show Scroll Bars", IDD_PREFERENCES_SCBARS, 8, 78, 
+                        190, 10
+        AUTOCHECKBOX    "Show Status Line", IDD_PREFERENCES_STATUSLINE, 8, 
+                        68, 190, 10
+        AUTOCHECKBOX    "Show Complete Filenames", IDD_PREFERENCES_FULLNAMES, 
+                        8, 58, 190, 10
+        AUTOCHECKBOX    "Spool Pages Separately", IDD_PREFERENCES_SPOOLPAGES, 
+                        8, 48, 190, 10
+        AUTOCHECKBOX    "Print Pages in Reverse", 
+                        IDD_PREFERENCES_PRINTREVERSE, 8, 38, 190, 10
+        AUTOCHECKBOX    "Reload Document at Start", 
+                        IDD_PREFERENCES_LOADMOSTRECENT, 8, 28, 190, 10
+        GROUPBOX        "Initial Zoom", IDS_HELPTITLE, 200, 46, 88, 60
+        AUTORADIOBUTTON "100%", IDD_PREFERENCES_ZOOM_100, 204, 48, 80, 10, 
+                        WS_GROUP
+        AUTORADIOBUTTON "Full Width", IDD_PREFERENCES_ZOOM_FULLWIDTH, 204, 
+                        58, 80, 10
+        AUTORADIOBUTTON "Full Height", IDD_PREFERENCES_ZOOM_FULLHEIGHT, 204, 
+                        68, 80, 10
+        AUTORADIOBUTTON "Margins", IDD_PREFERENCES_ZOOM_MARGINS, 204, 78, 80, 
+                        10
+        AUTORADIOBUTTON "All", IDD_PREFERENCES_ZOOM_ALL, 204, 88, 80, 10
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_PREFERENCES_ERR, 8, 2, 290, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Document Defaults", IDD_DEFAULTS, 0, 0, 300, 200, NOT 
+            FS_DLGBORDER, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        NOTEBOOK        IDD_DEFAULTS_NOTEBOOK, 8, 48, 284, 150, 
+                        BKS_BACKPAGESTR | BKS_MAJORTABCENTER | 
+                        BKS_ROUNDEDTABS | BKS_TABTEXTCENTER | NOT WS_TABSTOP
+        AUTOCHECKBOX    "Global Save", IDD_DEFAULTS_GLOBAL, 8, 38, 284, 8, 
+                        WS_GROUP
+        LTEXT           "", IDD_DEFAULTS_UNITS, 8, 28, 284, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_DEFAULTS_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_DEFAULTS_ERR, 8, 2, 284, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_AUTHOR LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_AUTHOR, 0, 0, 200, 100, FS_NOBYTEALIGN | 
+            NOT FS_DLGBORDER
+    BEGIN
+        LTEXT           "Author's Name", IDS_HELPTITLE, 0, 90, 90, 8, 
+                        DT_VCENTER
+        CONTROL         "", IDD_DEFAULTS_AUTHOR, 90, 90, 110, 8, 
+                        "EntryField", 12 | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "Title", IDD_DEFAULTS_TITLE_TAG, 0, 80, 90, 8, 
+                        DT_VCENTER
+        CONTROL         "", IDD_DEFAULTS_TITLE, 90, 80, 110, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Creation Date", IDD_DEFAULTS_CREATEDATE_TAG, 0, 70, 
+                        90, 8, DT_VCENTER
+        LTEXT           "", IDD_DEFAULTS_CREATEDATE, 90, 70, 110, 8, 
+                        DT_VCENTER
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_PRINTER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_PRINTER, 0, 0, 200, 100, FS_NOBYTEALIGN | 
+            NOT FS_DLGBORDER
+    BEGIN
+        LTEXT           "Printer", IDS_HELPTITLE, 0, 90, 90, 8
+        CONTROL         "", IDD_DEFAULTS_PRINTER, 90, 0, 110, 98, "ComboBox", 
+                        4 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        PUSHBUTTON      "Printer Settings", IDD_DEFAULTS_SETTINGS, 12, 70, 
+                        186, 12
+        LTEXT           "", IDD_DEFAULTS_FORMNAME, 12, 61, 186, 8
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "", IDD_DEFAULTS_FORMSIZE, 12, 55, 186, 8
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_FONT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_FONT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT 
+            FS_DLGBORDER
+    BEGIN
+        LTEXT           "Font", IDS_HELPTITLE, 0, 90, 90, 8
+        CONTROL         "", IDD_DEFAULTS_FONT, 90, 0, 110, 98, "ComboBox", 4 | 
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Size", IDS_HELPTITLE, 0, 80, 80, 8
+        CONTROL         "", IDD_DEFAULTS_SIZE, 90, 0, 110, 88, "ComboBox", 4 | 
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Text/Line Color", IDS_HELPTITLE, 0, 70, 70, 8
+        VALUESET        IDD_DEFAULTS_COLOR, 90, 58, 110, 20, VS_RGB | 
+                        VS_BORDER | VS_ITEMBORDER | WS_GROUP
+                        CTLDATA 8, 0, 2, 8
+        GROUPBOX        "Attributes", IDS_HELPTITLE, 0, 10, 200, 42
+        AUTOCHECKBOX    "Bold", IDD_DEFAULTS_BOLD, 4, 34, 90, 10, WS_GROUP
+        AUTOCHECKBOX    "Italic", IDD_DEFAULTS_ITALIC, 4, 24, 90, 10
+        AUTOCHECKBOX    "Underscore", IDD_DEFAULTS_UNDERSCORE, 4, 14, 90, 10
+        AUTOCHECKBOX    "Strikeout", IDD_DEFAULTS_STRIKEOUT, 100, 34, 90, 10
+        AUTOCHECKBOX    "Outline", IDD_DEFAULTS_OUTLINE, 100, 24, 90, 10
+        AUTOCHECKBOX    "Caps", IDD_DEFAULTS_CAPS, 100, 14, 90, 10
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT1 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_LAYOUT1, 0, 0, 200, 100, FS_NOBYTEALIGN | 
+            NOT FS_DLGBORDER
+    BEGIN
+        LTEXT           "Justification", IDS_HELPTITLE, 0, 86, 90, 8
+        VALUESET        IDD_DEFAULTS_JUSTIFY, 90, 80, 110, 20, VS_BITMAP | 
+                        VS_BORDER | VS_ITEMBORDER | WS_GROUP
+                        CTLDATA 8, 0, 1, 4
+        AUTOCHECKBOX    "Center Page", IDD_DEFAULTS_CENTERPAGE, 0, 70, 200, 
+                        10
+        GROUPBOX        "Margins", IDS_HELPTITLE, 0, 8, 200, 52
+        LTEXT           "Left", IDS_HELPTITLE, 4, 42, 76, 8
+        CONTROL         "", IDD_DEFAULTS_LEFT, 80, 42, 116, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Right", IDS_HELPTITLE, 4, 32, 76, 8
+        CONTROL         "", IDD_DEFAULTS_RIGHT, 80, 32, 116, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Top", IDS_HELPTITLE, 4, 22, 76, 8
+        CONTROL         "", IDD_DEFAULTS_TOP, 80, 22, 116, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Bottom", IDS_HELPTITLE, 4, 12, 76, 8
+        CONTROL         "", IDD_DEFAULTS_BOTTOM, 80, 12, 116, 8, 
+                        "EntryField", 12 | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_LAYOUT2 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_LAYOUT2, 0, 0, 200, 100, FS_NOBYTEALIGN | 
+            NOT FS_DLGBORDER
+    BEGIN
+        GROUPBOX        "Distances", IDS_HELPTITLE, 0, 60, 200, 32
+        LTEXT           "Tabs", IDS_HELPTITLE, 4, 74, 90, 8
+        CONTROL         "", IDD_DEFAULTS_TAB, 96, 74, 90, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Indent", IDS_HELPTITLE, 4, 64, 90, 8
+        CONTROL         "", IDD_DEFAULTS_INDENT, 96, 64, 90, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Line Spacing", IDS_HELPTITLE, 0, 16, 200, 42
+        AUTORADIOBUTTON "Single", IDD_DEFAULTS_LINE_100, 4, 40, 192, 8
+        AUTORADIOBUTTON "1 1/2", IDD_DEFAULTS_LINE_150, 4, 30, 192, 8
+        AUTORADIOBUTTON "Double", IDD_DEFAULTS_LINE_200, 4, 20, 192, 8
+    END
+END
+
+DLGTEMPLATE IDD_DEFAULTS_PAGE_NATIONAL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "", IDD_DEFAULTS_PAGE_NATIONAL, 0, 0, 200, 100, FS_NOBYTEALIGN | 
+            NOT FS_DLGBORDER
+    BEGIN
+        LTEXT           "Code page", IDS_HELPTITLE, 0, 90, 70, 8
+        CONTROL         "", IDD_DEFAULTS_CODEPAGE, 70, 0, 130, 98, 
+                        "ComboBox", 4 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Date Format", IDS_HELPTITLE, 0, 10, 200, 78
+        CONTROL         "", IDD_DEFAULTS_DATEFMT, 4, 72, 192, 8, 
+                        "EntryField", 12 | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        LTEXT           "Sample:", IDS_HELPTITLE, 4, 62, 30, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "", IDD_DEFAULTS_DATESMP, 34, 62, 162, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "All text entered in the format is copied to the res"
+                        "ult,", IDS_HELPTITLE, 4, 54, 192, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "except that which is preceded by the '%' character."
+                        "    ", IDS_HELPTITLE, 4, 48, 192, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "The first character after the '%' can be one of the"
+                        "    ", IDS_HELPTITLE, 4, 42, 192, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "following:                                         "
+                        "    ", IDS_HELPTITLE, 4, 36, 192, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    m - Numeric month                              "
+                        "    ", IDS_HELPTITLE, 4, 30, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    M - Full month                                 "
+                        "    ", IDS_HELPTITLE, 98, 30, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    n - Abbrev. month                              "
+                        "    ", IDS_HELPTITLE, 4, 24, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    d - Numeric day                                "
+                        "    ", IDS_HELPTITLE, 98, 24, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    y - 4-digit year                               "
+                        "    ", IDS_HELPTITLE, 4, 18, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    z - 2-digit year                               "
+                        "    ", IDS_HELPTITLE, 98, 18, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    w - Weekday                                    "
+                        "    ", IDS_HELPTITLE, 4, 12, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LTEXT           "    x - Abbrev. weekday                            "
+                        "    ", IDS_HELPTITLE, 98, 12, 94, 6
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        AUTOCHECKBOX    "Metric Units", IDD_DEFAULTS_METRIC, 0, 0, 200, 10
+    END
+END
+
+DLGTEMPLATE IDD_CONFIGURE_EXTENSIONS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Configure Extensions", IDD_CONFIGURE_EXTENSIONS, 0, 0, 300, 200, , 
+            FCF_TITLEBAR
+    BEGIN
+        NOTEBOOK        IDD_CONFIGURE_NOTEBOOK, 8, 28, 284, 170, 
+                        BKS_BACKPAGESTR | BKS_MAJORTABCENTER | 
+                        BKS_ROUNDEDTABS | BKS_TABTEXTCENTER | NOT WS_TABSTOP
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_CONFIGURE_ERR, 8, 2, 284, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_SEARCH LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Search...", IDD_SEARCH, 0, 0, 220, 90, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Text to find:", IDS_HELPTITLE, 8, 76, 90, 8
+        CONTROL         "", IDD_SEARCH_STRING, 106, 76, 96, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Replacement:", IDS_HELPTITLE, 8, 64, 90, 8
+        CONTROL         "", IDD_SEARCH_REPLACE, 106, 64, 96, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        AUTOCHECKBOX    "Case ~Sensitive", IDD_SEARCH_CASESENSITIVE, 8, 52, 
+                        205, 10
+        AUTOCHECKBOX    "~Regular Expression", IDD_SEARCH_REGULAR, 8, 40, 
+                        205, 10
+        DEFPUSHBUTTON   "~Find", IDD_SEARCH_FIND, 8, 24, 55, 12, WS_GROUP
+        PUSHBUTTON      "~Change", IDD_SEARCH_CHANGE, 67, 24, 55, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Chang~e & Find", IDD_SEARCH_CHANGEFIND, 126, 24, 86, 
+                        12, NOT WS_TABSTOP
+        PUSHBUTTON      "Change ~All", IDD_SEARCH_CHANGEALL, 8, 10, 69, 12, 
+                        NOT WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 81, 10, 70, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 155, 10, 57, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_SEARCH_ERR, 8, 2, 204, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_GOTOPAGE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Go To Page", IDD_GOTOPAGE, 0, 0, 200, 42, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Page Number:", IDS_HELPTITLE, 8, 28, 90, 8
+        CONTROL         "", IDD_GOTOPAGE_ENTRY, 100, 28, 92, 8, "EntryField", 
+                        14 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_GOTOPAGE_ERR, 8, 2, 192, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_SPELL LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Spell Checker", IDD_SPELL, 0, 0, 240, 100, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Word found:", IDS_HELPTITLE, 4, 86, 86, 8
+        LTEXT           "Original Text", IDD_SPELL_OLDWORD, 94, 86, 142, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00000000L
+        CTEXT           "-- Possible Replacements --", IDS_HELPTITLE, 4, 76, 
+                        232, 8
+        CONTROL         "", IDD_SPELL_NEWWORD, 1, 26, 238, 48, "ComboBox", 1 | 
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        DEFPUSHBUTTON   "~Skip", IDD_SPELL_SKIP, 1, 13, 49, 12, WS_GROUP
+        PUSHBUTTON      "~Accept", IDD_SPELL_ACCEPT, 50, 13, 60, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "~Insert", IDD_SPELL_INSERT, 110, 13, 60, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "~Replace", IDD_SPELL_REPLACE, 170, 13, 69, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Insert ~Lowercase", IDD_SPELL_UNCAPS, 1, 1, 103, 12, 
+                        NOT WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 104, 1, 71, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 175, 1, 64, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+    END
+END
+
+DLGTEMPLATE IDD_ZOOM_SET LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Zoom Set...", IDD_ZOOM_SET, 0, 0, 230, 42, , FCF_TITLEBAR
+    BEGIN
+        LTEXT           "Zoom Value (%)", IDS_HELPTITLE, 8, 26, 100, 8
+        SPINBUTTON      IDD_ZOOM_SET, 120, 26, 94, 8, SPBS_NUMERICONLY | 
+                        SPBS_MASTER | SPBS_JUSTRIGHT | SPBS_FASTSPIN
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_ZOOM_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_ZOOM_ERR, 8, 2, 216, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_MARGINS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Margins", IDD_MARGINS, 0, 0, 400, 72, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Left", IDS_HELPTITLE, 58, 58, 50, 8
+        CONTROL         "", IDD_MARGINS, 131, 58, 40, 8, "EntryField", 14 | 
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Right", IDS_HELPTITLE, 229, 58, 50, 8
+        CONTROL         "", IDD_MARGINS_RIGHT, 302, 58, 40, 8, "EntryField", 
+                        14 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Top", IDS_HELPTITLE, 58, 46, 50, 8
+        CONTROL         "", IDD_MARGINS_TOP, 131, 46, 40, 8, "EntryField", 
+                        14 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Bottom", IDS_HELPTITLE, 229, 46, 50, 8
+        CONTROL         "", IDD_MARGINS_BOTTOM, 302, 46, 40, 8, "EntryField", 
+                        14 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        CTEXT           "", IDD_MARGINS_UNITS, 8, 34, 390, 8
+        CTEXT           "", IDD_MARGINS_SIZE, 8, 26, 390, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_MARGINS_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_MARGINS_ERR, 8, 2, 390, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_TABS LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Tabs", IDD_TABS, 0, 0, 350, 70, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Position", IDS_HELPTITLE, 70, 48, 50, 8
+        CONTROL         "", IDD_TABS, 155, 48, 40, 8, "EntryField", 14 | 
+                        WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        PUSHBUTTON      "~Set", IDD_TABS_SET, 230, 54, 50, 12
+        PUSHBUTTON      "~Clear", IDD_TABS_CLEAR, 230, 42, 50, 12
+        CTEXT           "", IDD_TABS_UNITS, 8, 34, 338, 8
+        CTEXT           "", IDD_TABS_SIZE, 8, 26, 338, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_TABS_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_TABS_ERR, 8, 2, 338, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_INDENT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Paragraph Indent", IDD_INDENT, 0, 0, 350, 62, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Distance", IDS_HELPTITLE, 97, 48, 50, 8
+        CONTROL         "", IDD_INDENT_DISTANCE, 212, 48, 40, 8, 
+                        "EntryField", 14 | WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        CTEXT           "", IDD_INDENT_UNITS, 8, 34, 338, 8
+        CTEXT           "", IDD_INDENT_SIZE, 8, 26, 338, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_INDENT_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_INDENT_ERR, 8, 2, 338, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_DATEFMT LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Date Format", IDD_DATEFMT, 0, 0, 260, 154, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Format", IDS_HELPTITLE, 8, 136, 50, 8
+        CONTROL         "", IDD_DATEFMT_ENTRY, 60, 136, 192, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Sample:", IDS_HELPTITLE, 8, 126, 50, 8
+        LTEXT           "", IDD_DATEFMT_SAMPLE, 60, 126, 192, 8
+        LTEXT           "All text entered in the format is copied to the res"
+                        "ult,", IDS_HELPTITLE, 8, 114, 248, 8
+        LTEXT           "except that which is preceded by the '%' character."
+                        "    ", IDS_HELPTITLE, 8, 106, 248, 8
+        LTEXT           "The first character after the '%' can be one of the"
+                        "    ", IDS_HELPTITLE, 8, 98, 248, 8
+        LTEXT           "following:                                         "
+                        "    ", IDS_HELPTITLE, 8, 90, 248, 8
+        LTEXT           "    m - Becomes the numeric month of the year.     "
+                        "    ", IDS_HELPTITLE, 8, 82, 248, 8
+        LTEXT           "    M - Becomes the name of the month of the year. "
+                        "    ", IDS_HELPTITLE, 8, 74, 248, 8
+        LTEXT           "    n - Becomes the abbreviated name of the month. "
+                        "    ", IDS_HELPTITLE, 8, 66, 248, 8
+        LTEXT           "    d - Becomes the numeric day of the month.      "
+                        "    ", IDS_HELPTITLE, 8, 58, 248, 8
+        LTEXT           "    y - Becomes the 4-digit numeric year.          "
+                        "    ", IDS_HELPTITLE, 8, 50, 248, 8
+        LTEXT           "    z - Becomes the 2-digit numeric year.          "
+                        "    ", IDS_HELPTITLE, 8, 42, 248, 8
+        LTEXT           "    w - Becomes the name of the day of the week.   "
+                        "    ", IDS_HELPTITLE, 8, 34, 248, 8
+        LTEXT           "    x - Becomes the abbreviated name of the weekday"
+                        ".   ", IDS_HELPTITLE, 8, 26, 248, 8
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_DATEFMT_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_DATEFMT_ERR, 8, 2, 248, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_BARCODE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Insert Barcode", IDD_BARCODE, 0, 0, 250, 64, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        LTEXT           "Type", IDS_HELPTITLE, 8, 50, 85, 8
+        CONTROL         "", IDD_BARCODE_TYPE, 100, 10, 143, 50, "ComboBox", 
+                        4 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Text", IDS_HELPTITLE, 8, 38, 85, 8
+        CONTROL         "", IDD_BARCODE_ENTRY, 101, 38, 141, 8, "EntryField", 
+                        12 | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        LTEXT           "Valid characters:", IDS_HELPTITLE, 8, 26, 85, 8
+        LTEXT           "0123456789", IDD_BARCODE_CHARS, 101, 26, 141, 8
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 52, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 113, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_BARCODE_ERR, 8, 2, 238, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_HEADER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Header", IDD_HEADER, 0, 0, 250, 80, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        MLE             "", IDD_HEADER_ENTRY, 8, 26, 234, 50
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_HEADER_APPLY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_HEADER_ERR, 8, 2, 234, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_FOOTER LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Footer", IDD_FOOTER, 0, 0, 250, 80, , FCF_TITLEBAR | 
+            FCF_DBE_APPSTAT
+    BEGIN
+        MLE             "", IDD_FOOTER_ENTRY, 8, 26, 234, 50
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Apply", IDD_FOOTER_ENTRY, 52, 10, 40, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 96, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 157, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_FOOTER_ERR, 8, 2, 234, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_FILLCOLORMGR LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Fill Color Menu Manager", IDD_FILLCOLORMGR, 0, 0, 260, 150, , 
+            FCF_TITLEBAR | FCF_DBE_APPSTAT
+    BEGIN
+        CONTROL         "", IDD_FILLCOLORMGR_WHEEL, 0, 35, 188, 110, 
+                        "ColorSelectClass", WS_GROUP | WS_TABSTOP | 
+                        WS_VISIBLE
+        PUSHBUTTON      ">>", IDD_FILLCOLORMGR_ADD, 188, 95, 20, 10
+        PUSHBUTTON      "<<", IDD_FILLCOLORMGR_DEL, 188, 75, 20, 10
+        LISTBOX         IDD_FILLCOLORMGR_LIST, 210, 25, 46, 120, 
+                        LS_OWNERDRAW | WS_GROUP
+        RTEXT           "Red:", IDS_HELPTITLE, 8, 24, 28, 12, DT_VCENTER
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00CC0000L
+        SPINBUTTON      IDD_FILLCOLORMGR_RED, 38, 25, 32, 12, 
+                        SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | 
+                        SPBS_FASTSPIN | WS_GROUP
+        RTEXT           "Green:", IDS_HELPTITLE, 74, 24, 28, 12, DT_VCENTER
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x0000CC00L
+        SPINBUTTON      IDD_FILLCOLORMGR_GRN, 104, 25, 32, 12, 
+                        SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | 
+                        SPBS_FASTSPIN | WS_GROUP
+        RTEXT           "Blue:", IDS_HELPTITLE, 140, 24, 28, 12, DT_VCENTER
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x000000CCL
+        SPINBUTTON      IDD_FILLCOLORMGR_BLU, 170, 25, 32, 12, 
+                        SPBS_NUMERICONLY | SPBS_MASTER | SPBS_JUSTRIGHT | 
+                        SPBS_FASTSPIN | WS_GROUP
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Default", IDD_FILLCOLORMGR_DFLT, 52, 10, 52, 12, 
+                        NOT WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 108, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 169, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_FILLCOLORMGR_ERR, 8, 2, 244, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+    END
+END
+
+DLGTEMPLATE IDD_LINECOLORMGR LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Line Color Menu Manager", IDD_LINECOLORMGR, 69, 58, 260, 150, , 
+            FCF_TITLEBAR | FCF_DBE_APPSTAT
+    BEGIN
+        PUSHBUTTON      ">>", IDD_LINECOLORMGR_ADD, 188, 95, 20, 10
+        PUSHBUTTON      "<<", IDD_LINECOLORMGR_DEL, 188, 75, 20, 10
+        LISTBOX         IDD_LINECOLORMGR_LIST, 210, 25, 46, 120, 
+                        LS_OWNERDRAW | WS_GROUP
+        DEFPUSHBUTTON   "~OK", ID_MAIN, 8, 10, 40, 12, WS_GROUP
+        PUSHBUTTON      "~Default", IDD_LINECOLORMGR_DFLT, 52, 10, 52, 12, 
+                        NOT WS_TABSTOP
+        PUSHBUTTON      "Esc=Cancel", ID_DATAWINDOW, 108, 10, 57, 12, NOT 
+                        WS_TABSTOP
+        PUSHBUTTON      "F1=Help", IDS_HELPTITLE, 169, 10, 43, 12, BS_HELP | 
+                        NOT WS_TABSTOP
+        CTEXT           "", IDD_LINECOLORMGR_ERR, 8, 2, 244, 8
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+        SLIDER          -2536, 2, 29, 48, 113, SLS_VERTICAL | 
+                        SLS_SNAPTOINCREMENT | WS_GROUP
+                        CTLDATA 12, 0, 10, 0, 10, 0
+    END
+END

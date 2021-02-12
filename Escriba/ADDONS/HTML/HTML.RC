@@ -1,0 +1,28 @@
+#include "System.h"
+
+#include "HTML.h"
+
+CODEPAGE 850
+
+HELPSUBTABLE ID_HELPTABLE
+{
+//
+//            Item ID                           Help Panel ID
+//
+  HELPSUBITEM IDD_CONFIGURE_FONT,               IDD_CONFIGURE_FONT
+  HELPSUBITEM IDD_CONFIGURE_TTFONT,             IDD_CONFIGURE_TTFONT
+  HELPSUBITEM IDD_CONFIGURE_SIZE,               IDD_CONFIGURE_SIZE
+
+  HELPSUBITEM IDD_CONFIGURE_NETSCAPE,           IDD_CONFIGURE_NETSCAPE
+}
+
+HELPTABLE ID_HELPTABLE
+{
+//
+//         Window ID                    Help Sub-Table ID               Extended Help Panel ID
+//
+  HELPITEM IDD_PRODUCTINFO,             ID_HELPTABLE,                   IDD_PRODUCTINFO
+  HELPITEM IDD_CONFIGURE_IMPORT,        ID_HELPTABLE,                   IDD_CONFIGURE_IMPORT
+  HELPITEM IDD_CONFIGURE_EXPORT,        ID_HELPTABLE,                   IDD_CONFIGURE_EXPORT
+}
+

@@ -1,0 +1,8 @@
+;
+;       RTF__NLD: RTF Import/Export Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'RTF__NLD: RTF Import/Export Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

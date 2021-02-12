@@ -1,0 +1,2 @@
+07:44:35 12/03/98 RunTime 0.97 02 037B1000 ERROR: Unable to get string resource.  Module 0, id 1, code 00000057.  Requested by module e:\projects\runtime\restring.h, line 20.
+07:44:35 12/03/98 RunTime 0.97 02 037AE000 ERROR: Unable to get string resource.  Module 0, id 1, code 00000057.  Requested by module e:\projects\runtime\restring.h, line 20.

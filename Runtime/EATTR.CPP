@@ -125,7 +125,7 @@ extern PEAOP2 BuildExtendedAttributes ( ULONG Count, EADATA Table[] ) {
    * Allocate memory for the FEA2 list.                                     *
    **************************************************************************/
 
-   PFEA2LIST pFEAList = PFEA2LIST ( malloc ( size_t(cbEA) ) ) ;
+   PFEA2LIST pFEAList = PFEA2LIST ( new char [ cbEA ] )  ;
 
    if ( pFEAList == 0 )
       return ( 0 ) ;
@@ -156,10 +156,10 @@ extern PEAOP2 BuildExtendedAttributes ( ULONG Count, EADATA Table[] ) {
    * Allocate memory for the EA header block.                               *
    **************************************************************************/
 
-   PEAOP2 pExtendedAttributes = PEAOP2 ( malloc ( sizeof(EAOP2) ) ) ;
+   PEAOP2 pExtendedAttributes = PEAOP2 ( new char [ sizeof(EAOP2) ] ) ;
 
    if ( pExtendedAttributes == 0 ) {
-      free ( pFEAList ) ;
+      delete pFEAList ;
       return ( 0 ) ;
    } /* endif */
 

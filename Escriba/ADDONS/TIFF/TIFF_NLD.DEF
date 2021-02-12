@@ -1,0 +1,8 @@
+;
+;       TIFF_NLD: TIFF Graphic Import Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'TIFF_NLD: TIFF Graphic Import Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

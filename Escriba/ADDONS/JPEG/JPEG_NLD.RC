@@ -1,0 +1,68 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Jpeg.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "JPEG",               //   Application Name.
+  "Nederlands",         //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: januari, februari, maart, april, mei, juni,                      *
+ *   juli, augustus, september, october, november, december.                *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 260, 204, FS_DLGBORDER
+  {
+    CTEXT "Jpeg"                                                0,  10,174, 240, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10,162, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 december 1998"                                     0,  10,152, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "JPEG Grafische Import Module voor Escriba",          0,  10,142, 240,  8
+
+    CTEXT "Dit programma bevat freeware van de "                0,  10,126, 240,  8
+    CTEXT "Independent JPEG Group, met de volgende kopie-rechten:" 0,10,118,240,  8
+
+    CTEXT "Copyright ¸ 1988 Richard M. Stallman"                0,  10,102, 240,  8
+    CTEXT "Copyright ¸ 1989, 1991 Aladdin Enterprises"          0,  10, 94, 240,  8
+    CTEXT "Copyright ¸ 1990, David Koblas"                      0,  10, 86, 240,  8
+    CTEXT "Copyright ¸ 1991, 1992, 1993, Thomas G. Lane"        0,  10, 78, 240,  8
+    CTEXT "All rights reserved."                                0,  10, 70, 240,  8
+
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Nederlandse versie"                                  0,  10, 30, 240,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,110,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "JPEG Grafische Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'JPEG Grafische' Hulp"
+  IDS_ERROR_CREATEHELP                  "FOUT: Hulpsysteem kan niet opgezet worden.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FOUT(JPEG): Kan bestand '%s' niet openen om vanuit te laden."
+  IDS_ERROR_FILE_TOO_SMALL              "FOUT(JPEG): Ongeldig bestand. Te klein."
+  IDS_ERROR_INVALID_FILE_ID             "FOUT(JPEG): Ongeldige handtekening."
+  IDS_ERROR_MEMORY                      "FOUT(JPEG): Kan geen geheugen vinden voor bitmap-header."
+  IDS_ERROR_DC_OPEN                     "FOUT(JPEG): Kan geheugen-device-context niet openen.  Status %i."
+  IDS_ERROR_PS_CREATE                   "FOUT(JPEG): Kan geen geheugen presentatie-ruimte aanmaken. Status %i."
+  IDS_ERROR_CREATE_BITMAP               "FOUT(JPEG): Kan geen bitmap maken.  Status %i."
+}
+

@@ -22,7 +22,7 @@ Process::Process ( char *name, long QueueSize ) : Name(0), Anchor(0), Queue(0) {
 
    // Save the process name, if given.
    if ( name ) {
-      Name = PCHAR ( malloc ( strlen(name)+1 ) ) ;
+      Name = new char [ strlen(name)+1 ] ;
       strcpy ( Name, name ) ;
    } /* endif */
 
@@ -88,7 +88,8 @@ Process::~Process ( ) {
       Log ( "Process::~Process(%s) Releasing name.", Name ) ;
    #endif
 
-   if ( Name ) free ( Name ) ;
+   if ( Name ) 
+      delete [] Name, Name = 0 ;
 
    #ifdef DEBUG
       Log ( "Process::~Process() Done." ) ;

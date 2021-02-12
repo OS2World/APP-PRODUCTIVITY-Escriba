@@ -4,9 +4,14 @@
 .SUFFIXES: .cpp
 
 {.}.cpp.obj:
-   icc /Q /C /Ge- /Gm+ /Sp1 /O .\$*.cpp
+   icc /Q /C /Gd+ /Ge- /Gm+ /Sp1 /Ti+ .\$*.cpp
 
-All : ..\ISpeller\RunTime.lib ..\ISpeller\RunTime.dll ..\Escriba\RunTime.lib ..\Escriba\RunTime.dll
+All : ..\ISpeller\RunTime.lib ..\ISpeller\RunTime.dll \
+      ..\Escriba\RunTime.lib ..\Escriba\RunTime.dll \
+      ..\ISpeller\Esc_CRT.dll ..\Escriba\Esc_CRT.dll
+
+Clean : 
+   del *.obj *.dll *.dlx *.lib *.map
 
 ..\ISpeller\RunTime.lib : RunTime.lib
    copy RunTime.lib ..\ISpeller
@@ -14,11 +19,22 @@ All : ..\ISpeller\RunTime.lib ..\ISpeller\RunTime.dll ..\Escriba\RunTime.lib ..\
 ..\ISpeller\RunTime.dll : RunTime.dll
    copy RunTime.dll ..\ISpeller
 
+..\ISpeller\Esc_CRT.dll : Esc_CRT.dll
+   copy Esc_CRT.dll ..\ISpeller
+
 ..\Escriba\RunTime.lib : RunTime.lib
    copy RunTime.lib ..\Escriba
 
 ..\Escriba\RunTime.dll : RunTime.dll
    copy RunTime.dll ..\Escriba
+
+..\Escriba\Esc_CRT.dll : Esc_CRT.dll
+   copy Esc_CRT.dll ..\Escriba
+
+Esc_CRT.dll : $(CSET21)\dll\dde4mbs.dll
+   erase Esc_CRT.dll
+   copy $(CSET21)\dll\dde4mbs.dll
+   dllrname runtime.dll dde4mbs.dll dde4mbs=Esc_CRT
 
 RunTime.lib : RunTime.dll RunTime.def
    implib /nologo /noi RunTime.lib RunTime.def
@@ -48,7 +64,10 @@ OBJS = \
    WINDOW.obj
 
 RunTime.dll : $(OBJS) RunTime.def
-   icc /Q /Ge- /Gm+ /B"/nologo /m:full" /Fe"RunTime.dll" $(OBJS) RunTime.def
+   icc /Q /Ge- /Gm+ /Ti+ /B"/nologo /m:full /de" /Fe"RunTime.dll" $(OBJS) RunTime.def
+   dllrname runtime.dll dde4mbs=Esc_CRT
+   If Exist RunTime.dlx Erase RunTime.dlx
+   FXStrip RunTime.dll
 
 Canvas.obj : Canvas.cpp Canvas.h System.h Debug.h Mutex.h
 
@@ -64,7 +83,7 @@ Dialog.obj : Dialog.cpp Dialog.h System.h Debug.h
 
 EAttr.obj : EAttr.cpp EAttr.h System.h
 
-Event.obj : Event.cpp Event.h System.h Debug.h Mux.h 
+Event.obj : Event.cpp Event.h System.h Debug.h Mux.h
 
 HelpWin.obj : HelpWin.cpp HelpWin.h System.h Debug.h
 

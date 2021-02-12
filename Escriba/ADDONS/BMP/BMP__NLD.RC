@@ -1,0 +1,62 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Bmp.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "BMP",                //   Application Name.
+  "Nederlands",         //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: januari, februari, maart, april, mei, juni,                      *
+ *   juli, augustus, september, october, november, december.                *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Bmp"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versie 0.97"                                        0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 december 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Bitmap Grafische Import Module voor Escriba",        0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Nederlandse versie"                                  0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "Bitmap Grafische Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'Bitmap Grafische' Hulp"
+  IDS_ERROR_CREATEHELP                  "FOUT: Hulpsysteem kan niet opgezet worden.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FOUT(BMP): Kan bestand '%s' niet openen om te controleren."
+  IDS_ERROR_FILE_TOO_SMALL              "FOUT(BMP): Ongeldig bitmap-bestand.  Te klein."
+  IDS_ERROR_INVALID_HEADER_SIZE         "FOUT(BMP): Bitmap niet herkend.  Header-afm. %i bytes."
+  IDS_ERROR_INVALID_HEADER_ID           "FOUT(BMP): Ongeldige bestands-header."
+  IDS_ERROR_MEMORY1                     "FOUT(BMP): Kan geen buffer voor plaatje vinden."
+  IDS_ERROR_MEMORY2                     "FOUT(BMP): Geen geheugen beschikbaar voor bitmap-header."
+  IDS_ERROR_DC_OPEN                     "FOUT(BMP): Devide Context geheugen kan niet geopend worden. Status %08X."
+  IDS_ERROR_PS_CREATE                   "FOUT(BMP): Geheugen presentatie-ruimte kan niet geopend worden. Status %08X."
+  IDS_ERROR_CREATE_BITMAP               "FOUT(BMP): Bitmap kan niet opgebouwd worden.  Status %08X."
+  IDS_ERROR_OPEN_FOR_IMPORT             "FOUT(BMP): Bestand '%s' kan niet geopend worden om te laden bij import."
+  IDS_ERROR_MEMORY3                     "FOUT(BMP): Kan geen geheugen vinden om het block in te laden.  %i bytes werden aangevraagd."
+}
+

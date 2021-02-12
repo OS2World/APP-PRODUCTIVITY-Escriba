@@ -75,31 +75,14 @@ extern void Log ( char *Message, ... ) {
    * Open the log file.                                                     *
    **************************************************************************/
 
-   #ifdef __DEBUG_ALLOC__
-
-      if ( Logfile == 0 ) {
-         char LogFile [CCHMAXPATH] ;
-         if ( HomePath[0] ) {
-            strcpy ( LogFile, HomePath ) ;
-            strcat ( LogFile, "\\" LOGFILE ) ;
-         } else {
-            strcpy ( LogFile, LOGFILE ) ;
-         } /* endif */
-         Logfile = fopen ( LogFile, "a" ) ;
-      } /* endif */
-
-   #else
-
-      char LogFile [CCHMAXPATH] ;
-      if ( HomePath[0] ) {
-         strcpy ( LogFile, HomePath ) ;
-         strcat ( LogFile, "\\" LOGFILE ) ;
-      } else {
-         strcpy ( LogFile, LOGFILE ) ;
-      } /* endif */
-      Logfile = fopen ( LogFile, "a" ) ;
-
-   #endif // __DEBUG_ALLOC__
+   char LogFile [CCHMAXPATH] ;
+   if ( HomePath[0] ) {
+      strcpy ( LogFile, HomePath ) ;
+      strcat ( LogFile, "\\" LOGFILE ) ;
+   } else {
+      strcpy ( LogFile, LOGFILE ) ;
+   } /* endif */
+   Logfile = fopen ( LogFile, "a" ) ;
 
   /**************************************************************************
    * If the file got opened, write the message to the log file and close it.*
@@ -119,11 +102,7 @@ extern void Log ( char *Message, ... ) {
       vfprintf ( Logfile, Message, Marker ) ;
       va_end ( Marker ) ;
       fprintf ( Logfile, "\n" ) ;
-      #ifndef __DEBUG_ALLOC__
-         fclose ( Logfile ) ;
-      #else
-         fflush ( Logfile ) ;
-      #endif // Not __DEBUG_ALLOC__
+      fclose ( Logfile ) ;
    } /* endif */
 
   /**************************************************************************
@@ -625,6 +604,8 @@ static struct MessageTable {
    { CSN_CHANGED,                   "CSN_CHANGED"                   },  // 0549      
    { CSN_TRACKING,                  "CSN_TRACKING"                  },  // 054A      
    { CSN_QUERYBACKGROUNDCOLOR,      "CSN_QUERYBACKGROUNDCOLOR"      },  // 054B 
+   { 0x0601,                        "WM_COLORWHEELCHANGED"          },  // 0601 +
+   { 0x0602,                        "CWM_COLORWHEELSETVAL"          },  // 0602
    { LM_SETITEMWIDTH,               "LM_SETITEMWIDTH"               },  // 0660 +
    { WM_SETBIDIATTR,                "WM_SETBIDIATTR"                },  // 0BD0 +
    { WM_QUERYBIDIATTR,              "WM_QUERYBIDIATTR"              },  // 0BD1
@@ -642,6 +623,8 @@ static struct MessageTable {
    { FNTM_COLORCHANGED,             "FNTM_COLORCHANGED"             },  // 1035
    { FNTM_UPDATEPREVIEW,            "FNTM_UPDATEPREVIEW"            },  // 1036
    { FNTM_FILTERLIST,               "FNTM_FILTERLIST"               },  // 1037
+   { 0x130C,                        "WM_COLORWHEELCHANGED3"         },  // 130C +
+   { 0x1384,                        "CWM_COLORWHEELSETVAL3"         },  // 1384 +
 
    { BKM_CALCPAGERECT,              "BKM_CALCPAGERECT"              },  // 0353 + NOTE: These collide with the CM/VM messages above!
    { BKM_DELETEPAGE,                "BKM_DELETEPAGE"                },  // 0354

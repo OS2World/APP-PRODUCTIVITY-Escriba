@@ -1,0 +1,110 @@
+# Build PCX Graphic Importer addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: PCX.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+PCX.DLL : PCX.OBJ PCX.H PCX.RES ..\..\EXTERNAL.H
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"PCX.DLL" /Fm"PCX.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB PCX.DEF
+PCX.OBJ
+<<
+  RC PCX.RES PCX.DLL
+  dllrname PCX.dll dde4mbs=Esc_CRT
+  If Exist PCX.DLX Erase PCX.DLX
+  FXSTRIP PCX.DLL
+
+{.}.rc.res:
+   RC -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX.obj : PCX.cpp PCX.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h \
+  ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h ..\..\..\runtime\module.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: PCX__DEU.dll PCX__DEU.hlp 
+
+PCX__DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX__DEU.res : $*.rc pcx.h
+  rc -cc 49 -cp 850 -r $*
+
+PCX__DEU.hlp: $*.ipf pcx.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf 
+
+
+# English
+
+English: PCX__ENU.dll PCX__ENU.hlp 
+
+PCX__ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX__ENU.res : $*.rc pcx.h
+  rc -cc 1 -cp 850 -r $*
+
+PCX__ENU.hlp: $*.ipf pcx.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf 
+
+
+# Spanish (Espa¤ol)
+
+Espanol: PCX__ESP.dll PCX__ESP.hlp 
+
+PCX__ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX__ESP.res : $*.rc pcx.h
+  rc -cc 34 -cp 850 -r $*
+
+PCX__ESP.hlp: $*.ipf pcx.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: PCX__FRA.dll PCX__FRA.hlp 
+
+PCX__FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX__FRA.res : $*.rc pcx.h
+  rc -cc 33 -cp 850 -r $*
+
+PCX__FRA.hlp: $*.ipf pcx.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: PCX__NLD.dll PCX__NLD.hlp 
+
+PCX__NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+PCX__NLD.res : $*.rc pcx.h
+  rc -cc 31 -cp 850 -r $*
+
+PCX__NLD.hlp: $*.ipf pcx.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf 
+
+

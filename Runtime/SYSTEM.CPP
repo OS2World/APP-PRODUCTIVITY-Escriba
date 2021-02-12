@@ -86,6 +86,7 @@ static BOOL SH__PlayResource ( int Sound ) {
    extern MRESULT APIENTRY Sys_DefDialogProc ( HWND Window, ULONG Message, MPARAM Parm1, MPARAM Parm2 ) { return ( WinDefDlgProc ( Window, Message, Parm1, Parm2 ) ) ; } 
    extern MRESULT APIENTRY Sys_DefWindowProc ( HWND Window, ULONG Message, MPARAM Parm1, MPARAM Parm2 ) { return ( WinDefWindowProc ( Window, Message, Parm1, Parm2 ) ) ; }
    extern void    Sys_DeleteCriticalSection ( CRITICAL_SECTION *control ) { control++ ; }
+   extern void    Sys_DestroyWindow ( HWND Window ) { WinDestroyWindow ( Window ) ; }
    extern void    Sys_EnableWindow ( HWND Window, BOOL fEnable ) { WinEnableWindow ( Window, fEnable ) ; }
    extern int     Sys_EndDialog ( HWND Dialog, BOOL Status ) { return ( (int) WinDismissDlg ( Dialog, Status ) ) ; }
    extern void    Sys_EnterCriticalSection ( CRITICAL_SECTION *control ) { DosEnterCritSec ( ) ; control ++ ; }
@@ -141,6 +142,7 @@ static BOOL SH__PlayResource ( int Sound ) {
    extern LRESULT CALLBACK Sys_DefDialogProc ( HWND Window, MESG Message, MPARAM1 Parm1, MPARAM2 Parm2 ) { return ( DefDlgProc ( Window, Message, Parm1, Parm2 ) ) ; } 
    extern LRESULT CALLBACK Sys_DefWindowProc ( HWND Window, MESG Message, MPARAM1 Parm1, MPARAM2 Parm2 ) { return ( DefWindowProc ( Window, Message, Parm1, Parm2 ) ) ; }
    extern void    Sys_DeleteCriticalSection ( CRITICAL_SECTION *control ) { DeleteCriticalSection ( control ) ; }
+   extern void    Sys_DestroyWindow ( HWND Window ) { DestroyWindow ( Window ) ; }
    extern void    Sys_EnableWindow ( HWND Window, BOOL fEnable ) { EnableWindow ( Window, fEnable ) ; }
    extern int     Sys_EndDialog ( HWND Dialog, BOOL Status ) { return ( EndDialog ( Dialog, Status ) ) ; }
    extern void    Sys_EnterCriticalSection ( CRITICAL_SECTION *control ) { EnterCriticalSection ( control ) ; }

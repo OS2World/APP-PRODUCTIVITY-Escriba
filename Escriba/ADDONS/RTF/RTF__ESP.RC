@@ -1,0 +1,74 @@
+#include "System.h"
+
+#include "Controls.h"
+#include "RTF.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "RTF",                //   Application Name.
+  "Espa¤ol",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: enero, febrero, marzo, abril, mayo, junio,                       *
+ *   julio, agosto, setiembre, octubre, noviembre, diciembre.               *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "RTF"                                                 0, 10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versi¢n 0.97"                                        0, 10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 diciembre 1998"                                      0, 10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "M¢dulo para importar y exportar RTF",                 0, 10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                  0, 10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                             0, 10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                      0, 10, 38, 220,  8
+    CTEXT "Versi¢n en espa¤ol"                                   0, 10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_IMPORT
+{
+  DIALOG "", IDD_CONFIGURE_IMPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Opciones para importaci¢n",0,                      0,  0, 200,100
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXPORT
+{
+  DIALOG "", IDD_CONFIGURE_EXPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Opciones para exportaci¢n",     0,                        0,  0, 200,100
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                     "M¢dulo para importar y exportar RTF"
+  IDS_TITLE1                    REVISION
+  IDS_HELPTITLE                 "Ayuda de 'RTF'"
+  IDS_ERROR_CREATEHELP          "ERROR: No se puede crear la instancia de ayuda. C¢digo %08lX."
+
+  IDS_MAJORTAB                  "RTF"
+
+  IDS_ERROR_OPEN_VERIFY         "ERROR: No se pudo abrir el fichero para verificarlo."
+  IDS_ERROR_MEMORY_VERIFY       "ERROR: No se pudo conseguir memoria suficiente para verificarlo al fichero."
+  IDS_ERROR_INVALID             "ERROR: Fichero 'RTF' es inv lido."
+  IDS_ERROR_OPEN_LOAD           "ERROR: No se pudo abrir el fichero para cargarlo."
+  IDS_ERROR_MEMORY_OPEN         "ERROR: No se pudo conseguir memoria suficiente para cargarlo al fichero."
+  IDS_ERROR_WRITE               "ERROR: No se pudo grabar todo el fichero al disco."
+}

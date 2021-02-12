@@ -1,0 +1,86 @@
+#include "System.h"
+
+#include "Controls.h"
+#include "HTML.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "HTML",               //   Application Name.
+  "Fran‡ais",           //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: janvier, f‚vrier, mars, avril, mai, juin,                        *
+ *   juillet, ao–t, septembre, octobre, novembre, d‚cembre.                 *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "HTML"                                                 0, 10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0,97"                                        0, 10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 d‚cembre 1998"                                      0, 10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Module d'import/export de HTML pour Escriba",         0, 10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                  0, 10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                             0, 10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                      0, 10, 38, 220,  8
+    CTEXT "Version fran‡aise"                                    0, 10, 30, 220,  8
+
+    DEFPUSHBUTTON "~Ok"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_IMPORT
+{
+  DIALOG "", IDD_CONFIGURE_IMPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Options d'importation",  0,                        0,  0, 200,100
+
+    LTEXT "Police normale"             0,                        4, 80, 106,  8
+    CONTROL "",                        IDD_CONFIGURE_FONT,     110,  0,  86, 88, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Police machine … ‚crire"    0,                        4, 68, 106,  8
+    CONTROL "",                        IDD_CONFIGURE_TTFONT,   110,  0,  86, 76, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+
+    LTEXT "Taille",                    0,                        4, 56, 106,  8
+    CONTROL "",                        IDD_CONFIGURE_SIZE,     110,  0,  86, 64, COMBOBOX_CLASS, WS_VISIBLE | WS_GROUP | WS_TABSTOP | CBS_DROPDOWNLIST
+  }
+}
+
+DLGTEMPLATE IDD_CONFIGURE_EXPORT
+{
+  DIALOG "", IDD_CONFIGURE_EXPORT, 0, 0, 200, 100, FS_NOBYTEALIGN | NOT FS_DLGBORDER
+  {
+    GROUPBOX "Options d'exportation",         0,                        0,  0, 200,100
+
+    AUTOCHECKBOX "Utiliser les extensions de Netscape", IDD_CONFIGURE_NETSCAPE, 4, 80, 192, 8
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                     "Module d'import/export de HTML"
+  IDS_TITLE1                    REVISION
+  IDS_HELPTITLE                 "Aide 'HTML'"
+  IDS_ERROR_CREATEHELP          "Erreur : Impossible d'initialiser l'aide.  Code %08lX."
+
+  IDS_MAJORTAB                  "HTML"
+  IDS_PTS                       "pt"
+
+  IDS_ERROR_OPEN_VERIFY         "Erreur : Impossible d'ouvrir le fichier pour v‚rification."
+  IDS_ERROR_MEMORY_VERIFY       "Erreur : Impossible d'allouer la m‚moire pour contenir le fichier."
+  IDS_ERROR_INVALID             "Erreur : Invalid HTML file."
+  IDS_ERROR_OPEN_LOAD           "Erreur : Impossible d'ouvrir le fichier pour le charger."
+  IDS_ERROR_MEMORY_OPEN         "Erreur : Impossible d'allouer la m‚moire pour charger le fichier."
+  IDS_ERROR_WRITE               "Erreur : Impossible d'‚crire tout le fichier sur disque."
+}

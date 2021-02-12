@@ -1,0 +1,27 @@
+# Build English language elements of Escriba.
+# This module is intended to be included into a more complete Make file.
+
+English: $*.dll $*.hlp $*.inf
+
+English.inf: $*.hlp
+  If Exist $*.inf Erase $*.inf
+  HLP2INF $*.hlp
+
+English.hlp: English\English.ipf Escriba.H Escriba.BMP \
+  English\About.bmp    English\BarCode.bmp  English\ConfigEx.bmp English\DateFmt.bmp  \
+  English\Default0.bmp English\Default1.bmp English\Default2.bmp English\Default3.bmp \
+  English\Default4.bmp English\Default5.bmp English\FileDlg.bmp  English\Indent.bmp   \
+  English\Margins.bmp  English\Prefer.bmp   English\Profile.bmp  English\Search.bmp   \
+  English\Spell.bmp    English\Tabs.bmp     English\ZoomSet.bmp
+  ipfcomp /D:1 /C:850 /L:ENU English\English.ipf
+
+English.dll: English\English.def English\English.res dll.obj
+  link386 /nologo dll, English.dll /align:16, nul,, English\English ;
+  rc -n English\English.res $*.dll
+  eautil /s English.dll
+  erase eas\*.dll
+  rd eas
+
+English\English.res: English\English.rc Escriba.BMP Escriba.ICO Escriba.H ..\RunTime\System.H ..\RunTime\Controls.H
+  rc -n -cc 1 -cp 850 -d __OS2__ -i . -i ..\runtime -r English\English
+

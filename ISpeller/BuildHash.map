@@ -1,0 +1,184 @@
+Stack Allocation = 60000 bytes
+
+ buildhash
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000013A8H CODE32                 CODE 32-bit
+               at offset 00000000 010E4H bytes from BuildHash.obj (BuildHash.c)
+               at offset 000010e4 000B2H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00001198 001F8H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+               at offset 00001390 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\SCTDT.C)
+               at offset 000013a0 00008H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\WCTDT.C)
+
+ 0002:00000000 000000E20H DATA32                 DATA 32-bit
+               at offset 00000000 00E00H bytes from BuildHash.obj (BuildHash.c)
+               at offset 00000e00 0000EH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00000e10 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00000E20 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00000E20 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:00000E20 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00000E20 000000000H CONST32                CONST 32-bit
+ 0002:00000E20 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00000E20 000000018H EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 0000000c 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00000E38 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:00000E38 000000000H BSS32                  BSS 32-bit
+ 0002:00000E38 000000238H c_common               BSS 32-bit
+ 0002:00001070 00000EA60H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0002:00001024       @BSSE:\Projects\ISpeller\BuildHash.c
+ 0000:00000000  Imp  addvheader           (ISPELLER.149)
+ 0000:00000000  Imp  calloc               (DDE4MBS.calloc)
+ 0002:00000E38       Cfile
+ 0000:00000000  Imp  chartypes            (ISPELLER.144)
+ 0000:00000000  Imp  chupcase             (ISPELLER.128)
+ 0000:00000000  Imp  combinecaps          (ISPELLER.20)
+ 0002:00001030       cstat
+ 0002:00000F28       Dfile
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0002:00001050       dstat
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  fflush               (DDE4MBS.fflush)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0000:00000000  Imp  hash                 (ISPELLER.43)
+ 0000:00000000  Imp  hashheader           (ISPELLER.152)
+ 0000:00000000  Imp  hashsize             (ISPELLER.138)
+ 0000:00000000  Imp  hashtbl              (ISPELLER.101)
+ 0002:00000F2C       Hfile
+ 0000:00000000  Imp  icharcmp             (ISPELLER.107)
+ 0000:00000000  Imp  icharcpy             (ISPELLER.112)
+ 0002:00000F30       Lfile
+ 0001:00000D38       main
+ 0000:00000000  Imp  makedent             (ISPELLER.108)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0001:00000000       myfree
+ 0001:0000004C       mymalloc
+ 0001:00000004       myrealloc
+ 0000:00000000  Imp  numpflags            (ISPELLER.140)
+ 0000:00000000  Imp  numsflags            (ISPELLER.142)
+ 0000:00000000  Imp  pflaglist            (ISPELLER.141)
+ 0000:00000000  Imp  rewind               (DDE4MBS.rewind)
+ 0002:00000F34       Sfile
+ 0000:00000000  Imp  sflaglist            (ISPELLER.143)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  strtoichar           (ISPELLER.157)
+ 0000:00000000  Imp  strtosichar          (ISPELLER.28)
+ 0000:00000000  Imp  upcase               (ISPELLER.78)
+ 0000:00000000  Imp  whatcap              (ISPELLER.96)
+ 0000:00000000  Imp  yyinit               (ISPELLER.89)
+ 0000:00000000  Imp  yyopen               (ISPELLER.90)
+ 0000:00000000  Imp  yyparse              (ISPELLER.122)
+ 0002:00000E04       _argc
+ 0002:00000E08       _argv
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0002:00000E38       _edata
+ 0002:00001070       _end
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0002:00000E00       _exeentry
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _fscanfieee          (DDE4MBS._fscanfieee)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0001:00001198       _setuparg
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _stat                (DDE4MBS._stat)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0001:000010E4       __RunExitList
+ 0001:00001390       __sctordtorInit
+ 0001:00001398       __sctordtorTerm
+ 0001:000013A0       __wctordtorInit
+ 0001:000013A4       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0000:00000000  Imp  _fscanfieee          (DDE4MBS._fscanfieee)
+ 0000:00000000  Imp  combinecaps          (ISPELLER.20)
+ 0000:00000000  Imp  _printfieee          (DDE4MBS._printfieee)
+ 0000:00000000  Imp  strtosichar          (ISPELLER.28)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  yyparse              (ISPELLER.122)
+ 0000:00000000  Imp  hash                 (ISPELLER.43)
+ 0000:00000000  Imp  strtoichar           (ISPELLER.157)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  hashheader           (ISPELLER.152)
+ 0000:00000000  Imp  addvheader           (ISPELLER.149)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  makedent             (ISPELLER.108)
+ 0000:00000000  Imp  chartypes            (ISPELLER.144)
+ 0000:00000000  Imp  sflaglist            (ISPELLER.143)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  numsflags            (ISPELLER.142)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  pflaglist            (ISPELLER.141)
+ 0000:00000000  Imp  numpflags            (ISPELLER.140)
+ 0000:00000000  Imp  _stat                (DDE4MBS._stat)
+ 0000:00000000  Imp  hashsize             (ISPELLER.138)
+ 0000:00000000  Imp  calloc               (DDE4MBS.calloc)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  upcase               (ISPELLER.78)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  icharcmp             (ISPELLER.107)
+ 0000:00000000  Imp  fflush               (DDE4MBS.fflush)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  rewind               (DDE4MBS.rewind)
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0000:00000000  Imp  yyinit               (ISPELLER.89)
+ 0000:00000000  Imp  yyopen               (ISPELLER.90)
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  icharcpy             (ISPELLER.112)
+ 0000:00000000  Imp  chupcase             (ISPELLER.128)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  whatcap              (ISPELLER.96)
+ 0000:00000000  Imp  hashtbl              (ISPELLER.101)
+ 0001:00000000       myfree
+ 0001:00000004       myrealloc
+ 0001:0000004C       mymalloc
+ 0001:00000D38       main
+ 0001:000010E4       __RunExitList
+ 0001:00001198       _setuparg
+ 0001:00001390       __sctordtorInit
+ 0001:00001398       __sctordtorTerm
+ 0001:000013A0       __wctordtorInit
+ 0001:000013A4       __wctordtorTerm
+ 0002:00000E00       _exeentry
+ 0002:00000E04       _argc
+ 0002:00000E08       _argv
+ 0002:00000E38       _edata
+ 0002:00000E38       Cfile
+ 0002:00000F28       Dfile
+ 0002:00000F2C       Hfile
+ 0002:00000F30       Lfile
+ 0002:00000F34       Sfile
+ 0002:00001024       @BSSE:\Projects\ISpeller\BuildHash.c
+ 0002:00001030       cstat
+ 0002:00001050       dstat
+ 0002:00001070       _end
+
+Program entry point at 0001:00001100

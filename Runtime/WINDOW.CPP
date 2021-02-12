@@ -182,6 +182,16 @@ void Window::Update ( ) {
 
 /***************************************************************************
  *                                                                         *
+ *  Window: Destroy Method.                                                *
+ *                                                                         *
+ ***************************************************************************/
+
+void Window::Destroy ( ) {
+   Sys_DestroyWindow ( Handle ) ;
+} /* endmethod */
+
+/***************************************************************************
+ *                                                                         *
  *  Window: Positioning Methods                                            *
  *                                                                         *
  ***************************************************************************/
@@ -994,8 +1004,39 @@ Slider::Slider ( HWND control, HWND entryfield ) : Window ( control ) {
    Enable ( FALSE ) ;
 } /* endmethod */
 
+Slider::Slider ( HWND control, ULONG Level, ULONG minlevel, ULONG maxlevel, int divisor, char *suffix ) : 
+   Window(control), EntryField(0), MinLevel(minlevel), MaxLevel(maxlevel), Divisor(divisor), Suffix(suffix) {
+
+   char Text [20] ;
+
+   #ifdef __OS2__
+
+      // Set left label.
+      sprintf ( Text, "%i%s", MinLevel/Divisor, Suffix ) ;
+      SendMessage ( SLM_SETSCALETEXT, MPFROMSHORT(0), MP2FROMP(Text) ) ;
+
+      // Set center label.
+      sprintf ( Text, "%i%s", (MinLevel+(MaxLevel-MinLevel)/2)/Divisor, Suffix ) ;
+      SendMessage ( SLM_SETSCALETEXT, MPFROMSHORT(50), MP2FROMP(Text) ) ;
+
+      // Set right label.
+      sprintf ( Text, "%i%s", MaxLevel/Divisor, Suffix ) ;
+      SendMessage ( SLM_SETSCALETEXT, MPFROMSHORT(100), MP2FROMP(Text) ) ;
+
+      // Position the slider.
+      short Tick = short ( ( double ( Level - MinLevel ) / ( Divisor / 100.0 ) ) / ( double ( MaxLevel - MinLevel ) / Divisor ) ) ;
+      SendMessage ( SLM_SETSLIDERINFO, MPFROM2SHORT(SMA_SLIDERARMPOSITION,SMA_INCREMENTVALUE), MPFROMSHORT(Tick) ) ;
+
+   #endif // __OS2__
+
+} /* endmethod */
+
+Slider::Slider ( HWND control ) : Window ( control ), EntryField(0) {
+   Enable ( FALSE ) ;
+} /* endmethod */
+
 Slider::~Slider ( ) {
-   delete EntryField ;
+   delete EntryField, EntryField = 0 ;
 } /* endmethod */
 
 void Slider::Set ( ULONG Level, BOOL SetText ) {
@@ -1009,7 +1050,7 @@ void Slider::Set ( ULONG Level, BOOL SetText ) {
    #endif // __OS2__
 
    // Set the entryfield text.
-   if ( SetText ) {
+   if ( SetText && EntryField ) {
       char Text [20] ;
       sprintf ( Text, "%.1lf%s", double(Level)/Divisor, Suffix ) ;
       EntryField->SetText ( Text ) ;
@@ -1032,9 +1073,11 @@ ULONG Slider::Read ( ) {
    #endif // __OS2__
 
    // Update the entry field.
-   char Text [20] ;
-   sprintf ( Text, "%.1lf%s", double(Level)/Divisor, Suffix ) ;
-   EntryField->SetText ( Text ) ;
+   if ( EntryField ) {
+      char Text [20] ;
+      sprintf ( Text, "%.1lf%s", double(Level)/Divisor, Suffix ) ;
+      EntryField->SetText ( Text ) ;
+   } /* endif */
 
    // Return the result.
    return ( Level ) ;
@@ -1042,7 +1085,8 @@ ULONG Slider::Read ( ) {
 } /* endmethod */
 
 void Slider::Enable ( int Flag ) {
-   EntryField->Enable ( Flag ) ;
+   if ( EntryField ) 
+      EntryField->Enable ( Flag ) ;
    Window::Enable ( Flag ) ;
 } /* endmethod */
 
@@ -1112,6 +1156,14 @@ void ListBox::SelectItem ( int Index ) {
    #endif
 } /* endmethod */
 
+int ListBox::QueryCount ( ) {
+   #ifdef __OS2__
+      return ( SHORT1FROMMR ( Sys_SendMessage ( Handle, LM_QUERYITEMCOUNT, 0, 0 ) ) ) ;
+   #else
+      return ( 0 ) ;  // ELABORATE
+   #endif
+} /* endmethod */
+
 int ListBox::QuerySelection ( int Previous ) {
    #ifdef __OS2__
       return ( SHORT1FROMMR ( Sys_SendMessage ( Handle, LM_QUERYSELECTION, MPFROMSHORT(SHORT(Previous)), 0 ) ) ) ;
@@ -1139,10 +1191,6 @@ int ListBox::QueryTopIndex ( ) {
 
 void ListBox::QueryItemText ( int Index, char *Text, int TextSize ) {
    Sys_SendMessage ( Handle, LM_QUERYITEMTEXT, MPFROM2SHORT(Index,TextSize), MP2FROMP(Text) ) ;
-} /* endmethod */
-
-void ListBox::Enable ( int Flag ) {
-   Sys_EnableWindow ( Handle, Flag ) ;
 } /* endmethod */
 
 

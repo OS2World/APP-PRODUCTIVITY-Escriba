@@ -45,8 +45,8 @@ extern int APIENTRY Speller_UnCaps ( char *Word );
 
  /* Identification */
 
-#define REVISION     "ISpeller 0.96d"
-#define REVISION_NO  (96)
+#define REVISION     "ISpeller 0.97"
+#define REVISION_NO  (97)
 
 
  /* Local Resource Identifiers */

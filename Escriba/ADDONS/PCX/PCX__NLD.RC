@@ -1,0 +1,64 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Pcx.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PCX",                //   Application Name.
+  "Nederlands",         //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: januari, februari, maart, april, mei, juni,                      *
+ *   juli, augustus, september, october, november, december.                *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Pcx"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versie 0.97"                                        0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 december 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "PCX Grafische Import Module voor Escriba"    ,       0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Nederlandse versie"                                  0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "PCX Grafische Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'PCX Grafische' Hulp"
+  IDS_ERROR_CREATEHELP                  "FOUT: Hulpsysteem kan niet gemaakt worden.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FOUT(PCX): Kan bestand '%s' niet openen om het te controleren."
+  IDS_ERROR_FILE_TOO_SMALL              "FOUT(PCX): Ongeldig bestand. Te klein."
+  IDS_ERROR_INVALID_FILE_ID             "FOUT(PCX): ongeldige handtekening."
+  IDS_ERROR_PLANAR                      "FOUT(PCX): 'Plane-oriented' bestand niet geaccepteerd."
+  IDS_ERROR_INVALID_PALETTE             "FOUT(PCX): Ongeldig bestand. Palette niet als verwacht."
+  IDS_ERROR_INVALID_PALETTE_SIZE        "FOUT(PCX): Niet ondersteunde palette-afmeting.  Palette heeft %i ingangen."
+  IDS_ERROR_MEMORY1                     "FOUT(PCX): Kan geen buffer voor het plaatje vinden."
+  IDS_ERROR_MEMORY2                     "FOUT(PCX): Kan geen geheugen vinden voor bitmap-header."
+  IDS_ERROR_DC_OPEN                     "FOUT(PCX): Geheugen device context kan niet geopend worden. Status %i."
+  IDS_ERROR_PS_CREATE                   "FOUT(PCX): Kan geen presentatieruimte vinden.  Status %i."
+  IDS_ERROR_CREATE_BITMAP               "FOUT(PCX): Kan bitmap niet opbouwen. Status %i."
+  IDS_ERROR_OPEN_FOR_LOAD               "FOUT(PCX): Kan bestand '%s' niet openen om van te laden."
+  IDS_ERROR_MEMORY3                     "FOUT(PCX): Kan geen geheugen vinden om block in te laden.  %i bytes werden aangevraagd."
+}
+

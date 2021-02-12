@@ -24,7 +24,7 @@ CircularQueue::CircularQueue ( char *name, int size, int count ) :
       Lock.SetDebug ( TRUE ) ;
    #endif // DEBUG_LOCK
 
-   Array = (char*) malloc ( Size * Count ) ;
+   Array = new char [ Size * Count ] ;
    DataAvailable.Reset() ;
    SpaceAvailable.Post() ;
 
@@ -33,7 +33,7 @@ CircularQueue::CircularQueue ( char *name, int size, int count ) :
 CircularQueue::~CircularQueue ( ) {
 
    if ( Array ) 
-      free ( Array ) ;
+      delete [] Array, Array = 0 ;
 
 } /* endmethod */
 

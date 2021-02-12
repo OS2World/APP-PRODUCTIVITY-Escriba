@@ -1,0 +1,61 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Bmp.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "BMP",                //   Application Name.
+  "English",            //   Specific language name.
+  850, 437, 852, 860, 863, 865, 932, 934, 936, 938, 942, 944, 946, 948, 950, 0
+}
+
+/****************************************************************************
+ * Months: January, February, March, April, May, June,                      *
+ *   July, August, September, October, November, December.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Bmp"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 December 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Bitmap Graphic Import Module for Escriba",           0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "English Version"                                     0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "Bitmap Graphic Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'Bitmap Graphic' Help Facility"
+  IDS_ERROR_CREATEHELP                  "ERROR: Unable to create help instance.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "ERROR(BMP): Unable to open file '%s' to verify it."
+  IDS_ERROR_FILE_TOO_SMALL              "ERROR(BMP): Invalid bitmap file.  Too small."
+  IDS_ERROR_INVALID_HEADER_SIZE         "ERROR(BMP): Unrecognized bitmap version.  Header size %i bytes."
+  IDS_ERROR_INVALID_HEADER_ID           "ERROR(BMP): Invalid file header."
+  IDS_ERROR_MEMORY1                     "ERROR(BMP): Unable to allocate buffer for image."
+  IDS_ERROR_MEMORY2                     "ERROR(BMP): Unable to allocate memory for bitmap header."
+  IDS_ERROR_DC_OPEN                     "ERROR(BMP): Unable to open memory device context.  Status %08X."
+  IDS_ERROR_PS_CREATE                   "ERROR(BMP): Unable to create memory presentation space.  Status %08X."
+  IDS_ERROR_CREATE_BITMAP               "ERROR(BMP): Unable to create bitmap.  Status %08X."
+  IDS_ERROR_OPEN_FOR_IMPORT             "ERROR(BMP): Unable to open file '%s' to load from."
+  IDS_ERROR_MEMORY3                     "ERROR(BMP): Unable to allocate memory to load block into.  %i bytes were requested."
+}

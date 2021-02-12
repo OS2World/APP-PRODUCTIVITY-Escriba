@@ -1,0 +1,8 @@
+;
+;       JPEG_FRA: JPEG Graphic Import Module for Escriba (Fran‡ais)
+;
+LIBRARY 
+DESCRIPTION 'JPEG_FRA: JPEG Graphic Import Module for Escriba (Fran‡ais)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

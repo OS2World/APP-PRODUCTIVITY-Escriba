@@ -1,0 +1,8 @@
+;
+;       JPEG_ESP: JPEG Graphic Import Module for Escriba (Espa¤ol)
+;
+LIBRARY 
+DESCRIPTION 'JPEG_ESP: JPEG Graphic Import Module for Escriba (Espa¤ol)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

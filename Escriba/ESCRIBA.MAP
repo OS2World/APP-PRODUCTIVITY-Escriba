@@ -1,0 +1,2874 @@
+
+ escriba
+
+ Start         Length     Name                   Class
+ 0001:00000000 000097F9CH CODE32                 CODE 32-bit
+               at offset 00000000 023D0H bytes from ADDONS.OBJ (ADDONS.CPP)
+               at offset 000023d0 00E08H bytes from BARCODES.OBJ (BARCODES.CPP)
+               at offset 000031d8 01CA4H bytes from DateFmt.OBJ (DATEFMT.CPP)
+               at offset 00004e7c 0082CH bytes from DEBUG.OBJ (DEBUG.CPP)
+               at offset 000056a8 05B98H bytes from DEFAULTS.OBJ (DEFAULTS.CPP)
+               at offset 0000b240 006ACH bytes from DEVICE.OBJ (DEVICE.CPP)
+               at offset 0000b8ec 03AB4H bytes from Dialog2.OBJ (DIALOG2.CPP)
+               at offset 0000f3a0 03AB0H bytes from DOCFRAME.OBJ (DOCFRAME.CPP)
+               at offset 00012e50 01A88H bytes from DOCPARMS.OBJ (DOCPARMS.CPP)
+               at offset 000148d8 04578H bytes from DOCSUP.OBJ (DOCSUP.CPP)
+               at offset 00018e50 1AA08H bytes from DOCUMENT.OBJ (DOCUMENT.CPP)
+               at offset 00033858 103A8H bytes from DOCWIN.OBJ (DOCWIN.CPP)
+               at offset 00043c00 027D8H bytes from ESCRIBA.OBJ (ESCRIBA.CPP)
+               at offset 000463d8 00B5CH bytes from EXCEPT.OBJ (EXCEPT.CPP)
+               at offset 00046f34 01084H bytes from FONT.OBJ (font.cpp)
+               at offset 00047fb8 03570H bytes from FORMAT.OBJ (FORMAT.CPP)
+               at offset 0004b528 00170H bytes from FRAME.OBJ (FRAME.CPP)
+               at offset 0004b698 01E70H bytes from GClass.OBJ (GCLASS.CPP)
+               at offset 0004d508 02468H bytes from HRULER.OBJ (HRULER.CPP)
+               at offset 0004f970 020C8H bytes from IMP_EXP.OBJ (IMP_EXP.CPP)
+               at offset 00051a38 007E4H bytes from INDENT.OBJ (INDENT.CPP)
+               at offset 0005221c 0E3DCH bytes from MAIN.OBJ (MAIN.CPP)
+               at offset 000605f8 020E8H bytes from MARGINS.OBJ (MARGINS.CPP)
+               at offset 000626e0 0C6CCH bytes from MENUBMP.OBJ (MENUBMP.CPP)
+               at offset 0006edac 01344H bytes from MODULE.OBJ (MODULE.CPP)
+               at offset 000700f0 00C50H bytes from PAINTER.OBJ (PAINTER.CPP)
+               at offset 00070d40 00600H bytes from PREFER.OBJ (PREFER.CPP)
+               at offset 00071340 01464H bytes from PRINTER.OBJ (PRINTER.CPP)
+               at offset 000727a4 00888H bytes from PROCESS.OBJ (PROCESS.CPP)
+               at offset 0007302c 031C0H bytes from Profile2.OBJ (PROFILE2.CPP)
+               at offset 000761ec 001FCH bytes from READERS.OBJ (READERS.CPP)
+               at offset 000763e8 01800H bytes from SEARCH.OBJ (SEARCH.CPP)
+               at offset 00077be8 0120CH bytes from SEGMENT.OBJ (SEGMENT.CPP)
+               at offset 00078df4 005E0H bytes from SETZOOM.OBJ (SETZOOM.CPP)
+               at offset 000793d4 020ECH bytes from SPELLER.OBJ (SPELLER.CPP)
+               at offset 0007b4c0 04AB4H bytes from STATE.OBJ (STATE.CPP)
+               at offset 0007ff74 0079CH bytes from STATIC.OBJ (STATIC.CPP)
+               at offset 00080710 00FFCH bytes from TABS.OBJ (TABS.CPP)
+               at offset 0008170c 018E4H bytes from TEXT.OBJ (TEXT.CPP)
+               at offset 00082ff0 00170H bytes from THREAD.OBJ (THREAD.CPP)
+               at offset 00083160 005C8H bytes from TXTBLOCK.OBJ (TXTBLOCK.CPP)
+               at offset 00083728 02054H bytes from VRULER.OBJ (VRULER.CPP)
+               at offset 0008577c 06958H bytes from WORKPAGE.OBJ (WORKPAGE.CPP)
+               at offset 0008c0d4 0B5ACH bytes from WRKSPACE.OBJ (WRKSPACE.CPP)
+               at offset 00097680 000B2H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00097734 0011CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\CTORDTOR.C)
+               at offset 00097850 0034CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\CPPLIB\SOURCE\EXCEPT.CPP)
+               at offset 00097b9c 001F0H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\CPPLIB\SOURCE\V_NEW.CPP)
+               at offset 00097d8c 001F8H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\SETUPARG.ASM)
+               at offset 00097f84 00010H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\SCTDT.C)
+               at offset 00097f94 00008H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\WCTDT.C)
+
+ 0002:00000000 000008D90H DATA32                 DATA 32-bit
+               at offset 00000000 00130H bytes from ADDONS.OBJ (ADDONS.CPP)
+               at offset 00000130 00110H bytes from BARCODES.OBJ (BARCODES.CPP)
+               at offset 00000240 00320H bytes from DateFmt.OBJ (DATEFMT.CPP)
+               at offset 00000560 00030H bytes from DEBUG.OBJ (DEBUG.CPP)
+               at offset 00000590 00350H bytes from DEFAULTS.OBJ (DEFAULTS.CPP)
+               at offset 000008e0 000A0H bytes from DEVICE.OBJ (DEVICE.CPP)
+               at offset 00000980 00F70H bytes from Dialog2.OBJ (DIALOG2.CPP)
+               at offset 000018f0 002A0H bytes from DOCFRAME.OBJ (DOCFRAME.CPP)
+               at offset 00001b90 00030H bytes from DOCPARMS.OBJ (DOCPARMS.CPP)
+               at offset 00001bc0 00090H bytes from DOCSUP.OBJ (DOCSUP.CPP)
+               at offset 00001c50 01290H bytes from DOCUMENT.OBJ (DOCUMENT.CPP)
+               at offset 00002ee0 00BD0H bytes from DOCWIN.OBJ (DOCWIN.CPP)
+               at offset 00003ab0 004D0H bytes from ESCRIBA.OBJ (ESCRIBA.CPP)
+               at offset 00003f80 00230H bytes from EXCEPT.OBJ (EXCEPT.CPP)
+               at offset 000041b0 00020H bytes from FONT.OBJ (font.cpp)
+               at offset 000041d0 00190H bytes from FORMAT.OBJ (FORMAT.CPP)
+               at offset 00004360 00050H bytes from GClass.OBJ (GCLASS.CPP)
+               at offset 000043b0 00110H bytes from HRULER.OBJ (HRULER.CPP)
+               at offset 000044c0 00210H bytes from IMP_EXP.OBJ (IMP_EXP.CPP)
+               at offset 000046d0 000B0H bytes from INDENT.OBJ (INDENT.CPP)
+               at offset 00004780 027C0H bytes from MAIN.OBJ (MAIN.CPP)
+               at offset 00006f40 001F0H bytes from MARGINS.OBJ (MARGINS.CPP)
+               at offset 00007130 008A0H bytes from MENUBMP.OBJ (MENUBMP.CPP)
+               at offset 000079d0 00120H bytes from MODULE.OBJ (MODULE.CPP)
+               at offset 00007af0 00110H bytes from PAINTER.OBJ (PAINTER.CPP)
+               at offset 00007c00 00020H bytes from PREFER.OBJ (PREFER.CPP)
+               at offset 00007c20 00070H bytes from PRINTER.OBJ (PRINTER.CPP)
+               at offset 00007c90 000B0H bytes from PROCESS.OBJ (PROCESS.CPP)
+               at offset 00007d40 003D0H bytes from Profile2.OBJ (PROFILE2.CPP)
+               at offset 00008110 00170H bytes from SEARCH.OBJ (SEARCH.CPP)
+               at offset 00008280 00040H bytes from SEGMENT.OBJ (SEGMENT.CPP)
+               at offset 000082c0 00080H bytes from SETZOOM.OBJ (SETZOOM.CPP)
+               at offset 00008340 00100H bytes from SPELLER.OBJ (SPELLER.CPP)
+               at offset 00008440 00070H bytes from STATE.OBJ (STATE.CPP)
+               at offset 000084b0 00070H bytes from STATIC.OBJ (STATIC.CPP)
+               at offset 00008520 00110H bytes from TABS.OBJ (TABS.CPP)
+               at offset 00008630 000C0H bytes from TEXT.OBJ (TEXT.CPP)
+               at offset 000086f0 00110H bytes from VRULER.OBJ (VRULER.CPP)
+               at offset 00008800 000D0H bytes from WORKPAGE.OBJ (WORKPAGE.CPP)
+               at offset 000088d0 00460H bytes from WRKSPACE.OBJ (WRKSPACE.CPP)
+               at offset 00008d30 0000EH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00008d40 00010H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\RT\SRC\CTORDTOR.C)
+               at offset 00008d50 00030H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\build\CPPLIB\SOURCE\V_NEW.CPP)
+               at offset 00008d80 00010H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00008D90 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00008D90 000000040H CTOR_DTOR2             DATA 32-bit
+               at offset 00000000 00010H bytes from DEBUG.OBJ (DEBUG.CPP)
+               at offset 00000010 00010H bytes from ESCRIBA.OBJ (ESCRIBA.CPP)
+               at offset 00000020 00010H bytes from MENUBMP.OBJ (MENUBMP.CPP)
+               at offset 00000030 00010H bytes from Profile2.OBJ (PROFILE2.CPP)
+
+ 0002:00008DD0 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00008DD0 0000086F0H CONST32                CONST 32-bit
+               at offset 00000000 00260H bytes from ADDONS.OBJ (ADDONS.CPP)
+               at offset 00000260 00160H bytes from BARCODES.OBJ (BARCODES.CPP)
+               at offset 000003c0 00050H bytes from DateFmt.OBJ (DATEFMT.CPP)
+               at offset 00000410 00100H bytes from DEBUG.OBJ (DEBUG.CPP)
+               at offset 00000510 00160H bytes from DEFAULTS.OBJ (DEFAULTS.CPP)
+               at offset 00000670 00320H bytes from DEVICE.OBJ (DEVICE.CPP)
+               at offset 00000990 00130H bytes from Dialog2.OBJ (DIALOG2.CPP)
+               at offset 00000ac0 001D0H bytes from DOCFRAME.OBJ (DOCFRAME.CPP)
+               at offset 00000c90 003C0H bytes from DOCPARMS.OBJ (DOCPARMS.CPP)
+               at offset 00001050 00490H bytes from DOCSUP.OBJ (DOCSUP.CPP)
+               at offset 000014e0 00BD0H bytes from DOCUMENT.OBJ (DOCUMENT.CPP)
+               at offset 000020b0 004E0H bytes from DOCWIN.OBJ (DOCWIN.CPP)
+               at offset 00002590 00250H bytes from ESCRIBA.OBJ (ESCRIBA.CPP)
+               at offset 000027e0 00890H bytes from EXCEPT.OBJ (EXCEPT.CPP)
+               at offset 00003070 002A0H bytes from FONT.OBJ (font.cpp)
+               at offset 00003310 002D0H bytes from FORMAT.OBJ (FORMAT.CPP)
+               at offset 000035e0 000F0H bytes from GClass.OBJ (GCLASS.CPP)
+               at offset 000036d0 000F0H bytes from HRULER.OBJ (HRULER.CPP)
+               at offset 000037c0 001F0H bytes from IMP_EXP.OBJ (IMP_EXP.CPP)
+               at offset 000039b0 00040H bytes from INDENT.OBJ (INDENT.CPP)
+               at offset 000039f0 002A0H bytes from MAIN.OBJ (MAIN.CPP)
+               at offset 00003c90 000F0H bytes from MARGINS.OBJ (MARGINS.CPP)
+               at offset 00003d80 00780H bytes from MENUBMP.OBJ (MENUBMP.CPP)
+               at offset 00004500 00140H bytes from MODULE.OBJ (MODULE.CPP)
+               at offset 00004640 00100H bytes from PAINTER.OBJ (PAINTER.CPP)
+               at offset 00004740 00010H bytes from PREFER.OBJ (PREFER.CPP)
+               at offset 00004750 000C0H bytes from PRINTER.OBJ (PRINTER.CPP)
+               at offset 00004810 000F0H bytes from PROCESS.OBJ (PROCESS.CPP)
+               at offset 00004900 00490H bytes from Profile2.OBJ (PROFILE2.CPP)
+               at offset 00004d90 00030H bytes from SEARCH.OBJ (SEARCH.CPP)
+               at offset 00004dc0 00080H bytes from SEGMENT.OBJ (SEGMENT.CPP)
+               at offset 00004e40 00030H bytes from SETZOOM.OBJ (SETZOOM.CPP)
+               at offset 00004e70 00210H bytes from SPELLER.OBJ (SPELLER.CPP)
+               at offset 00005080 003D0H bytes from STATE.OBJ (STATE.CPP)
+               at offset 00005450 00030H bytes from STATIC.OBJ (STATIC.CPP)
+               at offset 00005480 00040H bytes from TABS.OBJ (TABS.CPP)
+               at offset 000054c0 00130H bytes from TEXT.OBJ (TEXT.CPP)
+               at offset 000055f0 00030H bytes from THREAD.OBJ (THREAD.CPP)
+               at offset 00005620 000A0H bytes from TXTBLOCK.OBJ (TXTBLOCK.CPP)
+               at offset 000056c0 000B0H bytes from VRULER.OBJ (VRULER.CPP)
+               at offset 00005770 006B0H bytes from WORKPAGE.OBJ (WORKPAGE.CPP)
+               at offset 00005e20 028D0H bytes from WRKSPACE.OBJ (WRKSPACE.CPP)
+
+ 0002:000114C0 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:000114C0 000000018H EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 0000000c 0000CH bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:000114D8 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:000114D8 000000000H BSS32                  BSS 32-bit
+ 0002:000114D8 000001E38H c_common               BSS 32-bit
+ 0002:00013310 000010000H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from D:\IBMCPP21\LIB\DDE4MBSI.LIB (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0002:00012B64       @BSSE:\Projects\Escriba\ADDONS.CPP
+ 0002:00012DC8       @BSSE:\Projects\Escriba\BARCODES.CPP
+ 0002:000131E8       @BSSE:\Projects\Escriba\DATEFMT.CPP
+ 0002:00011500       @BSSE:\Projects\Escriba\DEBUG.CPP
+ 0002:00012F10       @BSSE:\Projects\Escriba\DEFAULTS.CPP
+ 0002:00012C94       @BSSE:\Projects\Escriba\DEVICE.CPP
+ 0002:00012D38       @BSSE:\Projects\Escriba\DIALOG2.CPP
+ 0002:00012D98       @BSSE:\Projects\Escriba\DOCFRAME.CPP
+ 0002:00012EC8       @BSSE:\Projects\Escriba\DOCPARMS.CPP
+ 0002:00012C4C       @BSSE:\Projects\Escriba\DOCSUP.CPP
+ 0002:00012E14       @BSSE:\Projects\Escriba\DOCUMENT.CPP
+ 0002:00012BA4       @BSSE:\Projects\Escriba\DOCWIN.CPP
+ 0002:00012D74       @BSSE:\Projects\Escriba\ESCRIBA.CPP
+ 0002:00012CAC       @BSSE:\Projects\Escriba\EXCEPT.CPP
+ 0002:00012B1C       @BSSE:\Projects\Escriba\font.cpp
+ 0002:00012CBC       @BSSE:\Projects\Escriba\FORMAT.CPP
+ 0002:00012CDC       @BSSE:\Projects\Escriba\HRULER.CPP
+ 0002:000132B4       @BSSE:\Projects\Escriba\IMP_EXP.CPP
+ 0002:00012C68       @BSSE:\Projects\Escriba\INDENT.CPP
+ 0002:00011504       @BSSE:\Projects\Escriba\MAIN.CPP
+ 0002:00013274       @BSSE:\Projects\Escriba\MARGINS.CPP
+ 0002:00012F90       @BSSE:\Projects\Escriba\MENUBMP.CPP
+ 0002:00012B94       @BSSE:\Projects\Escriba\MODULE.CPP
+ 0002:00012ECC       @BSSE:\Projects\Escriba\PAINTER.CPP
+ 0002:00012C8C       @BSSE:\Projects\Escriba\PREFER.CPP
+ 0002:000131D8       @BSSE:\Projects\Escriba\PRINTER.CPP
+ 0002:000132F8       @BSSE:\Projects\Escriba\PROCESS.CPP
+ 0002:00012E00       @BSSE:\Projects\Escriba\PROFILE2.CPP
+ 0002:00012B40       @BSSE:\Projects\Escriba\SEARCH.CPP
+ 0002:00012F58       @BSSE:\Projects\Escriba\SEGMENT.CPP
+ 0002:000132A4       @BSSE:\Projects\Escriba\SETZOOM.CPP
+ 0002:00012EE8       @BSSE:\Projects\Escriba\SPELLER.CPP
+ 0002:00012B08       @BSSE:\Projects\Escriba\STATE.CPP
+ 0002:00012B7C       @BSSE:\Projects\Escriba\STATIC.CPP
+ 0002:000114D8       @BSSE:\Projects\Escriba\TABS.CPP
+ 0002:00012B20       @BSSE:\Projects\Escriba\TEXT.CPP
+ 0002:00012D08       @BSSE:\Projects\Escriba\VRULER.CPP
+ 0002:00012F70       @BSSE:\Projects\Escriba\WORKPAGE.CPP
+ 0002:00012DD4       @BSSE:\Projects\Escriba\WRKSPACE.CPP
+ 0002:000132FC       @BSSG:\build\CPPLIB\SOURCE\V_NEW.CPP
+ 0000:00000000  Imp  abort                (DDE4MBS.abort)
+ 0001:00079B68       Accept__10DictionaryFPc
+ 0001:00035980       Activate
+ 0000:00000000  Imp  Add2TaskList__FUlPc  (RUNTIME.2813)
+ 0001:0001E37C       AddHandle__9DocumentoFliUl
+ 0001:0008A324       AddLine__9BorradoraFR5Linea
+ 0002:00003BB4       AddonList
+ 0001:00001F98       AddonRegistry_BuildThread__FPv
+ 0001:00000000       Addon_Create__FPc
+ 0001:00001150       AddToMenu__13AddonRegistryFUl
+ 0001:00000BD4       AddToMenu__5AddonFUl
+ 0001:000010C8       Add__13AddonRegistryFP5Addon
+ 0001:0008ADEC       AdjustOffsets__9BorradoraFlT1
+ 0001:0008AC60       AdjustOffset__FlT1RlT3Ul
+ 0001:0003DA6C       AdjustRulerTicks__FUlP4DATAP7_POINTL
+ 0001:0002EB34       AdjustState__9DocumentoFR6EstadoT1UlPcl
+ 0001:0004ABA4       AllowBlock__10SupervisorFv
+ 0001:0004AA18       AllowEdit__10SupervisorFv
+ 0001:0003DA28       AlterWindow
+ 0001:00039C64       ApplyDateFormat
+ 0001:0003B02C       ApplyFooter
+ 0001:0003A79C       ApplyHeader
+ 0001:000397DC       ApplyIndent
+ 0001:000392FC       ApplyMargins
+ 0001:00039518       ApplyTabs
+ 0001:000390B4       ApplyZoom
+ 0000:00000000  Imp  Associate__10HelpWindowFUl (RUNTIME.1602)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  atol                 (DDE4MBS.atol)
+ 0001:0003D410       Backspace
+ 0001:0003D440       BackspaceWord
+ 0001:00039DD0       BarCode
+ 0001:000023D0       Barcodes_Processor
+ 0001:0003C5BC       Bitmap_Command
+ 0001:00092870       Blit__9WorkSpaceFR9WorkSpacelP7_POINTLT2Ul
+ 0001:0004AB38       Block__10SupervisorFv
+ 0001:0003C958       Border_Command
+ 0001:0003D7BC       Bottom
+ 0002:00013308       BreakKey
+ 0000:00000000  Imp  BuildExtendedAttributes__FUlP6EADATA (RUNTIME.1401)
+ 0001:00089B40       BuildGraphic__9BorradoraFP9WorkSpaceP5LineaP7PalabraPUcil
+ 0001:0007CFF8       BuildLine__6EstadoFP9WorkSpaceiT2lPUcT2R7_EstadoT7RiN69
+ 0000:00000000  Imp  BuildMVMTValue__FPvUlP10MVMT_VALUE (RUNTIME.1400)
+ 0000:00000000  Imp  BuildPresParams__FUsPUlT2PPUc (RUNTIME.2811)
+ 0001:00079A60       BuildWord__10DictionaryFPFPvPll_PcPvPcRlT4
+ 0001:00089994       BuildWord__9BorradoraFilT1P9WorkSpace
+ 0001:00001F48       Build__13AddonRegistryFPc
+ 0001:000358F4       Button1DblClk
+ 0001:0003472C       Button1Down
+ 0001:0003F918       Button1Down_AwaitingPoint0__FUlP4DATA7_POINTLT3
+ 0001:0003FBB0       Button1Down_Default__FUlP4DATA7_POINTLT3
+ 0001:0003FC1C       Button1Move_AwaitingPoint1__FUlP4DATA7_POINTLT3
+ 0001:0003FEE0       Button1Move_Default__FUlP4DATA7_POINTLT3
+ 0001:00034F50       Button1Up
+ 0001:0003FF98       Button1Up_AwaitingPoint1__FUlP4DATA7_POINTLT3
+ 0001:00040CDC       Button1Up_Default__FUlP4DATA7_POINTLT3
+ 0001:00034988       Button2Down
+ 0001:00041274       Button2Down_Default__FUlP4DATA7_POINTLT3
+ 0001:00040F14       Button2Down_TouchedGraphicBorder__FUlP4DATA7_POINTLT3i
+ 0001:00040D30       Button2Down_TouchedGraphic__FUlP4DATA7_POINTLT3i
+ 0001:000410F8       Button2Down_TouchedSelectedText__FUlP4DATA7_POINTLT3iT1
+ 0001:00041990       Button2Move_Default__FUlP4DATA7_POINTLT3
+ 0001:000412D0       Button2Move_MoveGraphic__FUlP4DATA7_POINTLT3
+ 0001:00041948       Button2Move_MoveText__FUlP4DATA7_POINTLT3
+ 0001:0004159C       Button2Move_SizeGraphic__FUlP4DATA7_POINTLT3
+ 0001:0003517C       Button2Up
+ 0001:0004234C       Button2Up_Default__FUlP4DATA7_POINTLT3
+ 0001:0004199C       Button2Up_MoveGraphic__FUlP4DATA7_POINTLT3N21
+ 0001:00042298       Button2Up_MoveText__FUlP4DATA7_POINTLT3T1
+ 0001:00041E28       Button2Up_SizeGraphic__FUlP4DATA7_POINTLT3T1
+ 0001:0006D9F4       CancelBitmapThreads__Fv
+ 0001:00049138       CenterPage__9DocumentoFR9BorradoraR6Estadol
+ 0002:00004360       cGREP_errors
+ 0001:000385AC       Change
+ 0001:000386F0       ChangeAll
+ 0001:000310A0       ChangeAll__9DocumentoFPcT1UlT3
+ 0001:0003862C       ChangeFind
+ 0001:00031054       ChangeString__9DocumentoFPcT1UlT3
+ 0001:0003CA04       Char
+ 0000:00000000  Imp  CheckDrive__FiRi     (RUNTIME.2805)
+ 0000:00000000  Imp  CheckMenuItem__FUlUsT1 (RUNTIME.2814)
+ 0000:00000000  Imp  CHILD__FUli          (RUNTIME.9950)
+ 0001:00081A84       Cleanup__4TextFv
+ 0001:000370D4       Clear
+ 0001:0000D194       ClearFileTypeList__Fv
+ 0001:0000D4DC       ClearGraphicTypeList__Fv
+ 0001:0008A308       ClearLines__9BorradoraFv
+ 0001:0003C46C       ClearTab
+ 0001:00032460       ClearTab__9DocumentoFi
+ 0001:00001020       Clear__13AddonRegistryFv
+ 0000:00000000  Imp  Clear__4PoolFv       (RUNTIME.1915)
+ 0000:00000000  Imp  Clear__7ListBoxFv    (RUNTIME.2308)
+ 0000:00000000  Imp  clock                (DDE4MBS.clock)
+ 0001:00034188       Close
+ 0001:0007999C       CloseDictionary__10DictionaryFv
+ 0001:00005264       CloseTimer__Fv
+ 0002:000088D0       Code39Table
+ 0001:0005B348       ColorWheelChanged__23ColorMenuManager_DialogFUl
+ 0001:00036890       Command
+ 0001:0004A4B0       CommandsQueued__10SupervisorFv
+ 0001:0003A850       Command__13Footer_DialogFPvT1
+ 0001:00039FC0       Command__13Header_DialogFPvT1
+ 0001:00038770       Command__15GotoPage_DialogFPvT1
+ 0001:0005AC04       Command__23ColorMenuManager_DialogFPvT1
+ 0001:00059894       Command__24ExpandMenuManager_DialogFPvT1
+ 0001:000583CC       Command__29LineSpacingMenuManager_DialogFPvT1
+ 0000:00000000  Imp  Command__6DialogFPvT1 (RUNTIME.2602)
+ 0001:0004A734       CommenceEdit__10SupervisorFv
+ 0001:00047FB8       CommenceEdit__9DocumentoFv
+ 0001:00081F9C       CommenceLevel__4TextFv
+ 0001:0002E128       CommenceLevel__9DocumentoFv
+ 0001:00097220       Comment__9WorkSpaceFPce
+ 0001:0004A784       CompleteEdit__10SupervisorFv
+ 0001:00047FD4       CompleteEdit__9DocumentoFv
+ 0001:00081FBC       CompleteLevel__4TextFl
+ 0001:0002E158       CompleteLevel__9DocumentoFv
+ 0001:0004C244       compress_ordinary_characters__5cGREPFPi
+ 0001:00085DB8       ComputeBox__7GraficoFP7PalabraR6_RECTLR7_POINTLUl
+ 0001:00085E58       ComputeBox__7GraficoFP7PalabraR7_POINTLR6_SIZELiT4R6_RECTLT2Ul
+ 0001:0007B9FC       ComputeCRC__6EstadoFv
+ 0001:0007B9D4       ComputeCRC__7_EstadoFv
+ 0001:00017CF4       ComputeEffectiveState__FP9WorkSpaceP4TextPUclR6EstadoT5iT7T4
+ 0001:00017DAC       ComputeEffectiveState__FP9WorkSpacePUciT2lR7_EstadoT6
+ 0001:000052B0       ComputeElapsedTime__FP10_TIMESTAMPT1PUl
+ 0001:0007CE58       ComputeFooterHeight__6EstadoFP9WorkSpaceiT2l
+ 0001:000174D8       ComputeFunctionSize__FPUcRl
+ 0001:00016A64       ComputeFunctionSize__FUlP9WorkSpacePUcRlT4
+ 0001:0007CDE8       ComputeHeaderHeight__6EstadoFP9WorkSpaceiT2l
+ 0001:00085C8C       ComputeImageSize__7GraficoFP9WorkSpace
+ 0001:0008B1A4       ComputeInvalidRectangle__9BorradoraFP9WorkSpaceR7_POINTLil
+ 0001:00017E6C       ComputeNextState__FP9WorkSpaceP4TextlT3R6EstadoT5iT7T3
+ 0001:00017F3C       ComputeNextState__FP9WorkSpacePUcilT4R7_EstadoT6
+ 0001:00085E08       ComputeOldBox__7GraficoFP7PalabraR6_RECTLR7_POINTLUl
+ 0001:00020184       ComputeState__9DocumentoFlR6Estado
+ 0001:00020BD8       ComputeState__9DocumentoFlR6EstadoR7_POINTLR6_SIZEL
+ 0001:00021388       ComputeState__9DocumentoFv
+ 0001:0007CC40       Compute_HF_Height__6EstadoFP9WorkSpacePUcR7_EstadoiT4l
+ 0001:00001D50       Configure__13AddonRegistryFUl
+ 0001:000353D4       ContextMenu
+ 0001:00036530       Control
+ 0001:0005A8E8       Control__23ColorMenuManager_DialogFPvT1
+ 0001:0005975C       Control__24ExpandMenuManager_DialogFPvT1
+ 0001:00058294       Control__29LineSpacingMenuManager_DialogFPvT1
+ 0001:00037084       Copy
+ 0001:00032830       CopyGraphic__9DocumentoFR7Grafico
+ 0001:00031964       Copy__9DocumentoFv
+ 0000:00000000  Imp  CountryInfo          (RUNTIME.2825)
+ 0001:000338C0       Create
+ 0001:0009240C       CreateBitmap__9WorkSpaceFR18_BITMAPINFOHEADER2
+ 0001:000924D4       CreateBitmap__9WorkSpaceFR18_BITMAPINFOHEADER2PvP12_BITMAPINFO2RUl
+ 0001:00091D7C       CreateBitmap__9WorkSpaceFR6_RECTL
+ 0001:00091DF4       CreateBitmap__9WorkSpaceFR6_RECTLR9WorkSpace
+ 0001:000925F8       CreateBitmap__9WorkSpaceFUli
+ 0001:00091EA0       CreateBitmap__9WorkSpaceFUlT1RUl
+ 0001:00018C8C       CreateGraphicToken__FPcR7Grafico
+ 0001:00018010       CreateGraphicToken__FUlPcR7_POINTLR6_SIZELN41iT1T2lT1T2T9T12_T2
+ 0002:00007D40       CreateParms
+ 0001:0001D184       CreatePreface__9DocumentoFPcRi
+ 0001:0008DA38       CreatePS__9WorkSpaceFUl
+ 0001:0001B510       CreateWindow__9DocumentoFUlP8_IniDataP10DictionaryiT4
+ 0001:00039CF8       CurrentPage
+ 0001:00037050       Cut
+ 0001:00039B88       DateChanged
+ 0001:00039B40       DateCurrent
+ 0001:000031D8       DateFormatProcessor
+ 0001:00039AE8       DateToday
+ 0001:00004E7C       Debug__FUlPce
+ 0000:00000000  Imp  DecodeDecimal__FPcRd (RUNTIME.2801)
+ 0001:000056A8       DefaultsDialog__FUlT1R14DEFAULTS_PARMS
+ 0001:0003C9B8       Default_Refresh
+ 0000:00000000  Imp  Delete__4PoolFP9PoolEntry (RUNTIME.1914)
+ 0001:00082374       Delete__4TextFlT1
+ 0000:00000000  Imp  Delete__7ListBoxFi   (RUNTIME.2306)
+ 0001:0008A8A0       Delete__9BorradoraFP9WorkSpaceR7_POINTLlT3
+ 0001:0002E2B4       Delete__9DocumentoFlT1
+ 0001:0002E208       Delete__9DocumentoFv
+ 0001:0002E19C       Dequeue_Clear__9DocumentoFv
+ 0001:00030650       Dequeue_InsertKey__9DocumentoFUs
+ 0001:000305F4       Dequeue_InsertModeToggle__9DocumentoFv
+ 0001:00030784       Dequeue_InsertText__9DocumentoFPci
+ 0001:00031CC0       Dequeue_Paste__9DocumentoFv
+ 0001:0002EA6C       Dequeue_Redo__9DocumentoFv
+ 0001:0002E99C       Dequeue_Undo__9DocumentoFv
+ 0000:00000000  Imp  Dequeue__13CircularQueueFPvi (RUNTIME.1006)
+ 0001:0002B404       Deselect__9DocumentoFP9WorkSpace
+ 0001:00034514       Destroy
+ 0001:0006DC8C       DestroyBitmaps__Fv
+ 0001:0008DFC0       DestroyPS__9WorkSpaceFv
+ 0001:0001B5F0       DestroyWindow__9DocumentoFUlT1
+ 0000:00000000  Imp  Destroy__6WindowFv   (RUNTIME.2390)
+ 0000:00000000  Imp  DevCloseDC           (PMGPI.604)
+ 0000:00000000  Imp  DevEscape            (PMGPI.605)
+ 0000:00000000  Imp  DevOpenDC            (PMGPI.610)
+ 0000:00000000  Imp  DevPostDeviceModes   (PMGPI.609)
+ 0000:00000000  Imp  DevQueryCaps         (PMGPI.606)
+ 0000:00000000  Imp  DevQueryHardcopyCaps (PMGPI.608)
+ 0001:0000B8EC       Dialog_Processor
+ 0001:00079960       DictionaryOpenThread__FPv
+ 0000:00000000  Imp  Disable__6WindowFv   (RUNTIME.2357)
+ 0000:00000000  Imp  Dismiss__6DialogFi   (RUNTIME.2604)
+ 0000:00000000  Imp  DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv (RUNTIME.2823)
+ 0001:0000FB30       DocFrameMessageProcessor
+ 0001:00033858       DocWindowMessageProcessor
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  DosEditName          (DOSCALLS.261)
+ 0000:00000000  Imp  DosError             (DOSCALLS.212)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  DosFreeResource      (DOSCALLS.353)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  DosGiveSharedMem     (DOSCALLS.303)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  DosMapCase           (NLS.7)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  DOSQPROCSTATUS       (DOSCALL1.154)
+ 0000:00000000  Imp  DosQueryCp           (DOSCALLS.291)
+ 0000:00000000  Imp  DosQueryCtryInfo     (NLS.5)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  DosQueryModFromEIP   (DOSCALLS.360)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  DosQueryResourceSize (DOSCALLS.572)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  DosSelToFlat         (DOSCALLS.426)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  DosSetPriority       (DOSCALLS.236)
+ 0000:00000000  Imp  DosSetProcessCp      (DOSCALLS.289)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0001:00036014       DragLeave
+ 0001:00035EE8       DragOver
+ 0001:000931EC       DrawBitmap__9WorkSpaceFUlT1R7_POINTLR6_SIZELN21
+ 0001:0008F5A4       DrawBox__9WorkSpaceFR6_RECTL
+ 0001:00096558       DrawCodabar__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00096984       DrawCode128__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00096920       DrawCode2of5__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095354       DrawCode39__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095FFC       DrawEAN13__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095BE0       DrawEAN8__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:0003DED8       DrawGraphicTrackingBox__FP4DATA
+ 0001:0005B3C8       DrawItem__23ColorMenuManager_DialogFUsP10_OWNERITEM
+ 0001:0008E5B8       DrawLineGeom__9WorkSpaceFiT1
+ 0001:0008E5E8       DrawLineGeom__9WorkSpaceFR7_POINTL
+ 0001:0008E4C8       DrawLine__9WorkSpaceFiT1
+ 0001:0008E4F8       DrawLine__9WorkSpaceFR7_POINTL
+ 0001:00093BFC       DrawMetafile__9WorkSpaceFUlR7_POINTLR6_SIZEL
+ 0001:0009056C       DrawPointer__9WorkSpaceFUlR7_POINTLi
+ 0001:0008EE34       DrawPolygon__9WorkSpaceFiP7_POINTL
+ 0001:0008E9E0       DrawPolyLine__9WorkSpaceFiP7_POINTL
+ 0001:00095728       DrawPOSTNET__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00092C54       DrawSeparator__9WorkSpaceFR7_POINTLR6_SIZEL
+ 0001:000901F8       DrawSpace__9WorkSpaceFR6_SIZELi
+ 0001:0008FD9C       DrawText__9WorkSpaceFPciR6_RECTLlN24
+ 0001:0008FE28       DrawText__9WorkSpaceFPciT2
+ 0001:0008F7F8       DrawTrackingBox__9WorkSpaceFR6_RECTL
+ 0001:00094A50       DrawUpcCodeA__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00094F38       DrawUpcCodeE__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0000:00000000  Imp  DrgAccessDraginfo    (PMDRAG.32)
+ 0000:00000000  Imp  DrgFreeDraginfo      (PMDRAG.39)
+ 0000:00000000  Imp  DrgQueryDragitemCount (PMDRAG.45)
+ 0000:00000000  Imp  DrgQueryDragitemPtr  (PMDRAG.46)
+ 0000:00000000  Imp  DrgQueryStrName      (PMDRAG.49)
+ 0000:00000000  Imp  DrgVerifyRMF         (PMDRAG.59)
+ 0001:00036020       Drop
+ 0001:0003C9D4       Dump
+ 0001:00004FE0       DumpMemory__FPcPviT3
+ 0001:00001EAC       Dump__13AddonRegistryFPc
+ 0001:0000B818       Dump__13DeviceContextFi
+ 0001:00013898       Dump__13DocumentParmsFi
+ 0001:00047028       Dump__4FontFi
+ 0001:00082D90       Dump__4TextFi
+ 0001:00000CAC       Dump__5AddonFi
+ 0001:00088DD4       Dump__5LineaFi
+ 0001:0007C1D0       Dump__6EstadoFi
+ 0001:000869B4       Dump__7GraficoFi
+ 0001:00088178       Dump__7PalabraFiP4Text
+ 0001:0007BA24       Dump__7_EstadoFi
+ 0001:0008B888       Dump__9BorradoraFi
+ 0001:0001DDE0       Dump__9DocumentoFPc
+ 0001:00047DB0       Dump__9FontCacheFi
+ 0001:000833BC       Dump__9TextBlockFi
+ 0001:00096A68       Dump__9WorkSpaceFi
+ 0001:0004C7E4       emit_next_byte__5cGREPFc
+ 0001:0004C754       emit_node__5cGREPFc
+ 0000:00000000  Imp  Empty__13CircularQueueFv (RUNTIME.1007)
+ 0000:00000000  Imp  EnableMenuItem__FUlUsT1 (RUNTIME.2816)
+ 0000:00000000  Imp  EnableMenuItem__FUlUsT2T1 (RUNTIME.2817)
+ 0000:00000000  Imp  Enable__6WindowFi    (RUNTIME.2358)
+ 0001:0003D744       End
+ 0001:0004A5BC       EnqueueClear__10SupervisorFv
+ 0001:0004A4D4       EnqueueInsertToggle__10SupervisorFv
+ 0001:0004A518       EnqueueKey__10SupervisorFi
+ 0001:0004A600       EnqueuePaste__10SupervisorFv
+ 0001:0004A688       EnqueueRedo__10SupervisorFv
+ 0001:0004A55C       EnqueueString__10SupervisorFPci
+ 0001:0004A644       EnqueueUndo__10SupervisorFv
+ 0001:0002E180       Enqueue_Clear__9DocumentoFv
+ 0001:00030628       Enqueue_InsertKey__9DocumentoFUs
+ 0001:000305D8       Enqueue_InsertModeToggle__9DocumentoFv
+ 0001:00030758       Enqueue_InsertText__9DocumentoFPc
+ 0001:00030728       Enqueue_InsertText__9DocumentoFPci
+ 0001:00031CA4       Enqueue_Paste__9DocumentoFv
+ 0001:0002EA50       Enqueue_Redo__9DocumentoFv
+ 0001:0002E980       Enqueue_Undo__9DocumentoFv
+ 0000:00000000  Imp  Enqueue__13CircularQueueFPvi (RUNTIME.1003)
+ 0001:0000C95C       Escriba_Export
+ 0001:0000C5C8       Escriba_Import
+ 0001:0000BA48       Escriba_Verify
+ 0001:00088798       EstimateHeight__5LineaFP9WorkSpaceP4TextR9BorradoraP7PalabraR6EstadoiT6lT6RiT10_
+ 0001:0004D2DC       evaluate_next__5cGREPFPc
+ 0001:000467B8       ExceptionHandler
+ 0001:0004A86C       ExecuteCommands__10SupervisorFv
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  Exit                 (RUNTIME.2810)
+ 0001:0003B9D8       ExpandManager
+ 0001:0003B978       ExpandPageDown
+ 0001:0003B8FC       ExpandPageUp
+ 0001:000162AC       ExportText__FUlP9WorkSpacePUcT3i
+ 0001:000163E4       ExportToken__FUlP9WorkSpaceRPUcRlPUcT4
+ 0000:00000000  Imp  ExtendedHelp         (RUNTIME.2808)
+ 0001:0002E044       Extract__9DocumentoFlPcR6EstadoT3
+ 0001:0002DE28       Extract__9DocumentoFlPcUl
+ 0001:0002E104       Extract__9DocumentoFUl
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0001:0000E028       FileDialog_Processor
+ 0002:00000CA0       FileExtenderList
+ 0001:00036ABC       FileMerge
+ 0001:00036E04       FileSave
+ 0001:00036E64       FileSaveAs
+ 0001:00036E94       FileSaveClose
+ 0001:0000D780       FileTypeDialog_Processor
+ 0002:00000980       FileTypeList
+ 0002:00000B10       FileWildcardList
+ 0001:0008F678       FillBox__9WorkSpaceFR6_RECTL
+ 0001:0003BFBC       FillColorManager
+ 0001:0003BF5C       FillColorsPageDown
+ 0001:0003BEE0       FillColorsPageUp
+ 0001:0003C0A8       FillTypeManager
+ 0001:0003C048       FillTypesPageDown
+ 0001:0003BFCC       FillTypesPageUp
+ 0001:0005046C       Filter__12ImportExportFPcT1
+ 0001:00050F70       Filter__15GraphicImporterFPcT1
+ 0001:000511DC       Filter__16MetafileImporterFPcT1
+ 0001:000384A4       Find
+ 0001:00001278       FindFirstOfType__13AddonRegistryFPc
+ 0001:0008A590       FindGraphic__9BorradoraFi
+ 0001:0008A5D0       FindGraphic__9BorradoraFl
+ 0001:0008A170       FindLine__9BorradoraFi
+ 0001:0008A1B0       FindLine__9BorradoraFlRi
+ 0001:0008A260       FindLine__9BorradoraFR7_POINTLRi
+ 0001:00038528       FindNext
+ 0001:000012F0       FindNextOfType__13AddonRegistryFP5Addon
+ 0001:00079B0C       FindReplacements__10DictionaryFPciT2PvPi
+ 0001:00030F48       FindStringNext__9DocumentoFPcUlT2
+ 0001:00030FE4       FindString__9DocumentoFPcUlT2
+ 0001:00027DA4       FindToken__9DocumentoFP5LineaP7Palabral
+ 0001:00079ABC       FindWord__10DictionaryFPc
+ 0001:0008A388       FindWord__9BorradoraCFi
+ 0001:0008A4F4       FindWord__9BorradoraFiT1
+ 0001:0008A3C8       FindWord__9BorradoraFl
+ 0001:0008A43C       FindWord__9BorradoraFP7Palabrai
+ 0001:0002AE38       FindXY__9DocumentoFR7_POINTL
+ 0000:00000000  Imp  Find__4PoolCFi       (RUNTIME.1907)
+ 0001:00030B90       Find__9DocumentoFPcRlUlT3
+ 0001:00028654       FinishMove__9DocumentoFUl
+ 0001:000288F0       FinishMove__9DocumentoFv
+ 0001:0004A6CC       FlushCommandQueue__10SupervisorFv
+ 0001:000328A8       FlushCommandQueue__9DocumentoFv
+ 0001:0004A9AC       FlushCommands__10SupervisorFv
+ 0001:0003B244       FontManager
+ 0001:0003B1E8       FontsPageDown
+ 0001:0003B16C       FontsPageUp
+ 0001:0003AEA0       Footer
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0001:00004830       FormatDate__FlPcT2i
+ 0000:00000000  Imp  FormatDecimal__FPcliT3 (RUNTIME.2802)
+ 0001:0004AA94       FormatFirstDirtyPage__10SupervisorFUl
+ 0001:00048150       FormatFirstDirtyPage__9DocumentoFR5EventT1Ul
+ 0001:000493B0       FormatLine__9DocumentoFR9BorradoraR5LineaiUl
+ 0001:0004A7A0       FormatPage__10SupervisorFUl
+ 0001:00048344       FormatPage__9DocumentoFi
+ 0001:00048650       FormatPage__9DocumentoFiR6EstadoR9Borradora
+ 0001:00048A74       FormatPage__9DocumentoFR9BorradoraR6EstadoiRlRUl
+ 0001:00031938       FormatPage__9DocumentoFv
+ 0001:0004B528       FrameMessageProcessor
+ 0000:00000000  Imp  fread                (DDE4MBS.fread)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0002:00001C50       FunctionNames
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0001:00004C84       GeneralDateFormat__FPcT1
+ 0000:00000000  Imp  GetCountryInfo__FiT1 (RUNTIME.2803)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0001:0000DAE8       GetFileTypeIndex__FUlPcPPcPP5Addoni
+ 0001:000908FC       GetFontMetrics__9WorkSpaceFv
+ 0001:0007302C       GetIniData__8Profile2FR8_IniData
+ 0000:00000000  Imp  GetItem__7ProfileFPcPvi (RUNTIME.2704)
+ 0001:000328D0       GetPageFromOffset__9DocumentoFl
+ 0001:0003138C       GetPtr
+ 0000:00000000  Imp  GetString__7ProfileFPcRPc (RUNTIME.2701)
+ 0000:00000000  Imp  GetString__7ProfileFPcT1i (RUNTIME.2702)
+ 0000:00000000  Imp  GetText__6WindowFPci (RUNTIME.2355)
+ 0001:0000527C       GetTime__FP10_TIMESTAMP
+ 0000:00000000  Imp  GetTitlebarRect__FUlT1R6_RECTL (RUNTIME.2800)
+ 0001:000148D8       GetTokenData__FRPUcRlPFPv_sT3PvPci
+ 0001:00017AA8       GetToken__FP4TextlRPUcRl
+ 0001:00017B0C       GetToken__FPUciT2RPUcRl
+ 0001:0004D270       get_next_pointer__5cGREPFPc
+ 0001:000389A8       GotoPage
+ 0001:0004C9B0       go_to_end_of_chain_on_operand__5cGREPFPcT1
+ 0001:0004C91C       go_to_end_of_chain__5cGREPFPcT1
+ 0000:00000000  Imp  GpiBeginPath         (PMGPI.354)
+ 0000:00000000  Imp  GpiBitBlt            (PMGPI.355)
+ 0000:00000000  Imp  GpiBox               (PMGPI.356)
+ 0000:00000000  Imp  GpiCharString        (PMGPI.358)
+ 0000:00000000  Imp  GpiCloseSegment      (PMGPI.361)
+ 0000:00000000  Imp  GpiComment           (PMGPI.363)
+ 0000:00000000  Imp  GpiConvert           (PMGPI.364)
+ 0000:00000000  Imp  GpiCopyMetaFile      (PMGPI.365)
+ 0000:00000000  Imp  GpiCreateBitmap      (PMGPI.598)
+ 0000:00000000  Imp  GpiCreateLogColorTable (PMGPI.592)
+ 0000:00000000  Imp  GpiCreateLogFont     (PMGPI.368)
+ 0000:00000000  Imp  GpiCreatePalette     (PMGPI.594)
+ 0000:00000000  Imp  GpiCreatePS          (PMGPI.369)
+ 0000:00000000  Imp  GpiCreateRegion      (PMGPI.370)
+ 0000:00000000  Imp  GpiDeleteBitmap      (PMGPI.371)
+ 0000:00000000  Imp  GpiDeleteMetaFile    (PMGPI.375)
+ 0000:00000000  Imp  GpiDeletePalette     (PMGPI.577)
+ 0000:00000000  Imp  GpiDeleteSetId       (PMGPI.378)
+ 0000:00000000  Imp  GpiDestroyPS         (PMGPI.379)
+ 0000:00000000  Imp  GpiDestroyRegion     (PMGPI.611)
+ 0000:00000000  Imp  GpiEndPath           (PMGPI.387)
+ 0000:00000000  Imp  GpiFillPath          (PMGPI.392)
+ 0000:00000000  Imp  GpiLine              (PMGPI.398)
+ 0000:00000000  Imp  GpiLoadBitmap        (PMGPI.399)
+ 0000:00000000  Imp  GpiLoadMetaFile      (PMGPI.401)
+ 0000:00000000  Imp  GpiMove              (PMGPI.404)
+ 0000:00000000  Imp  GpiOpenSegment       (PMGPI.408)
+ 0000:00000000  Imp  GpiPlayMetaFile      (PMGPI.411)
+ 0000:00000000  Imp  GpiPolyLine          (PMGPI.415)
+ 0000:00000000  Imp  GpiQueryBitmapBits   (PMGPI.599)
+ 0000:00000000  Imp  GpiQueryBitmapInfoHeader (PMGPI.601)
+ 0000:00000000  Imp  GpiQueryBitmapParameters (PMGPI.573)
+ 0000:00000000  Imp  GpiQueryBoundaryData (PMGPI.428)
+ 0000:00000000  Imp  GpiQueryCharBox      (PMGPI.430)
+ 0000:00000000  Imp  GpiQueryCharSet      (PMGPI.433)
+ 0000:00000000  Imp  GpiQueryColorIndex   (PMGPI.439)
+ 0000:00000000  Imp  GpiQueryCp           (PMGPI.440)
+ 0000:00000000  Imp  GpiQueryCurrentPosition (PMGPI.441)
+ 0000:00000000  Imp  GpiQueryDefaultViewMatrix (PMGPI.443)
+ 0000:00000000  Imp  GpiQueryDevice       (PMGPI.444)
+ 0000:00000000  Imp  GpiQueryDeviceBitmapFormats (PMGPI.445)
+ 0000:00000000  Imp  GpiQueryFontMetrics  (PMGPI.453)
+ 0000:00000000  Imp  GpiQueryFonts        (PMGPI.586)
+ 0000:00000000  Imp  GpiQueryMetaFileBits (PMGPI.465)
+ 0000:00000000  Imp  GpiQueryMetaFileLength (PMGPI.466)
+ 0000:00000000  Imp  GpiQueryModelTransformMatrix (PMGPI.468)
+ 0000:00000000  Imp  GpiQueryPageViewport (PMGPI.472)
+ 0000:00000000  Imp  GpiQueryPaletteInfo  (PMGPI.597)
+ 0000:00000000  Imp  GpiQueryTextBox      (PMGPI.489)
+ 0000:00000000  Imp  GpiQueryViewingTransformMatrix (PMGPI.491)
+ 0000:00000000  Imp  GpiResetBoundaryData (PMGPI.497)
+ 0000:00000000  Imp  GpiSelectPalette     (PMGPI.578)
+ 0000:00000000  Imp  GpiSetBackColor      (PMGPI.504)
+ 0000:00000000  Imp  GpiSetBitmap         (PMGPI.506)
+ 0000:00000000  Imp  GpiSetCharBox        (PMGPI.510)
+ 0000:00000000  Imp  GpiSetCharMode       (PMGPI.512)
+ 0000:00000000  Imp  GpiSetCharSet        (PMGPI.513)
+ 0000:00000000  Imp  GpiSetClipRegion     (PMGPI.516)
+ 0000:00000000  Imp  GpiSetColor          (PMGPI.517)
+ 0000:00000000  Imp  GpiSetCp             (PMGPI.518)
+ 0000:00000000  Imp  GpiSetDefaultViewMatrix (PMGPI.520)
+ 0000:00000000  Imp  GpiSetDrawControl    (PMGPI.521)
+ 0000:00000000  Imp  GpiSetLineEnd        (PMGPI.528)
+ 0000:00000000  Imp  GpiSetLineJoin       (PMGPI.529)
+ 0000:00000000  Imp  GpiSetLineType       (PMGPI.530)
+ 0000:00000000  Imp  GpiSetLineWidthGeom  (PMGPI.532)
+ 0000:00000000  Imp  GpiSetMix            (PMGPI.537)
+ 0000:00000000  Imp  GpiSetModelTransformMatrix (PMGPI.538)
+ 0000:00000000  Imp  GpiSetPageViewport   (PMGPI.540)
+ 0000:00000000  Imp  GpiSetPattern        (PMGPI.541)
+ 0000:00000000  Imp  GpiSetPS             (PMGPI.539)
+ 0000:00000000  Imp  GpiSetViewingTransformMatrix (PMGPI.553)
+ 0000:00000000  Imp  GpiStrokePath        (PMGPI.554)
+ 0002:00001150       GraphicExtenderList
+ 0002:00000E30       GraphicTypeList
+ 0002:00000FC0       GraphicWildcardList
+ 0001:0003A610       Header
+ 0002:00012D6C       Help
+ 0000:00000000  Imp  HelpForHelp          (RUNTIME.2809)
+ 0000:00000000  Imp  HelpIndex            (RUNTIME.2806)
+ 0001:000705AC       HideCursor__7PainterFv
+ 0000:00000000  Imp  Hide__6WindowFv      (RUNTIME.2369)
+ 0001:0003D708       Home
+ 0002:00003AB0       HomePath
+ 0001:000277D8       HorizontalScroll__9DocumentoFsT1
+ 0001:0004D508       HorzRulerMessageProcessor
+ 0001:000346F8       HScroll
+ 0001:0002E438       ImportText__9DocumentoFPciRPc
+ 0001:0002E404       ImportText__9DocumentoFPcRPc
+ 0001:00014B60       ImportText__FUlPUciT2RiPcT3
+ 0001:00014D00       ImportToken__FUlRPUcRlPUclT3RiRUlT7Pci
+ 0001:00051054       Import__15GraphicImporterFUlPcPl
+ 0001:0005178C       Import__16MetafileImporterFUlPc
+ 0001:000517E8       Import__16MetafileImporterFUlPcPl
+ 0001:00051A38       IndentProcessor
+ 0001:00064D34       InitAttrBitmaps__FUlT1Pc
+ 0001:00064DE8       InitAttrMenu__FUlR6EstadoR13DocumentParmsT1
+ 0000:00000000  Imp  InitDialog__6DialogFUl (RUNTIME.2603)
+ 0001:00065DA8       InitExpandBitmaps__FUlT1PcUsPUs
+ 0001:00065E70       InitExpandMenu__FUlR6EstadoT1iUsPUs
+ 0001:0006942C       InitFillColorBitmaps__FUlT1UsPl
+ 0001:000694EC       InitFillColorMenu__FUlR6EstadoT1iUsPl
+ 0001:0006A638       InitFillTypeBitmaps__FUlT1UsPUl
+ 0001:0006A6F8       InitFillTypeMenu__FUlR6EstadoT1iUsPUl
+ 0001:000626E0       InitFontBitmaps__FUlT1
+ 0001:00062788       InitFontMenu__FUlR6EstadoT1i
+ 0001:00066FF0       InitLineColorBitmaps__FUlT1UsPl
+ 0001:000670B0       InitLineColorMenu__FUlR6EstadoT1iUsPl
+ 0001:0006B750       InitLineEndBitmaps__FUlT1UsPUl
+ 0001:0006B810       InitLineEndMenu__FUlR6EstadoT1iUsPUl
+ 0001:0006C880       InitLineJoinBitmaps__FUlT1UsPUl
+ 0001:0006C940       InitLineJoinMenu__FUlR6EstadoT1iUsPUl
+ 0001:000681FC       InitLineWidthBitmaps__FUlT1UsPUl
+ 0001:000682BC       InitLineWidthMenu__FUlR6EstadoT1iUsPUl
+ 0001:00063AD0       InitSizeBitmaps__FUlT1PcUsPUs
+ 0001:00063B98       InitSizeMenu__FUlR6EstadoT1iUsPUs
+ 0001:0003D488       Insert
+ 0001:0002E8A4       InsertBefore__9DocumentoFPc
+ 0001:0002E918       InsertBefore__9DocumentoFPci
+ 0001:000307DC       InsertStateChange__9DocumentoFR6EstadoT1Ull
+ 0001:0004C840       insert_operator__5cGREPFcPc
+ 0001:00079BB8       Insert__10DictionaryFPc
+ 0000:00000000  Imp  Insert__4PoolFP9PoolEntryPv (RUNTIME.1913)
+ 0001:00082010       Insert__4TextFlPcT1
+ 0000:00000000  Imp  Insert__7ListBoxFPci (RUNTIME.2307)
+ 0001:0008A624       Insert__9BorradoraFP9WorkSpacelT2
+ 0001:0002E654       Insert__9DocumentoFiPc
+ 0001:0002E688       Insert__9DocumentoFiPcT1
+ 0001:0002E5EC       Insert__9DocumentoFPc
+ 0001:0002E624       Insert__9DocumentoFPci
+ 0001:0000549C       InterpretMsg__FUlPc
+ 0001:00005328       InterpretWinError__FUlPc
+ 0001:000706A8       InvalidateRectangle__7PainterFR6_RECTLUl
+ 0000:00000000  Imp  Invalidate__6WindowFv (RUNTIME.2373)
+ 0001:0008F74C       InvertBox__9WorkSpaceFR6_RECTL
+ 0001:0008FC64       InvertCell__9WorkSpaceF6_SIZEL
+ 0001:0002CC04       InvertFlush__9DocumentoFP9WorkSpacePcRilR6EstadoR7_POINTLR6_SIZEL
+ 0001:0002CCD0       InvertText__9DocumentoFP9WorkSpacelT2
+ 0001:0008FD50       InvertText__9WorkSpaceFPci
+ 0001:000971A4       IsDBCSHeader__9WorkSpaceFUc
+ 0001:00085A60       IsDBCS__FUcPUc
+ 0001:000876A0       IsEndOfDocument__7PalabraFP4Text
+ 0001:00087700       IsEndOfLine__7PalabraFP4Text
+ 0001:00085A10       IsEndOfLine__FPUc
+ 0001:000876D0       IsEndOfPage__7PalabraFP4Text
+ 0001:00085928       IsEndOfWord__FPUcT1
+ 0001:00085808       IsGlyphFunction__FPUc
+ 0001:0008577C       IsGlyph__FPUcT1
+ 0001:00087670       IsGraphicInline__7PalabraFP4Text
+ 0001:000858A4       IsGraphicInline__FPUc
+ 0001:0008586C       IsGraphic__FPUc
+ 0001:000832EC       IsPresent__9TextBlockFsUl
+ 0001:0002DD90       IsSelected__9DocumentoFl
+ 0001:00087640       IsSeparator__7PalabraFP4Text
+ 0001:0008760C       IsSeparator__7PalabraFP4TextPUc
+ 0001:000858F0       IsSeparator__FPUc
+ 0001:00087760       IsSpace__7PalabraFP4Text
+ 0001:00087730       IsTab__7PalabraFP4Text
+ 0001:0004B8D8       is_reg_exp_present__5cGREPFPc
+ 0001:0008AB18       Join_Words__9BorradoraFP7Palabra
+ 0001:00078104       Justify__7SegmentFP9BorradoraP9WorkSpaceR6EstadoiT4l
+ 0000:00000000  Imp  KeysHelp             (RUNTIME.2807)
+ 0001:0006F7E4       Language_Create__FPcT1iT1
+ 0001:0003D4B0       Left
+ 0002:0001330C       Library
+ 0002:00012D34       LibraryHandle
+ 0001:0003BDE4       LineColorManager
+ 0001:0003BD84       LineColorsPageDown
+ 0001:0003BD08       LineColorsPageUp
+ 0001:0003D5DC       LineDown
+ 0001:0003C194       LineEndManager
+ 0001:0003C134       LineEndsPageDown
+ 0001:0003C0B8       LineEndsPageUp
+ 0001:0003C280       LineJoinManager
+ 0001:0003C220       LineJoinsPageDown
+ 0001:0003C1A4       LineJoinsPageUp
+ 0001:0003D5A0       LineUp
+ 0001:0003BED0       LineWidthManager
+ 0001:0003BE70       LineWidthsPageDown
+ 0001:0003BDF4       LineWidthsPageUp
+ 0001:00003798       LoadDateFormattingResources__Fv
+ 0000:00000000  Imp  Load__6DialogFv      (RUNTIME.2606)
+ 0001:00077BE8       Load__7SegmentFP9WorkSpaceP4TextR9BorradoraR5LineaRP7PalabraR6EstadoT6R7_POINTLiT9l
+ 0001:00004B68       LocalDateFormat__FPcT1
+ 0000:00000000  Imp  localtime            (DDE4MBS.localtime)
+ 0001:000709E4       LockUpdate__7PainterFv
+ 0002:00013304       Logfile
+ 0001:00005550       LogMsgDone__FiPcUlPv
+ 0001:0000550C       LogMsgRcvd__FiPcUlPvT4
+ 0002:00000560       LogSemaphore
+ 0001:00004ED0       Log__FPce
+ 0001:00088108       LooksLike__7PalabraFR7Palabra
+ 0001:0004C9F8       lookup_engine__5cGREPFPc
+ 0001:00043C00       main
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0001:000605F8       MarginsProcessor
+ 0001:00088728       MarkPainted__5LineaFR9Borradora
+ 0001:0004BB14       matched_string__5cGREPFPci
+ 0001:00093138       MeasureBitmap__9WorkSpaceFUlR6_SIZEL
+ 0001:0007CEC8       MeasureFlush__6EstadoFP9WorkSpacePcRiiN33
+ 0001:0005B3B4       MeasureItem__23ColorMenuManager_DialogFUs
+ 0001:000938B8       MeasureMetafile__9WorkSpaceFUlR6_RECTL
+ 0001:0008FAC0       MeasureText__9WorkSpaceFPc
+ 0001:0008FAF4       MeasureText__9WorkSpaceFPci
+ 0001:0008FB54       MeasureText__9WorkSpaceFPciR6_SIZEL
+ 0001:0008FB20       MeasureText__9WorkSpaceFPcR6_SIZEL
+ 0001:000878D8       Measure__7PalabraFP4TextP9WorkSpaceR6EstadoiT4l
+ 0000:00000000  Imp  memcmp               (DDE4MBS.memcmp)
+ 0000:00000000  Imp  memcpy               (DDE4MBS.memcpy)
+ 0000:00000000  Imp  memset               (DDE4MBS.memset)
+ 0001:00031F80       MergeFile__9DocumentoFPcR13DocumentParmsP5Addon
+ 0000:00000000  Imp  MessageBox__FUlT1PcT3iT5T1T5 (RUNTIME.2824)
+ 0001:0005221C       MessageProcessor
+ 0001:0003AE2C       MessageProcessor__13Footer_DialogFUlT1PvT3
+ 0001:0003A59C       MessageProcessor__13Header_DialogFUlT1PvT3
+ 0001:00038934       MessageProcessor__15GotoPage_DialogFUlT1PvT3
+ 0000:00000000  Imp  MessageProcessor__16SubclassedWindowFUlT1PvT3 (RUNTIME.2333)
+ 0001:0005B648       MessageProcessor__23ColorMenuManager_DialogFUlT1PvT3
+ 0001:00059DDC       MessageProcessor__24ExpandMenuManager_DialogFUlT1PvT3
+ 0001:00058914       MessageProcessor__29LineSpacingMenuManager_DialogFUlT1PvT3
+ 0001:0000F764       MessageProcessor__6ButtonFUlT1PvT3
+ 0000:00000000  Imp  MessageProcessor__6DialogFUlT1PvT3 (RUNTIME.2601)
+ 0001:0003466C       MinMaxFrame
+ 0001:00034BE8       MouseMove
+ 0001:0002A344       MoveBottom__9DocumentoFUl
+ 0001:00028608       MoveDirect__9DocumentoFl
+ 0001:000316E0       MoveDirect__9DocumentoFlUl
+ 0001:00028B34       MoveDown__9DocumentoFUl
+ 0001:0002A91C       MoveLineBottom__9DocumentoFUl
+ 0001:000296E8       MoveLineDown__9DocumentoFUl
+ 0001:0002A6D8       MoveLineTop__9DocumentoFUl
+ 0001:00029444       MoveLineUp__9DocumentoFUl
+ 0001:0002A130       MovePageBottom__9DocumentoFUl
+ 0001:00029D10       MovePageDown__9DocumentoFUl
+ 0001:0002AB90       MovePageNumber__9DocumentoFiUl
+ 0001:0002A0CC       MovePageTop__9DocumentoFUl
+ 0001:000299B0       MovePageUp__9DocumentoFUl
+ 0001:0003C498       MoveTab
+ 0001:00032534       MoveTab__9DocumentoFiT1
+ 0001:00032650       MoveText__9DocumentoFi
+ 0001:00027D28       MoveTokenDown__9DocumentoFl
+ 0001:00027CFC       MoveTokenDown__9DocumentoFv
+ 0001:00027CCC       MoveTokenUp__9DocumentoFl
+ 0001:00027CA0       MoveTokenUp__9DocumentoFv
+ 0001:0002A194       MoveTop__9DocumentoFUl
+ 0001:00028954       MoveUp__9DocumentoFUl
+ 0001:000290B0       MoveWordDown__9DocumentoFUl
+ 0001:00028D44       MoveWordUp__9DocumentoFUl
+ 0001:0002ADE4       MoveXY__9DocumentoFR7_POINTL
+ 0001:0002AD8C       MoveXY__9DocumentoFR7_POINTLUl
+ 0000:00000000  Imp  Move__6WindowFiT1    (RUNTIME.2368)
+ 0001:0008E3D8       Move__9WorkSpaceFiT1
+ 0001:0008E408       Move__9WorkSpaceFR7_POINTL
+ 0001:000969E8       NewFrame__9WorkSpaceFv
+ 0001:00085C48       NextGraphic__7GraficoFv
+ 0001:000885D0       NextLine__5LineaFv
+ 0001:00082D0C       NextToken__4TextFP9WorkSpacel
+ 0001:000875C8       NextWord__7PalabraFv
+ 0001:0004BE60       one_side_of_or_operator__5cGREPFPi
+ 0001:000798AC       OpenDictionary__10DictionaryFv
+ 0001:00071340       OpenPrinterDC__FUlPcT2P9_DRIVDATA
+ 0001:000714C8       OpenPrinterDC__FUlPcT2P9_DRIVDATAi
+ 0001:00005210       OpenTimer__Fv
+ 0000:00000000  Imp  OWNER__FUl           (RUNTIME.9900)
+ 0001:0003D6CC       PageBottom
+ 0001:00039ABC       PageBreak
+ 0001:00039D40       PageCount
+ 0001:0003D654       PageDown
+ 0001:0004AB00       PageLockRelease__10SupervisorFv
+ 0001:0004AAC8       PageLockRequest__10SupervisorFv
+ 0001:0003D690       PageTop
+ 0001:0003D618       PageUp
+ 0001:00035B78       Paint
+ 0001:0007057C       PaintCursor__7PainterFv
+ 0001:00070894       Paint__7PainterFP9WorkSpace
+ 0001:0001E574       Paint__9DocumentoFP9WorkSpaceR6_RECTL
+ 0001:0001E42C       Paint__9DocumentoFv
+ 0000:00000000  Imp  PARENT__FUl          (RUNTIME.9901)
+ 0001:0004BBD8       parse_parens__5cGREPFiPi
+ 0001:000370AC       Paste
+ 0001:000370FC       PasteBitmap
+ 0001:00037C44       PasteGraphic
+ 0001:00037414       PasteMetafile
+ 0001:000376D8       PasteScreenEntire
+ 0001:00037AB8       PasteScreenFrame
+ 0001:00037BC0       PasteScreenRect
+ 0001:00037B3C       PasteScreenWindow
+ 0001:00031CFC       Paste__9DocumentoFv
+ 0001:00076288       PeekFile__FP8FILEDATA
+ 0001:0007639C       PeekText__FP8TEXTDATA
+ 0000:00000000  Imp  Post__5EventFv       (RUNTIME.1502)
+ 0001:00070D40       PreferencesProcessor
+ 0001:0000CDD8       PrepareFileTypeList__FUl
+ 0001:0000D27C       PrepareGraphicTypeList__Fv
+ 0001:00035BA0       PresParamChanged
+ 0001:00085C04       PrevGraphic__7GraficoFv
+ 0001:0008858C       PrevLine__5LineaFv
+ 0001:00082C70       PrevToken__4TextFP9WorkSpacel
+ 0001:00087584       PrevWord__7PalabraFv
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0001:00036F38       PrintAll
+ 0001:00036F70       PrintAllNormal
+ 0001:00036F94       PrintAllReverse
+ 0001:0003D820       PrintDone
+ 0001:00036FB8       PrintPage
+ 0001:0003F494       PrintThread__FPv
+ 0001:0003ED48       Print__FUliT1
+ 0001:0007C2E8       ProcessFunction__6EstadoFPUcP9WorkSpaceiT3l
+ 0001:0007C3D8       ProcessFunction__7_EstadoFPUcP9WorkSpaceiT3l
+ 0001:00013DD8       ProcessPrefaceFunction__13DocumentParmsFRPUc
+ 0000:00000000  Imp  Process__6DialogFv   (RUNTIME.2605)
+ 0001:00075378       PutIniData__8Profile2FR8_IniData
+ 0000:00000000  Imp  PutItem__7ProfileFPcPvi (RUNTIME.2703)
+ 0000:00000000  Imp  PutString__7ProfileFPcT1 (RUNTIME.2700)
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0001:0006F18C       QueryAddress__6ModuleFi
+ 0001:0006F158       QueryAddress__6ModuleFPc
+ 0001:00092624       QueryBitmapBits__9WorkSpaceFiT1PvP12_BITMAPINFO2
+ 0001:00091B5C       QueryBitmapFormat__9WorkSpaceFRiT1
+ 0001:00091C24       QueryBitmapInfo__9WorkSpaceFUlR18_BITMAPINFOHEADER2
+ 0001:00081D40       QueryBytePtr__4TextFlRPUc
+ 0001:00082AF4       QueryChangeRange__4TextFiRlT2
+ 0001:00096FF8       QueryCodepage__9WorkSpaceFv
+ 0001:00001374       QueryConfigureCount__13AddonRegistryFv
+ 0000:00000000  Imp  QueryCount__7ListBoxFv (RUNTIME.2387)
+ 0001:00082BF4       QueryCurrentSize__4TextFv
+ 0001:0003DA00       QueryDefaults
+ 0001:0009194C       QueryDevice__9WorkSpaceFv
+ 0001:000919C0       QueryFontCount__9WorkSpaceFv
+ 0001:00063AC4       QueryFontMetrics__Fv
+ 0001:00091A8C       QueryFonts__9WorkSpaceFlP12_FONTMETRICS
+ 0001:00071D30       QueryForm__9QueueInfoFUlT1R7_HCINFO
+ 0001:0002B1E8       QueryGraphic__9DocumentoFR7_POINTLR7GraficoR6_RECTLUl
+ 0000:00000000  Imp  QueryItemText__7ListBoxFiPcT1 (RUNTIME.2301)
+ 0001:00072458       QueryResolution__9QueueInfoFUlT1RlT3
+ 0000:00000000  Imp  QuerySelection__7ListBoxFi (RUNTIME.2304)
+ 0001:0003D970       QueryState
+ 0001:0008F9C4       QueryTextBox__9WorkSpaceFPciP7_POINTL
+ 0001:000429D4       QueryTextRectangle
+ 0001:0002CBD4       QueryTextRectangle__9DocumentoFR6_RECTL
+ 0001:0002BD54       QueryTextRectangle__9DocumentoFR6_RECTLlT2
+ 0001:0003D9B8       QueryZoom
+ 0001:000897E8       Query_NumberOfGraphics__9BorradoraFl
+ 0001:0008984C       Query_TextRectangle__9BorradoraFv
+ 0001:00030870       Query_WindowSize__9DocumentoFR6_RECTLR6_SIZEL
+ 0001:00030A6C       Query_WindowSize__9DocumentoFR6_SIZEL
+ 0000:00000000  Imp  Query__10SpinButtonFv (RUNTIME.2318)
+ 0001:000761EC       ReadFile__FP8FILEDATA
+ 0001:0001CEBC       ReadPreface__9DocumentoFiR13DocumentParmsRi
+ 0001:0001CF30       ReadPreface__9DocumentoFPciR13DocumentParmsRi
+ 0001:0001CF80       ReadPreface__9DocumentoFPFPv_sT1PFPv_UlPvR13DocumentParmsRi
+ 0001:00076350       ReadText__FP8TEXTDATA
+ 0001:000799F4       Ready__10DictionaryFv
+ 0001:00081DB0       Read__4TextFlT1Pc
+ 0000:00000000  Imp  Read__6SliderFv      (RUNTIME.2312)
+ 0001:0004BBA0       record_error__5cGREPFi
+ 0001:00037028       Redo
+ 0001:00082A78       Redo__4TextFv
+ 0000:00000000  Imp  RegisterControls__FUl (RUNTIME.1100)
+ 0000:00000000  Imp  Release__5MutexFv    (RUNTIME.1704)
+ 0000:00000000  Imp  remove               (DDE4MBS.remove)
+ 0001:0008AA30       Remove_Word__9BorradoraFP7PalabraR7_POINTL
+ 0001:0007CF98       RenderFlush__6EstadoFP9WorkSpacePcRiR7_POINTL
+ 0001:0007E634       RenderFooter__6EstadoFP9WorkSpaceiT2l
+ 0001:0007DC84       RenderHeader__6EstadoFP9WorkSpaceiT2l
+ 0001:0001E8A4       Render__9DocumentoFP9WorkSpaceP6_RECTL
+ 0001:0003120C       ReplaceSelectedText__9DocumentoFPc
+ 0000:00000000  Imp  Request__5MutexFi    (RUNTIME.1702)
+ 0001:00092B28       ResetClipping__9WorkSpaceFv
+ 0000:00000000  Imp  Reset__5EventFv      (RUNTIME.1503)
+ 0001:00088614       Reset__5LineaFP9WorkSpaceR9BorradoraR6EstadoP5LinealiT6T5
+ 0001:0007B8AC       Reset__6EstadoFP9WorkSpaceR13DocumentParmsiT3l
+ 0001:0007B4C0       Reset__7_EstadoFP9WorkSpaceR13DocumentParmsiT3l
+ 0001:00089720       Reset__9BorradoraFR6Estado
+ 0001:000471F0       Reset__9FontCacheFv
+ 0001:0008E1C4       Reset__9WorkSpaceFiN31
+ 0001:0008E214       Reset__9WorkSpaceFUl
+ 0001:00083358       Resize__9TextBlockFl
+ 0001:0001BFD4       Rezoom__9DocumentoFv
+ 0001:0003DAE0       Rezoom__FUlP4DATA
+ 0001:0003D4EC       Right
+ 0001:0003D8B8       SaveDone
+ 0001:0003EB64       SaveThread__FPv
+ 0001:0001CB9C       Save__9DocumentoFUlPcP12ImportExport
+ 0001:0001C290       Save__9DocumentoFUlT1
+ 0001:0003DFA0       Save__FUlP4DATAT1
+ 0001:000905F8       ScaleFont__9WorkSpaceFv
+ 0001:0003842C       Search
+ 0001:000763E8       Search_Processor
+ 0001:0003D7F8       SelectAll
+ 0001:0002B4B8       SelectAll__9DocumentoFv
+ 0000:00000000  Imp  SelectItem__7ListBoxFi (RUNTIME.2305)
+ 0001:00042A30       SelectLanguage
+ 0001:0000121C       SelectLanguage__13AddonRegistryFPc
+ 0001:0002B754       SelectWord__9DocumentoFR7_POINTL
+ 0001:0002B364       Select__9DocumentoFP9WorkSpace
+ 0001:00047330       Select__9FontCacheFUlPcN51
+ 0001:00036A80       SendCommandToMain
+ 0001:0003388C       SendToMain
+ 0001:00039D88       Separator
+ 0001:000926F0       SetBitmap__9WorkSpaceFUl
+ 0001:0002F844       SetBlockState__9DocumentoFR6EstadoUll
+ 0001:0003B450       SetBold
+ 0001:00090AA8       SetBold__9WorkSpaceFi
+ 0001:0003C368       SetBottomMargin
+ 0001:0003B7D4       SetCaps
+ 0001:0009299C       SetClipping__9WorkSpaceFR6_RECTL
+ 0001:00097014       SetCodepage__9WorkSpaceFi
+ 0001:00097038       SetCodepage__9WorkSpaceFv
+ 0001:00090CB8       SetColor__9WorkSpaceFl
+ 0001:00070654       SetCursorBox__7PainterFP7_POINTL
+ 0001:00039BD0       SetDateFormat
+ 0001:0003C4C8       SetDefaults
+ 0001:0003012C       SetDefaults__9DocumentoFR13DocumentParms
+ 0001:0003050C       SetDefaults__9DocumentoFv
+ 0001:0003B888       SetExpand
+ 0001:00091284       SetExpand__9WorkSpaceFi
+ 0001:0003BAC8       SetFillColor
+ 0001:0003BB38       SetFillType
+ 0001:000910D8       SetFillType__9WorkSpaceFi
+ 0001:0000D5C4       SetFilter__FUl
+ 0001:000359C4       SetFocus
+ 0000:00000000  Imp  SetFocus__6WindowFv  (RUNTIME.2359)
+ 0001:0003B0E0       SetFontname
+ 0001:00090A10       SetFontName__9WorkSpaceFPc
+ 0001:00090A6C       SetFontSize__9WorkSpaceFi
+ 0001:000395A4       SetIndent
+ 0001:0003B504       SetItalic
+ 0001:00090B0C       SetItalic__9WorkSpaceFi
+ 0001:000398B8       SetJustCenter
+ 0001:00039998       SetJustFull
+ 0001:00039848       SetJustLeft
+ 0001:00039928       SetJustRight
+ 0001:0003C290       SetLeftMargin
+ 0000:00000000  Imp  SetLimits__10SpinButtonFiT1 (RUNTIME.2320)
+ 0000:00000000  Imp  SetLimit__10EntryfieldFi (RUNTIME.2326)
+ 0001:0003B9E8       SetLineColor
+ 0001:0003BBAC       SetLineEnd
+ 0001:00091008       SetLineEnd__9WorkSpaceFi
+ 0001:0003BC20       SetLineJoin
+ 0001:00090F38       SetLineJoin__9WorkSpaceFi
+ 0001:0003BC94       SetLineSpacing
+ 0001:00090D94       SetLineType__9WorkSpaceFi
+ 0001:0003BA58       SetLineWidth
+ 0001:00090E64       SetLineWidth__9WorkSpaceFi
+ 0001:000390F8       SetMargins
+ 0001:000911A8       SetMix__9WorkSpaceFi
+ 0001:0003B3B0       SetNormal
+ 0001:0003B720       SetOutline
+ 0001:00090C4C       SetOutline__9WorkSpaceFi
+ 0001:00039A08       SetPageCenter
+ 0001:00047FF0       SetPageDirty__9DocumentoFv
+ 0001:000480A0       SetPagesDirty__9DocumentoFlT1
+ 0001:000927B0       SetPalette__9WorkSpaceFUl
+ 0001:00081B74       SetPosition__4TextFl
+ 0000:00000000  Imp  SetPresParam__6WindowFiT1Pv (RUNTIME.2377)
+ 0001:0007297C       SetQueueCodepage__FUlT1Us
+ 0001:0003C2FC       SetRightMargin
+ 0001:0003B254       SetSize
+ 0001:0009152C       SetState__9WorkSpaceFR7_Estado
+ 0001:0003B66C       SetStrikeout
+ 0001:00090BE0       SetStrikeout__9WorkSpaceFi
+ 0001:0003C440       SetTab
+ 0001:000393B4       SetTabs
+ 0001:00032380       SetTab__9DocumentoFi
+ 0000:00000000  Imp  SetText__6WindowFPc  (RUNTIME.2356)
+ 0000:00000000  Imp  SetTopIndex__7ListBoxFi (RUNTIME.2303)
+ 0001:0003C3D4       SetTopMargin
+ 0001:00091358       SetTransform__9WorkSpaceFdiT2
+ 0001:00091300       SetTransform__9WorkSpaceFliT2
+ 0001:0003B5B8       SetUnderscore
+ 0001:00090B74       SetUnderscore__9WorkSpaceFi
+ 0001:00078DF4       SetZoomProcessor
+ 0001:0003DD70       SetZoom__FUlP4DATAd
+ 0001:0001C064       Set_Colors__9DocumentoFPl
+ 0001:00047D04       Set_Font__9FontCacheFUli
+ 0001:0001BBE0       Set_Language__9DocumentoFP14LanguageModule
+ 0001:0001C088       Set_Name__9DocumentoFPc
+ 0001:0001C18C       Set_Type__9DocumentoFPc
+ 0001:0001BA0C       Set_Window__9DocumentoFUlP13DeviceContext
+ 0001:0001BFAC       Set_Zoom__9DocumentoFl
+ 0000:00000000  Imp  Set__10SpinButtonFi  (RUNTIME.2319)
+ 0000:00000000  Imp  Set__6SliderFUlT1    (RUNTIME.2313)
+ 0001:000705F8       ShowCursor__7PainterFv
+ 0001:00006A68       ShowFormSize__FUlT1R13DocumentParmsT1P7_HCINFOPc
+ 0001:000011AC       ShowProductInformation__13AddonRegistryFiUl
+ 0001:00000C88       ShowProductInformation__5AddonFUl
+ 0000:00000000  Imp  Show__6WindowFv      (RUNTIME.2370)
+ 0001:000345B0       Size
+ 0001:0003B3A0       SizeManager
+ 0001:0003B344       SizesPageDown
+ 0001:0003B2C8       SizesPageUp
+ 0000:00000000  Imp  Size__6WindowFiT1    (RUNTIME.2367)
+ 0001:00038AD0       SpellCheck
+ 0001:00079C58       SpellChecker__FUlP9DocumentoP10Dictionary
+ 0001:000314D8       SpellCheck__9DocumentoFP10DictionaryiPcN22T3RiT7Ul
+ 0000:00000000  Imp  SplEnumQueue         (PMSPL.399)
+ 0001:0008ABB4       Split_Word__9BorradoraFP7Palabral
+ 0001:00086984       Split__7GraficoFl
+ 0001:00078A20       Split__7SegmentFR6_RECTL
+ 0001:00087790       StartsParagraph__7PalabraFP4TextP9WorkSpace
+ 0001:00082FF0       StartThread__FPcPFPv_viPvN23
+ 0000:00000000  Imp  StartTimer__6WindowFiT1 (RUNTIME.2352)
+ 0001:0007FF74       StaticMessageProcessor
+ 0000:00000000  Imp  StopTimer__6WindowFi (RUNTIME.2351)
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  strcspn              (DDE4MBS.strcspn)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0000:00000000  Imp  strncmp              (DDE4MBS.strncmp)
+ 0000:00000000  Imp  strncpy              (DDE4MBS.strncpy)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0000:00000000  Imp  strstr               (DDE4MBS.strstr)
+ 0000:00000000  Imp  strupr               (DDE4MBS.strupr)
+ 0001:0004AC0C       Supervisor_Thread__FPv
+ 0000:00000000  Imp  Surface__6WindowFv   (RUNTIME.2361)
+ 0000:00000000  Imp  Sys_BeepError__Fv    (RUNTIME.9905)
+ 0000:00000000  Imp  Sys_BeepNote__Fv     (RUNTIME.9904)
+ 0000:00000000  Imp  Sys_Beep__FiT1       (RUNTIME.9902)
+ 0000:00000000  Imp  Sys_DefDialogProc    (RUNTIME.9952)
+ 0000:00000000  Imp  Sys_DefWindowProc    (RUNTIME.9908)
+ 0000:00000000  Imp  Sys_DeregisterThread__Fv (RUNTIME.9948)
+ 0000:00000000  Imp  Sys_EnableWindow__FUlT1 (RUNTIME.9910)
+ 0000:00000000  Imp  Sys_EndDialog__FUlT1 (RUNTIME.9911)
+ 0000:00000000  Imp  Sys_GetFocus__Fv     (RUNTIME.9951)
+ 0000:00000000  Imp  Sys_GetLastError__FUl (RUNTIME.9915)
+ 0000:00000000  Imp  Sys_GetWindowData__FUl (RUNTIME.9917)
+ 0000:00000000  Imp  Sys_GetWindowText__FUlPci (RUNTIME.9918)
+ 0000:00000000  Imp  Sys_InvalidateWindow__FUl (RUNTIME.9920)
+ 0000:00000000  Imp  Sys_MessageBox__FUlT1PcT3iT5 (RUNTIME.9945)
+ 0000:00000000  Imp  Sys_PostMessage__FUlT1PvT3 (RUNTIME.9924)
+ 0000:00000000  Imp  Sys_ProcessMessages__Fl (RUNTIME.9946)
+ 0000:00000000  Imp  Sys_RegisterThread__Fv (RUNTIME.9947)
+ 0000:00000000  Imp  Sys_ReleaseCapture__Fv (RUNTIME.9927)
+ 0000:00000000  Imp  Sys_SendMessage      (RUNTIME.9928)
+ 0000:00000000  Imp  Sys_SetActiveWindow__FUl (RUNTIME.9929)
+ 0000:00000000  Imp  Sys_SetCapture__FUl  (RUNTIME.9930)
+ 0000:00000000  Imp  Sys_SetFocus__FUl    (RUNTIME.9953)
+ 0000:00000000  Imp  Sys_SetWindowData__FUlPv (RUNTIME.9933)
+ 0000:00000000  Imp  Sys_SetWindowText__FUlPc (RUNTIME.9934)
+ 0000:00000000  Imp  Sys_ShowWindow__FUlT1 (RUNTIME.9936)
+ 0000:00000000  Imp  Sys_StartTimer__FUliT2 (RUNTIME.9938)
+ 0000:00000000  Imp  Sys_StopTimer__FUli  (RUNTIME.9939)
+ 0000:00000000  Imp  Sys_ThreadNumber__Fi (RUNTIME.9949)
+ 0000:00000000  Imp  Sys_UpdateWindow__FUl (RUNTIME.9940)
+ 0001:0007B97C       TabSet__7_EstadoFl
+ 0001:00080710       TabsProcessor
+ 0001:00076314       TellFile__FP8FILEDATA
+ 0001:000763D8       TellText__FP8TEXTDATA
+ 0000:00000000  Imp  terminate__Fv        (DDE4MBS.terminate__Fv)
+ 0001:0002AFC4       TestXY__9DocumentoFR7_POINTLRUl
+ 0000:00000000  Imp  time                 (DDE4MBS.time)
+ 0002:00012D94       Timer
+ 0001:00035A14       TimerMessage
+ 0000:00000000  Imp  tmpnam               (DDE4MBS.tmpnam)
+ 0001:0003D780       Top
+ 0002:00012D70       Trace
+ 0001:0004BF88       trailing_wild__5cGREPFPi
+ 0001:00091880       Transform__9WorkSpaceFiN21P7_POINTL
+ 0001:0004AB88       Unblock__10SupervisorFv
+ 0001:00079C08       UnCaps__10DictionaryFPc
+ 0001:00037000       Undo
+ 0001:00082A00       Undo__4TextFv
+ 0001:000044DC       UnloadDateFormattingResources__Fv
+ 0001:00070A04       UnlockUpdate__7PainterFv
+ 0000:00000000  Imp  UpdateCRC16__FUsPvi  (RUNTIME.1200)
+ 0000:00000000  Imp  UpdateCRC16__FUsUc   (RUNTIME.1201)
+ 0001:0002146C       UpdateCursor__9DocumentoFv
+ 0001:00075B80       UpdateFileList__8_IniDataFPc
+ 0001:000327A4       UpdateGraphic__9DocumentoFR7Grafico
+ 0001:000424D8       UpdateMousePointer__FP4DATAR7_POINTL
+ 0001:000423D0       UpdateMousePointer__FUlP4DATA
+ 0001:000423A8       UpdateMousePtr
+ 0001:000215CC       UpdateMouse__9DocumentoFv
+ 0001:000215F4       UpdatePosition__9DocumentoFv
+ 0001:00021968       UpdateRulers__9DocumentoFv
+ 0001:00021A94       UpdateScrollBars__9DocumentoFv
+ 0001:00021D30       UpdateStatus__9DocumentoFv
+ 0000:00000000  Imp  UpdateTaskListEntry__FUlPc (RUNTIME.2812)
+ 0001:00026E78       UpdateTitle__9DocumentoFUl
+ 0001:000707B0       UpdateWindow__7PainterFUlT1
+ 0001:00049E4C       UpdateWindow__9DocumentoFiUlT2
+ 0001:0008AF04       UpdateWordList__9BorradoraFP9WorkSpaceilUlT3T2R6EstadoT3
+ 0001:00062234       VerifyBottomMargin__FUlT1R13DocumentParmsN21P7_HCINFORll
+ 0001:00003618       VerifyDateFormat__FUlN21Pc
+ 0001:00051EB0       VerifyIndent__FUlT1RiR7_HCINFOlT5
+ 0001:000614A0       VerifyLeftMargin__FUlT1R13DocumentParmsN21P7_HCINFORll
+ 0001:000618E4       VerifyRightMargin__FUlT1R13DocumentParmsN21P7_HCINFOlRl
+ 0001:00061D8C       VerifyTopMargin__FUlT1R13DocumentParmsN21P7_HCINFOlRl
+ 0001:00051270       Verify__16MetafileImporterFUlPc
+ 0001:00027A3C       VerticalScroll__9DocumentoFsT1
+ 0001:00083728       VertRulerMessageProcessor
+ 0001:000346C4       VScroll
+ 0001:0004A814       WaitForRequest__10SupervisorFv
+ 0000:00000000  Imp  Wait__5EventFi       (RUNTIME.1504)
+ 0001:0004D014       wildcard_lookup__5cGREPFPc
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  WinBeginEnumWindows  (PMWIN.702)
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  WinCloseClipbrd      (PMWIN.707)
+ 0000:00000000  Imp  WinCreateCursor      (PMWIN.715)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  WinCreateStdWindow   (PMWIN.908)
+ 0000:00000000  Imp  WinCreateWindow      (PMWIN.909)
+ 0000:00000000  Imp  WinDefFileDlgProc    (PMCTLS.5)
+ 0000:00000000  Imp  WinDeleteLibrary     (PMWIN.722)
+ 0000:00000000  Imp  WinDestroyAccelTable (PMWIN.723)
+ 0000:00000000  Imp  WinDestroyCursor     (PMWIN.725)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  WinDestroyPointer    (PMWIN.727)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  WinDrawBitmap        (PMWIN.730)
+ 0000:00000000  Imp  WinDrawPointer       (PMWIN.732)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00000000  Imp  WinEmptyClipbrd      (PMWIN.733)
+ 0000:00000000  Imp  WinEndEnumWindows    (PMWIN.737)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  WinFreeFileDlgList   (PMCTLS.6)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  WinGetKeyState       (PMWIN.752)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  WinGetNextWindow     (PMWIN.756)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  WinGetScreenPS       (PMWIN.759)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  WinInvertRect        (PMWIN.767)
+ 0000:00000000  Imp  WinLoadAccelTable    (PMWIN.776)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  WinLoadLibrary       (PMWIN.777)
+ 0000:00000000  Imp  WinLoadMenu          (PMWIN.778)
+ 0000:00000000  Imp  WinLoadPointer       (PMWIN.780)
+ 0000:00000000  Imp  WinLockWindowUpdate  (PMWIN.784)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  WinOpenClipbrd       (PMWIN.793)
+ 0000:00000000  Imp  WinOpenWindowDC      (PMWIN.794)
+ 0000:00000000  Imp  WinPopupMenu         (PMWIN.937)
+ 0000:00000000  Imp  WinPostQueueMsg      (PMWIN.902)
+ 0000:00000000  Imp  WinQueryAccelTable   (PMWIN.798)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  WinQueryCapture      (PMWIN.804)
+ 0000:00000000  Imp  WinQueryClassInfo    (PMWIN.925)
+ 0000:00000000  Imp  WinQueryClipbrdData  (PMWIN.806)
+ 0000:00000000  Imp  WinQueryClipbrdFmtInfo (PMWIN.807)
+ 0000:00000000  Imp  WinQueryCp           (PMWIN.810)
+ 0000:00000000  Imp  WinQueryCpList       (PMWIN.811)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  WinQueryHelpInstance (HELPMGR.53)
+ 0000:00000000  Imp  WinQueryPointer      (PMWIN.821)
+ 0000:00000000  Imp  WinQueryPointerPos   (PMWIN.823)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  WinQuerySysColor     (PMWIN.826)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  WinQueryWindowDC     (PMWIN.835)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  WinQueryWindowUShort (PMWIN.844)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinSetAccelTable     (PMWIN.850)
+ 0000:00000000  Imp  WinSetClipbrdData    (PMWIN.854)
+ 0000:00000000  Imp  WinSetCp             (PMWIN.857)
+ 0000:00000000  Imp  WinSetMultWindowPos  (PMWIN.863)
+ 0000:00000000  Imp  WinSetOwner          (PMWIN.864)
+ 0000:00000000  Imp  WinSetPointer        (PMWIN.866)
+ 0000:00000000  Imp  WinSetPresParam      (PMWIN.938)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  WinSetWindowULong    (PMWIN.878)
+ 0000:00000000  Imp  WinSetWindowUShort   (PMWIN.879)
+ 0000:00000000  Imp  WinShowCursor        (PMWIN.880)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0001:0003D528       WordLeft
+ 0001:0003D564       WordRight
+ 0001:00017C28       WriteBinary__FPvT1Ul
+ 0001:00017B74       WriteBinary__FUlPvT1
+ 0001:00038B28       Zoom100
+ 0001:00038D44       ZoomAll
+ 0001:00038BE4       ZoomFullHeight
+ 0001:00038B60       ZoomFullWidth
+ 0001:00038C68       ZoomMargins
+ 0001:00038FB4       ZoomSet
+ 0001:00038E84       ZoomWindow
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0002:00008D34       _argc
+ 0002:00008D38       _argv
+ 0000:00000000  Imp  _atofieee            (DDE4MBS._atofieee)
+ 0000:00000000  Imp  _beginthread         (DDE4MBS._beginthread)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0002:000114D8       _edata
+ 0002:00013310       _end
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0001:00097850       _Exception_CPP
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0002:00008D30       _exeentry
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _fullpath            (DDE4MBS._fullpath)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  _putenv              (DDE4MBS._putenv)
+ 0001:00097D8C       _setuparg
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  _sscanfieee          (DDE4MBS._sscanfieee)
+ 0000:00000000  Imp  _stat                (DDE4MBS._stat)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0000:00000000  Imp  __as__4PoolFRC4Pool  (RUNTIME.1906)
+ 0001:0007CBDC       __as__6EstadoFRC6Estado
+ 0001:0007CC08       __as__6EstadoFRC7_Estado
+ 0001:0007CBB0       __as__7_EstadoFRC6Estado
+ 0001:0007CB84       __as__7_EstadoFRC7_Estado
+ 0001:000892A4       __as__9BorradoraFRC9Borradora
+ 0000:00000000  Imp  __CleanupCatch       (DDE4MBS.__CleanupCatch)
+ 0002:00008D40       __ctdtused
+ 0002:00013300       __ctordtorCurrent
+ 0002:00008DD0       __ctordtorEnd
+ 0001:0009776C       __ctordtorInit
+ 0002:00008D90       __ctordtorStart
+ 0001:00097734       __ctordtorTerm
+ 0001:000793D4       __ct__10DictionaryFPcT1
+ 0000:00000000  Imp  __ct__10EntryfieldFUl (RUNTIME.2328)
+ 0000:00000000  Imp  __ct__10HelpWindowFUlT1UsPcT4 (RUNTIME.1600)
+ 0000:00000000  Imp  __ct__10SpinButtonFUl (RUNTIME.2321)
+ 0000:00000000  Imp  __ct__10StaticTextFUl (RUNTIME.2323)
+ 0001:00049F98       __ct__10SupervisorFP9Documento
+ 0001:0004F970       __ct__12ImportExportFP6Module
+ 0001:0004FD20       __ct__12ImportExportFPc
+ 0001:000500D0       __ct__12ImportExportFPcT1PFUlPc_UlPFUlPcPl_PvPFUlPcPvl_Ul
+ 0001:00050210       __ct__12ImportExportFRC12ImportExport
+ 0000:00000000  Imp  __ct__12PublicMemoryFPcUli (RUNTIME.2100)
+ 0001:00000DC4       __ct__13AddonRegistryFi
+ 0000:00000000  Imp  __ct__13CircularQueueFPciT2 (RUNTIME.1000)
+ 0001:0000B568       __ct__13DeviceContextFPcl
+ 0001:0000B240       __ct__13DeviceContextFPcUl
+ 0001:0000B454       __ct__13DeviceContextFPcUlN21P9_DRIVDATA
+ 0001:0000B340       __ct__13DeviceContextFPcUlN21P9_DRIVDATAi
+ 0001:00012E50       __ct__13DocumentParmsFUl
+ 0001:0006F1C4       __ct__14LanguageModuleFPcT1Ul
+ 0001:0006F5BC       __ct__14LanguageModuleFRC14LanguageModule
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0001:00050588       __ct__15GraphicImporterFP6Module
+ 0001:000508B8       __ct__15GraphicImporterFPc
+ 0001:00050BE8       __ct__15GraphicImporterFPcT1PFUlPc_UlT3
+ 0001:00050D20       __ct__15GraphicImporterFRC15GraphicImporter
+ 0001:00051158       __ct__16MetafileImporterFRC16MetafileImporter
+ 0001:000510D8       __ct__16MetafileImporterFv
+ 0000:00000000  Imp  __ct__16SubclassedWindowFUl (RUNTIME.2335)
+ 0001:0005A048       __ct__23ColorMenuManager_DialogFUlN21iRUsPl
+ 0001:000590A0       __ct__24ExpandMenuManager_DialogFUlN21RUsPUs
+ 0001:00057BD8       __ct__29LineSpacingMenuManager_DialogFUlN21RUsPUs
+ 0001:00046F34       __ct__4FontFPciN52
+ 0000:00000000  Imp  __ct__4PoolFPciT2    (RUNTIME.1903)
+ 0001:0008170C       __ct__4TextFPcl
+ 0001:00081848       __ct__4TextFR4Text
+ 0001:000002F0       __ct__5AddonFP6Module
+ 0001:000005A4       __ct__5AddonFPc
+ 0001:000009C0       __ct__5AddonFPv
+ 0001:00000A70       __ct__5AddonFRC5Addon
+ 0001:0004B698       __ct__5cGREPFPc
+ 0000:00000000  Imp  __ct__5EventFPcT1i   (RUNTIME.1500)
+ 0000:00000000  Imp  __ct__5MutexFPcT1i   (RUNTIME.1700)
+ 0001:0000F3A0       __ct__6ButtonFUlPc
+ 0000:00000000  Imp  __ct__6DialogFUlN21i (RUNTIME.2608)
+ 0001:0006EDAC       __ct__6ModuleFPcUl
+ 0001:0006EF4C       __ct__6ModuleFRC6Module
+ 0000:00000000  Imp  __ct__6SliderFUlN31iPc (RUNTIME.2389)
+ 0000:00000000  Imp  __ct__6StringFPc     (RUNTIME.2201)
+ 0000:00000000  Imp  __ct__6StringFRC6String (RUNTIME.2204)
+ 0000:00000000  Imp  __ct__6WindowFUl     (RUNTIME.2381)
+ 0000:00000000  Imp  __ct__6WindowFUlPcT2T1iN35N31PvT12_ (RUNTIME.2382)
+ 0000:00000000  Imp  __ct__7ListBoxFUl    (RUNTIME.2311)
+ 0001:000700F0       __ct__7PainterFUlP13DeviceContextP9Documento
+ 0001:000727A4       __ct__7ProcessFPcUlT2lUs
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT1 (RUNTIME.2708)
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT2iP10HelpWindowT2 (RUNTIME.2707)
+ 0001:000756D8       __ct__8_IniDataFUl
+ 0001:00088EE4       __ct__9BorradoraFv
+ 0001:00018E50       __ct__9DocumentoFUlP14LanguageModuleR13DocumentParmsPcP5Addon
+ 0001:0001A210       __ct__9DocumentoFUlR9DocumentoT1
+ 0001:00047134       __ct__9FontCacheFPc
+ 0001:000716B8       __ct__9QueueInfoFPcUlN21P9_DRIVDATA
+ 0001:00083160       __ct__9TextBlockFPcls
+ 0001:00083200       __ct__9TextBlockFR9TextBlock
+ 0001:0008D6A0       __ct__9WorkSpaceFPc
+ 0001:0008CE8C       __ct__9WorkSpaceFPciP13DeviceContextUlN22
+ 0001:0008CBF4       __ct__9WorkSpaceFPciP13DeviceContextUlT2
+ 0001:0008D14C       __ct__9WorkSpaceFPciUlN32
+ 0001:0008C0D4       __ct__9WorkSpaceFPciUlP13DeviceContext
+ 0001:0008C63C       __ct__9WorkSpaceFPciUlP13DeviceContextR6_RECTL
+ 0001:0008C374       __ct__9WorkSpaceFPciUlP13DeviceContextT2
+ 0001:0008C904       __ct__9WorkSpaceFPciUlP13DeviceContextT2R6_RECTL
+ 0001:0008D3FC       __ct__9WorkSpaceFPcUl
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0001:000797A0       __dt__10DictionaryFv
+ 0000:00000000  Imp  __dt__10HelpWindowFv (RUNTIME.1601)
+ 0001:0004A1CC       __dt__10SupervisorFv
+ 0001:00050378       __dt__12ImportExportFv
+ 0000:00000000  Imp  __dt__12PublicMemoryFv (RUNTIME.2101)
+ 0001:00000EC8       __dt__13AddonRegistryFv
+ 0000:00000000  Imp  __dt__13CircularQueueFv (RUNTIME.1001)
+ 0001:0000B68C       __dt__13DeviceContextFv
+ 0001:0006F6DC       __dt__14LanguageModuleFv
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0001:00050E7C       __dt__15GraphicImporterFv
+ 0000:00000000  Imp  __dt__16SubclassedWindowFv (RUNTIME.2334)
+ 0001:0005A66C       __dt__23ColorMenuManager_DialogFv
+ 0001:00059518       __dt__24ExpandMenuManager_DialogFv
+ 0001:00058050       __dt__29LineSpacingMenuManager_DialogFv
+ 0001:00046FF0       __dt__4FontFv
+ 0000:00000000  Imp  __dt__4PoolFv        (RUNTIME.1905)
+ 0001:00081A04       __dt__4TextFv
+ 0001:00000B40       __dt__5AddonFv
+ 0000:00000000  Imp  __dt__5EventFv       (RUNTIME.1501)
+ 0000:00000000  Imp  __dt__5MutexFv       (RUNTIME.1701)
+ 0001:0000F614       __dt__6ButtonFv
+ 0000:00000000  Imp  __dt__6DialogFv      (RUNTIME.2607)
+ 0001:0006F0DC       __dt__6ModuleFv
+ 0000:00000000  Imp  __dt__6StringFv      (RUNTIME.2203)
+ 0000:00000000  Imp  __dt__6WindowFv      (RUNTIME.2380)
+ 0001:00070350       __dt__7PainterFv
+ 0001:000728A4       __dt__7ProcessFv
+ 0000:00000000  Imp  __dt__7ProfileFv     (RUNTIME.2705)
+ 0001:00075A44       __dt__8_IniDataFv
+ 0001:00088FF4       __dt__9BorradoraFv
+ 0001:0001AD20       __dt__9DocumentoFv
+ 0001:000471B0       __dt__9FontCacheFv
+ 0001:00071C3C       __dt__9QueueInfoFv
+ 0001:000832AC       __dt__9TextBlockFv
+ 0001:0008D928       __dt__9WorkSpaceFv
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __ReThrow            (DDE4MBS.__ReThrow)
+ 0001:00097680       __RunExitList
+ 0001:00097F84       __sctordtorInit
+ 0001:00097F8C       __sctordtorTerm
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0001:00097B9C       __vec__new
+ 0002:00008340       __vft10Dictionary5Addon
+ 0002:000044C0       __vft12ImportExport5Addon
+ 0002:00002F30       __vft13Footer_Dialog6Dialog
+ 0002:00002F08       __vft13Header_Dialog6Dialog
+ 0002:000079E0       __vft14LanguageModule6Module
+ 0002:00002EE0       __vft15GotoPage_Dialog6Dialog
+ 0002:000044D0       __vft15GraphicImporter5Addon
+ 0002:000047D0       __vft23ColorMenuManager_Dialog6Dialog
+ 0002:000047A8       __vft24ExpandMenuManager_Dialog6Dialog
+ 0002:00004780       __vft29LineSpacingMenuManager_Dialog6Dialog
+ 0002:00000000       __vft5Addon
+ 0002:000018F0       __vft6Button16SubclassedWindow
+ 0002:00008468       __vft6Estado7_Estado
+ 0002:000079D0       __vft6Module
+ 0002:00008440       __vft7_Estado
+ 0002:00008800       __vft9Borradora
+ 0001:00097F94       __wctordtorInit
+ 0001:00097F98       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  GpiQueryMetaFileBits (PMGPI.465)
+ 0000:00000000  Imp  DispatchMessage__FUlT1PvT3P6MethodUsPFUlT1PvT3_Pv (RUNTIME.2823)
+ 0000:00000000  Imp  GpiSetPageViewport   (PMGPI.540)
+ 0000:00000000  Imp  Insert__7ListBoxFPci (RUNTIME.2307)
+ 0000:00000000  Imp  GpiCreateRegion      (PMGPI.370)
+ 0000:00000000  Imp  WinQueryWindowULong  (PMWIN.843)
+ 0000:00000000  Imp  DevQueryHardcopyCaps (PMGPI.608)
+ 0000:00000000  Imp  GpiQueryBoundaryData (PMGPI.428)
+ 0000:00000000  Imp  _stat                (DDE4MBS._stat)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0000:00000000  Imp  WinGetScreenPS       (PMWIN.759)
+ 0000:00000000  Imp  WinGetKeyState       (PMWIN.752)
+ 0000:00000000  Imp  WinQueryWindowPos    (PMWIN.837)
+ 0000:00000000  Imp  __as__4PoolFRC4Pool  (RUNTIME.1906)
+ 0000:00000000  Imp  SetLimits__10SpinButtonFiT1 (RUNTIME.2320)
+ 0000:00000000  Imp  Sys_ThreadNumber__Fi (RUNTIME.9949)
+ 0000:00000000  Imp  WinBeginEnumWindows  (PMWIN.702)
+ 0000:00000000  Imp  __ct__14ResourceStringFUlT1PCcUi (RUNTIME.2002)
+ 0000:00000000  Imp  DosBeep              (DOSCALLS.286)
+ 0000:00000000  Imp  WinSetWindowULong    (PMWIN.878)
+ 0000:00000000  Imp  WinQueryHelpInstance (HELPMGR.53)
+ 0000:00000000  Imp  WinSetMultWindowPos  (PMWIN.863)
+ 0000:00000000  Imp  _splitpath           (DDE4MBS._splitpath)
+ 0000:00000000  Imp  OWNER__FUl           (RUNTIME.9900)
+ 0000:00000000  Imp  GpiSetBackColor      (PMGPI.504)
+ 0000:00000000  Imp  GpiResetBoundaryData (PMGPI.497)
+ 0000:00000000  Imp  __RestoreRegsAndJump (DDE4MBS.__RestoreRegsAndJump)
+ 0000:00000000  Imp  __ct__6WindowFUl     (RUNTIME.2381)
+ 0000:00000000  Imp  DrgQueryDragitemCount (PMDRAG.45)
+ 0000:00000000  Imp  Show__6WindowFv      (RUNTIME.2370)
+ 0000:00000000  Imp  __dt__6WindowFv      (RUNTIME.2380)
+ 0000:00000000  Imp  DosQueryResourceSize (DOSCALLS.572)
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0000:00000000  Imp  GetString__7ProfileFPcRPc (RUNTIME.2701)
+ 0000:00000000  Imp  Sys_EndDialog__FUlT1 (RUNTIME.9911)
+ 0000:00000000  Imp  GpiQueryFontMetrics  (PMGPI.453)
+ 0000:00000000  Imp  WinDestroyMsgQueue   (PMWIN.726)
+ 0000:00000000  Imp  MessageBox__FUlT1PcT3iT5T1T5 (RUNTIME.2824)
+ 0000:00000000  Imp  GetText__6WindowFPci (RUNTIME.2355)
+ 0000:00000000  Imp  GpiQueryPageViewport (PMGPI.472)
+ 0000:00000000  Imp  Clear__7ListBoxFv    (RUNTIME.2308)
+ 0000:00000000  Imp  GetCountryInfo__FiT1 (RUNTIME.2803)
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  RegisterControls__FUl (RUNTIME.1100)
+ 0000:00000000  Imp  StopTimer__6WindowFi (RUNTIME.2351)
+ 0000:00000000  Imp  WinQueryWindowUShort (PMWIN.844)
+ 0000:00000000  Imp  Empty__13CircularQueueFv (RUNTIME.1007)
+ 0000:00000000  Imp  DosSleep             (DOSCALLS.229)
+ 0000:00000000  Imp  __Invoke__Destructor (DDE4MBS.__Invoke__Destructor)
+ 0000:00000000  Imp  Destroy__6WindowFv   (RUNTIME.2390)
+ 0000:00000000  Imp  WinOpenWindowDC      (PMWIN.794)
+ 0000:00000000  Imp  __dt__12PublicMemoryFv (RUNTIME.2101)
+ 0000:00000000  Imp  Sys_SetCapture__FUl  (RUNTIME.9930)
+ 0000:00000000  Imp  WinDestroyPointer    (PMWIN.727)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  Sys_ProcessMessages__Fl (RUNTIME.9946)
+ 0000:00000000  Imp  DosSetPriority       (DOSCALLS.236)
+ 0000:00000000  Imp  Sys_StopTimer__FUli  (RUNTIME.9939)
+ 0000:00000000  Imp  WinQueryWindowProcess (PMWIN.838)
+ 0000:00000000  Imp  DosQueryCp           (DOSCALLS.291)
+ 0000:00000000  Imp  Sys_InvalidateWindow__FUl (RUNTIME.9920)
+ 0000:00000000  Imp  GpiConvert           (PMGPI.364)
+ 0000:00000000  Imp  Sys_MessageBox__FUlT1PcT3iT5 (RUNTIME.9945)
+ 0000:00000000  Imp  __ct__16SubclassedWindowFUl (RUNTIME.2335)
+ 0000:00000000  Imp  WinQueryAccelTable   (PMWIN.798)
+ 0000:00000000  Imp  WinSetCp             (PMWIN.857)
+ 0000:00000000  Imp  Invalidate__6WindowFv (RUNTIME.2373)
+ 0000:00000000  Imp  Sys_PostMessage__FUlT1PvT3 (RUNTIME.9924)
+ 0000:00000000  Imp  Dismiss__6DialogFi   (RUNTIME.2604)
+ 0000:00000000  Imp  _strdate             (DDE4MBS._strdate)
+ 0000:00000000  Imp  DecodeDecimal__FPcRd (RUNTIME.2801)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  GpiSetPS             (PMGPI.539)
+ 0000:00000000  Imp  WinDestroyAccelTable (PMWIN.723)
+ 0000:00000000  Imp  WinQueryCp           (PMWIN.810)
+ 0000:00000000  Imp  Sys_DefWindowProc    (RUNTIME.9908)
+ 0000:00000000  Imp  Sys_SetWindowText__FUlPc (RUNTIME.9934)
+ 0000:00000000  Imp  Sys_GetFocus__Fv     (RUNTIME.9951)
+ 0000:00000000  Imp  GetString__7ProfileFPcT1i (RUNTIME.2702)
+ 0000:00000000  Imp  WinQueryPresParam    (PMWIN.939)
+ 0000:00000000  Imp  WinEndEnumWindows    (PMWIN.737)
+ 0000:00000000  Imp  Sys_SetFocus__FUl    (RUNTIME.9953)
+ 0000:00000000  Imp  SetPresParam__6WindowFiT1Pv (RUNTIME.2377)
+ 0000:00000000  Imp  atol                 (DDE4MBS.atol)
+ 0000:00000000  Imp  WinQuerySysValue     (PMWIN.829)
+ 0000:00000000  Imp  Query__10SpinButtonFv (RUNTIME.2318)
+ 0000:00000000  Imp  GpiCreateLogColorTable (PMGPI.592)
+ 0000:00000000  Imp  DOSQPROCSTATUS       (DOSCALL1.154)
+ 0000:00000000  Imp  __CurrentException   (DDE4MBS.__CurrentException)
+ 0000:00000000  Imp  GpiSetLineWidthGeom  (PMGPI.532)
+ 0000:00000000  Imp  Sys_UpdateWindow__FUl (RUNTIME.9940)
+ 0000:00000000  Imp  Request__5MutexFi    (RUNTIME.1702)
+ 0000:00000000  Imp  InitDialog__6DialogFUl (RUNTIME.2603)
+ 0000:00000000  Imp  __ct__10SpinButtonFUl (RUNTIME.2321)
+ 0000:00000000  Imp  GpiCreateBitmap      (PMGPI.598)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  GpiQueryDefaultViewMatrix (PMGPI.443)
+ 0000:00000000  Imp  WinDestroyWindow     (PMWIN.728)
+ 0000:00000000  Imp  __ct__4PoolFPciT2    (RUNTIME.1903)
+ 0000:00000000  Imp  Sys_DefDialogProc    (RUNTIME.9952)
+ 0000:00000000  Imp  Sys_SetActiveWindow__FUl (RUNTIME.9929)
+ 0000:00000000  Imp  GpiQueryCurrentPosition (PMGPI.441)
+ 0000:00000000  Imp  Sys_ShowWindow__FUlT1 (RUNTIME.9936)
+ 0000:00000000  Imp  Enable__6WindowFi    (RUNTIME.2358)
+ 0000:00000000  Imp  Enqueue__13CircularQueueFPvi (RUNTIME.1003)
+ 0000:00000000  Imp  SetText__6WindowFPc  (RUNTIME.2356)
+ 0000:00000000  Imp  DevCloseDC           (PMGPI.604)
+ 0000:00000000  Imp  GpiQueryBitmapParameters (PMGPI.573)
+ 0000:00000000  Imp  Sys_GetWindowText__FUlPci (RUNTIME.9918)
+ 0000:00000000  Imp  FormatDecimal__FPcliT3 (RUNTIME.2802)
+ 0000:00000000  Imp  KeysHelp             (RUNTIME.2807)
+ 0000:00000000  Imp  Sys_GetLastError__FUl (RUNTIME.9915)
+ 0000:00000000  Imp  GpiQueryCp           (PMGPI.440)
+ 0000:00000000  Imp  WinFreeFileDlgList   (PMCTLS.6)
+ 0000:00000000  Imp  __threadid           (DDE4MBS.__threadid)
+ 0000:00000000  Imp  WinQuerySysColor     (PMWIN.826)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  Exit                 (RUNTIME.2810)
+ 0000:00000000  Imp  GpiComment           (PMGPI.363)
+ 0000:00000000  Imp  DosSetExceptionHandler (DOSCALLS.354)
+ 0000:00000000  Imp  WinQueryClassInfo    (PMWIN.925)
+ 0000:00000000  Imp  DrgQueryDragitemPtr  (PMDRAG.46)
+ 0000:00000000  Imp  Command__6DialogFPvT1 (RUNTIME.2602)
+ 0000:00000000  Imp  WinQueryClipbrdFmtInfo (PMWIN.807)
+ 0000:00000000  Imp  GpiQueryViewingTransformMatrix (PMGPI.491)
+ 0000:00000000  Imp  qsort                (DDE4MBS.qsort)
+ 0000:00000000  Imp  GpiQueryPaletteInfo  (PMGPI.597)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  WinOpenClipbrd       (PMWIN.793)
+ 0000:00000000  Imp  SelectItem__7ListBoxFi (RUNTIME.2305)
+ 0000:00000000  Imp  Disable__6WindowFv   (RUNTIME.2357)
+ 0000:00000000  Imp  MessageProcessor__6DialogFUlT1PvT3 (RUNTIME.2601)
+ 0000:00000000  Imp  CheckMenuItem__FUlUsT1 (RUNTIME.2814)
+ 0000:00000000  Imp  WinLockWindowUpdate  (PMWIN.784)
+ 0000:00000000  Imp  __dt__7ProfileFv     (RUNTIME.2705)
+ 0000:00000000  Imp  GpiSetLineJoin       (PMGPI.529)
+ 0000:00000000  Imp  GpiQueryMetaFileLength (PMGPI.466)
+ 0000:00000000  Imp  time                 (DDE4MBS.time)
+ 0000:00000000  Imp  GpiCreatePS          (PMGPI.369)
+ 0000:00000000  Imp  GpiSetDrawControl    (PMGPI.521)
+ 0000:00000000  Imp  WinSetWindowUShort   (PMWIN.879)
+ 0000:00000000  Imp  HelpIndex            (RUNTIME.2806)
+ 0000:00000000  Imp  Dequeue__13CircularQueueFPvi (RUNTIME.1006)
+ 0000:00000000  Imp  _sscanfieee          (DDE4MBS._sscanfieee)
+ 0000:00000000  Imp  GpiFillPath          (PMGPI.392)
+ 0000:00000000  Imp  __ct__10StaticTextFUl (RUNTIME.2323)
+ 0000:00000000  Imp  PrfWriteProfileData  (PMSHAPI.118)
+ 0000:00000000  Imp  GpiEndPath           (PMGPI.387)
+ 0000:00000000  Imp  _fileno              (DDE4MBS._fileno)
+ 0000:00000000  Imp  GpiSetBitmap         (PMGPI.506)
+ 0000:00000000  Imp  DosFreeMem           (DOSCALLS.304)
+ 0000:00000000  Imp  abort                (DDE4MBS.abort)
+ 0000:00000000  Imp  WinGetNextWindow     (PMWIN.756)
+ 0000:00000000  Imp  Hide__6WindowFv      (RUNTIME.2369)
+ 0000:00000000  Imp  __ct__5EventFPcT1i   (RUNTIME.1500)
+ 0000:00000000  Imp  DosError             (DOSCALLS.212)
+ 0000:00000000  Imp  PrfQueryProfileData  (PMSHAPI.117)
+ 0000:00000000  Imp  WinSendMsg           (PMWIN.920)
+ 0000:00000000  Imp  WinLoadMenu          (PMWIN.778)
+ 0000:00000000  Imp  _beginthread         (DDE4MBS._beginthread)
+ 0000:00000000  Imp  WinSubclassWindow    (PMWIN.929)
+ 0000:00000000  Imp  GpiSetColor          (PMGPI.517)
+ 0000:00000000  Imp  __ct__5MutexFPcT1i   (RUNTIME.1700)
+ 0000:00000000  Imp  Sys_BeepNote__Fv     (RUNTIME.9904)
+ 0000:00000000  Imp  __Invoke__Delete     (DDE4MBS.__Invoke__Delete)
+ 0000:00000000  Imp  DosMapCase           (NLS.7)
+ 0000:00000000  Imp  __ct__10EntryfieldFUl (RUNTIME.2328)
+ 0000:00000000  Imp  localtime            (DDE4MBS.localtime)
+ 0000:00000000  Imp  DosEditName          (DOSCALLS.261)
+ 0000:00000000  Imp  WinDestroyCursor     (PMWIN.725)
+ 0000:00000000  Imp  WinCreateMsgQueue    (PMWIN.716)
+ 0000:00000000  Imp  GpiDestroyRegion     (PMGPI.611)
+ 0000:00000000  Imp  Add2TaskList__FUlPc  (RUNTIME.2813)
+ 0000:00000000  Imp  GpiQueryModelTransformMatrix (PMGPI.468)
+ 0000:00000000  Imp  Reset__5EventFv      (RUNTIME.1503)
+ 0000:00000000  Imp  WinFileDlg           (PMCTLS.4)
+ 0000:00000000  Imp  _access              (DDE4MBS._access)
+ 0000:00000000  Imp  Sys_StartTimer__FUliT2 (RUNTIME.9938)
+ 0000:00000000  Imp  DrgFreeDraginfo      (PMDRAG.39)
+ 0000:00000000  Imp  WinQueryAnchorBlock  (PMWIN.800)
+ 0000:00000000  Imp  HelpForHelp          (RUNTIME.2809)
+ 0000:00000000  Imp  strnicmp             (DDE4MBS.strnicmp)
+ 0000:00000000  Imp  DosAllocSharedMem    (DOSCALLS.300)
+ 0000:00000000  Imp  DosQueryCtryInfo     (NLS.5)
+ 0000:00000000  Imp  WinQueryClipbrdData  (PMWIN.806)
+ 0000:00000000  Imp  __dt__16SubclassedWindowFv (RUNTIME.2334)
+ 0000:00000000  Imp  Process__6DialogFv   (RUNTIME.2605)
+ 0000:00000000  Imp  DosAllocMem          (DOSCALLS.299)
+ 0000:00000000  Imp  DosExit              (DOSCALLS.234)
+ 0000:00000000  Imp  WinLoadDlg           (PMWIN.924)
+ 0000:00000000  Imp  GpiPolyLine          (PMGPI.415)
+ 0000:00000000  Imp  GpiBeginPath         (PMGPI.354)
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT1 (RUNTIME.2708)
+ 0000:00000000  Imp  DosQuerySysInfo      (DOSCALLS.348)
+ 0000:00000000  Imp  WinSetWindowPos      (PMWIN.875)
+ 0000:00000000  Imp  QueryCount__7ListBoxFv (RUNTIME.2387)
+ 0000:00000000  Imp  GetTitlebarRect__FUlT1R6_RECTL (RUNTIME.2800)
+ 0000:00000000  Imp  ExtendedHelp         (RUNTIME.2808)
+ 0000:00000000  Imp  GpiQueryTextBox      (PMGPI.489)
+ 0000:00000000  Imp  WinEndPaint          (PMWIN.738)
+ 0000:00000000  Imp  Sys_BeepError__Fv    (RUNTIME.9905)
+ 0000:00000000  Imp  Release__5MutexFv    (RUNTIME.1704)
+ 0000:00000000  Imp  CheckDrive__FiRi     (RUNTIME.2805)
+ 0000:00000000  Imp  DosFindNext          (DOSCALLS.265)
+ 0000:00000000  Imp  WinReleasePS         (PMWIN.848)
+ 0000:00000000  Imp  __dt__4PoolFv        (RUNTIME.1905)
+ 0000:00000000  Imp  WinDefFileDlgProc    (PMCTLS.5)
+ 0000:00000000  Imp  UpdateCRC16__FUsPvi  (RUNTIME.1200)
+ 0000:00000000  Imp  DosQueryPathInfo     (DOSCALLS.223)
+ 0000:00000000  Imp  DrgAccessDraginfo    (PMDRAG.32)
+ 0000:00000000  Imp  __dt__6StringFv      (RUNTIME.2203)
+ 0000:00000000  Imp  Clear__4PoolFv       (RUNTIME.1915)
+ 0000:00000000  Imp  WinQueryWindowDC     (PMWIN.835)
+ 0000:00000000  Imp  WinDrawPointer       (PMWIN.732)
+ 0000:00000000  Imp  strncpy              (DDE4MBS.strncpy)
+ 0000:00000000  Imp  WinPostQueueMsg      (PMWIN.902)
+ 0000:00000000  Imp  WinSetOwner          (PMWIN.864)
+ 0000:00000000  Imp  WinQueryCpList       (PMWIN.811)
+ 0000:00000000  Imp  DosGetResource       (DOSCALLS.352)
+ 0000:00000000  Imp  DrgVerifyRMF         (PMDRAG.59)
+ 0000:00000000  Imp  Surface__6WindowFv   (RUNTIME.2361)
+ 0000:00000000  Imp  __ct__7ListBoxFUl    (RUNTIME.2311)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _PGLOBAL_PTR         (DDE4MBS._PGLOBAL_PTR)
+ 0000:00000000  Imp  __ct__10HelpWindowFUlT1UsPcT4 (RUNTIME.1600)
+ 0000:00000000  Imp  DosSelToFlat         (DOSCALLS.426)
+ 0000:00000000  Imp  SetFocus__6WindowFv  (RUNTIME.2359)
+ 0000:00000000  Imp  DevPostDeviceModes   (PMGPI.609)
+ 0000:00000000  Imp  DosQueryProcAddr     (DOSCALLS.321)
+ 0000:00000000  Imp  Delete__7ListBoxFi   (RUNTIME.2306)
+ 0000:00000000  Imp  __ct__6DialogFUlN21i (RUNTIME.2608)
+ 0000:00000000  Imp  WinRegisterClass     (PMWIN.926)
+ 0000:00000000  Imp  CHILD__FUli          (RUNTIME.9950)
+ 0000:00000000  Imp  DosFindClose         (DOSCALLS.263)
+ 0000:00000000  Imp  UpdateTaskListEntry__FUlPc (RUNTIME.2812)
+ 0000:00000000  Imp  strcpy               (DDE4MBS.strcpy)
+ 0000:00000000  Imp  strstr               (DDE4MBS.strstr)
+ 0000:00000000  Imp  Sys_GetWindowData__FUl (RUNTIME.9917)
+ 0000:00000000  Imp  strupr               (DDE4MBS.strupr)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  WinQueryPointer      (PMWIN.821)
+ 0000:00000000  Imp  __ReThrow            (DDE4MBS.__ReThrow)
+ 0000:00000000  Imp  DosFindFirst         (DOSCALLS.264)
+ 0000:00000000  Imp  strncmp              (DDE4MBS.strncmp)
+ 0000:00000000  Imp  clock                (DDE4MBS.clock)
+ 0000:00000000  Imp  DosQueryModFromEIP   (DOSCALLS.360)
+ 0000:00000000  Imp  WinSetPresParam      (PMWIN.938)
+ 0000:00000000  Imp  WinTerminate         (PMWIN.888)
+ 0000:00000000  Imp  Sys_RegisterThread__Fv (RUNTIME.9947)
+ 0000:00000000  Imp  _sprintfieee         (DDE4MBS._sprintfieee)
+ 0000:00000000  Imp  DevQueryCaps         (PMGPI.606)
+ 0000:00000000  Imp  Delete__4PoolFP9PoolEntry (RUNTIME.1914)
+ 0000:00000000  Imp  __nw__FUi            (DDE4MBS.__nw__FUi)
+ 0000:00000000  Imp  WinDrawText          (PMWIN.913)
+ 0000:00000000  Imp  strcmpi              (DDE4MBS.strcmpi)
+ 0000:00000000  Imp  Set__6SliderFUlT1    (RUNTIME.2313)
+ 0000:00000000  Imp  GpiSetClipRegion     (PMGPI.516)
+ 0000:00000000  Imp  BuildExtendedAttributes__FUlP6EADATA (RUNTIME.1401)
+ 0000:00000000  Imp  GpiDeleteMetaFile    (PMGPI.375)
+ 0000:00000000  Imp  WinQuerySysPointer   (PMWIN.828)
+ 0000:00000000  Imp  WinGetLastError      (PMWIN.753)
+ 0000:00000000  Imp  __ct__6SliderFUlN31iPc (RUNTIME.2389)
+ 0000:00000000  Imp  __dt__10HelpWindowFv (RUNTIME.1601)
+ 0000:00000000  Imp  GpiSetCharBox        (PMGPI.510)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  WinSetClipbrdData    (PMWIN.854)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  __ct__6StringFPc     (RUNTIME.2201)
+ 0000:00000000  Imp  GpiSetLineType       (PMGPI.530)
+ 0000:00000000  Imp  CountryInfo          (RUNTIME.2825)
+ 0000:00000000  Imp  GpiMove              (PMGPI.404)
+ 0000:00000000  Imp  Sys_ReleaseCapture__Fv (RUNTIME.9927)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  __dl__FPv            (DDE4MBS.__dl__FPv)
+ 0000:00000000  Imp  QueryItemText__7ListBoxFiPcT1 (RUNTIME.2301)
+ 0000:00000000  Imp  GpiLoadBitmap        (PMGPI.399)
+ 0000:00000000  Imp  GpiSetLineEnd        (PMGPI.528)
+ 0000:00000000  Imp  WinPopupMenu         (PMWIN.937)
+ 0000:00000000  Imp  PARENT__FUl          (RUNTIME.9901)
+ 0000:00000000  Imp  strcat               (DDE4MBS.strcat)
+ 0000:00000000  Imp  SplEnumQueue         (PMSPL.399)
+ 0000:00000000  Imp  Sys_SendMessage      (RUNTIME.9928)
+ 0000:00000000  Imp  WinBeginPaint        (PMWIN.703)
+ 0000:00000000  Imp  WinMapWindowPoints   (PMWIN.788)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  WinFreeErrorInfo     (PMWIN.748)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  GpiDestroyPS         (PMGPI.379)
+ 0000:00000000  Imp  Read__6SliderFv      (RUNTIME.2312)
+ 0000:00000000  Imp  GpiQueryDeviceBitmapFormats (PMGPI.445)
+ 0000:00000000  Imp  PutString__7ProfileFPcT1 (RUNTIME.2700)
+ 0000:00000000  Imp  DosGiveSharedMem     (DOSCALLS.303)
+ 0000:00000000  Imp  _vfprintfieee        (DDE4MBS._vfprintfieee)
+ 0000:00000000  Imp  WinGetErrorInfo      (PMWIN.751)
+ 0000:00000000  Imp  GpiStrokePath        (PMGPI.554)
+ 0000:00000000  Imp  GpiQueryColorIndex   (PMGPI.439)
+ 0000:00000000  Imp  DosQueryDBCSEnv      (NLS.6)
+ 0000:00000000  Imp  GpiDeleteBitmap      (PMGPI.371)
+ 0000:00000000  Imp  WinQueryPointerPos   (PMWIN.823)
+ 0000:00000000  Imp  WinAssociateHelpInstance (HELPMGR.54)
+ 0000:00000000  Imp  DosLoadModule        (DOSCALLS.318)
+ 0000:00000000  Imp  GpiOpenSegment       (PMGPI.408)
+ 0000:00000000  Imp  GpiCharString        (PMGPI.358)
+ 0000:00000000  Imp  _ProfileUnwind32     (DDE4MBS._ProfileUnwind32)
+ 0000:00000000  Imp  stricmp              (DDE4MBS.stricmp)
+ 0000:00000000  Imp  WinMessageBox        (PMWIN.789)
+ 0000:00000000  Imp  GpiSetCharSet        (PMGPI.513)
+ 0000:00000000  Imp  DosFreeModule        (DOSCALLS.322)
+ 0000:00000000  Imp  PutItem__7ProfileFPcPvi (RUNTIME.2703)
+ 0000:00000000  Imp  WinInvertRect        (PMWIN.767)
+ 0000:00000000  Imp  WinQueryWindowRect   (PMWIN.840)
+ 0000:00000000  Imp  fwrite               (DDE4MBS.fwrite)
+ 0000:00000000  Imp  UpdateCRC16__FUsUc   (RUNTIME.1201)
+ 0000:00000000  Imp  Load__6DialogFv      (RUNTIME.2606)
+ 0000:00000000  Imp  GpiPlayMetaFile      (PMGPI.411)
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  GpiSetPattern        (PMGPI.541)
+ 0000:00000000  Imp  WinInitialize        (PMWIN.763)
+ 0000:00000000  Imp  strcspn              (DDE4MBS.strcspn)
+ 0000:00000000  Imp  DosSetProcessCp      (DOSCALLS.289)
+ 0000:00000000  Imp  WinQueryFocus        (PMWIN.817)
+ 0000:00000000  Imp  DrgQueryStrName      (PMDRAG.49)
+ 0000:00000000  Imp  WinQueryCapture      (PMWIN.804)
+ 0000:00000000  Imp  getenv               (DDE4MBS.getenv)
+ 0000:00000000  Imp  WinDeleteLibrary     (PMWIN.722)
+ 0000:00000000  Imp  __ct__13CircularQueueFPciT2 (RUNTIME.1000)
+ 0000:00000000  Imp  _ctype               (DDE4MBS._ctype)
+ 0000:00000000  Imp  __dt__6DialogFv      (RUNTIME.2607)
+ 0000:00000000  Imp  _strtime             (DDE4MBS._strtime)
+ 0000:00000000  Imp  GpiCloseSegment      (PMGPI.361)
+ 0000:00000000  Imp  DosSetFilePtr        (DOSCALLS.256)
+ 0000:00000000  Imp  Wait__5EventFi       (RUNTIME.1504)
+ 0000:00000000  Imp  __ct__7ProfileFPcUlT2iP10HelpWindowT2 (RUNTIME.2707)
+ 0000:00000000  Imp  _vsprintfieee        (DDE4MBS._vsprintfieee)
+ 0000:00000000  Imp  GpiSelectPalette     (PMGPI.578)
+ 0000:00000000  Imp  GpiLine              (PMGPI.398)
+ 0000:00000000  Imp  WinCreateCursor      (PMWIN.715)
+ 0000:00000000  Imp  GpiSetMix            (PMGPI.537)
+ 0000:00000000  Imp  Find__4PoolCFi       (RUNTIME.1907)
+ 0000:00000000  Imp  _putenv              (DDE4MBS._putenv)
+ 0000:00000000  Imp  GpiQueryFonts        (PMGPI.586)
+ 0000:00000000  Imp  __dt__13CircularQueueFv (RUNTIME.1001)
+ 0000:00000000  Imp  DevEscape            (PMGPI.605)
+ 0000:00000000  Imp  tmpnam               (DDE4MBS.tmpnam)
+ 0000:00000000  Imp  BuildPresParams__FUsPUlT2PPUc (RUNTIME.2811)
+ 0000:00000000  Imp  WinDrawBitmap        (PMWIN.730)
+ 0000:00000000  Imp  memcpy               (DDE4MBS.memcpy)
+ 0000:00000000  Imp  DosUnsetExceptionHandler (DOSCALLS.355)
+ 0000:00000000  Imp  WinEmptyClipbrd      (PMWIN.733)
+ 0000:00000000  Imp  GpiCreateLogFont     (PMGPI.368)
+ 0000:00000000  Imp  EnableMenuItem__FUlUsT1 (RUNTIME.2816)
+ 0000:00000000  Imp  _chdrive             (DDE4MBS._chdrive)
+ 0000:00000000  Imp  WinLoadPointer       (PMWIN.780)
+ 0000:00000000  Imp  fread                (DDE4MBS.fread)
+ 0000:00000000  Imp  GpiSetDefaultViewMatrix (PMGPI.520)
+ 0000:00000000  Imp  _getcwd              (DDE4MBS._getcwd)
+ 0000:00000000  Imp  SetLimit__10EntryfieldFi (RUNTIME.2326)
+ 0000:00000000  Imp  __ct__6WindowFUlPcT2T1iN35N31PvT12_ (RUNTIME.2382)
+ 0000:00000000  Imp  WinCreateWindow      (PMWIN.909)
+ 0000:00000000  Imp  WinLoadLibrary       (PMWIN.777)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  DosWrite             (DOSCALLS.282)
+ 0000:00000000  Imp  WinSetPointer        (PMWIN.866)
+ 0000:00000000  Imp  Set__10SpinButtonFi  (RUNTIME.2319)
+ 0000:00000000  Imp  GpiQueryBitmapInfoHeader (PMGPI.601)
+ 0000:00000000  Imp  _fullpath            (DDE4MBS._fullpath)
+ 0000:00000000  Imp  __ct__6StringFRC6String (RUNTIME.2204)
+ 0000:00000000  Imp  StartTimer__6WindowFiT1 (RUNTIME.2352)
+ 0000:00000000  Imp  BuildMVMTValue__FPvUlP10MVMT_VALUE (RUNTIME.1400)
+ 0000:00000000  Imp  DevOpenDC            (PMGPI.610)
+ 0000:00000000  Imp  GpiDeletePalette     (PMGPI.577)
+ 0000:00000000  Imp  MessageProcessor__16SubclassedWindowFUlT1PvT3 (RUNTIME.2333)
+ 0000:00000000  Imp  Sys_EnableWindow__FUlT1 (RUNTIME.9910)
+ 0000:00000000  Imp  terminate__Fv        (DDE4MBS.terminate__Fv)
+ 0000:00000000  Imp  GpiQueryCharBox      (PMGPI.430)
+ 0000:00000000  Imp  GpiSetCp             (PMGPI.518)
+ 0000:00000000  Imp  __dt__5MutexFv       (RUNTIME.1701)
+ 0000:00000000  Imp  __dt__5EventFv       (RUNTIME.1501)
+ 0000:00000000  Imp  GpiBox               (PMGPI.356)
+ 0000:00000000  Imp  WinLoadAccelTable    (PMWIN.776)
+ 0000:00000000  Imp  WinGetPS             (PMWIN.757)
+ 0000:00000000  Imp  DosRead              (DOSCALLS.281)
+ 0000:00000000  Imp  GpiSetViewingTransformMatrix (PMGPI.553)
+ 0000:00000000  Imp  Post__5EventFv       (RUNTIME.1502)
+ 0000:00000000  Imp  WinShowCursor        (PMWIN.880)
+ 0000:00000000  Imp  GpiQueryBitmapBits   (PMGPI.599)
+ 0000:00000000  Imp  Insert__4PoolFP9PoolEntryPv (RUNTIME.1913)
+ 0000:00000000  Imp  GpiSetModelTransformMatrix (PMGPI.538)
+ 0000:00000000  Imp  memset               (DDE4MBS.memset)
+ 0000:00000000  Imp  GpiLoadMetaFile      (PMGPI.401)
+ 0000:00000000  Imp  WinCloseClipbrd      (PMWIN.707)
+ 0000:00000000  Imp  __dt__14ResourceStringFv (RUNTIME.2001)
+ 0000:00000000  Imp  GpiCreatePalette     (PMGPI.594)
+ 0000:00000000  Imp  memcmp               (DDE4MBS.memcmp)
+ 0000:00000000  Imp  GpiQueryCharSet      (PMGPI.433)
+ 0000:00000000  Imp  remove               (DDE4MBS.remove)
+ 0000:00000000  Imp  DosSetFileInfo       (DOSCALLS.218)
+ 0000:00000000  Imp  QuerySelection__7ListBoxFi (RUNTIME.2304)
+ 0000:00000000  Imp  _chdir               (DDE4MBS._chdir)
+ 0000:00000000  Imp  GpiDeleteSetId       (PMGPI.378)
+ 0000:00000000  Imp  _atofieee            (DDE4MBS._atofieee)
+ 0000:00000000  Imp  Sys_SetWindowData__FUlPv (RUNTIME.9933)
+ 0000:00000000  Imp  _getdrive            (DDE4MBS._getdrive)
+ 0000:00000000  Imp  __CleanupCatch       (DDE4MBS.__CleanupCatch)
+ 0000:00000000  Imp  GpiCopyMetaFile      (PMGPI.365)
+ 0000:00000000  Imp  WinDlgBox            (PMWIN.923)
+ 0000:00000000  Imp  WinSetAccelTable     (PMWIN.850)
+ 0000:00000000  Imp  Associate__10HelpWindowFUl (RUNTIME.1602)
+ 0000:00000000  Imp  WinWindowFromID      (PMWIN.899)
+ 0000:00000000  Imp  Sys_Beep__FiT1       (RUNTIME.9902)
+ 0000:00000000  Imp  DosFreeResource      (DOSCALLS.353)
+ 0000:00000000  Imp  GetItem__7ProfileFPcPvi (RUNTIME.2704)
+ 0000:00000000  Imp  _fltused             (DDE4MBS._fltused)
+ 0000:00000000  Imp  GpiBitBlt            (PMGPI.355)
+ 0000:00000000  Imp  GpiSetCharMode       (PMGPI.512)
+ 0000:00000000  Imp  DosOpen              (DOSCALLS.273)
+ 0000:00000000  Imp  EnableMenuItem__FUlUsT2T1 (RUNTIME.2817)
+ 0000:00000000  Imp  __ct__12PublicMemoryFPcUli (RUNTIME.2100)
+ 0000:00000000  Imp  Size__6WindowFiT1    (RUNTIME.2367)
+ 0000:00000000  Imp  fclose               (DDE4MBS.fclose)
+ 0000:00000000  Imp  GpiQueryDevice       (PMGPI.444)
+ 0000:00000000  Imp  Sys_DeregisterThread__Fv (RUNTIME.9948)
+ 0000:00000000  Imp  WinCreateStdWindow   (PMWIN.908)
+ 0000:00000000  Imp  DosClose             (DOSCALLS.257)
+ 0000:00000000  Imp  SetTopIndex__7ListBoxFi (RUNTIME.2303)
+ 0000:00000000  Imp  Move__6WindowFiT1    (RUNTIME.2368)
+ 0001:00000000       Addon_Create__FPc
+ 0001:000002F0       __ct__5AddonFP6Module
+ 0001:000005A4       __ct__5AddonFPc
+ 0001:000009C0       __ct__5AddonFPv
+ 0001:00000A70       __ct__5AddonFRC5Addon
+ 0001:00000B40       __dt__5AddonFv
+ 0001:00000BD4       AddToMenu__5AddonFUl
+ 0001:00000C88       ShowProductInformation__5AddonFUl
+ 0001:00000CAC       Dump__5AddonFi
+ 0001:00000DC4       __ct__13AddonRegistryFi
+ 0001:00000EC8       __dt__13AddonRegistryFv
+ 0001:00001020       Clear__13AddonRegistryFv
+ 0001:000010C8       Add__13AddonRegistryFP5Addon
+ 0001:00001150       AddToMenu__13AddonRegistryFUl
+ 0001:000011AC       ShowProductInformation__13AddonRegistryFiUl
+ 0001:0000121C       SelectLanguage__13AddonRegistryFPc
+ 0001:00001278       FindFirstOfType__13AddonRegistryFPc
+ 0001:000012F0       FindNextOfType__13AddonRegistryFP5Addon
+ 0001:00001374       QueryConfigureCount__13AddonRegistryFv
+ 0001:00001D50       Configure__13AddonRegistryFUl
+ 0001:00001EAC       Dump__13AddonRegistryFPc
+ 0001:00001F48       Build__13AddonRegistryFPc
+ 0001:00001F98       AddonRegistry_BuildThread__FPv
+ 0001:000023D0       Barcodes_Processor
+ 0001:000031D8       DateFormatProcessor
+ 0001:00003618       VerifyDateFormat__FUlN21Pc
+ 0001:00003798       LoadDateFormattingResources__Fv
+ 0001:000044DC       UnloadDateFormattingResources__Fv
+ 0001:00004830       FormatDate__FlPcT2i
+ 0001:00004B68       LocalDateFormat__FPcT1
+ 0001:00004C84       GeneralDateFormat__FPcT1
+ 0001:00004E7C       Debug__FUlPce
+ 0001:00004ED0       Log__FPce
+ 0001:00004FE0       DumpMemory__FPcPviT3
+ 0001:00005210       OpenTimer__Fv
+ 0001:00005264       CloseTimer__Fv
+ 0001:0000527C       GetTime__FP10_TIMESTAMP
+ 0001:000052B0       ComputeElapsedTime__FP10_TIMESTAMPT1PUl
+ 0001:00005328       InterpretWinError__FUlPc
+ 0001:0000549C       InterpretMsg__FUlPc
+ 0001:0000550C       LogMsgRcvd__FiPcUlPvT4
+ 0001:00005550       LogMsgDone__FiPcUlPv
+ 0001:000056A8       DefaultsDialog__FUlT1R14DEFAULTS_PARMS
+ 0001:00006A68       ShowFormSize__FUlT1R13DocumentParmsT1P7_HCINFOPc
+ 0001:0000B240       __ct__13DeviceContextFPcUl
+ 0001:0000B340       __ct__13DeviceContextFPcUlN21P9_DRIVDATAi
+ 0001:0000B454       __ct__13DeviceContextFPcUlN21P9_DRIVDATA
+ 0001:0000B568       __ct__13DeviceContextFPcl
+ 0001:0000B68C       __dt__13DeviceContextFv
+ 0001:0000B818       Dump__13DeviceContextFi
+ 0001:0000B8EC       Dialog_Processor
+ 0001:0000BA48       Escriba_Verify
+ 0001:0000C5C8       Escriba_Import
+ 0001:0000C95C       Escriba_Export
+ 0001:0000CDD8       PrepareFileTypeList__FUl
+ 0001:0000D194       ClearFileTypeList__Fv
+ 0001:0000D27C       PrepareGraphicTypeList__Fv
+ 0001:0000D4DC       ClearGraphicTypeList__Fv
+ 0001:0000D5C4       SetFilter__FUl
+ 0001:0000D780       FileTypeDialog_Processor
+ 0001:0000DAE8       GetFileTypeIndex__FUlPcPPcPP5Addoni
+ 0001:0000E028       FileDialog_Processor
+ 0001:0000F3A0       __ct__6ButtonFUlPc
+ 0001:0000F614       __dt__6ButtonFv
+ 0001:0000F764       MessageProcessor__6ButtonFUlT1PvT3
+ 0001:0000FB30       DocFrameMessageProcessor
+ 0001:00012E50       __ct__13DocumentParmsFUl
+ 0001:00013898       Dump__13DocumentParmsFi
+ 0001:00013DD8       ProcessPrefaceFunction__13DocumentParmsFRPUc
+ 0001:000148D8       GetTokenData__FRPUcRlPFPv_sT3PvPci
+ 0001:00014B60       ImportText__FUlPUciT2RiPcT3
+ 0001:00014D00       ImportToken__FUlRPUcRlPUclT3RiRUlT7Pci
+ 0001:000162AC       ExportText__FUlP9WorkSpacePUcT3i
+ 0001:000163E4       ExportToken__FUlP9WorkSpaceRPUcRlPUcT4
+ 0001:00016A64       ComputeFunctionSize__FUlP9WorkSpacePUcRlT4
+ 0001:000174D8       ComputeFunctionSize__FPUcRl
+ 0001:00017AA8       GetToken__FP4TextlRPUcRl
+ 0001:00017B0C       GetToken__FPUciT2RPUcRl
+ 0001:00017B74       WriteBinary__FUlPvT1
+ 0001:00017C28       WriteBinary__FPvT1Ul
+ 0001:00017CF4       ComputeEffectiveState__FP9WorkSpaceP4TextPUclR6EstadoT5iT7T4
+ 0001:00017DAC       ComputeEffectiveState__FP9WorkSpacePUciT2lR7_EstadoT6
+ 0001:00017E6C       ComputeNextState__FP9WorkSpaceP4TextlT3R6EstadoT5iT7T3
+ 0001:00017F3C       ComputeNextState__FP9WorkSpacePUcilT4R7_EstadoT6
+ 0001:00018010       CreateGraphicToken__FUlPcR7_POINTLR6_SIZELN41iT1T2lT1T2T9T12_T2
+ 0001:00018C8C       CreateGraphicToken__FPcR7Grafico
+ 0001:00018E50       __ct__9DocumentoFUlP14LanguageModuleR13DocumentParmsPcP5Addon
+ 0001:0001A210       __ct__9DocumentoFUlR9DocumentoT1
+ 0001:0001AD20       __dt__9DocumentoFv
+ 0001:0001B510       CreateWindow__9DocumentoFUlP8_IniDataP10DictionaryiT4
+ 0001:0001B5F0       DestroyWindow__9DocumentoFUlT1
+ 0001:0001BA0C       Set_Window__9DocumentoFUlP13DeviceContext
+ 0001:0001BBE0       Set_Language__9DocumentoFP14LanguageModule
+ 0001:0001BFAC       Set_Zoom__9DocumentoFl
+ 0001:0001BFD4       Rezoom__9DocumentoFv
+ 0001:0001C064       Set_Colors__9DocumentoFPl
+ 0001:0001C088       Set_Name__9DocumentoFPc
+ 0001:0001C18C       Set_Type__9DocumentoFPc
+ 0001:0001C290       Save__9DocumentoFUlT1
+ 0001:0001CB9C       Save__9DocumentoFUlPcP12ImportExport
+ 0001:0001CEBC       ReadPreface__9DocumentoFiR13DocumentParmsRi
+ 0001:0001CF30       ReadPreface__9DocumentoFPciR13DocumentParmsRi
+ 0001:0001CF80       ReadPreface__9DocumentoFPFPv_sT1PFPv_UlPvR13DocumentParmsRi
+ 0001:0001D184       CreatePreface__9DocumentoFPcRi
+ 0001:0001DDE0       Dump__9DocumentoFPc
+ 0001:0001E37C       AddHandle__9DocumentoFliUl
+ 0001:0001E42C       Paint__9DocumentoFv
+ 0001:0001E574       Paint__9DocumentoFP9WorkSpaceR6_RECTL
+ 0001:0001E8A4       Render__9DocumentoFP9WorkSpaceP6_RECTL
+ 0001:00020184       ComputeState__9DocumentoFlR6Estado
+ 0001:00020BD8       ComputeState__9DocumentoFlR6EstadoR7_POINTLR6_SIZEL
+ 0001:00021388       ComputeState__9DocumentoFv
+ 0001:0002146C       UpdateCursor__9DocumentoFv
+ 0001:000215CC       UpdateMouse__9DocumentoFv
+ 0001:000215F4       UpdatePosition__9DocumentoFv
+ 0001:00021968       UpdateRulers__9DocumentoFv
+ 0001:00021A94       UpdateScrollBars__9DocumentoFv
+ 0001:00021D30       UpdateStatus__9DocumentoFv
+ 0001:00026E78       UpdateTitle__9DocumentoFUl
+ 0001:000277D8       HorizontalScroll__9DocumentoFsT1
+ 0001:00027A3C       VerticalScroll__9DocumentoFsT1
+ 0001:00027CA0       MoveTokenUp__9DocumentoFv
+ 0001:00027CCC       MoveTokenUp__9DocumentoFl
+ 0001:00027CFC       MoveTokenDown__9DocumentoFv
+ 0001:00027D28       MoveTokenDown__9DocumentoFl
+ 0001:00027DA4       FindToken__9DocumentoFP5LineaP7Palabral
+ 0001:00028608       MoveDirect__9DocumentoFl
+ 0001:00028654       FinishMove__9DocumentoFUl
+ 0001:000288F0       FinishMove__9DocumentoFv
+ 0001:00028954       MoveUp__9DocumentoFUl
+ 0001:00028B34       MoveDown__9DocumentoFUl
+ 0001:00028D44       MoveWordUp__9DocumentoFUl
+ 0001:000290B0       MoveWordDown__9DocumentoFUl
+ 0001:00029444       MoveLineUp__9DocumentoFUl
+ 0001:000296E8       MoveLineDown__9DocumentoFUl
+ 0001:000299B0       MovePageUp__9DocumentoFUl
+ 0001:00029D10       MovePageDown__9DocumentoFUl
+ 0001:0002A0CC       MovePageTop__9DocumentoFUl
+ 0001:0002A130       MovePageBottom__9DocumentoFUl
+ 0001:0002A194       MoveTop__9DocumentoFUl
+ 0001:0002A344       MoveBottom__9DocumentoFUl
+ 0001:0002A6D8       MoveLineTop__9DocumentoFUl
+ 0001:0002A91C       MoveLineBottom__9DocumentoFUl
+ 0001:0002AB90       MovePageNumber__9DocumentoFiUl
+ 0001:0002AD8C       MoveXY__9DocumentoFR7_POINTLUl
+ 0001:0002ADE4       MoveXY__9DocumentoFR7_POINTL
+ 0001:0002AE38       FindXY__9DocumentoFR7_POINTL
+ 0001:0002AFC4       TestXY__9DocumentoFR7_POINTLRUl
+ 0001:0002B1E8       QueryGraphic__9DocumentoFR7_POINTLR7GraficoR6_RECTLUl
+ 0001:0002B364       Select__9DocumentoFP9WorkSpace
+ 0001:0002B404       Deselect__9DocumentoFP9WorkSpace
+ 0001:0002B4B8       SelectAll__9DocumentoFv
+ 0001:0002B754       SelectWord__9DocumentoFR7_POINTL
+ 0001:0002BD54       QueryTextRectangle__9DocumentoFR6_RECTLlT2
+ 0001:0002CBD4       QueryTextRectangle__9DocumentoFR6_RECTL
+ 0001:0002CC04       InvertFlush__9DocumentoFP9WorkSpacePcRilR6EstadoR7_POINTLR6_SIZEL
+ 0001:0002CCD0       InvertText__9DocumentoFP9WorkSpacelT2
+ 0001:0002DD90       IsSelected__9DocumentoFl
+ 0001:0002DE28       Extract__9DocumentoFlPcUl
+ 0001:0002E044       Extract__9DocumentoFlPcR6EstadoT3
+ 0001:0002E104       Extract__9DocumentoFUl
+ 0001:0002E128       CommenceLevel__9DocumentoFv
+ 0001:0002E158       CompleteLevel__9DocumentoFv
+ 0001:0002E180       Enqueue_Clear__9DocumentoFv
+ 0001:0002E19C       Dequeue_Clear__9DocumentoFv
+ 0001:0002E208       Delete__9DocumentoFv
+ 0001:0002E2B4       Delete__9DocumentoFlT1
+ 0001:0002E404       ImportText__9DocumentoFPcRPc
+ 0001:0002E438       ImportText__9DocumentoFPciRPc
+ 0001:0002E5EC       Insert__9DocumentoFPc
+ 0001:0002E624       Insert__9DocumentoFPci
+ 0001:0002E654       Insert__9DocumentoFiPc
+ 0001:0002E688       Insert__9DocumentoFiPcT1
+ 0001:0002E8A4       InsertBefore__9DocumentoFPc
+ 0001:0002E918       InsertBefore__9DocumentoFPci
+ 0001:0002E980       Enqueue_Undo__9DocumentoFv
+ 0001:0002E99C       Dequeue_Undo__9DocumentoFv
+ 0001:0002EA50       Enqueue_Redo__9DocumentoFv
+ 0001:0002EA6C       Dequeue_Redo__9DocumentoFv
+ 0001:0002EB34       AdjustState__9DocumentoFR6EstadoT1UlPcl
+ 0001:0002F844       SetBlockState__9DocumentoFR6EstadoUll
+ 0001:0003012C       SetDefaults__9DocumentoFR13DocumentParms
+ 0001:0003050C       SetDefaults__9DocumentoFv
+ 0001:000305D8       Enqueue_InsertModeToggle__9DocumentoFv
+ 0001:000305F4       Dequeue_InsertModeToggle__9DocumentoFv
+ 0001:00030628       Enqueue_InsertKey__9DocumentoFUs
+ 0001:00030650       Dequeue_InsertKey__9DocumentoFUs
+ 0001:00030728       Enqueue_InsertText__9DocumentoFPci
+ 0001:00030758       Enqueue_InsertText__9DocumentoFPc
+ 0001:00030784       Dequeue_InsertText__9DocumentoFPci
+ 0001:000307DC       InsertStateChange__9DocumentoFR6EstadoT1Ull
+ 0001:00030870       Query_WindowSize__9DocumentoFR6_RECTLR6_SIZEL
+ 0001:00030A6C       Query_WindowSize__9DocumentoFR6_SIZEL
+ 0001:00030B90       Find__9DocumentoFPcRlUlT3
+ 0001:00030F48       FindStringNext__9DocumentoFPcUlT2
+ 0001:00030FE4       FindString__9DocumentoFPcUlT2
+ 0001:00031054       ChangeString__9DocumentoFPcT1UlT3
+ 0001:000310A0       ChangeAll__9DocumentoFPcT1UlT3
+ 0001:0003120C       ReplaceSelectedText__9DocumentoFPc
+ 0001:0003138C       GetPtr
+ 0001:000314D8       SpellCheck__9DocumentoFP10DictionaryiPcN22T3RiT7Ul
+ 0001:000316E0       MoveDirect__9DocumentoFlUl
+ 0001:00031938       FormatPage__9DocumentoFv
+ 0001:00031964       Copy__9DocumentoFv
+ 0001:00031CA4       Enqueue_Paste__9DocumentoFv
+ 0001:00031CC0       Dequeue_Paste__9DocumentoFv
+ 0001:00031CFC       Paste__9DocumentoFv
+ 0001:00031F80       MergeFile__9DocumentoFPcR13DocumentParmsP5Addon
+ 0001:00032380       SetTab__9DocumentoFi
+ 0001:00032460       ClearTab__9DocumentoFi
+ 0001:00032534       MoveTab__9DocumentoFiT1
+ 0001:00032650       MoveText__9DocumentoFi
+ 0001:000327A4       UpdateGraphic__9DocumentoFR7Grafico
+ 0001:00032830       CopyGraphic__9DocumentoFR7Grafico
+ 0001:000328A8       FlushCommandQueue__9DocumentoFv
+ 0001:000328D0       GetPageFromOffset__9DocumentoFl
+ 0001:00033858       DocWindowMessageProcessor
+ 0001:0003388C       SendToMain
+ 0001:000338C0       Create
+ 0001:00034188       Close
+ 0001:00034514       Destroy
+ 0001:000345B0       Size
+ 0001:0003466C       MinMaxFrame
+ 0001:000346C4       VScroll
+ 0001:000346F8       HScroll
+ 0001:0003472C       Button1Down
+ 0001:00034988       Button2Down
+ 0001:00034BE8       MouseMove
+ 0001:00034F50       Button1Up
+ 0001:0003517C       Button2Up
+ 0001:000353D4       ContextMenu
+ 0001:000358F4       Button1DblClk
+ 0001:00035980       Activate
+ 0001:000359C4       SetFocus
+ 0001:00035A14       TimerMessage
+ 0001:00035B78       Paint
+ 0001:00035BA0       PresParamChanged
+ 0001:00035EE8       DragOver
+ 0001:00036014       DragLeave
+ 0001:00036020       Drop
+ 0001:00036530       Control
+ 0001:00036890       Command
+ 0001:00036A80       SendCommandToMain
+ 0001:00036ABC       FileMerge
+ 0001:00036E04       FileSave
+ 0001:00036E64       FileSaveAs
+ 0001:00036E94       FileSaveClose
+ 0001:00036F38       PrintAll
+ 0001:00036F70       PrintAllNormal
+ 0001:00036F94       PrintAllReverse
+ 0001:00036FB8       PrintPage
+ 0001:00037000       Undo
+ 0001:00037028       Redo
+ 0001:00037050       Cut
+ 0001:00037084       Copy
+ 0001:000370AC       Paste
+ 0001:000370D4       Clear
+ 0001:000370FC       PasteBitmap
+ 0001:00037414       PasteMetafile
+ 0001:000376D8       PasteScreenEntire
+ 0001:00037AB8       PasteScreenFrame
+ 0001:00037B3C       PasteScreenWindow
+ 0001:00037BC0       PasteScreenRect
+ 0001:00037C44       PasteGraphic
+ 0001:0003842C       Search
+ 0001:000384A4       Find
+ 0001:00038528       FindNext
+ 0001:000385AC       Change
+ 0001:0003862C       ChangeFind
+ 0001:000386F0       ChangeAll
+ 0001:00038770       Command__15GotoPage_DialogFPvT1
+ 0001:00038934       MessageProcessor__15GotoPage_DialogFUlT1PvT3
+ 0001:000389A8       GotoPage
+ 0001:00038AD0       SpellCheck
+ 0001:00038B28       Zoom100
+ 0001:00038B60       ZoomFullWidth
+ 0001:00038BE4       ZoomFullHeight
+ 0001:00038C68       ZoomMargins
+ 0001:00038D44       ZoomAll
+ 0001:00038E84       ZoomWindow
+ 0001:00038FB4       ZoomSet
+ 0001:000390B4       ApplyZoom
+ 0001:000390F8       SetMargins
+ 0001:000392FC       ApplyMargins
+ 0001:000393B4       SetTabs
+ 0001:00039518       ApplyTabs
+ 0001:000395A4       SetIndent
+ 0001:000397DC       ApplyIndent
+ 0001:00039848       SetJustLeft
+ 0001:000398B8       SetJustCenter
+ 0001:00039928       SetJustRight
+ 0001:00039998       SetJustFull
+ 0001:00039A08       SetPageCenter
+ 0001:00039ABC       PageBreak
+ 0001:00039AE8       DateToday
+ 0001:00039B40       DateCurrent
+ 0001:00039B88       DateChanged
+ 0001:00039BD0       SetDateFormat
+ 0001:00039C64       ApplyDateFormat
+ 0001:00039CF8       CurrentPage
+ 0001:00039D40       PageCount
+ 0001:00039D88       Separator
+ 0001:00039DD0       BarCode
+ 0001:00039FC0       Command__13Header_DialogFPvT1
+ 0001:0003A59C       MessageProcessor__13Header_DialogFUlT1PvT3
+ 0001:0003A610       Header
+ 0001:0003A79C       ApplyHeader
+ 0001:0003A850       Command__13Footer_DialogFPvT1
+ 0001:0003AE2C       MessageProcessor__13Footer_DialogFUlT1PvT3
+ 0001:0003AEA0       Footer
+ 0001:0003B02C       ApplyFooter
+ 0001:0003B0E0       SetFontname
+ 0001:0003B16C       FontsPageUp
+ 0001:0003B1E8       FontsPageDown
+ 0001:0003B244       FontManager
+ 0001:0003B254       SetSize
+ 0001:0003B2C8       SizesPageUp
+ 0001:0003B344       SizesPageDown
+ 0001:0003B3A0       SizeManager
+ 0001:0003B3B0       SetNormal
+ 0001:0003B450       SetBold
+ 0001:0003B504       SetItalic
+ 0001:0003B5B8       SetUnderscore
+ 0001:0003B66C       SetStrikeout
+ 0001:0003B720       SetOutline
+ 0001:0003B7D4       SetCaps
+ 0001:0003B888       SetExpand
+ 0001:0003B8FC       ExpandPageUp
+ 0001:0003B978       ExpandPageDown
+ 0001:0003B9D8       ExpandManager
+ 0001:0003B9E8       SetLineColor
+ 0001:0003BA58       SetLineWidth
+ 0001:0003BAC8       SetFillColor
+ 0001:0003BB38       SetFillType
+ 0001:0003BBAC       SetLineEnd
+ 0001:0003BC20       SetLineJoin
+ 0001:0003BC94       SetLineSpacing
+ 0001:0003BD08       LineColorsPageUp
+ 0001:0003BD84       LineColorsPageDown
+ 0001:0003BDE4       LineColorManager
+ 0001:0003BDF4       LineWidthsPageUp
+ 0001:0003BE70       LineWidthsPageDown
+ 0001:0003BED0       LineWidthManager
+ 0001:0003BEE0       FillColorsPageUp
+ 0001:0003BF5C       FillColorsPageDown
+ 0001:0003BFBC       FillColorManager
+ 0001:0003BFCC       FillTypesPageUp
+ 0001:0003C048       FillTypesPageDown
+ 0001:0003C0A8       FillTypeManager
+ 0001:0003C0B8       LineEndsPageUp
+ 0001:0003C134       LineEndsPageDown
+ 0001:0003C194       LineEndManager
+ 0001:0003C1A4       LineJoinsPageUp
+ 0001:0003C220       LineJoinsPageDown
+ 0001:0003C280       LineJoinManager
+ 0001:0003C290       SetLeftMargin
+ 0001:0003C2FC       SetRightMargin
+ 0001:0003C368       SetBottomMargin
+ 0001:0003C3D4       SetTopMargin
+ 0001:0003C440       SetTab
+ 0001:0003C46C       ClearTab
+ 0001:0003C498       MoveTab
+ 0001:0003C4C8       SetDefaults
+ 0001:0003C5BC       Bitmap_Command
+ 0001:0003C958       Border_Command
+ 0001:0003C9B8       Default_Refresh
+ 0001:0003C9D4       Dump
+ 0001:0003CA04       Char
+ 0001:0003D410       Backspace
+ 0001:0003D440       BackspaceWord
+ 0001:0003D488       Insert
+ 0001:0003D4B0       Left
+ 0001:0003D4EC       Right
+ 0001:0003D528       WordLeft
+ 0001:0003D564       WordRight
+ 0001:0003D5A0       LineUp
+ 0001:0003D5DC       LineDown
+ 0001:0003D618       PageUp
+ 0001:0003D654       PageDown
+ 0001:0003D690       PageTop
+ 0001:0003D6CC       PageBottom
+ 0001:0003D708       Home
+ 0001:0003D744       End
+ 0001:0003D780       Top
+ 0001:0003D7BC       Bottom
+ 0001:0003D7F8       SelectAll
+ 0001:0003D820       PrintDone
+ 0001:0003D8B8       SaveDone
+ 0001:0003D970       QueryState
+ 0001:0003D9B8       QueryZoom
+ 0001:0003DA00       QueryDefaults
+ 0001:0003DA28       AlterWindow
+ 0001:0003DA6C       AdjustRulerTicks__FUlP4DATAP7_POINTL
+ 0001:0003DAE0       Rezoom__FUlP4DATA
+ 0001:0003DD70       SetZoom__FUlP4DATAd
+ 0001:0003DED8       DrawGraphicTrackingBox__FP4DATA
+ 0001:0003DFA0       Save__FUlP4DATAT1
+ 0001:0003EB64       SaveThread__FPv
+ 0001:0003ED48       Print__FUliT1
+ 0001:0003F494       PrintThread__FPv
+ 0001:0003F918       Button1Down_AwaitingPoint0__FUlP4DATA7_POINTLT3
+ 0001:0003FBB0       Button1Down_Default__FUlP4DATA7_POINTLT3
+ 0001:0003FC1C       Button1Move_AwaitingPoint1__FUlP4DATA7_POINTLT3
+ 0001:0003FEE0       Button1Move_Default__FUlP4DATA7_POINTLT3
+ 0001:0003FF98       Button1Up_AwaitingPoint1__FUlP4DATA7_POINTLT3
+ 0001:00040CDC       Button1Up_Default__FUlP4DATA7_POINTLT3
+ 0001:00040D30       Button2Down_TouchedGraphic__FUlP4DATA7_POINTLT3i
+ 0001:00040F14       Button2Down_TouchedGraphicBorder__FUlP4DATA7_POINTLT3i
+ 0001:000410F8       Button2Down_TouchedSelectedText__FUlP4DATA7_POINTLT3iT1
+ 0001:00041274       Button2Down_Default__FUlP4DATA7_POINTLT3
+ 0001:000412D0       Button2Move_MoveGraphic__FUlP4DATA7_POINTLT3
+ 0001:0004159C       Button2Move_SizeGraphic__FUlP4DATA7_POINTLT3
+ 0001:00041948       Button2Move_MoveText__FUlP4DATA7_POINTLT3
+ 0001:00041990       Button2Move_Default__FUlP4DATA7_POINTLT3
+ 0001:0004199C       Button2Up_MoveGraphic__FUlP4DATA7_POINTLT3N21
+ 0001:00041E28       Button2Up_SizeGraphic__FUlP4DATA7_POINTLT3T1
+ 0001:00042298       Button2Up_MoveText__FUlP4DATA7_POINTLT3T1
+ 0001:0004234C       Button2Up_Default__FUlP4DATA7_POINTLT3
+ 0001:000423A8       UpdateMousePtr
+ 0001:000423D0       UpdateMousePointer__FUlP4DATA
+ 0001:000424D8       UpdateMousePointer__FP4DATAR7_POINTL
+ 0001:000429D4       QueryTextRectangle
+ 0001:00042A30       SelectLanguage
+ 0001:00043C00       main
+ 0001:000467B8       ExceptionHandler
+ 0001:00046F34       __ct__4FontFPciN52
+ 0001:00046FF0       __dt__4FontFv
+ 0001:00047028       Dump__4FontFi
+ 0001:00047134       __ct__9FontCacheFPc
+ 0001:000471B0       __dt__9FontCacheFv
+ 0001:000471F0       Reset__9FontCacheFv
+ 0001:00047330       Select__9FontCacheFUlPcN51
+ 0001:00047D04       Set_Font__9FontCacheFUli
+ 0001:00047DB0       Dump__9FontCacheFi
+ 0001:00047FB8       CommenceEdit__9DocumentoFv
+ 0001:00047FD4       CompleteEdit__9DocumentoFv
+ 0001:00047FF0       SetPageDirty__9DocumentoFv
+ 0001:000480A0       SetPagesDirty__9DocumentoFlT1
+ 0001:00048150       FormatFirstDirtyPage__9DocumentoFR5EventT1Ul
+ 0001:00048344       FormatPage__9DocumentoFi
+ 0001:00048650       FormatPage__9DocumentoFiR6EstadoR9Borradora
+ 0001:00048A74       FormatPage__9DocumentoFR9BorradoraR6EstadoiRlRUl
+ 0001:00049138       CenterPage__9DocumentoFR9BorradoraR6Estadol
+ 0001:000493B0       FormatLine__9DocumentoFR9BorradoraR5LineaiUl
+ 0001:00049E4C       UpdateWindow__9DocumentoFiUlT2
+ 0001:00049F98       __ct__10SupervisorFP9Documento
+ 0001:0004A1CC       __dt__10SupervisorFv
+ 0001:0004A4B0       CommandsQueued__10SupervisorFv
+ 0001:0004A4D4       EnqueueInsertToggle__10SupervisorFv
+ 0001:0004A518       EnqueueKey__10SupervisorFi
+ 0001:0004A55C       EnqueueString__10SupervisorFPci
+ 0001:0004A5BC       EnqueueClear__10SupervisorFv
+ 0001:0004A600       EnqueuePaste__10SupervisorFv
+ 0001:0004A644       EnqueueUndo__10SupervisorFv
+ 0001:0004A688       EnqueueRedo__10SupervisorFv
+ 0001:0004A6CC       FlushCommandQueue__10SupervisorFv
+ 0001:0004A734       CommenceEdit__10SupervisorFv
+ 0001:0004A784       CompleteEdit__10SupervisorFv
+ 0001:0004A7A0       FormatPage__10SupervisorFUl
+ 0001:0004A814       WaitForRequest__10SupervisorFv
+ 0001:0004A86C       ExecuteCommands__10SupervisorFv
+ 0001:0004A9AC       FlushCommands__10SupervisorFv
+ 0001:0004AA18       AllowEdit__10SupervisorFv
+ 0001:0004AA94       FormatFirstDirtyPage__10SupervisorFUl
+ 0001:0004AAC8       PageLockRequest__10SupervisorFv
+ 0001:0004AB00       PageLockRelease__10SupervisorFv
+ 0001:0004AB38       Block__10SupervisorFv
+ 0001:0004AB88       Unblock__10SupervisorFv
+ 0001:0004ABA4       AllowBlock__10SupervisorFv
+ 0001:0004AC0C       Supervisor_Thread__FPv
+ 0001:0004B528       FrameMessageProcessor
+ 0001:0004B698       __ct__5cGREPFPc
+ 0001:0004B8D8       is_reg_exp_present__5cGREPFPc
+ 0001:0004BB14       matched_string__5cGREPFPci
+ 0001:0004BBA0       record_error__5cGREPFi
+ 0001:0004BBD8       parse_parens__5cGREPFiPi
+ 0001:0004BE60       one_side_of_or_operator__5cGREPFPi
+ 0001:0004BF88       trailing_wild__5cGREPFPi
+ 0001:0004C244       compress_ordinary_characters__5cGREPFPi
+ 0001:0004C754       emit_node__5cGREPFc
+ 0001:0004C7E4       emit_next_byte__5cGREPFc
+ 0001:0004C840       insert_operator__5cGREPFcPc
+ 0001:0004C91C       go_to_end_of_chain__5cGREPFPcT1
+ 0001:0004C9B0       go_to_end_of_chain_on_operand__5cGREPFPcT1
+ 0001:0004C9F8       lookup_engine__5cGREPFPc
+ 0001:0004D014       wildcard_lookup__5cGREPFPc
+ 0001:0004D270       get_next_pointer__5cGREPFPc
+ 0001:0004D2DC       evaluate_next__5cGREPFPc
+ 0001:0004D508       HorzRulerMessageProcessor
+ 0001:0004F970       __ct__12ImportExportFP6Module
+ 0001:0004FD20       __ct__12ImportExportFPc
+ 0001:000500D0       __ct__12ImportExportFPcT1PFUlPc_UlPFUlPcPl_PvPFUlPcPvl_Ul
+ 0001:00050210       __ct__12ImportExportFRC12ImportExport
+ 0001:00050378       __dt__12ImportExportFv
+ 0001:0005046C       Filter__12ImportExportFPcT1
+ 0001:00050588       __ct__15GraphicImporterFP6Module
+ 0001:000508B8       __ct__15GraphicImporterFPc
+ 0001:00050BE8       __ct__15GraphicImporterFPcT1PFUlPc_UlT3
+ 0001:00050D20       __ct__15GraphicImporterFRC15GraphicImporter
+ 0001:00050E7C       __dt__15GraphicImporterFv
+ 0001:00050F70       Filter__15GraphicImporterFPcT1
+ 0001:00051054       Import__15GraphicImporterFUlPcPl
+ 0001:000510D8       __ct__16MetafileImporterFv
+ 0001:00051158       __ct__16MetafileImporterFRC16MetafileImporter
+ 0001:000511DC       Filter__16MetafileImporterFPcT1
+ 0001:00051270       Verify__16MetafileImporterFUlPc
+ 0001:0005178C       Import__16MetafileImporterFUlPc
+ 0001:000517E8       Import__16MetafileImporterFUlPcPl
+ 0001:00051A38       IndentProcessor
+ 0001:00051EB0       VerifyIndent__FUlT1RiR7_HCINFOlT5
+ 0001:0005221C       MessageProcessor
+ 0001:00057BD8       __ct__29LineSpacingMenuManager_DialogFUlN21RUsPUs
+ 0001:00058050       __dt__29LineSpacingMenuManager_DialogFv
+ 0001:00058294       Control__29LineSpacingMenuManager_DialogFPvT1
+ 0001:000583CC       Command__29LineSpacingMenuManager_DialogFPvT1
+ 0001:00058914       MessageProcessor__29LineSpacingMenuManager_DialogFUlT1PvT3
+ 0001:000590A0       __ct__24ExpandMenuManager_DialogFUlN21RUsPUs
+ 0001:00059518       __dt__24ExpandMenuManager_DialogFv
+ 0001:0005975C       Control__24ExpandMenuManager_DialogFPvT1
+ 0001:00059894       Command__24ExpandMenuManager_DialogFPvT1
+ 0001:00059DDC       MessageProcessor__24ExpandMenuManager_DialogFUlT1PvT3
+ 0001:0005A048       __ct__23ColorMenuManager_DialogFUlN21iRUsPl
+ 0001:0005A66C       __dt__23ColorMenuManager_DialogFv
+ 0001:0005A8E8       Control__23ColorMenuManager_DialogFPvT1
+ 0001:0005AC04       Command__23ColorMenuManager_DialogFPvT1
+ 0001:0005B348       ColorWheelChanged__23ColorMenuManager_DialogFUl
+ 0001:0005B3B4       MeasureItem__23ColorMenuManager_DialogFUs
+ 0001:0005B3C8       DrawItem__23ColorMenuManager_DialogFUsP10_OWNERITEM
+ 0001:0005B648       MessageProcessor__23ColorMenuManager_DialogFUlT1PvT3
+ 0001:000605F8       MarginsProcessor
+ 0001:000614A0       VerifyLeftMargin__FUlT1R13DocumentParmsN21P7_HCINFORll
+ 0001:000618E4       VerifyRightMargin__FUlT1R13DocumentParmsN21P7_HCINFOlRl
+ 0001:00061D8C       VerifyTopMargin__FUlT1R13DocumentParmsN21P7_HCINFOlRl
+ 0001:00062234       VerifyBottomMargin__FUlT1R13DocumentParmsN21P7_HCINFORll
+ 0001:000626E0       InitFontBitmaps__FUlT1
+ 0001:00062788       InitFontMenu__FUlR6EstadoT1i
+ 0001:00063AC4       QueryFontMetrics__Fv
+ 0001:00063AD0       InitSizeBitmaps__FUlT1PcUsPUs
+ 0001:00063B98       InitSizeMenu__FUlR6EstadoT1iUsPUs
+ 0001:00064D34       InitAttrBitmaps__FUlT1Pc
+ 0001:00064DE8       InitAttrMenu__FUlR6EstadoR13DocumentParmsT1
+ 0001:00065DA8       InitExpandBitmaps__FUlT1PcUsPUs
+ 0001:00065E70       InitExpandMenu__FUlR6EstadoT1iUsPUs
+ 0001:00066FF0       InitLineColorBitmaps__FUlT1UsPl
+ 0001:000670B0       InitLineColorMenu__FUlR6EstadoT1iUsPl
+ 0001:000681FC       InitLineWidthBitmaps__FUlT1UsPUl
+ 0001:000682BC       InitLineWidthMenu__FUlR6EstadoT1iUsPUl
+ 0001:0006942C       InitFillColorBitmaps__FUlT1UsPl
+ 0001:000694EC       InitFillColorMenu__FUlR6EstadoT1iUsPl
+ 0001:0006A638       InitFillTypeBitmaps__FUlT1UsPUl
+ 0001:0006A6F8       InitFillTypeMenu__FUlR6EstadoT1iUsPUl
+ 0001:0006B750       InitLineEndBitmaps__FUlT1UsPUl
+ 0001:0006B810       InitLineEndMenu__FUlR6EstadoT1iUsPUl
+ 0001:0006C880       InitLineJoinBitmaps__FUlT1UsPUl
+ 0001:0006C940       InitLineJoinMenu__FUlR6EstadoT1iUsPUl
+ 0001:0006D9F4       CancelBitmapThreads__Fv
+ 0001:0006DC8C       DestroyBitmaps__Fv
+ 0001:0006EDAC       __ct__6ModuleFPcUl
+ 0001:0006EF4C       __ct__6ModuleFRC6Module
+ 0001:0006F0DC       __dt__6ModuleFv
+ 0001:0006F158       QueryAddress__6ModuleFPc
+ 0001:0006F18C       QueryAddress__6ModuleFi
+ 0001:0006F1C4       __ct__14LanguageModuleFPcT1Ul
+ 0001:0006F5BC       __ct__14LanguageModuleFRC14LanguageModule
+ 0001:0006F6DC       __dt__14LanguageModuleFv
+ 0001:0006F7E4       Language_Create__FPcT1iT1
+ 0001:000700F0       __ct__7PainterFUlP13DeviceContextP9Documento
+ 0001:00070350       __dt__7PainterFv
+ 0001:0007057C       PaintCursor__7PainterFv
+ 0001:000705AC       HideCursor__7PainterFv
+ 0001:000705F8       ShowCursor__7PainterFv
+ 0001:00070654       SetCursorBox__7PainterFP7_POINTL
+ 0001:000706A8       InvalidateRectangle__7PainterFR6_RECTLUl
+ 0001:000707B0       UpdateWindow__7PainterFUlT1
+ 0001:00070894       Paint__7PainterFP9WorkSpace
+ 0001:000709E4       LockUpdate__7PainterFv
+ 0001:00070A04       UnlockUpdate__7PainterFv
+ 0001:00070D40       PreferencesProcessor
+ 0001:00071340       OpenPrinterDC__FUlPcT2P9_DRIVDATA
+ 0001:000714C8       OpenPrinterDC__FUlPcT2P9_DRIVDATAi
+ 0001:000716B8       __ct__9QueueInfoFPcUlN21P9_DRIVDATA
+ 0001:00071C3C       __dt__9QueueInfoFv
+ 0001:00071D30       QueryForm__9QueueInfoFUlT1R7_HCINFO
+ 0001:00072458       QueryResolution__9QueueInfoFUlT1RlT3
+ 0001:000727A4       __ct__7ProcessFPcUlT2lUs
+ 0001:000728A4       __dt__7ProcessFv
+ 0001:0007297C       SetQueueCodepage__FUlT1Us
+ 0001:0007302C       GetIniData__8Profile2FR8_IniData
+ 0001:00075378       PutIniData__8Profile2FR8_IniData
+ 0001:000756D8       __ct__8_IniDataFUl
+ 0001:00075A44       __dt__8_IniDataFv
+ 0001:00075B80       UpdateFileList__8_IniDataFPc
+ 0001:000761EC       ReadFile__FP8FILEDATA
+ 0001:00076288       PeekFile__FP8FILEDATA
+ 0001:00076314       TellFile__FP8FILEDATA
+ 0001:00076350       ReadText__FP8TEXTDATA
+ 0001:0007639C       PeekText__FP8TEXTDATA
+ 0001:000763D8       TellText__FP8TEXTDATA
+ 0001:000763E8       Search_Processor
+ 0001:00077BE8       Load__7SegmentFP9WorkSpaceP4TextR9BorradoraR5LineaRP7PalabraR6EstadoT6R7_POINTLiT9l
+ 0001:00078104       Justify__7SegmentFP9BorradoraP9WorkSpaceR6EstadoiT4l
+ 0001:00078A20       Split__7SegmentFR6_RECTL
+ 0001:00078DF4       SetZoomProcessor
+ 0001:000793D4       __ct__10DictionaryFPcT1
+ 0001:000797A0       __dt__10DictionaryFv
+ 0001:000798AC       OpenDictionary__10DictionaryFv
+ 0001:00079960       DictionaryOpenThread__FPv
+ 0001:0007999C       CloseDictionary__10DictionaryFv
+ 0001:000799F4       Ready__10DictionaryFv
+ 0001:00079A60       BuildWord__10DictionaryFPFPvPll_PcPvPcRlT4
+ 0001:00079ABC       FindWord__10DictionaryFPc
+ 0001:00079B0C       FindReplacements__10DictionaryFPciT2PvPi
+ 0001:00079B68       Accept__10DictionaryFPc
+ 0001:00079BB8       Insert__10DictionaryFPc
+ 0001:00079C08       UnCaps__10DictionaryFPc
+ 0001:00079C58       SpellChecker__FUlP9DocumentoP10Dictionary
+ 0001:0007B4C0       Reset__7_EstadoFP9WorkSpaceR13DocumentParmsiT3l
+ 0001:0007B8AC       Reset__6EstadoFP9WorkSpaceR13DocumentParmsiT3l
+ 0001:0007B97C       TabSet__7_EstadoFl
+ 0001:0007B9D4       ComputeCRC__7_EstadoFv
+ 0001:0007B9FC       ComputeCRC__6EstadoFv
+ 0001:0007BA24       Dump__7_EstadoFi
+ 0001:0007C1D0       Dump__6EstadoFi
+ 0001:0007C2E8       ProcessFunction__6EstadoFPUcP9WorkSpaceiT3l
+ 0001:0007C3D8       ProcessFunction__7_EstadoFPUcP9WorkSpaceiT3l
+ 0001:0007CB84       __as__7_EstadoFRC7_Estado
+ 0001:0007CBB0       __as__7_EstadoFRC6Estado
+ 0001:0007CBDC       __as__6EstadoFRC6Estado
+ 0001:0007CC08       __as__6EstadoFRC7_Estado
+ 0001:0007CC40       Compute_HF_Height__6EstadoFP9WorkSpacePUcR7_EstadoiT4l
+ 0001:0007CDE8       ComputeHeaderHeight__6EstadoFP9WorkSpaceiT2l
+ 0001:0007CE58       ComputeFooterHeight__6EstadoFP9WorkSpaceiT2l
+ 0001:0007CEC8       MeasureFlush__6EstadoFP9WorkSpacePcRiiN33
+ 0001:0007CF98       RenderFlush__6EstadoFP9WorkSpacePcRiR7_POINTL
+ 0001:0007CFF8       BuildLine__6EstadoFP9WorkSpaceiT2lPUcT2R7_EstadoT7RiN69
+ 0001:0007DC84       RenderHeader__6EstadoFP9WorkSpaceiT2l
+ 0001:0007E634       RenderFooter__6EstadoFP9WorkSpaceiT2l
+ 0001:0007FF74       StaticMessageProcessor
+ 0001:00080710       TabsProcessor
+ 0001:0008170C       __ct__4TextFPcl
+ 0001:00081848       __ct__4TextFR4Text
+ 0001:00081A04       __dt__4TextFv
+ 0001:00081A84       Cleanup__4TextFv
+ 0001:00081B74       SetPosition__4TextFl
+ 0001:00081D40       QueryBytePtr__4TextFlRPUc
+ 0001:00081DB0       Read__4TextFlT1Pc
+ 0001:00081F9C       CommenceLevel__4TextFv
+ 0001:00081FBC       CompleteLevel__4TextFl
+ 0001:00082010       Insert__4TextFlPcT1
+ 0001:00082374       Delete__4TextFlT1
+ 0001:00082A00       Undo__4TextFv
+ 0001:00082A78       Redo__4TextFv
+ 0001:00082AF4       QueryChangeRange__4TextFiRlT2
+ 0001:00082BF4       QueryCurrentSize__4TextFv
+ 0001:00082C70       PrevToken__4TextFP9WorkSpacel
+ 0001:00082D0C       NextToken__4TextFP9WorkSpacel
+ 0001:00082D90       Dump__4TextFi
+ 0001:00082FF0       StartThread__FPcPFPv_viPvN23
+ 0001:00083160       __ct__9TextBlockFPcls
+ 0001:00083200       __ct__9TextBlockFR9TextBlock
+ 0001:000832AC       __dt__9TextBlockFv
+ 0001:000832EC       IsPresent__9TextBlockFsUl
+ 0001:00083358       Resize__9TextBlockFl
+ 0001:000833BC       Dump__9TextBlockFi
+ 0001:00083728       VertRulerMessageProcessor
+ 0001:0008577C       IsGlyph__FPUcT1
+ 0001:00085808       IsGlyphFunction__FPUc
+ 0001:0008586C       IsGraphic__FPUc
+ 0001:000858A4       IsGraphicInline__FPUc
+ 0001:000858F0       IsSeparator__FPUc
+ 0001:00085928       IsEndOfWord__FPUcT1
+ 0001:00085A10       IsEndOfLine__FPUc
+ 0001:00085A60       IsDBCS__FUcPUc
+ 0001:00085C04       PrevGraphic__7GraficoFv
+ 0001:00085C48       NextGraphic__7GraficoFv
+ 0001:00085C8C       ComputeImageSize__7GraficoFP9WorkSpace
+ 0001:00085DB8       ComputeBox__7GraficoFP7PalabraR6_RECTLR7_POINTLUl
+ 0001:00085E08       ComputeOldBox__7GraficoFP7PalabraR6_RECTLR7_POINTLUl
+ 0001:00085E58       ComputeBox__7GraficoFP7PalabraR7_POINTLR6_SIZELiT4R6_RECTLT2Ul
+ 0001:00086984       Split__7GraficoFl
+ 0001:000869B4       Dump__7GraficoFi
+ 0001:00087584       PrevWord__7PalabraFv
+ 0001:000875C8       NextWord__7PalabraFv
+ 0001:0008760C       IsSeparator__7PalabraFP4TextPUc
+ 0001:00087640       IsSeparator__7PalabraFP4Text
+ 0001:00087670       IsGraphicInline__7PalabraFP4Text
+ 0001:000876A0       IsEndOfDocument__7PalabraFP4Text
+ 0001:000876D0       IsEndOfPage__7PalabraFP4Text
+ 0001:00087700       IsEndOfLine__7PalabraFP4Text
+ 0001:00087730       IsTab__7PalabraFP4Text
+ 0001:00087760       IsSpace__7PalabraFP4Text
+ 0001:00087790       StartsParagraph__7PalabraFP4TextP9WorkSpace
+ 0001:000878D8       Measure__7PalabraFP4TextP9WorkSpaceR6EstadoiT4l
+ 0001:00088108       LooksLike__7PalabraFR7Palabra
+ 0001:00088178       Dump__7PalabraFiP4Text
+ 0001:0008858C       PrevLine__5LineaFv
+ 0001:000885D0       NextLine__5LineaFv
+ 0001:00088614       Reset__5LineaFP9WorkSpaceR9BorradoraR6EstadoP5LinealiT6T5
+ 0001:00088728       MarkPainted__5LineaFR9Borradora
+ 0001:00088798       EstimateHeight__5LineaFP9WorkSpaceP4TextR9BorradoraP7PalabraR6EstadoiT6lT6RiT10_
+ 0001:00088DD4       Dump__5LineaFi
+ 0001:00088EE4       __ct__9BorradoraFv
+ 0001:00088FF4       __dt__9BorradoraFv
+ 0001:000892A4       __as__9BorradoraFRC9Borradora
+ 0001:00089720       Reset__9BorradoraFR6Estado
+ 0001:000897E8       Query_NumberOfGraphics__9BorradoraFl
+ 0001:0008984C       Query_TextRectangle__9BorradoraFv
+ 0001:00089994       BuildWord__9BorradoraFilT1P9WorkSpace
+ 0001:00089B40       BuildGraphic__9BorradoraFP9WorkSpaceP5LineaP7PalabraPUcil
+ 0001:0008A170       FindLine__9BorradoraFi
+ 0001:0008A1B0       FindLine__9BorradoraFlRi
+ 0001:0008A260       FindLine__9BorradoraFR7_POINTLRi
+ 0001:0008A308       ClearLines__9BorradoraFv
+ 0001:0008A324       AddLine__9BorradoraFR5Linea
+ 0001:0008A388       FindWord__9BorradoraCFi
+ 0001:0008A3C8       FindWord__9BorradoraFl
+ 0001:0008A43C       FindWord__9BorradoraFP7Palabrai
+ 0001:0008A4F4       FindWord__9BorradoraFiT1
+ 0001:0008A590       FindGraphic__9BorradoraFi
+ 0001:0008A5D0       FindGraphic__9BorradoraFl
+ 0001:0008A624       Insert__9BorradoraFP9WorkSpacelT2
+ 0001:0008A8A0       Delete__9BorradoraFP9WorkSpaceR7_POINTLlT3
+ 0001:0008AA30       Remove_Word__9BorradoraFP7PalabraR7_POINTL
+ 0001:0008AB18       Join_Words__9BorradoraFP7Palabra
+ 0001:0008ABB4       Split_Word__9BorradoraFP7Palabral
+ 0001:0008AC60       AdjustOffset__FlT1RlT3Ul
+ 0001:0008ADEC       AdjustOffsets__9BorradoraFlT1
+ 0001:0008AF04       UpdateWordList__9BorradoraFP9WorkSpaceilUlT3T2R6EstadoT3
+ 0001:0008B1A4       ComputeInvalidRectangle__9BorradoraFP9WorkSpaceR7_POINTLil
+ 0001:0008B888       Dump__9BorradoraFi
+ 0001:0008C0D4       __ct__9WorkSpaceFPciUlP13DeviceContext
+ 0001:0008C374       __ct__9WorkSpaceFPciUlP13DeviceContextT2
+ 0001:0008C63C       __ct__9WorkSpaceFPciUlP13DeviceContextR6_RECTL
+ 0001:0008C904       __ct__9WorkSpaceFPciUlP13DeviceContextT2R6_RECTL
+ 0001:0008CBF4       __ct__9WorkSpaceFPciP13DeviceContextUlT2
+ 0001:0008CE8C       __ct__9WorkSpaceFPciP13DeviceContextUlN22
+ 0001:0008D14C       __ct__9WorkSpaceFPciUlN32
+ 0001:0008D3FC       __ct__9WorkSpaceFPcUl
+ 0001:0008D6A0       __ct__9WorkSpaceFPc
+ 0001:0008D928       __dt__9WorkSpaceFv
+ 0001:0008DA38       CreatePS__9WorkSpaceFUl
+ 0001:0008DFC0       DestroyPS__9WorkSpaceFv
+ 0001:0008E1C4       Reset__9WorkSpaceFiN31
+ 0001:0008E214       Reset__9WorkSpaceFUl
+ 0001:0008E3D8       Move__9WorkSpaceFiT1
+ 0001:0008E408       Move__9WorkSpaceFR7_POINTL
+ 0001:0008E4C8       DrawLine__9WorkSpaceFiT1
+ 0001:0008E4F8       DrawLine__9WorkSpaceFR7_POINTL
+ 0001:0008E5B8       DrawLineGeom__9WorkSpaceFiT1
+ 0001:0008E5E8       DrawLineGeom__9WorkSpaceFR7_POINTL
+ 0001:0008E9E0       DrawPolyLine__9WorkSpaceFiP7_POINTL
+ 0001:0008EE34       DrawPolygon__9WorkSpaceFiP7_POINTL
+ 0001:0008F5A4       DrawBox__9WorkSpaceFR6_RECTL
+ 0001:0008F678       FillBox__9WorkSpaceFR6_RECTL
+ 0001:0008F74C       InvertBox__9WorkSpaceFR6_RECTL
+ 0001:0008F7F8       DrawTrackingBox__9WorkSpaceFR6_RECTL
+ 0001:0008F9C4       QueryTextBox__9WorkSpaceFPciP7_POINTL
+ 0001:0008FAC0       MeasureText__9WorkSpaceFPc
+ 0001:0008FAF4       MeasureText__9WorkSpaceFPci
+ 0001:0008FB20       MeasureText__9WorkSpaceFPcR6_SIZEL
+ 0001:0008FB54       MeasureText__9WorkSpaceFPciR6_SIZEL
+ 0001:0008FC64       InvertCell__9WorkSpaceF6_SIZEL
+ 0001:0008FD50       InvertText__9WorkSpaceFPci
+ 0001:0008FD9C       DrawText__9WorkSpaceFPciR6_RECTLlN24
+ 0001:0008FE28       DrawText__9WorkSpaceFPciT2
+ 0001:000901F8       DrawSpace__9WorkSpaceFR6_SIZELi
+ 0001:0009056C       DrawPointer__9WorkSpaceFUlR7_POINTLi
+ 0001:000905F8       ScaleFont__9WorkSpaceFv
+ 0001:000908FC       GetFontMetrics__9WorkSpaceFv
+ 0001:00090A10       SetFontName__9WorkSpaceFPc
+ 0001:00090A6C       SetFontSize__9WorkSpaceFi
+ 0001:00090AA8       SetBold__9WorkSpaceFi
+ 0001:00090B0C       SetItalic__9WorkSpaceFi
+ 0001:00090B74       SetUnderscore__9WorkSpaceFi
+ 0001:00090BE0       SetStrikeout__9WorkSpaceFi
+ 0001:00090C4C       SetOutline__9WorkSpaceFi
+ 0001:00090CB8       SetColor__9WorkSpaceFl
+ 0001:00090D94       SetLineType__9WorkSpaceFi
+ 0001:00090E64       SetLineWidth__9WorkSpaceFi
+ 0001:00090F38       SetLineJoin__9WorkSpaceFi
+ 0001:00091008       SetLineEnd__9WorkSpaceFi
+ 0001:000910D8       SetFillType__9WorkSpaceFi
+ 0001:000911A8       SetMix__9WorkSpaceFi
+ 0001:00091284       SetExpand__9WorkSpaceFi
+ 0001:00091300       SetTransform__9WorkSpaceFliT2
+ 0001:00091358       SetTransform__9WorkSpaceFdiT2
+ 0001:0009152C       SetState__9WorkSpaceFR7_Estado
+ 0001:00091880       Transform__9WorkSpaceFiN21P7_POINTL
+ 0001:0009194C       QueryDevice__9WorkSpaceFv
+ 0001:000919C0       QueryFontCount__9WorkSpaceFv
+ 0001:00091A8C       QueryFonts__9WorkSpaceFlP12_FONTMETRICS
+ 0001:00091B5C       QueryBitmapFormat__9WorkSpaceFRiT1
+ 0001:00091C24       QueryBitmapInfo__9WorkSpaceFUlR18_BITMAPINFOHEADER2
+ 0001:00091D7C       CreateBitmap__9WorkSpaceFR6_RECTL
+ 0001:00091DF4       CreateBitmap__9WorkSpaceFR6_RECTLR9WorkSpace
+ 0001:00091EA0       CreateBitmap__9WorkSpaceFUlT1RUl
+ 0001:0009240C       CreateBitmap__9WorkSpaceFR18_BITMAPINFOHEADER2
+ 0001:000924D4       CreateBitmap__9WorkSpaceFR18_BITMAPINFOHEADER2PvP12_BITMAPINFO2RUl
+ 0001:000925F8       CreateBitmap__9WorkSpaceFUli
+ 0001:00092624       QueryBitmapBits__9WorkSpaceFiT1PvP12_BITMAPINFO2
+ 0001:000926F0       SetBitmap__9WorkSpaceFUl
+ 0001:000927B0       SetPalette__9WorkSpaceFUl
+ 0001:00092870       Blit__9WorkSpaceFR9WorkSpacelP7_POINTLT2Ul
+ 0001:0009299C       SetClipping__9WorkSpaceFR6_RECTL
+ 0001:00092B28       ResetClipping__9WorkSpaceFv
+ 0001:00092C54       DrawSeparator__9WorkSpaceFR7_POINTLR6_SIZEL
+ 0001:00093138       MeasureBitmap__9WorkSpaceFUlR6_SIZEL
+ 0001:000931EC       DrawBitmap__9WorkSpaceFUlT1R7_POINTLR6_SIZELN21
+ 0001:000938B8       MeasureMetafile__9WorkSpaceFUlR6_RECTL
+ 0001:00093BFC       DrawMetafile__9WorkSpaceFUlR7_POINTLR6_SIZEL
+ 0001:00094A50       DrawUpcCodeA__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00094F38       DrawUpcCodeE__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095354       DrawCode39__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095728       DrawPOSTNET__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095BE0       DrawEAN8__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00095FFC       DrawEAN13__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00096558       DrawCodabar__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00096920       DrawCode2of5__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:00096984       DrawCode128__9WorkSpaceFPcR7_POINTLR6_SIZEL
+ 0001:000969E8       NewFrame__9WorkSpaceFv
+ 0001:00096A68       Dump__9WorkSpaceFi
+ 0001:00096FF8       QueryCodepage__9WorkSpaceFv
+ 0001:00097014       SetCodepage__9WorkSpaceFi
+ 0001:00097038       SetCodepage__9WorkSpaceFv
+ 0001:000971A4       IsDBCSHeader__9WorkSpaceFUc
+ 0001:00097220       Comment__9WorkSpaceFPce
+ 0001:00097680       __RunExitList
+ 0001:00097734       __ctordtorTerm
+ 0001:0009776C       __ctordtorInit
+ 0001:00097850       _Exception_CPP
+ 0001:00097B9C       __vec__new
+ 0001:00097D8C       _setuparg
+ 0001:00097F84       __sctordtorInit
+ 0001:00097F8C       __sctordtorTerm
+ 0001:00097F94       __wctordtorInit
+ 0001:00097F98       __wctordtorTerm
+ 0002:00000000       __vft5Addon
+ 0002:00000560       LogSemaphore
+ 0002:00000980       FileTypeList
+ 0002:00000B10       FileWildcardList
+ 0002:00000CA0       FileExtenderList
+ 0002:00000E30       GraphicTypeList
+ 0002:00000FC0       GraphicWildcardList
+ 0002:00001150       GraphicExtenderList
+ 0002:000018F0       __vft6Button16SubclassedWindow
+ 0002:00001C50       FunctionNames
+ 0002:00002EE0       __vft15GotoPage_Dialog6Dialog
+ 0002:00002F08       __vft13Header_Dialog6Dialog
+ 0002:00002F30       __vft13Footer_Dialog6Dialog
+ 0002:00003AB0       HomePath
+ 0002:00003BB4       AddonList
+ 0002:00004360       cGREP_errors
+ 0002:000044C0       __vft12ImportExport5Addon
+ 0002:000044D0       __vft15GraphicImporter5Addon
+ 0002:00004780       __vft29LineSpacingMenuManager_Dialog6Dialog
+ 0002:000047A8       __vft24ExpandMenuManager_Dialog6Dialog
+ 0002:000047D0       __vft23ColorMenuManager_Dialog6Dialog
+ 0002:000079D0       __vft6Module
+ 0002:000079E0       __vft14LanguageModule6Module
+ 0002:00007D40       CreateParms
+ 0002:00008340       __vft10Dictionary5Addon
+ 0002:00008440       __vft7_Estado
+ 0002:00008468       __vft6Estado7_Estado
+ 0002:00008800       __vft9Borradora
+ 0002:000088D0       Code39Table
+ 0002:00008D30       _exeentry
+ 0002:00008D34       _argc
+ 0002:00008D38       _argv
+ 0002:00008D40       __ctdtused
+ 0002:00008D90       __ctordtorStart
+ 0002:00008DD0       __ctordtorEnd
+ 0002:000114D8       _edata
+ 0002:000114D8       @BSSE:\Projects\Escriba\TABS.CPP
+ 0002:00011500       @BSSE:\Projects\Escriba\DEBUG.CPP
+ 0002:00011504       @BSSE:\Projects\Escriba\MAIN.CPP
+ 0002:00012B08       @BSSE:\Projects\Escriba\STATE.CPP
+ 0002:00012B1C       @BSSE:\Projects\Escriba\font.cpp
+ 0002:00012B20       @BSSE:\Projects\Escriba\TEXT.CPP
+ 0002:00012B40       @BSSE:\Projects\Escriba\SEARCH.CPP
+ 0002:00012B64       @BSSE:\Projects\Escriba\ADDONS.CPP
+ 0002:00012B7C       @BSSE:\Projects\Escriba\STATIC.CPP
+ 0002:00012B94       @BSSE:\Projects\Escriba\MODULE.CPP
+ 0002:00012BA4       @BSSE:\Projects\Escriba\DOCWIN.CPP
+ 0002:00012C4C       @BSSE:\Projects\Escriba\DOCSUP.CPP
+ 0002:00012C68       @BSSE:\Projects\Escriba\INDENT.CPP
+ 0002:00012C8C       @BSSE:\Projects\Escriba\PREFER.CPP
+ 0002:00012C94       @BSSE:\Projects\Escriba\DEVICE.CPP
+ 0002:00012CAC       @BSSE:\Projects\Escriba\EXCEPT.CPP
+ 0002:00012CBC       @BSSE:\Projects\Escriba\FORMAT.CPP
+ 0002:00012CDC       @BSSE:\Projects\Escriba\HRULER.CPP
+ 0002:00012D08       @BSSE:\Projects\Escriba\VRULER.CPP
+ 0002:00012D34       LibraryHandle
+ 0002:00012D38       @BSSE:\Projects\Escriba\DIALOG2.CPP
+ 0002:00012D6C       Help
+ 0002:00012D70       Trace
+ 0002:00012D74       @BSSE:\Projects\Escriba\ESCRIBA.CPP
+ 0002:00012D94       Timer
+ 0002:00012D98       @BSSE:\Projects\Escriba\DOCFRAME.CPP
+ 0002:00012DC8       @BSSE:\Projects\Escriba\BARCODES.CPP
+ 0002:00012DD4       @BSSE:\Projects\Escriba\WRKSPACE.CPP
+ 0002:00012E00       @BSSE:\Projects\Escriba\PROFILE2.CPP
+ 0002:00012E14       @BSSE:\Projects\Escriba\DOCUMENT.CPP
+ 0002:00012EC8       @BSSE:\Projects\Escriba\DOCPARMS.CPP
+ 0002:00012ECC       @BSSE:\Projects\Escriba\PAINTER.CPP
+ 0002:00012EE8       @BSSE:\Projects\Escriba\SPELLER.CPP
+ 0002:00012F10       @BSSE:\Projects\Escriba\DEFAULTS.CPP
+ 0002:00012F58       @BSSE:\Projects\Escriba\SEGMENT.CPP
+ 0002:00012F70       @BSSE:\Projects\Escriba\WORKPAGE.CPP
+ 0002:00012F90       @BSSE:\Projects\Escriba\MENUBMP.CPP
+ 0002:000131D8       @BSSE:\Projects\Escriba\PRINTER.CPP
+ 0002:000131E8       @BSSE:\Projects\Escriba\DATEFMT.CPP
+ 0002:00013274       @BSSE:\Projects\Escriba\MARGINS.CPP
+ 0002:000132A4       @BSSE:\Projects\Escriba\SETZOOM.CPP
+ 0002:000132B4       @BSSE:\Projects\Escriba\IMP_EXP.CPP
+ 0002:000132F8       @BSSE:\Projects\Escriba\PROCESS.CPP
+ 0002:000132FC       @BSSG:\build\CPPLIB\SOURCE\V_NEW.CPP
+ 0002:00013300       __ctordtorCurrent
+ 0002:00013304       Logfile
+ 0002:00013308       BreakKey
+ 0002:0001330C       Library
+ 0002:00013310       _end
+
+Program entry point at 0001:0009769C

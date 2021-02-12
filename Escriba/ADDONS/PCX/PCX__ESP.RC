@@ -1,0 +1,63 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Pcx.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "PCX",                //   Application Name.
+  "Espa¤ol",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: enero, febrero, marzo, abril, mayo, junio,                       *
+ *   julio, agosto, setiembre, octubre, noviembre, diciembre.               *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Pcx"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Versi¢n 0.97"                                       0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 diciembre 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "M¢dulo para importar gr ficos 'PCX'",                0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Versi¢n en Espa¤ol"                                  0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "M¢dulo para importar gr ficos 'PCX'"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "Ayuda de 'Gr ficos PCX'"
+  IDS_ERROR_CREATEHELP                  "ERROR: No se puede crear la instancia de ayuda. C¢digo %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "ERROR(PCX): No se pudo abrir el fichero '%s' para verificarlo."
+  IDS_ERROR_FILE_TOO_SMALL              "ERROR(PCX): Fichero inv lido.  Demasiado peque¤o."
+  IDS_ERROR_INVALID_FILE_ID             "ERROR(PCX): Firma inv lida."
+  IDS_ERROR_PLANAR                      "ERROR(PCX): Fichero de forma planar no se apoya actualmente."
+  IDS_ERROR_INVALID_PALETTE             "ERROR(PCX): Fichero inv lido.  El palette no estuvo donde se esperaba."
+  IDS_ERROR_INVALID_PALETTE_SIZE        "ERROR(PCX): Tama¤o inv lido de palette.  Tuvo %i colores."
+  IDS_ERROR_MEMORY1                     "ERROR(PCX): No se pudo conseguir memoria suficiente para el gr fico."
+  IDS_ERROR_MEMORY2                     "ERROR(PCX): No se pudo conseguir memoria suficiente para el encabecimiento."
+  IDS_ERROR_DC_OPEN                     "ERROR(PCX): No se pudo abrir un contexto virtual del tipo memoria.  Estado %08X."
+  IDS_ERROR_PS_CREATE                   "ERROR(PCX): No se pudo abrir un espacio de presentaci¢n.  Estado %08X."
+  IDS_ERROR_CREATE_BITMAP               "ERROR(PCX): No se pudo crear el gr fico en memoria.  Estado %08X."
+  IDS_ERROR_OPEN_FOR_LOAD               "ERROR(PCX): No se pudo abrir el fichero '%s' para cargarlo."
+  IDS_ERROR_MEMORY3                     "ERROR(PCX): No se pudo conseguir memoria suficiente para cargar un bloque.  Se pidieron %i bytes de memoria."
+}

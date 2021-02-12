@@ -1,11 +1,11 @@
 ICC      = /Q
 CC       = icc
-#COPTS    = /c /Gm+ /Gn /Sp4 /Ti /Tm+
-COPTS    = /c /Gm+ /Gn /Sp4 /O
-#CPPOPTS  = /c /Gm+ /Gn /Sp4 /Ti /Tm+
-CPPOPTS  = /c /Gm+ /Gn /Sp4 /O
+#COPTS    = /c /Gd+ /Gm+ /Sp4 /Ti /Tm+
+COPTS    = /c /Gd+ /Gm+ /Sp4 /O
+#CPPOPTS  = /c /Gd+ /Gm+ /Sp4 /Ti /Tm+
+CPPOPTS  = /c /Gd+ /Gm+ /Sp4 /O
 LINK     = link386
-LOPTS    = /NOLOGO /ST:60000 /PM:VIO /MAP:FULL /NOD /NOE /NOI
+LOPTS    = /NOLOGO /ST:60000 /PM:VIO /MAP:FULL /NOE /NOI
 YACC     = yacc
 LANGUAGE = English
 
@@ -14,7 +14,8 @@ LIBOBJ = Common.obj Correct.obj Defmt.obj Good.obj Hash.obj ISpeller.obj \
          Tree.obj XGets.obj
 
 .obj.exe:
-   $(LINK) $(LOPTS) $*, $*.exe, , ISpeller DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   $(LINK) $(LOPTS) $*, $*.exe, , ISpeller RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   dllrname $*.exe dde4mbs=Esc_CRT
 
 .c.obj:
    $(CC) $(COPTS) $*.c > $*.err
@@ -23,7 +24,7 @@ LIBOBJ = Common.obj Correct.obj Defmt.obj Good.obj Hash.obj ISpeller.obj \
    RC -r .\$*.RC
 
 .cpp.obj:
-   ICC.EXE /Sp1 /Q /O /Gm /Gn /Ge- /C   .\$*.cpp
+   ICC.EXE /Sp1 /Q /Gd /Gm /Ge- /O /C   .\$*.cpp
 
 .res.dll:
   link386 /nologo dll.obj, $*.dll /align:16, nul,, $* ;
@@ -37,11 +38,15 @@ LIBOBJ = Common.obj Correct.obj Defmt.obj Good.obj Hash.obj ISpeller.obj \
 All : ISpeller.lib BuildHash.exe ICombine.exe IJoin.exe ISpell.exe Sq.exe UnSq.exe \
   Deutsch English Espanol Francais Nederlands
 
+Clean :
+  erase *.obj *.exe *.dll *.lib *.map *.err *.hlp *.res config.h
+
 ISpeller.lib : $*.dll
    IMPLIB /NOIGNORECASE $*.lib $*.dll
 
 ISpeller.dll : $*.def $*.res $(LIBOBJ)
-   $(LINK) $(LOPTS) $(LIBOBJ), $*.dll, , DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB, $*.def ;
+   $(LINK) $(LOPTS) $(LIBOBJ), $*.dll, , RUNTIME.LIB OS2386.LIB OS2286.LIB, $*.def ;
+   dllrname $*.dll dde4mbs=Esc_CRT
    RC $*.res $*.dll
    IMPLIB /NOIGNORECASE $*.lib $*.dll
 
@@ -53,10 +58,12 @@ BuildHash.exe : $*.obj ISpeller.lib
 ICombine.exe : $*.obj ISpeller.lib
 
 IJoin.exe : $*.obj Fields.obj
-   $(LINK) $(LOPTS) $* + Fields, $*.exe, , DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   $(LINK) $(LOPTS) $* + Fields, $*.exe, , RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   dllrname $*.exe dde4mbs=Esc_CRT
 
 ISpell.exe : $*.obj Dump.obj ISpeller.lib
-   $(LINK) $(LOPTS) $* + Dump, $*.exe, , ISpeller DDE4MBSO.LIB RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   $(LINK) $(LOPTS) $* + Dump, $*.exe, , ISpeller RUNTIME.LIB OS2386.LIB OS2286.LIB ;
+   dllrname $*.exe dde4mbs=Esc_CRT
 
 Sq.exe : $*.obj
 

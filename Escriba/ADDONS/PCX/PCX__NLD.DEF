@@ -1,0 +1,8 @@
+;
+;       GIF__NLD: CompuServe GIF Graphic Import Module for Escriba (Nederlands)
+;
+LIBRARY 
+DESCRIPTION 'GIF__NLD: CompuServe GIF Graphic Import Module for Escriba (Nederlands)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

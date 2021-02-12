@@ -1,0 +1,8 @@
+;
+;       HTML_DEU: HTML Import/Export Module for Escriba (Deutsch)
+;
+LIBRARY 
+DESCRIPTION 'HTML_DEU: HTML Import/Export Module for Escriba (Deutsch)'
+CODE LOADONCALL
+DATA SINGLE READWRITE SHARED LOADONCALL
+

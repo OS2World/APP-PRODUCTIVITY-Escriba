@@ -1,0 +1,61 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Bmp.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "BMP",                //   Application Name.
+  "Franáais",           //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: janvier, fÇvrier, mars, avril, mai, juin,                        *
+ *   juillet, aoñt, septembre, octobre, novembre, dÇcembre.                 *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 280, 120, FS_DLGBORDER
+  {
+    CTEXT "Bmp"                                                 0,  10, 94, 240, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0,97"                                       0,  10, 84, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 dÇcembre 1998"                                     0,  10, 74, 240,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "Module d'importation de graphiques bitmap pour Escriba",0, 10, 62, 240,  8
+    CTEXT "Copyright ∏ Richard Papo, 1996-1998"                 0,  10, 54, 240,  8
+    CTEXT "Internet : rpapo@msen.com"                           0,  10, 46, 240,  8
+    CTEXT "WWW : http://www.msen.com/~rpapo"                    0,  10, 38, 240,  8
+    CTEXT "Version franáaise"                                   0,  10, 30, 240,  8
+
+    DEFPUSHBUTTON "~Ok"                                     DID_OK,120,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "Module d'importation de graphique bitmap"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "Aide 'Graphiques Bitmap'"
+  IDS_ERROR_CREATEHELP                  "Erreur : Impossible d'initialiser l'aide.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "Erreur(BMP): Impossible d'ouvrir le fichier '%s' pour le vÇrifier."
+  IDS_ERROR_FILE_TOO_SMALL              "Erreur(BMP): Fichier bitmap incorrect.  Trop petit."
+  IDS_ERROR_INVALID_HEADER_SIZE         "Erreur(BMP): Version de bitmap non reconnue.  Taille d'en-tàte : %i octets."
+  IDS_ERROR_INVALID_HEADER_ID           "Erreur(BMP): En-tàte de fichier non valide."
+  IDS_ERROR_MEMORY1                     "Erreur(BMP): Impossible d'allouer un tampon pour l'image."
+  IDS_ERROR_MEMORY2                     "Erreur(BMP): Impossible d'allouer la mÇmoire pour l'en-tàte du bitmap."
+  IDS_ERROR_DC_OPEN                     "Erreur(BMP): Impossible d'ouvrir le contexte de pÇriphÇrique mÇmoire.  êtat %08X."
+  IDS_ERROR_PS_CREATE                   "Erreur(BMP): Impossible de crÇer l'espace de prÇsentation en mÇmoire.  êtat %08X."
+  IDS_ERROR_CREATE_BITMAP               "Erreur(BMP): Impossible de crÇer le bitmap.  êtat %08X."
+  IDS_ERROR_OPEN_FOR_IMPORT             "Erreur(BMP): Impossible d'ouvrir le fichier '%s'."
+  IDS_ERROR_MEMORY3                     "Erreur(BMP): Impossible d'allouer la mÇmoire oó charger un bloc. %1 octets furent requis."
+}

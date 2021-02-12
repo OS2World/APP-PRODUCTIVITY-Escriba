@@ -1,0 +1,138 @@
+Stack Allocation = 60000 bytes
+
+ ijoin
+
+ Start         Length     Name                   Class
+ 0001:00000000 000001790H CODE32                 CODE 32-bit
+               at offset 00000000 009E4H bytes from IJoin.obj (IJOIN.C)
+               at offset 000009e4 00AE8H bytes from Fields.obj (FIELDS.C)
+               at offset 000014cc 000B2H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00001580 001F8H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+               at offset 00001778 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\SCTDT.C)
+               at offset 00001788 00008H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\build\RT\SRC\WCTDT.C)
+
+ 0002:00000000 000000130H DATA32                 DATA 32-bit
+               at offset 00000000 000D0H bytes from IJoin.obj (IJOIN.C)
+               at offset 000000d0 00040H bytes from Fields.obj (FIELDS.C)
+               at offset 00000110 0000EH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 00000120 00010H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00000130 000000000H CTOR_DTOR1             DATA 32-bit
+ 0002:00000130 000000000H CTOR_DTOR2             DATA 32-bit
+ 0002:00000130 000000000H CTOR_DTOR3             DATA 32-bit
+ 0002:00000130 000000000H CONST32                CONST 32-bit
+ 0002:00000130 000000000H EDC1                   EDC_CLASS 32-bit
+ 0002:00000130 000000018H EDC2                   EDC_CLASS 32-bit
+               at offset 00000000 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+               at offset 0000000c 0000CH bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\SETUPARG.ASM)
+
+ 0002:00000148 000000000H EDC3                   EDC_CLASS 32-bit
+ 0002:00000148 000000000H BSS32                  BSS 32-bit
+ 0002:00000148 000000020H c_common               BSS 32-bit
+ 0002:00000170 00000EA60H STACK32                STACK 32-bit
+               at offset 00000000 08000H bytes from D:\IBMCPP21\LIB\dde4mbsi.lib (G:\BUILD\RT\SRC\EDCSTRT.ASM)
+
+
+ Origin   Group
+ 0000:0   FLAT
+ 0002:0   DGROUP
+
+  Address         Publics by Name
+
+ 0002:00000148       @BSSE:\Projects\ISpeller\IJOIN.C
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0001:000012A4       fieldfree
+ 0001:000012E4       fieldmake
+ 0001:000013B8       fieldread
+ 0001:000009E4       fieldwrite
+ 0002:000000D0       field_field_inc
+ 0002:000000D4       field_line_inc
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0001:00000660       main
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  perror               (DDE4MBS.perror)
+ 0000:00000000  Imp  realloc              (DDE4MBS.realloc)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0002:00000114       _argc
+ 0002:00000118       _argv
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0002:00000148       _edata
+ 0002:00000170       _end
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0002:00000110       _exeentry
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0001:00001580       _setuparg
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0001:000014CC       __RunExitList
+ 0001:00001778       __sctordtorInit
+ 0001:00001780       __sctordtorTerm
+ 0001:00001788       __wctordtorInit
+ 0001:0000178C       __wctordtorTerm
+
+  Address         Publics by Value
+
+ 0000:00000000  Imp  _exception_procinit  (DDE4MBS._exception_procinit)
+ 0000:00000000  Imp  strlen               (DDE4MBS.strlen)
+ 0000:00000000  Imp  _fprintfieee         (DDE4MBS._fprintfieee)
+ 0000:00000000  Imp  DosExitList          (DOSCALLS.296)
+ 0000:00000000  Imp  _PrintErrMsg         (DDE4MBS._PrintErrMsg)
+ 0000:00000000  Imp  _CRT_init            (DDE4MBS._CRT_init)
+ 0000:00000000  Imp  _environ             (DDE4MBS._environ)
+ 0000:00000000  Imp  perror               (DDE4MBS.perror)
+ 0000:00000000  Imp  free                 (DDE4MBS.free)
+ 0000:00000000  Imp  _terminate           (DDE4MBS._terminate)
+ 0000:00000000  Imp  exit                 (DDE4MBS.exit)
+ 0000:00000000  Imp  atoi                 (DDE4MBS.atoi)
+ 0000:00000000  Imp  _EXE_Exception       (DDE4MBS._EXE_Exception)
+ 0000:00000000  Imp  fgets                (DDE4MBS.fgets)
+ 0000:00000000  Imp  fseek                (DDE4MBS.fseek)
+ 0000:00000000  Imp  ftell                (DDE4MBS.ftell)
+ 0000:00000000  Imp  stdin                (DDE4MBS.stdin)
+ 0000:00000000  Imp  _matherr             (DDE4MBS._matherr)
+ 0000:00000000  Imp  fopen                (DDE4MBS.fopen)
+ 0000:00000000  Imp  realloc              (DDE4MBS.realloc)
+ 0000:00000000  Imp  fputc                (DDE4MBS.fputc)
+ 0000:00000000  Imp  fputs                (DDE4MBS.fputs)
+ 0000:00000000  Imp  strcmp               (DDE4MBS.strcmp)
+ 0000:00000000  Imp  strchr               (DDE4MBS.strchr)
+ 0000:00000000  Imp  malloc               (DDE4MBS.malloc)
+ 0000:00000000  Imp  stderr               (DDE4MBS.stderr)
+ 0000:00000000  Imp  stdout               (DDE4MBS.stdout)
+ 0001:00000660       main
+ 0001:000009E4       fieldwrite
+ 0001:000012A4       fieldfree
+ 0001:000012E4       fieldmake
+ 0001:000013B8       fieldread
+ 0001:000014CC       __RunExitList
+ 0001:00001580       _setuparg
+ 0001:00001778       __sctordtorInit
+ 0001:00001780       __sctordtorTerm
+ 0001:00001788       __wctordtorInit
+ 0001:0000178C       __wctordtorTerm
+ 0002:000000D0       field_field_inc
+ 0002:000000D4       field_line_inc
+ 0002:00000110       _exeentry
+ 0002:00000114       _argc
+ 0002:00000118       _argv
+ 0002:00000148       _edata
+ 0002:00000148       @BSSE:\Projects\ISpeller\IJOIN.C
+ 0002:00000170       _end
+
+Program entry point at 0001:000014E8

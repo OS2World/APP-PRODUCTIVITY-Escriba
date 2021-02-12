@@ -1,0 +1,57 @@
+gif.obj: \
+	gif.cpp \
+	..\..\..\runtime\debug.h \
+	..\..\..\runtime\dialog.h \
+	..\..\..\runtime\helpwin.h \
+	..\..\..\runtime\hrtimer.h \
+	..\..\..\runtime\lmodule.h \
+	..\..\..\runtime\module.h \
+	..\..\..\runtime\restring.h \
+	..\..\..\runtime\system.h \
+	..\..\external.h \
+	gif.h
+
+gif.res: \
+	gif.rc \
+	gif.h
+
+gif__deu.res: \
+	gif__deu.rc \
+	gif.h
+
+gif__enu.res: \
+	gif__enu.rc \
+	gif.h
+
+gif__esp.res: \
+	gif__esp.rc \
+	gif.h
+
+gif__fra.res: \
+	gif__fra.rc \
+	gif.h
+
+gif__nld.res: \
+	gif__nld.rc \
+	gif.h
+
+gif__deu.hlp: \
+	gif__deu.ipf \
+	gif.h
+
+gif__enu.hlp: \
+	gif__enu.ipf \
+	gif.h
+
+gif__esp.hlp: \
+	gif__esp.ipf \
+	gif.h
+
+gif__fra.hlp: \
+	gif__fra.ipf \
+	gif.h
+
+gif__nld.hlp: \
+	gif__nld.ipf \
+	gif.h
+

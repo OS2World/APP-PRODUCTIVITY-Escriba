@@ -1,0 +1,111 @@
+# Build HTML addon extension for Escriba, and all its language modules.
+
+.SUFFIXES:
+.SUFFIXES: .cpp .rc .ipf .hlp
+
+All: HTML.DLL \
+  Deutsch English Espanol Francais Nederlands 
+  Copy *.dll ..\..
+  Copy *.hlp ..\..
+
+HTML.DLL : HTML.OBJ HTML.H HTML.RES 
+   ICC.EXE @<<
+ /B" /nologo /noe /m:full /de"
+ /Fe"HTML.DLL" /Fm"HTML.MAP" ..\..\..\RunTime\RunTime.LIB OS2386.LIB OS2286.LIB HTML.DEF
+HTML.OBJ
+<<
+  RC HTML.RES HTML.DLL
+  dllrname HTML.dll dde4mbs=Esc_CRT
+  If Exist HTML.DLX Erase HTML.DLX
+  FXSTRIP HTML.DLL
+
+{.}.rc.res:
+   RC -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r .\$*.RC
+
+{.}.cpp.obj:
+   ICC.EXE /I..\..\..\runtime /I..\.. /Sp1 /Q /O /Gd /Gm /Ge- /Ti+ /C   .\$*.cpp
+
+{.}.res.dll:
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML.obj : HTML.cpp HTML.h ..\..\..\runtime\system.h ..\..\external.h ..\..\..\runtime\canvas.h ..\..\..\runtime\controls.h \
+  ..\..\..\runtime\debug.h ..\..\..\runtime\dialog.h ..\..\..\runtime\eattr.h ..\..\..\runtime\helpwin.h ..\..\..\runtime\lmodule.h \
+  ..\..\..\runtime\module.h ..\..\..\runtime\profile.h ..\..\..\runtime\restring.h 
+
+
+# German (Deutsch)
+
+Deutsch: HTML_DEU.dll HTML_DEU.hlp 
+
+HTML_DEU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML_DEU.res : $*.rc HTML.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 49 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+HTML_DEU.hlp: $*.ipf HTML.h
+  ipfcomp /D:49 /C:850 /L:DEU $*.ipf
+
+
+# English
+
+English: HTML_ENU.dll HTML_ENU.hlp 
+
+HTML_ENU.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML_ENU.res : $*.rc HTML.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 1 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+HTML_ENU.hlp: $*.ipf HTML.h
+  ipfcomp /D:1 /C:850 /L:ENU $*.ipf
+
+
+# Spanish (Espa¤ol)
+
+Espanol: HTML_ESP.dll HTML_ESP.hlp 
+
+HTML_ESP.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML_ESP.res : $*.rc HTML.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 34 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+HTML_ESP.hlp: $*.ipf HTML.h
+  ipfcomp /D:34 /C:850 /L:ESP $*.ipf
+
+
+# French (Fran‡ais)
+
+Francais: HTML_FRA.dll HTML_FRA.hlp 
+
+HTML_FRA.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML_FRA.res : $*.rc HTML.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 33 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+HTML_FRA.hlp: $*.ipf HTML.h
+  ipfcomp /D:33 /C:850 /L:FRA $*.ipf
+
+
+# Dutch (Netherlands)
+
+Nederlands: HTML_NLD.dll HTML_NLD.hlp 
+
+HTML_NLD.dll : $*.res ..\..\dll.obj
+  link386 /nologo ..\..\dll.obj, $*.dll /align:16, nul,, $* ;
+  rc $*.res $*.dll
+
+HTML_NLD.res : $*.rc HTML.h ..\..\..\runtime\system.h ..\..\..\runtime\controls.h
+  rc -cc 31 -cp 850 -d __OS2__ -i ..\..\..\runtime -r $*
+
+HTML_NLD.hlp: $*.ipf HTML.h
+  ipfcomp /D:31 /C:850 /L:NLD $*.ipf
+
+

@@ -25,10 +25,10 @@ DLGTEMPLATE IDD_PRODUCTINFO
     CTEXT "ISpeller"                                            0,  10,158, 220, 18
     PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
 
-    CTEXT "Version 0.96d"                                       0,  10,148, 220,  8
+    CTEXT "Version 0.97"                                       0,  10,148, 220,  8
     PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
 
-    CTEXT "22 Januar 1998"                                         0,  10,138, 220,  8
+    CTEXT "03 Dezember 1998"                                         0,  10,138, 220,  8
     PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
 
     CTEXT "Spell-Checker for OS/2"                              0,  10,118, 220,  8

@@ -1,0 +1,69 @@
+#define INCL_PM
+#include <os2.h>
+
+#include "Gif.h"
+
+CODEPAGE 850
+
+RCDATA 1 {              // Special resource segment:
+  "Language",           //   Resource DLL Type.
+  "GIF",                //   Application Name.
+  "Deutsch",            //   Specific language name.
+  850, 437, 0           //   Codepage to be used (in preference order, null terminated).
+}
+
+/****************************************************************************
+ * Months: Januar, Februar, M„rz, April, Mai, Juni,                         *
+ *   Juli, August, September, Oktober, November, Dezember.                  *
+ ****************************************************************************/
+
+DLGTEMPLATE IDD_PRODUCTINFO
+{
+  DIALOG "", IDD_PRODUCTINFO, 0, 0, 240, 120, FS_DLGBORDER
+  {
+    CTEXT "Gif"                                                 0,  10, 94, 220, 18
+    PRESPARAMS PP_FONTNAMESIZE, "24.Helv Bold Italic"
+
+    CTEXT "Version 0.97"                                       0,  10, 84, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "03 Dezember 1998"                                     0,  10, 74, 220,  8
+    PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+
+    CTEXT "GIF Graphic Import Module for Escriba"   ,           0,  10, 62, 220,  8
+    CTEXT "Copyright ¸ Richard Papo, 1996-1998"                 0,  10, 54, 220,  8
+    CTEXT "Internet: rpapo@msen.com"                            0,  10, 46, 220,  8
+    CTEXT "WWW: http://www.msen.com/~rpapo"                     0,  10, 38, 220,  8
+    CTEXT "Deutsche šbersetzung Frank Mersmann"                 0,  10, 30, 220,  8
+
+    DEFPUSHBUTTON "~OK"                                     DID_OK,100,  8,  40, 16, WS_GROUP
+  }
+}
+
+STRINGTABLE
+{
+  IDS_TITLE                             "GIF Graphic Import Module"
+  IDS_TITLE1                            REVISION
+  IDS_HELPTITLE                         "'GIF Graphic' Help Facility"
+  IDS_ERROR_CREATEHELP                  "FEHLER: Kann Hilfe nicht erzeugen.  Code %08lX."
+
+  IDS_ERROR_OPEN_FOR_VERIFY             "FEHLER(GIF): Unable to open file '%s' to load from."
+  IDS_ERROR_FILE_TOO_SMALL              "FEHLER(GIF): Invalid file.  Too small."
+  IDS_ERROR_INVALID_FILE_ID             "FEHLER(GIF): Invalid signature."
+  IDS_ERROR_INVALID_FILE_VERSION        "FEHLER(GIF): Invalid version."
+  IDS_ERROR_INVALID_CONTROL_LABEL       "FEHLER(GIF): Invalid graphic control label in file.  Label %02X found."
+  IDS_ERROR_INVALID_CONTROL_BLOCK_TYPE  "FEHLER(GIF): Invalid control block type in file.  Type %02X found."
+  IDS_ERROR_TOO_MANY_ROWS               "FEHLER(GIF): Image has too many rows (%i with max %i)."
+  IDS_ERROR_MEMORY1                     "FEHLER(GIF): Unable to allocate memory for bitmap data buffer."
+  IDS_ERROR_DECODER                     "FEHLER(GIF): Decoder error %i."
+  IDS_ERROR_MEMORY2                     "FEHLER(GIF): Unable to allocate memory for bitmap header."
+  IDS_ERROR_DC_OPEN                     "FEHLER(GIF): Unable to open memory device context.  Status %i."
+  IDS_ERROR_PS_CREATE                   "FEHLER(GIF): Unable to create memory presentation space.  Status %i."
+  IDS_ERROR_CREATE_BITMAP               "FEHLER(GIF): Unable to create bitmap.  Status %i."
+  IDS_ERROR_GET_CODE_SIZE               "FEHLER(GIF): Unable to get code size."
+  IDS_ERROR_INVALID_CODE_SIZE           "FEHLER(GIF): Invalid code size."
+  IDS_ERROR_MEMORY3                     "FEHLER(GIF): Unable to allocate decode buffer."
+  IDS_ERROR_FILE_ERROR                  "FEHLER(GIF): File error.  Decode aborted."
+  IDS_ERROR_OPEN_FOR_LOAD               "FEHLER(GIF): Unable to open file '%s' to load from."
+  IDS_ERROR_MEMORY4                     "FEHLER(GIF): Unable to allocate memory to load block into.  %i bytes were requested."
+}
